@@ -1,18 +1,18 @@
 import { NextApiResponse, NextApiRequest } from 'next'
 import passport from '../../../lib/withPassport'
 
-const handler = (req: NextApiRequest, res: NextApiResponse) => {
-  res.json({
-    HELLO: process.env.hello,
-  })
-  // const { provider } = req.query
-  // if (!provider) {
-  //   return { statusCode: 404 }
-  // }
+const presets = {
+  google: { scope: ['https://www.googleapis.com/auth/plus.login'] },
+  facebook: { scope: ['email', 'public_profile'] }
+}
 
-  // passport.authenticate(provider)(req, res, (...args) => {
-  //   console.log('passport authenticated', args)
-  // })
+const handler = (req: NextApiRequest, res: NextApiResponse) => {
+  const { provider } = req.query
+  if (!provider) {
+    return { statusCode: 404 }
+  }
+
+  passport.authenticate(provider, presets[provider as string])(req, res)
 }
 
 export default handler

@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import { signInWithGoogle } from '../src/services/firebase'
 
 const Home = () => {
   return (
@@ -13,9 +14,9 @@ const Home = () => {
       <Nav />
   
       <div className="hero">
-        <a href="/api/auth/google" >
+        <div onClick={signInWithGoogle}>
           Signin with Google
-        </a>
+        </div>
         <a href="/api/auth/facebook">
           Signin with Facebook
         </a>

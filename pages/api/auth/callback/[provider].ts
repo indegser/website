@@ -1,5 +1,6 @@
 import { NextApiResponse, NextApiRequest } from 'next'
 import passport from '../../../../lib/withPassport'
+import { serialize } from 'cookie'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { provider } = req.query
@@ -7,12 +8,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return { statusCode: 404 }
   }
 
-  passport.authenticate(provider, {
-    failureRedirect: '/auth',
-    successRedirect: '/',
-  })(req, res, (...args) => {
-    console.log('auth callback', args)
-    return true
+  passport.initialize()(req, res, () => {
+    passport.authenticate(provider, {
+      session: false,
+    })(req, res, (...args) => {
+      res.setHeader('Set-Cookie', serialize('id', 123, { path: '/' }))
+      res.writeHead(302, { location: '/' })
+      res.end('ok')
+    })
   })
 }
 
