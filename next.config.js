@@ -10,7 +10,6 @@ module.exports = {
       use: ['@svgr/webpack'],
     })
 
-    console.log(config.module.rules)
     return config
   },
 }
