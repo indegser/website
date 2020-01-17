@@ -1,16 +1,17 @@
 import Link from 'next/link'
+import { LogoIcon } from '../atoms/icons/icons'
 
 const navs = [
   {
-    name: 'story',
+    name: '뉴스',
     to: '/',
   },
   {
-    name: 'book',
+    name: '책',
     to: '/book',
   },
   {
-    name: 'movie',
+    name: '영화',
     to: '/movie',
   },
 ]
@@ -23,13 +24,17 @@ const Nav = () => {
           <Link href="/">
             <a>
               <div className="nav-content">
-                Seoul
+                <LogoIcon width={20} />
               </div>
             </a>
           </Link>
           {navs.map(({ name, to }) => (
             <Link href={to} key={name}>
-              <a>{name}</a>
+              <a>
+                <div className="nav-content">
+                  {name}
+                </div>
+              </a>
             </Link>
           ))}
         </div>
