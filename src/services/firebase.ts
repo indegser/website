@@ -18,7 +18,7 @@ if (!firebase.apps.length) {
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
-  console.log(user)
+  console.log(user, 'USER', !process.browser && 'SERVER_SIDE')
   if (user) {
     // User is signed in.
   } else {
@@ -26,10 +26,33 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+if (process.browser) {
+  firebase.auth().getRedirectResult()
+    .then(result => console.log(result))
+}
+
 export const signInWithGoogle = () => {
   try {
     const provider = new firebase.auth.GoogleAuthProvider()
     provider.setCustomParameters({ prompt: 'select_account' })
+    firebase.auth().signInWithRedirect(provider)
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+export const signInWithFacebook = () => {
+  try {
+    const provider = new firebase.auth.FacebookAuthProvider()
+    firebase.auth().signInWithPopup(provider)
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+export const signInWithGithub = () => {
+  try {
+    const provider = new firebase.auth.GithubAuthProvider()
     firebase.auth().signInWithPopup(provider)
   } catch (err) {
     console.log(err)

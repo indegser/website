@@ -1,5 +1,5 @@
 {
   "env": {
-    "hello": "@hello"
+    "FIREBASE_API_KEY": "@firebase_api_key"
   }
 }
