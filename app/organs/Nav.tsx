@@ -45,7 +45,7 @@ const Nav = () => {
           padding: 0 12px;
           text-decoration: none;
           color: rgba(0, 0, 0, 0.9);
-          font-size: 14px;
+          font-size: 15px;
 
         }
         a:hover {
