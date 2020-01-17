@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-exports.default = {
+module.exports = {
   env: {
     FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
   },
@@ -9,6 +9,8 @@ exports.default = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
+
+    console.log(config.module.rules)
     return config
   },
 }
