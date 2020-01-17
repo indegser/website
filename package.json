@@ -25,5 +25,11 @@
     "postcss-nested": "^4.2.1",
     "styled-jsx-plugin-postcss": "^2.0.1",
     "typescript": "^3.7.4"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }
