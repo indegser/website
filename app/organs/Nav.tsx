@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { LogoIcon } from '../atoms/icons/icons'
+import PageContainer from '../atoms/container/PageContainer'
 
 const navs = [
   {
@@ -19,7 +20,7 @@ const navs = [
 const Nav = () => {
   return (
     <nav id="global-nav" className="no-print">
-      <div>
+      <PageContainer>
         <div className="navs">
           <Link href="/">
             <a>
@@ -38,14 +39,14 @@ const Nav = () => {
             </Link>
           ))}
         </div>
-      </div>
+      </PageContainer>
       <style jsx>{`
         a {
           height: 100%;
           padding: 0 12px;
           text-decoration: none;
           color: rgba(0, 0, 0, 0.9);
-          font-size: 15px;
+          font-size: 14px;
 
         }
         a:hover {
