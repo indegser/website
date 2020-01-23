@@ -9,6 +9,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "date-fns": "^2.9.0",
     "dotenv": "^8.2.0",
     "firebase": "^7.6.1",
     "next": "9.1.6",

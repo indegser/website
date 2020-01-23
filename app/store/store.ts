@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore as cs, combineReducers } from 'redux'
 
 function counter(state = 0, action) {
   switch (action.type) {
@@ -11,4 +11,16 @@ function counter(state = 0, action) {
   }
 }
 
-export const store = createStore(counter)
+function welcome(s = { hello: 'bye' }, action) {
+  switch (action.type) {
+    default:
+      return s
+  }
+}
+
+const reducer = combineReducers({
+  counter,
+  welcome,
+  page: s => s || {},
+})
+export const createStore = state => cs(reducer, state)
