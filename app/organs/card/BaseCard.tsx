@@ -21,10 +21,6 @@ const BaseCard: React.SFC<Props> = ({ id, title, excerpt }) => {
       </article>
       <style jsx>{`
         .container {
-          padding: 14px 0;
-          border-top: 1px solid #ddd;
-          display: inline-flex;
-          transform: translateY(-1px);
         }
 
         article {
@@ -38,7 +34,8 @@ const BaseCard: React.SFC<Props> = ({ id, title, excerpt }) => {
         }
 
         h2 {
-          font-size: 1rem;
+          letter-spacing: 0.02rem;
+          font-size: 0.9375rem;
           line-height: 1.1875rem;
           margin-top: 0;
           margin-bottom: 5px;

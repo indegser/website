@@ -1,28 +1,34 @@
-import { useSelector } from 'react-redux'
-import BaseCard from '../../organs/card/BaseCard'
 import PageContainer from '../../atoms/container/PageContainer'
+import Opinion from './Opinion'
 
 const Home = () => {
-  const { stories } = useSelector((s: any) => s.page)
   return (
     <PageContainer>
-      <div>
-        {stories.map(story => (
-          <BaseCard
-            key={story.id}
-            id={story.id}
-            title={story.title}
-            excerpt={story.excerpt}
-          />
-        ))}
+      <div className="home">
+        <div className="heroes"></div>
+        <div className="short-stories">
+          <Opinion />
+        </div>
       </div>
       <style jsx>
         {`
-          div {
-            max-width: 620px;
+          .home {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+          }
+
+          .heroes {
+            padding-right: 15px;
+            border-right: 1px solid #aaa;
+          }
+
+          .short-stories {
+            padding-left: 15px;
+          }
+
+          .stories-table {
             column-count: 2;
             column-gap: 29px;
-            margin: 0 auto;
             position: relative;
             border-top: 1px solid #ddd;
 
