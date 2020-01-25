@@ -3,7 +3,7 @@ import SignInModal from './SignInModal'
 import { useState } from 'react'
 
 const Profile = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
   return (
     <div>
       <div onClick={() => setIsOpen(true)}>
