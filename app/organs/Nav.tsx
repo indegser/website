@@ -1,21 +1,7 @@
 import Link from 'next/link'
 import { LogoIcon } from '../atoms/icons/icons'
 import PageContainer from '../atoms/container/PageContainer'
-
-const navs = [
-  {
-    name: '뉴스',
-    to: '/',
-  },
-  {
-    name: '책',
-    to: '/book',
-  },
-  {
-    name: '영화',
-    to: '/movie',
-  },
-]
+import Profile from './nav/Profile'
 
 const Nav = () => {
   return (
@@ -24,30 +10,24 @@ const Nav = () => {
         <div className="navs">
           <Link href="/">
             <a>
-              <div className="nav-content">
+              <div className="nav-content logo">
                 <LogoIcon width={20} />
               </div>
             </a>
           </Link>
-          {navs.map(({ name, to }) => (
-            <Link href={to} key={name}>
-              <a>
-                <div className="nav-content">
-                  {name}
-                </div>
-              </a>
-            </Link>
-          ))}
+          <div className="right">
+            <Profile />
+          </div>
         </div>
       </PageContainer>
       <style jsx>{`
         a {
           height: 100%;
           padding: 0 12px;
+          margin-left: -12px;
           text-decoration: none;
           color: rgba(0, 0, 0, 0.9);
           font-size: 14px;
-
         }
         a:hover {
           opacity: 0.65;
@@ -58,12 +38,10 @@ const Nav = () => {
         }
 
         .navs {
-          display: grid;
-          height: 44px;
-          grid-gap: 0 30px;
-          grid-auto-flow: column;
-          grid-auto-columns: max-content;
+          display: flex;
+          height: 48px;
           align-items: center;
+          justify-content: space-between;
           position: relative;
           z-index: 2;
         }

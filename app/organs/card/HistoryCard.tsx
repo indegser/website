@@ -6,7 +6,7 @@ const HistoryCard = ({ title, excerpt, comment, cover }) => {
         <div className="info">
           <h2>{title}</h2>
         </div>
-        {comment && <p className="comment">"{comment}"</p>}
+        <p className="comment">{comment || excerpt}</p>
       </div>
       <style jsx>{`
         .content {

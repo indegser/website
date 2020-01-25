@@ -72,6 +72,7 @@ export default () => {
         overflow: hidden;
         position: fixed;
         width: 100vw;
+        height: 100vh;
         left: 0;
         bottom: 0;
         right: 0;
