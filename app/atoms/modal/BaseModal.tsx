@@ -22,10 +22,16 @@ export const BaseModal: React.SFC<Props> = ({
     const container = document.createElement('div')
     container.id = id
     document.body.appendChild(container)
+    document.body.style.top = `-${window.scrollY}px`
+    document.body.classList.add('prevent-scroll')
     setId(id)
 
     return () => {
       document.body.removeChild(container)
+      const scrollY = document.body.style.top
+      document.body.style.top = ''
+      document.body.classList.remove('prevent-scroll')
+      window.scrollTo(0, parseInt(scrollY || '0') * -1)
       setId(null)
     }
   }, [isOpen])

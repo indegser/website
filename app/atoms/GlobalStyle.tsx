@@ -22,6 +22,12 @@ export default () => {
         -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
         -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
         font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+        top: 0;
+
+        &.prevent-scroll {
+          position: fixed;
+          width: 100vw;
+        }
       }
 
       input,
