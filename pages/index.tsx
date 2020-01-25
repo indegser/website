@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { getStories } from '../app/apis/sejong'
+import { getStories, getHistories } from '../app/apis/sejong'
 import Home from '../app/pages/home/Home'
 
 const HomePage = () => {
@@ -15,8 +15,16 @@ const HomePage = () => {
 }
 
 HomePage.getInitialProps = async () => {
-  const { data } = await getStories()
-  return data
+  const [{ data: stories }, { data: histories }] = await Promise.all([
+    getStories(),
+    getHistories(),
+  ])
+  return {
+    data: {
+      ...stories.data,
+      ...histories.data,
+    },
+  }
 }
 
 export default HomePage

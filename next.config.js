@@ -1,10 +1,20 @@
-require('dotenv').config()
+const getMode = branch => {
+  if (!branch) return 'LOCAL'
+  switch (branch) {
+    case 'master':
+      return 'PROD'
+    default:
+      return 'STAGE'
+  }
+}
+
+const MODE = getMode(process.env.NOW_GITHUB_COMMIT_REF)
 
 module.exports = {
   env: {
-    FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+    MODE,
   },
-  webpack: (config) => {
+  webpack: config => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],

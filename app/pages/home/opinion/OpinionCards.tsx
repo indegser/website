@@ -27,21 +27,8 @@ const OpinionCards = () => {
           padding-bottom: 15px;
         }
         .cards {
-          column-count: 2;
-          column-gap: 29px;
           position: relative;
           border-top: 1px solid #ddd;
-
-          &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 14px;
-            bottom: 14px;
-            left: 50%;
-            width: 1px;
-            background: #e2e2e2;
-          }
         }
 
         .card {
