@@ -3,7 +3,7 @@ on:
     branches:
       - master
 
-name: Edge CI
+name: Production CI
 jobs:
   build:
     runs-on: ubuntu-latest
