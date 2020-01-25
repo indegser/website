@@ -9,8 +9,8 @@ const History = () => {
       <div className="cards">
         {histories.map(history => {
           return (
-            <div className="card">
-              <HistoryCard key={history.id} {...history} />
+            <div className="card" key={history.id}>
+              <HistoryCard {...history} />
             </div>
           )
         })}
