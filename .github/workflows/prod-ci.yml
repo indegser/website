@@ -3,7 +3,7 @@ on:
     branches:
       - master
 
-name: Production CI
+name: Edge CI
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +24,7 @@ jobs:
           node-version: 10.x
       - name: Deploy
         run: |
+          npm install
           node scripts/create-now-json.js
           ./node_modules/.bin/now --prod --token $NOW_TOKEN
         env:
