@@ -1,18 +1,6 @@
-const getMode = branch => {
-  if (!branch) return 'LOCAL'
-  switch (branch) {
-    case 'master':
-      return 'PROD'
-    default:
-      return 'STAGE'
-  }
-}
-
-const MODE = getMode(process.env.NOW_GITHUB_COMMIT_REF)
-
 module.exports = {
   env: {
-    MODE,
+    NOW_NAME: process.env.NOW_NAME,
   },
   webpack: config => {
     config.module.rules.push({

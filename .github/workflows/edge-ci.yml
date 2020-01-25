@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - develop
+
+name: Edge CI
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ env.cache-name }}-
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Deploy
+        run: |
+          node scripts/create-now-json.js
+          ./node_modules/.bin/now --prod --token $NOW_TOKEN
+        env:
+          NOW_NAME: seoul-edge
+          NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
