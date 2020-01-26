@@ -1,7 +1,8 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/analytics'
-import { signIn } from './seoul'
+import Router from 'next/router'
+import seoulApi from './seoul'
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -52,7 +53,14 @@ export const signInWithFirebase = providerName => {
 export const getRedirectResult = async () => {
   await firebase.auth().getRedirectResult()
   if (firebase.auth().currentUser) {
-    const idToken = await firebase.auth().currentUser.getIdToken(true)
-    await signIn(idToken)
+    const token = await firebase.auth().currentUser.getIdToken(true)
+
+    await seoulApi.signIn(token)
+    localStorage.removeItem('signing-in')
+    Router.reload()
   }
+}
+
+export const signOut = async () => {
+  return Promise.all([firebase.auth().signOut(), seoulApi.signOut()])
 }

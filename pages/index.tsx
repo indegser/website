@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { getStories, getHistories } from '../app/apis/sejong'
 import Home from '../app/pages/home/Home'
+import { getMe } from '../app/apis/seoul'
 
 const HomePage = () => {
   return (
@@ -14,12 +15,15 @@ const HomePage = () => {
   )
 }
 
-HomePage.getInitialProps = async () => {
+HomePage.getInitialProps = async ctx => {
+  const currentUser = await getMe(ctx.req)
+
   const [{ data: stories }, { data: histories }] = await Promise.all([
     getStories(),
     getHistories(),
   ])
   return {
+    currentUser,
     data: {
       ...stories.data,
       ...histories.data,

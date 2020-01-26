@@ -25,4 +25,10 @@ type PageStateType =
 
 interface AppState {
   page: PageStateType
+  currentUser: null | {
+    uid: string
+    picture: string
+    name: string
+    email: string
+  }
 }

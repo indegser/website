@@ -12,7 +12,8 @@ export default async (req, res: NextApiResponse) => {
       path: '/',
       maxAge: 360000,
       httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
     })
   )
-  res.json({ token })
+  res.end()
 }

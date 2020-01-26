@@ -19,8 +19,7 @@ function welcome(s = { hello: 'bye' }, action) {
 }
 
 const reducer = combineReducers({
-  counter,
-  welcome,
+  currentUser: s => s || null,
   page: s => s || {},
 })
 export const createStore = state => cs(reducer, state)

@@ -1,16 +1,9 @@
 import { RectButton } from '../../atoms/button/RectButton'
 import { signInWithFirebase } from '../../apis/firebase'
-import Router from 'next/router'
 
 const SignInProvider = ({ provider, logo: Logo, name }) => {
   const handleClick = () => {
-    Router.replace({
-      pathname: location.pathname,
-      query: {
-        'is-signing-in': true,
-        provider,
-      },
-    })
+    localStorage.setItem('signing-in', 'google')
     signInWithFirebase(provider)
   }
 

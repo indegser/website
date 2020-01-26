@@ -8,7 +8,8 @@ import SignIn from '../app/organs/sign-in/SignIn'
 
 export default ({ Component, pageProps, router }) => {
   const store = useMemo(() => {
-    const s = createStore({ page: pageProps.data })
+    const { data: page, currentUser } = pageProps
+    const s = createStore({ page, currentUser })
 
     if (process.browser) {
       ;(window as any).getState = () => s.getState()
@@ -21,7 +22,7 @@ export default ({ Component, pageProps, router }) => {
     <ReduxProvider store={store}>
       <GlobalStyle />
       <div className="page">
-        {router.query.provider && <SignIn />}
+        {process.browser && localStorage.getItem('signing-in') && <SignIn />}
         <Nav />
         <main>
           <Component {...pageProps}></Component>

@@ -1,8 +1,13 @@
-export const BaseAvatar = ({ src, styles }) => {
+interface Props {
+  src: string | null
+  styles: any
+}
+
+export const BaseAvatar: React.SFC<Props> = ({ src, styles }) => {
   return (
     <div>
       <div className="avatar">
-        <img src={src} />
+        {src ? <img src={src} /> : <div className="placeholder" />}
       </div>
       <style jsx>
         {`
@@ -12,6 +17,12 @@ export const BaseAvatar = ({ src, styles }) => {
             height: var(--avatar-size);
             border-radius: 999rem;
             overflow: hidden;
+          }
+
+          .placeholder {
+            width: 100%;
+            height: 100%;
+            background: #eee;
           }
 
           img {
