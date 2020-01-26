@@ -1,11 +1,24 @@
 import { RectButton } from '../../atoms/button/RectButton'
+import { signInWithFirebase } from '../../apis/firebase'
+import Router from 'next/router'
 
-const SignInProvider = ({ provider, Logo }) => {
+const SignInProvider = ({ provider, logo: Logo, name }) => {
+  const handleClick = () => {
+    Router.replace({
+      pathname: location.pathname,
+      query: {
+        'is-signing-in': true,
+        provider,
+      },
+    })
+    signInWithFirebase(provider)
+  }
+
   return (
-    <RectButton>
+    <RectButton onClick={handleClick}>
       <div className="container">
         <Logo width={22} height={22} />
-        <div className="name">{provider}</div>
+        <div className="name">{name}</div>
       </div>
       <style jsx>
         {`

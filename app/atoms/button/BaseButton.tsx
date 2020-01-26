@@ -1,6 +1,6 @@
-export const BaseButton = ({ children, styles }) => {
+export const BaseButton = ({ children, styles, ...props }) => {
   return (
-    <button>
+    <button {...props}>
       {children}
       <style jsx>{`
         button {

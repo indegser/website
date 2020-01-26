@@ -5,9 +5,9 @@ import GithubLogo from '../../atoms/icons/github-logo.svg'
 import SignInProvider from './SignInProvider'
 
 const providers = {
-  구글: GoogleLogo,
-  페이스북: FacebookLogo,
-  깃허브: GithubLogo,
+  google: { logo: GoogleLogo, name: '구글' },
+  facebook: { logo: FacebookLogo, name: '페이스북' },
+  github: { logo: GithubLogo, name: '깃허브' },
 }
 
 const SignInModal = props => {
@@ -31,7 +31,7 @@ const SignInModal = props => {
             <SignInProvider
               key={provider}
               provider={provider}
-              Logo={providers[provider]}
+              {...providers[provider]}
             />
           ))}
         </div>

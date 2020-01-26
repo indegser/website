@@ -3,9 +3,10 @@ import GlobalStyle from '../app/atoms/GlobalStyle'
 import { createStore } from '../app/store/store'
 import Footer from '../app/organs/footer/Footer'
 import Nav from '../app/organs/Nav'
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
+import SignIn from '../app/organs/sign-in/SignIn'
 
-export default ({ Component, pageProps }) => {
+export default ({ Component, pageProps, router }) => {
   const store = useMemo(() => {
     const s = createStore({ page: pageProps.data })
 
@@ -20,6 +21,7 @@ export default ({ Component, pageProps }) => {
     <ReduxProvider store={store}>
       <GlobalStyle />
       <div className="page">
+        {router.query.provider && <SignIn />}
         <Nav />
         <main>
           <Component {...pageProps}></Component>
