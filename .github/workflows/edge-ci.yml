@@ -34,3 +34,4 @@ jobs:
         env:
           NOW_NAME: seoul-edge
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
