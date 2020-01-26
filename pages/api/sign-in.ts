@@ -1,4 +1,4 @@
-import { fbadmin } from '../../api/admin/firebase'
+import { fbadmin } from '../../lib/admin/firebase'
 import cookie from 'cookie'
 import { NextApiResponse } from 'next'
 
