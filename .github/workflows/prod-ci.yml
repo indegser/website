@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Decrypt secrets
-        run: ./scripts/decrypt-secret.sh
+        run: ./scripts/decrypt_secret.sh
         env:
           GPG_PASSPHRASE: ${{ secrets. GPG_PASSPHRASE }}
       - name: Cache node modules
