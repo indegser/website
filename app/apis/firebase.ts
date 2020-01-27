@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/analytics'
 import Router from 'next/router'
-import seoulApi from './seoul'
+import jongroApi from './jongroApi'
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -55,12 +55,12 @@ export const getRedirectResult = async () => {
   if (firebase.auth().currentUser) {
     const token = await firebase.auth().currentUser.getIdToken(true)
 
-    await seoulApi.signIn(token)
+    await jongroApi.signIn(token)
     localStorage.removeItem('signing-in')
     Router.reload()
   }
 }
 
 export const signOut = async () => {
-  return Promise.all([firebase.auth().signOut(), seoulApi.signOut()])
+  return Promise.all([firebase.auth().signOut(), jongroApi.signOut()])
 }

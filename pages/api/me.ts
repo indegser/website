@@ -15,7 +15,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         picture: decoded.picture,
         email: decoded.email,
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   res.json({ currentUser })

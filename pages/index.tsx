@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { getStories, getHistories } from '../app/apis/sejong'
 import Home from '../app/pages/home/Home'
-import { getMe } from '../app/apis/seoul'
+import jongroApi from '../app/apis/jongroApi'
 
 const HomePage = () => {
   return (
@@ -16,7 +16,9 @@ const HomePage = () => {
 }
 
 HomePage.getInitialProps = async ctx => {
-  const currentUser = await getMe(ctx.req)
+  const {
+    data: { currentUser },
+  } = await jongroApi.me(ctx.req)
 
   const [{ data: stories }, { data: histories }] = await Promise.all([
     getStories(),
