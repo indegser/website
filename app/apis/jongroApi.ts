@@ -1,9 +1,11 @@
 import axios from 'axios'
 
-const BASE_URL =
-  process.env.NODE_ENV === 'production'
-    ? 'https://jongro.indegser.com'
-    : 'http://localhost:3031'
+const urls = {
+  'seoul-edge': 'https://jongro-edge.indegser.com',
+  seoul: 'https://jongro.indegser.com',
+}
+
+const BASE_URL = urls[process.env.NOW_NAME] || 'http://localhost:3031'
 
 const signIn = token =>
   axios.post(BASE_URL + '/api/sign-in', { token }, { withCredentials: true })
