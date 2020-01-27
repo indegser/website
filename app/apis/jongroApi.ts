@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const urls = {
-  'seoul-edge': 'https://jongro-edge.indegser.com',
-  seoul: 'https://jongro.indegser.com',
+  'seoul-edge': 'https://jongro-edge.now.sh',
+  seoul: 'https://jongro.now.sh',
 }
 
 const BASE_URL = urls[process.env.NOW_NAME] || 'http://localhost:3031'
