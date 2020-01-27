@@ -17,6 +17,7 @@ const signOut = () =>
 
 const me = async req => {
   const headers = req ? req.headers : {}
+  console.log(BASE_URL, '!!!', headers)
   return axios.get(BASE_URL + '/api/me', {
     withCredentials: true,
     headers,
