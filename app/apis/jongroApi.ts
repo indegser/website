@@ -16,7 +16,7 @@ const signOut = () =>
   })
 
 const me = async req => {
-  const headers = req ? { cookie: req.headers.cookie } : {}
+  const headers = req ? { cookie: req.headers.cookie || '' } : {}
 
   return axios.get(BASE_URL + '/api/me', {
     withCredentials: true,
