@@ -1,18 +1,25 @@
 import HistoryCard from '../../../organs/card/HistoryCard'
+import { getHistories } from '../../../apis/sejong'
+import { useAxiosSWR } from '../../../utils/swrUtils'
+import { HistoryType } from '../../../types/HistoryTypes'
 
 const History = () => {
-  const histories = []
+  const { data } = useAxiosSWR<{ histories: HistoryType[] }>(
+    'histories',
+    getHistories
+  )
 
   return (
     <div className="container">
       <div className="cards">
-        {histories.map(history => {
-          return (
-            <div className="card" key={history.id}>
-              <HistoryCard {...history} />
-            </div>
-          )
-        })}
+        {data &&
+          data.histories.map(history => {
+            return (
+              <div className="card" key={history.id}>
+                <HistoryCard history={history} />
+              </div>
+            )
+          })}
         <div className="vert-divider" />
       </div>
       <style jsx>{`

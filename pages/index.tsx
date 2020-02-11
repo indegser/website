@@ -16,20 +16,20 @@ const HomePage = () => {
 }
 
 HomePage.getInitialProps = async ctx => {
-  const {
-    data: { currentUser },
-  } = await jongroApi.me(ctx.req)
+  // const {
+  //   data: { currentUser },
+  // } = await jongroApi.me(ctx.req)
 
-  const [{ data: stories }, { data: histories }] = await Promise.all([
-    getStories(),
-    getHistories(),
-  ])
+  // const [{ data: stories }, { data: histories }] = await Promise.all([
+  //   getStories(),
+  //   getHistories(),
+  // ])
   return {
-    currentUser,
-    data: {
-      ...stories.data,
-      ...histories.data,
-    },
+    currentUser: null,
+    // data: {
+    //   ...stories.data,
+    //   ...histories.data,
+    // },
   }
 }
 

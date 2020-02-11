@@ -1,4 +1,8 @@
-const HistoryCard = ({ title, excerpt, comment, cover }) => {
+import React from 'react'
+import { HistoryType } from '../../types/HistoryTypes'
+
+const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
+  const { title, comment, cover, excerpt } = history
   return (
     <article className="container">
       <div className="content">
