@@ -1,8 +1,7 @@
-import { useSelector } from 'react-redux'
 import HistoryCard from '../../../organs/card/HistoryCard'
 
 const History = () => {
-  const { histories } = useSelector((s: any) => s.page)
+  const histories = []
 
   return (
     <div className="container">

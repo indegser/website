@@ -5,7 +5,7 @@ const urls = {
   seoul: 'https://jongro.now.sh',
 }
 
-const BASE_URL = urls[process.env.NOW_NAME] || 'http://localhost:3031'
+const BASE_URL = urls[process.env.NOW_NAME] || urls['seoul-edge']
 
 const signIn = token =>
   axios.post(BASE_URL + '/api/sign-in', { token }, { withCredentials: true })

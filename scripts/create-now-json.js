@@ -3,7 +3,6 @@ const fs = require('fs')
 console.log('>>> Creating now.json with github env variables.')
 const { NOW_NAME, FIREBASE_API_KEY } = process.env
 const json = JSON.parse(fs.readFileSync('now.json', 'utf-8'))
-json.name = NOW_NAME
 
 const newJson = {
   ...json,

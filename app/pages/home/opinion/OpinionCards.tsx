@@ -1,8 +1,9 @@
-import { useSelector } from 'react-redux'
 import BaseCard from '../../../organs/card/BaseCard'
 
 const OpinionCards = () => {
-  const { stories } = useSelector((s: any) => s.page)
+  const stories = []
+
+  return null
   const [headline, ...shorts] = stories
 
   return (

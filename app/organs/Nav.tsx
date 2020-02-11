@@ -11,7 +11,7 @@ const Nav = () => {
           <Link href="/">
             <a>
               <div className="nav-content logo">
-                <LogoIcon width={20} />
+                <LogoIcon height={26} />
               </div>
             </a>
           </Link>
@@ -39,7 +39,7 @@ const Nav = () => {
 
         .navs {
           display: flex;
-          height: 48px;
+          height: 54px;
           align-items: center;
           justify-content: space-between;
           position: relative;

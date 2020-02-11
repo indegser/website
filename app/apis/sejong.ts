@@ -5,7 +5,7 @@ const urls = {
   seoul: 'https://sejong.indegser.com',
 }
 
-const BASE_URL = urls[process.env.NOW_NAME] || 'http://localhost:3030'
+const BASE_URL = urls[process.env.NOW_NAME] || urls['seoul-edge']
 
 export const getStories = () => {
   return axios.get(BASE_URL + '/api/story')
