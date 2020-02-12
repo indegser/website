@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BodyText, { BodyTextTypes } from 'atoms/typography/BodyText'
 
 interface Props {
   id: string
@@ -14,7 +15,7 @@ const BaseCard: React.SFC<Props> = ({ id, title, excerpt }) => {
           <a aria-label={title}>
             <div className="content">
               <h2>{title}</h2>
-              <p>{excerpt}</p>
+              <BodyText variant={BodyTextTypes.Short1} />
             </div>
           </a>
         </Link>
