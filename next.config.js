@@ -1,4 +1,5 @@
 require('dotenv').config()
+const path = require('path')
 
 module.exports = {
   env: {
@@ -10,6 +11,8 @@ module.exports = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
+
+    config.resolve.modules.push(path.resolve(__dirname, 'app'))
 
     return config
   },

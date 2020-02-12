@@ -1,4 +1,4 @@
-import PageContainer from '../../atoms/container/PageContainer'
+import PageContainer from 'atoms/container/PageContainer'
 import History from './history/History'
 
 const Home = () => {
