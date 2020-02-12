@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
+import { getColor, ColorTokens } from 'atoms/colors/colorTypes'
 
 export enum BodyTextTypes {
   Short1,
@@ -15,6 +16,7 @@ const Short1BodyText = styled(BaseBodyText)`
   line-height: 1.125rem;
   font-weight: 400;
   letter-spacing: 0.16px;
+  color: ${getColor(ColorTokens.Danger)};
 `
 
 const Short2BodyText = styled(BaseBodyText)``
