@@ -43,27 +43,6 @@ const SignInModal = props => {
             padding-bottom: 15px;
             margin-bottom: 15px;
             border-bottom: 1px solid var(--divider-color);
-
-            h1 {
-              font-weight: 900;
-            }
-
-            h4 {
-              font-weight: 400;
-            }
-          }
-
-          .providers {
-            margin: 0 30px;
-
-            h5 {
-              font-size: 1rem;
-            }
-
-            p {
-              font-size: 0.825rem;
-              color: #555;
-            }
           }
 
           .provider-guide {

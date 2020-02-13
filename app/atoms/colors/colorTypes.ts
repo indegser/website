@@ -1,5 +1,3 @@
-export enum BackgroundColorTypes {}
-
 export enum ColorTokens {
   Interactive1 = '#0f62fe',
   Danger = '#da1e28',
