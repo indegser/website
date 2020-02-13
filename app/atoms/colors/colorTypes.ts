@@ -1,6 +1,7 @@
 export enum ColorTokens {
   Interactive1 = '#0f62fe',
   Danger = '#da1e28',
+  BorderLighter = '#ebebeb',
 }
 
 const reverseMap = Object.keys(ColorTokens).reduce((res, key) => {

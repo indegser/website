@@ -1,6 +1,6 @@
 import GlobalStyle from '../app/atoms/GlobalStyle'
 import Footer from '../app/organs/footer/Footer'
-import Nav from '../app/organs/Nav'
+import Nav from '../app/organs/nav/Nav'
 import SignIn from '../app/organs/sign-in/SignIn'
 
 export default ({ Component, pageProps }) => {
