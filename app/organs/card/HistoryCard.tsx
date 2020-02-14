@@ -1,5 +1,6 @@
 import React from 'react'
 import { HistoryType } from '../../types/HistoryTypes'
+import BodyText, { BodyTextTypes } from 'atoms/typography/BodyText'
 
 const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
   const { title, comment, cover, excerpt } = history
@@ -10,7 +11,7 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
         <div className="info">
           <h2>{title}</h2>
         </div>
-        <p className="comment">{comment || excerpt}</p>
+        <BodyText variant={BodyTextTypes.Short1}>{comment || excerpt}</BodyText>
       </div>
       <style jsx>{`
         .content {

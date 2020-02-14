@@ -7,11 +7,6 @@ const styles = css`
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: 0.2s background-color ease;
-
-    &:hover {
-      border-color: #888;
-      background: #f9f9f9;
-    }
   }
 `
 

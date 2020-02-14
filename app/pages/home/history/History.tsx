@@ -25,14 +25,12 @@ const History = () => {
       <style jsx>{`
         .container {
           padding-top: 3px;
-          border-top: 1px solid black;
         }
 
         .cards {
           column-count: 4;
           column-gap: 29px;
           position: relative;
-          border-top: 1px solid var(--divider-color);
         }
 
         .vert-divider {

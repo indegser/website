@@ -8,55 +8,44 @@ const Footer = () => {
     <footer>
       <PageContainer>
         <div className="contents">
-          <div className="copyright">
-            한재권이 디자인하고 개발했습니다.
-          </div>
+          <div className="copyright">한재권이 디자인하고 개발했습니다.</div>
           <div className="links">
             <Sns />
           </div>
         </div>
       </PageContainer>
       <style jsx>{`
-          footer {
-            color: #666;
-            font-size: 13px;
-            margin-top: 32px;
+        footer {
+          color: #666;
+          font-size: 13px;
+          margin-top: 32px;
+        }
 
-            a {
-              text-decoration: none;
+        .links {
+          display: grid;
+          grid-auto-flow: column;
+          grid-gap: 12px;
+          align-items: center;
+        }
 
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          }
+        .contents {
+          padding: 32px 0;
+          border-top: 1px solid var(--divider-color);
+          margin: 0 auto;
+          display: grid;
+          grid-auto-flow: column;
+          grid-gap: 8px;
+          justify-content: space-between;
+          align-items: center;
+        }
 
-          .links {
-            display: grid;
-            grid-auto-flow: column;
-            grid-gap: 12px;
-            align-items: center;
-          }
-
+        @media ${mobile} {
           .contents {
-            padding: 32px 0;
-            border-top: 1px solid var(--divider-color);
-            margin: 0 auto;
-            display: grid;
-            grid-auto-flow: column;
-            grid-gap: 8px;
-            justify-content: space-between;
-            align-items: center;
+            grid-auto-flow: row;
+            padding: 20px 0;
           }
-
-
-          @media ${mobile} {
-            .contents {
-              grid-auto-flow: row;
-              padding: 20px 0;
-            }
-          }
-        `}</style>
+        }
+      `}</style>
     </footer>
   )
 }
