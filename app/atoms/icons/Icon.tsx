@@ -1,17 +1,24 @@
 import React from 'react'
 
-export enum IconType {
-  Logo = 'logo',
+export const iconPaths = {
+  logo: 'logo',
+  facebookLogo: 'facebook-logo',
+  googleLogo: 'google-logo',
+  githubLogo: 'github-logo',
 }
 
 interface IIconProps {
-  variant: IconType
+  variant: keyof typeof iconPaths
   height?: number
   width?: number
 }
 
 const Icon: React.FC<IIconProps> = ({ variant, ...props }) => {
-  const Component = require(`./${variant}.svg`).default
+  const path = iconPaths[variant]
+
+  if (!path) return null
+
+  const Component = require(`./${path}.svg`).default
   return <Component {...props} />
 }
 

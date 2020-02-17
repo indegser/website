@@ -4,12 +4,13 @@ export enum ColorTokens {
   BorderLighter = '#ebebeb',
 }
 
-const reverseMap = Object.keys(ColorTokens).reduce((res, key) => {
-  const value = ColorTokens[key]
-  res[value] = key
-  return res
-}, {})
+export const colorTokens = {
+  attr: '#585c6d',
+  borderLighter: '#ebebeb',
+}
 
-export const getColor = (variant: ColorTokens) => {
-  return `var(--${reverseMap[variant].toLowerCase()})`
+export type ColorTokenType = keyof typeof colorTokens
+
+export const getColor = (variant: ColorTokenType) => {
+  return `var(--${variant})`
 }

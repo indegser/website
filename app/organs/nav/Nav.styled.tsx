@@ -8,7 +8,7 @@ export const NavMenus = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid ${getColor(ColorTokens.BorderLighter)};
+  border-bottom: 1px solid ${getColor('borderLighter')};
 `
 
 export const NavHomeLogo = styled.div`

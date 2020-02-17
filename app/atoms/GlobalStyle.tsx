@@ -1,14 +1,14 @@
 import { createGlobalStyle, css } from 'styled-components'
-import { ColorTokens } from './colors/colorTypes'
+import { colorTokens } from './colors/colorTypes'
 
 const colorVars = () => {
-  const keys = Object.keys(ColorTokens)
-  const values = keys.map(key => ColorTokens[key])
+  const keys = Object.keys(colorTokens)
+  const values = keys.map(key => colorTokens[key])
 
   let rules = ''
   for (const [i, key] of keys.entries()) {
     const value = values[i]
-    rules += `--${key.toLowerCase()}: ${value};`
+    rules += `--${key}: ${value};`
   }
 
   return css`

@@ -16,7 +16,7 @@ const Short1BodyText = styled(BaseBodyText)`
   line-height: 1.125rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  color: ${getColor(ColorTokens.Danger)};
+  color: ${getColor('attr')};
 `
 
 const Short2BodyText = styled(BaseBodyText)``

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PageContainer from 'atoms/container/PageContainer'
 import Profile from './Profile'
 import { NavMenus, NavHomeLogo } from './Nav.styled'
-import Icon, { IconType } from 'atoms/icons/Icon'
+import Icon from 'atoms/icons/Icon'
 
 const Nav = () => {
   return (
@@ -12,7 +12,7 @@ const Nav = () => {
           <Link href="/">
             <a>
               <NavHomeLogo>
-                <Icon variant={IconType.Logo} height={26} />
+                <Icon variant="logo" height={26} />
               </NavHomeLogo>
             </a>
           </Link>
@@ -21,22 +21,6 @@ const Nav = () => {
           </div>
         </NavMenus>
       </PageContainer>
-      <style jsx>{`
-        a:hover {
-          opacity: 0.65;
-        }
-
-        a[aria-current='page'] {
-          opacity: 0.65;
-        }
-
-        .nav-content {
-          height: 100%;
-          display: flex;
-          align-items: center;
-          color: black;
-        }
-      `}</style>
     </nav>
   )
 }

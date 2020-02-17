@@ -1,20 +1,23 @@
-import { SmallAvatar } from '../../atoms/avatar/SmallAvatar'
-import SignInModal from './SignInModal'
 import { useState } from 'react'
+import Avatar from 'atoms/avatar/Avatar'
+import { ProfileName, ProfileRole } from './Profile.styled'
+import Flexbox from 'atoms/box/Flexbox'
+import Box from 'atoms/box/Box'
 
 const Profile = () => {
   const currentUser = null
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div>
-      <div onClick={() => setIsOpen(true)}>
-        <SmallAvatar src={currentUser && currentUser.picture} />
-      </div>
-      {!currentUser && (
-        <SignInModal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} />
-      )}
-    </div>
+    <Flexbox>
+      <Box mr={2}>
+        <ProfileName>Han Jaekwon</ProfileName>
+        <ProfileRole>관리자</ProfileRole>
+      </Box>
+      <Box>
+        <Avatar src="https://avatars3.githubusercontent.com/u/12758512?v=4&s=128" />
+      </Box>
+    </Flexbox>
   )
 }
 

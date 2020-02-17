@@ -18,7 +18,6 @@ export default ({ Component, pageProps }) => {
     <>
       <GlobalStyle />
       <div className="page">
-        {process.browser && localStorage.getItem('signing-in') && <SignIn />}
         <Nav />
         <main>
           <Component {...pageProps}></Component>
