@@ -16,7 +16,7 @@ const Footer = () => {
             alignItems="center"
           >
             <FooterCopyright>
-              Designed and developed by <strong>Indegser</strong>
+              Designed and developed by Indegser
             </FooterCopyright>
             <Sns />
           </Grid>
