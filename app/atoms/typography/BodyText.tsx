@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
-import { getColor, ColorTokens } from 'atoms/colors/colorTypes'
+import { getColor } from 'atoms/colors/colorTypes'
 
 export enum BodyTextTypes {
   Short1,

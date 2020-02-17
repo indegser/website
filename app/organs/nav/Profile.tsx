@@ -12,7 +12,7 @@ const Profile = () => {
     <Flexbox>
       <Box mr={2}>
         <ProfileName>Han Jaekwon</ProfileName>
-        <ProfileRole>관리자</ProfileRole>
+        <ProfileRole>Admin</ProfileRole>
       </Box>
       <Box>
         <Avatar src="https://avatars3.githubusercontent.com/u/12758512?v=4&s=128" />

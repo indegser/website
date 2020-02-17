@@ -1,51 +1,27 @@
 import Sns from './Sns'
-import PageContainer from '../../atoms/container/PageContainer'
-
-const mobile = '(max-width: 640px)'
+import PageContainer from 'atoms/container/PageContainer'
+import Box from 'atoms/box/Box'
+import Grid from 'atoms/box/Grid'
+import { FooterCopyright } from './Footer.styled'
 
 const Footer = () => {
   return (
     <footer>
-      <PageContainer>
-        <div className="contents">
-          <div className="copyright">한재권이 디자인하고 개발했습니다.</div>
-          <div className="links">
+      <Box mt={4} py={3}>
+        <PageContainer>
+          <Grid
+            gridGap="0 4px"
+            gridAutoFlow="column"
+            gridAutoColumns="max-content"
+            alignItems="center"
+          >
+            <FooterCopyright>
+              Designed and developed by <strong>Indegser</strong>
+            </FooterCopyright>
             <Sns />
-          </div>
-        </div>
-      </PageContainer>
-      <style jsx>{`
-        footer {
-          color: #666;
-          font-size: 13px;
-          margin-top: 32px;
-        }
-
-        .links {
-          display: grid;
-          grid-auto-flow: column;
-          grid-gap: 12px;
-          align-items: center;
-        }
-
-        .contents {
-          padding: 32px 0;
-          border-top: 1px solid var(--divider-color);
-          margin: 0 auto;
-          display: grid;
-          grid-auto-flow: column;
-          grid-gap: 8px;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        @media ${mobile} {
-          .contents {
-            grid-auto-flow: row;
-            padding: 20px 0;
-          }
-        }
-      `}</style>
+          </Grid>
+        </PageContainer>
+      </Box>
     </footer>
   )
 }
