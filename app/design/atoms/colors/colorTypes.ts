@@ -8,6 +8,7 @@ export const colorTokens = {
   textLinkColor: '#2a5ac7',
   textPrimary: shade(0.75, '#2a5ac7'),
   bodyTextPrimary: tint(0.3, shade(0.8, '#2a5ac7')),
+  bodyTextComment: '#bb8e49',
   get baseButtonBg() {
     return this.interactive1
   },

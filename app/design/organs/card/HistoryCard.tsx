@@ -7,7 +7,7 @@ import {
   HistoryCardTitle,
   HistoryCardContainer,
   HistoryCardImages,
-  HistoryCardFavicon,
+  HistoryCardComment,
 } from './HistoryCard.styled'
 import Link from 'next/link'
 import { getColor } from 'design/atoms/colors/colorTypes'
@@ -29,10 +29,15 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
           </Link>
         </Box>
         <Box mt={1}>
-          <BodyText variant={BodyTextTypes.Short1}>
-            {comment || excerpt}
-          </BodyText>
+          <BodyText variant={BodyTextTypes.Short1}>{excerpt}</BodyText>
         </Box>
+        {comment && (
+          <Box mt={2}>
+            <HistoryCardComment variant={BodyTextTypes.Short1}>
+              "{comment.trim()}"
+            </HistoryCardComment>
+          </Box>
+        )}
         <Box
           pb={3}
           borderBottom={`1px solid ${getColor('borderLighter')}`}
