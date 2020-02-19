@@ -1,7 +1,8 @@
-import HistoryCard from '../../../organs/card/HistoryCard'
+import HistoryCard from 'design/organs/card/HistoryCard'
 import { getHistories } from '../../../apis/sejong'
 import { useAxiosSWR } from '../../../utils/swrUtils'
 import { HistoryType } from '../../../types/HistoryTypes'
+import HistoryDivider from './HistoryDivider'
 
 const History = () => {
   const { data } = useAxiosSWR<{ histories: HistoryType[] }>(
@@ -14,13 +15,9 @@ const History = () => {
       <div className="cards">
         {data &&
           data.histories.map(history => {
-            return (
-              <div className="card" key={history.id}>
-                <HistoryCard history={history} />
-              </div>
-            )
+            return <HistoryCard key={history.id} history={history} />
           })}
-        <div className="vert-divider" />
+        <HistoryDivider />
       </div>
       <style jsx>{`
         .container {
@@ -29,8 +26,9 @@ const History = () => {
 
         .cards {
           column-count: 4;
-          column-gap: 29px;
+          column-gap: 0px;
           position: relative;
+          padding-bottom: 40px;
         }
 
         .vert-divider {

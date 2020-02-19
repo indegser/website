@@ -1,6 +1,6 @@
 import React from 'react'
 import { SnsBox } from './Sns.styled'
-import Icon from 'atoms/icons/Icon'
+import Icon from 'design/atoms/icons/Icon'
 
 // const Dot = styled.span`
 //   &:before {

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
-import { getColor } from 'atoms/colors/colorTypes'
+import { getColor } from 'design/atoms/colors/colorTypes'
 
 export enum BodyTextTypes {
   Short1,
@@ -9,14 +9,17 @@ export enum BodyTextTypes {
   Long2,
 }
 
-const BaseBodyText = styled.p``
+const BaseBodyText = styled.p`
+  margin: 0;
+  word-break: break-word;
+  color: ${getColor('bodyTextPrimary')};
+`
 
 const Short1BodyText = styled(BaseBodyText)`
-  font-size: 0.875rem;
-  line-height: 1.125rem;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  color: ${getColor('attr')};
 `
 
 const Short2BodyText = styled(BaseBodyText)``

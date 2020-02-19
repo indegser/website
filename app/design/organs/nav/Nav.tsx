@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import PageContainer from 'atoms/container/PageContainer'
+import PageContainer from 'design/atoms/container/PageContainer'
 import Profile from './Profile'
 import { NavMenus, NavHomeLogo } from './Nav.styled'
-import Icon from 'atoms/icons/Icon'
+import Icon from 'design/atoms/icons/Icon'
 
 const Nav = () => {
   return (

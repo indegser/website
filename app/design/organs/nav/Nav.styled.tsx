@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { getColor } from 'atoms/colors/colorTypes'
+import { getColor } from 'design/atoms/colors/colorTypes'
 
 export const NavMenus = styled.div`
   display: flex;

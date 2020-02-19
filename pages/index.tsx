@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import { getStories, getHistories } from '../app/apis/sejong'
 import Home from '../app/pages/home/Home'
-import jongroApi from '../app/apis/jongroApi'
 
 const HomePage = () => {
   return (

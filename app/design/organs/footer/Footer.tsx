@@ -1,7 +1,7 @@
 import Sns from './Sns'
-import PageContainer from 'atoms/container/PageContainer'
-import Box from 'atoms/box/Box'
-import Grid from 'atoms/box/Grid'
+import PageContainer from 'design/atoms/container/PageContainer'
+import Box from 'design/atoms/box/Box'
+import Grid from 'design/atoms/box/Grid'
 import { FooterCopyright } from './Footer.styled'
 
 const Footer = () => {

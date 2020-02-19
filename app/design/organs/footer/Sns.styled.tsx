@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import fontSizes from 'atoms/typography/fontSizes'
-import { getColor } from 'atoms/colors/colorTypes'
+import fontSizes from 'design/atoms/typography/fontSizes'
+import { getColor } from 'design/atoms/colors/colorTypes'
 
 export const SnsBox = styled.div`
   align-self: center;

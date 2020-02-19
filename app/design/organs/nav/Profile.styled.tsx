@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import fontSizes from 'atoms/typography/fontSizes'
-import { colorTokens } from 'atoms/colors/colorTypes'
+import fontSizes from 'design/atoms/typography/fontSizes'
+import { colorTokens } from 'design/atoms/colors/colorTypes'
 
 export const ProfileName = styled.div`
   font-size: ${fontSizes.s};

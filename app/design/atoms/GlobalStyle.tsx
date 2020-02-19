@@ -46,6 +46,12 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+  }
+
   input,
   textarea {
     font: inherit;

@@ -1,10 +1,13 @@
-import { darken, lighten } from 'polished'
+import { darken, lighten, shade, tint } from 'polished'
 
 export const colorTokens = {
   attr: '#585c6d',
   borderLighter: '#ebebeb',
   interactive1: '#0f62fe',
   bgSilver: '#ddd',
+  textLinkColor: '#2a5ac7',
+  textPrimary: shade(0.75, '#2a5ac7'),
+  bodyTextPrimary: tint(0.3, shade(0.8, '#2a5ac7')),
   get baseButtonBg() {
     return this.interactive1
   },
