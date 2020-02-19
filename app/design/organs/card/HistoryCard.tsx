@@ -17,7 +17,7 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
 
   return (
     <HistoryCardContainer>
-      <Box p={3} pb={0}>
+      <Box pt={3}>
         <HistoryCardImages>
           <HistoryCardImage src={cover} />
         </HistoryCardImages>

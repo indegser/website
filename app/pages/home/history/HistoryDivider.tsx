@@ -2,7 +2,19 @@ import { getColor } from 'design/atoms/colors/colorTypes'
 
 const HistoryDivider = () => {
   const column = 4
+  const gap = 32
+
   const array = new Array(column - 1).fill(true)
+
+  const getLeft = i => {
+    const halfGap = gap / 2
+    const multiplyer = i + 1
+    const space = gap * (column - 1)
+    const add = halfGap * (2 * i + 1)
+    const left = `calc((100% - ${space}px) / ${column} * ${multiplyer} + ${add}px)`
+
+    return left
+  }
 
   return (
     <>
@@ -11,7 +23,7 @@ const HistoryDivider = () => {
           <div
             key={i}
             style={{
-              left: `calc(${(100 / column) * (i + 1) + '%'} - 1px)`,
+              left: getLeft(i),
               position: 'absolute',
               top: 0,
               bottom: 0,

@@ -26,9 +26,9 @@ const History = () => {
 
         .cards {
           column-count: 4;
-          column-gap: 0px;
+          column-gap: 32px;
           position: relative;
-          padding-bottom: 40px;
+          padding-bottom: 32px;
         }
 
         .vert-divider {
