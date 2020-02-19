@@ -6,6 +6,8 @@ import {
   HistoryCardImage,
   HistoryCardTitle,
   HistoryCardContainer,
+  HistoryCardImages,
+  HistoryCardFavicon,
 } from './HistoryCard.styled'
 import Link from 'next/link'
 import { getColor } from 'design/atoms/colors/colorTypes'
@@ -16,7 +18,9 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
   return (
     <HistoryCardContainer>
       <Box p={3} pb={0}>
-        <HistoryCardImage src={cover} />
+        <HistoryCardImages>
+          <HistoryCardImage src={cover} />
+        </HistoryCardImages>
         <Box mt={2}>
           <Link href={`/h/${id}`}>
             <a>

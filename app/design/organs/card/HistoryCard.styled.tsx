@@ -8,6 +8,16 @@ export const HistoryCardContainer = styled.div`
   page-break-inside: avoid;
 `
 
+export const HistoryCardImages = styled.div`
+  position: relative;
+`
+
+export const HistoryCardFavicon = styled(CircleImage)`
+  width: 30px;
+  height: 30px;
+  object-fit: initial;
+`
+
 export const HistoryCardImage = styled(CircleImage)`
   width: 60px;
   height: 60px;
