@@ -11,6 +11,7 @@ import {
 } from './HistoryCard.styled'
 import Link from 'next/link'
 import { getColor } from 'design/atoms/colors/colorTypes'
+import parisApi from 'apis/parisApi'
 
 const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
   const { id, title, comment, cover, excerpt } = history
@@ -19,7 +20,9 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
     <HistoryCardContainer>
       <Box pt={3}>
         <HistoryCardImages>
-          <HistoryCardImage src={cover} />
+          <HistoryCardImage
+            src={parisApi.resize(cover, { width: 140, height: 140 })}
+          />
         </HistoryCardImages>
         <Box mt={2}>
           <Link href={`/h/${id}`}>
