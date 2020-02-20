@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { getRedirectResult } from '../../apis/firebase'
+import { getRedirectResult } from 'apis/firebase'
 
 const SignIn = () => {
   useEffect(() => {

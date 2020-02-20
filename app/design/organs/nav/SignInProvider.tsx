@@ -1,5 +1,5 @@
-import { RectButton } from '../../atoms/button/RectButton'
-import { signInWithFirebase } from '../../apis/firebase'
+import { RectButton } from 'design/atoms/button/RectButton'
+import { signInWithFirebase } from 'apis/firebase'
 
 const SignInProvider = ({ provider, logo: Logo, name }) => {
   const handleClick = () => {
