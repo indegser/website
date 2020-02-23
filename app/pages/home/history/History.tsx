@@ -2,7 +2,8 @@ import HistoryCard from 'design/organs/card/HistoryCard'
 import sejongApi from 'apis/sejongApi'
 import { useAxiosSWR } from 'utils/swrUtils'
 import { HistoryType } from 'types/HistoryTypes'
-import HistoryDivider from './HistoryDivider'
+import { HistoryGrid, HistoryDividers, HistoryCards } from './History.styled'
+import { HistoryDivider } from './History.styled'
 
 const History = () => {
   const { data } = useAxiosSWR<{ histories: HistoryType[] }>(
@@ -10,46 +11,29 @@ const History = () => {
     sejongApi.getHistories
   )
 
+  const dividers = new Array(4).fill(true)
+
   return (
-    <div className="container">
-      <div className="cards">
+    <HistoryGrid columnCount={[1, 2, 3, 4]}>
+      <HistoryCards>
         {data &&
           data.histories.map(history => {
             return <HistoryCard key={history.id} history={history} />
           })}
-        <HistoryDivider />
-      </div>
-      <style jsx>{`
-        .container {
-          padding-top: 3px;
-        }
-
-        .cards {
-          column-count: 4;
-          column-gap: 32px;
-          position: relative;
-          padding-bottom: 32px;
-        }
-
-        .vert-divider {
-          position: absolute;
-          background-color: var(--divider-color);
-          top: 15px;
-          bottom: 15px;
-          width: 1px;
-          left: 50%;
-          margin-left: -0.5px;
-        }
-
-        .card {
-          margin-top: -1px;
-          padding: 15px 0;
-          break-inside: avoid;
-          page-break-inside: avoid;
-          border-top: 1px solid var(--divider-color);
-        }
-      `}</style>
-    </div>
+      </HistoryCards>
+      <HistoryDividers>
+        {dividers.map((d, i) => {
+          return (
+            <HistoryDivider
+              key={i}
+              style={{
+                '--divider-i': i,
+              }}
+            />
+          )
+        })}
+      </HistoryDividers>
+    </HistoryGrid>
   )
 }
 

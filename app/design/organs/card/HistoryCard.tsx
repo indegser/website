@@ -1,5 +1,5 @@
 import React from 'react'
-import { HistoryType } from '../../../types/HistoryTypes'
+import { HistoryType } from 'types/HistoryTypes'
 import BodyText, { BodyTextTypes } from 'design/atoms/typography/BodyText'
 import Box from 'design/atoms/box/Box'
 import {
@@ -9,7 +9,6 @@ import {
   HistoryCardImages,
   HistoryCardComment,
 } from './HistoryCard.styled'
-import Link from 'next/link'
 import { getColor } from 'design/atoms/colors/colorTypes'
 
 const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
@@ -22,11 +21,9 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
           <HistoryCardImage src={cover} />
         </HistoryCardImages>
         <Box mt={2}>
-          <Link href={`/h/${id}`}>
-            <a>
-              <HistoryCardTitle>{title}</HistoryCardTitle>
-            </a>
-          </Link>
+          <a href={history.link}>
+            <HistoryCardTitle>{title}</HistoryCardTitle>
+          </a>
         </Box>
         <Box mt={1}>
           <BodyText variant={BodyTextTypes.Short1}>{excerpt}</BodyText>

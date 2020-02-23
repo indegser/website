@@ -1,7 +1,8 @@
 import GlobalStyle from '../app/design/atoms/GlobalStyle'
 import Footer from '../app/design/organs/footer/Footer'
 import Nav from '../app/design/organs/nav/Nav'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+import theme from 'design/theme'
 
 const Page = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const Page = styled.div`
 
 export default ({ Component, pageProps }) => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Page>
         <Nav />
@@ -25,6 +26,6 @@ export default ({ Component, pageProps }) => {
         </main>
         <Footer />
       </Page>
-    </>
+    </ThemeProvider>
   )
 }

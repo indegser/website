@@ -4,12 +4,7 @@ import History from './history/History'
 const Home = () => {
   return (
     <PageContainer>
-      <div className="home">
-        <div className="left">
-          <History />
-        </div>
-      </div>
-      <style jsx>{``}</style>
+      <History />
     </PageContainer>
   )
 }
