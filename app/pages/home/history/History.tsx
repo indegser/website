@@ -1,13 +1,13 @@
 import HistoryCard from 'design/organs/card/HistoryCard'
-import { getHistories } from '../../../apis/sejong'
-import { useAxiosSWR } from '../../../utils/swrUtils'
-import { HistoryType } from '../../../types/HistoryTypes'
+import sejongApi from 'apis/sejongApi'
+import { useAxiosSWR } from 'utils/swrUtils'
+import { HistoryType } from 'types/HistoryTypes'
 import HistoryDivider from './HistoryDivider'
 
 const History = () => {
   const { data } = useAxiosSWR<{ histories: HistoryType[] }>(
     'histories',
-    getHistories
+    sejongApi.getHistories
   )
 
   return (
