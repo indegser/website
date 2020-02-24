@@ -22,13 +22,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: Deploy
+      - name: Install dependencies
         run: |
           npm install
-          node scripts/create-now-json.js
-          ./node_modules/.bin/now --prod --token $NOW_TOKEN -e JWT_SECRET=$JWT_SECRET ADMIN_PASSWORD=$ADMIN_PASSWORD
+      - name: Deploy
+        run: |
+          npx now --name seoul --prod --token $NOW_TOKEN -e JWT_SECRET=$JWT_SECRET -e ADMIN_PASSWORD=$ADMIN_PASSWORD -e FIREBASE_API_KEY=$FIREBASE_API_KEY
         env:
-          NOW_NAME: seoul
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
