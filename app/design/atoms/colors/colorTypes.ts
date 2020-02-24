@@ -5,13 +5,16 @@ export const colorTokens = {
   borderLighter: '#ebebeb',
   interactive1: '#0f62fe',
   bgSilver: '#ddd',
-  textLinkColor: '#2a5ac7',
-  textPrimary: shade(0.75, '#2a5ac7'),
-  bodyTextPrimary: tint(0.3, shade(0.8, '#2a5ac7')),
-  textLabelColor: tint(0.3, shade(0.6, '#2a5ac7')),
+  textLinkColor: '#225ad2',
+  textPrimary: shade(0.75, '#225ad2'),
+  bodyTextPrimary: tint(0.3, shade(0.8, '#225ad2')),
+  textLabelColor: tint(0.3, shade(0.6, '#225ad2')),
   bodyTextComment: '#bb8e49',
-  get baseButtonBg() {
+  get baseButtonPrimary() {
     return this.interactive1
+  },
+  get baseButtonBg() {
+    return this.bgSilver
   },
   get baseButtonBoxShadowUpper() {
     return lighten(0.2, this.baseButtonBg)

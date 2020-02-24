@@ -27,3 +27,19 @@ export const HistoryCardTitle = styled(TitleText)`
     color: ${getColor('textLinkColor')};
   }
 `
+
+export const HistoryCardBody = styled.p`
+  margin: 0;
+  word-break: break-word;
+  color: var(--bodyTextPrimary);
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  text-indent: 12px;
+  text-align: justify;
+  word-break: break-all;
+  -webkit-letter-spacing: 0.16px;
+  -moz-letter-spacing: 0.16px;
+  -ms-letter-spacing: 0.16px;
+  letter-spacing: 0.16px;
+`

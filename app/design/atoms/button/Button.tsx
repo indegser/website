@@ -18,5 +18,10 @@ const Button = styled.button`
 export const PrimaryButton = styled(Button)`
   border-radius: 4px;
   color: white;
+  background: ${getColor('baseButtonPrimary')};
+`
+
+export const SecondaryButton = styled(Button)`
+  border-radius: 4px;
   background: ${getColor('baseButtonBg')};
 `

@@ -55,6 +55,23 @@ const GlobalStyle = createGlobalStyle`
   input,
   textarea {
     font: inherit;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    border: 1px solid #dcdee0;
+    background: #f0f4fb;
+    line-height: 1.5rem;
+    font-size: .925rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    outline: 0;
+    letter-spacing: .4px;
+
+    &:active, &:focus {
+      box-shadow: 0 0 2px 3px #dbe7f9;
+      border-color: var(--interactive1);
+      background: white !important;
+    }
   }
 
   .fixed {

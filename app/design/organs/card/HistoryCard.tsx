@@ -8,6 +8,7 @@ import {
   HistoryCardContainer,
   HistoryCardImages,
   HistoryCardComment,
+  HistoryCardBody,
 } from './HistoryCard.styled'
 import { dateFns } from 'utils/dateUtils'
 import { getColor } from 'design/atoms/colors/colorTypes'
@@ -30,7 +31,7 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
           </a>
         </Box>
         <Box mt={1}>
-          <BodyText variant={BodyTextTypes.Short1}>{excerpt}</BodyText>
+          <HistoryCardBody>{excerpt}</HistoryCardBody>
         </Box>
         {comment && (
           <Box mt={2}>
