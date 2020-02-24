@@ -31,5 +31,5 @@ jobs:
           NOW_NAME: seoul
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          JWT_SECRET: ${{ secrets.EDGE_JWT_SECRET }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
