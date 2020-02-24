@@ -13,8 +13,8 @@ const useCreateHistory = () => {
     const value = ref.current?.value
     sejongApi
       .createHistory(value)
-      .then(d => void console.log(d))
-      .catch(err => void console.log(err))
+      .then(d => alert('Created!'))
+      .catch(err => alert('Fail to create'))
   }
 
   return {
