@@ -5,4 +5,6 @@ export type HistoryType = {
   title: string
   excerpt?: string
   comment: string
+  createdAt: number
+  modifiedAt: number
 }

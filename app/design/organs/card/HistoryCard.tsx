@@ -9,10 +9,14 @@ import {
   HistoryCardImages,
   HistoryCardComment,
 } from './HistoryCard.styled'
+import { dateFns } from 'utils/dateUtils'
 import { getColor } from 'design/atoms/colors/colorTypes'
 
 const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
-  const { id, title, comment, cover, excerpt } = history
+  const { title, comment, cover, excerpt } = history
+
+  const isEdited = history.createdAt !== history.modifiedAt
+  const datePrefix = isEdited ? 'Edited' : 'Saved'
 
   return (
     <HistoryCardContainer>
@@ -35,6 +39,13 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
             </HistoryCardComment>
           </Box>
         )}
+        <Box
+          mt={1}
+          style={{ fontSize: '13px', color: getColor('textLabelColor') }}
+        >
+          {`${datePrefix}, ` +
+            dateFns.formatRelative(history.modifiedAt, Date.now())}
+        </Box>
         <Box
           pb={3}
           borderBottom={`1px solid ${getColor('borderLighter')}`}
