@@ -13,9 +13,15 @@ const getHistories = () => axios.get(BASE_URL + '/api/history')
 const createHistory = (link: string) =>
   axios.post(BASE_URL + '/api/history', { link })
 
+const getBooks = async () => {
+  const { data } = await axios.get(BASE_URL + '/api/book')
+  return data
+}
+
 const sejongApi = {
   getHistories,
   createHistory,
+  getBooks,
 }
 
 export default sejongApi

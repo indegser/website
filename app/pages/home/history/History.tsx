@@ -1,12 +1,12 @@
 import HistoryCard from 'design/organs/card/HistoryCard'
 import sejongApi from 'apis/sejongApi'
 import { useAxiosSWR } from 'utils/swrUtils'
-import { HistoryType } from 'types/HistoryTypes'
 import { HistoryGrid, HistoryDividers, HistoryCards } from './History.styled'
 import { HistoryDivider } from './History.styled'
+import { IHistory } from 'types/dataTypes'
 
 const History = () => {
-  const { data } = useAxiosSWR<{ histories: HistoryType[] }>(
+  const { data } = useAxiosSWR<{ histories: IHistory[] }>(
     'histories',
     sejongApi.getHistories
   )

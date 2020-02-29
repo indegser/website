@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Home from '../app/pages/home/Home'
+import Shelf from 'pages/shelf/Shelf'
 
 const HomePage = () => {
   return (
@@ -8,7 +8,7 @@ const HomePage = () => {
         <title>Bookshelf</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Home />
+      <Shelf />
     </div>
   )
 }

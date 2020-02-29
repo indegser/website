@@ -8,8 +8,6 @@ export enum IconVariant {
   github = 'github-logo',
   twitter = 'twitter-logo',
   logoSimple = 'logo-simple',
-  book = 'book',
-  bookmark = 'bookmark',
 }
 
 interface IIconProps {

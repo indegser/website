@@ -1,6 +1,5 @@
 import React from 'react'
-import { HistoryType } from 'types/HistoryTypes'
-import BodyText, { BodyTextTypes } from 'design/atoms/typography/BodyText'
+import { BodyTextTypes } from 'design/atoms/typography/BodyText'
 import Box from 'design/atoms/box/Box'
 import {
   HistoryCardImage,
@@ -12,12 +11,13 @@ import {
 } from './HistoryCard.styled'
 import { dateFns } from 'utils/dateUtils'
 import { getColor } from 'design/atoms/colors/colorTypes'
+import { IHistory } from 'types/dataTypes'
 
-const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
+const HistoryCard: React.FC<{ history: IHistory }> = ({ history }) => {
   const { title, comment, cover, excerpt } = history
 
   const isEdited = history.createdAt !== history.modifiedAt
-  const datePrefix = isEdited ? 'Edited' : 'Saved'
+  const dateAction = isEdited ? ' 수정됨' : '북마크에 저장'
 
   return (
     <HistoryCardContainer>
@@ -44,8 +44,8 @@ const HistoryCard: React.FC<{ history: HistoryType }> = ({ history }) => {
           mt={1}
           style={{ fontSize: '13px', color: getColor('textLabelColor') }}
         >
-          {`${datePrefix}, ` +
-            dateFns.formatRelative(history.modifiedAt, Date.now())}
+          {dateFns.formatRelative(history.modifiedAt, Date.now()) +
+            `, ${dateAction}`}
         </Box>
         <Box
           pb={3}

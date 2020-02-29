@@ -1,4 +1,5 @@
 import PageContainer from 'design/atoms/container/PageContainer'
+
 import History from './history/History'
 
 const Home = () => {
