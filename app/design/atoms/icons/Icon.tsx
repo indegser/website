@@ -23,16 +23,11 @@ const IconBox = styled.div`
   svg {
     display: block;
     fill: currentColor;
-    stroke: currentColor;
   }
 `
 
 const Icon: React.FC<IIconProps> = ({ variant, color, ...props }) => {
-  const path = IconVariant[variant]
-
-  if (!path) return null
-
-  const Component = require(`./${path}.svg`).default
+  const Component = require(`./${variant}.svg`).default
   return (
     <IconBox style={{ color }}>
       <Component {...props} />

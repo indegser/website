@@ -1,6 +1,6 @@
 import React from 'react'
 import { SnsBox } from './Sns.styled'
-import Icon from 'design/atoms/icons/Icon'
+import Icon, { IconVariant } from 'design/atoms/icons/Icon'
 
 // const Dot = styled.span`
 //   &:before {
@@ -10,8 +10,17 @@ import Icon from 'design/atoms/icons/Icon'
 // `
 
 const snsList = [
-  { name: 'github', link: 'https://github.com/indegser', size: 14 },
-  { name: 'twitter', link: 'https://twitter.com/indegser' },
+  {
+    name: 'github',
+    link: 'https://github.com/indegser',
+    size: 14,
+    variant: IconVariant.github,
+  },
+  {
+    name: 'twitter',
+    link: 'https://twitter.com/indegser',
+    variant: IconVariant.twitter,
+  },
 ]
 
 const Sns = () => {
@@ -28,7 +37,7 @@ const Sns = () => {
           >
             <SnsBox>
               <Icon
-                variant={sns.name as any}
+                variant={sns.variant}
                 width={sns.size || 16}
                 height={sns.size || 16}
               />

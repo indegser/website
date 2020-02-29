@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const NavMenuBox = styled.div`
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
-  padding: 4px 8px;
+  padding: 4px 0px;
+  padding-right: 8px;
   display: flex;
   align-items: center;
 
@@ -13,6 +14,8 @@ export const NavMenuBox = styled.div`
   }
 `
 
-export const NavMenuName = styled.div`
-  margin-left: 8px;
+export const NavMenuName = styled.div``
+
+export const NavMenuLogo = styled.div`
+  margin-right: 16px;
 `
