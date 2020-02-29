@@ -27,7 +27,7 @@ jobs:
           npm install
       - name: Deploy
         run: |
-          npx now --name seoul --prod --token $NOW_TOKEN -e GITHUB_SHA=$GITHUB_SHA -e GITHUB_REF=$GITHUB_REF -e ADMIN_PASSWORD=$ADMIN_PASSWORD -e JWT_SECRET=$JWT_SECRET
+          npx now --name seoul --prod --token $NOW_TOKEN -b GITHUB_SHA=$GITHUB_SHA -b GITHUB_REF=$GITHUB_REF -e ADMIN_PASSWORD=$ADMIN_PASSWORD -e JWT_SECRET=$JWT_SECRET
         env:
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}

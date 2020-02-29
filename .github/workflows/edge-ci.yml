@@ -25,14 +25,10 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-      - name: Echo
+      - name: Deploy
         run: |
-          echo $GITHUB_SHA
-          echo $GITHUB_REF
-      # - name: Deploy
-      #   run: |
-      #     npx now --name seoul-edge --prod --token $NOW_TOKEN -e GITHUB_SHA=$GITHUB_SHA -e GITHUB_REF=$GITHUB_REF -e ADMIN_PASSWORD=$ADMIN_PASSWORD -e JWT_SECRET=$JWT_SECRET
-      #   env:
-      #     NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
-      #     ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-      #     JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          npx now --name seoul-edge --prod --token $NOW_TOKEN -b GITHUB_SHA=$GITHUB_SHA -b GITHUB_REF=$GITHUB_REF -e ADMIN_PASSWORD=$ADMIN_PASSWORD -e JWT_SECRET=$JWT_SECRET
+        env:
+          NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
