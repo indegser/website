@@ -6,7 +6,7 @@ const urls = {
   master: 'https://sejong.indegser.com',
 }
 
-const BASE_URL = urls[env.branch] || urls.develop
+const BASE_URL = urls[env.gitBranch] || urls.develop
 
 const getHistories = () => axios.get(BASE_URL + '/api/history')
 

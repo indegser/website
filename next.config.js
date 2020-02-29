@@ -1,15 +1,13 @@
 require('dotenv').config()
 const path = require('path')
 
-const {
-  NOW_GITHUB_COMMIT_REF: COMMIT_BRANCH,
-  NOW_GITHUB_COMMIT_SHA: COMMIT_SHA,
-} = process.env
+const { GITHUB_SHA, GITHUB_REF } = process.env
+console.log(GITHUB_REF, GITHUB_SHA)
 
 module.exports = {
   env: {
-    COMMIT_BRANCH,
-    COMMIT_SHA,
+    GITHUB_REF,
+    GITHUB_SHA,
   },
   webpack: config => {
     config.module.rules.push({

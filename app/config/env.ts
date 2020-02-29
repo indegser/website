@@ -1,10 +1,11 @@
 const env = {
-  sha: process.env.COMMIT_SHA,
-  branch: process.env.COMMIT_BRANCH,
+  gitSha: process.env.GITHUB_SHA,
+  gitBranch: process.env.GITHUB_REF,
 }
 
 console.log(
-  `Running on sha: ${env.sha || 'local'}. branch: ${env.branch || 'local'}`
+  `Running on sha: ${env.gitSha || 'local'}. branch: ${env.gitBranch ||
+    'local'}`
 )
 
 export default env
