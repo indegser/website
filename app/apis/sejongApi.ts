@@ -1,11 +1,12 @@
 import axios from 'axios'
+import env from 'config/env'
 
 const urls = {
-  'seoul-edge': 'https://sejong-edge.now.sh',
-  seoul: 'https://sejong.indegser.com',
+  develop: 'https://sejong-edge.now.sh',
+  master: 'https://sejong.indegser.com',
 }
 
-const BASE_URL = urls[process.env.NOW_NAME] || 'https://sejong-edge.now.sh'
+const BASE_URL = urls[env.branch] || urls.develop
 
 const getHistories = () => axios.get(BASE_URL + '/api/history')
 

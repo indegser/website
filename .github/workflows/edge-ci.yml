@@ -27,9 +27,8 @@ jobs:
           npm install
       - name: Deploy
         run: |
-          npx now --name seoul-edge --prod --token $NOW_TOKEN --env ADMIN_PASSWORD=$ADMIN_PASSWORD --env JWT_SECRET=$JWT_SECRET
+          npx now --name seoul-edge --prod --token $NOW_TOKEN -e ADMIN_PASSWORD=$ADMIN_PASSWORD -e JWT_SECRET=$JWT_SECRET
         env:
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
