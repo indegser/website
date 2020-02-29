@@ -8,6 +8,8 @@ export const CardMoreBox = styled.div`
 
 export const CardMoreIcon = styled.div`
   padding: 8px 0;
+  z-index: 1;
+  position: relative;
 
   svg {
     display: block;

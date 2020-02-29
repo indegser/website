@@ -1,8 +1,10 @@
 import { CardMoreIcon, CardMoreBox } from './CardMore.styled'
 import Box from 'design/atoms/box/Box'
-import { useMemo } from 'react'
+import { useMemo, useRef } from 'react'
+import ContextMenu from 'design/atoms/context-menu/ContextMenu'
 
 const HistoryCardMore = () => {
+  const ref = useRef(null)
   const icon = useMemo(() => {
     const radius = 1.5
     const width = 16
@@ -28,7 +30,8 @@ const HistoryCardMore = () => {
   return (
     <CardMoreBox>
       <Box mt={2}>
-        <CardMoreIcon>{icon}</CardMoreIcon>
+        <CardMoreIcon ref={ref}>{icon}</CardMoreIcon>
+        <ContextMenu parentRef={ref} />
       </Box>
     </CardMoreBox>
   )

@@ -26,6 +26,7 @@ export default ({ Component, pageProps }) => {
         </main>
         <Footer />
       </Page>
+      <div id="context-menu"></div>
     </ThemeProvider>
   )
 }
