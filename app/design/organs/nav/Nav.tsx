@@ -12,7 +12,7 @@ const Nav = () => {
           <Link href="/">
             <a>
               <NavHomeLogo>
-                <Icon variant="logo" height={26} />
+                <Icon variant="logo" height={24} />
               </NavHomeLogo>
             </a>
           </Link>
