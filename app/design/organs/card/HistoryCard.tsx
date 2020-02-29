@@ -12,6 +12,8 @@ import {
 import { dateFns } from 'utils/dateUtils'
 import { getColor } from 'design/atoms/colors/colorTypes'
 import { IHistory } from 'types/dataTypes'
+import HistoryCardMore from './CardMore'
+import Authorized from 'hocs/Authorized'
 
 const HistoryCard: React.FC<{ history: IHistory }> = ({ history }) => {
   const { title, comment, cover, excerpt } = history
@@ -21,6 +23,9 @@ const HistoryCard: React.FC<{ history: IHistory }> = ({ history }) => {
 
   return (
     <HistoryCardContainer>
+      <Authorized>
+        <HistoryCardMore />
+      </Authorized>
       <Box pt={3}>
         <HistoryCardImages>
           <HistoryCardImage src={cover} />

@@ -1,14 +1,12 @@
 require('dotenv').config()
 const path = require('path')
 
-const { GITHUB_REF } = process.env
-
-console.log('can destruct?', GITHUB_REF)
+const { GITHUB_REF, GITHUB_SHA } = process.env
 
 module.exports = {
   env: {
-    GITHUB_REF: process.env.GITHUB_REF,
-    GITHUB_SHA: process.env.GITHUB_SHA,
+    GITHUB_REF,
+    GITHUB_SHA,
   },
   webpack: config => {
     config.module.rules.push({

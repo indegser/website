@@ -7,6 +7,7 @@ import BodyText from 'design/atoms/typography/BodyText'
 export const HistoryCardContainer = styled.div`
   break-inside: avoid;
   page-break-inside: avoid;
+  position: relative;
 `
 
 export const HistoryCardImages = styled.div`
