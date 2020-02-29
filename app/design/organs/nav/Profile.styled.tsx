@@ -12,3 +12,7 @@ export const ProfileRole = styled.div`
   color: ${colorTokens.attr};
   text-align: right;
 `
+
+export const ProfileAvatarButton = styled.div`
+  cursor: pointer;
+`

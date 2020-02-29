@@ -7,6 +7,7 @@ import Route from 'hocs/Route'
 import useCreateHistory from 'hooks/forms/useCreateHistory'
 import useSignIn from 'hooks/me/useSignIn'
 import useWhoami from 'hooks/me/useWhoami'
+import { ProfileAvatarButton } from './Profile.styled'
 
 const Profile = () => {
   const { submit } = useCreateHistory()
@@ -39,7 +40,9 @@ const Profile = () => {
         </Flexbox>
       )}
       <Box pl={2} ml={2} borderLeft="1px solid #ddd">
-        <Avatar onClick={user ? undefined : handleAvatar} src={user?.avatar} />
+        <ProfileAvatarButton onClick={user ? undefined : handleAvatar}>
+          <Avatar src={user?.avatar} />
+        </ProfileAvatarButton>
       </Box>
     </Flexbox>
   )

@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const iconPaths = {
-  logo: 'logo',
-  facebook: 'facebook-logo',
-  google: 'google-logo',
-  github: 'github-logo',
-  twitter: 'twitter-logo',
-  logoSimple: 'logo-simple',
+export enum IconVariant {
+  logo = 'logo',
+  facebook = 'facebook-logo',
+  google = 'google-logo',
+  github = 'github-logo',
+  twitter = 'twitter-logo',
+  logoSimple = 'logo-simple',
+  book = 'book',
+  bookmark = 'bookmark',
 }
 
 interface IIconProps {
-  variant: keyof typeof iconPaths
+  variant: IconVariant
   height?: number
   width?: number
   color?: string
@@ -26,7 +28,7 @@ const IconBox = styled.div`
 `
 
 const Icon: React.FC<IIconProps> = ({ variant, color, ...props }) => {
-  const path = iconPaths[variant]
+  const path = IconVariant[variant]
 
   if (!path) return null
 
