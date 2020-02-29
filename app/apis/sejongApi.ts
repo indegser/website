@@ -1,6 +1,8 @@
 import axios from 'axios'
 import env from 'config/env'
 
+console.log('GOT', process.env.GOT)
+
 const urls = {
   develop: 'https://sejong-edge.now.sh',
   master: 'https://sejong.indegser.com',
