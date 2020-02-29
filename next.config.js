@@ -2,7 +2,7 @@ require('dotenv').config()
 const path = require('path')
 
 const { GITHUB_SHA, GITHUB_REF } = process.env
-console.log(GITHUB_REF, GITHUB_SHA)
+console.log(process.env)
 
 module.exports = {
   env: {
