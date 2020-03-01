@@ -10,11 +10,11 @@ const Nav = () => {
       href: '/',
     },
     {
-      name: '북마크',
+      name: 'Bookmark',
       href: '/',
     },
     {
-      name: '서재',
+      name: 'Bookshelf',
       href: '/b',
     },
   ]

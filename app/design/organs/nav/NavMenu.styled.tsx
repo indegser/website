@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const NavMenuBox = styled.div`
-  font-size: 15px;
+  font-size: 14px;
   color: #333;
   padding: 4px 0px;
   padding-right: 8px;

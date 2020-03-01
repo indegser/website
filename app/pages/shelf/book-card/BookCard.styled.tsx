@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { getColor } from 'design/atoms/colors/colorTypes'
+import { CitationText } from 'design/atoms/typography/LabelText'
 
 export const BookCardBox = styled.div``
 
@@ -40,6 +41,11 @@ export const BookCardCoverShadow = styled.div`
   z-index: -1;
 `
 
+export const BookCardInfoBox = styled.div`
+  flex: 0 0 auto;
+  height: 60px;
+`
+
 export const BookCardTitle = styled.div`
   font-size: 14px;
   color: ${getColor('textPrimary')};
@@ -49,7 +55,8 @@ export const BookCardTitle = styled.div`
   white-space: nowrap;
 `
 
-export const BookCardCitation = styled.div`
-  font-size: 14px;
-  color: #333;
+export const BookCardCitation = styled(CitationText)`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 `

@@ -7,9 +7,9 @@ const breakpoints = {
   huge: '1440px',
 }
 
-const media = generateMedia(breakpoints)
+export const mediaQuery = generateMedia(breakpoints)
 
 export default {
   breakpoints: Object.keys(breakpoints).map(b => breakpoints[b]),
-  media,
+  media: mediaQuery,
 }

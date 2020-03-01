@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { getColor } from 'design/atoms/colors/colorTypes'
+import { mediaQuery } from 'design/theme'
 
 export enum BodyTextTypes {
   Short1,
@@ -12,14 +13,17 @@ export enum BodyTextTypes {
 const BaseBodyText = styled.p`
   margin: 0;
   word-break: break-word;
-  color: ${getColor('bodyTextPrimary')};
+  color: #1a202f;
 `
 
-const Short1BodyText = styled(BaseBodyText)`
-  font-size: 0.8rem;
-  line-height: 1.1rem;
+export const Short1BodyText = styled(BaseBodyText)`
+  font-size: 13px;
+  line-height: 1.55;
   font-weight: 400;
-  letter-spacing: 0.16px;
+
+  ${mediaQuery.lessThan('small')`
+    font-size: 15px;
+  `}
 `
 
 const Short2BodyText = styled(BaseBodyText)``
