@@ -14,7 +14,7 @@ const History = () => {
   const dividers = new Array(4).fill(true)
 
   return (
-    <HistoryGrid columnCount={[1, 2, 3, 4]}>
+    <HistoryGrid columnCount={[1, 2, 3]}>
       <HistoryCards>
         {data &&
           data.histories.map(history => {
