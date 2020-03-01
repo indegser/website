@@ -1,6 +1,7 @@
 import { createPortal } from 'react-dom'
 import { useEffect, useState } from 'react'
 import { CMBox, CMContent, CMItem } from './ContextMenu.styled'
+import useFixedBody from 'hooks/utils/useFixedBody'
 
 interface IProps {
   parentRef: React.MutableRefObject<any>
@@ -14,7 +15,9 @@ const ContextMenu: React.FC<IProps> = ({ parentRef }) => {
   const menuOffsetTop = 4
 
   const handleParentRefClick = e => {
-    e.stopPropagation()
+    if (display) {
+      e.stopPropagation()
+    }
     const rect = e.currentTarget.getBoundingClientRect()
     calcAndSetPosition(rect)
     setDisplay(d => !d)
@@ -30,6 +33,8 @@ const ContextMenu: React.FC<IProps> = ({ parentRef }) => {
     return setPosition(position)
   }
 
+  useFixedBody(display)
+
   useEffect(() => {
     parentRef.current?.addEventListener('click', handleParentRefClick)
 
@@ -37,6 +42,19 @@ const ContextMenu: React.FC<IProps> = ({ parentRef }) => {
       parentRef.current?.removeEventListener('click', handleParentRefClick)
     }
   }, [parentRef.current])
+
+  const handleClick = e => {
+    setDisplay(false)
+  }
+
+  useEffect(() => {
+    if (!display) return
+
+    document.addEventListener('click', handleClick)
+    return () => {
+      document.removeEventListener('click', handleClick)
+    }
+  }, [display])
 
   if (!display || !process.browser) {
     return null

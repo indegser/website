@@ -3,11 +3,22 @@ import CircleImage from 'design/atoms/image/CircleImage'
 import TitleText from 'design/atoms/typography/TitleText'
 import { getColor } from 'design/atoms/colors/colorTypes'
 import BodyText from 'design/atoms/typography/BodyText'
+import { CardMoreBox } from './CardMore.styled'
 
 export const HistoryCardContainer = styled.div`
   break-inside: avoid;
   page-break-inside: avoid;
   position: relative;
+
+  ${CardMoreBox} {
+    display: none;
+  }
+
+  &:hover {
+    ${CardMoreBox} {
+      display: block;
+    }
+  }
 `
 
 export const HistoryCardImages = styled.div`
