@@ -12,7 +12,16 @@ const useCreateHistory = () => {
   const submit = () => {
     const value = ref.current?.value
     sejongApi
-      .createHistory(value)
+      .createHistory(
+        `
+        mutation($link: String!) {
+          createHistory(link: $link) {
+            id
+          }
+        }
+      `,
+        { link: value }
+      )
       .then(d => alert('Created!'))
       .catch(err => alert('Fail to create'))
   }

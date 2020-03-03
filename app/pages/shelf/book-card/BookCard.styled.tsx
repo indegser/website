@@ -16,7 +16,7 @@ export const BookCardCover = styled.img`
   display: block;
   border-radius: 2px;
   position: relative;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.12);
+  box-shadow: 3px 8px 7px rgba(0, 0, 0, 0.08), 0px 5px 2px rgba(0, 0, 0, 0.04);
 `
 
 export const BookCardLight = styled.div`
@@ -35,8 +35,8 @@ export const BookCardCoverShadow = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  filter: blur(20px);
-  transform: scaleX(0.8) scaleY(0.8) translateY(-2%);
+  filter: blur(14px);
+  transform: scaleX(0.8) scaleY(0.8) translateY(1%);
   transform-origin: bottom;
   z-index: -1;
 `

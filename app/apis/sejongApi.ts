@@ -1,17 +1,21 @@
 import axios from 'axios'
 import env from 'config/env'
+import request from 'graphql-request'
 
 const urls = {
   develop: 'https://sejong-edge.now.sh',
   master: 'https://sejong.indegser.com',
 }
 
-const BASE_URL = urls[env.gitBranch] || urls.develop
+const BASE_URL = urls[env.gitBranch] || 'http://localhost:3001'
 
-const getHistories = () => axios.get(BASE_URL + '/api/history')
+const getHistories = query => {
+  return request(BASE_URL + '/api/history', query)
+}
 
-const createHistory = (link: string) =>
-  axios.post(BASE_URL + '/api/history', { link })
+const createHistory = (query, variables) => {
+  return request(BASE_URL + '/api/history', query, variables)
+}
 
 const getBooks = async () => {
   const { data } = await axios.get(BASE_URL + '/api/book')
