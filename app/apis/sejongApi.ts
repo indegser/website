@@ -7,7 +7,7 @@ const urls = {
   master: 'https://sejong.indegser.com',
 }
 
-const BASE_URL = urls[env.gitBranch] || 'http://localhost:3001'
+const BASE_URL = urls[env.gitBranch] || urls.develop
 
 const getHistories = query => {
   return request(BASE_URL + '/api/history', query)
