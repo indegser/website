@@ -1,14 +1,22 @@
-import { NewPageContainer } from './NewPage.styled'
+import {
+  NewPageContainer,
+  NewPagePanel,
+  NewPageFormHeading,
+  NewPageForm,
+} from './NewPage.styled'
 import PageContainer from 'design/atoms/container/PageContainer'
-import useCreateHistory from 'hooks/forms/useCreateHistory'
+import CreateHistoryForm from './CreateHistoryForm'
 
 const NewPage = () => {
-  const { ref } = useCreateHistory()
-
   return (
     <NewPageContainer>
       <PageContainer>
-        <input ref={ref} type="text" placeholder="Url of webpage"></input>
+        <NewPagePanel>
+          <NewPageForm>
+            <NewPageFormHeading>Bookmark</NewPageFormHeading>
+            <CreateHistoryForm />
+          </NewPageForm>
+        </NewPagePanel>
       </PageContainer>
     </NewPageContainer>
   )

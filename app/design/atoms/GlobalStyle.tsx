@@ -57,7 +57,6 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
     margin: 0;
     border: 0;
-    font: inherit;
     border: 1px solid #dcdee0;
     background: #f0f4fb;
     line-height: 1.5rem;
@@ -66,12 +65,26 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 4px;
     outline: 0;
     letter-spacing: .4px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
 
     &:active, &:focus {
       box-shadow: 0 0 2px 3px #dbe7f9;
       border-color: var(--interactive1);
       background: white !important;
     }
+
+    &:hover {
+      background: #ebedf1;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  label {
   }
 
   .fixed {

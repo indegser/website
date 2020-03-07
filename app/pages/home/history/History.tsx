@@ -12,6 +12,7 @@ const History = () => {
         link
         title
         cover
+        comment
         createdAt
         modifiedAt
       }
