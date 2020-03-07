@@ -5,13 +5,24 @@ import { ShelfGrid } from './Shelf.styled'
 import BookCard from './book-card/BookCard'
 
 const Shelf = () => {
-  const { data } = useSWR('books', sejongApi.getBooks)
-  const books = data?.data.books || []
+  const { data } = useSWR(
+    `{
+    books: getBooks {
+      id
+      title
+      cover
+      citation
+      createdAt
+      modifiedAt
+    }
+  }`,
+    sejongApi.getBooks
+  )
 
   return (
     <PageContainer>
       <ShelfGrid>
-        {books.map(book => (
+        {data?.books.map(book => (
           <BookCard key={book.id} book={book} />
         ))}
       </ShelfGrid>

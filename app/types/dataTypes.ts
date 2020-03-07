@@ -6,8 +6,7 @@ interface IData {
 
 export interface IBook extends IData {
   title: string
-  authors: string[]
-  publishedYear: number
+  citation: string
   cover?: string
 }
 
