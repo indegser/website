@@ -18,7 +18,6 @@ interface IProps {
 }
 
 const BookCard: React.FC<IProps> = ({ book }) => {
-  const citation = `${book.authors.join(', ')} (${book.publishedYear})`
   const added = `Added, ${dateFns.formatRelative(book.createdAt, Date.now())}`
 
   return (
@@ -35,7 +34,7 @@ const BookCard: React.FC<IProps> = ({ book }) => {
           <BookCardTitle>{book.title}</BookCardTitle>
         </Box>
         <Box mt={2}>
-          <BookCardCitation>{citation}</BookCardCitation>
+          <BookCardCitation>{book.citation}</BookCardCitation>
         </Box>
         <Box mt={1}>
           <BookCardCitation>{added}</BookCardCitation>
