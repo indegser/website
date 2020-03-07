@@ -1,4 +1,3 @@
-import axios from 'axios'
 import env from 'config/env'
 import request from 'graphql-request'
 
@@ -17,9 +16,8 @@ const createHistory = (query, variables) => {
   return request(BASE_URL + '/api/history', query, variables)
 }
 
-const getBooks = async () => {
-  const { data } = await axios.get(BASE_URL + '/api/book')
-  return data
+const getBooks = query => {
+  return request(BASE_URL + '/api/book', query)
 }
 
 const sejongApi = {

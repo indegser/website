@@ -1,10 +1,7 @@
 import HistoryCard from 'design/organs/card/HistoryCard'
 import sejongApi from 'apis/sejongApi'
-import { request } from 'graphql-request'
-import { useAxiosSWR } from 'utils/swrUtils'
 import { HistoryGrid, HistoryDividers, HistoryCards } from './History.styled'
 import { HistoryDivider } from './History.styled'
-import { IHistory } from 'types/dataTypes'
 import useSWR from 'swr'
 
 const History = () => {
