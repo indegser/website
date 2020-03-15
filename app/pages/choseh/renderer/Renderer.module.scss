@@ -1,0 +1,26 @@
+.paragraph {
+  margin-top: 1em;
+  color: #333;
+  hyphens: auto;
+
+  blockquote & {
+    padding-left: 1em;
+    font-size: 0.9em;
+    border-left: 2px solid #ddd;
+    box-sizing: border-box;
+    margin: 2em auto;
+    font-weight: 500;
+  }
+}
+
+.break {
+  margin: 36px 0;
+  display: flex;
+  font-size: 16px;
+  color: #6d6d6d;
+  justify-content: center;
+
+  & > div {
+    letter-spacing: 1px;
+  }
+}

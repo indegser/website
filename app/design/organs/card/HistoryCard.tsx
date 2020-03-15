@@ -32,7 +32,7 @@ const HistoryCard: React.FC<{ history: IHistory }> = ({ history }) => {
           <HistoryCardImage src={cover} />
         </Box>
         <Box>
-          <Box>
+          <Box pr={4}>
             <a href={history.link}>
               <HistoryCardTitle>{title}</HistoryCardTitle>
             </a>
@@ -41,9 +41,9 @@ const HistoryCard: React.FC<{ history: IHistory }> = ({ history }) => {
             <HistoryCardBody>{excerpt}</HistoryCardBody>
           </Box>
           {comment && (
-            <Box mt={2}>
+            <Box mt={1}>
               <HistoryCardComment variant={BodyTextTypes.Short1}>
-                "{comment.trim()}"
+                {comment.trim()}
               </HistoryCardComment>
             </Box>
           )}
