@@ -7,10 +7,10 @@ export const ChosehBox = styled.div`
 `
 
 export const ChosehHeader = styled.div`
-  padding: 80px 0;
+  padding: 80px 0 20px 0;
 
   ${mediaQuery.lessThan('small')`
-    padding: 60px 0;
+    padding: 60px 0 20px 0;
   `}
 `
 
@@ -105,6 +105,5 @@ export const ChosehContent = styled.div`
   }
 
   p {
-    
   }
 `

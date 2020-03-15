@@ -8,6 +8,7 @@ import {
 } from './Choseh.styled'
 import ParagraphRenderer from './renderer/ParagraphRenderer'
 import BreakRenderer from './renderer/BreakRenderer'
+import Toc from './toc/Toc'
 
 interface Props {
   title: string
@@ -22,6 +23,7 @@ const Choseh: React.FC<Props> = ({ title, content }) => {
           <ChosehTitle>{title}</ChosehTitle>
         </ChosehHeader>
         <ChosehContent>
+          <Toc content={content} />
           <Markdown
             source={content}
             renderers={{
