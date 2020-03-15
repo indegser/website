@@ -37,6 +37,10 @@ const book = (query: string, variables?: Variables) => {
   return request(BASE_URL + '/api/book', query, variables)
 }
 
+const choseh = (query: string, variables?: Variables) => {
+  return request(BASE_URL + '/api/choseh', query, variables)
+}
+
 const getBooks = query => {
   return request(BASE_URL + '/api/book', query)
 }
@@ -45,6 +49,7 @@ const sejongApi = {
   getHistories,
   createHistory,
   book,
+  choseh,
   getBooks,
 }
 

@@ -30,9 +30,11 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       }
     `))
 
-    content = await Axios.get(
+    const { data } = await Axios.get(
       `https://choseh.s3.ap-northeast-2.amazonaws.com/${params.bookId}.md`
     )
+
+    content = data
   } catch (err) {
     console.log(err.message)
     content = ''
