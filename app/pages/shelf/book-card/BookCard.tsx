@@ -22,7 +22,7 @@ const BookCard: React.FC<IProps> = ({ book }) => {
   const added = `Added, ${dateFns.formatRelative(book.createdAt, Date.now())}`
 
   return (
-    <Link href={`/b/${book.id}`}>
+    <Link as={`/b/${book.id}`} href={`/b/[bookId]`}>
       <a>
         <BookCardBox>
           <BookCardCoverBox>
