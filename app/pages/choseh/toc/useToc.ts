@@ -12,6 +12,10 @@ const useToc = (content: string) => {
 
     const tocTree = toc(tree)
 
+    if (!tocTree.map) {
+      return null
+    }
+
     const tocNode = unistMap(tocTree.map, node => {
       if (node.type === 'list') {
         return {
