@@ -9,6 +9,7 @@ import {
 import ParagraphRenderer from './renderer/ParagraphRenderer'
 import BreakRenderer from './renderer/BreakRenderer'
 import Toc from './toc/Toc'
+import HeadingRenderer from './renderer/HeadingRenderer'
 
 interface Props {
   title: string
@@ -27,6 +28,7 @@ const Choseh: React.FC<Props> = ({ title, content }) => {
           <Markdown
             source={content}
             renderers={{
+              heading: HeadingRenderer,
               thematicBreak: BreakRenderer,
               paragraph: ParagraphRenderer,
             }}

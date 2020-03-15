@@ -17,6 +17,7 @@ const Toc: React.FC<Props> = ({ content }) => {
       <Markdown
         source={tocContent}
         renderers={{
+          // paragraph: 'div',
           link: TocLink,
         }}
       />
