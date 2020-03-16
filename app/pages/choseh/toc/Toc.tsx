@@ -2,7 +2,9 @@ import Markdown from 'react-markdown'
 import styles from './Toc.module.scss'
 import useToc from './useToc'
 import TocLink from './TocLink'
-import { useState } from 'react'
+import useMeasure from 'react-use-measure'
+import { useSpring, animated } from 'react-spring'
+import { useState, useEffect } from 'react'
 import Icon, { IconVariant } from 'design/atoms/icons/Icon'
 
 interface Props {
@@ -11,6 +13,8 @@ interface Props {
 
 const Toc: React.FC<Props> = ({ content }) => {
   const [fold, setFold] = useState(true)
+  const [ref, bounds] = useMeasure()
+  const props = useSpring({ maxHeight: fold ? 0 : bounds.height + 16 })
   const { parseToc } = useToc(content)
   const tocContent = parseToc()
 
@@ -25,22 +29,23 @@ const Toc: React.FC<Props> = ({ content }) => {
 
   return (
     <div className={styles.toc}>
-      {!fold && (
-        <Markdown
-          source={tocContent}
-          renderers={{
-            // paragraph: 'div',
-            link: TocLink,
+      <animated.div style={props} className={styles.toc_list}>
+        <div
+          ref={ref}
+          style={{
+            padding: !fold && '8px 0 8px',
           }}
-        />
-      )}
-      <div
-        className={styles.toc_fold}
-        style={{
-          marginTop: !fold && 8,
-        }}
-        onClick={toggleFold}
-      >
+        >
+          <Markdown
+            source={tocContent}
+            renderers={{
+              // paragraph: 'div',
+              link: TocLink,
+            }}
+          />
+        </div>
+      </animated.div>
+      <div className={styles.toc_fold} onClick={toggleFold}>
         <div className={styles.toc_fold_title}>{title}</div>
         <Icon
           variant={IconVariant.arrowDown}
