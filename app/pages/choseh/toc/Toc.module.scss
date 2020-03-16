@@ -1,9 +1,10 @@
 .toc {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--borderLighter);
+  padding: 0;
   margin-top: -1px;
   text-align: left;
   font-weight: 400;
+  border-top: 1px solid var(--borderLighter);
+  border-bottom: 1px solid var(--borderLighter);
 
   ol {
     list-style-type: none;
@@ -75,4 +76,24 @@
   color: #ccc;
   display: inline-flex;
   transform: translateY(1px);
+}
+
+.toc_fold {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px 8px;
+  margin: 4px -8px;
+  cursor: pointer;
+
+  &:hover {
+    background: #eff2f9;
+  }
+  transition: 0.2s background ease;
+  color: var(--textLinkColor);
+}
+
+.toc_fold_title {
+  font-size: 14px;
+  flex: 1 1;
 }
