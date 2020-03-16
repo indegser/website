@@ -16,21 +16,21 @@ export const ChosehHeader = styled.div`
 
 export const ChosehTitle = styled.div`
   color: #111;
-  font-size: 40px;
+  font-size: 44px;
   line-height: 1.2;
   font-weight: 500;
+  letter-spacing: -1px;
   margin: 0;
   font-family: var(--font-serif);
+  word-break: keep-all;
 
   ${mediaQuery.lessThan('small')`
     font-size: 40px;
-    letter-spacing: .006em;
-    line-height: 1;
+    letter-spacing: -0.6px;
   `}
 `
 
 export const ChosehContent = styled.div`
-  padding-top: 40px;
   text-align: left;
 
   font-size: 17px;
@@ -38,6 +38,7 @@ export const ChosehContent = styled.div`
   color: black;
   word-break: break-all;
   text-align: justify;
+  padding: 24px 0;
 
   html[lang='en'] & {
     word-break: break-word;
