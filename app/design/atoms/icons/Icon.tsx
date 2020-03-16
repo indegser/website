@@ -9,6 +9,7 @@ export enum IconVariant {
   twitter = 'twitter-logo',
   logoSimple = 'logo-simple',
   link = 'link',
+  arrowDown = 'arrow-down',
 }
 
 interface IIconProps {
@@ -16,9 +17,10 @@ interface IIconProps {
   height?: number
   width?: number
   color?: string
+  style?: object
 }
 
-const IconBox = styled.div`
+const IconBox = styled.span`
   svg {
     display: block;
     fill: currentColor;
