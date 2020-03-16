@@ -6,7 +6,7 @@ import { PrimaryButton } from 'design/atoms/button/Button'
 import sejongApi from 'apis/sejongApi'
 import { useRouter } from 'next/router'
 
-const Write = () => {
+const Write = ({ content }) => {
   const { query } = useRouter()
   const { register, handleSubmit } = useForm()
 
@@ -45,6 +45,7 @@ const Write = () => {
           <FormGroup
             name="content"
             required
+            defaultValue={content}
             fieldVariant={FormGroupFieldVariant.Textarea}
             ref={register}
             label="초서"
@@ -54,6 +55,16 @@ const Write = () => {
       </PageContainer>
     </div>
   )
+}
+
+export const getServerSideProps = async ({ params }) => {
+  const { bookId } = params
+  const content = await sejongApi.markdown(bookId)
+  return {
+    props: {
+      content,
+    },
+  }
 }
 
 export default Write

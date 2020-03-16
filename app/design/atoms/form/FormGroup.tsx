@@ -1,6 +1,7 @@
 import { forwardRef, HTMLProps } from 'react'
 import Box from '../box/Box'
 import { InfoLabelText, FieldLabelText } from '../typography/LabelText'
+import Textarea from './Textarea'
 
 export enum FormGroupWidthVariant {
   Short = '250px',
@@ -33,7 +34,7 @@ const FormGroup = forwardRef<any, InputProps | TextAreaProps>(
       }
 
       if (fieldVariant === FormGroupFieldVariant.Textarea) {
-        return <textarea {...(fieldProps as HTMLProps<HTMLTextAreaElement>)} />
+        return <Textarea {...(fieldProps as any)} />
       }
 
       return <input {...(fieldProps as HTMLProps<HTMLInputElement>)} />

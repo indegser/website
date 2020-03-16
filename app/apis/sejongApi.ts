@@ -1,6 +1,7 @@
 import env from 'config/env'
 import request from 'graphql-request'
 import { Variables } from 'graphql-request/dist/src/types'
+import Axios from 'axios'
 
 const urls = {
   develop: 'https://sejong-edge.now.sh',
@@ -41,6 +42,16 @@ const choseh = (query: string, variables?: Variables) => {
   return request(BASE_URL + '/api/choseh', query, variables)
 }
 
+const markdown = async (id: string) => {
+  try {
+    const url = `https://choseh.s3.ap-northeast-2.amazonaws.com/${id}.md`
+    const { data } = await Axios.get(url)
+    return data
+  } catch (err) {
+    return ''
+  }
+}
+
 const getBooks = query => {
   return request(BASE_URL + '/api/book', query)
 }
@@ -50,6 +61,7 @@ const sejongApi = {
   createHistory,
   book,
   choseh,
+  markdown,
   getBooks,
 }
 
