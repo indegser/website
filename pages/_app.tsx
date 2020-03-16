@@ -3,6 +3,7 @@ import Footer from '../app/design/organs/footer/Footer'
 import Nav from '../app/design/organs/nav/Nav'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from 'design/theme'
+import Head from 'next/head'
 
 const Page = styled.div`
   display: flex;
@@ -19,6 +20,12 @@ export default ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <Page>
         <Nav />
         <main>

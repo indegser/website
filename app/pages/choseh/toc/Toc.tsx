@@ -30,12 +30,7 @@ const Toc: React.FC<Props> = ({ content }) => {
   return (
     <div className={styles.toc}>
       <animated.div style={props} className={styles.toc_list}>
-        <div
-          ref={ref}
-          style={{
-            padding: !fold && '8px 0 8px',
-          }}
-        >
+        <div ref={ref}>
           <Markdown
             source={tocContent}
             renderers={{
