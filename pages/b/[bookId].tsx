@@ -25,7 +25,9 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       {
         book: getBook(id: "${params.bookId}") {
           id
+          cover
           title
+          citation
         }
       }
     `))
@@ -43,10 +45,9 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   return {
     props: {
       choseh: {
-        title: book?.title,
+        ...book,
         content,
       },
-      hello: 'bye',
     },
   }
 }
