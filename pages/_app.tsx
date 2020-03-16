@@ -25,6 +25,10 @@ export default ({ Component, pageProps }) => {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lusitana&family=Nanum+Myeongjo:wght@700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Page>
         <Nav />

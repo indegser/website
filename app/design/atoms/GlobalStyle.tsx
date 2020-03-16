@@ -18,7 +18,8 @@ const colorVars = () => {
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --font-sans: Roboto, 'Noto Sans KR', Segoe UI, Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: Roboto, Segoe UI, Noto Sans KR, sans-serif;
+    --font-serif: Lusitana, Nanum Myeongjo, Georgia, Cambria, "Times New Roman", Times, Noto Serif KR, serif;
     ${colorVars};
   }
 

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { mediaQuery } from 'design/theme'
 
 export const ChosehBox = styled.div`
-  max-width: 572px;
+  max-width: 680px;
   margin: 0 auto;
 `
 
@@ -16,10 +16,11 @@ export const ChosehHeader = styled.div`
 
 export const ChosehTitle = styled.div`
   color: #111;
-  font-size: 48px;
-  line-height: 1;
-  font-weight: bold;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 500;
   margin: 0;
+  font-family: var(--font-serif);
 
   ${mediaQuery.lessThan('small')`
     font-size: 40px;
@@ -85,7 +86,7 @@ export const ChosehContent = styled.div`
   }
 
   a {
-    color: var(--link-color);
+    color: var(--textLinkColor);
     padding: 0 2px;
     text-decoration: none;
 
