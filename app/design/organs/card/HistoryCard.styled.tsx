@@ -16,7 +16,7 @@ export const HistoryCardImage = styled(CircleImage)`
 `
 
 export const HistoryCardComment = styled(BodyText)`
-  color: ${getColor('bodyTextComment')};
+  color: ${getColor('textPrimary')};
 `
 
 export const HistoryCardTitle = styled(TitleText)``

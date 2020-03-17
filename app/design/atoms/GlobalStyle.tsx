@@ -18,8 +18,8 @@ const colorVars = () => {
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, Roboto,
-      Segoe UI, Ubuntu, 'Helvetica Neue', sans-serif;
+    --font-sans: Roboto, Segoe UI, Noto Sans KR, sans-serif;
+    --font-serif: Lusitana, Nanum Myeongjo, Georgia, Cambria, "Times New Roman", Times, Noto Serif KR, serif;
     ${colorVars};
   }
 
@@ -57,7 +57,6 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
     margin: 0;
     border: 0;
-    font: inherit;
     border: 1px solid #dcdee0;
     background: #f0f4fb;
     line-height: 1.5rem;
@@ -66,12 +65,26 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 4px;
     outline: 0;
     letter-spacing: .4px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
 
     &:active, &:focus {
       box-shadow: 0 0 2px 3px #dbe7f9;
       border-color: var(--interactive1);
       background: white !important;
     }
+
+    &:hover {
+      background: #ebedf1;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  label {
   }
 
   .fixed {
