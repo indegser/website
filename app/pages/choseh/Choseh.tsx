@@ -11,6 +11,7 @@ import ParagraphRenderer from './renderer/ParagraphRenderer'
 import BreakRenderer from './renderer/BreakRenderer'
 import Toc from './toc/Toc'
 import HeadingRenderer from './renderer/HeadingRenderer'
+import ImageRenderer from './renderer/ImageRenderer'
 
 interface Props {
   title: string
@@ -40,6 +41,7 @@ const Choseh: React.FC<Props> = ({ title, content, cover, citation }) => {
           <Markdown
             source={content}
             renderers={{
+              image: ImageRenderer,
               heading: HeadingRenderer,
               thematicBreak: BreakRenderer,
               paragraph: ParagraphRenderer,
