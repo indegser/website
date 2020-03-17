@@ -10,10 +10,11 @@ export enum IconVariant {
   logoSimple = 'logo-simple',
   link = 'link',
   arrowDown = 'arrow-down',
+  footnoteLink = 'footnote-link',
 }
 
 interface IIconProps {
-  variant: IconVariant
+  variant: keyof typeof IconVariant
   height?: number
   width?: number
   color?: string
@@ -28,7 +29,8 @@ const IconBox = styled.span`
 `
 
 const Icon: React.FC<IIconProps> = ({ variant, color, ...props }) => {
-  const Component = require(`./${variant}.svg`).default
+  const filename = IconVariant[variant]
+  const Component = require(`./${filename}.svg`).default
   return (
     <IconBox style={{ color }}>
       <Component {...props} />

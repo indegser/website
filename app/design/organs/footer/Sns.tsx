@@ -14,12 +14,12 @@ const snsList = [
     name: 'github',
     link: 'https://github.com/indegser',
     size: 14,
-    variant: IconVariant.github,
+    variant: 'github',
   },
   {
     name: 'twitter',
     link: 'https://twitter.com/indegser',
-    variant: IconVariant.twitter,
+    variant: 'twitter',
   },
 ]
 
@@ -37,7 +37,7 @@ const Sns = () => {
           >
             <SnsBox>
               <Icon
-                variant={sns.variant}
+                variant={sns.variant as any}
                 width={sns.size || 16}
                 height={sns.size || 16}
               />

@@ -1,4 +1,8 @@
 .paragraph {
+  :global(#footnote) & {
+    margin: 0 !important;
+  }
+
   margin-top: 1em;
   color: #333;
   hyphens: auto;

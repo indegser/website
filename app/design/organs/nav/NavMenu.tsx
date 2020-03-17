@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { NavMenuBox, NavMenuName, NavMenuLogo } from './NavMenu.styled'
-import Icon, { IconVariant } from 'design/atoms/icons/Icon'
+import Icon from 'design/atoms/icons/Icon'
 
 interface IProps {
   name: string
@@ -16,7 +16,7 @@ const NavMenu: React.FC<IProps> = ({ href, name }) => {
     if (name === 'Home') {
       return (
         <NavMenuLogo>
-          <Icon variant={IconVariant.logoSimple} height={21} />
+          <Icon variant="logoSimple" height={21} />
         </NavMenuLogo>
       )
     }
