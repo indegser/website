@@ -1,0 +1,35 @@
+.footnote_def {
+  position: relative;
+  font-size: 14px;
+  color: #333;
+  display: grid;
+  grid-template-columns: max-content max-content auto;
+  grid-gap: 0px;
+  align-items: flex-start;
+  line-height: 1.6;
+
+  margin-top: 0.5em;
+
+  > p {
+    margin: 0;
+  }
+}
+
+.footnote_def_id {
+  font-weight: 500;
+  color: black;
+}
+
+.footnote_backlink {
+  color: var(--textLinkColor);
+  padding: 0 4px;
+
+  sup {
+    line-height: 1;
+  }
+}
+
+.footnote_ref {
+  padding-top: 0.4em;
+  padding-bottom: 0.3em;
+}

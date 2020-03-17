@@ -12,6 +12,9 @@ import BreakRenderer from './renderer/BreakRenderer'
 import Toc from './toc/Toc'
 import HeadingRenderer from './renderer/HeadingRenderer'
 import ImageRenderer from './renderer/ImageRenderer'
+import FootnoteDefinition from './renderer/footnote/FootnoteDefinition'
+import FootnoteReference from './renderer/footnote/FootnoteReference'
+import Appendix from './Appendix'
 
 interface Props {
   title: string
@@ -40,7 +43,12 @@ const Choseh: React.FC<Props> = ({ title, content, cover, citation }) => {
         <ChosehContent>
           <Markdown
             source={content}
+            parserOptions={{
+              footnotes: true,
+            }}
             renderers={{
+              footnoteDefinition: FootnoteDefinition,
+              footnoteReference: FootnoteReference,
               image: ImageRenderer,
               heading: HeadingRenderer,
               thematicBreak: BreakRenderer,
@@ -48,6 +56,7 @@ const Choseh: React.FC<Props> = ({ title, content, cover, citation }) => {
             }}
           />
         </ChosehContent>
+        <Appendix />
       </ChosehBox>
     </PageContainer>
   )

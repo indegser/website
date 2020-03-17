@@ -22,7 +22,7 @@ export default ({ Component, pageProps }) => {
       <GlobalStyle />
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
         <link

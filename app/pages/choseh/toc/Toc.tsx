@@ -4,8 +4,8 @@ import useToc from './useToc'
 import TocLink from './TocLink'
 import useMeasure from 'react-use-measure'
 import { useSpring, animated } from 'react-spring'
-import { useState, useEffect } from 'react'
-import Icon, { IconVariant } from 'design/atoms/icons/Icon'
+import { useState } from 'react'
+import Icon from 'design/atoms/icons/Icon'
 
 interface Props {
   content: string
@@ -43,7 +43,7 @@ const Toc: React.FC<Props> = ({ content }) => {
       <div className={styles.toc_fold} onClick={toggleFold}>
         <div className={styles.toc_fold_title}>{title}</div>
         <Icon
-          variant={IconVariant.arrowDown}
+          variant="arrowDown"
           width={12}
           height={12}
           style={{ transform: `rotate(${fold ? 0 : 180}deg)` }}
