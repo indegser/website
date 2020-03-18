@@ -33,7 +33,6 @@ export const getServerSideProps: GetServerSideProps = async ({
   req,
 }) => {
   // Get choseh of book or create choseh.
-  let content: string
   let book
 
   try {

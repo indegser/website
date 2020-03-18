@@ -15,9 +15,7 @@ const Write = ({ content }) => {
       .choseh(
         `
       mutation($input: Write!) {
-        write(input: $input) {
-          eTag
-        }
+        write(input: $input)
       }
     `,
         {
@@ -28,10 +26,10 @@ const Write = ({ content }) => {
         }
       )
       .then(data => {
-        console.log(data)
+        alert('Success')
       })
       .catch(err => {
-        console.log(err)
+        alert('Failed ' + err.message)
       })
   }
 
