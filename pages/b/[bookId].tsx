@@ -1,12 +1,11 @@
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
-import Axios from 'axios'
 import sejongApi from 'apis/sejongApi'
 import Choseh from 'pages/choseh/Choseh'
 import { useRouter } from 'next/router'
 
-const BookPage = ({ choseh, host }) => {
-  const { title, cover, citation } = choseh
+const BookPage = ({ choseh, meta, host }) => {
+  const { title, cover, citation } = meta
   const metaTitle = `<${title}>, ${citation}의 초서`
 
   const isLocalhost = host.includes('localhost')
@@ -24,7 +23,7 @@ const BookPage = ({ choseh, host }) => {
           content={`${isLocalhost ? 'http' : 'https'}://${host}${url.asPath}`}
         />
       </Head>
-      <Choseh {...choseh} />
+      <Choseh meta={meta} choseh={choseh} />
     </div>
   )
 }
@@ -45,27 +44,25 @@ export const getServerSideProps: GetServerSideProps = async ({
           cover
           title
           citation
+          choseh {
+            edition
+            modifiedAt
+            content
+          }
         }
       }
     `))
-
-    const { data } = await Axios.get(
-      `https://choseh.s3.ap-northeast-2.amazonaws.com/${params.bookId}.md`
-    )
-
-    content = data
   } catch (err) {
     console.log(err.message)
-    content = ''
   }
+
+  const { choseh, ...meta } = book
 
   return {
     props: {
       host: req.headers.host,
-      choseh: {
-        ...book,
-        content,
-      },
+      meta,
+      choseh,
     },
   }
 }

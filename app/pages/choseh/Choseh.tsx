@@ -15,15 +15,26 @@ import ImageRenderer from './renderer/ImageRenderer'
 import FootnoteDefinition from './renderer/footnote/FootnoteDefinition'
 import FootnoteReference from './renderer/footnote/FootnoteReference'
 import Appendix from './Appendix'
+import { dateFns } from 'utils/dateUtils'
+import ChosehEdition from './ChosehEdition'
 
 interface Props {
-  title: string
-  content: string
-  cover: string
-  citation: string
+  meta: {
+    title: string
+    cover: string
+    citation: string
+  }
+  choseh: {
+    edition: number
+    content: string
+    modifiedAt: number
+  }
 }
 
-const Choseh: React.FC<Props> = ({ title, content, cover, citation }) => {
+const Choseh: React.FC<Props> = ({ meta, choseh }) => {
+  const { title, cover, citation } = meta
+  const { content, modifiedAt, edition } = choseh
+
   return (
     <PageContainer>
       <ChosehBox>
@@ -35,7 +46,7 @@ const Choseh: React.FC<Props> = ({ title, content, cover, citation }) => {
             </div>
             <div className={styles.choseh_meta_info}>
               <div className={styles.choseh_cite}>{citation}</div>
-              <div>May 21, 2018 · 9 min read</div>
+              <ChosehEdition {...choseh} />
             </div>
           </div>
         </ChosehHeader>
