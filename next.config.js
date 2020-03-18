@@ -1,7 +1,10 @@
 require('dotenv').config()
 const path = require('path')
 
-const { GITHUB_REF, GITHUB_SHA } = process.env
+const {
+  NOW_GITHUB_COMMIT_REF: GITHUB_REF,
+  NOW_GITHUB_COMMIT_SHA: GITHUB_SHA,
+} = process.env
 
 module.exports = {
   env: {
