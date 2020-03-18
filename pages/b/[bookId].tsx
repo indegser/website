@@ -5,11 +5,14 @@ import sejongApi from 'apis/sejongApi'
 import Choseh from 'pages/choseh/Choseh'
 import { useRouter } from 'next/router'
 
-const BookPage = ({ choseh }) => {
+const BookPage = ({ choseh, host }) => {
   const { title, cover, citation } = choseh
   const metaTitle = `<${title}>, ${citation}의 초서`
 
+  const isLocalhost = host.includes('localhost')
+
   const url = useRouter()
+
   return (
     <div>
       <Head>
@@ -18,7 +21,7 @@ const BookPage = ({ choseh }) => {
         <meta property="og:image" content={cover} />
         <meta
           property="og:url"
-          content={`https://seoul.indegser.com${url.asPath}`}
+          content={`${isLocalhost ? 'http' : 'https'}://${host}${url.asPath}`}
         />
       </Head>
       <Choseh {...choseh} />
@@ -26,7 +29,10 @@ const BookPage = ({ choseh }) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({
+  params,
+  req,
+}) => {
   // Get choseh of book or create choseh.
   let content: string
   let book
@@ -55,6 +61,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
   return {
     props: {
+      host: req.headers.host,
       choseh: {
         ...book,
         content,
