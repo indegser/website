@@ -3,12 +3,23 @@ import { GetServerSideProps } from 'next'
 import Axios from 'axios'
 import sejongApi from 'apis/sejongApi'
 import Choseh from 'pages/choseh/Choseh'
+import { useRouter } from 'next/router'
 
 const BookPage = ({ choseh }) => {
+  const { title, cover, citation } = choseh
+  const metaTitle = `<${title}>, ${citation}의 초서`
+
+  const url = useRouter()
   return (
     <div>
       <Head>
-        <title>Book</title>
+        <title>{metaTitle}</title>
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:image" content={cover} />
+        <meta
+          property="og:url"
+          content={`https://seoul.indegser.com${url.asPath}`}
+        />
       </Head>
       <Choseh {...choseh} />
     </div>
