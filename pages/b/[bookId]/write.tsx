@@ -26,7 +26,7 @@ const Write = ({ content }) => {
         }
       )
       .then(data => {
-        alert('Success')
+        alert('Success!!')
       })
       .catch(err => {
         alert('Failed ' + err.message)
