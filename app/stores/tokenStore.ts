@@ -5,7 +5,7 @@ export interface ITokenStore {
   setToken: (token: string) => void
 }
 
-export const [useTokenStore] = create<ITokenStore>(set => ({
+export const [useTokenStore, tokenStoreApi] = create<ITokenStore>(set => ({
   token: null,
   setToken: token =>
     set(() => ({
