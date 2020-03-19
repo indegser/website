@@ -33,7 +33,7 @@ interface Props {
 
 const Choseh: React.FC<Props> = ({ meta, choseh }) => {
   const { title, cover, citation } = meta
-  const { content, modifiedAt, edition } = choseh
+  const { content } = choseh
 
   return (
     <PageContainer>
@@ -42,7 +42,7 @@ const Choseh: React.FC<Props> = ({ meta, choseh }) => {
           <ChosehTitle>{title}</ChosehTitle>
           <div className={styles.choseh_meta}>
             <div className={styles.choseh_avatar}>
-              <img src={cover}></img>
+              <img alt={title} src={cover}></img>
             </div>
             <div className={styles.choseh_meta_info}>
               <div className={styles.choseh_cite}>{citation}</div>
