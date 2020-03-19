@@ -1,7 +1,8 @@
 import env from 'config/env'
-import request from 'graphql-request'
+import { GraphQLClient } from 'graphql-request'
 import { Variables } from 'graphql-request/dist/src/types'
 import Axios from 'axios'
+import { tokenStoreApi } from 'stores/tokenStore'
 
 const urls = {
   develop: 'https://sejong-edge.now.sh',
@@ -10,6 +11,21 @@ const urls = {
 }
 
 const BASE_URL = urls[env.gitBranch] || urls.develop
+
+const request = (endpoint, query: string, variables?: Variables) => {
+  const headers: { authorization?: string } = {}
+  const token = tokenStoreApi.getState().token
+
+  if (token) {
+    headers.authorization = token
+  }
+
+  const client = new GraphQLClient(endpoint, {
+    headers,
+  })
+
+  return client.request(query, variables)
+}
 
 const getHistories = query => {
   return request(BASE_URL + '/api/history', query)
