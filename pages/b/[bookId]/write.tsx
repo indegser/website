@@ -5,9 +5,11 @@ import { useForm } from 'react-hook-form'
 import { PrimaryButton } from 'design/atoms/button/Button'
 import sejongApi from 'apis/sejongApi'
 import { useRouter } from 'next/router'
+import { useBannerStore } from 'stores/bannerStore'
 
 const Write = ({ content }) => {
   const { query } = useRouter()
+  const setBanner = useBannerStore(s => s.setBanner)
   const { register, handleSubmit } = useForm()
 
   const write = data => {
@@ -26,7 +28,10 @@ const Write = ({ content }) => {
         }
       )
       .then(data => {
-        alert('Success!!')
+        setBanner({
+          type: 'success',
+          message: `Choseh has been successfully written`,
+        })
       })
       .catch(err => {
         alert('Failed ' + err.message)
