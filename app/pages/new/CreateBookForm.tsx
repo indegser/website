@@ -2,8 +2,10 @@ import { useForm } from 'react-hook-form'
 import { PrimaryButton } from 'design/atoms/button/Button'
 import FormGroup from 'design/atoms/form/FormGroup'
 import sejongApi from 'apis/sejongApi'
+import { useBannerStore } from 'stores/bannerStore'
 
 const CreateBookForm = () => {
+  const setBanner = useBannerStore(s => s.setBanner)
   const { register, handleSubmit } = useForm()
 
   const action = async data => {
@@ -11,14 +13,18 @@ const CreateBookForm = () => {
     data.publishedYear = Number(data.publishedYear)
     const result = await sejongApi.book(
       `mutation($book: CreateBookInput) {
-        createBook(book: $book) {
+        book: createBook(book: $book) {
           id
         }
       }`,
       { book: data }
     )
 
-    console.log(result)
+    setBanner({
+      type: 'success',
+      link: `/b/${result.book.id}`,
+      message: `Book has been successfully created`,
+    })
   }
 
   return (

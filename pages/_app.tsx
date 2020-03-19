@@ -4,6 +4,7 @@ import Nav from '../app/design/organs/nav/Nav'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from 'design/theme'
 import Head from 'next/head'
+import Banner from 'design/organs/banner/Banner'
 
 const Page = styled.div`
   display: flex;
@@ -31,6 +32,7 @@ export default ({ Component, pageProps }) => {
         />
       </Head>
       <Page>
+        <Banner />
         <Nav />
         <main>
           <Component {...pageProps}></Component>
