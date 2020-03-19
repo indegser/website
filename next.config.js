@@ -6,8 +6,6 @@ const {
   NOW_GITHUB_COMMIT_SHA: GITHUB_SHA,
 } = process.env
 
-console.log(GITHUB_REF, GITHUB_SHA)
-
 module.exports = {
   env: {
     GITHUB_REF,
