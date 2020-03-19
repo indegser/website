@@ -5,12 +5,21 @@ import FormGroup, {
   FormGroupFieldVariant,
 } from 'design/atoms/form/FormGroup'
 import sejongApi from 'apis/sejongApi'
+import { useBannerStore } from 'stores/bannerStore'
 
 const CreateHistoryForm = () => {
   const { register, handleSubmit } = useForm()
+  const setBanner = useBannerStore(s => s.setBanner)
 
-  const action = data => {
-    sejongApi.createHistory(data)
+  const action = async data => {
+    const {
+      history: { id },
+    } = await sejongApi.createHistory(data)
+
+    setBanner({
+      type: 'success',
+      message: `History has been successfully created`,
+    })
   }
 
   return (
