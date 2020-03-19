@@ -11,6 +11,7 @@ export enum IconVariant {
   link = 'link',
   arrowDown = 'arrow-down',
   footnoteLink = 'footnote-link',
+  close = 'close',
 }
 
 interface IIconProps {
