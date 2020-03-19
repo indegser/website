@@ -2,7 +2,7 @@
   "scope": "indegsercom",
   "regions": ["icn1"],
   "env": {
-    "JWT_SECRET": "jwt-secret",
-    "ADMIN_PASSWORD": "admin-password"
+    "JWT_SECRET": "@jwt-secret",
+    "ADMIN_PASSWORD": "@admin-password"
   }
 }
