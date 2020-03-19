@@ -6,6 +6,7 @@ import {
 } from './NewPage.styled'
 import PageContainer from 'design/atoms/container/PageContainer'
 import CreateHistoryForm from './CreateHistoryForm'
+import CreateBookForm from './CreateBookForm'
 
 const NewPage = () => {
   return (
@@ -15,6 +16,12 @@ const NewPage = () => {
           <NewPageForm>
             <NewPageFormHeading>Bookmark</NewPageFormHeading>
             <CreateHistoryForm />
+          </NewPageForm>
+        </NewPagePanel>
+        <NewPagePanel>
+          <NewPageForm>
+            <NewPageFormHeading>Book</NewPageFormHeading>
+            <CreateBookForm />
           </NewPageForm>
         </NewPagePanel>
       </PageContainer>

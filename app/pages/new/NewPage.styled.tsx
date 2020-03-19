@@ -10,7 +10,7 @@ export const NewPagePanel = styled.div`
 `
 
 export const NewPageForm = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 `
 
 export const NewPageFormHeading = styled.div`
