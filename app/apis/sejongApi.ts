@@ -41,7 +41,7 @@ const createHistory = (input: CreateHistoryInput) => {
     BASE_URL + '/api/history',
     `
   mutation($input: CreateHistoryInput) {
-    createHistory(input: $input) {
+    history: createHistory(input: $input) {
       id
     }
   }
