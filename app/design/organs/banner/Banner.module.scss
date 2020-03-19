@@ -1,0 +1,25 @@
+.banner {
+  border-bottom: 1px solid #b8deff;
+  color: #184f7e;
+  padding: 10px 0 12px;
+  background: #daf0fa;
+}
+
+.success {
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto max-content;
+  align-items: center;
+}
+
+.close {
+  margin-bottom: -4px;
+  margin-right: -8px;
+  padding: 8px;
+}
+
+.message {
+  font-size: 14px;
+}
