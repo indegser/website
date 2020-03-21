@@ -3,6 +3,7 @@ import { GetServerSideProps } from 'next'
 import sejongApi from 'apis/sejongApi'
 import Choseh from 'pages/choseh/Choseh'
 import { useRouter } from 'next/router'
+import { useMemo } from 'react'
 
 const BookPage = ({ choseh, meta, host }) => {
   const { title, cover, citation } = meta
@@ -11,6 +12,10 @@ const BookPage = ({ choseh, meta, host }) => {
   const isLocalhost = host.includes('localhost')
 
   const url = useRouter()
+
+  const child = useMemo(() => {
+    return <Choseh meta={meta} choseh={choseh} />
+  }, [choseh])
 
   return (
     <div>
@@ -23,7 +28,7 @@ const BookPage = ({ choseh, meta, host }) => {
           content={`${isLocalhost ? 'http' : 'https'}://${host}${url.asPath}`}
         />
       </Head>
-      <Choseh meta={meta} choseh={choseh} />
+      {child}
     </div>
   )
 }
