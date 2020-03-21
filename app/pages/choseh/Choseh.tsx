@@ -15,8 +15,9 @@ import ImageRenderer from './renderer/ImageRenderer'
 import FootnoteDefinition from './renderer/footnote/FootnoteDefinition'
 import FootnoteReference from './renderer/footnote/FootnoteReference'
 import Appendix from './Appendix'
-import { dateFns } from 'utils/dateUtils'
+import shortcodes from 'remark-shortcodes'
 import ChosehEdition from './ChosehEdition'
+import Gist from './renderer/Gist'
 
 interface Props {
   meta: {
@@ -34,6 +35,10 @@ interface Props {
 const Choseh: React.FC<Props> = ({ meta, choseh }) => {
   const { title, cover, citation } = meta
   const { content } = choseh
+
+  const shortcodeMap = {
+    gist: Gist,
+  }
 
   return (
     <PageContainer>
@@ -57,6 +62,7 @@ const Choseh: React.FC<Props> = ({ meta, choseh }) => {
             parserOptions={{
               footnotes: true,
             }}
+            plugins={[shortcodes]}
             renderers={{
               footnoteDefinition: FootnoteDefinition,
               footnoteReference: FootnoteReference,
@@ -64,6 +70,10 @@ const Choseh: React.FC<Props> = ({ meta, choseh }) => {
               heading: HeadingRenderer,
               thematicBreak: BreakRenderer,
               paragraph: ParagraphRenderer,
+              shortcode: ({ identifier, attributes: props }) => {
+                const Renderer = shortcodeMap[identifier]
+                return <Renderer {...props} />
+              },
             }}
           />
         </ChosehContent>
