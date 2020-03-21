@@ -5,6 +5,8 @@ import styled, { ThemeProvider } from 'styled-components'
 import theme from 'design/theme'
 import Head from 'next/head'
 import Banner from 'design/organs/banner/Banner'
+import Router from 'next/router'
+import withGA from 'next-ga'
 
 const Page = styled.div`
   display: flex;
@@ -17,7 +19,7 @@ const Page = styled.div`
   }
 `
 
-export default ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -43,3 +45,5 @@ export default ({ Component, pageProps }) => {
     </ThemeProvider>
   )
 }
+
+export default withGA('UA-116457571-1', Router)(App)
