@@ -72,6 +72,7 @@ const Choseh: React.FC<Props> = ({ meta, choseh }) => {
               paragraph: ParagraphRenderer,
               shortcode: ({ identifier, attributes: props }) => {
                 const Renderer = shortcodeMap[identifier]
+                if (!Renderer) return null
                 return <Renderer {...props} />
               },
             }}
