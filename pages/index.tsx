@@ -1,16 +1,16 @@
 import Head from 'next/head'
-import Story from 'pages/story/Story'
+import Home from '../app/pages/home/Home'
 
-const HomePage = () => {
+const HistoryPage = () => {
   return (
     <div>
       <Head>
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Story />
+      <Home />
     </div>
   )
 }
 
-export default HomePage
+export default HistoryPage
