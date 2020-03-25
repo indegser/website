@@ -10,12 +10,16 @@ const Nav = () => {
       href: '/',
     },
     {
-      name: 'Bookmark',
+      name: 'Story',
       href: '/',
     },
     {
       name: 'Bookshelf',
       href: '/b',
+    },
+    {
+      name: 'Bookmark',
+      href: '/h',
     },
   ]
 

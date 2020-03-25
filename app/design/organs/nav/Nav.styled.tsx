@@ -5,7 +5,7 @@ export const NavMenuGrid = styled.div`
   display: grid;
   grid-auto-columns: max-content;
   grid-auto-flow: column;
-  grid-gap: 0 32px;
+  grid-gap: 0 30px;
   align-items: center;
 `
 

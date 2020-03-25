@@ -1,6 +1,4 @@
 import env from 'config/env'
-import { GraphQLClient } from 'graphql-request'
-import { Variables } from 'graphql-request/dist/src/types'
 import Axios from 'axios'
 import { tokenStoreApi } from 'stores/tokenStore'
 
@@ -12,7 +10,7 @@ const urls = {
 
 const BASE_URL = urls[env.gitBranch] || urls.develop
 
-const request = (endpoint, query: string, variables?: Variables) => {
+const request = async (endpoint, query: string, variables?: object) => {
   const headers: { authorization?: string } = {}
   const token = tokenStoreApi.getState().token
 
@@ -20,11 +18,32 @@ const request = (endpoint, query: string, variables?: Variables) => {
     headers.authorization = token
   }
 
-  const client = new GraphQLClient(endpoint, {
-    headers,
-  })
+  const isMutation = query.includes('mutation')
 
-  return client.request(query, variables)
+  let request
+  if (isMutation) {
+    request = Axios.post(
+      endpoint,
+      {
+        query,
+        variables,
+      },
+      {
+        headers,
+      }
+    )
+  } else {
+    const url = new URL(endpoint)
+    url.searchParams.append('query', query)
+
+    if (variables) {
+      url.searchParams.append('variables', JSON.stringify(variables))
+    }
+    request = Axios.get(url.href)
+  }
+
+  const { data, error } = await request
+  return data?.data
 }
 
 const getHistories = query => {
@@ -50,12 +69,16 @@ const createHistory = (input: CreateHistoryInput) => {
   )
 }
 
-const book = (query: string, variables?: Variables) => {
+const book = (query: string, variables?: object) => {
   return request(BASE_URL + '/api/book', query, variables)
 }
 
-const choseh = (query: string, variables?: Variables) => {
+const choseh = (query: string, variables?: object) => {
   return request(BASE_URL + '/api/choseh', query, variables)
+}
+
+const story = (query: string, variables?: object) => {
+  return request(BASE_URL + '/api/story', query, variables)
 }
 
 const markdown = async (id: string) => {
@@ -77,6 +100,7 @@ const sejongApi = {
   createHistory,
   book,
   choseh,
+  story,
   markdown,
   getBooks,
 }
