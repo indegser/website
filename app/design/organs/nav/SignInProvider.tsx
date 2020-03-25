@@ -1,10 +1,9 @@
 import { RectButton } from 'design/atoms/button/RectButton'
-import { signInWithFirebase } from 'apis/firebase'
 
 const SignInProvider = ({ provider, logo: Logo, name }) => {
   const handleClick = () => {
     localStorage.setItem('signing-in', 'google')
-    signInWithFirebase(provider)
+    // signInWithFirebase(provider)
   }
 
   return (
