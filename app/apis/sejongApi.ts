@@ -1,5 +1,6 @@
 import env from 'config/env'
 import Axios from 'axios'
+import compress from 'graphql-query-compress'
 import { tokenStoreApi } from 'stores/tokenStore'
 
 const urls = {
@@ -34,7 +35,7 @@ const request = async (endpoint, query: string, variables?: object) => {
     )
   } else {
     const url = new URL(endpoint)
-    url.searchParams.append('query', query)
+    url.searchParams.append('query', compress(query))
 
     if (variables) {
       url.searchParams.append('variables', JSON.stringify(variables))
