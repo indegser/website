@@ -45,6 +45,7 @@
   bottom: 0;
   width: 1px;
   background: #dedede;
+  margin-left: -1px;
 
   --half-gap: calc(var(--column-gap) / 2);
   --gap-total: calc(var(--column-gap) * (var(--column-count) - 1));
