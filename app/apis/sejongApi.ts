@@ -35,7 +35,12 @@ const request = async (endpoint, query: string, variables?: object) => {
     )
   } else {
     const url = new URL(endpoint)
-    url.searchParams.append('query', compress(query))
+
+    let minified = query
+    try {
+      minified = compress(query)
+    } catch (err) {}
+    url.searchParams.append('query', minified)
 
     if (variables) {
       url.searchParams.append('variables', JSON.stringify(variables))
