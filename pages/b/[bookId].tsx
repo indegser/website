@@ -61,6 +61,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     const { data } = await bookApiClient.query({
       query: GET_BOOK,
       variables: { id: params.bookId },
+      fetchPolicy: 'network-only',
     })
 
     if (data) {
