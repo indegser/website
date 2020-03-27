@@ -6,37 +6,44 @@ import { PrimaryButton } from 'design/atoms/button/Button'
 import sejongApi from 'apis/sejongApi'
 import { useRouter } from 'next/router'
 import { useBannerStore } from 'stores/bannerStore'
+import { useMutation } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+import { useEffect } from 'react'
+import { chosehApiClient } from 'apis/apolloClient'
+
+const WRITE = gql`
+  mutation write($input: Write!) {
+    write(input: $input)
+  }
+`
 
 const Write = ({ content }) => {
   const { query } = useRouter()
   const setBanner = useBannerStore(s => s.setBanner)
   const { register, handleSubmit } = useForm()
 
-  const write = data => {
-    // sejongApi
-    //   .choseh(
-    //     `
-    //   mutation($input: Write!) {
-    //     write(input: $input)
-    //   }
-    // `,
-    //     {
-    //       input: {
-    //         id: query.bookId,
-    //         content: data.content,
-    //       },
-    //     }
-    //   )
-    //   .then(data => {
-    //     setBanner({
-    //       type: 'success',
-    //       message: `Choseh has been successfully written`,
-    //     })
-    //   })
-    //   .catch(err => {
-    //     alert('Failed ' + err.message)
-    //   })
+  const [write, { data }] = useMutation(WRITE, {
+    client: chosehApiClient,
+  })
+
+  const submit = data => {
+    write({
+      variables: {
+        input: {
+          id: query.bookId,
+          content: data.content,
+        },
+      },
+    })
   }
+
+  useEffect(() => {
+    if (!data) return
+    setBanner({
+      type: 'success',
+      message: `Choseh has been successfully written`,
+    })
+  }, [data])
 
   return (
     <div>
@@ -44,7 +51,7 @@ const Write = ({ content }) => {
         <title>Write choseh | Indegser</title>
       </Head>
       <PageContainer>
-        <form onSubmit={handleSubmit(write)}>
+        <form onSubmit={handleSubmit(submit)}>
           <FormGroup
             name="content"
             required

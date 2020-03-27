@@ -32,3 +32,4 @@ export const createApolloClient = (uri: string) => {
 
 export const bookApiClient = createApolloClient('/api/book')
 export const historyApiClient = createApolloClient('/api/history')
+export const chosehApiClient = createApolloClient('/api/choseh')
