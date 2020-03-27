@@ -18,7 +18,7 @@
     "immer": "^6.0.2",
     "jsonwebtoken": "^8.5.1",
     "mdast-util-toc": "^5.0.2",
-    "next": "^9.3.0",
+    "next": "^9.3.2",
     "next-ga": "^2.3.4",
     "polished": "^3.4.4",
     "react": "16.12.0",
@@ -35,6 +35,7 @@
     "styled-media-query": "^2.1.2",
     "styled-system": "^5.1.4",
     "swr": "^0.1.16",
+    "tokenizr": "^1.5.7",
     "unified": "^8.4.2",
     "unist-util-map": "^2.0.1",
     "zustand": "^2.2.2"
