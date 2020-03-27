@@ -13,6 +13,7 @@ export const HistoryCardContainer = styled.div`
 export const HistoryCardImage = styled(CircleImage)`
   width: 48px;
   height: 48px;
+  background: #eee;
 `
 
 export const HistoryCardComment = styled(BodyText)`

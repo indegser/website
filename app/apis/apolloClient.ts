@@ -1,4 +1,5 @@
 import { ApolloClient } from 'apollo-client'
+import { ApolloLink } from 'apollo-link'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { createPersistedQueryLink } from 'apollo-link-persisted-queries'
@@ -14,18 +15,20 @@ const urls = {
 
 const BASE_URL = urls[env.gitBranch] || urls.develop
 
+const middlewareLink = new ApolloLink((operation, forward) => {
+  operation.setContext({
+    headers: {
+      authorization: tokenStoreApi.getState().token || null,
+    },
+  })
+  return forward(operation)
+})
+
 export const createApolloClient = (uri: string) => {
-  const headers: { authorization?: string } = {}
-  const token = tokenStoreApi.getState().token
-
-  if (token) {
-    headers.authorization = token
-  }
-
   return new ApolloClient({
-    link: createPersistedQueryLink({ useGETForHashedQueries: true }).concat(
-      createHttpLink({ uri: BASE_URL + uri, fetch, headers })
-    ),
+    link: createPersistedQueryLink({ useGETForHashedQueries: true })
+      .concat(middlewareLink)
+      .concat(createHttpLink({ uri: BASE_URL + uri, fetch })),
     cache: new InMemoryCache(),
   })
 }
