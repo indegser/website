@@ -35,7 +35,6 @@
     "styled-media-query": "^2.1.2",
     "styled-system": "^5.1.4",
     "swr": "^0.1.16",
-    "tokenizr": "^1.5.7",
     "unified": "^8.4.2",
     "unist-util-map": "^2.0.1",
     "zustand": "^2.2.2"
