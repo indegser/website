@@ -13,29 +13,29 @@ const Write = ({ content }) => {
   const { register, handleSubmit } = useForm()
 
   const write = data => {
-    sejongApi
-      .choseh(
-        `
-      mutation($input: Write!) {
-        write(input: $input)
-      }
-    `,
-        {
-          input: {
-            id: query.bookId,
-            content: data.content,
-          },
-        }
-      )
-      .then(data => {
-        setBanner({
-          type: 'success',
-          message: `Choseh has been successfully written`,
-        })
-      })
-      .catch(err => {
-        alert('Failed ' + err.message)
-      })
+    // sejongApi
+    //   .choseh(
+    //     `
+    //   mutation($input: Write!) {
+    //     write(input: $input)
+    //   }
+    // `,
+    //     {
+    //       input: {
+    //         id: query.bookId,
+    //         content: data.content,
+    //       },
+    //     }
+    //   )
+    //   .then(data => {
+    //     setBanner({
+    //       type: 'success',
+    //       message: `Choseh has been successfully written`,
+    //     })
+    //   })
+    //   .catch(err => {
+    //     alert('Failed ' + err.message)
+    //   })
   }
 
   return (
