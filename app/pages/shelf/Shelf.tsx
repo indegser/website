@@ -18,7 +18,7 @@ const GET_STORIES = gql`
 `
 
 const Shelf = () => {
-  const { data } = useQuery(GET_STORIES)
+  const { data } = useQuery(GET_STORIES, { fetchPolicy: 'cache-and-network' })
 
   return (
     <PageContainer>

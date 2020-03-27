@@ -7,8 +7,6 @@ import Head from 'next/head'
 import Banner from 'design/organs/banner/Banner'
 import Router from 'next/router'
 import withGA from 'next-ga'
-import { ApolloProvider } from '@apollo/react-hooks'
-import { createApolloClient } from 'apis/apolloClient'
 
 const Page = styled.div`
   display: flex;
@@ -21,14 +19,7 @@ const Page = styled.div`
   }
 `
 
-const uriMap = {
-  '/b': '/api/book',
-  '/': '/api/history',
-}
-
-const App = ({ Component, pageProps, router }) => {
-  const { route } = router
-  const client = createApolloClient(uriMap[route])
+const App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -46,9 +37,7 @@ const App = ({ Component, pageProps, router }) => {
         <Banner />
         <Nav />
         <main>
-          <ApolloProvider client={client}>
-            <Component {...pageProps}></Component>
-          </ApolloProvider>
+          <Component {...pageProps}></Component>
         </main>
         <Footer />
       </Page>

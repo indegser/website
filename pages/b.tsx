@@ -1,16 +1,18 @@
 import Head from 'next/head'
 import Shelf from 'pages/shelf/Shelf'
+import { ApolloProvider } from '@apollo/react-hooks'
+import { bookApiClient } from 'apis/apolloClient'
 
-const HomePage = () => {
+const BookshelfPage = () => {
   return (
-    <div>
+    <ApolloProvider client={bookApiClient}>
       <Head>
         <title>Bookshelf</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Shelf />
-    </div>
+    </ApolloProvider>
   )
 }
 
-export default HomePage
+export default BookshelfPage
