@@ -1,12 +1,11 @@
 import PageContainer from 'design/atoms/container/PageContainer'
-import useSWR from 'swr'
-import sejongApi from 'apis/sejongApi'
 import { ShelfGrid } from './Shelf.styled'
 import BookCard from './book-card/BookCard'
+import { useQuery } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
 
-const Shelf = () => {
-  const { data } = useSWR(
-    `{
+const GET_STORIES = gql`
+  query books {
     books: getBooks {
       id
       title
@@ -15,9 +14,11 @@ const Shelf = () => {
       createdAt
       modifiedAt
     }
-  }`,
-    sejongApi.getBooks
-  )
+  }
+`
+
+const Shelf = () => {
+  const { data } = useQuery(GET_STORIES)
 
   return (
     <PageContainer>
