@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
-import sejongApi from 'apis/sejongApi'
 import Choseh from 'pages/choseh/Choseh'
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
+import gql from 'graphql-tag'
+import { bookApiClient } from 'apis/apolloClient'
 
 const BookPage = ({ choseh, meta, host }) => {
   const { title, cover, citation } = meta
@@ -33,6 +34,22 @@ const BookPage = ({ choseh, meta, host }) => {
   )
 }
 
+const GET_BOOK = gql`
+  query getBook($id: ID!) {
+    book: getBook(id: $id) {
+      id
+      cover
+      title
+      citation
+      choseh {
+        edition
+        modifiedAt
+        content
+      }
+    }
+  }
+`
+
 export const getServerSideProps: GetServerSideProps = async ({
   params,
   req,
@@ -41,21 +58,14 @@ export const getServerSideProps: GetServerSideProps = async ({
   let book
 
   try {
-    ;({ book } = await sejongApi.book(`
-      {
-        book: getBook(id: "${params.bookId}") {
-          id
-          cover
-          title
-          citation
-          choseh {
-            edition
-            modifiedAt
-            content
-          }
-        }
-      }
-    `))
+    const { data } = await bookApiClient.query({
+      query: GET_BOOK,
+      variables: { id: params.bookId },
+    })
+
+    if (data) {
+      book = data.book
+    }
   } catch (err) {
     console.log(err.message)
   }
