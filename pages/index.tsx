@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Home from '../app/pages/home/Home'
+import History from '../app/pages/history/History'
 
 const HistoryPage = () => {
   return (
@@ -8,7 +8,7 @@ const HistoryPage = () => {
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Home />
+      <History />
     </div>
   )
 }
