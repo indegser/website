@@ -19,7 +19,7 @@ const GET_HISTORIES = gql`
 `
 
 const History = () => {
-  const { data } = useQuery(GET_HISTORIES)
+  const { data } = useQuery(GET_HISTORIES, { fetchPolicy: 'cache-and-network' })
 
   return (
     <PageContainer>

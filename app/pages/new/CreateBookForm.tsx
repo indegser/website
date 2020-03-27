@@ -1,31 +1,43 @@
 import { useForm } from 'react-hook-form'
 import { PrimaryButton } from 'design/atoms/button/Button'
 import FormGroup from 'design/atoms/form/FormGroup'
-import sejongApi from 'apis/sejongApi'
 import { useBannerStore } from 'stores/bannerStore'
+import { useMutation } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+import { useEffect } from 'react'
+import { createApolloClient } from 'apis/apolloClient'
+
+const CREATE_BOOK = gql`
+  mutation($book: CreateBookInput) {
+    book: createBook(book: $book) {
+      id
+    }
+  }
+`
 
 const CreateBookForm = () => {
   const setBanner = useBannerStore(s => s.setBanner)
   const { register, handleSubmit } = useForm()
+  const [createBook, { data }] = useMutation(CREATE_BOOK, {
+    client: createApolloClient('/api/book'),
+  })
 
   const action = async data => {
     data.authors = data.authors.split(',').map(a => a.trim())
     data.publishedYear = Number(data.publishedYear)
-    const result = await sejongApi.book(
-      `mutation($book: CreateBookInput) {
-        book: createBook(book: $book) {
-          id
-        }
-      }`,
-      { book: data }
-    )
+
+    createBook({ variables: { book: data } })
+  }
+
+  useEffect(() => {
+    if (!data?.book) return
 
     setBanner({
       type: 'success',
-      link: `/b/${result.book.id}`,
+      link: `/b/${data.book.id}`,
       message: `Book has been successfully created`,
     })
-  }
+  }, data)
 
   return (
     <form onSubmit={handleSubmit(action)}>
