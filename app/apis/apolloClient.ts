@@ -8,7 +8,7 @@ import env from 'config/env'
 import { tokenStoreApi } from 'stores/tokenStore'
 
 const urls = {
-  develop: 'https://sejong-edge.now.sh',
+  develop: 'https://sejong-edge.indegser.com',
   master: 'https://sejong.indegser.com',
   // local: 'http://localhost:3001',
 }
@@ -26,9 +26,7 @@ const middlewareLink = new ApolloLink((operation, forward) => {
 
 export const createApolloClient = (uri: string) => {
   return new ApolloClient({
-    link: createPersistedQueryLink({ useGETForHashedQueries: true })
-      .concat(middlewareLink)
-      .concat(createHttpLink({ uri: BASE_URL + uri, fetch })),
+    link: middlewareLink.concat(createHttpLink({ uri: BASE_URL + uri, fetch })),
     cache: new InMemoryCache(),
   })
 }
