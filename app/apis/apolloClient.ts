@@ -8,7 +8,7 @@ import env from 'config/env'
 import { tokenStoreApi } from 'stores/tokenStore'
 
 const urls = {
-  develop: 'https://sejong-edge.indegser.com',
+  develop: 'https://sejong-edge.azurewebsites.net',
   master: 'https://sejong.indegser.com',
   // local: 'http://localhost:3001',
 }
