@@ -4,7 +4,7 @@ import Choseh from 'pages/choseh/Choseh'
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 import gql from 'graphql-tag'
-import { bookApiClient } from 'apis/apolloClient'
+import apolloClient from 'apis/apolloClient'
 
 const BookPage = ({ choseh, meta, host }) => {
   const { title, cover, citation } = meta
@@ -58,7 +58,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   let book
 
   try {
-    const { data } = await bookApiClient.query({
+    const { data } = await apolloClient.query({
       query: GET_BOOK,
       variables: { id: params.bookId },
       fetchPolicy: 'network-only',
@@ -68,7 +68,7 @@ export const getServerSideProps: GetServerSideProps = async ({
       book = data.book
     }
   } catch (err) {
-    console.log(err.message)
+    console.log(err)
   }
 
   const { choseh, ...meta } = book

@@ -3,6 +3,7 @@ import NewsGrid from 'design/organs/grid/NewsGrid'
 import PageContainer from 'design/atoms/container/PageContainer'
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
+import { defaultQueryOption } from 'apis/apolloClient'
 
 const GET_HISTORIES = gql`
   query histories {
@@ -19,12 +20,12 @@ const GET_HISTORIES = gql`
 `
 
 const History = () => {
-  const { data } = useQuery(GET_HISTORIES, { fetchPolicy: 'cache-and-network' })
+  const { data } = useQuery(GET_HISTORIES, defaultQueryOption)
 
   return (
     <PageContainer>
       <NewsGrid>
-        {data?.histories.map(history => {
+        {data?.histories.map((history) => {
           return <HistoryCard key={history.id} history={history} />
         })}
       </NewsGrid>

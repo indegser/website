@@ -1,4 +1,4 @@
-import { ApolloClient } from 'apollo-client'
+import { ApolloClient, WatchQueryFetchPolicy } from 'apollo-client'
 import { ApolloLink } from 'apollo-link'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -8,9 +8,9 @@ import env from 'config/env'
 import { tokenStoreApi } from 'stores/tokenStore'
 
 const urls = {
-  develop: 'https://sejong-edge.azurewebsites.net',
+  // develop: 'https://sejong-edge.azurewebsites.net',
   master: 'https://sejong.indegser.com',
-  // local: 'http://localhost:3001',
+  develop: 'http://localhost:3001',
 }
 
 const BASE_URL = urls[env.gitBranch] || urls.develop
@@ -30,9 +30,15 @@ export const createApolloClient = (uri: string) => {
       .concat(middlewareLink)
       .concat(createHttpLink({ uri: BASE_URL + uri, fetch })),
     cache: new InMemoryCache(),
+    ssrMode: !process.browser,
   })
 }
 
-export const bookApiClient = createApolloClient('/api/book')
-export const historyApiClient = createApolloClient('/api/history')
-export const chosehApiClient = createApolloClient('/api/choseh')
+export const defaultQueryOption = {
+  fetchPolicy: 'cache-and-network' as WatchQueryFetchPolicy,
+  skip: !process.browser,
+}
+
+const apolloClient = createApolloClient('/graphql')
+
+export default apolloClient

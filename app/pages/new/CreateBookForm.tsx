@@ -5,10 +5,9 @@ import { useBannerStore } from 'stores/bannerStore'
 import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useEffect } from 'react'
-import { createApolloClient } from 'apis/apolloClient'
 
 const CREATE_BOOK = gql`
-  mutation($book: CreateBookInput) {
+  mutation($book: CreateBookInput!) {
     book: createBook(book: $book) {
       id
     }
@@ -16,14 +15,12 @@ const CREATE_BOOK = gql`
 `
 
 const CreateBookForm = () => {
-  const setBanner = useBannerStore(s => s.setBanner)
+  const setBanner = useBannerStore((s) => s.setBanner)
   const { register, handleSubmit } = useForm()
-  const [createBook, { data }] = useMutation(CREATE_BOOK, {
-    client: createApolloClient('/api/book'),
-  })
+  const [createBook, { data }] = useMutation(CREATE_BOOK)
 
-  const action = async data => {
-    data.authors = data.authors.split(',').map(a => a.trim())
+  const action = async (data) => {
+    data.authors = data.authors.split(',').map((a) => a.trim())
     data.publishedYear = Number(data.publishedYear)
 
     createBook({ variables: { book: data } })

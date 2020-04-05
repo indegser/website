@@ -3,6 +3,7 @@ import { ShelfGrid } from './Shelf.styled'
 import BookCard from './book-card/BookCard'
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
+import { defaultQueryOption } from 'apis/apolloClient'
 
 const GET_STORIES = gql`
   query books {
@@ -18,12 +19,12 @@ const GET_STORIES = gql`
 `
 
 const Shelf = () => {
-  const { data } = useQuery(GET_STORIES, { fetchPolicy: 'cache-and-network' })
+  const { data } = useQuery(GET_STORIES, defaultQueryOption)
 
   return (
     <PageContainer>
       <ShelfGrid>
-        {data?.books.map(book => (
+        {data?.books.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}
       </ShelfGrid>
