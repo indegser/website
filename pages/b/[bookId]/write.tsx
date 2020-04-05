@@ -9,7 +9,6 @@ import { useBannerStore } from 'stores/bannerStore'
 import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useEffect } from 'react'
-import { chosehApiClient } from 'apis/apolloClient'
 
 const WRITE = gql`
   mutation write($input: Write!) {
@@ -19,14 +18,12 @@ const WRITE = gql`
 
 const Write = ({ content }) => {
   const { query } = useRouter()
-  const setBanner = useBannerStore(s => s.setBanner)
+  const setBanner = useBannerStore((s) => s.setBanner)
   const { register, handleSubmit } = useForm()
 
-  const [write, { data }] = useMutation(WRITE, {
-    client: chosehApiClient,
-  })
+  const [write, { data }] = useMutation(WRITE)
 
-  const submit = data => {
+  const submit = (data) => {
     write({
       variables: {
         input: {

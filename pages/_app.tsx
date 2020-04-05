@@ -7,6 +7,8 @@ import Head from 'next/head'
 import Banner from 'design/organs/banner/Banner'
 import Router from 'next/router'
 import withGA from 'next-ga'
+import { ApolloProvider } from '@apollo/react-hooks'
+import apolloClient from 'apis/apolloClient'
 
 const Page = styled.div`
   display: flex;
@@ -21,28 +23,30 @@ const Page = styled.div`
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lusitana&family=Nanum+Myeongjo:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <Page>
-        <Banner />
-        <Nav />
-        <main>
-          <Component {...pageProps}></Component>
-        </main>
-        <Footer />
-      </Page>
-      <div id="context-menu"></div>
-    </ThemeProvider>
+    <ApolloProvider client={apolloClient}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lusitana&family=Nanum+Myeongjo:wght@700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+        <Page>
+          <Banner />
+          <Nav />
+          <main>
+            <Component {...pageProps}></Component>
+          </main>
+          <Footer />
+        </Page>
+        <div id="context-menu"></div>
+      </ThemeProvider>
+    </ApolloProvider>
   )
 }
 
