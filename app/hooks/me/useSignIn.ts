@@ -1,22 +1,35 @@
-import seoulApi from 'apis/seoulApi'
 import { useTokenStore } from 'stores/tokenStore'
+import { useMutation } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+
+const AUTHENTICATE = gql`
+  mutation authenticate($input: AuthenticateInput!) {
+    authenticate(input: $input) {
+      jwtToken
+    }
+  }
+`
 
 const useSignIn = () => {
-  const setToken = useTokenStore(s => s.setToken)
+  const setToken = useTokenStore((s) => s.setToken)
+  const [authenticate] = useMutation(AUTHENTICATE, {
+    onCompleted: ({ authenticate }) => {
+      setToken(authenticate.jwtToken)
+    },
+  })
 
   const signIn = () => {
     const password = prompt('Enter admin password')
     if (!password) return
 
-    seoulApi
-      .signIn(password)
-      .then(({ data }) => {
-        const { token } = data
-        setToken(token)
-      })
-      .catch(err => {
-        alert('Wrong password!')
-      })
+    authenticate({
+      variables: {
+        input: {
+          email: 'indegser@gmail.com',
+          password,
+        },
+      },
+    })
   }
 
   return {
