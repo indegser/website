@@ -1,7 +1,7 @@
 interface IData {
   id: string
-  createdAt: number
-  modifiedAt: number
+  createdAt: string
+  modifiedAt: string
 }
 
 export interface IBook extends IData {

@@ -7,13 +7,15 @@ import { defaultQueryOption } from 'apis/apolloClient'
 
 const GET_STORIES = gql`
   query books {
-    books: getBooks {
-      id
-      title
-      cover
-      citation
-      createdAt
-      modifiedAt
+    books(first: 30, orderBy: [MODIFIED_AT_DESC]) {
+      nodes {
+        id
+        title
+        cover
+        citation
+        createdAt
+        modifiedAt
+      }
     }
   }
 `
@@ -24,7 +26,7 @@ const Shelf = () => {
   return (
     <PageContainer>
       <ShelfGrid>
-        {data?.books.map((book) => (
+        {data?.books.nodes.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}
       </ShelfGrid>

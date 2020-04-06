@@ -7,14 +7,20 @@ import { defaultQueryOption } from 'apis/apolloClient'
 
 const GET_HISTORIES = gql`
   query histories {
-    histories: getHistories {
-      id
-      link
-      title
-      cover
-      comment
-      createdAt
-      modifiedAt
+    histories(first: 30, orderBy: [MODIFIED_AT_DESC]) {
+      pageInfo {
+        startCursor
+        endCursor
+      }
+      nodes {
+        id
+        link
+        title
+        cover
+        comment
+        createdAt
+        modifiedAt
+      }
     }
   }
 `
@@ -25,7 +31,7 @@ const History = () => {
   return (
     <PageContainer>
       <NewsGrid>
-        {data?.histories.map((history) => {
+        {data?.histories.nodes.map((history) => {
           return <HistoryCard key={history.id} history={history} />
         })}
       </NewsGrid>

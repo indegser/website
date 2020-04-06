@@ -1,8 +1,8 @@
 import formatRelative from 'date-fns/formatRelative'
 import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
 
 export const dateFns = {
-  formatRelative: (...args: Parameters<typeof formatRelative>) =>
-    formatRelative(args[0], args[1]),
+  formatRelative: (a: string, b: any) => formatRelative(parseISO(a), b),
   formatBasic: (date: number) => format(date, 'MMM d, yyyy'),
 }
