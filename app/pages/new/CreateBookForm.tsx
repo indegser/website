@@ -4,12 +4,13 @@ import FormGroup from 'design/atoms/form/FormGroup'
 import { useBannerStore } from 'stores/bannerStore'
 import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
-import { useEffect } from 'react'
 
 const CREATE_BOOK = gql`
-  mutation($book: CreateBookInput!) {
-    book: createBook(book: $book) {
-      id
+  mutation($input: CreateBookInput!) {
+    book: createBook(input: $input) {
+      book {
+        id
+      }
     }
   }
 `
@@ -17,24 +18,24 @@ const CREATE_BOOK = gql`
 const CreateBookForm = () => {
   const setBanner = useBannerStore((s) => s.setBanner)
   const { register, handleSubmit } = useForm()
-  const [createBook, { data }] = useMutation(CREATE_BOOK)
+
+  const [createBook] = useMutation(CREATE_BOOK, {
+    onCompleted: (data) => {
+      console.log(data)
+      setBanner({
+        type: 'success',
+        link: `/b/${data.book.book.id}`,
+        message: `Book has been successfully created`,
+      })
+    },
+  })
 
   const action = async (data) => {
     data.authors = data.authors.split(',').map((a) => a.trim())
     data.publishedYear = Number(data.publishedYear)
 
-    createBook({ variables: { book: data } })
+    createBook({ variables: { input: { book: data } } })
   }
-
-  useEffect(() => {
-    if (!data?.book) return
-
-    setBanner({
-      type: 'success',
-      link: `/b/${data.book.id}`,
-      message: `Book has been successfully created`,
-    })
-  }, data)
 
   return (
     <form onSubmit={handleSubmit(action)}>
