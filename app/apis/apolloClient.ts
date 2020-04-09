@@ -7,9 +7,9 @@ import env from 'config/env'
 import { tokenStoreApi } from 'stores/tokenStore'
 
 const urls = {
-  // develop: 'https://sejong-edge.azurewebsites.net',
+  develop: 'https://sejong-edge.azurewebsites.net',
   master: 'https://sejong.indegser.com',
-  develop: 'http://localhost:3000',
+  // develop: 'http://localhost:3000',
 }
 
 const BASE_URL = urls[env.gitBranch] || urls.develop
