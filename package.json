@@ -32,6 +32,7 @@
     "react-markdown": "^4.3.1",
     "react-spring": "^8.0.27",
     "react-use-measure": "^2.0.0",
+    "react-waypoint": "^9.0.2",
     "remark-parse": "^7.0.2",
     "remark-shortcodes": "^0.3.1",
     "remark-stringify": "^7.0.4",

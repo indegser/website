@@ -14,7 +14,9 @@ const useSignIn = () => {
   const setToken = useTokenStore((s) => s.setToken)
   const [authenticate] = useMutation(AUTHENTICATE, {
     onCompleted: ({ authenticate }) => {
-      setToken(authenticate.jwtToken)
+      const { jwtToken } = authenticate
+      localStorage.setItem('jwtToken', jwtToken)
+      setToken(jwtToken)
     },
   })
 

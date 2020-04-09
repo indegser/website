@@ -7,9 +7,11 @@ import { useMutation } from '@apollo/react-hooks'
 import { useEffect } from 'react'
 
 const CREATE_HISTORY = gql`
-  mutation($input: CreateHistoryInput) {
+  mutation($input: CreateHistoryInput!) {
     history: createHistory(input: $input) {
-      id
+      history {
+        id
+      }
     }
   }
 `
@@ -20,7 +22,16 @@ const CreateHistoryForm = () => {
   const [createHistory, { data }] = useMutation(CREATE_HISTORY)
 
   const action = async (data) => {
-    createHistory({ variables: { input: data } })
+    createHistory({
+      variables: {
+        input: {
+          history: {
+            ...data,
+            title: '',
+          },
+        },
+      },
+    })
   }
 
   useEffect(() => {
