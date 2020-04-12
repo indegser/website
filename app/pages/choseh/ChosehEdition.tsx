@@ -18,7 +18,7 @@ const ChosehEdition = ({ modifiedAt, edition }) => {
     return i + 'th'
   }
 
-  if (edition === 0) {
+  if (!edition) {
     text = 'Initial Edition'
   } else {
     text = [

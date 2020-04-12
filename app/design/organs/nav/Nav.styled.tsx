@@ -11,7 +11,7 @@ export const NavMenuGrid = styled.div`
 
 export const NavMenus = styled.div`
   display: flex;
-  height: 48px;
+  height: 50px;
   align-items: center;
   justify-content: space-between;
   position: relative;

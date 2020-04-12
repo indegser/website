@@ -28,7 +28,9 @@ const middlewareLink = new ApolloLink((operation, forward) => {
 
 export const createApolloClient = (uri: string) => {
   return new ApolloClient({
-    link: middlewareLink.concat(createHttpLink({ uri: BASE_URL + uri, fetch })),
+    link: middlewareLink.concat(
+      createHttpLink({ uri: BASE_URL + uri, fetch: fetch as any })
+    ),
     cache: new InMemoryCache(),
     ssrMode: !process.browser,
   })

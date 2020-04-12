@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 import gql from 'graphql-tag'
 import apolloClient from 'apis/apolloClient'
+import chosehApi from 'apis/chosehApi'
+import { IBook, IChoseh } from 'types/dataTypes'
 
 const BookPage = ({ choseh, meta, host }) => {
   const { title, cover, citation } = meta
@@ -35,17 +37,12 @@ const BookPage = ({ choseh, meta, host }) => {
 }
 
 const GET_BOOK = gql`
-  query getBook($id: ID!) {
-    book: getBook(id: $id) {
+  query getBook($id: UUID!) {
+    book: book(id: $id) {
       id
       cover
       title
       citation
-      choseh {
-        edition
-        modifiedAt
-        content
-      }
     }
   }
 `
@@ -55,7 +52,10 @@ export const getServerSideProps: GetServerSideProps = async ({
   req,
 }) => {
   // Get choseh of book or create choseh.
-  let book
+  let props: {
+    choseh?: IChoseh
+    meta?: Pick<IBook, 'cover' | 'title' | 'citation'>
+  } = {}
 
   try {
     const { data } = await apolloClient.query({
@@ -64,20 +64,18 @@ export const getServerSideProps: GetServerSideProps = async ({
       fetchPolicy: 'network-only',
     })
 
-    if (data) {
-      book = data.book
-    }
-  } catch (err) {
-    console.log(err)
-  }
+    const choseh = await chosehApi.getChoseh(data.book.id)
 
-  const { choseh, ...meta } = book
+    props.meta = data.book
+    props.choseh = choseh
+  } catch (err) {
+    console.log(err.networkError.result, '!!!')
+  }
 
   return {
     props: {
       host: req.headers.host,
-      meta,
-      choseh,
+      ...props,
     },
   }
 }
