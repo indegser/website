@@ -1,19 +1,26 @@
 import Avatar from 'design/atoms/avatar/Avatar'
 import Flexbox from 'design/atoms/box/Flexbox'
-import Box from 'design/atoms/box/Box'
 import { SecondaryButton } from 'design/atoms/button/Button'
 import Router from 'next/router'
 import useSignIn from 'hooks/me/useSignIn'
 import useWhoami from 'hooks/me/useWhoami'
 import { ProfileAvatarButton } from './Profile.styled'
+import styles from './profile.module.scss'
+import Route from 'hocs/Route'
 
 const Profile = () => {
   const { signIn } = useSignIn()
   const user = useWhoami()
 
-  const handleNew = e => {
+  const handleNew = (e) => {
     e.stopPropagation()
     Router.push('/new')
+  }
+
+  const handleWrite = (e) => {
+    // Router.path
+    e.stopPropagation()
+    Router.push('/b/[bookId]/write', Router.asPath + '/write')
   }
 
   const handleAvatar = () => {
@@ -23,15 +30,18 @@ const Profile = () => {
   return (
     <Flexbox>
       {user && (
-        <Flexbox>
+        <div className={styles.actions}>
+          <Route path="/b/[bookId]">
+            <SecondaryButton onClick={handleWrite}>Write</SecondaryButton>
+          </Route>
           <SecondaryButton onClick={handleNew}>New</SecondaryButton>
-        </Flexbox>
+        </div>
       )}
-      <Box pl={2} ml={2} borderLeft="1px solid #ddd">
+      <div className={styles.profile}>
         <ProfileAvatarButton onClick={user ? undefined : handleAvatar}>
           <Avatar src={user?.avatar} />
         </ProfileAvatarButton>
-      </Box>
+      </div>
     </Flexbox>
   )
 }

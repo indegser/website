@@ -17,3 +17,9 @@ export interface IHistory extends IData {
   excerpt?: string
   comment?: string
 }
+
+export interface IChoseh {
+  edition: number
+  content: string
+  frontMatter: any
+}
