@@ -2,7 +2,7 @@
 
 .grid {
   --column-gap: 32px;
-  padding-bottom: var(--column-gap);
+  margin-bottom: var(--column-gap);
   position: relative;
 
   @include mixins.sm {
@@ -14,7 +14,7 @@
   }
 
   @include mixins.lg {
-    --column-count: 3;
+    --column-count: 2;
   }
 }
 

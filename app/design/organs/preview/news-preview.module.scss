@@ -1,0 +1,45 @@
+.container {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.preview {
+  flex: 1;
+  padding-right: 16px;
+}
+
+.img {
+  flex: 0 0 auto;
+  width: 120px;
+  height: auto;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.excerpt {
+  font-size: 13px;
+  line-height: 20px;
+  color: #333;
+}
+
+.relDate {
+  font-size: 12px;
+  line-height: 14px;
+  color: #666;
+}

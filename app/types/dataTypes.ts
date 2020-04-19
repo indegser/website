@@ -1,7 +1,7 @@
 interface IData {
   id: string
-  createdAt: string
-  modifiedAt: string
+  createdAt: number
+  modifiedAt: number
 }
 
 export interface IBook extends IData {
@@ -22,4 +22,8 @@ export interface IChoseh {
   edition: number
   content: string
   frontMatter: any
+}
+
+export interface INews extends IData {
+  body: string
 }
