@@ -1,71 +1,57 @@
-import HistoryCard from 'design/organs/card/HistoryCard'
+import styles from './news.module.scss'
+
 import NewsGrid from 'design/organs/grid/NewsGrid'
 import PageContainer from 'design/atoms/container/PageContainer'
-import { useQuery } from '@apollo/react-hooks'
-import gql from 'graphql-tag'
 import { Waypoint } from 'react-waypoint'
-import { defaultQueryOption } from 'apis/apolloClient'
-import produce from 'immer'
-
-const GET_HISTORIES = gql`
-  query histories($cursor: Cursor, $limit: Int) {
-    histories(after: $cursor, first: $limit, orderBy: [MODIFIED_AT_DESC]) {
-      pageInfo {
-        endCursor
-        hasNextPage
-      }
-      nodes {
-        id
-        link
-        title
-        cover
-        comment
-        createdAt
-        modifiedAt
-      }
-    }
-  }
-`
+import useSWR, { useSWRPages } from 'swr'
+import steveApi from 'apis/steveApi'
+import NewsPreview from 'design/organs/preview/NewsPreview'
 
 const History = () => {
   const limit = 12
-  const { data, fetchMore } = useQuery(GET_HISTORIES, {
-    ...defaultQueryOption,
-    variables: { limit, cursor: null },
-  })
+
+  const { pages, loadMore, isReachingEnd, isLoadingMore } = useSWRPages(
+    'think',
+    ({ offset, withSWR }) => {
+      const { data } = withSWR(
+        useSWR(
+          `/api/think?offset=${offset || 0}&limit=${limit}`,
+          steveApi.getThoughts
+        )
+      )
+
+      return (
+        <div className={styles.section}>
+          <NewsGrid>
+            {data?.map((think) => {
+              return <NewsPreview key={think.id} data={think} />
+            })}
+          </NewsGrid>
+        </div>
+      )
+    },
+    (SWR, index) => {
+      if (SWR.data?.length !== limit) {
+        return null
+      }
+
+      return (index + 1) * limit
+    },
+    []
+  )
 
   const handleEnter = () => {
-    console.log('fetch more')
-    const { hasNextPage, endCursor } = data?.histories.pageInfo || {}
-    if (hasNextPage) {
-      fetchMore({
-        variables: {
-          cursor: endCursor,
-          limit,
-        },
-        updateQuery: (prev, { fetchMoreResult }) => {
-          if (!fetchMoreResult) return prev
-          const nextState = produce(prev, (draft) => {
-            draft.histories.pageInfo = fetchMoreResult.histories.pageInfo
-            draft.histories.nodes.push(...fetchMoreResult.histories.nodes)
-          })
-
-          return nextState
-        },
-      })
-    }
+    loadMore()
   }
 
   return (
     <PageContainer>
-      <NewsGrid>
-        {data?.histories.nodes.map((history) => {
-          return <HistoryCard key={history.id} history={history} />
-        })}
-      </NewsGrid>
-      {data?.histories.pageInfo.hasNextPage && (
-        <Waypoint onEnter={handleEnter} />
-      )}
+      <div className={styles.news}>
+        {pages}
+        {!isReachingEnd && !isLoadingMore && (
+          <Waypoint key={pages.length} onEnter={handleEnter} />
+        )}
+      </div>
     </PageContainer>
   )
 }

@@ -22,11 +22,11 @@ const GET_STORIES = gql`
 
 const Shelf = () => {
   const { data } = useQuery(GET_STORIES, defaultQueryOption)
-
+  console.log(data)
   return (
     <PageContainer>
       <ShelfGrid>
-        {data?.books.nodes.map((book) => (
+        {[].map((book) => (
           <BookCard key={book.id} book={book} />
         ))}
       </ShelfGrid>
