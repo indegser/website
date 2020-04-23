@@ -18,23 +18,14 @@ import Appendix from './Appendix'
 import shortcodes from 'remark-shortcodes'
 import ChosehEdition from './ChosehEdition'
 import Gist from './renderer/Gist'
+import { IStory } from 'types/dataTypes'
 
 interface Props {
-  meta: {
-    title: string
-    cover: string
-    citation: string
-  }
-  choseh: {
-    edition: number
-    content: string
-    modifiedAt: number
-  }
+  story: IStory
 }
 
-const Choseh: React.FC<Props> = ({ meta, choseh }) => {
-  const { title, cover, citation } = meta
-  const { content } = choseh
+const Choseh: React.FC<Props> = ({ story }) => {
+  const { title, coverUrl, coverAlt } = story.frontMatter
 
   const shortcodeMap = {
     gist: Gist,
@@ -47,18 +38,18 @@ const Choseh: React.FC<Props> = ({ meta, choseh }) => {
           <ChosehTitle>{title}</ChosehTitle>
           <div className={styles.choseh_meta}>
             <div className={styles.choseh_avatar}>
-              <img alt={title} src={cover}></img>
+              <img alt={coverAlt} src={coverUrl}></img>
             </div>
             <div className={styles.choseh_meta_info}>
-              <div className={styles.choseh_cite}>{citation}</div>
-              <ChosehEdition {...choseh} />
+              <div className={styles.choseh_cite}>{}</div>
+              <ChosehEdition edition={1} modifiedAt={story.modifiedAt} />
             </div>
           </div>
         </ChosehHeader>
-        <Toc content={content} />
+        <Toc content={story.content} />
         <ChosehContent>
           <Markdown
-            source={content}
+            source={story.content}
             parserOptions={{
               footnotes: true,
             }}

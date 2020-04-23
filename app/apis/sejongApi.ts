@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import { apiClient } from './apiLib'
+import { IStory } from 'types/dataTypes'
 
 const markdown = async (id: string) => {
   try {
@@ -23,6 +24,22 @@ const sejongApi = {
         'content-type': 'application/json',
       },
     })
+  },
+  createStory: (data) => {
+    return apiClient(BASE_URL + '/story', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'content-type': 'application/json',
+      },
+    })
+  },
+  getStory: (slug: string) => {
+    const fragment = `/story/${encodeURIComponent(slug)}`
+    return apiClient<IStory>(BASE_URL + fragment)
+  },
+  getStories: () => {
+    return apiClient<IStory[]>(BASE_URL + '/story')
   },
 }
 

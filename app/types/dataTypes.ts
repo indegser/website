@@ -27,3 +27,14 @@ export interface IChoseh {
 export interface INews extends IData {
   body: string
 }
+
+export interface IStory extends IData {
+  slug: string
+  frontMatter: {
+    title: string
+    excerpt?: string
+    coverUrl?: string
+    coverAlt?: string
+  }
+  content?: string
+}

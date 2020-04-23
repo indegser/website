@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
-import Choseh from 'pages/choseh/Choseh'
 import { useRouter } from 'next/router'
-import { useMemo } from 'react'
 import gql from 'graphql-tag'
 import apolloClient from 'apis/apolloClient'
 import chosehApi from 'apis/chosehApi'
@@ -16,10 +14,6 @@ const BookPage = ({ choseh, meta, host }) => {
 
   const url = useRouter()
 
-  const child = useMemo(() => {
-    return <Choseh meta={meta} choseh={choseh} />
-  }, [choseh])
-
   return (
     <div>
       <Head>
@@ -31,7 +25,6 @@ const BookPage = ({ choseh, meta, host }) => {
           content={`${isLocalhost ? 'http' : 'https'}://${host}${url.asPath}`}
         />
       </Head>
-      {child}
     </div>
   )
 }

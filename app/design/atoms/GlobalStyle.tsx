@@ -3,7 +3,7 @@ import { colorTokens } from './colors/colorTypes'
 
 const colorVars = () => {
   const keys = Object.keys(colorTokens)
-  const values = keys.map(key => colorTokens[key])
+  const values = keys.map((key) => colorTokens[key])
 
   let rules = ''
   for (const [i, key] of keys.entries()) {
@@ -82,9 +82,15 @@ const GlobalStyle = createGlobalStyle`
 
   textarea {
     resize: vertical;
+    font-size: 12px;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
   }
 
-  label {
+  label[for] {
+    color: #354565;
+    font-size: 13px;
+    font-weight: 500;
+    vertical-align: bottom;
   }
 
   .fixed {

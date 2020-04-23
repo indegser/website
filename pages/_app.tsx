@@ -9,6 +9,8 @@ import Router from 'next/router'
 import withGA from 'next-ga'
 import { ApolloProvider } from '@apollo/react-hooks'
 import apolloClient from 'apis/apolloClient'
+import { useEffect } from 'react'
+import { useTokenStore } from 'stores/tokenStore'
 
 const Page = styled.div`
   display: flex;
@@ -22,6 +24,12 @@ const Page = styled.div`
 `
 
 const App = ({ Component, pageProps }) => {
+  const setToken = useTokenStore((s) => s.setToken)
+  useEffect(() => {
+    const token = localStorage.getItem('jwtToken')
+    token && setToken(token)
+  }, [])
+
   return (
     <ApolloProvider client={apolloClient}>
       <ThemeProvider theme={theme}>
