@@ -15,7 +15,7 @@ const useSignIn = () => {
 
     sejongApi
       .authenticate(data)
-      .then((token) => {
+      .then(({ token }) => {
         localStorage.setItem('jwtToken', token)
         setToken(token)
       })
