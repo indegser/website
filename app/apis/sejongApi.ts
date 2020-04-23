@@ -1,6 +1,7 @@
 import Axios from 'axios'
 import { apiClient } from './apiLib'
 import { IStory } from 'types/dataTypes'
+import env from 'config/env'
 
 const markdown = async (id: string) => {
   try {
@@ -12,7 +13,10 @@ const markdown = async (id: string) => {
   }
 }
 
-const BASE_URL = 'http://localhost:3001/api'
+const BASE_URL =
+  env.gitBranch === 'master'
+    ? 'https://sejong.now.sh/api'
+    : 'https://sejong-edge.now.sh/api'
 
 const sejongApi = {
   markdown,
