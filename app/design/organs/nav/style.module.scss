@@ -1,20 +1,19 @@
-import styled from 'styled-components'
-import { getColor } from 'design/atoms/colors/colorTypes'
+@use "app/design/colors";
 
-export const NavMenuGrid = styled.div`
+.menuGrid {
   display: grid;
   grid-auto-columns: max-content;
   grid-auto-flow: column;
   grid-gap: 0 30px;
   align-items: center;
-`
+}
 
-export const NavMenus = styled.div`
+.menus {
   display: flex;
   height: 50px;
   align-items: center;
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid ${getColor('borderLighter')};
-`
+  border-bottom: 1px solid colors.$border-light;
+}

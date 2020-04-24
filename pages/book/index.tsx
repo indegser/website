@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Shelf from 'pages/shelf/Shelf'
 
-const BookshelfPage = () => {
+const Page = () => {
   return (
     <>
       <Head>
-        <title>Bookshelf</title>
+        <title>Book</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Shelf />
@@ -13,4 +13,4 @@ const BookshelfPage = () => {
   )
 }
 
-export default BookshelfPage
+export default Page

@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { NavMenuBox, NavMenuName, NavMenuLogo } from './NavMenu.styled'
 import Icon from 'design/atoms/icons/Icon'
 
-interface IProps {
+interface Props {
   name: string
   href: string
 }
 
-const NavMenu: React.FC<IProps> = ({ href, name }) => {
+const NavMenu: React.FC<Props> = ({ href, name }) => {
   const { pathname } = useRouter()
   const isActive = pathname === href // TODO. checkout asPath.
 

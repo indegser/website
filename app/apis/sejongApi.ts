@@ -1,6 +1,6 @@
 import Axios from 'axios'
 import { apiClient } from './apiLib'
-import { IStory } from 'types/dataTypes'
+import { IStory, IBook } from 'types/dataTypes'
 import env from 'config/env'
 
 const markdown = async (id: string) => {
@@ -16,7 +16,7 @@ const markdown = async (id: string) => {
 const BASE_URL =
   env.gitBranch === 'master'
     ? 'https://sejong.now.sh/api'
-    : 'https://sejong-edge.now.sh/api'
+    : 'http://localhost:3001/api' // 'https://sejong-edge.now.sh/api'
 
 const sejongApi = {
   markdown,
@@ -44,6 +44,9 @@ const sejongApi = {
   },
   getStories: () => {
     return apiClient<IStory[]>(BASE_URL + '/story')
+  },
+  getBooks: () => {
+    return apiClient<IBook[]>(BASE_URL + '/book')
   },
 }
 

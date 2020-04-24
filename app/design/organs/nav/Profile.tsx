@@ -14,7 +14,7 @@ const Profile = () => {
 
   const handleNew = (e) => {
     e.stopPropagation()
-    Router.push('/new')
+    Router.push('/new-story')
   }
 
   const handleWrite = (e) => {

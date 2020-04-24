@@ -1,7 +1,7 @@
 import PageContainer from 'design/atoms/container/PageContainer'
 import Profile from './Profile'
-import { NavMenus, NavMenuGrid } from './Nav.styled'
 import NavMenu from './NavMenu'
+import styles from './style.module.scss'
 
 const Nav = () => {
   const menu = [
@@ -10,26 +10,26 @@ const Nav = () => {
       href: '/',
     },
     {
-      name: 'Bookmark',
+      name: 'Story',
       href: '/',
     },
     {
-      name: 'Bookshelf',
-      href: '/b',
+      name: 'Book',
+      href: '/book',
     },
   ]
 
   return (
-    <nav id="global-nav" className="no-print">
+    <nav>
       <PageContainer>
-        <NavMenus>
-          <NavMenuGrid>
-            {menu.map(item => (
+        <div className={styles.menus}>
+          <div className={styles.menuGrid}>
+            {menu.map((item) => (
               <NavMenu key={item.name} {...item} />
             ))}
-          </NavMenuGrid>
+          </div>
           <Profile />
-        </NavMenus>
+        </div>
       </PageContainer>
     </nav>
   )
