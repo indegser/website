@@ -1,8 +1,12 @@
 {
-  "scope": "indegsercom",
   "regions": ["icn1"],
-  "env": {
-    "JWT_SECRET": "@jwt-secret",
-    "ADMIN_PASSWORD": "@admin-password"
-  }
+  "routes": [
+    {
+      "src": "/(book|story)/(.*)",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "cache-control": "s-maxage=1, stale-while-revalidate"
+      }
+    }
+  ]
 }
