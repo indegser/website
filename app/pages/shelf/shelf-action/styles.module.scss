@@ -1,0 +1,12 @@
+@use "app/design/colors";
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.new {
+  color: colors.$text-primary;
+}

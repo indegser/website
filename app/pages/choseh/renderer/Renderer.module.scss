@@ -1,10 +1,12 @@
+@use "app/design/colors";
+
 .paragraph {
   :global(#footnote) & {
     margin: 0 !important;
   }
 
   margin-top: 1em;
-  color: #333;
+  color: colors.$text-title;
   hyphens: auto;
 
   blockquote & {
@@ -21,7 +23,7 @@
   margin: 36px 0;
   display: flex;
   font-size: 16px;
-  color: #6d6d6d;
+  color: colors.$border-divider;
   justify-content: center;
 
   & > div {

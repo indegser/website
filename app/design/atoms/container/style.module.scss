@@ -16,3 +16,8 @@
     }
   }
 }
+
+.form {
+  max-width: 640px;
+  @extend .page;
+}
