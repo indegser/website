@@ -10,7 +10,7 @@ export const CitationText = styled.div`
 export const FieldLabelText = styled.span`
   color: #354565;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   vertical-align: bottom;
 `
 

@@ -1,5 +1,4 @@
 import PageContainer from 'design/atoms/container/PageContainer'
-import styles from './Choseh.module.scss'
 import Markdown from 'react-markdown'
 import {
   ChosehBox,
@@ -19,6 +18,7 @@ import shortcodes from 'remark-shortcodes'
 import ChosehEdition from './ChosehEdition'
 import Gist from './renderer/Gist'
 import { IStory } from 'types/dataTypes'
+import styles from './styles.module.scss'
 
 interface Props {
   story: IStory
@@ -35,11 +35,12 @@ const Choseh: React.FC<Props> = ({ story }) => {
     <PageContainer>
       <ChosehBox>
         <ChosehHeader>
-          <ChosehTitle>{title}</ChosehTitle>
-          <div className={styles.choseh_meta}>
-            <div className={styles.choseh_avatar}>
-              <img alt={coverAlt} src={coverUrl}></img>
-            </div>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.meta}>
+            <div
+              className={styles.avatar}
+              style={{ background: `url(${coverUrl}) 50% 50%/cover no-repeat` }}
+            ></div>
             <div className={styles.choseh_meta_info}>
               <div className={styles.choseh_cite}>{}</div>
               <ChosehEdition edition={1} modifiedAt={story.modifiedAt} />

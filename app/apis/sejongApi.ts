@@ -48,6 +48,15 @@ const sejongApi = {
   getBooks: () => {
     return apiClient<IBook[]>(BASE_URL + '/book')
   },
+  newBook: (data) => {
+    return apiClient<IBook>(BASE_URL + '/book/new', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'content-type': 'application/json',
+      },
+    })
+  },
 }
 
 export default sejongApi
