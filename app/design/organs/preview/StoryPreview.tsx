@@ -1,4 +1,4 @@
-import styles from './news-preview.module.scss'
+import styles from './styles.module.scss'
 import { IStory } from 'types/dataTypes'
 import { FC, useMemo } from 'react'
 import { dateFns } from 'utils/dateUtils'
