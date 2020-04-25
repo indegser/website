@@ -32,6 +32,18 @@ export interface INews extends IData {
 
 export interface IStory extends IData {
   slug: string
+  github: {
+    commit: {
+      message: string
+      sha: string
+      branch: string
+    }
+    file: {
+      sha: string
+      downloadUrl: string
+      gitUrl: string
+    }
+  }
   frontMatter: {
     title: string
     excerpt?: string
@@ -40,3 +52,5 @@ export interface IStory extends IData {
   }
   content?: string
 }
+
+export interface IStoryPreview extends Omit<IStory, 'content' | 'github'> {}

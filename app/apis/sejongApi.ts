@@ -1,17 +1,6 @@
-import Axios from 'axios'
 import { apiClient } from './apiLib'
 import { IStory, IBook } from 'types/dataTypes'
 import env from 'config/env'
-
-const markdown = async (id: string) => {
-  try {
-    const url = `https://choseh.s3.ap-northeast-2.amazonaws.com/${id}.md`
-    const { data } = await Axios.get(url)
-    return data
-  } catch (err) {
-    return ''
-  }
-}
 
 const BASE_URL =
   env.gitBranch === 'master'
@@ -19,7 +8,6 @@ const BASE_URL =
     : 'https://sejong-edge.now.sh/api'
 
 const sejongApi = {
-  markdown,
   authenticate: ({ email, password }) => {
     return apiClient<any>(BASE_URL + '/user/authenticate', {
       method: 'POST',
