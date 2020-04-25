@@ -16,7 +16,7 @@ const markdown = async (id: string) => {
 const BASE_URL =
   env.gitBranch === 'master'
     ? 'https://sejong.now.sh/api'
-    : 'http://localhost:3001/api' // 'https://sejong-edge.now.sh/api'
+    : 'https://sejong-edge.now.sh/api'
 
 const sejongApi = {
   markdown,
