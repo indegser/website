@@ -2,13 +2,12 @@ import { useForm } from 'react-hook-form'
 import { PrimaryButton } from 'design/atoms/button/Button'
 import FormGroup from 'design/atoms/form/FormGroup'
 import { useBannerStore } from 'stores/bannerStore'
-import PageContainer from 'design/atoms/container/PageContainer'
 import FormContainer from 'design/atoms/container/FormContainer'
 import sejongApi from 'apis/sejongApi'
 
 const NewBook = () => {
   const setBanner = useBannerStore((s) => s.setBanner)
-  const { register, handleSubmit } = useForm()
+  const { register, reset, handleSubmit } = useForm()
 
   const action = async (data) => {
     data.authors = data.authors.split(',').map((a) => a.trim())
@@ -21,6 +20,7 @@ const NewBook = () => {
           type: 'success',
           message: `Book has been successfully created`,
         })
+        reset()
       })
       .catch((err) => {
         console.log(err)
