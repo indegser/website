@@ -3,24 +3,26 @@ import { useEffect, useState } from 'react'
 import { CMBox, CMContent, CMItem } from './ContextMenu.styled'
 import useFixedBody from 'hooks/utils/useFixedBody'
 
-interface IProps {
+interface Props {
   parentRef: React.MutableRefObject<any>
+  onEdit: () => void
+  onDelete: () => void
   // menu: { [key: string]: string }
 }
 
-const ContextMenu: React.FC<IProps> = ({ parentRef }) => {
+const ContextMenu: React.FC<Props> = ({ parentRef, ...props }) => {
   const [display, setDisplay] = useState(false)
   const [position, setPosition] = useState({ right: '', top: '' })
   const menuWidth = 240
   const menuOffsetTop = 4
 
-  const handleParentRefClick = e => {
+  const handleParentRefClick = (e) => {
     if (display) {
       e.stopPropagation()
     }
     const rect = e.currentTarget.getBoundingClientRect()
     calcAndSetPosition(rect)
-    setDisplay(d => !d)
+    setDisplay((d) => !d)
   }
 
   const calcAndSetPosition = (rect: ClientRect) => {
@@ -43,7 +45,7 @@ const ContextMenu: React.FC<IProps> = ({ parentRef }) => {
     }
   }, [parentRef.current])
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     setDisplay(false)
   }
 
@@ -62,18 +64,22 @@ const ContextMenu: React.FC<IProps> = ({ parentRef }) => {
 
   const menu = [
     {
-      name: '수정',
+      name: 'Edit',
+      action: props.onEdit,
     },
     {
-      name: '삭제',
+      name: 'Delete',
+      action: props.onDelete,
     },
   ]
 
   return createPortal(
     <CMBox style={position}>
       <CMContent style={{ width: menuWidth }}>
-        {menu.map(item => (
-          <CMItem key={item.name}>{item.name}</CMItem>
+        {menu.map((item) => (
+          <CMItem key={item.name} onClick={item.action}>
+            {item.name}
+          </CMItem>
         ))}
       </CMContent>
     </CMBox>,

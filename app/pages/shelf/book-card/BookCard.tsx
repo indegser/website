@@ -1,13 +1,29 @@
 import { IBook } from 'types/dataTypes'
 import styles from './styles.module.scss'
+import More from 'design/organs/card/More'
+import { useRouter } from 'next/router'
+import sejongApi from 'apis/sejongApi'
 
 interface Props {
   book: IBook
 }
 
 const BookCard: React.FC<Props> = ({ book }) => {
+  const Router = useRouter()
+  const handleEdit = () => {
+    Router.push(`/book/[bookId]/edit`, `/book/${book.id}/edit`)
+  }
+
+  const handleDelete = () => {
+    sejongApi
+      .deleteBook(book)
+      .then((r) => void console.log(r))
+      .catch((err) => void console.log(err))
+  }
+
   return (
     <div className={styles.box}>
+      <More onEdit={handleEdit} onDelete={handleDelete} />
       <div className={styles.cover}>
         <div
           className={styles.coverShadow}
