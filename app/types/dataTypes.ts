@@ -8,6 +8,8 @@ export interface IBook extends IData {
   title: string
   citation: string
   cover?: string
+  authors?: string[]
+  publishedYear?: number
 }
 
 export interface IHistory extends IData {

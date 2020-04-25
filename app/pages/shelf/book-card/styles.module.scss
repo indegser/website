@@ -1,6 +1,11 @@
 @use "app/design/colors";
 
 .box {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .cover {
@@ -56,10 +61,10 @@
 }
 
 .citation {
-  margin-top: 4px;
+  margin-top: 3px;
   color: colors.$text-citation;
   font-size: 13px;
-  line-height: 1;
+  line-height: 1.4;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
