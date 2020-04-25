@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
-import { getColor } from 'design/atoms/colors/colorTypes'
 import { mediaQuery } from 'design/theme'
 
 export enum BodyTextTypes {
