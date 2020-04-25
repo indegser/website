@@ -5,7 +5,6 @@ import Choseh from 'pages/choseh/Choseh'
 import sejongApi from 'apis/sejongApi'
 import { IStory } from 'types/dataTypes'
 import { FC } from 'react'
-import env from 'config/env'
 
 interface Props {
   story: IStory
@@ -26,9 +25,12 @@ export const getServerSideProps = async ({ query }) => {
 
   try {
     const data = await sejongApi.getStory(slug)
-    const url = `https://raw.githubusercontent.com/indegser/story/${env.gitBranch}/${slug}/content.md`
 
-    const resp = await fetch(url)
+    if (!data.github) {
+      return { props: {} }
+    }
+
+    const resp = await fetch(data.github?.file.downloadUrl)
     const rawContent = await resp.text()
     const { content } = grayMatter(rawContent)
 

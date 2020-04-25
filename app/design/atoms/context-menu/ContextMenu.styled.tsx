@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { getColor } from '../colors/colorTypes'
 
 export const CMBox = styled.div`
   position: fixed;
@@ -21,6 +20,6 @@ export const CMItem = styled.div`
   padding: 4px 16px;
 
   &:hover {
-    background-color: ${getColor('interactive1')};
+    background-color: #08f;
   }
 `

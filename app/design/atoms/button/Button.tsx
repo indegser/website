@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { getColor } from 'design/atoms/colors/colorTypes'
 
 const Button = styled.button`
   font-size: 100%;
@@ -18,10 +17,10 @@ const Button = styled.button`
 export const PrimaryButton = styled(Button)`
   border-radius: 4px;
   color: white;
-  background: ${getColor('baseButtonPrimary')};
+  background: #08f;
 `
 
 export const SecondaryButton = styled(Button)`
   border-radius: 4px;
-  background: ${getColor('baseButtonBg')};
+  background: #ddd;
 `

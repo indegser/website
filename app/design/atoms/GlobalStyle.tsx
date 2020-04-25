@@ -1,26 +1,9 @@
 import { createGlobalStyle, css } from 'styled-components'
-import { colorTokens } from './colors/colorTypes'
-
-const colorVars = () => {
-  const keys = Object.keys(colorTokens)
-  const values = keys.map((key) => colorTokens[key])
-
-  let rules = ''
-  for (const [i, key] of keys.entries()) {
-    const value = values[i]
-    rules += `--${key}: ${value};`
-  }
-
-  return css`
-    ${rules}
-  `
-}
 
 const GlobalStyle = createGlobalStyle`
   :root {
     --font-sans: Roboto, Segoe UI, Noto Sans KR, sans-serif;
     --font-serif: Lusitana, Nanum Myeongjo, Georgia, Cambria, "Times New Roman", Times, Noto Serif KR, serif;
-    ${colorVars};
   }
 
   html {
