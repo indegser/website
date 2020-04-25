@@ -6,6 +6,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  &:hover {
+    & :global(.card-more) {
+      display: block;
+    }
+  }
 }
 
 .cover {

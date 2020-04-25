@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import More from 'design/organs/card/More'
 import { useRouter } from 'next/router'
 import sejongApi from 'apis/sejongApi'
+import Authorized from 'hocs/Authorized'
 
 interface Props {
   book: IBook
@@ -23,7 +24,9 @@ const BookCard: React.FC<Props> = ({ book }) => {
 
   return (
     <div className={styles.box}>
-      <More onEdit={handleEdit} onDelete={handleDelete} />
+      <Authorized>
+        <More onEdit={handleEdit} onDelete={handleDelete} />
+      </Authorized>
       <div className={styles.cover}>
         <div
           className={styles.coverShadow}
