@@ -7,6 +7,6 @@ export const FooterBox = styled.footer`
 
 export const FooterCopyright = styled.div`
   font-size: 13px;
-  color: #ddd;
+  color: #666;
   margin-right: 8px;
 `

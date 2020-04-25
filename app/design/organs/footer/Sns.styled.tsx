@@ -4,7 +4,7 @@ import fontSizes from 'design/atoms/typography/fontSizes'
 export const SnsBox = styled.div`
   align-self: center;
   font-size: ${fontSizes.xs};
-  color: #ddd;
+  color: #666;
   padding: 4px;
 
   &:hover {
