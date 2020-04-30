@@ -18,7 +18,7 @@ const Profile = () => {
   const handleWrite = (e) => {
     // Router.path
     e.stopPropagation()
-    Router.push('/b/[bookId]/write', Router.asPath + '/write')
+    Router.push('/story/[...slug]', Router.asPath + '?edit=true')
   }
 
   const handleAvatar = () => {
@@ -29,7 +29,7 @@ const Profile = () => {
     <div className={styles.box}>
       {user && (
         <div className={styles.actions}>
-          <Route path="/b/[bookId]">
+          <Route path="/story/[...slug]">
             <SecondaryButton onClick={handleWrite}>Write</SecondaryButton>
           </Route>
           <SecondaryButton onClick={handleNew}>New</SecondaryButton>
