@@ -51,6 +51,7 @@ export interface IStory extends IData {
     coverAlt?: string
   }
   content?: string
+  rawContent?: string
 }
 
 export interface IStoryPreview extends Omit<IStory, 'content' | 'github'> {}
