@@ -26,7 +26,7 @@ export const mq = (key: keyof typeof media | number) => {
       throw new Error(`Cannot find media query with key ${key}`)
     }
   }
-  return `@media (min-width: ${px}px)`
+  return `@media (max-width: ${px}px)`
 }
 
 export default {
