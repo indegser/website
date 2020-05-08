@@ -1,5 +1,17 @@
 import { FC, HTMLProps } from 'react'
-import styles from './label.module.scss'
+import styled from '@emotion/styled'
+
+const Box = styled.div`
+  margin-bottom: 8px;
+`
+
+const Optional = styled.span`
+  color: #677184;
+  font-size: 12px;
+  vertical-align: bottom;
+  margin: 0 4px;
+  font-weight: 400;
+`
 
 interface Props extends HTMLProps<HTMLLabelElement> {
   required?: boolean
@@ -8,12 +20,12 @@ interface Props extends HTMLProps<HTMLLabelElement> {
 
 const Label: FC<Props> = ({ label, required, ...props }) => {
   return (
-    <div className={styles.container}>
+    <Box>
       <label {...props}>
         <span>{label}</span>
-        {!required && <span className={styles.optional}>(선택사항)</span>}
+        {!required && <Optional>(선택사항)</Optional>}
       </label>
-    </div>
+    </Box>
   )
 }
 
