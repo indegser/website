@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { IStory } from 'types/dataTypes'
-import FormContainer from 'design/atoms/container/FormContainer'
-import Label from 'design/atoms/form/Label'
+import FormContainer from 'common/atoms/container/FormContainer'
+import Label from 'common/atoms/form/Label'
 import { useForm } from 'react-hook-form'
-import { PrimaryButton } from 'design/atoms/button/Button'
+import { PrimaryButton } from 'common/atoms/button/Button'
 import sejongApi from 'apis/sejongApi'
 
 interface Props {

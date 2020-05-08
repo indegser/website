@@ -1,8 +1,8 @@
 import useSWR from 'swr'
 import styled from '@emotion/styled'
-import PageContainer from 'design/atoms/container/PageContainer'
+import PageContainer from 'common/atoms/container/PageContainer'
 import sejongApi from 'apis/sejongApi'
-import NewsGrid from 'design/organs/grid/NewsGrid'
+import NewsGrid from 'common/organs/grid/NewsGrid'
 import Marquee from './Marquee'
 
 const Container = styled('div')`

@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
 import { useRef, FC } from 'react'
-import ContextMenu from 'design/atoms/context-menu/ContextMenu'
-import Icon from 'design/atoms/icons/Icon'
+import ContextMenu from 'common/atoms/context-menu/ContextMenu'
+import Icon from 'common/atoms/icons/Icon'
 import cn from 'classnames'
 
 interface Props {

@@ -2,7 +2,7 @@ import Markdown from 'react-markdown'
 import { useTocContent, useTocFold, useAnimatedFold } from './toc.hooks'
 import TocLink from './TocLink'
 import { animated } from 'react-spring'
-import Icon from 'design/atoms/icons/Icon'
+import Icon from 'common/atoms/icons/Icon'
 import styled from '@emotion/styled'
 
 const Box = styled.div`

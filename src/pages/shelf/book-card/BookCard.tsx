@@ -1,9 +1,9 @@
 import { IBook } from 'types/dataTypes'
 import styles from './styles.module.scss'
-import More from 'design/organs/card/More'
+import More from 'common/organs/card/More'
 import { useRouter } from 'next/router'
 import sejongApi from 'apis/sejongApi'
-import Authorized from 'hocs/Authorized'
+import Authorized from 'common/hocs/Authorized'
 
 interface Props {
   book: IBook

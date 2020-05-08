@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom'
 import styles from './Footnote.module.scss'
-import HashLink from 'design/atoms/link/HashLink'
-import Icon from 'design/atoms/icons/Icon'
+import HashLink from 'common/atoms/link/HashLink'
+import Icon from 'common/atoms/icons/Icon'
 import useFootnote from './useFootnote'
 import { useEffect, useState, useMemo } from 'react'
 

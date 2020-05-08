@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form'
-import { PrimaryButton } from 'design/atoms/button/Button'
-import FormGroup from 'design/atoms/form/FormGroup'
+import { PrimaryButton } from 'common/atoms/button/Button'
+import FormGroup from 'common/atoms/form/FormGroup'
 import { useBannerStore } from 'stores/bannerStore'
-import FormContainer from 'design/atoms/container/FormContainer'
+import FormContainer from 'common/atoms/container/FormContainer'
 import sejongApi from 'apis/sejongApi'
 
 const NewBook = () => {

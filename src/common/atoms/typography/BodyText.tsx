@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
-import { mediaQuery } from 'design/theme'
+import { mediaQuery } from 'common/theme'
 
 export enum BodyTextTypes {
   Short1,

@@ -1,12 +1,12 @@
 import { useBannerStore } from 'stores/bannerStore'
 import styles from './Banner.module.scss'
-import PageContainer from 'design/atoms/container/PageContainer'
-import Icon from 'design/atoms/icons/Icon'
+import PageContainer from 'common/atoms/container/PageContainer'
+import Icon from 'common/atoms/icons/Icon'
 import { MouseEvent } from 'react'
 
 const Banner = () => {
-  const banner = useBannerStore(s => s.banner)
-  const setBanner = useBannerStore(s => s.setBanner)
+  const banner = useBannerStore((s) => s.banner)
+  const setBanner = useBannerStore((s) => s.setBanner)
   if (!banner) return null
 
   const handleClose = (e: MouseEvent) => {

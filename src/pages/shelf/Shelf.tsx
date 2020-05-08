@@ -1,4 +1,4 @@
-import PageContainer from 'design/atoms/container/PageContainer'
+import PageContainer from 'common/atoms/container/PageContainer'
 import styles from './styles.module.scss'
 import BookCard from './book-card/BookCard'
 import useSWR from 'swr'

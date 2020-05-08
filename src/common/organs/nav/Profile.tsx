@@ -1,9 +1,7 @@
-import Avatar from 'design/atoms/avatar/Avatar'
-import { SecondaryButton } from 'design/atoms/button/Button'
-import Router from 'next/router'
-import useSignIn from 'hooks/me/useSignIn'
-import useWhoami from 'hooks/me/useWhoami'
-import Route from 'hocs/Route'
+import Avatar from 'common/atoms/avatar/Avatar'
+import { SecondaryButton } from 'common/atoms/button/Button'
+import useWhoami from 'common/hooks/me/useWhoami'
+import Route from 'common/hocs/Route'
 import styled from '@emotion/styled'
 import { useProfileActions } from './Profile.hooks'
 

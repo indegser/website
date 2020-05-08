@@ -1,5 +1,5 @@
-import HashLink from 'design/atoms/link/HashLink'
-import Icon, { IconVariant } from 'design/atoms/icons/Icon'
+import HashLink from 'common/atoms/link/HashLink'
+import Icon, { IconVariant } from 'common/atoms/icons/Icon'
 import styled from '@emotion/styled'
 
 const Box = styled.span`

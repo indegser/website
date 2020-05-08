@@ -1,4 +1,4 @@
-import useSignIn from 'hooks/me/useSignIn'
+import useSignIn from 'common/hooks/me/useSignIn'
 import Router from 'next/router'
 
 export const useProfileActions = (user: object) => {

@@ -1,6 +1,6 @@
 import useFootnote from './useFootnote'
 import styles from './Footnote.module.scss'
-import HashLink from 'design/atoms/link/HashLink'
+import HashLink from 'common/atoms/link/HashLink'
 
 const FootnoteReference = ({ identifier }) => {
   const { index, refId, defId } = useFootnote(identifier)

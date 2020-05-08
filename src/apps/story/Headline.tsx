@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { mq } from 'design/theme'
+import { mq } from 'common/theme'
 import { IStory } from 'types/dataTypes'
 
 const Box = styled.div`

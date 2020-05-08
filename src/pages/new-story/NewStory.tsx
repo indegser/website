@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form'
-import Label from 'design/atoms/form/Label'
-import { PrimaryButton } from 'design/atoms/button/Button'
+import Label from 'common/atoms/form/Label'
+import { PrimaryButton } from 'common/atoms/button/Button'
 import sejongApi from 'apis/sejongApi'
-import FormContainer from 'design/atoms/container/FormContainer'
+import FormContainer from 'common/atoms/container/FormContainer'
 
 const NewStory = () => {
   const { register, handleSubmit } = useForm()

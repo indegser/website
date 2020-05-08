@@ -1,4 +1,4 @@
-import PageContainer from 'design/atoms/container/PageContainer'
+import PageContainer from 'common/atoms/container/PageContainer'
 import Profile from './Profile'
 import NavMenu from './NavMenu'
 import styled from '@emotion/styled'

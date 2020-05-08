@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from 'design/atoms/icons/Icon'
+import Icon from 'common/atoms/icons/Icon'
 import styled from '@emotion/styled'
 
 export const SnsBox = styled.div`

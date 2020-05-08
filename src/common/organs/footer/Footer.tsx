@@ -1,5 +1,5 @@
 import Sns from './Sns'
-import PageContainer from 'design/atoms/container/PageContainer'
+import PageContainer from 'common/atoms/container/PageContainer'
 import styled from '@emotion/styled'
 
 const FooterBox = styled.footer`

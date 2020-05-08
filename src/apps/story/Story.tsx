@@ -1,4 +1,4 @@
-import PageContainer from 'design/atoms/container/PageContainer'
+import PageContainer from 'common/atoms/container/PageContainer'
 import Markdown from 'react-markdown'
 import ParagraphRenderer from './renderer/ParagraphRenderer'
 import BreakRenderer from './renderer/BreakRenderer'
@@ -14,7 +14,7 @@ import { IStory } from 'types/dataTypes'
 import { useMemo } from 'react'
 import matter from 'gray-matter'
 import Headline from './Headline'
-import { mq } from 'design/theme'
+import { mq } from 'common/theme'
 import styled from '@emotion/styled'
 
 interface Props {

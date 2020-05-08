@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom'
 import { useEffect, useState } from 'react'
 import { CMBox, CMContent, CMItem } from './ContextMenu.styled'
-import useFixedBody from 'hooks/utils/useFixedBody'
+import useFixedBody from 'common/hooks/utils/useFixedBody'
 
 interface Props {
   parentRef: React.MutableRefObject<any>

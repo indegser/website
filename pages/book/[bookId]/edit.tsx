@@ -1,9 +1,9 @@
-import FormGroup from 'design/atoms/form/FormGroup'
+import FormGroup from 'common/atoms/form/FormGroup'
 import { useForm } from 'react-hook-form'
-import { PrimaryButton } from 'design/atoms/button/Button'
+import { PrimaryButton } from 'common/atoms/button/Button'
 import { useBannerStore } from 'stores/bannerStore'
 import { NextPage, NextPageContext, GetServerSideProps } from 'next'
-import FormContainer from 'design/atoms/container/FormContainer'
+import FormContainer from 'common/atoms/container/FormContainer'
 import useSWR from 'swr'
 import sejongApi from 'apis/sejongApi'
 

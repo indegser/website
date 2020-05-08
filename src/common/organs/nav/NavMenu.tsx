@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Icon from 'design/atoms/icons/Icon'
+import Icon from 'common/atoms/icons/Icon'
 import styled from '@emotion/styled'
 
 export const Box = styled.div`
