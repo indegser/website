@@ -1,7 +1,27 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { NavMenuBox, NavMenuName, NavMenuLogo } from './NavMenu.styled'
 import Icon from 'design/atoms/icons/Icon'
+import styled from '@emotion/styled'
+
+export const Box = styled.div`
+  font-size: 14px;
+  color: #333;
+  padding: 4px 0px;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+
+  &[aria-current='true'] {
+    color: #777;
+    pointer-events: none;
+  }
+`
+
+export const MenuName = styled.div``
+
+export const MenuLogo = styled.div`
+  margin-right: 16px;
+`
 
 interface Props {
   name: string
@@ -15,15 +35,15 @@ const NavMenu: React.FC<Props> = ({ href, name }) => {
   const renderMenu = () => {
     if (name === 'Home') {
       return (
-        <NavMenuLogo>
+        <MenuLogo>
           <Icon variant="logoSimple" height={21} />
-        </NavMenuLogo>
+        </MenuLogo>
       )
     }
     return (
-      <NavMenuBox aria-current={isActive}>
-        <NavMenuName>{name}</NavMenuName>
-      </NavMenuBox>
+      <Box aria-current={isActive}>
+        <MenuName>{name}</MenuName>
+      </Box>
     )
   }
 
