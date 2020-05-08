@@ -1,9 +1,8 @@
 import styled from '@emotion/styled'
-import fontSizes from 'common/atoms/typography/fontSizes'
 
 export const SnsBox = styled.div`
   align-self: center;
-  font-size: ${fontSizes.xs};
+  font-size: 12px;
   color: #666;
   padding: 4px;
 
