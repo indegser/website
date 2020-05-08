@@ -1,11 +1,7 @@
 import { apiClient } from './apiLib'
 import { IStory } from 'types/dataTypes'
-import env from 'config/env'
 
-const BASE_URL =
-  env.gitBranch === 'master'
-    ? 'https://sejong.now.sh/api'
-    : 'http://localhost:3001/api' //'https://sejong-edge.now.sh/api'
+const BASE_URL = `${process.env.SEJONG_URL}/api`
 
 const sejongApi = {
   authenticate: ({ email, password }) => {
