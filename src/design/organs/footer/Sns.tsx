@@ -1,13 +1,21 @@
 import React from 'react'
-import { SnsBox } from './Sns.styled'
-import Icon, { IconVariant } from 'design/atoms/icons/Icon'
+import Icon from 'design/atoms/icons/Icon'
+import styled from '@emotion/styled'
 
-// const Dot = styled.span`
-//   &:before {
-//     content: '·';
-//     padding-right: 4px;
-//   }
-// `
+export const SnsBox = styled.div`
+  align-self: center;
+  font-size: 12px;
+  color: #666;
+  padding: 4px;
+
+  &:hover {
+    color: #08f;
+  }
+
+  a {
+    color: inherit;
+  }
+`
 
 const snsList = [
   {
@@ -26,7 +34,7 @@ const snsList = [
 const Sns = () => {
   return (
     <>
-      {snsList.map(sns => {
+      {snsList.map((sns) => {
         return (
           <a
             key={sns.name}
@@ -45,11 +53,6 @@ const Sns = () => {
           </a>
         )
       })}
-      <style jsx>{`
-        a {
-          text-decoration: none;
-        }
-      `}</style>
     </>
   )
 }
