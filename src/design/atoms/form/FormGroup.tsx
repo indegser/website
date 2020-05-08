@@ -1,5 +1,4 @@
 import { forwardRef, HTMLProps } from 'react'
-import Box from '../box/Box'
 import { InfoLabelText, FieldLabelText } from '../typography/LabelText'
 import Textarea from './Textarea'
 
@@ -41,18 +40,15 @@ const FormGroup = forwardRef<any, InputProps | TextAreaProps>(
     }
 
     return (
-      <Box
-        my={3}
-        style={{ width: widthVariant || FormGroupWidthVariant.FullWidth }}
-      >
-        <Box mb={2}>
+      <div style={{ width: widthVariant || FormGroupWidthVariant.FullWidth }}>
+        <div>
           <label htmlFor={name}>
             <FieldLabelText>{label}</FieldLabelText>
             {!required && <InfoLabelText>(optional)</InfoLabelText>}
           </label>
-        </Box>
-        <Box>{renderField()}</Box>
-      </Box>
+        </div>
+        <div>{renderField()}</div>
+      </div>
     )
   }
 )
