@@ -1,9 +1,40 @@
 import { createPortal } from 'react-dom'
-import styles from './Footnote.module.scss'
 import HashLink from 'common/atoms/link/HashLink'
 import Icon from 'common/atoms/icons/Icon'
 import useFootnote from './useFootnote'
 import { useEffect, useState, useMemo } from 'react'
+import styled from '@emotion/styled'
+
+const Box = styled.div`
+  position: relative;
+  font-size: 14px;
+  color: #333;
+  display: grid;
+  grid-template-columns: max-content max-content auto;
+  grid-gap: 0px;
+  align-items: flex-start;
+  line-height: 1.6;
+
+  margin-top: 0.5em;
+
+  > p {
+    margin: 0;
+  }
+`
+
+const Id = styled.div`
+  font-weight: 500;
+  color: black;
+`
+
+const Backlink = styled.div`
+  color: #08f;
+  padding: 0 4px;
+
+  sup {
+    line-height: 1;
+  }
+`
 
 const FootnoteDefinition = ({ identifier, children }) => {
   const { index, refId, defId } = useFootnote(identifier, true)
@@ -28,17 +59,17 @@ const FootnoteDefinition = ({ identifier, children }) => {
   if (!index || !domReady) return null
 
   return createPortal(
-    <div className={styles.footnote_def}>
-      <div className={styles.footnote_def_id}>{index}.</div>
-      <div className={styles.footnote_backlink}>
+    <Box>
+      <Id>{index}.</Id>
+      <Backlink>
         <HashLink href={`#${refId}`}>
           <sup>
             <Icon variant="footnoteLink" width={8} height={8} />
           </sup>
         </HashLink>
-      </div>
+      </Backlink>
       <div id="footnote">{child}</div>
-    </div>,
+    </Box>,
     document.getElementById(defId)
   )
 }

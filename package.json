@@ -32,9 +32,6 @@
     "remark-parse": "^7.0.2",
     "remark-shortcodes": "^0.3.1",
     "remark-stringify": "^7.0.4",
-    "sass": "^1.26.3",
-    "styled-components": "^5.0.1",
-    "styled-media-query": "^2.1.2",
     "swr": "^0.2.0",
     "unified": "^8.4.2",
     "unist-util-map": "^2.0.1",
@@ -45,7 +42,6 @@
     "@types/node": "^13.1.2",
     "@types/node-fetch": "^2.5.6",
     "@types/react": "^16.9.17",
-    "babel-plugin-styled-components": "^1.10.7",
     "now": "^16.7.3",
     "typescript": "^3.7.4"
   },

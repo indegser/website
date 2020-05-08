@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 enum AvatarVariant {
   small = 32,
@@ -14,7 +14,7 @@ const AvatarImg = styled.img`
   display: block;
 `
 
-interface IProps extends React.HTMLProps<HTMLImageElement> {
+interface Props extends React.ComponentProps<typeof AvatarImg> {
   variant?: keyof typeof AvatarVariant
 }
 
@@ -24,7 +24,7 @@ const AvatarBox = styled.div`
   background: #e0e0e0;
 `
 
-const Avatar: React.FC<IProps> = ({ variant = 'small', ...props }) => {
+const Avatar: React.FC<Props> = ({ variant = 'small', ...props }) => {
   const size = AvatarVariant[variant]
 
   return (

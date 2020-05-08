@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import fontSizes from 'common/atoms/typography/fontSizes'
 
 export const SnsBox = styled.div`

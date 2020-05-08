@@ -1,6 +1,12 @@
 import useFootnote from './useFootnote'
-import styles from './Footnote.module.scss'
 import HashLink from 'common/atoms/link/HashLink'
+
+import styled from '@emotion/styled'
+
+const Layout = styled.span`
+  padding-top: 0.4em;
+  padding-bottom: 0.3em;
+`
 
 const FootnoteReference = ({ identifier }) => {
   const { index, refId, defId } = useFootnote(identifier)
@@ -8,11 +14,11 @@ const FootnoteReference = ({ identifier }) => {
   if (!index) return null
 
   return (
-    <span className={styles.footnote_ref} id={refId}>
+    <Layout id={refId}>
       <HashLink href={`#${defId}`}>
         <sup>{index}</sup>
       </HashLink>
-    </span>
+    </Layout>
   )
 }
 
