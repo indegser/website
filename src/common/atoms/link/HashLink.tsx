@@ -1,7 +1,9 @@
-interface IHashLink extends React.HTMLProps<HTMLAnchorElement> {}
+import { MouseEvent } from 'react'
 
-const HashLink: React.SFC<IHashLink> = props => {
-  const handleClick = e => {
+interface HashLink extends React.HTMLProps<HTMLAnchorElement> {}
+
+const HashLink: React.SFC<HashLink> = (props) => {
+  const handleClick = (e: MouseEvent) => {
     e.preventDefault()
 
     const target = document.querySelector(props.href)
