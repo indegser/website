@@ -1,10 +1,22 @@
-import styles from './Renderer.module.scss'
+import styled from '@emotion/styled'
+
+const Break = styled.div`
+  margin: 36px 0;
+  display: flex;
+  font-size: 16px;
+  color: #ddd;
+  justify-content: center;
+
+  & > div {
+    letter-spacing: 1px;
+  }
+`
 
 const BreakRenderer = () => {
   return (
-    <div className={styles.break}>
+    <Break>
       <div>***</div>
-    </div>
+    </Break>
   )
 }
 

@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react'
-import styles from './Renderer.module.scss'
+import ParagraphRenderer from './ParagraphRenderer'
 
 interface Props {
   src: string
@@ -57,9 +57,9 @@ const Gist: React.FC<Props> = ({ src, ...e }) => {
   }, [])
 
   return (
-    <div className={styles.paragraph}>
+    <ParagraphRenderer>
       <iframe ref={ref} width="100%" height={height} frameBorder="0"></iframe>
-    </div>
+    </ParagraphRenderer>
   )
 }
 

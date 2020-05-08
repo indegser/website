@@ -4,32 +4,6 @@ interface IData {
   modifiedAt: number
 }
 
-export interface IBook extends IData {
-  title: string
-  citation: string
-  cover?: string
-  authors?: string[]
-  publishedYear?: number
-}
-
-export interface IHistory extends IData {
-  title: string
-  link: string
-  cover: string
-  excerpt?: string
-  comment?: string
-}
-
-export interface IChoseh {
-  edition: number
-  content: string
-  frontMatter: any
-}
-
-export interface INews extends IData {
-  body: string
-}
-
 export interface IStory extends IData {
   slug: string
   data: {
@@ -40,5 +14,3 @@ export interface IStory extends IData {
   }
   content: string
 }
-
-export interface IStoryPreview extends Omit<IStory, 'content' | 'github'> {}

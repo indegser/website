@@ -1,5 +1,5 @@
 import { apiClient } from './apiLib'
-import { IStory, IBook } from 'types/dataTypes'
+import { IStory } from 'types/dataTypes'
 import env from 'config/env'
 
 const BASE_URL =
@@ -41,39 +41,6 @@ const sejongApi = {
   },
   getStories: () => {
     return apiClient<IStory[]>(BASE_URL + '/story')
-  },
-  getBooks: () => {
-    return apiClient<IBook[]>(BASE_URL + '/book')
-  },
-  getBook: (url: string) => {
-    return apiClient<IBook>(BASE_URL + url)
-  },
-  newBook: (data) => {
-    return apiClient<IBook>(BASE_URL + '/book/new', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'content-type': 'application/json',
-      },
-    })
-  },
-  updateBook: (id: string, book: IBook) => {
-    return apiClient<IBook>(BASE_URL + `/book/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(book),
-      headers: {
-        'content-type': 'application/json',
-      },
-    })
-  },
-  deleteBook: (book: IBook) => {
-    return apiClient(BASE_URL + '/book/delete', {
-      method: 'DELETE',
-      body: JSON.stringify({ id: book.id }),
-      headers: {
-        'content-type': 'application/json',
-      },
-    })
   },
 }
 
