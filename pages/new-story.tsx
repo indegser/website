@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import NewStory from 'pages/new-story/NewStory'
+import Editor from 'apps/editor/Editor'
 
 const Page = () => {
   return (
@@ -7,7 +7,7 @@ const Page = () => {
       <Head>
         <title>New story by @indegser</title>
       </Head>
-      <NewStory />
+      <Editor />
     </>
   )
 }

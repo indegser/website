@@ -11,13 +11,13 @@ module.exports = {
     GITHUB_REF,
     GITHUB_SHA,
   },
-  webpack: config => {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
 
-    config.resolve.modules.push(path.resolve(__dirname, 'app'))
+    config.resolve.modules.push(path.resolve(__dirname, 'src'))
 
     return config
   },

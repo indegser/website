@@ -1,16 +1,3 @@
-import Head from 'next/head'
-import History from '../app/pages/history/History'
+import Opinion from 'apps/opinion/Opinion'
 
-const HistoryPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <History />
-    </>
-  )
-}
-
-export default HistoryPage
+export default Opinion
