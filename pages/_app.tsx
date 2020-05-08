@@ -1,10 +1,9 @@
-import GlobalStyle from '../app/design/atoms/GlobalStyle'
-import Footer from '../app/design/organs/footer/Footer'
-import Nav from '../app/design/organs/nav/Nav'
-import styled, { ThemeProvider } from 'styled-components'
-import theme from 'design/theme'
+import GlobalStyle from 'common/atoms/GlobalStyle'
+import Footer from 'common/organs/footer/Footer'
+import Nav from 'common/organs/nav/Nav'
+import styled from '@emotion/styled'
 import Head from 'next/head'
-import Banner from 'design/organs/banner/Banner'
+import Banner from 'common/organs/banner/Banner'
 import Router from 'next/router'
 import withGA from 'next-ga'
 import { useEffect } from 'react'
@@ -29,9 +28,11 @@ const App = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <GlobalStyle />
       <Head>
+        <title>Home</title>
+        <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
           rel="stylesheet"
@@ -50,7 +51,7 @@ const App = ({ Component, pageProps }) => {
         <Footer />
       </Page>
       <div id="context-menu"></div>
-    </ThemeProvider>
+    </>
   )
 }
 

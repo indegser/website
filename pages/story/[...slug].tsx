@@ -1,10 +1,8 @@
-import fetch from 'node-fetch'
 import Error from 'next/error'
-import grayMatter from 'gray-matter'
-import Choseh from 'pages/choseh/Choseh'
+import Story from 'apps/story/Story'
 import sejongApi from 'apis/sejongApi'
 import { IStory } from 'types/dataTypes'
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import Editor from 'apps/editor/Editor'
 
 interface Props {
@@ -20,31 +18,17 @@ const Page: FC<Props> = ({ story, edit }) => {
   if (edit) {
     return <Editor story={story} />
   }
-  return <Choseh story={story} />
+  return <Story story={story} />
 }
 
 export const getServerSideProps = async ({ query }) => {
   const slug = query.slug.join('/')
   const { edit = null } = query
 
-  let story: IStory
+  let story: IStory = null
 
   try {
-    const data = await sejongApi.getStory(slug)
-
-    if (!data.github) {
-      return { props: {} }
-    }
-
-    const resp = await fetch(data.github?.file.downloadUrl)
-    const rawContent = await resp.text()
-    const { content } = grayMatter(rawContent)
-
-    story = {
-      ...data,
-      content,
-      rawContent,
-    }
+    story = await sejongApi.getStory(slug)
   } catch (err) {}
 
   return { props: { story, edit } }
