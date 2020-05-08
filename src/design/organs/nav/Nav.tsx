@@ -1,7 +1,25 @@
 import PageContainer from 'design/atoms/container/PageContainer'
 import Profile from './Profile'
 import NavMenu from './NavMenu'
-import styles from './style.module.scss'
+import styled from '@emotion/styled'
+
+const Menus = styled.div`
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid #ddd;
+`
+
+const MenuLayout = styled.div`
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  grid-gap: 0 30px;
+  align-items: center;
+`
 
 const Nav = () => {
   const menu = [
@@ -14,14 +32,14 @@ const Nav = () => {
   return (
     <nav>
       <PageContainer>
-        <div className={styles.menus}>
-          <div className={styles.menuGrid}>
+        <Menus>
+          <MenuLayout>
             {menu.map((item) => (
               <NavMenu key={item.name} {...item} />
             ))}
-          </div>
+          </MenuLayout>
           <Profile />
-        </div>
+        </Menus>
       </PageContainer>
     </nav>
   )

@@ -3,47 +3,53 @@ import { SecondaryButton } from 'design/atoms/button/Button'
 import Router from 'next/router'
 import useSignIn from 'hooks/me/useSignIn'
 import useWhoami from 'hooks/me/useWhoami'
-import styles from './profile.module.scss'
 import Route from 'hocs/Route'
+import styled from '@emotion/styled'
+import { useProfileActions } from './Profile.hooks'
+
+const Box = styled.div`
+  display: flex;
+`
+
+const Actions = styled.div`
+  display: flex;
+
+  & > * {
+    margin-left: 8px;
+  }
+`
+
+const User = styled.div`
+  border-left: 1px solid #ddd;
+  padding-left: 8px;
+  margin-left: 8px;
+  align-self: center;
+`
+
+const AvatarButton = styled.div`
+  cursor: pointer;
+`
 
 const Profile = () => {
-  const { signIn } = useSignIn()
   const user = useWhoami()
-
-  const handleNew = (e) => {
-    e.stopPropagation()
-    Router.push('/new-story')
-  }
-
-  const handleWrite = (e) => {
-    // Router.path
-    e.stopPropagation()
-    Router.push('/story/[...slug]', Router.asPath + '?edit=true')
-  }
-
-  const handleAvatar = () => {
-    signIn()
-  }
+  const { signIn, goNew, goWrite } = useProfileActions(user)
 
   return (
-    <div className={styles.box}>
+    <Box>
       {user && (
-        <div className={styles.actions}>
+        <Actions>
           <Route path="/story/[...slug]">
-            <SecondaryButton onClick={handleWrite}>Write</SecondaryButton>
+            <SecondaryButton onClick={goWrite}>Write</SecondaryButton>
           </Route>
-          <SecondaryButton onClick={handleNew}>New</SecondaryButton>
-        </div>
+          <SecondaryButton onClick={goNew}>New</SecondaryButton>
+        </Actions>
       )}
-      <div className={styles.profile}>
-        <div
-          className={styles.avatar}
-          onClick={user ? undefined : handleAvatar}
-        >
+      <User>
+        <AvatarButton onClick={signIn}>
           <Avatar src={user?.avatar} />
-        </div>
-      </div>
-    </div>
+        </AvatarButton>
+      </User>
+    </Box>
   )
 }
 
