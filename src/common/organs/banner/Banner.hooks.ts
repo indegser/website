@@ -18,11 +18,11 @@ interface BannerStore {
   setBanner: (banner?: Omit<Banner, 'id'>) => void
 }
 
-export const [useBannerStore, bannerStoreApi] = create<BannerStore>(set => ({
+export const [useBannerStore, bannerStoreApi] = create<BannerStore>((set) => ({
   banner: null,
-  setBanner: banner =>
+  setBanner: (banner) =>
     set(
-      produce(state => {
+      produce((state) => {
         if (!banner) {
           state.banner = null
         } else {

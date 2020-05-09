@@ -1,4 +1,4 @@
-import { useBannerStore } from 'stores/bannerStore'
+import { useBannerStore } from './Banner.hooks'
 import PageContainer from 'common/atoms/container/PageContainer'
 import Icon from 'common/atoms/icons/Icon'
 import { MouseEvent } from 'react'
