@@ -12,7 +12,7 @@ export const useProfileActions = (user: object) => {
   }
 
   return {
-    signIn: !user && signIn,
+    signIn: !user ? signIn : undefined,
     goWrite,
     goNew,
   }
