@@ -3,10 +3,11 @@ import styled from '@emotion/styled'
 
 const Box = styled.div`
   margin-bottom: 8px;
+  color: var(--text300);
 `
 
 const Optional = styled.span`
-  color: #677184;
+  color: var(--text200);
   font-size: 12px;
   vertical-align: bottom;
   margin: 0 4px;
