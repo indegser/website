@@ -1,13 +1,6 @@
 import { IStory } from 'types/dataTypes'
 import { FC, useMemo } from 'react'
-import {
-  MarqueeBox,
-  MarqueeTitle,
-  MarqueeExcerpt,
-  MarqueeDate,
-  MarqueeCover,
-  MarqueeContent,
-} from './Marquee.styled'
+import styled from '@emotion/styled'
 import Link from 'next/link'
 import { dateFns } from 'utils/dateUtils'
 import { capitalize } from 'utils/stringUtils'
@@ -15,6 +8,51 @@ import { capitalize } from 'utils/stringUtils'
 interface Props {
   story: IStory
 }
+
+const MarqueeBox = styled.div`
+  break-inside: avoid;
+  page-break-inside: avoid;
+  position: relative;
+  border-bottom: 1px solid var(--border100);
+  display: flex;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+  p {
+    margin: 0.5rem 0;
+  }
+`
+
+const MarqueeContent = styled.div`
+  margin-right: 12px;
+`
+
+const MarqueeTitle = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  color: var(--text400);
+`
+
+const MarqueeExcerpt = styled.div`
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text200);
+`
+
+const MarqueeDate = styled.div`
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--text200);
+  margin-top: 12px;
+`
+
+const MarqueeCover = styled.img`
+  flex: 0 0 auto;
+  width: 120px;
+  height: auto;
+`
 
 const Marquee: FC<Props> = ({ story }) => {
   const relDate = useMemo(() => {

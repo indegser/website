@@ -10,7 +10,7 @@ const Menus = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border100);
 `
 
 const MenuLayout = styled.div`

@@ -6,13 +6,13 @@ const Paragraph = styled.div`
   }
 
   margin-top: 1em;
-  color: #111;
+  color: var(--text300);
   hyphens: auto;
 
   blockquote & {
     padding-left: 1em;
     font-size: 0.9em;
-    border-left: 2px solid #ddd;
+    border-left: 2px solid var(--border100);
     box-sizing: border-box;
     margin: 2em auto;
     font-weight: 500;

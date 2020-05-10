@@ -1,6 +1,7 @@
 import Sns from './Sns'
 import PageContainer from 'common/atoms/container/PageContainer'
 import styled from '@emotion/styled'
+import Theme from './theme/Theme'
 
 const FooterBox = styled.footer`
   margin-top: 32px;
@@ -8,8 +9,8 @@ const FooterBox = styled.footer`
 `
 export const Copyright = styled.div`
   font-size: 13px;
-  color: #666;
-  margin-right: 8px;
+  color: var(--text200);
+  margin-right: 4px;
 `
 
 export const Layout = styled.div`
@@ -26,6 +27,7 @@ const Footer = () => {
         <Layout>
           <Copyright>Designed and developed by Indegser</Copyright>
           <Sns />
+          <Theme />
         </Layout>
       </PageContainer>
     </FooterBox>

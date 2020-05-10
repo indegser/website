@@ -21,6 +21,7 @@ export const MenuName = styled.div``
 
 export const MenuLogo = styled.div`
   margin-right: 16px;
+  color: var(--text400);
 `
 
 interface Props {

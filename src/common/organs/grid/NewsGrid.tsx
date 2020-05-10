@@ -40,7 +40,7 @@ const Divider = styled.div`
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #dedede;
+  background: var(--border100);
   margin-left: -1px;
 
   --half-gap: calc(var(--column-gap) / 2);

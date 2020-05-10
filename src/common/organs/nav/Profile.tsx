@@ -1,5 +1,5 @@
 import Avatar from 'common/atoms/avatar/Avatar'
-import { SecondaryButton } from 'common/atoms/button/Button'
+import { SecondaryButton, PrimaryButton } from 'common/atoms/button/Button'
 import useWhoami from 'common/hooks/me/useWhoami'
 import Route from 'common/hocs/Route'
 import styled from '@emotion/styled'
@@ -18,7 +18,7 @@ const Actions = styled.div`
 `
 
 const User = styled.div`
-  border-left: 1px solid #ddd;
+  border-left: 1px solid var(--border100);
   padding-left: 8px;
   margin-left: 8px;
   align-self: center;
@@ -39,7 +39,7 @@ const Profile = () => {
           <Route path="/story/[...slug]">
             <SecondaryButton onClick={goWrite}>Write</SecondaryButton>
           </Route>
-          <SecondaryButton onClick={goNew}>New</SecondaryButton>
+          <PrimaryButton onClick={goNew}>New</PrimaryButton>
         </Actions>
       )}
       <User>

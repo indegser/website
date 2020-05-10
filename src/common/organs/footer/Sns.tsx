@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 export const SnsBox = styled.div`
   align-self: center;
   font-size: 12px;
-  color: #666;
+  color: var(--text200);
   padding: 4px;
 
   &:hover {
@@ -23,11 +23,6 @@ const snsList = [
     link: 'https://github.com/indegser',
     size: 14,
     variant: 'github',
-  },
-  {
-    name: 'twitter',
-    link: 'https://twitter.com/indegser',
-    variant: 'twitter',
   },
 ]
 
