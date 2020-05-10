@@ -1,32 +1,22 @@
-import create from 'zustand'
-import { useEffect } from 'react'
+import { useMemo } from 'react'
+import { useStoryContext } from 'apps/story/Story.hooks'
 
-const [useFootnoteStore] = create(set => ({
-  array: [],
-  add: (id: string) =>
-    set(state => ({
-      ...state,
-      array: [...state.array, id],
-    })),
-}))
+const useFootnote = (isDefinition?: boolean) => {
+  const { footnote } = useStoryContext()
+  const ref = isDefinition ? footnote.defCount : footnote.refCount
 
-const useFootnote = (identifier: string, isDefinition?: boolean) => {
-  const add = useFootnoteStore(s => s.add)
-  const index = useFootnoteStore(s =>
-    s.array.findIndex(id => id === identifier)
-  )
-  const defId = `cite-def-${identifier}`
-  const refId = `cite-ref-${identifier}`
-
-  useEffect(() => {
-    // Register only happens on FootnoteReference
-    !isDefinition && add(identifier)
+  const index = useMemo(() => {
+    ref.current += 1
+    return ref.current
   }, [])
+
+  const defId = `cite-def-${index}`
+  const refId = `cite-ref-${index}`
 
   return {
     defId,
     refId,
-    index: index + 1,
+    index,
   }
 }
 

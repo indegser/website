@@ -2,13 +2,20 @@ import { FC } from 'react'
 import { IStory } from 'types/dataTypes'
 import FormContainer from 'common/atoms/container/FormContainer'
 import Label from 'common/atoms/form/Label'
-import { PrimaryButton } from 'common/atoms/button/Button'
+import { PrimaryButton, RectPrimaryButton } from 'common/atoms/button/Button'
 import { useEditorForm } from './Editor.hooks'
 import { FormGroup } from 'common/atoms/form/FormGroup'
+import ImageUpload from './image-upload/ImageUpload'
+import styled from '@emotion/styled'
 
 interface Props {
   story?: IStory
 }
+
+const Action = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
 
 const Editor: FC<Props> = ({ story }) => {
   const { register, handleSubmit } = useEditorForm(story)
@@ -37,9 +44,12 @@ const Editor: FC<Props> = ({ story }) => {
             />
           </FormGroup>
           <FormGroup>
-            <PrimaryButton type="submit">생성</PrimaryButton>
+            <Action>
+              <RectPrimaryButton type="submit">Publish</RectPrimaryButton>
+            </Action>
           </FormGroup>
         </form>
+        <ImageUpload />
       </FormContainer>
     </div>
   )

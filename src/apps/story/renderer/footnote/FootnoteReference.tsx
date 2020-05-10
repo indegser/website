@@ -9,9 +9,8 @@ const Layout = styled.span`
   color: var(--primary100);
 `
 
-const FootnoteReference = ({ identifier }) => {
-  const { index, refId, defId } = useFootnote(identifier)
-
+const FootnoteReference = () => {
+  const { index, refId, defId } = useFootnote()
   if (!index) return null
 
   return (
