@@ -10,8 +10,8 @@ const Box = styled.div`
   margin-top: -1px;
   text-align: left;
   font-weight: 400;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid var(--border200);
+  border-bottom: 1px solid var(--border200);
   font-size: 15px;
   line-height: 1.4;
 
@@ -68,15 +68,16 @@ const Fold = styled.div`
   cursor: pointer;
 
   &:hover {
-    background: #eff2f9;
+    /* background: #eff2f9; */
   }
   transition: 0.2s background ease;
-  color: var(--textLinkColor);
+  color: var(--primary100);
 `
 
 const FoldTitle = styled.div`
   font-size: 14px;
   flex: 1 1;
+  color: var(--text400);
 `
 
 interface Props {
