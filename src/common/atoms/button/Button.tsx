@@ -6,21 +6,25 @@ const Button = styled.button`
   border: 0;
   padding: 0;
   padding: 0px 8px;
-  font-size: 14px;
-  height: 38px;
+  font-size: 15px;
+  height: 34px;
   line-height: 1;
   display: flex;
   align-items: center;
   cursor: pointer;
+  background: transparent;
+  color: var(--text300);
+  transition: 0.2s color ease;
+  &:hover {
+    color: var(--text400);
+  }
 `
 
 export const PrimaryButton = styled(Button)`
   border-radius: 4px;
-  color: white;
-  background: #08f;
 `
 
 export const SecondaryButton = styled(Button)`
   border-radius: 4px;
-  background: #ddd;
+  color: var(--text300);
 `

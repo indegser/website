@@ -8,7 +8,7 @@ import styled from '@emotion/styled'
 const Box = styled.div`
   position: relative;
   font-size: 14px;
-  color: #333;
+  color: var(--text200);
   display: grid;
   grid-template-columns: max-content max-content auto;
   grid-gap: 0px;
@@ -24,11 +24,11 @@ const Box = styled.div`
 
 const Id = styled.div`
   font-weight: 500;
-  color: black;
+  color: var(--text400);
 `
 
 const Backlink = styled.div`
-  color: #08f;
+  color: var(--primary100);
   padding: 0 4px;
 
   sup {

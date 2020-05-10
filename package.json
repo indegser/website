@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.5",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "axios": "^0.19.2",

@@ -4,7 +4,7 @@ const Break = styled.div`
   margin: 36px 0;
   display: flex;
   font-size: 16px;
-  color: #ddd;
+  color: var(--border100);
   justify-content: center;
 
   & > div {

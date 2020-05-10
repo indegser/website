@@ -3,13 +3,14 @@ import styled from '@emotion/styled'
 const Box = styled.div`
   margin-top: 40px;
   padding-top: 1rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border100);
 `
 
 const Title = styled.div`
   margin: 0;
   font-size: 15px;
   font-weight: 500;
+  color: var(--text300);
   padding-bottom: 1rem;
 `
 

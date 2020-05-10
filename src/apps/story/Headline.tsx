@@ -11,7 +11,7 @@ const Box = styled.div`
 `
 
 const Title = styled.h1`
-  color: #111;
+  color: var(--text400);
   font-size: 44px;
   line-height: 1.2;
   font-weight: 500;
@@ -27,7 +27,7 @@ const Title = styled.h1`
 `
 
 const Excerpt = styled.h3`
-  color: #444;
+  color: var(--text300);
   font-size: 18px;
   line-height: 1.6;
   font-weight: 500;
