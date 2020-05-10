@@ -25,6 +25,14 @@ export const PrimaryButton = styled(Button)`
 `
 
 export const SecondaryButton = styled(Button)`
-  border-radius: 4px;
   color: var(--text300);
+`
+
+export const RectPrimaryButton = styled(Button)`
+  border-radius: 4px;
+  color: white;
+  background: var(--primary100);
+  height: 38px;
+  padding-left: 16px;
+  padding-right: 16px;
 `
