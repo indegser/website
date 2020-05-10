@@ -16,6 +16,7 @@ import matter from 'gray-matter'
 import Headline from './Headline'
 import { mq } from 'common/theme'
 import styled from '@emotion/styled'
+import { useFootnote, StoryContext } from './Story.hooks'
 
 interface Props {
   story: IStory
@@ -57,6 +58,8 @@ const Content = styled.div`
 `
 
 const Story: React.FC<Props> = ({ story }) => {
+  const footnote = useFootnote()
+
   const content = useMemo(() => {
     const { content } = matter(story.content)
     return content
@@ -67,35 +70,37 @@ const Story: React.FC<Props> = ({ story }) => {
   }
 
   return (
-    <PageContainer>
-      <Container>
-        <Headline data={story.data} />
-        <Toc content={content} />
-        <Content>
-          <Markdown
-            source={content}
-            parserOptions={{
-              footnotes: true,
-            }}
-            plugins={[shortcodes]}
-            renderers={{
-              footnoteDefinition: FootnoteDefinition,
-              footnoteReference: FootnoteReference,
-              image: ImageRenderer,
-              heading: HeadingRenderer,
-              thematicBreak: BreakRenderer,
-              paragraph: ParagraphRenderer,
-              shortcode: ({ identifier, attributes: props }) => {
-                const Renderer = shortcodeMap[identifier]
-                if (!Renderer) return null
-                return <Renderer {...props} />
-              },
-            }}
-          />
-        </Content>
-        <Appendix />
-      </Container>
-    </PageContainer>
+    <StoryContext.Provider value={{ footnote }}>
+      <PageContainer>
+        <Container>
+          <Headline data={story.data} />
+          <Toc content={content} />
+          <Content>
+            <Markdown
+              source={content}
+              parserOptions={{
+                footnotes: true,
+              }}
+              plugins={[shortcodes]}
+              renderers={{
+                footnoteDefinition: FootnoteDefinition,
+                footnoteReference: FootnoteReference,
+                image: ImageRenderer,
+                heading: HeadingRenderer,
+                thematicBreak: BreakRenderer,
+                paragraph: ParagraphRenderer,
+                shortcode: ({ identifier, attributes: props }) => {
+                  const Renderer = shortcodeMap[identifier]
+                  if (!Renderer) return null
+                  return <Renderer {...props} />
+                },
+              }}
+            />
+          </Content>
+          <Appendix />
+        </Container>
+      </PageContainer>
+    </StoryContext.Provider>
   )
 }
 
