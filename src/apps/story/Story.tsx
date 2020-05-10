@@ -31,7 +31,6 @@ const Content = styled.div`
 
   font-size: 17px;
   line-height: 1.67;
-  color: black;
   word-break: break-all;
   text-align: justify;
   padding: 24px 0;

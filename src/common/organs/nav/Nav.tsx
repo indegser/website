@@ -30,7 +30,7 @@ const Nav = () => {
   ]
 
   return (
-    <nav>
+    <nav id="global-nav">
       <PageContainer>
         <Menus>
           <MenuLayout>

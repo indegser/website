@@ -26,6 +26,7 @@ const styles = css`
     -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    color: var(--text400);
 
     &.prevent-scroll {
       position: fixed;
@@ -105,7 +106,7 @@ const palette = {
     {
       name: 'border',
       colorKeys: ['#cacaca'],
-      ratios: [1.3],
+      ratios: [1.3, 2],
     },
     {
       name: 'primary',
