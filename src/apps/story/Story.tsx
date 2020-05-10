@@ -59,7 +59,6 @@ const Content = styled.div`
 
 const Story: React.FC<Props> = ({ story }) => {
   const footnote = useFootnote()
-
   const content = useMemo(() => {
     const { content } = matter(story.content)
     return content

@@ -1,4 +1,4 @@
-import { useRef, useContext, createContext, MutableRefObject } from 'react'
+import { useRef, useContext, createContext } from 'react'
 
 export const useFootnote = () => {
   const refCount = useRef<number>(0)
