@@ -25,6 +25,7 @@ const MarqueeBox = styled.div`
 
 const MarqueeContent = styled.div`
   margin-right: 12px;
+  flex: 1 1;
 `
 
 const MarqueeTitle = styled.div`
