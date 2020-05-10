@@ -76,7 +76,6 @@ const styles = css`
   }
 
   label[for] {
-    color: #354565;
     font-size: 13px;
     font-weight: 500;
     vertical-align: bottom;
