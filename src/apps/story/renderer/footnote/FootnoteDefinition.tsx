@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom'
 import HashLink from 'common/atoms/link/HashLink'
 import Icon from 'common/atoms/icons/Icon'
 import useFootnote from './useFootnote'
-import { useEffect, useState, useMemo } from 'react'
+import { useEffect, useState, useMemo, useRef } from 'react'
 import styled from '@emotion/styled'
 
 const Box = styled.div`
@@ -37,16 +37,30 @@ const Backlink = styled.div`
 `
 
 const FootnoteDefinition = ({ identifier, children }) => {
-  const { index, refId, defId } = useFootnote(identifier, true)
+  const { index, refId, defId } = useFootnote(true)
   const [domReady, setDomReady] = useState(false)
+  const [text, setText] = useState<string>()
 
-  const child = useMemo(() => {
-    if (Number(identifier) !== Number.NaN) {
-      return `Above book, p.${identifier}`
+  // const child = useMemo(() => {
+  //   console.log(children, identifier)
+  //   if (Number(identifier) !== Number.NaN) {
+  //     return `Above book, p.${identifier}`
+  //   }
+
+  //   return children
+  // }, [identifier])
+
+  const ref = useRef<HTMLDivElement>()
+
+  useEffect(() => {
+    if (!domReady) return
+    const target = ref.current
+    const text = target.textContent
+
+    if (!isNaN(Number(text))) {
+      setText(`Above book, p.${text}`)
     }
-
-    return children
-  }, [identifier])
+  }, [domReady])
 
   useEffect(() => {
     const container = document.getElementById('footnotes')
@@ -68,7 +82,9 @@ const FootnoteDefinition = ({ identifier, children }) => {
           </sup>
         </HashLink>
       </Backlink>
-      <div id="footnote">{child}</div>
+      <div ref={ref} id="footnote">
+        {text || children}
+      </div>
     </Box>,
     document.getElementById(defId)
   )
