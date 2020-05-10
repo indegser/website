@@ -6,6 +6,7 @@ import styled from '@emotion/styled'
 const Layout = styled.span`
   padding-top: 0.4em;
   padding-bottom: 0.3em;
+  color: var(--primary100);
 `
 
 const FootnoteReference = ({ identifier }) => {

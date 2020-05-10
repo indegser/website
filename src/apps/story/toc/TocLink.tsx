@@ -6,12 +6,12 @@ const Box = styled.span`
   text-decoration: none;
 
   a {
-    color: #333;
+    color: var(--text300);
     text-decoration: none;
     &:hover {
-      color: var(--textLinkColor);
+      color: var(--primary100);
       .toc_link_icon {
-        color: var(--textLinkColor);
+        color: var(--primary100);
       }
     }
   }
@@ -19,7 +19,6 @@ const Box = styled.span`
 
 const LinkIcon = styled.span`
   margin-left: 6px;
-  color: #ccc;
   display: inline-flex;
   transform: translateY(1px);
 `

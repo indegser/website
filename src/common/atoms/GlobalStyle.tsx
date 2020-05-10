@@ -12,6 +12,7 @@ const styles = css`
 
   html {
     font-family: var(--font-sans);
+    background: var(--background);
     font-size: 16px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -26,6 +27,7 @@ const styles = css`
     -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    color: var(--text400);
 
     &.prevent-scroll {
       position: fixed;
@@ -105,7 +107,7 @@ const palette = {
     {
       name: 'border',
       colorKeys: ['#cacaca'],
-      ratios: [1.3],
+      ratios: [1.3, 2],
     },
     {
       name: 'primary',
