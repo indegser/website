@@ -3,11 +3,9 @@ import { useStoryContext } from 'apps/story/Story.hooks'
 
 const useFootnote = (isDefinition?: boolean) => {
   const { footnote } = useStoryContext()
-  const ref = isDefinition ? footnote.defCount : footnote.refCount
 
   const index = useMemo(() => {
-    ref.current += 1
-    return ref.current
+    return footnote.register(isDefinition)
   }, [])
 
   const defId = `cite-def-${index}`
