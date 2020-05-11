@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom'
 import HashLink from 'common/atoms/link/HashLink'
 import Icon from 'common/atoms/icons/Icon'
 import useFootnote from './useFootnote'
-import { useEffect, useState, useMemo, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import styled from '@emotion/styled'
 
 const Box = styled.div`
@@ -40,15 +40,6 @@ const FootnoteDefinition = ({ identifier, children }) => {
   const { index, refId, defId } = useFootnote(true)
   const [domReady, setDomReady] = useState(false)
   const [text, setText] = useState<string>()
-
-  // const child = useMemo(() => {
-  //   console.log(children, identifier)
-  //   if (Number(identifier) !== Number.NaN) {
-  //     return `Above book, p.${identifier}`
-  //   }
-
-  //   return children
-  // }, [identifier])
 
   const ref = useRef<HTMLDivElement>()
 
