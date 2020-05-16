@@ -7,6 +7,7 @@ import Banner from "common/organs/banner/Banner";
 import Router from "next/router";
 import withGA from "next-ga";
 import { useEffect } from "react";
+import { generateAdaptiveTheme } from "@adobe/leonardo-contrast-colors";
 import { useTokenStore } from "stores/tokenStore";
 
 const Page = styled.div`
@@ -20,6 +21,50 @@ const Page = styled.div`
   }
 `;
 
+const COLORSPACE = "CAM02";
+
+const palette = {
+  colorScales: [
+    {
+      name: "text",
+      colorKeys: ["#cacaca"],
+      colorspace: COLORSPACE,
+      ratios: [2, 4.6, 7, 12],
+    },
+    {
+      name: "border",
+      colorKeys: ["#cacaca"],
+      ratios: [1.3, 2],
+    },
+    {
+      name: "primary",
+      colorKeys: ["#0088ff"],
+      colorspace: COLORSPACE,
+      ratios: [4.6],
+    },
+  ],
+  baseScale: "text",
+};
+
+const generator = generateAdaptiveTheme(palette);
+const createTheme = (brightness: number) => {
+  const variables = [];
+  const [{ background }, ...rules] = generator(brightness);
+  variables.push([`--background`, background]);
+  for (const rule of rules) {
+    for (const color of rule.values) {
+      const { name, value } = color;
+      variables.push([`--${name}`, value]);
+    }
+  }
+  return variables;
+};
+
+const themes = JSON.stringify({
+  light: createTheme(99),
+  dark: createTheme(12),
+});
+
 const App = ({ Component, pageProps }) => {
   const setToken = useTokenStore((s) => s.setToken);
   useEffect(() => {
@@ -27,12 +72,34 @@ const App = ({ Component, pageProps }) => {
     token && setToken(token);
   }, []);
 
-  console.log(pageProps);
-
   return (
     <>
       <GlobalStyle />
       <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.THEME = ${themes}
+            function changeTheme() {
+              let theme = localStorage.getItem("theme");
+              if (!theme) {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  theme = 'dark';
+                } else {
+                  theme = 'light';
+                }
+              }
+              
+              let rules = THEME[theme];
+              for (const [property, value] of rules) {
+                document.documentElement.style.setProperty(property, value);
+              }
+            }
+
+            changeTheme();
+          `,
+          }}
+        ></script>
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
         <link

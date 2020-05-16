@@ -1,12 +1,9 @@
-import { Global, css } from '@emotion/core'
-import { generateAdaptiveTheme } from '@adobe/leonardo-contrast-colors'
-import { useThemeStore } from 'common/organs/footer/theme/Theme.hooks'
-import { useMemo } from 'react'
+import { Global, css } from "@emotion/core";
 
 const styles = css`
   :root {
     --font-sans: Roboto, Segoe UI, Noto Sans KR, sans-serif;
-    --font-serif: Lusitana, Nanum Myeongjo, Georgia, Cambria, 'Times New Roman',
+    --font-serif: Lusitana, Nanum Myeongjo, Georgia, Cambria, "Times New Roman",
       Times, Noto Serif KR, serif;
   }
 
@@ -23,10 +20,10 @@ const styles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-kerning: normal;
-    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
     color: var(--text400);
 
     &.prevent-scroll {
@@ -92,62 +89,14 @@ const styles = css`
     bottom: 0;
     right: 0;
   }
-`
-
-const COLORSPACE = 'CAM02'
-
-const palette = {
-  colorScales: [
-    {
-      name: 'text',
-      colorKeys: ['#cacaca'],
-      colorspace: COLORSPACE,
-      ratios: [2, 4.6, 7, 12],
-    },
-    {
-      name: 'border',
-      colorKeys: ['#cacaca'],
-      ratios: [1.3, 2],
-    },
-    {
-      name: 'primary',
-      colorKeys: ['#0088ff'],
-      colorspace: COLORSPACE,
-      ratios: [4.6],
-    },
-  ],
-  baseScale: 'text',
-}
-
-const generator = generateAdaptiveTheme(palette)
+`;
 
 const GlobalStyle = () => {
-  const scheme = useThemeStore((s) => s.scheme)
-
-  const theme = useMemo(() => {
-    const isLight = scheme === 'light'
-    const cssVars = {}
-    const [{ background }, ...rules] = generator(isLight ? 99 : 12)
-    cssVars[`--background`] = background
-    for (const rule of rules) {
-      for (const color of rule.values) {
-        const { name, value } = color
-        cssVars[`--${name}`] = value
-      }
-    }
-    return cssVars
-  }, [scheme])
-
   return (
     <>
-      <Global
-        styles={{
-          ':root': theme,
-        }}
-      />
       <Global styles={styles} />
     </>
-  )
-}
+  );
+};
 
-export default GlobalStyle
+export default GlobalStyle;
