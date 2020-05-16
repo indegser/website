@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SVGAttributes } from "react";
 import styled from "@emotion/styled";
 
 export enum IconVariant {
@@ -17,7 +17,7 @@ export enum IconVariant {
   darkTheme = "dark-theme",
 }
 
-interface IIconProps {
+interface IIconProps extends SVGAttributes<SVGSVGElement> {
   variant: keyof typeof IconVariant;
   height?: number;
   width?: number;
@@ -28,7 +28,6 @@ interface IIconProps {
 const IconBox = styled.span`
   svg {
     display: block;
-    /* fill: currentColor; */
   }
 `;
 
