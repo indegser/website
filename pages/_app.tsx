@@ -91,9 +91,12 @@ const App = ({ Component, pageProps }) => {
               }
               
               let rules = THEME[theme];
+              let root = document.documentElement.style;
               for (const [property, value] of rules) {
-                document.documentElement.style.setProperty(property, value);
+                root.setProperty(property, value);
               }
+
+              root.setProperty('--theme', theme);
             }
 
             changeTheme();
