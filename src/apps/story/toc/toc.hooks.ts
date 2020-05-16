@@ -6,6 +6,7 @@ import toc from 'mdast-util-toc'
 import { useMemo, useState } from 'react'
 import useMeasure from 'react-use-measure'
 import { useSpring } from 'react-spring'
+import { ResizeObserver } from '@juggle/resize-observer'
 
 export const useTocFold = () => {
   const [fold, setFold] = useState<boolean>(true)
@@ -21,7 +22,9 @@ export const useTocFold = () => {
 }
 
 export const useAnimatedFold = (fold: boolean) => {
-  const [ref, bounds] = useMeasure()
+  const [ref, bounds] = useMeasure({
+    polyfill: process.env.NODE_ENV === 'test' && ResizeObserver,
+  })
   const style = useSpring({ maxHeight: fold ? 0 : bounds.height + 16 })
 
   return { ref, style }
