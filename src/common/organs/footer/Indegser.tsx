@@ -34,7 +34,7 @@ const SnsBox = styled.div`
   color: var(--text200);
 
   &:hover {
-    color: var(--text300);
+    color: var(--text400);
   }
 
   a {

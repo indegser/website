@@ -1,6 +1,5 @@
-import { useAdaptiveTheme, useThemeStore } from "./Theme.hooks";
+import { useTheme, useThemeStore } from "./Theme.hooks";
 import Select from "react-select";
-import { capitalize } from "utils/stringUtils";
 import styled from "@emotion/styled";
 import Icon from "common/atoms/icons/Icon";
 
@@ -40,7 +39,9 @@ const SingleValue = ({ data }) => {
 };
 
 const Theme = () => {
-  const { handleChange } = useAdaptiveTheme();
+  const { theme, handleChange } = useTheme();
+
+  if (!theme) return null;
 
   const options = [
     { value: "light", label: "Light" },
@@ -50,7 +51,7 @@ const Theme = () => {
   return (
     <Box>
       <Select
-        value={options[0]}
+        value={options.find((o) => o.value === theme)}
         isSearchable={false}
         menuPlacement="top"
         options={options}
