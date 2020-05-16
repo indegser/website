@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import Icon from 'common/atoms/icons/Icon'
-import styled from '@emotion/styled'
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Icon from "common/atoms/icons/Icon";
+import styled from "@emotion/styled";
 
 export const Box = styled.div`
   font-size: 14px;
@@ -11,48 +11,48 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
 
-  &[aria-current='true'] {
+  &[aria-current="true"] {
     color: #777;
     pointer-events: none;
   }
-`
+`;
 
-export const MenuName = styled.div``
+export const MenuName = styled.div``;
 
 export const MenuLogo = styled.div`
   margin-right: 16px;
   color: var(--text400);
-`
+`;
 
 interface Props {
-  name: string
-  href: string
+  name: string;
+  href: string;
 }
 
 const NavMenu: React.FC<Props> = ({ href, name }) => {
-  const { pathname } = useRouter()
-  const isActive = pathname === href // TODO. checkout asPath.
+  const { pathname } = useRouter();
+  const isActive = pathname === href; // TODO. checkout asPath.
 
   const renderMenu = () => {
-    if (name === 'Home') {
+    if (name === "Home") {
       return (
         <MenuLogo>
-          <Icon variant="logoSimple" height={21} />
+          <Icon variant="logoSimple" height={21} fill="currentColor" />
         </MenuLogo>
-      )
+      );
     }
     return (
       <Box aria-current={isActive}>
         <MenuName>{name}</MenuName>
       </Box>
-    )
-  }
+    );
+  };
 
   return (
     <Link href={href}>
       <a>{renderMenu()}</a>
     </Link>
-  )
-}
+  );
+};
 
-export default NavMenu
+export default NavMenu;
