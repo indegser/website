@@ -1,4 +1,4 @@
-import { useTheme, useThemeStore } from "./Theme.hooks";
+import { useTheme } from "./Theme.hooks";
 import Select from "react-select";
 import styled from "@emotion/styled";
 import Icon from "common/atoms/icons/Icon";
