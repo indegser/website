@@ -1,53 +1,22 @@
-import { ChangeEvent } from 'react'
-import create from 'zustand'
-import produce from 'immer'
+import { useState, useEffect } from "react";
 
-const getScheme = () => {
-  if (!process.browser || !window.matchMedia) return 'light'
+export const useTheme = () => {
+  const [theme, setTheme] = useState(undefined);
 
-  const detector = window.matchMedia('(prefers-color-scheme: dark)')
+  const handleChange = ({ value }) => {
+    localStorage.setItem("theme", value);
+    setTheme(value);
+    // @ts-ignore
+    window.changeTheme();
+  };
 
-  if (detector.matches) {
-    return 'dark'
-  }
-  return 'light'
-}
+  useEffect(() => {
+    const theme = document.documentElement.style.getPropertyValue("--theme");
+    setTheme(theme);
+  }, []);
 
-interface ThemeStore {
-  keyColor: string
-  scheme: 'light' | 'dark'
-  setScheme: (scheme: ThemeStore['scheme']) => void
-  setKeyColor: (keyColor: string) => void
-}
-
-export const [useThemeStore, themeStoreApi] = create<ThemeStore>((set) => ({
-  keyColor: '#0088ff',
-  scheme: getScheme(),
-  setScheme: (scheme) =>
-    set(
-      produce((state) => {
-        state.scheme = scheme
-      })
-    ),
-  setKeyColor: (keyColor) =>
-    set(
-      produce((state) => {
-        state.keyColor = keyColor
-      })
-    ),
-}))
-
-export const useAdaptiveTheme = () => {
-  const handleColorChange = (e: ChangeEvent<HTMLInputElement>) => {
-    themeStoreApi.setState({ keyColor: e.target.value })
-  }
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    themeStoreApi.setState({
-      scheme: e.target.selectedIndex === 0 ? 'light' : 'dark',
-    })
-  }
   return {
+    theme,
     handleChange,
-    handleColorChange,
-  }
-}
+  };
+};

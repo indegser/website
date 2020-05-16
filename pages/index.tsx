@@ -1,3 +1,3 @@
-import Opinion from 'apps/opinion/Opinion'
+import Opinion from "apps/opinion/Opinion";
 
-export default Opinion
+export default Opinion;
