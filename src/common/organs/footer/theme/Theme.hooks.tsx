@@ -41,11 +41,10 @@ export const useAdaptiveTheme = () => {
   const handleColorChange = (e: ChangeEvent<HTMLInputElement>) => {
     themeStoreApi.setState({ keyColor: e.target.value });
   };
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const theme = e.target.selectedIndex === 0 ? "light" : "dark";
-    localStorage.setItem("theme", theme);
+  const handleChange = ({ value }) => {
+    localStorage.setItem("theme", value);
     themeStoreApi.setState({
-      scheme: theme,
+      scheme: value,
     });
     // @ts-ignore
     window.changeTheme();
