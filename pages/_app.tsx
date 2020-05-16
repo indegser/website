@@ -1,13 +1,13 @@
-import GlobalStyle from 'common/atoms/GlobalStyle'
-import Footer from 'common/organs/footer/Footer'
-import Nav from 'common/organs/nav/Nav'
-import styled from '@emotion/styled'
-import Head from 'next/head'
-import Banner from 'common/organs/banner/Banner'
-import Router from 'next/router'
-import withGA from 'next-ga'
-import { useEffect } from 'react'
-import { useTokenStore } from 'stores/tokenStore'
+import GlobalStyle from "common/atoms/GlobalStyle";
+import Footer from "common/organs/footer/Footer";
+import Nav from "common/organs/nav/Nav";
+import styled from "@emotion/styled";
+import Head from "next/head";
+import Banner from "common/organs/banner/Banner";
+import Router from "next/router";
+import withGA from "next-ga";
+import { useEffect } from "react";
+import { useTokenStore } from "stores/tokenStore";
 
 const Page = styled.div`
   display: flex;
@@ -18,14 +18,16 @@ const Page = styled.div`
     flex: 1 1;
     width: 100%;
   }
-`
+`;
 
 const App = ({ Component, pageProps }) => {
-  const setToken = useTokenStore((s) => s.setToken)
+  const setToken = useTokenStore((s) => s.setToken);
   useEffect(() => {
-    const token = localStorage.getItem('jwtToken')
-    token && setToken(token)
-  }, [])
+    const token = localStorage.getItem("jwtToken");
+    token && setToken(token);
+  }, []);
+
+  console.log(pageProps);
 
   return (
     <>
@@ -52,7 +54,7 @@ const App = ({ Component, pageProps }) => {
       </Page>
       <div id="context-menu"></div>
     </>
-  )
-}
+  );
+};
 
-export default withGA('UA-116457571-1', Router)(App)
+export default withGA("UA-116457571-1", Router)(App);
