@@ -34,7 +34,7 @@ const palette = {
     {
       name: "border",
       colorKeys: ["#cacaca"],
-      ratios: [1.3, 2],
+      ratios: [1.3, 2, 4, 8],
     },
     {
       name: "primary",

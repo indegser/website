@@ -1,19 +1,39 @@
-import useSWR from 'swr'
-import styled from '@emotion/styled'
-import PageContainer from 'common/atoms/container/PageContainer'
-import sejongApi from 'apis/sejongApi'
-import NewsGrid from 'common/organs/grid/NewsGrid'
-import Marquee from './Marquee'
+import useSWR from "swr";
+import styled from "@emotion/styled";
+import PageContainer from "common/atoms/container/PageContainer";
+import sejongApi from "apis/sejongApi";
+import NewsGrid from "common/organs/grid/NewsGrid";
+import Marquee from "./Marquee";
 
-const Container = styled('div')`
+const Container = styled.div`
   padding: 20px 0 40px 0;
-`
+  border-top: 1px solid var(--border400);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    border-top: 1px solid var(--border400);
+  }
+`;
+
+const Headline = styled.h1`
+  text-align: center;
+  font-size: 90px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  /* font-family: var(--font-serif); */
+  margin: 1.5rem 0 1rem 0;
+`;
 
 const Opinion = () => {
-  const { data } = useSWR('opinion', sejongApi.getStories)
+  const { data } = useSWR("opinion", sejongApi.getStories);
 
   return (
     <PageContainer>
+      <Headline>Des:;ner</Headline>
       <Container>
         <NewsGrid>
           {data?.map((story) => (
@@ -22,7 +42,7 @@ const Opinion = () => {
         </NewsGrid>
       </Container>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Opinion
+export default Opinion;
