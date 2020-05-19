@@ -2,6 +2,7 @@ import PageContainer from "common/atoms/container/PageContainer";
 import styled from "@emotion/styled";
 import Language from "./Language";
 import { useTrans } from "./Indegser.hooks";
+import Resume from "./resume/Resume";
 
 const Navigation = styled.div`
   height: 40px;
@@ -22,10 +23,6 @@ const NavItem = styled.div`
   padding: 4px 2px;
   cursor: default;
 
-  & + & {
-    margin-left: 16px;
-  }
-
   &:hover {
     color: var(--text400);
   }
@@ -34,7 +31,7 @@ const NavItem = styled.div`
 const Nav = styled.div`
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 0 12px;
+  grid-gap: 0 16px;
   align-items: center;
 `;
 
@@ -42,13 +39,14 @@ const Indegser = () => {
   return (
     <PageContainer>
       <Navigation>
-        <Title>Indegser</Title>
+        <Title>{useTrans("name")}</Title>
         <Nav>
           <NavItem>{useTrans("resume")}</NavItem>
           <NavItem>{useTrans("portfolio")}</NavItem>
           <Language />
         </Nav>
       </Navigation>
+      <Resume />
     </PageContainer>
   );
 };
