@@ -27,6 +27,14 @@ const Language = () => {
       onChange={handleChange}
       options={options}
       isSearchable={false}
+      styles={{
+        container: (base) => {
+          return {
+            ...base,
+            alignSelf: "center",
+          };
+        },
+      }}
       components={{
         SingleValue: ({ data }) => {
           const name = data.value === "en" ? "EN" : data.label;
