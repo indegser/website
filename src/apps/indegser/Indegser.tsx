@@ -5,6 +5,7 @@ import { useTrans } from "./Indegser.hooks";
 import Resume from "./resume/Resume";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Portfolio from "./portfolio/Portfolio";
 
 const Navigation = styled.div`
   height: 40px;
@@ -44,7 +45,7 @@ const Nav = styled.div`
 
 const Indegser = () => {
   const { pathname } = useRouter();
-
+  const isPortfolioPage = pathname.includes("portfolio");
   const navs: { key: Parameters<typeof useTrans>[0]; href: string }[] = [
     { key: "resume", href: "/indegser" },
     { key: "portfolio", href: "/indegser/portfolio" },
@@ -65,7 +66,7 @@ const Indegser = () => {
           <Language />
         </Nav>
       </Navigation>
-      <Resume />
+      {isPortfolioPage ? <Portfolio /> : <Resume />}
     </PageContainer>
   );
 };

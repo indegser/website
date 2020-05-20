@@ -20,7 +20,9 @@ const Biography = styled.div`
 const Bio = () => {
   return (
     <Layout>
-      <Biography>{useTrans("biography")}</Biography>
+      <Biography
+        dangerouslySetInnerHTML={{ __html: useTrans("biography") as string }}
+      />
       <div>
         <ResumeContentHeading>{useTrans("contact")}</ResumeContentHeading>
         <div>indegser@gmail.com</div>
