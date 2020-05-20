@@ -19,21 +19,11 @@ const Container = styled.div`
   }
 `;
 
-const Headline = styled.h1`
-  text-align: center;
-  font-size: 90px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  /* font-family: var(--font-serif); */
-  margin: 1.5rem 0 1rem 0;
-`;
-
 const Opinion = () => {
   const { data } = useSWR("opinion", sejongApi.getStories);
 
   return (
     <PageContainer>
-      <Headline>Des:;ner</Headline>
       <Container>
         <NewsGrid>
           {data?.map((story) => (

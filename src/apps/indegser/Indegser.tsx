@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import Language from "./Language";
 import { useTrans } from "./Indegser.hooks";
 import Resume from "./resume/Resume";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Navigation = styled.div`
   height: 40px;
@@ -17,14 +19,19 @@ const Title = styled.div`
   letter-spacing: 0.2px;
 `;
 
-const NavItem = styled.div`
+const NavLink = styled.a`
   font-size: 13px;
-  color: var(--text300);
+  color: var(--text400);
   padding: 4px 2px;
   cursor: default;
 
   &:hover {
-    color: var(--text400);
+    color: var(--primary100);
+  }
+
+  &[data-current="true"] {
+    pointer-events: none;
+    color: var(--text200);
   }
 `;
 
@@ -36,13 +43,25 @@ const Nav = styled.div`
 `;
 
 const Indegser = () => {
+  const { pathname } = useRouter();
+
+  const navs: { key: Parameters<typeof useTrans>[0]; href: string }[] = [
+    { key: "resume", href: "/indegser" },
+    { key: "portfolio", href: "/indegser/portfolio" },
+  ];
+
   return (
     <PageContainer>
       <Navigation>
         <Title>{useTrans("name")}</Title>
         <Nav>
-          <NavItem>{useTrans("resume")}</NavItem>
-          <NavItem>{useTrans("portfolio")}</NavItem>
+          {navs.map((nav) => (
+            <Link key={nav.key} href={nav.href}>
+              <NavLink data-current={nav.href === pathname}>
+                {useTrans(nav.key)}
+              </NavLink>
+            </Link>
+          ))}
           <Language />
         </Nav>
       </Navigation>
