@@ -26,8 +26,8 @@ const locale = {
   location: ["Location", "위치"],
   education: ["Education", "교육"],
   biography: [
-    "Artists in 14th century combined their brilliant painting skills with all the scientific discoveries. They made history as brilliant artist and creative engineer.<br />",
-    "호기심. 디자이너가 길을 포기하고 프론트엔드 개발자를 하는가? 호기심 때문이다. 해부학은 다 빈치의 모나리자를, 타이포그래피 수업은 스티브 잡스에게 예술을  르네상스의 예술가들은  그들에겐 예술과 과학의 경계가 없었으며 천재적인 예술가이자 창의적인 엔지니어로 역사에 남았다. 나는 모든 것이 연결되어 있는 사람이다. 디자이너이면서 개발자이고, 오픈소스 프로젝트를 운영하며 미술사 팟캐스트를 진행하는 그런 사람.",
+    "Web services are the art of the 21st century. Good services depend on a deep understanding and proper use of technology. I want to be an artist who creates a web service where technology and design are perfectly merged.",
+    "웹 서비스는 21세기의 예술입니다. 좋은 웹 서비스는 기술에 대한 깊은 이해와 적절한 활용에 달려있다고 믿고 있기에 프론트엔드 개발을 시작했고, 한 분야에 갇혀있지 않으려 때로는 디자이너로서 때로는 개발자로서 일해 왔습니다. 어디에서든 기술과 디자인이 완벽하게 결합된 웹 서비스를 만드는 예술가가 되고자 합니다.",
   ],
   aurumplanet: [
     [["June, 2013 ~ Jan, 2015"], ["UI Design"]],
