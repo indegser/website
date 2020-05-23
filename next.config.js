@@ -1,11 +1,11 @@
-require('dotenv').config()
-const path = require('path')
+require("dotenv").config();
+const path = require("path");
 
 const {
   NOW_GITHUB_COMMIT_REF: GITHUB_REF,
   NOW_GITHUB_COMMIT_SHA: GITHUB_SHA,
   SEJONG_URL,
-} = process.env
+} = process.env;
 
 module.exports = {
   env: {
@@ -14,13 +14,19 @@ module.exports = {
     SEJONG_URL,
   },
   webpack: (config) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
+    config.module.rules.push(
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
+      },
+      {
+        test: /\.mdx?$/,
+        use: ["raw-loader"],
+      }
+    );
 
-    config.resolve.modules.push(path.resolve(__dirname, 'src'))
+    config.resolve.modules.push(path.resolve(__dirname, "src"));
 
-    return config
+    return config;
   },
-}
+};

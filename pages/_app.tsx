@@ -34,13 +34,13 @@ const palette = {
     {
       name: "border",
       colorKeys: ["#cacaca"],
-      ratios: [1.3, 2],
+      ratios: [1.3, 2, 4, 8],
     },
     {
       name: "primary",
       colorKeys: ["#0088ff"],
       colorspace: COLORSPACE,
-      ratios: [4.6],
+      ratios: [4.6, 6],
     },
   ],
   baseScale: "text",
