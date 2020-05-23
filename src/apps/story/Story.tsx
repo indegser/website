@@ -1,7 +1,6 @@
 import PageContainer from "common/atoms/container/PageContainer";
 import Toc from "./toc/Toc";
 import Appendix from "./Appendix";
-import Gist from "./renderer/Gist";
 import { IStory } from "types/dataTypes";
 import { useMemo } from "react";
 import matter from "gray-matter";
