@@ -15,6 +15,9 @@ export enum IconVariant {
   more = "more",
   lightTheme = "light-theme",
   darkTheme = "dark-theme",
+  english = "english",
+  korean = "korean",
+  select = "select",
 }
 
 interface IIconProps extends SVGAttributes<SVGSVGElement> {

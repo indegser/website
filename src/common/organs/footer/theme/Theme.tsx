@@ -1,7 +1,7 @@
 import { useTheme } from "./Theme.hooks";
-import Select from "react-select";
 import styled from "@emotion/styled";
 import Icon from "common/atoms/icons/Icon";
+import Select from "common/atoms/form/select/Select";
 
 const Box = styled.div`
   flex: 0 0 auto;
@@ -79,7 +79,7 @@ const Theme = () => {
             };
           },
         }}
-        components={{ Option, SingleValue, IndicatorsContainer: () => null }}
+        components={{ Option, SingleValue }}
       ></Select>
     </Box>
   );
