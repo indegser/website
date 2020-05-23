@@ -7,9 +7,10 @@ import ImageRenderer from "./renderer/ImageRenderer";
 import HeadingRenderer from "./renderer/HeadingRenderer";
 import BreakRenderer from "./renderer/BreakRenderer";
 import ParagraphRenderer from "./renderer/ParagraphRenderer";
-import FootnoteDefinition from "./renderer/footnote/FootnoteDefinition";
 import FootnoteReference from "./renderer/footnote/FootnoteReference";
 import Shortcode from "./shortcode/Shortcode";
+import { useFootnote, MarkdownProvider } from "./Markdown.hooks";
+import Footnotes from "./Footnotes";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
@@ -53,24 +54,29 @@ const Container = styled.div`
 `;
 
 const Markdown: FC<Props> = (props) => {
+  const footnote = useFootnote();
+
   return (
     <Container>
-      <ReactMarkdown
-        {...props}
-        parserOptions={{
-          footnotes: true,
-        }}
-        plugins={[shortcodes]}
-        renderers={{
-          footnoteDefinition: FootnoteDefinition,
-          footnoteReference: FootnoteReference,
-          image: ImageRenderer,
-          heading: HeadingRenderer,
-          thematicBreak: BreakRenderer,
-          paragraph: ParagraphRenderer,
-          shortcode: Shortcode,
-        }}
-      />
+      <MarkdownProvider value={{ source: props.source, footnote }}>
+        <ReactMarkdown
+          {...props}
+          parserOptions={{
+            footnotes: true,
+          }}
+          plugins={[shortcodes]}
+          renderers={{
+            footnoteDefinition: () => null,
+            footnoteReference: FootnoteReference,
+            image: ImageRenderer,
+            heading: HeadingRenderer,
+            thematicBreak: BreakRenderer,
+            paragraph: ParagraphRenderer,
+            shortcode: Shortcode,
+          }}
+        />
+        <Footnotes />
+      </MarkdownProvider>
     </Container>
   );
 };
