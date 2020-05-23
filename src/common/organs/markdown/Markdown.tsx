@@ -18,7 +18,6 @@ const Container = styled.div`
   line-height: 1.67;
   word-break: break-all;
   text-align: justify;
-  padding: 24px 0;
 
   ${mq("sm")} {
     font-size: 16px;
@@ -38,6 +37,14 @@ const Container = styled.div`
     line-height: 1;
     padding: 0 2px;
     font-size: 80%;
+  }
+
+  a {
+    color: var(--primary100);
+
+    &:hover {
+      color: var(--primary200);
+    }
   }
 `;
 

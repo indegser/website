@@ -40,7 +40,7 @@ const palette = {
       name: "primary",
       colorKeys: ["#0088ff"],
       colorspace: COLORSPACE,
-      ratios: [4.6],
+      ratios: [4.6, 6],
     },
   ],
   baseScale: "text",
