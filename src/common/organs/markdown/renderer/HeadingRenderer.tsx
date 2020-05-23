@@ -9,7 +9,7 @@ const Layout = styled.div`
   h3,
   h4,
   h5 {
-    font-weight: bold;
+    font-weight: 500;
     word-break: keep-all;
     text-align: left;
     max-width: 320px;
