@@ -2,12 +2,14 @@ import ReactMarkdown from "react-markdown";
 import { ComponentProps, FC } from "react";
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
+import shortcodes from "remark-shortcodes";
 import ImageRenderer from "./renderer/ImageRenderer";
 import HeadingRenderer from "./renderer/HeadingRenderer";
 import BreakRenderer from "./renderer/BreakRenderer";
 import ParagraphRenderer from "./renderer/ParagraphRenderer";
 import FootnoteDefinition from "./renderer/footnote/FootnoteDefinition";
 import FootnoteReference from "./renderer/footnote/FootnoteReference";
+import Shortcode from "./shortcode/Shortcode";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
@@ -58,6 +60,7 @@ const Markdown: FC<Props> = (props) => {
         parserOptions={{
           footnotes: true,
         }}
+        plugins={[shortcodes]}
         renderers={{
           footnoteDefinition: FootnoteDefinition,
           footnoteReference: FootnoteReference,
@@ -65,6 +68,7 @@ const Markdown: FC<Props> = (props) => {
           heading: HeadingRenderer,
           thematicBreak: BreakRenderer,
           paragraph: ParagraphRenderer,
+          shortcode: Shortcode,
         }}
       />
     </Container>
