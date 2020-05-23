@@ -6,6 +6,8 @@ import ImageRenderer from "./renderer/ImageRenderer";
 import HeadingRenderer from "./renderer/HeadingRenderer";
 import BreakRenderer from "./renderer/BreakRenderer";
 import ParagraphRenderer from "./renderer/ParagraphRenderer";
+import FootnoteDefinition from "./renderer/footnote/FootnoteDefinition";
+import FootnoteReference from "./renderer/footnote/FootnoteReference";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
@@ -53,7 +55,12 @@ const Markdown: FC<Props> = (props) => {
     <Container>
       <ReactMarkdown
         {...props}
+        parserOptions={{
+          footnotes: true,
+        }}
         renderers={{
+          footnoteDefinition: FootnoteDefinition,
+          footnoteReference: FootnoteReference,
           image: ImageRenderer,
           heading: HeadingRenderer,
           thematicBreak: BreakRenderer,
