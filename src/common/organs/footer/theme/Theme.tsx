@@ -5,7 +5,9 @@ import Select from "common/atoms/form/select/Select";
 
 const Box = styled.div`
   flex: 0 0 auto;
+  grid-area: theme;
   max-width: 140px;
+  justify-self: flex-end;
 `;
 
 const OptionBox = styled.div`
