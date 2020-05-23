@@ -62,10 +62,10 @@ const Footnotes = () => {
             ? `Above book, p.${content}`
             : content;
           return (
-            <Footnote key={index}>
+            <Footnote id={`cite-def-${index}`} key={index}>
               <Id>{index}.</Id>
               <Backlink>
-                <HashLink href={`#footnote-${index}`}>
+                <HashLink href={`#cite-ref-${index}`}>
                   <sup>
                     <Icon
                       variant="footnoteLink"
