@@ -5,8 +5,8 @@ import { mq } from "common/theme";
 
 const Layout = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1.5fr;
-  grid-gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
 
   ${mq("md")} {
     grid-template-columns: 1fr;
@@ -15,6 +15,8 @@ const Layout = styled.div`
 
 const Biography = styled.div`
   margin: 0;
+  grid-column: 1 / 3;
+  padding-right: 2rem;
 `;
 
 const Bio = () => {
