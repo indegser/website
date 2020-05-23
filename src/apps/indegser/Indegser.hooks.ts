@@ -7,7 +7,7 @@ interface IndegserLangStore {
 }
 
 export const [useIndegserLangStore] = create<IndegserLangStore>((set) => ({
-  lang: "en",
+  lang: "ko",
   changeLang: (lang) =>
     set({
       lang,
