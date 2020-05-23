@@ -3,9 +3,9 @@ import Icon from "common/atoms/icons/Icon";
 import styled from "@emotion/styled";
 
 const Box = styled.div`
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   align-items: center;
+  grid-area: indegser;
 `;
 
 const Item = styled.div`

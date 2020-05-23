@@ -1,16 +1,26 @@
-import useSWR from 'swr'
-import styled from '@emotion/styled'
-import PageContainer from 'common/atoms/container/PageContainer'
-import sejongApi from 'apis/sejongApi'
-import NewsGrid from 'common/organs/grid/NewsGrid'
-import Marquee from './Marquee'
+import useSWR from "swr";
+import styled from "@emotion/styled";
+import PageContainer from "common/atoms/container/PageContainer";
+import sejongApi from "apis/sejongApi";
+import NewsGrid from "common/organs/grid/NewsGrid";
+import Marquee from "./Marquee";
 
-const Container = styled('div')`
+const Container = styled.div`
   padding: 20px 0 40px 0;
-`
+  border-top: 1px solid var(--border400);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    border-top: 1px solid var(--border400);
+  }
+`;
 
 const Opinion = () => {
-  const { data } = useSWR('opinion', sejongApi.getStories)
+  const { data } = useSWR("opinion", sejongApi.getStories);
 
   return (
     <PageContainer>
@@ -22,7 +32,7 @@ const Opinion = () => {
         </NewsGrid>
       </Container>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Opinion
+export default Opinion;
