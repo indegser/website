@@ -8,7 +8,7 @@ Aurumplanet에서 함께 일했던 개발자들은 자신들의 작업 환경을
 
 # 디자이너를 위한 Git GUI
 
-[[ image s3Key="33/792373d19399148851d625191b64a7.jpeg" alt="indegs 1.0 홍보 이미지. (2016)" title="null" ]]
+![indegs 1.0 홍보 이미지. (2016)](https://user-images.githubusercontent.com/12758512/82827994-1f6d9580-9eeb-11ea-92cc-d5ba7aaac22c.jpg)
 
 Indegs는 [Github Desktop](https://desktop.github.com/), [Sourcetree](https://www.sourcetreeapp.com/)같은 Git GUI와 구조에 있어 매우 유사하지만 기록을 시각화하는 데에 있어서 디자이너에 특화되어 있습니다. 우선, 디자이너의 작업은 글로 설명하기 어렵습니다. 그러므로 `git commit`의 내용이 아닌 해당 버전의 미리보기 이미지가 제일 먼저 보여야합니다. 또한 개발자의 작업과는 달리 디자인 작업은 횡적입니다. 디자이너는 시안을 만듭니다. 시안은 모두가 정답이 될 가능성을 가진 중간 작업물로서, 때로 시안은 컨셉 차원에서 혹은 몇 픽셀의 수정을 통해서 생성되기도 합니다. 디자이너 역시 어떤 시안이 마지막에 가장 좋은 결과물로 탄생할지 알지 못하므로 디자인 작업은 무한히 생성되는 시안들과, 그 시안 간의 무한한 횟수의 비교를 거칩니다. Indegs는 버전을 미리보기 이미지로 보여주며, 특정 버전들을 선택해 한 눈에 비교할 수 있는 기능을 탑재하고 있습니다. `git commit`과 `git diff`의 디자인 버전입니다.
 
