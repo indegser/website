@@ -12,6 +12,7 @@ const Portfolio = () => {
       "choseh",
       "indegs",
       "alleyswonderlab",
+      "eosdaq",
       "keycat",
     ];
 

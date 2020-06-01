@@ -8,7 +8,7 @@ After witnessing programmers managing versions for two years, I wanted to make s
 
 # Git GUI for designers
 
-[[ image s3Key="33/792373d19399148851d625191b64a7.jpeg" alt="indegs 1.0 product image. (2016)" title="null" ]]
+![indegs 1.0 product image. (2016)](https://user-images.githubusercontent.com/12758512/82827994-1f6d9580-9eeb-11ea-92cc-d5ba7aaac22c.jpg)
 
 Indegs is similar to other Git GUIs like [Github Desktop](https://desktop.github.com/), [Sourcetree](https://www.sourcetreeapp.com/), but has some features specific to designers' workflow. First, designs are hard to explain with words. Thus every commit(version), even if they are managed with messages it should have preview images. Also, design process is horizontal. They build drafts. All drafts are born with potential to be final work. Designers themselves do not know which draft or version will be selected as final, thus they have to keep comparing between drafts.
 

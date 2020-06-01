@@ -14,15 +14,15 @@ AlleysMap는 애니메이션 프레임마다 GPU를 사용해 동영상과 지�
 
 Chrome 개발자 도구를 활용해 디버깅을 한 결과 자바스크립 실행 전체 시간의 70% 이상을 `getTimeByPoint` 함수가 차지하고 있음을 확인했습니다. 이 함수는 다시 `getPointOnLine` 함수를 부르는 데에 모든 시간을 쓰고 있었습니다.
 
-[[ image s3Key="b0/7f2062d973db3340b4b0987cdb92be.jpeg" alt="getTimeByPoint 함수가 전체 시간의 70% 이상을 차지하고 있다. (2017)" title="null" ]]
+![getTimeByPoint 함수가 전체 시간의 70% 이상을 차지하고 있다. (2017)](https://user-images.githubusercontent.com/12758512/82830398-96595d00-9ef0-11ea-94dd-43676b1f0931.jpg)
 
 `getPointOnLine`은 GPS 선 보정 라이브러리인 `turf.js`의 함수로서 소스코드를 확인한 후, 이 함수가 서비스가 필요로 하는 수준 이상으로 정교한 값을 계산하고 있음을 알게 되었습니다. 단순한 `for loop` 함수로 대체한 후 메모리 및 퍼포먼스 테스트를 진행했습니다.
 
-[[ image s3Key="59/78f7e599a991294c037e42328dcd77.jpeg" alt="업데이트 이전(왼쪽)과 이후(오른쪽)의 Performance 측정 비교 그래프. (2017)" title="null" ]]
+![업데이트 이전(왼쪽)과 이후(오른쪽)의 Performance 측정 비교 그래프. (2017)](https://user-images.githubusercontent.com/12758512/82830532-fa7c2100-9ef0-11ea-92a0-1e1cf4df75c0.jpg)
 
 성능 개선 후에도 팬의 굉음은 여전했지만 데시벨을 측정해서 소음의 변화 정도를 제시할 수는 없었기에 서비스에서 이루어지는 주요 사용자 인터랙션을 중심으로 메모리 프로파일링을 진행했습니다. 프로파일링은 노이즈를 제외하기 위해 크롬 시크릿 탭에서 Garbage collecting을 시킨 후 다섯 차례 진행했습니다. 주목할 점은 서비스의 초기 메모리 값은 개선 전후 모두 34mb 정도로 유사했지만, 인터랙션 후 메모리를 측정했을 때 성능 개선 버전에서 메모리가 최소 13mb, 최대 41mb 줄어든 것을 확인할 수 있었습니다.
 
-[[ image s3Key="6b/33a36b0d2c11030e4d664ca02f97a5.jpeg" alt="성능 개선 전과 후를 테이블 형태로 정리한 결과. (2017)" title="null" ]]
+![성능 개선 전과 후를 테이블 형태로 정리한 결과. (2017)](https://user-images.githubusercontent.com/12758512/82830472-cdc80980-9ef0-11ea-999a-3f8b17dbce71.jpg)
 
 # 둔촌주공프로젝트
 
@@ -30,4 +30,6 @@ Chrome 개발자 도구를 활용해 디버깅을 한 결과 자바스크립 실
 
 [[ youtube url="https://www.youtube.com/watch?v=AI3nIEaHx9c" alt="안녕, 둔촌주공아파트 소개 영상. (2017)" ]]
 
-[[ image s3Key="2c/80e66b1b31cb296d2a2d5a79b26f89.png" alt="둔촌주공아파트를 위해 작업한 그룹 지도" title="null" ]]
+![둔촌주공아파트를 위해 작업한 그룹 지도](https://user-images.githubusercontent.com/12758512/82828338-ca7e4f00-9eeb-11ea-9228-8926e4cd12d0.png)
+
+![둔촌주공아파트를 위해 작업한 그룹 지도](https://user-images.githubusercontent.com/12758512/82828262-9d31a100-9eeb-11ea-9806-b09c6baa838f.JPG)
