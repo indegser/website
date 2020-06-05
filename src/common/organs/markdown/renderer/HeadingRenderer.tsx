@@ -15,14 +15,12 @@ const Layout = styled.div`
     max-width: 320px;
     line-height: 1.3;
     margin-top: 48px;
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
   }
 
-  h1 {
-    margin-left: -24px;
-
-    ${mq("md")} {
-      margin-left: 0px;
+  ${mq("md")} {
+    h1 {
+      font-size: 1.8em;
     }
   }
 `;
@@ -49,7 +47,6 @@ const HeadingRenderer = ({ level, children }) => {
   return (
     <Layout id={id} ref={ref}>
       {heading}
-      {level === 1 && <HeadingDivider />}
     </Layout>
   );
 };

@@ -1,7 +1,14 @@
-import PageContainer from 'common/atoms/container/PageContainer'
-import Profile from './Profile'
-import NavMenu from './NavMenu'
-import styled from '@emotion/styled'
+import PageContainer from "common/atoms/container/PageContainer";
+import Profile from "./Profile";
+import NavMenu from "./NavMenu";
+import styled from "@emotion/styled";
+
+const Layout = styled.nav`
+  position: sticky;
+  top: 0;
+  background: var(--background);
+  border-bottom: 1px solid var(--border100);
+`;
 
 const Menus = styled.div`
   display: flex;
@@ -10,8 +17,7 @@ const Menus = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  border-bottom: 1px solid var(--border100);
-`
+`;
 
 const MenuLayout = styled.div`
   display: grid;
@@ -19,18 +25,18 @@ const MenuLayout = styled.div`
   grid-auto-flow: column;
   grid-gap: 0 30px;
   align-items: center;
-`
+`;
 
 const Nav = () => {
   const menu = [
     {
-      name: 'Home',
-      href: '/',
+      name: "Home",
+      href: "/",
     },
-  ]
+  ];
 
   return (
-    <nav id="global-nav">
+    <Layout id="global-nav">
       <PageContainer>
         <Menus>
           <MenuLayout>
@@ -41,8 +47,8 @@ const Nav = () => {
           <Profile />
         </Menus>
       </PageContainer>
-    </nav>
-  )
-}
+    </Layout>
+  );
+};
 
-export default Nav
+export default Nav;
