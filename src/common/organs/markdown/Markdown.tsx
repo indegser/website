@@ -15,12 +15,12 @@ import Footnotes from "./Footnotes";
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
 const Container = styled.div`
-  max-width: 680px;
-  margin: 0 auto;
+  padding: 0 24px;
   text-align: left;
+  max-width: 600px;
 
-  font-size: 17px;
-  line-height: 1.67;
+  font-size: 15px;
+  line-height: 1.74;
   word-break: break-all;
   text-align: justify;
 

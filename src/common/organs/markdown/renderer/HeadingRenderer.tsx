@@ -9,7 +9,7 @@ const Layout = styled.div`
   h3,
   h4,
   h5 {
-    font-weight: 500;
+    font-weight: 600;
     word-break: keep-all;
     text-align: left;
     max-width: 320px;
@@ -18,13 +18,13 @@ const Layout = styled.div`
     font-family: var(--font-serif);
   }
 
-  h1 {
+  /* h1 {
     margin-left: -24px;
 
     ${mq("md")} {
       margin-left: 0px;
     }
-  }
+  } */
 `;
 
 const HeadingDivider = styled.div`
@@ -49,7 +49,6 @@ const HeadingRenderer = ({ level, children }) => {
   return (
     <Layout id={id} ref={ref}>
       {heading}
-      {level === 1 && <HeadingDivider />}
     </Layout>
   );
 };
