@@ -21,7 +21,6 @@ const Story: React.FC<Props> = ({ story }) => {
     const { content } = matter(story.content);
     return content;
   }, []);
-  console.log(story);
 
   return (
     <PageContainer>

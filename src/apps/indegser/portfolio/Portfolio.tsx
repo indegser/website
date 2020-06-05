@@ -24,11 +24,11 @@ const Portfolio = () => {
   }, [lang]);
 
   return (
-    <PageContainer>
+    <>
       {sources.map((source, id) => (
         <Markdown key={id} source={source}></Markdown>
       ))}
-    </PageContainer>
+    </>
   );
 };
 

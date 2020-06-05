@@ -4,22 +4,20 @@ import { IStory } from "types/dataTypes";
 
 const Box = styled.div`
   padding: 40px 0 20px 0;
+
+  ${mq("sm")} {
+    padding: 20px 0;
+  }
 `;
 
 const Title = styled.h1`
   color: var(--text400);
-  font-size: 20px;
-  font-family: var(--font-serif);
+  font-size: 15px;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.1px;
   margin: 0;
   word-break: keep-all;
-
-  ${mq("sm")} {
-    font-size: 40px;
-    letter-spacing: -0.6px;
-  }
 `;
 
 const Excerpt = styled.h3`
@@ -38,7 +36,7 @@ interface Props extends Pick<IStory, "data"> {}
 
 const Headline: React.FC<Props> = ({ data }) => {
   const { title, excerpt } = data;
-  console.log(data);
+
   return (
     <Box>
       <Title>{title}</Title>

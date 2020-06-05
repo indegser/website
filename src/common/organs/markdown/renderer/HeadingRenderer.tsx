@@ -9,22 +9,20 @@ const Layout = styled.div`
   h3,
   h4,
   h5 {
-    font-weight: 600;
+    font-weight: 500;
     word-break: keep-all;
     text-align: left;
     max-width: 320px;
     line-height: 1.3;
     margin-top: 48px;
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
   }
 
-  /* h1 {
-    margin-left: -24px;
-
-    ${mq("md")} {
-      margin-left: 0px;
+  ${mq("md")} {
+    h1 {
+      font-size: 1.8em;
     }
-  } */
+  }
 `;
 
 const HeadingDivider = styled.div`
