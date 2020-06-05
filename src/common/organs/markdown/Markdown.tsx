@@ -28,8 +28,8 @@ const Container = styled.div`
 
   ${spacingVariables.markdownPadding}: 0 24px;
 
-  ${mq("sm")} {
-    font-size: 14px;
+  ${mq("md")} {
+    font-size: 16px;
     ${spacingVariables.markdownPadding}: 0px;
     text-align: left;
     word-break: break-word;
