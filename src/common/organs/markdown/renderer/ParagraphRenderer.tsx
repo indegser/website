@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 const Paragraph = styled.div`
   #footnote & {
@@ -6,7 +6,8 @@ const Paragraph = styled.div`
   }
 
   margin-top: 1em;
-  color: var(--text300);
+  color: var(--text400);
+  font-family: var(--font-serif);
   hyphens: auto;
 
   blockquote & {
@@ -17,10 +18,10 @@ const Paragraph = styled.div`
     margin: 2em auto;
     font-weight: 500;
   }
-`
+`;
 
 const ParagraphRenderer = (props) => {
-  return <Paragraph {...props} />
-}
+  return <Paragraph {...props} />;
+};
 
-export default ParagraphRenderer
+export default ParagraphRenderer;

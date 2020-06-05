@@ -110,9 +110,9 @@ const App = ({ Component, pageProps }) => {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Lusitana&family=Nanum+Myeongjo:wght@700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600&display=swap"
           rel="stylesheet"
-        />
+        ></link>
       </Head>
       <Page>
         <Banner />

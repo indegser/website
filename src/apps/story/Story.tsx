@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Container = styled.div`
-  max-width: 680px;
+  max-width: 1000px;
   margin: 0 auto;
 `;
 
@@ -21,6 +21,7 @@ const Story: React.FC<Props> = ({ story }) => {
     const { content } = matter(story.content);
     return content;
   }, []);
+  console.log(story);
 
   return (
     <PageContainer>
