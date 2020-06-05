@@ -76,6 +76,7 @@ const App = ({ Component, pageProps }) => {
     <>
       <GlobalStyle />
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
