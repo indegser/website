@@ -11,22 +11,28 @@ import FootnoteReference from "./renderer/footnote/FootnoteReference";
 import Shortcode from "./shortcode/Shortcode";
 import { useFootnote, MarkdownProvider } from "./Markdown.hooks";
 import Footnotes from "./Footnotes";
+import { spacingVariables } from "ui/variables";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
 const Container = styled.div`
-  padding: 0 24px;
+  padding: var(${spacingVariables.markdownPadding});
   text-align: left;
   max-width: 600px;
 
   font-size: 15px;
   line-height: 1.74;
-  word-break: break-all;
-  text-align: justify;
+  word-break: break-word;
+  color: var(--text400);
+  font-family: var(--font-serif);
+
+  ${spacingVariables.markdownPadding}: 0 24px;
 
   ${mq("sm")} {
-    font-size: 16px;
-    line-height: 1.67;
+    font-size: 14px;
+    ${spacingVariables.markdownPadding}: 0px;
+    text-align: left;
+    word-break: break-word;
   }
 
   strong {

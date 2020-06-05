@@ -1,23 +1,21 @@
-import styled from '@emotion/styled'
-import { mq } from 'common/theme'
+import styled from "@emotion/styled";
+import { mq } from "common/theme";
+import { spacingVariables } from "ui/variables";
 
 const PageContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 48px;
+  padding: 0 var(${spacingVariables.pagePadding});
+  ${spacingVariables.pagePadding}: 48px;
 
   ${mq(840)} {
-    & {
-      padding: 0 32px;
-    }
+    ${spacingVariables.pagePadding}: 32px;
   }
 
   ${mq(640)} {
-    & {
-      padding: 0 16px;
-    }
+    ${spacingVariables.pagePadding}: 20px;
   }
-`
+`;
 
-export default PageContainer
+export default PageContainer;
