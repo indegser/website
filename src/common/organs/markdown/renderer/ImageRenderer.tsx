@@ -1,14 +1,19 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
+import { spacingVariables } from "ui/variables";
+import { mq } from "common/theme";
 
 const Image = styled.figure`
+  --padding-x: 0px;
+
+  ${mq(664)} {
+    --padding-x: calc(var(${spacingVariables.pagePadding}) * -1);
+  }
+
   display: block;
-  width: 100%;
-  margin: 0;
-  margin: 3em 0;
+  margin: 3em var(--padding-x);
 
   img {
     max-width: 100%;
-    max-height: 600px;
     display: block;
     height: auto;
     margin: 0 auto;
@@ -18,12 +23,11 @@ const Image = styled.figure`
     display: block;
     padding-top: 12px !important;
     font-size: 13px;
-    width: var(--content-width);
-    margin: 0 auto;
+    padding: 0 calc(var(--padding-x) * -1);
     color: #444;
     letter-spacing: 0.03px;
   }
-`
+`;
 
 const ImageRenderer = ({ alt, src }) => {
   return (
@@ -31,7 +35,7 @@ const ImageRenderer = ({ alt, src }) => {
       <img src={src} alt={alt} />
       <figcaption>{alt}</figcaption>
     </Image>
-  )
-}
+  );
+};
 
-export default ImageRenderer
+export default ImageRenderer;
