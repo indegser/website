@@ -23,13 +23,10 @@ const Layout = styled.div`
       font-size: 1.8em;
     }
   }
-`;
 
-const HeadingDivider = styled.div`
-  width: 24px;
-  height: 4px;
-  background: var(--text400);
-  margin-bottom: 24px;
+  & code {
+    font-size: inherit;
+  }
 `;
 
 const HeadingRenderer = ({ level, children }) => {
