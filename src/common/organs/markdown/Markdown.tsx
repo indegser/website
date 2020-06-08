@@ -12,6 +12,7 @@ import Shortcode from "./shortcode/Shortcode";
 import { useFootnote, MarkdownProvider } from "./Markdown.hooks";
 import Footnotes from "./Footnotes";
 import { spacingVariables } from "ui/variables";
+import Code from "./renderer/Code";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
@@ -57,6 +58,13 @@ const Container = styled.div`
       color: var(--primary200);
     }
   }
+
+  code,
+  pre {
+    padding: 4px 8px;
+    border-radius: 0.2em;
+    background: var(--bg100);
+  }
 `;
 
 const Markdown: FC<Props> = (props) => {
@@ -79,6 +87,7 @@ const Markdown: FC<Props> = (props) => {
             thematicBreak: BreakRenderer,
             paragraph: ParagraphRenderer,
             shortcode: Shortcode,
+            code: Code,
           }}
         />
         <Footnotes />
