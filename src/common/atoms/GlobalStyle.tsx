@@ -3,8 +3,8 @@ import { Global, css } from "@emotion/core";
 const styles = css`
   :root {
     --font-sans: Roboto, Segoe UI, Noto Sans KR, sans-serif;
-    --font-serif: Lusitana, Nanum Myeongjo, Georgia, Cambria, "Times New Roman",
-      Times, Noto Serif KR, serif;
+    --font-serif: Noto Serif KR, Nanum Myeongjo, Georgia, Cambria,
+      "Times New Roman", Times, serif;
   }
 
   html {
@@ -65,6 +65,13 @@ const styles = css`
     &:hover {
       background: #ebedf1;
     }
+  }
+
+  code {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    font-size: 14px;
+    white-space: pre;
+    padding: 0 2px;
   }
 
   textarea {

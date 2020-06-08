@@ -8,20 +8,21 @@ const Box = styled.div`
   margin-top: 40px;
   padding-top: 1rem;
   border-top: 1px solid var(--border100);
+  font-family: var(--font-sans);
 `;
 
 const Title = styled.div`
   margin: 0;
   font-size: 15px;
   font-weight: 500;
-  color: var(--text300);
+  color: var(--text400);
   padding-bottom: 1rem;
 `;
 
 const Footnote = styled.div`
   position: relative;
-  font-size: 14px;
-  color: var(--text200);
+  font-size: 13px;
+  color: var(--text300);
   display: grid;
   grid-template-columns: max-content max-content auto;
   grid-gap: 0px;
