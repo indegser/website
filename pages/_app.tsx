@@ -37,6 +37,11 @@ const palette = {
       ratios: [1.3, 2, 4, 8],
     },
     {
+      name: "bg",
+      colorKeys: ["#1b1f23"],
+      ratios: [1.09],
+    },
+    {
       name: "primary",
       colorKeys: ["#0088ff"],
       colorspace: COLORSPACE,
