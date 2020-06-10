@@ -8,6 +8,7 @@ const Layout = styled.nav`
   top: 0;
   background: var(--background);
   border-bottom: 1px solid var(--border100);
+  z-index: 99;
 `;
 
 const Menus = styled.div`
