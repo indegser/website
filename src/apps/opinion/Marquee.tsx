@@ -65,7 +65,7 @@ const Marquee: FC<Props> = ({ story }) => {
 
   const linkProps = {
     href: "/story/[...slug]",
-    as: `/story/${story.slug}`,
+    as: `/story/${story.slug}----${story.id}`,
   };
 
   if (!story.data.title) return null;
