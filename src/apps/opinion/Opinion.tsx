@@ -49,6 +49,7 @@ const Opinion = () => {
     firebase
       .firestore()
       .collection("stories")
+      .orderBy("modifiedAt", "desc")
       .get()
       .then((d) => {
         setData(
