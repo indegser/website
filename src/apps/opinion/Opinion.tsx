@@ -1,11 +1,11 @@
-import useSWR from "swr";
 import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
-import sejongApi from "apis/sejongApi";
 import NewsGrid from "common/organs/grid/NewsGrid";
 import Marquee from "./Marquee";
 import Author from "./Author";
 import { mq } from "common/theme";
+import { useEffect, useState } from "react";
+import firebase from "firebase/app";
 
 const Container = styled.div`
   padding: 24px 0 40px 0;
@@ -44,7 +44,24 @@ const Content = styled.div`
 `;
 
 const Opinion = () => {
-  const { data } = useSWR("opinion", sejongApi.getStories);
+  const [data, setData] = useState<IStory[]>([]);
+  useEffect(() => {
+    firebase
+      .firestore()
+      .collection("stories")
+      .get()
+      .then((d) => {
+        setData(
+          d.docs.map((d) => ({
+            id: d.id,
+            ...d.data(),
+          })) as IStory[]
+        );
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
 
   return (
     <PageContainer>

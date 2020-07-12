@@ -1,10 +1,9 @@
 import Error from "next/error";
 import Story from "apps/story/Story";
-import sejongApi from "apis/sejongApi";
-import { IStory } from "types/dataTypes";
 import { FC } from "react";
 import Editor from "apps/editor/Editor";
 import { GetServerSideProps } from "next";
+import firebase from "firebase/app";
 
 interface Props {
   story: IStory;
@@ -27,12 +26,15 @@ export const getServerSideProps: GetServerSideProps = async ({
   res,
 }) => {
   const slug = Array.isArray(query.slug) ? query.slug.join("/") : query.slug;
+  const [_, id] = slug.split("----");
+
   const { edit = null } = query;
 
   let story: IStory = null;
 
   try {
-    story = await sejongApi.getStory(slug);
+    const doc = await firebase.firestore().collection("stories").doc(id).get();
+    story = { id: doc.id, ...doc.data() } as IStory;
     res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
   } catch (err) {}
 
