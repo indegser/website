@@ -1,4 +1,3 @@
-import { IStory } from "types/dataTypes";
 import { FC, useMemo } from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";

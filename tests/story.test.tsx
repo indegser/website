@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
 import Story from "apps/story/Story";
-import { IStory } from "types/dataTypes";
 
 describe("story", () => {
   it("renders markdown", () => {

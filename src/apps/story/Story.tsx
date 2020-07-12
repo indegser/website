@@ -1,6 +1,5 @@
 import PageContainer from "common/atoms/container/PageContainer";
 import Toc from "./toc/Toc";
-import { IStory } from "types/dataTypes";
 import { useMemo } from "react";
 import matter from "gray-matter";
 import Headline from "./Headline";
