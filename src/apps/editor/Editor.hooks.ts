@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { IStory } from "types/dataTypes";
 import firebase from "firebase/app";
 import grayMatter from "gray-matter";
 import { useBannerStore } from "common/organs/banner/Banner.hooks";
