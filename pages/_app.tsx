@@ -11,7 +11,7 @@ import { generateAdaptiveTheme } from "@adobe/leonardo-contrast-colors";
 import { useTokenStore } from "stores/tokenStore";
 
 import firebase from "firebase/app";
-// import 'firebase/auth'
+import "firebase/auth";
 import "firebase/firestore";
 
 if (firebase.apps.length === 0) {
