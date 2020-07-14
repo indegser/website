@@ -36,7 +36,9 @@ export const getServerSideProps: GetServerSideProps = async ({
     const doc = await firebase.firestore().collection("stories").doc(id).get();
     story = { id: doc.id, ...doc.data() } as IStory;
     res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
-  } catch (err) {}
+  } catch (err) {
+    console.log(err.message);
+  }
 
   return { props: { story, edit } };
 };

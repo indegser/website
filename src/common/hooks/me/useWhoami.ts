@@ -1,6 +1,3 @@
-import { useTokenStore } from "stores/tokenStore";
-import useSWR from "swr";
-
 const useWhoami = () => {
   // const token = useTokenStore((s) => s.token)
   // if (!token) return null
