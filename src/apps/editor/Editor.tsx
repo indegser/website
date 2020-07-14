@@ -1,24 +1,23 @@
-import { FC } from 'react'
-import { IStory } from 'types/dataTypes'
-import FormContainer from 'common/atoms/container/FormContainer'
-import Label from 'common/atoms/form/Label'
-import { PrimaryButton, RectPrimaryButton } from 'common/atoms/button/Button'
-import { useEditorForm } from './Editor.hooks'
-import { FormGroup } from 'common/atoms/form/FormGroup'
-import ImageUpload from './image-upload/ImageUpload'
-import styled from '@emotion/styled'
+import { FC } from "react";
+import FormContainer from "common/atoms/container/FormContainer";
+import Label from "common/atoms/form/Label";
+import { RectPrimaryButton } from "common/atoms/button/Button";
+import { useEditorForm } from "./Editor.hooks";
+import { FormGroup } from "common/atoms/form/FormGroup";
+import ImageUpload from "./image-upload/ImageUpload";
+import styled from "@emotion/styled";
 
 interface Props {
-  story?: IStory
+  story?: IStory;
 }
 
 const Action = styled.div`
   display: flex;
   justify-content: flex-end;
-`
+`;
 
 const Editor: FC<Props> = ({ story }) => {
-  const { register, handleSubmit } = useEditorForm(story)
+  const { register, handleSubmit } = useEditorForm(story);
 
   return (
     <div>
@@ -26,22 +25,11 @@ const Editor: FC<Props> = ({ story }) => {
         <form onSubmit={handleSubmit}>
           <FormGroup>
             <Label required label="슬러그" htmlFor="slug" />
-            <input
-              ref={register}
-              id="slug"
-              name="slug"
-              defaultValue={story?.slug}
-            />
+            <input ref={register} id="slug" name="slug" />
           </FormGroup>
           <FormGroup>
             <Label label="내용" htmlFor="content" />
-            <textarea
-              rows={12}
-              ref={register}
-              id="content"
-              name="content"
-              defaultValue={story?.content}
-            />
+            <textarea rows={12} ref={register} id="content" name="content" />
           </FormGroup>
           <FormGroup>
             <Action>
@@ -52,7 +40,7 @@ const Editor: FC<Props> = ({ story }) => {
         <ImageUpload />
       </FormContainer>
     </div>
-  )
-}
+  );
+};
 
-export default Editor
+export default Editor;

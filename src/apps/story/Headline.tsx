@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
-import { IStory } from "types/dataTypes";
 
 const Box = styled.div`
   padding: 40px 0 20px 0;

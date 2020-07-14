@@ -10,6 +10,16 @@ import { useEffect } from "react";
 import { generateAdaptiveTheme } from "@adobe/leonardo-contrast-colors";
 import { useTokenStore } from "stores/tokenStore";
 
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+
+if (firebase.apps.length === 0) {
+  const { NEXT_PUBLIC_FIREBASE_CONFIG } = process.env;
+  const config = JSON.parse(NEXT_PUBLIC_FIREBASE_CONFIG);
+  firebase.initializeApp(config);
+}
+
 const Page = styled.div`
   display: flex;
   flex-direction: column;

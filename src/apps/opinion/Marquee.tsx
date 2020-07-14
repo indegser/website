@@ -1,4 +1,3 @@
-import { IStory } from "types/dataTypes";
 import { FC, useMemo } from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
@@ -65,7 +64,7 @@ const Marquee: FC<Props> = ({ story }) => {
 
   const linkProps = {
     href: "/story/[...slug]",
-    as: `/story/${story.slug}`,
+    as: `/story/${story.slug}----${story.id}`,
   };
 
   if (!story.data.title) return null;
