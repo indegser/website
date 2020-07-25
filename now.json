@@ -1,10 +1,11 @@
 {
-  "regions": ["icn1"],
-  "routes": [
+  "regions": [
+    "icn1"
+  ],
+  "headers": [
     {
-      "src": "/(book|story)/(.*)",
+      "src": "/story/(.*)",
       "headers": {
-        "access-control-allow-origin": "*",
         "cache-control": "s-maxage=1, stale-while-revalidate"
       }
     }
