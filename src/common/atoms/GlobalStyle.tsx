@@ -45,8 +45,8 @@ const styles = css`
     border: 0;
     border: 1px solid #dcdee0;
     background: #f0f4fb;
-    line-height: 1.5rem;
-    font-size: 0.925rem;
+    line-height: 1.6rem;
+    font-size: 1rem;
     padding: 6px 12px;
     border-radius: 4px;
     outline: 0;
@@ -75,8 +75,8 @@ const styles = css`
   }
 
   textarea {
+    font-size: 0.925rem;
     resize: vertical;
-    font-size: 13px;
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
       monospace;
   }

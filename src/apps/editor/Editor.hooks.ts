@@ -9,7 +9,7 @@ type FormData = {
 };
 
 export const useEditorForm = (story?: IStory) => {
-  const { register, handleSubmit } = useForm<FormData>({
+  const { watch, register, handleSubmit } = useForm<FormData>({
     defaultValues: {
       slug: story?.slug,
       content: story?.content,
@@ -57,6 +57,7 @@ export const useEditorForm = (story?: IStory) => {
   };
 
   return {
+    watch,
     register,
     handleSubmit: handleSubmit(submit),
   };
