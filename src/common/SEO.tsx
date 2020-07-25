@@ -10,15 +10,12 @@ interface Props {
 
 const SEO: FC<Props> = ({ title, description, image }) => {
   const { asPath } = useRouter();
-  const vercelUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
   return (
     <NextSeo
       title={title}
       description={description}
       openGraph={{
-        url: `${vercelUrl}${asPath}`,
+        url: `${process.env.VERCEL_URL}${asPath}`,
         title,
         description,
         images: image ? [{ url: image }] : [],

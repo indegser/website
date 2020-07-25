@@ -12,6 +12,7 @@ module.exports = {
     GITHUB_REF,
     GITHUB_SHA,
     SEJONG_URL,
+    VERCEL_URL: `https://${process.env.VERCEL_URL}` || "http://localhost:3000",
   },
   webpack: (config) => {
     config.module.rules.push(
