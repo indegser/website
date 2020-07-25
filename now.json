@@ -5,9 +5,12 @@
   "headers": [
     {
       "source": "/story/(.*)",
-      "headers": {
-        "cache-control": "s-maxage=1, stale-while-revalidate"
-      }
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=1, stale-while-revalidate"
+        }
+      ]
     }
   ]
 }
