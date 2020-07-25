@@ -6,6 +6,8 @@ import { useEditorForm } from "./Editor.hooks";
 import { FormGroup } from "common/atoms/form/FormGroup";
 import ImageUpload from "./image-upload/ImageUpload";
 import styled from "@emotion/styled";
+import Preview from "./Preview";
+import { Tabs, TabPane } from "ui/tabs";
 
 interface Props {
   story?: IStory;
@@ -17,7 +19,7 @@ const Action = styled.div`
 `;
 
 const Editor: FC<Props> = ({ story }) => {
-  const { register, handleSubmit } = useEditorForm(story);
+  const { watch, register, handleSubmit } = useEditorForm(story);
 
   return (
     <div>
@@ -27,10 +29,21 @@ const Editor: FC<Props> = ({ story }) => {
             <Label required label="슬러그" htmlFor="slug" />
             <input ref={register} id="slug" name="slug" />
           </FormGroup>
-          <FormGroup>
-            <Label label="내용" htmlFor="content" />
-            <textarea rows={12} ref={register} id="content" name="content" />
-          </FormGroup>
+          <Tabs defaultActiveKey="1">
+            <TabPane tab="쓰기" key="1">
+              <FormGroup>
+                <textarea
+                  rows={12}
+                  ref={register}
+                  id="content"
+                  name="content"
+                />
+              </FormGroup>
+            </TabPane>
+            <TabPane tab="미리보기" key="2">
+              <Preview watch={watch} />
+            </TabPane>
+          </Tabs>
           <FormGroup>
             <Action>
               <RectPrimaryButton type="submit">Publish</RectPrimaryButton>
