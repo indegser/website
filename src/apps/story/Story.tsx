@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import Headline from "./Headline";
 import styled from "@emotion/styled";
 import Markdown from "common/organs/markdown/Markdown";
+import SEO from "common/SEO";
 
 interface Props {
   story: IStory;
@@ -22,13 +23,20 @@ const Story: React.FC<Props> = ({ story }) => {
   }, []);
 
   return (
-    <PageContainer>
-      <Container>
-        <Headline data={story.data} />
-        <Toc content={content} />
-        <Markdown source={content} />
-      </Container>
-    </PageContainer>
+    <>
+      <SEO
+        title={story.data.title}
+        description={story.data.excerpt}
+        image={story.data.coverUrl}
+      />
+      <PageContainer>
+        <Container>
+          <Headline data={story.data} />
+          <Toc content={content} />
+          <Markdown source={content} />
+        </Container>
+      </PageContainer>
+    </>
   );
 };
 
