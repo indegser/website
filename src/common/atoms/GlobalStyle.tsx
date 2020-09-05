@@ -69,9 +69,10 @@ const styles = css`
 
   code {
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    font-size: 14px;
     white-space: pre;
-    padding: 0 2px;
+    overflow-wrap: normal;
+    font-feature-settings: normal;
+    -webkit-font-smoothing: normal;
   }
 
   textarea {

@@ -46,7 +46,7 @@ const Gist: React.FC<Props> = ({ src, ...e }) => {
           </style>
         </head>
         <body>
-          <script src=${src}></script>
+          <script type="text/javascript" src=${src}></script>
         </body>
       </html>
     `);
