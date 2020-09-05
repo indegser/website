@@ -68,7 +68,6 @@ const Box = styled.div`
 `;
 
 const Code = ({ language, value }) => {
-  console.log(value);
   return (
     <Box>
       <Refractor language={language} value={value.trim()} />
