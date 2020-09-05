@@ -12,6 +12,18 @@ Refractor.registerLanguage(ts);
 Refractor.registerLanguage(tsx);
 
 const Box = styled.div`
+  pre,
+  code {
+    white-space: pre;
+    padding: 0;
+    font-size: 12px;
+    text-size-adjust: auto;
+  }
+
+  pre {
+    padding: 8px 12px;
+  }
+
   .token.comment,
   .token.prolog,
   .token.doctype,
@@ -58,7 +70,7 @@ const Box = styled.div`
 const Code = ({ language, value }) => {
   return (
     <Box>
-      <Refractor language={language} value={value} />
+      <Refractor language={language} value={value.trim()} />
     </Box>
   );
 };

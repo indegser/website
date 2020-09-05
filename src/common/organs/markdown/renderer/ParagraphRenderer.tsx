@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import BlockLink from "../link/BlockLink";
 
 const Paragraph = styled.div`
   #footnote & {
@@ -21,6 +22,16 @@ const Paragraph = styled.div`
 `;
 
 const ParagraphRenderer = (props) => {
+  const isBlockLink =
+    props.children.length === 1 && props.children[0].type === "a";
+
+  if (isBlockLink) {
+    return (
+      <Paragraph>
+        <BlockLink {...props.children[0].props} />
+      </Paragraph>
+    );
+  }
   return <Paragraph {...props} />;
 };
 

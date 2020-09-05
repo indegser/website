@@ -4,8 +4,6 @@ import Nav from "common/organs/nav/Nav";
 import styled from "@emotion/styled";
 import Head from "next/head";
 import Banner from "common/organs/banner/Banner";
-import Router from "next/router";
-import withGA from "next-ga";
 import { useEffect } from "react";
 import { generateAdaptiveTheme } from "@adobe/leonardo-contrast-colors";
 import { useTokenStore } from "stores/tokenStore";
@@ -13,6 +11,12 @@ import { useTokenStore } from "stores/tokenStore";
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import { Router } from "next/router";
+import { Analytics } from "apis/analytics";
+
+export function reportWebVitals(metric) {
+  Analytics.reportWebVitals(metric);
+}
 
 if (firebase.apps.length === 0) {
   const { NEXT_PUBLIC_FIREBASE_CONFIG } = process.env;
@@ -80,6 +84,8 @@ const themes = JSON.stringify({
   dark: createTheme(12),
 });
 
+Router.events.on("routeChangeComplete", Analytics.pageView);
+
 const App = ({ Component, pageProps }) => {
   const setToken = useTokenStore((s) => s.setToken);
   useEffect(() => {
@@ -143,4 +149,4 @@ const App = ({ Component, pageProps }) => {
   );
 };
 
-export default withGA("UA-116457571-1", Router)(App);
+export default App;
