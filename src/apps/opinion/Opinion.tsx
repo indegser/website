@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
-import NewsGrid from "common/organs/grid/NewsGrid";
 import Marquee from "./Marquee";
 import Author from "./Author";
 import { mq } from "common/theme";
@@ -70,11 +69,9 @@ const Opinion = () => {
         <Content>
           <Author />
           <NewsContent>
-            <NewsGrid>
-              {data?.map((story) => (
-                <Marquee key={story.id} story={story} />
-              ))}
-            </NewsGrid>
+            {data?.map((story) => (
+              <Marquee key={story.id} story={story} />
+            ))}
           </NewsContent>
         </Content>
       </Container>

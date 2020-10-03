@@ -19,13 +19,14 @@ interface Props extends ComponentProps<typeof ReactMarkdown> {}
 const Container = styled.div`
   padding: var(${spacingVariables.markdownPadding});
   text-align: left;
-  max-width: 600px;
+  max-width: 640px;
 
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.74;
   word-break: break-word;
-  color: var(--text400);
+  color: var(--text500);
   font-family: var(--font-serif);
+  -webkit-text-stroke: 0.3px;
 
   ${spacingVariables.markdownPadding}: 0 24px;
 
@@ -34,6 +35,7 @@ const Container = styled.div`
     ${spacingVariables.markdownPadding}: 0px;
     text-align: left;
     word-break: break-word;
+    -webkit-text-stroke: 0.1px;
   }
 
   strong {
