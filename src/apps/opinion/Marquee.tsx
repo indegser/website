@@ -1,8 +1,7 @@
 import { FC, useMemo } from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { dateFns } from "utils/dateUtils";
-import { capitalize } from "utils/stringUtils";
+import dayjs from "dayjs";
 
 interface Props {
   story: IStory;
@@ -13,10 +12,11 @@ const MarqueeBox = styled.div`
   page-break-inside: avoid;
   position: relative;
   border-bottom: 1px solid var(--border100);
-  display: flex;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
-  font-family: var(--font-serif);
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 114px auto max-content;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   p {
     margin: 0.5rem 0;
@@ -29,37 +29,45 @@ const MarqueeContent = styled.div`
 `;
 
 const MarqueeTitle = styled.div`
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1.35;
   margin-bottom: 4px;
   color: var(--text400);
 `;
 
 const MarqueeExcerpt = styled.div`
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
   color: var(--text300);
 `;
 
 const MarqueeDate = styled.div`
-  font-size: 13px;
+  font-size: 12px;
   line-height: 16px;
   color: var(--text200);
-  margin-top: 12px;
   font-family: var(--font-sans);
 `;
 
 const MarqueeCover = styled.img`
   flex: 0 0 auto;
-  width: 120px;
+  width: 200px;
   height: auto;
 `;
 
 const Marquee: FC<Props> = ({ story }) => {
   const relDate = useMemo(() => {
-    const text = dateFns.formatRelative(story.modifiedAt, Date.now());
-    return capitalize(text);
+    const nowYear = dayjs().year();
+    const storyDay = dayjs(story.modifiedAt);
+    const storyYear = storyDay.year();
+    let res = storyDay.format("MMM D");
+
+    if (nowYear !== storyYear) {
+      res += `, ${storyYear}`;
+    }
+
+    return res;
   }, [story.modifiedAt]);
 
   const linkProps = {
@@ -71,17 +79,17 @@ const Marquee: FC<Props> = ({ story }) => {
 
   return (
     <MarqueeBox>
+      <MarqueeDate>{relDate}</MarqueeDate>
       <MarqueeContent>
-        <Link {...linkProps}>
+        <Link {...linkProps} passHref>
           <a>
             <MarqueeTitle>{story.data.title}</MarqueeTitle>
             <MarqueeExcerpt>{story.data.excerpt}</MarqueeExcerpt>
           </a>
         </Link>
-        <MarqueeDate>{relDate}</MarqueeDate>
       </MarqueeContent>
       {story.data.coverUrl && (
-        <Link {...linkProps}>
+        <Link {...linkProps} passHref>
           <a>
             <MarqueeCover src={story.data.coverUrl} alt={story.data.coverAlt} />
           </a>
