@@ -11,7 +11,7 @@ const Box = styled.div`
 const Item = styled.div`
   padding-right: 12px;
   margin-right: 12px;
-  color: var(--text200);
+  color: var(--text300);
   font-size: 14px;
   border-right: 1px solid var(--text100);
 
@@ -23,8 +23,8 @@ const Item = styled.div`
 `;
 
 const Copyright = styled.div`
-  font-size: 15px;
-  color: var(--text200);
+  font-size: 14px;
+  color: var(--text300);
   padding-right: 16px;
   letter-spacing: 0.1px;
 `;

@@ -2,6 +2,7 @@ import { FC, useMemo } from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import dayjs from "dayjs";
+import { mq } from "common/theme";
 
 interface Props {
   story: IStory;
@@ -17,6 +18,11 @@ const MarqueeBox = styled.div`
   grid-template-columns: 114px auto max-content;
   padding-bottom: 20px;
   margin-bottom: 20px;
+
+  ${mq("md")} {
+    grid-template-columns: 1fr;
+    grid-gap: 4px;
+  }
 
   p {
     margin: 0.5rem 0;
@@ -34,6 +40,10 @@ const MarqueeTitle = styled.div`
   line-height: 1.35;
   margin-bottom: 4px;
   color: var(--text400);
+
+  ${mq("md")} {
+    font-size: 17px;
+  }
 `;
 
 const MarqueeExcerpt = styled.div`
@@ -46,7 +56,8 @@ const MarqueeExcerpt = styled.div`
 const MarqueeDate = styled.div`
   font-size: 12px;
   line-height: 16px;
-  color: var(--text200);
+  color: var(--text300);
+  padding-top: 2px;
   font-family: var(--font-sans);
 `;
 
@@ -54,6 +65,10 @@ const MarqueeCover = styled.img`
   flex: 0 0 auto;
   width: 200px;
   height: auto;
+
+  ${mq("md")} {
+    margin-top: 8px;
+  }
 `;
 
 const Marquee: FC<Props> = ({ story }) => {
