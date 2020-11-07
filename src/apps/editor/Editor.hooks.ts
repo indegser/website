@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import firebase from "firebase/app";
 import grayMatter from "gray-matter";
 import { useBannerStore } from "common/organs/banner/Banner.hooks";
+import backend from "apis/backend";
 
 type FormData = {
   slug: string;
@@ -20,7 +20,7 @@ export const useEditorForm = (story?: IStory) => {
   const submit = async (data: FormData) => {
     const { data: matter } = grayMatter(data.content);
 
-    const collection = firebase.firestore().collection("stories");
+    const collection = backend.firestore().collection("stories");
 
     try {
       if (story?.id) {
