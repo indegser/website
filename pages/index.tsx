@@ -1,3 +1,3 @@
-import Opinion from "apps/opinion/Opinion";
+import Issues from "apps/issues/Issues";
 
-export default Opinion;
+export default Issues;

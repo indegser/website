@@ -3,9 +3,10 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import dayjs from "dayjs";
 import { mq } from "common/theme";
+import { IssuesListForRepoResponseData } from "@octokit/types";
 
 interface Props {
-  story: IStory;
+  issue: IssuesListForRepoResponseData[number];
 }
 
 const MarqueeBox = styled.div`
@@ -35,22 +36,18 @@ const MarqueeContent = styled.div`
 `;
 
 const MarqueeTitle = styled.div`
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1.35;
-  margin-bottom: 4px;
-  color: var(--text400);
-
-  ${mq("md")} {
-    font-size: 17px;
-  }
+  margin-bottom: 2px;
+  color: var(--text600);
 `;
 
 const MarqueeExcerpt = styled.div`
-  font-size: 14px;
-  line-height: 21px;
-  letter-spacing: 0.2px;
   color: var(--text300);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.2px;
 `;
 
 const MarqueeDate = styled.div`
@@ -61,20 +58,10 @@ const MarqueeDate = styled.div`
   font-family: var(--font-sans);
 `;
 
-const MarqueeCover = styled.img`
-  flex: 0 0 auto;
-  width: 200px;
-  height: auto;
-
-  ${mq("md")} {
-    margin-top: 8px;
-  }
-`;
-
-const Marquee: FC<Props> = ({ story }) => {
-  const relDate = useMemo(() => {
+const IssueMarquee: FC<Props> = ({ issue }) => {
+  const desc = useMemo(() => {
     const nowYear = dayjs().year();
-    const storyDay = dayjs(story.modifiedAt);
+    const storyDay = dayjs(issue.updated_at);
     const storyYear = storyDay.year();
     let res = storyDay.format("MMM D");
 
@@ -83,35 +70,26 @@ const Marquee: FC<Props> = ({ story }) => {
     }
 
     return res;
-  }, [story.modifiedAt]);
+  }, [issue.updated_at]);
 
-  const linkProps = {
-    href: "/story/[...slug]",
-    as: `/story/${story.slug}----${story.id}`,
-  };
-
-  if (!story.data.title) return null;
+  const authors = issue.labels
+    .map((label) => label.name)
+    .concat([desc])
+    .join(" · ");
 
   return (
     <MarqueeBox>
-      <MarqueeDate>{relDate}</MarqueeDate>
+      <MarqueeDate>{`#${issue.number}`}</MarqueeDate>
       <MarqueeContent>
-        <Link {...linkProps} passHref>
+        <Link href={`/issue/${issue.number}`} passHref>
           <a>
-            <MarqueeTitle>{story.data.title}</MarqueeTitle>
-            <MarqueeExcerpt>{story.data.excerpt}</MarqueeExcerpt>
+            <MarqueeTitle>{issue.title}</MarqueeTitle>
+            <MarqueeExcerpt>{authors}</MarqueeExcerpt>
           </a>
         </Link>
       </MarqueeContent>
-      {story.data.coverUrl && (
-        <Link {...linkProps} passHref>
-          <a>
-            <MarqueeCover src={story.data.coverUrl} alt={story.data.coverAlt} />
-          </a>
-        </Link>
-      )}
     </MarqueeBox>
   );
 };
 
-export default Marquee;
+export default IssueMarquee;

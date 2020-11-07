@@ -21,17 +21,17 @@ const Container = styled.div`
   text-align: left;
   max-width: 640px;
 
-  font-size: 17px;
-  line-height: 1.74;
+  font-size: 15px;
+  line-height: 1.95;
   word-break: break-word;
-  color: var(--text500);
+  letter-spacing: -0.1px;
+  color: var(--text600);
   font-family: var(--font-serif);
-  -webkit-text-stroke: 0.3px;
+  /* -webkit-text-stroke: 0.05px; */
 
   ${spacingVariables.markdownPadding}: 0 24px;
 
   ${mq("md")} {
-    font-size: 16px;
     ${spacingVariables.markdownPadding}: 0px;
     text-align: left;
     word-break: break-word;

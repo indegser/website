@@ -10,7 +10,6 @@ import { useTokenStore } from "stores/tokenStore";
 
 import { Router } from "next/router";
 import { Analytics } from "apis/analytics";
-import backend from "apis/backend";
 
 export function reportWebVitals(metric) {
   Analytics.reportWebVitals(metric);
@@ -35,7 +34,7 @@ const palette = {
       name: "text",
       colorKeys: ["#cacaca"],
       colorspace: COLORSPACE,
-      ratios: [2, 4.6, 8, 12, 15],
+      ratios: [2, 4.6, 8, 12, 15, 21],
     },
     {
       name: "border",
@@ -119,10 +118,6 @@ const App = ({ Component, pageProps }) => {
         ></script>
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap"
           rel="stylesheet"

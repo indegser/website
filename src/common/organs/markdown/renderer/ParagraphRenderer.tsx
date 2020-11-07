@@ -7,13 +7,11 @@ const Paragraph = styled.div`
   }
 
   margin-top: 1em;
-  color: var(--text400);
-  font-family: var(--font-serif);
   hyphens: auto;
 
   blockquote & {
     padding-left: 1em;
-    font-size: 0.9em;
+    /* font-size: em; */
     border-left: 2px solid var(--border100);
     box-sizing: border-box;
     margin: 2em auto;

@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
-import Marquee from "./Marquee";
+import IssueMarquee from "./Marquee";
 import Author from "./Author";
 import { mq } from "common/theme";
-import { useEffect, useState } from "react";
-import backend from "apis/backend";
+import useSWR from "swr";
+import githubApi from "apis/github";
 
 const Container = styled.div`
   padding: 24px 0 40px 0;
@@ -16,7 +16,7 @@ const Container = styled.div`
   }
 `;
 
-const NewsContent = styled.div`
+const IssueList = styled.div`
   position: relative;
   ${mq("md")} {
     padding-top: 20px;
@@ -42,41 +42,25 @@ const Content = styled.div`
   }
 `;
 
-const Opinion = () => {
-  const [data, setData] = useState<IStory[]>([]);
-  useEffect(() => {
-    backend
-      .firestore()
-      .collection("stories")
-      .orderBy("modifiedAt", "desc")
-      .get()
-      .then((d) => {
-        setData(
-          d.docs.map((d) => ({
-            id: d.id,
-            ...d.data(),
-          })) as IStory[]
-        );
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  }, []);
+const Issues = () => {
+  const { data, error } = useSWR("issues", githubApi.getIssues);
+
+  const contents = data ? (
+    data.data.map((issue) => <IssueMarquee key={issue.id} issue={issue} />)
+  ) : error ? (
+    <div>Error</div>
+  ) : null;
 
   return (
     <PageContainer>
       <Container>
         <Content>
           <Author />
-          <NewsContent>
-            {data?.map((story) => (
-              <Marquee key={story.id} story={story} />
-            ))}
-          </NewsContent>
+          <IssueList>{contents}</IssueList>
         </Content>
       </Container>
     </PageContainer>
   );
 };
 
-export default Opinion;
+export default Issues;
