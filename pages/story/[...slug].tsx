@@ -32,6 +32,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   let story: IStory = null;
 
+  console.time("request");
   try {
     const doc = await firebase.firestore().collection("stories").doc(id).get();
     story = { id: doc.id, ...doc.data() } as IStory;
@@ -39,6 +40,8 @@ export const getServerSideProps: GetServerSideProps = async ({
   } catch (err) {
     console.log(err.message);
   }
+
+  console.timeEnd("request");
 
   return { props: { story, edit } };
 };
