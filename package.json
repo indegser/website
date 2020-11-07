@@ -24,7 +24,6 @@
     "gray-matter": "^4.0.2",
     "immer": "^6.0.2",
     "mdast-util-toc": "^5.0.2",
-    "next-ga": "^2.3.4",
     "next-seo": "^4.7.3",
     "node-fetch": "^2.6.1",
     "rc-tabs": "^11.5.6",
