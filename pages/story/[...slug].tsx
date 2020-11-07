@@ -21,29 +21,35 @@ const Page: FC<Props> = ({ story, edit }) => {
   return <Story story={story} />;
 };
 
-export const getServerSideProps: GetServerSideProps = async ({
-  query,
-  res,
-}) => {
-  const slug = Array.isArray(query.slug) ? query.slug.join("/") : query.slug;
-  const [_, id] = slug.split("----");
+export async function getStaticPaths() {
+  const stories = await firebase.firestore().collection("stories").get();
+  const paths = stories.docs.map((doc) => {
+    const id = doc.id;
+    const { slug } = doc.data();
+    const [dates, title] = slug.slice("/");
+    return { params: { slug: [...dates, `${title}----${id}`] } };
+  });
 
-  const { edit = null } = query;
+  return {
+    paths,
+    fallback: true,
+  };
+}
 
-  let story: IStory = null;
+export async function getStaticProps({ params }) {
+  const { slug } = params;
+  const [_, id] = slug[slug.length - 1].split("----");
+  const doc = await firebase.firestore().collection("stories").doc(id).get();
+  const data = doc.data();
 
-  console.time("request");
-  try {
-    const doc = await firebase.firestore().collection("stories").doc(id).get();
-    story = { id: doc.id, ...doc.data() } as IStory;
-    res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
-  } catch (err) {
-    console.log(err.message);
-  }
-
-  console.timeEnd("request");
-
-  return { props: { story, edit } };
-};
+  return {
+    props: {
+      story: {
+        id,
+        ...data,
+      },
+    },
+  };
+}
 
 export default Page;
