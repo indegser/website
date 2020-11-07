@@ -3,9 +3,10 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import dayjs from "dayjs";
 import { mq } from "common/theme";
+import { IssuesListForRepoResponseData } from "@octokit/types";
 
 interface Props {
-  story: IStory;
+  issue: IssuesListForRepoResponseData[number];
 }
 
 const MarqueeBox = styled.div`
@@ -35,7 +36,7 @@ const MarqueeContent = styled.div`
 `;
 
 const MarqueeTitle = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.35;
   margin-bottom: 4px;
@@ -71,10 +72,10 @@ const MarqueeCover = styled.img`
   }
 `;
 
-const Marquee: FC<Props> = ({ story }) => {
+const IssueMarquee: FC<Props> = ({ issue: story }) => {
   const relDate = useMemo(() => {
     const nowYear = dayjs().year();
-    const storyDay = dayjs(story.modifiedAt);
+    const storyDay = dayjs(story.updated_at);
     const storyYear = storyDay.year();
     let res = storyDay.format("MMM D");
 
@@ -83,35 +84,21 @@ const Marquee: FC<Props> = ({ story }) => {
     }
 
     return res;
-  }, [story.modifiedAt]);
-
-  const linkProps = {
-    href: "/story/[...slug]",
-    as: `/story/${story.slug}----${story.id}`,
-  };
-
-  if (!story.data.title) return null;
+  }, [story.updated_at]);
 
   return (
     <MarqueeBox>
       <MarqueeDate>{relDate}</MarqueeDate>
       <MarqueeContent>
-        <Link {...linkProps} passHref>
+        <Link href={`/issue/${story.number}`} passHref>
           <a>
-            <MarqueeTitle>{story.data.title}</MarqueeTitle>
-            <MarqueeExcerpt>{story.data.excerpt}</MarqueeExcerpt>
+            <MarqueeTitle>{story.title}</MarqueeTitle>
+            <MarqueeExcerpt>{}</MarqueeExcerpt>
           </a>
         </Link>
       </MarqueeContent>
-      {story.data.coverUrl && (
-        <Link {...linkProps} passHref>
-          <a>
-            <MarqueeCover src={story.data.coverUrl} alt={story.data.coverAlt} />
-          </a>
-        </Link>
-      )}
     </MarqueeBox>
   );
 };
 
-export default Marquee;
+export default IssueMarquee;

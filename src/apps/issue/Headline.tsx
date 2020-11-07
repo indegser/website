@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
+import { Issue } from "global.types";
 
 const Box = styled.div`
   padding: 40px 0 20px 0;
@@ -31,15 +32,16 @@ const Excerpt = styled.h3`
   padding-right: 2vw;
 `;
 
-interface Props extends Pick<IStory, "data"> {}
+interface Props {
+  issue: Issue;
+}
 
-const Headline: React.FC<Props> = ({ data }) => {
-  const { title, excerpt } = data;
+const Headline: React.FC<Props> = ({ issue }) => {
+  const { title } = issue;
 
   return (
     <Box>
       <Title>{title}</Title>
-      <Excerpt>{excerpt}</Excerpt>
     </Box>
   );
 };
