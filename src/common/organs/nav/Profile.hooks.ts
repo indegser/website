@@ -1,8 +1,7 @@
+import backend from "apis/backend";
 import Router from "next/router";
 import { useEffect } from "react";
-import firebase from "firebase/app";
 import { useAuthStore } from "stores/authStore";
-import useWhoami from "common/hooks/me/useWhoami";
 
 const useFirebaseAuth = () => {
   const setAuth = useAuthStore((s) => s.setAuth);
@@ -14,7 +13,7 @@ const useFirebaseAuth = () => {
     const password = prompt("Password");
     if (!password) return;
 
-    firebase
+    backend
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch((err) => {
@@ -23,7 +22,7 @@ const useFirebaseAuth = () => {
   };
 
   useEffect(() => {
-    const unsub = firebase.auth().onAuthStateChanged((user) => {
+    const unsub = backend.auth().onAuthStateChanged((user) => {
       setAuth(user ? "ADMIN" : "ANONYMOUS");
     });
 
@@ -36,7 +35,6 @@ const useFirebaseAuth = () => {
 };
 
 export const useProfileActions = (user: object) => {
-  const me = useWhoami();
   const auth = useAuthStore((s) => s.auth);
   const { signIn } = useFirebaseAuth();
 
