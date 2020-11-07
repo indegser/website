@@ -36,22 +36,18 @@ const MarqueeContent = styled.div`
 `;
 
 const MarqueeTitle = styled.div`
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1.35;
-  margin-bottom: 4px;
-  color: var(--text400);
-
-  ${mq("md")} {
-    font-size: 17px;
-  }
+  margin-bottom: 2px;
+  color: var(--text600);
 `;
 
 const MarqueeExcerpt = styled.div`
-  font-size: 14px;
-  line-height: 21px;
-  letter-spacing: 0.2px;
   color: var(--text300);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.2px;
 `;
 
 const MarqueeDate = styled.div`
@@ -62,20 +58,10 @@ const MarqueeDate = styled.div`
   font-family: var(--font-sans);
 `;
 
-const MarqueeCover = styled.img`
-  flex: 0 0 auto;
-  width: 200px;
-  height: auto;
-
-  ${mq("md")} {
-    margin-top: 8px;
-  }
-`;
-
-const IssueMarquee: FC<Props> = ({ issue: story }) => {
-  const relDate = useMemo(() => {
+const IssueMarquee: FC<Props> = ({ issue }) => {
+  const desc = useMemo(() => {
     const nowYear = dayjs().year();
-    const storyDay = dayjs(story.updated_at);
+    const storyDay = dayjs(issue.updated_at);
     const storyYear = storyDay.year();
     let res = storyDay.format("MMM D");
 
@@ -84,16 +70,21 @@ const IssueMarquee: FC<Props> = ({ issue: story }) => {
     }
 
     return res;
-  }, [story.updated_at]);
+  }, [issue.updated_at]);
+
+  const authors = issue.labels
+    .map((label) => label.name)
+    .concat([desc])
+    .join(" · ");
 
   return (
     <MarqueeBox>
-      <MarqueeDate>{relDate}</MarqueeDate>
+      <MarqueeDate>{`#${issue.number}`}</MarqueeDate>
       <MarqueeContent>
-        <Link href={`/issue/${story.number}`} passHref>
+        <Link href={`/issue/${issue.number}`} passHref>
           <a>
-            <MarqueeTitle>{story.title}</MarqueeTitle>
-            <MarqueeExcerpt>{}</MarqueeExcerpt>
+            <MarqueeTitle>{issue.title}</MarqueeTitle>
+            <MarqueeExcerpt>{authors}</MarqueeExcerpt>
           </a>
         </Link>
       </MarqueeContent>

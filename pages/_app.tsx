@@ -34,7 +34,7 @@ const palette = {
       name: "text",
       colorKeys: ["#cacaca"],
       colorspace: COLORSPACE,
-      ratios: [2, 4.6, 8, 12, 15],
+      ratios: [2, 4.6, 8, 12, 15, 21],
     },
     {
       name: "border",

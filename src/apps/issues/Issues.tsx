@@ -16,7 +16,7 @@ const Container = styled.div`
   }
 `;
 
-const NewsContent = styled.div`
+const IssueList = styled.div`
   position: relative;
   ${mq("md")} {
     padding-top: 20px;
@@ -56,7 +56,7 @@ const Issues = () => {
       <Container>
         <Content>
           <Author />
-          <NewsContent>{contents}</NewsContent>
+          <IssueList>{contents}</IssueList>
         </Content>
       </Container>
     </PageContainer>
