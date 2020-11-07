@@ -2,8 +2,7 @@ import Error from "next/error";
 import Story from "apps/story/Story";
 import { FC } from "react";
 import Editor from "apps/editor/Editor";
-import { GetServerSideProps } from "next";
-import firebase from "firebase/app";
+import backend from "apis/backend";
 
 interface Props {
   story: IStory;
@@ -21,26 +20,43 @@ const Page: FC<Props> = ({ story, edit }) => {
   return <Story story={story} />;
 };
 
-export const getServerSideProps: GetServerSideProps = async ({
-  query,
-  res,
-}) => {
-  const slug = Array.isArray(query.slug) ? query.slug.join("/") : query.slug;
-  const [_, id] = slug.split("----");
+export async function getStaticPaths() {
+  const stories = await backend.firestore().collection("stories").get();
+  const paths = stories.docs.map((doc) => {
+    const id = doc.id;
+    const { slug } = doc.data();
+    const sliced = slug.split("/");
+    const dates = sliced.slice(0, sliced.length - 1);
+    const title = sliced[sliced.length - 1];
+    return { params: { slug: [...dates, `${title}----${id}`] } };
+  });
 
-  const { edit = null } = query;
+  return {
+    paths,
+    fallback: true,
+  };
+}
 
-  let story: IStory = null;
+export async function getStaticProps({ params }) {
+  const { slug } = params;
+  const [_, id] = slug[slug.length - 1].split("----");
 
   try {
-    const doc = await firebase.firestore().collection("stories").doc(id).get();
-    story = { id: doc.id, ...doc.data() } as IStory;
-    res.setHeader("Cache-Control", "s-maxage=1, stale-while-revalidate");
+    const doc = await backend.firestore().collection("stories").doc(id).get();
+    const data = doc.data();
+
+    return {
+      props: {
+        story: {
+          id,
+          ...data,
+        },
+      },
+    };
   } catch (err) {
     console.log(err.message);
+    return { props: {} };
   }
-
-  return { props: { story, edit } };
-};
+}
 
 export default Page;

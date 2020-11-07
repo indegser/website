@@ -4,7 +4,7 @@ import Marquee from "./Marquee";
 import Author from "./Author";
 import { mq } from "common/theme";
 import { useEffect, useState } from "react";
-import firebase from "firebase/app";
+import backend from "apis/backend";
 
 const Container = styled.div`
   padding: 24px 0 40px 0;
@@ -45,7 +45,7 @@ const Content = styled.div`
 const Opinion = () => {
   const [data, setData] = useState<IStory[]>([]);
   useEffect(() => {
-    firebase
+    backend
       .firestore()
       .collection("stories")
       .orderBy("modifiedAt", "desc")

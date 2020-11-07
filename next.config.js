@@ -1,17 +1,5 @@
-require("dotenv").config();
-const path = require("path");
-
-const {
-  NOW_GITHUB_COMMIT_REF: GITHUB_REF,
-  NOW_GITHUB_COMMIT_SHA: GITHUB_SHA,
-  SEJONG_URL,
-} = process.env;
-
 module.exports = {
   env: {
-    GITHUB_REF,
-    GITHUB_SHA,
-    SEJONG_URL,
     VERCEL_URL: `https://${process.env.VERCEL_URL}` || "http://localhost:3000",
   },
   webpack: (config) => {
@@ -25,8 +13,6 @@ module.exports = {
         use: ["raw-loader"],
       }
     );
-
-    config.resolve.modules.push(path.resolve(__dirname, "src"));
 
     return config;
   },
