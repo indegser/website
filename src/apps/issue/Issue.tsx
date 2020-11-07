@@ -1,14 +1,14 @@
 import PageContainer from "common/atoms/container/PageContainer";
 import Toc from "./toc/Toc";
 import { useMemo } from "react";
-import matter from "gray-matter";
 import Headline from "./Headline";
 import styled from "@emotion/styled";
 import Markdown from "common/organs/markdown/Markdown";
 import SEO from "common/SEO";
+import { Issue } from "global.types";
 
 interface Props {
-  story: IStory;
+  issue: Issue;
 }
 
 const Container = styled.div`
@@ -16,22 +16,18 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const Story: React.FC<Props> = ({ story }) => {
+const IssuePage: React.FC<Props> = ({ issue }) => {
   const content = useMemo(() => {
-    const { content } = matter(story.content);
-    return content;
+    // const { content } = matter(story.content);
+    return issue.body;
   }, []);
 
   return (
     <>
-      <SEO
-        title={story.data.title}
-        description={story.data.excerpt}
-        image={story.data.coverUrl}
-      />
+      <SEO title={issue.title} />
       <PageContainer>
         <Container>
-          <Headline data={story.data} />
+          <Headline issue={issue} />
           <Toc content={content} />
           <Markdown source={content} />
         </Container>
@@ -40,4 +36,4 @@ const Story: React.FC<Props> = ({ story }) => {
   );
 };
 
-export default Story;
+export default IssuePage;

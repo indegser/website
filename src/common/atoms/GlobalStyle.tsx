@@ -2,7 +2,8 @@ import { Global, css } from "@emotion/core";
 
 const styles = css`
   :root {
-    --font-sans: Roboto, Segoe UI, Noto Sans KR, sans-serif;
+    --font-sans: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     --font-serif: Noto Serif KR, Nanum Myeongjo, Georgia, Cambria,
       "Times New Roman", Times, serif;
   }
