@@ -11,7 +11,7 @@ import FootnoteReference from "./renderer/footnote/FootnoteReference";
 import Shortcode from "./shortcode/Shortcode";
 import { useFootnote, MarkdownProvider } from "./Markdown.hooks";
 import Footnotes from "./Footnotes";
-import { spacingVariables } from "ui/variables";
+import { spacingVariables } from "common/variables";
 import Code from "./renderer/Code";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
