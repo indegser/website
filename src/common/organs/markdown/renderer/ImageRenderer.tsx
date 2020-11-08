@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { spacingVariables } from "ui/variables";
+import { spacingVariables } from "common/variables";
 import { mq } from "common/theme";
 
 const Image = styled.figure`

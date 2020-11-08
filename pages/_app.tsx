@@ -4,9 +4,7 @@ import Nav from "common/organs/nav/Nav";
 import styled from "@emotion/styled";
 import Head from "next/head";
 import Banner from "common/organs/banner/Banner";
-import { useEffect } from "react";
 import { generateAdaptiveTheme } from "@adobe/leonardo-contrast-colors";
-import { useTokenStore } from "stores/tokenStore";
 
 import { Router } from "next/router";
 import { Analytics } from "apis/analytics";
@@ -78,12 +76,6 @@ const themes = JSON.stringify({
 Router.events.on("routeChangeComplete", Analytics.pageView);
 
 const App = ({ Component, pageProps }) => {
-  const setToken = useTokenStore((s) => s.setToken);
-  useEffect(() => {
-    const token = localStorage.getItem("jwtToken");
-    token && setToken(token);
-  }, []);
-
   return (
     <>
       <GlobalStyle />
