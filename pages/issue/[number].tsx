@@ -3,6 +3,7 @@ import { FC } from "react";
 import githubApi from "apis/github";
 import { Issue } from "global.types";
 import IssuePage from "apps/issue/Issue";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 interface Props {
   issue: Issue;
@@ -16,7 +17,7 @@ const Page: FC<Props> = ({ issue }) => {
   return <IssuePage issue={issue} />;
 };
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await githubApi.getIssues();
   const paths = data.map((issue) => ({
     params: { number: issue.number.toString() },
@@ -26,17 +27,19 @@ export async function getStaticPaths() {
     paths,
     fallback: true,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { number } = params;
 
   try {
-    const { data: issue } = await githubApi.getIssue(parseInt(number));
-    return { props: { issue } };
+    const { data: issue } = await githubApi.getIssue(
+      parseInt(number.toString())
+    );
+    return { props: { issue }, revalidate: 60 };
   } catch (err) {
     return { props: {} };
   }
-}
+};
 
 export default Page;
