@@ -1,6 +1,6 @@
 {
-  "name": "seoul",
-  "description": "Frontend for indegser.com",
+  "name": "website",
+  "description": "Indegser website built with Next.js, Vercel and Github",
   "license": "None",
   "version": "0.2.0",
   "scripts": {
