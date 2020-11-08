@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import useWhoami from "common/hooks/me/useWhoami";
 import Link from "next/link";
 import Icon from "common/atoms/icons/Icon";
 
@@ -40,18 +39,8 @@ const Links = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
-  /* border-top: 1px solid var(--border100); */
   margin-top: 8px;
   position: relative;
-`;
-
-const LinkDivider = styled.div`
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: calc(50% - 1px);
-  width: 1px;
-  background: var(--border100);
 `;
 
 const LinkText = styled.a`
@@ -74,7 +63,10 @@ const LinkIcon = styled(Icon)`
 `;
 
 const Author = () => {
-  const author = useWhoami();
+  const author = {
+    name: "indegser",
+    avatar: "https://avatars3.githubusercontent.com/u/12758512?v=4&s=128",
+  };
 
   return (
     <Layout>

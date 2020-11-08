@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
-import { spacingVariables } from "ui/variables";
+import { spacingVariables } from "common/variables";
 
 const PageContainer = styled.div`
   max-width: 1200px;
