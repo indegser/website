@@ -2,6 +2,7 @@ import { useTheme } from "./Theme.hooks";
 import styled from "@emotion/styled";
 import Icon from "common/atoms/icons/Icon";
 import Select from "common/atoms/form/select/Select";
+import { COLORS } from "common/theme";
 
 const Box = styled.div`
   flex: 0 0 auto;
@@ -20,7 +21,7 @@ const OptionBox = styled.div`
 
 const OptionText = styled.span`
   padding-left: 12px;
-  color: var(--text300);
+  color: ${COLORS.textGrey};
 `;
 
 const Option = ({ innerProps, data }) => {
@@ -64,14 +65,14 @@ const Theme = () => {
               ...base,
               width: 120,
               right: 0,
-              background: `var(--background)`,
+              background: COLORS.bgPaper,
             };
           },
           control: (base) => {
             return {
               ...base,
-              background: `var(--background)`,
-              borderColor: `var(--border100)`,
+              background: COLORS.bgPaper,
+              borderColor: COLORS.bgDivider,
             };
           },
           valueContainer: (base) => {

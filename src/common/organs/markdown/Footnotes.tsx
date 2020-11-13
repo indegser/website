@@ -2,12 +2,12 @@ import styled from "@emotion/styled";
 import { useFootnotes } from "./Markdown.hooks";
 import HashLink from "common/atoms/link/HashLink";
 import Icon from "common/atoms/icons/Icon";
-import ReactMarkdown from "react-markdown";
+import { COLORS } from "common/theme";
 
 const Box = styled.div`
   margin-top: 40px;
   padding-top: 1rem;
-  border-top: 1px solid var(--border100);
+  border-top: 1px solid ${COLORS.bgDivider};
   font-family: var(--font-sans);
 `;
 
@@ -15,14 +15,14 @@ const Title = styled.div`
   margin: 0;
   font-size: 15px;
   font-weight: 500;
-  color: var(--text400);
+  color: ${COLORS.textBlack};
   padding-bottom: 1rem;
 `;
 
 const Footnote = styled.div`
   position: relative;
   font-size: 13px;
-  color: var(--text300);
+  color: ${COLORS.textGrey};
   display: grid;
   grid-template-columns: max-content max-content auto;
   grid-gap: 0px;
@@ -38,11 +38,11 @@ const Footnote = styled.div`
 
 const Id = styled.div`
   font-weight: 500;
-  color: var(--text400);
+  color: ${COLORS.textBlack};
 `;
 
 const Backlink = styled.div`
-  color: var(--primary100);
+  color: ${COLORS.linkPrimary};
   padding: 0 4px;
 
   sup {

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ResumeContentHeading } from "./Resume.styled";
 import { useTrans } from "../Indegser.hooks";
-import { mq } from "common/theme";
+import { COLORS, mq } from "common/theme";
 
 const Layout = styled.div`
   display: grid;
@@ -27,7 +27,7 @@ const Content = styled.div`
 `;
 
 const Date = styled.div`
-  color: var(--text300);
+  color: ${COLORS.textGrey};
   font-size: 14px;
   line-height: 1.6;
 `;
