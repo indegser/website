@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
 import IssueMarquee from "./Marquee";
 import Author from "./Author";
-import { mq } from "common/theme";
+import { COLORS, mq } from "common/theme";
 import useSWR from "swr";
 import githubApi from "apis/github";
 
@@ -20,13 +20,13 @@ const IssueList = styled.div`
   position: relative;
   ${mq("md")} {
     padding-top: 20px;
-    border-top: 1px solid var(--border400);
+    border-top: 1px solid ${COLORS.bgDivider};
     &:before {
       content: "";
       position: absolute;
       top: 3px;
       width: 100%;
-      border-top: 1px solid var(--border400);
+      border-top: 1px solid ${COLORS.bgDivider};
     }
   }
 `;

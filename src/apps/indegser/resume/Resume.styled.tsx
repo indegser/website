@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-import { mq } from "common/theme";
+import { COLORS, mq } from "common/theme";
 
 export const ResumeSection = styled.div`
   position: relative;
-  border-top: 1px solid var(--border100);
+  border-top: 1px solid ${COLORS.bgDivider};
   padding-top: 3em;
   padding-bottom: 3em;
   display: grid;
@@ -11,7 +11,7 @@ export const ResumeSection = styled.div`
   grid-gap: 0 40px;
   grid-template-columns: 0.9fr 4fr;
 
-  &:first-child {
+  &:first-of-type {
     border-color: transparent;
   }
 

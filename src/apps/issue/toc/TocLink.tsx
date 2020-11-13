@@ -1,22 +1,16 @@
 import HashLink from "common/atoms/link/HashLink";
-import Icon, { IconVariant } from "common/atoms/icons/Icon";
 import styled from "@emotion/styled";
-
-const LinkIcon = styled.span`
-  margin-left: 6px;
-  display: inline-flex;
-  transform: translateY(1px);
-`;
+import { COLORS } from "common/theme";
 
 const Box = styled.span`
   text-decoration: none;
 
   a {
-    color: var(--text400);
+    color: ${COLORS.textBlack};
     text-decoration: none;
     &:hover {
-      color: var(--primary100);
-      fill: var(--primary100);
+      color: ${COLORS.linkPrimary};
+      fill: ${COLORS.linkPrimary};
     }
   }
 `;
@@ -28,8 +22,5 @@ const TocLink = (props) => {
     </Box>
   );
 };
-// <LinkIcon>
-//   <Icon variant={IconVariant.link} width={10} height={10} />
-// </LinkIcon>
 
 export default TocLink;
