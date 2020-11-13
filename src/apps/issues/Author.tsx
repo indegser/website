@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import Icon from "common/atoms/icons/Icon";
+import { COLORS } from "common/theme";
 
 const Layout = styled.div`
   max-width: 160px;
@@ -30,7 +31,7 @@ const Name = styled.div`
 
 const Nickname = styled.div`
   font-weight: 400;
-  color: var(--text200);
+  color: ${COLORS.textLightGrey};
   font-size: 14px;
   margin-top: 1px;
 `;
@@ -47,12 +48,12 @@ const LinkText = styled.a`
   font-size: 13px;
   cursor: default;
   padding: 8px 0;
-  color: var(--primary100);
+  color: ${COLORS.linkPrimary};
   display: flex;
   align-items: center;
 
   &:hover {
-    color: var(--primary200);
+    color: ${COLORS.linkPrimaryHover};
   }
 `;
 

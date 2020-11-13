@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
+import { COLORS } from "common/theme";
 
 const OptionBox = styled.div`
   display: flex;
   align-items: center;
   padding: 8px;
   padding-left: 12px;
-  color: var(--text300);
+  color: ${COLORS.textGrey};
   cursor: default;
 `;
 

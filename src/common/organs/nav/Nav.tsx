@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
+import { COLORS } from "common/theme";
 import Link from "next/link";
 
 const Layout = styled.nav`
   position: sticky;
   top: 0;
-  background: var(--background);
-  border-bottom: 1px solid var(--border100);
+  background: ${COLORS.bgPaper};
+  border-bottom: 1px solid ${COLORS.bgDivider};
   z-index: 99;
 `;
 
@@ -19,17 +20,9 @@ const Menus = styled.div`
   z-index: 2;
 `;
 
-const MenuLayout = styled.div`
-  display: grid;
-  grid-auto-columns: max-content;
-  grid-auto-flow: column;
-  grid-gap: 0 30px;
-  align-items: center;
-`;
-
 export const MenuLogo = styled.div`
   margin-right: 16px;
-  color: var(--text400);
+  color: ${COLORS.textBlack};
 
   svg {
     display: block;
