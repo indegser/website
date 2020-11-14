@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import Markdown from "common/organs/markdown/Markdown";
 import SEO from "common/SEO";
 import { Issue } from "global.types";
+import { useIssueSEO } from "./Issue.hooks";
 
 interface Props {
   issue: Issue;
@@ -17,19 +18,16 @@ const Container = styled.div`
 `;
 
 const IssuePage: React.FC<Props> = ({ issue }) => {
-  const content = useMemo(() => {
-    // const { content } = matter(story.content);
-    return issue.body;
-  }, []);
+  const { image, description } = useIssueSEO(issue.body);
 
   return (
     <>
-      <SEO title={issue.title} />
+      <SEO title={issue.title} image={image} description={description} />
       <PageContainer>
         <Container>
           <Headline issue={issue} />
-          <Toc content={content} />
-          <Markdown source={content} />
+          <Toc content={issue.body} />
+          <Markdown source={issue.body} />
         </Container>
       </PageContainer>
     </>
