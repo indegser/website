@@ -5,8 +5,8 @@ const styles = css`
   :root {
     --font-sans: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    --font-serif: Noto Serif KR, Nanum Myeongjo, Georgia, Cambria,
-      "Times New Roman", Times, serif;
+    --font-serif: IBM Plex Serif, Noto Serif KR, Nanum Myeongjo, Georgia,
+      Cambria, "Times New Roman", Times, serif;
   }
 
   html {
