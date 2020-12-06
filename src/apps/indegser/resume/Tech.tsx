@@ -26,10 +26,10 @@ const Tech = () => {
       <div>
         <ResumeContentHeading>Front-End</ResumeContentHeading>
         <TechList>
-          <TechItem>React</TechItem>
-          <TechItem>NodeJS</TechItem>
-          <TechItem>Typescript</TechItem>
-          <TechItem>Webpack, Jest, ESLint</TechItem>
+          <TechItem>HTML, CSS, JS</TechItem>
+          <TechItem>React, Typescript</TechItem>
+          <TechItem>Node JS</TechItem>
+          <TechItem>Webpack, Jest</TechItem>
         </TechList>
       </div>
       <div>
