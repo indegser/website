@@ -63,11 +63,11 @@ const App = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&display=swap"
           rel="stylesheet"
         ></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&display=swap"
           rel="stylesheet"
         ></link>
       </Head>
