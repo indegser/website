@@ -1,10 +1,11 @@
 import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
 import IssueMarquee from "./Marquee";
-import Author from "./Author";
+import Author from "../../common/atoms/Author";
 import { COLORS, mq } from "common/theme";
 import useSWR from "swr";
 import githubApi from "apis/github";
+import AuthorContainer from "common/atoms/container/AuthorContainer";
 
 const Container = styled.div`
   padding: 24px 0 40px 0;
@@ -53,12 +54,10 @@ const Issues = () => {
 
   return (
     <PageContainer>
-      <Container>
-        <Content>
-          <Author />
-          <IssueList>{contents}</IssueList>
-        </Content>
-      </Container>
+      <AuthorContainer>
+        <Author />
+        <IssueList>{contents}</IssueList>
+      </AuthorContainer>
     </PageContainer>
   );
 };
