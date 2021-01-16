@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
 import { COLORS } from "common/theme";
 import Link from "next/link";
+import NavMenu from "./NavMenu";
 
 const Layout = styled.nav`
   position: sticky;
@@ -12,16 +13,17 @@ const Layout = styled.nav`
 `;
 
 const Menus = styled.div`
-  display: flex;
-  height: 50px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-gap: 40px;
   align-items: center;
-  justify-content: space-between;
   position: relative;
   z-index: 2;
+  height: 50px;
 `;
 
 export const MenuLogo = styled.div`
-  margin-right: 16px;
   color: ${COLORS.textBlack};
 
   svg {
@@ -52,6 +54,7 @@ const Nav = () => {
               </MenuLogo>
             </a>
           </Link>
+          <NavMenu />
         </Menus>
       </PageContainer>
     </Layout>

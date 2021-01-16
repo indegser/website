@@ -20,6 +20,14 @@ const githubApi = {
       issue_number: issueNumber,
       headers,
     }),
+  getBooks: () => {
+    return request("GET /repos/:owner/:repo/issues", {
+      owner: "indegser",
+      repo: "book",
+      state: "open",
+      headers,
+    });
+  },
 };
 
 export default githubApi;
