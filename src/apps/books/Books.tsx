@@ -9,6 +9,7 @@ const BookGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   grid-gap: 32px 20px;
+  align-items: flex-end;
 `;
 
 const BookTitle = styled.h4`
@@ -30,7 +31,6 @@ const BookAuthor = styled.h5`
 
 const Book = styled.div`
   flex: 0 0 auto;
-  align-self: flex-end;
 
   img {
     width: 100%;
