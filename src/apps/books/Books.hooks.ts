@@ -12,6 +12,7 @@ export interface Book {
   cover?: string;
   link?: string;
   excerpt?: string;
+  isReading?: boolean;
 }
 
 export const useBooks = () => {
@@ -21,11 +22,13 @@ export const useBooks = () => {
   if (!data) return null;
 
   return data.data.map((book) => {
-    const { title, body } = book;
+    const { title, body, labels } = book;
     const tree = engine.parse(body) as any;
 
+    const isReading = !!labels.find((label) => label.name === "Reading");
+
     let key: string;
-    const res = ({ id: book.id, title } as unknown) as Book;
+    const res = ({ id: book.id, title, isReading } as unknown) as Book;
 
     for (const child of tree.children) {
       switch (child.type) {
