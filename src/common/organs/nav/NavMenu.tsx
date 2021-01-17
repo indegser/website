@@ -24,7 +24,7 @@ const NavMenu = () => {
   return (
     <>
       {items.map((item) => (
-        <Link href={item.href} passHref>
+        <Link key={item.name} href={item.href} passHref>
           <MenuItem aria-current={pathname === item.href}>{item.name}</MenuItem>
         </Link>
       ))}
