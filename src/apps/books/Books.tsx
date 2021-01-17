@@ -4,6 +4,10 @@ import AuthorContainer from "common/atoms/container/AuthorContainer";
 import PageContainer from "common/atoms/container/PageContainer";
 import { COLORS } from "common/theme";
 import { useBooks } from "./Books.hooks";
+import Category from "./Category";
+import Reading from "./Reading";
+
+const Contents = styled.div``;
 
 const BookGrid = styled.div`
   display: grid;
@@ -54,19 +58,22 @@ const Books = () => {
     <PageContainer>
       <AuthorContainer>
         <Author />
-        <BookGrid>
-          {books?.map((book) => {
-            return (
-              <a key={book.id} href={book.link}>
-                <Book>
-                  <img src={book.cover} />
-                  <BookTitle>{book.title}</BookTitle>
-                  <BookAuthor>{book.author}</BookAuthor>
-                </Book>
-              </a>
-            );
-          })}
-        </BookGrid>
+        <Contents>
+          <BookGrid>
+            {books?.map((book) => {
+              return (
+                <a key={book.id} href={book.link}>
+                  <Book>
+                    <img src={book.cover} />
+                    <BookTitle>{book.title}</BookTitle>
+                    <BookAuthor>{book.author}</BookAuthor>
+                    {book.isReading && <Reading />}
+                  </Book>
+                </a>
+              );
+            })}
+          </BookGrid>
+        </Contents>
       </AuthorContainer>
     </PageContainer>
   );

@@ -28,6 +28,13 @@ const githubApi = {
       headers,
     });
   },
+  getBookLabels: () => {
+    return request("GET /repos/:owner/:repo/labels", {
+      owner: "indegser",
+      repo: "book",
+      headers,
+    });
+  },
 };
 
 export default githubApi;
