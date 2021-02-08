@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { spacingVariables } from "common/variables";
-import { COLORS, mq } from "common/theme";
+import { mq } from "common/theme";
+import { colors } from "style.types";
 
 const Image = styled.figure`
   --padding-x: 0px;
@@ -24,7 +25,7 @@ const Image = styled.figure`
     padding-top: 12px !important;
     font-size: 13px;
     padding: 0 calc(var(--padding-x) * -1);
-    color: ${COLORS.textFigcaption};
+    color: ${colors.textFigcaption};
     letter-spacing: 0.03px;
   }
 `;

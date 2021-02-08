@@ -2,8 +2,9 @@ import { FC, useMemo } from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import dayjs from "dayjs";
-import { COLORS, mq } from "common/theme";
+import { mq } from "common/theme";
 import { IssuesListForRepoResponseData } from "@octokit/types";
+import { colors } from "style.types";
 
 interface Props {
   issue: IssuesListForRepoResponseData[number];
@@ -13,7 +14,7 @@ const MarqueeBox = styled.div`
   break-inside: avoid;
   page-break-inside: avoid;
   position: relative;
-  border-bottom: 1px solid ${COLORS.bgDivider};
+  border-bottom: 1px solid ${colors.bgDivider};
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 114px auto max-content;
@@ -40,11 +41,11 @@ const MarqueeTitle = styled.div`
   font-weight: 500;
   line-height: 1.35;
   margin-bottom: 2px;
-  color: ${COLORS.textMarqueeTitle};
+  color: ${colors.textMarqueeTitle};
 `;
 
 const MarqueeExcerpt = styled.div`
-  color: ${COLORS.textMarqueeLabel};
+  color: ${colors.textMarqueeLabel};
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 0.2px;
@@ -53,7 +54,7 @@ const MarqueeExcerpt = styled.div`
 const MarqueeDate = styled.div`
   font-size: 12px;
   line-height: 16px;
-  color: ${COLORS.textMarqueeLabel};
+  color: ${colors.textMarqueeLabel};
   padding-top: 2px;
   font-family: var(--font-sans);
 `;

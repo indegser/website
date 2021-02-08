@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import { COLORS, mq } from "common/theme";
+import { mq } from "common/theme";
+import { colors } from "style.types";
 
 export const ResumeSection = styled.div`
   position: relative;
-  border-top: 1px solid ${COLORS.bgDivider};
+  border-top: 1px solid ${colors.bgDivider};
   padding-top: 3em;
   padding-bottom: 3em;
   display: grid;

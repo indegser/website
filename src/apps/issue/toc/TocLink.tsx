@@ -1,16 +1,16 @@
 import HashLink from "common/atoms/link/HashLink";
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 const Box = styled.span`
   text-decoration: none;
 
   a {
-    color: ${COLORS.textBlack};
+    color: ${colors.textBlack};
     text-decoration: none;
     &:hover {
-      color: ${COLORS.linkPrimary};
-      fill: ${COLORS.linkPrimary};
+      color: ${colors.linkPrimary};
+      fill: ${colors.linkPrimary};
     }
   }
 `;

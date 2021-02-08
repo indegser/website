@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 import PageContainer from "common/atoms/container/PageContainer";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 import Link from "next/link";
 import NavMenu from "./NavMenu";
 
 const Layout = styled.nav`
   position: sticky;
   top: 0;
-  background: ${COLORS.bgPaper};
-  border-bottom: 1px solid ${COLORS.bgDivider};
+  background: ${colors.bgPaper};
+  border-bottom: 1px solid ${colors.bgDivider};
   z-index: 99;
 `;
 
@@ -24,7 +24,7 @@ const Menus = styled.div`
 `;
 
 export const MenuLogo = styled.div`
-  color: ${COLORS.textBlack};
+  color: ${colors.textBlack};
 
   svg {
     display: block;

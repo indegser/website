@@ -1,10 +1,10 @@
 import Select from "common/atoms/form/select/Select";
 import styled from "@emotion/styled";
 import { useIndegserLangStore } from "./Indegser.hooks";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 const LangValue = styled.span`
-  color: ${COLORS.textGrey};
+  color: ${colors.textGrey};
   font-size: 13px;
 `;
 

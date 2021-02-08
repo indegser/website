@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -8,7 +8,7 @@ const MenuItem = styled.a`
   cursor: pointer;
 
   &[aria-current="true"] {
-    color: ${COLORS.textLightGrey};
+    color: ${colors.textLightGrey};
     pointer-events: none;
   }
 `;

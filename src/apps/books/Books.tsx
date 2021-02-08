@@ -2,9 +2,8 @@ import styled from "@emotion/styled";
 import Author from "common/atoms/Author";
 import AuthorContainer from "common/atoms/container/AuthorContainer";
 import PageContainer from "common/atoms/container/PageContainer";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 import { useBooks } from "./Books.hooks";
-import Category from "./Category";
 import Reading from "./Reading";
 
 const Contents = styled.div``;
@@ -27,7 +26,7 @@ const BookTitle = styled.h4`
 const BookAuthor = styled.h5`
   font-weight: 400;
   margin: 0;
-  color: var(${COLORS.textGrey});
+  color: var(${colors.textGrey});
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

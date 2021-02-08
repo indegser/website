@@ -1,5 +1,5 @@
-import { Global, css } from "@emotion/core";
-import { COLORS } from "common/theme";
+import { Global, css } from "@emotion/react";
+import { colors } from "style.types";
 
 const styles = css`
   :root {
@@ -11,7 +11,7 @@ const styles = css`
 
   html {
     font-family: var(--font-sans);
-    background: ${COLORS.bgPaper};
+    background: ${colors.bgPaper};
     font-size: 16px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -26,7 +26,7 @@ const styles = css`
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    color: ${COLORS.textBlack};
+    color: ${colors.textBlack};
 
     &.prevent-scroll {
       position: fixed;
