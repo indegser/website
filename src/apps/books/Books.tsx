@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import Author from "common/atoms/Author";
 import AuthorContainer from "common/atoms/container/AuthorContainer";
 import PageContainer from "common/atoms/container/PageContainer";
+import Typography from "common/atoms/Typography";
 import { colors } from "style.types";
 import { useBooks } from "./Books.hooks";
 import Reading from "./Reading";
@@ -15,8 +16,11 @@ const BookGrid = styled.div`
   align-items: flex-end;
 `;
 
+const BookContent = styled.div`
+  height: 80px;
+`;
+
 const BookTitle = styled.h4`
-  font-weight: 500;
   margin: 0.75rem 0 0.25rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -64,9 +68,13 @@ const Books = () => {
                 <a key={book.id} href={book.link}>
                   <Book>
                     <img src={book.cover} />
-                    <BookTitle>{book.title}</BookTitle>
-                    <BookAuthor>{book.author}</BookAuthor>
-                    {book.isReading && <Reading />}
+                    <BookContent>
+                      <BookTitle>
+                        <Typography.M15>{book.title}</Typography.M15>
+                      </BookTitle>
+                      <BookAuthor>{book.author}</BookAuthor>
+                      {book.isReading && <Reading />}
+                    </BookContent>
                   </Book>
                 </a>
               );
