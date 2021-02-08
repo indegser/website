@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import Icon from "common/atoms/icons/Icon";
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 const Box = styled.div`
   display: flex;
@@ -12,9 +12,9 @@ const Box = styled.div`
 const Item = styled.div`
   padding-right: 12px;
   margin-right: 12px;
-  color: ${COLORS.textGrey};
+  color: ${colors.textGrey};
   font-size: 14px;
-  border-right: 1px solid ${COLORS.bgDivider};
+  border-right: 1px solid ${colors.bgDivider};
 
   &:last-child {
     margin: 0;
@@ -25,17 +25,17 @@ const Item = styled.div`
 
 const Copyright = styled.div`
   font-size: 14px;
-  color: ${COLORS.textGrey};
+  color: ${colors.textGrey};
   padding-right: 16px;
   letter-spacing: 0.1px;
 `;
 
 const SnsBox = styled.div`
   align-self: center;
-  color: ${COLORS.textGrey};
+  color: ${colors.textGrey};
 
   &:hover {
-    color: ${COLORS.textBlack};
+    color: ${colors.textBlack};
   }
 
   a {

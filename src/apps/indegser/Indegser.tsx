@@ -6,11 +6,11 @@ import Resume from "./resume/Resume";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Portfolio from "./portfolio/Portfolio";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 const Navigation = styled.div`
   height: 40px;
-  border-bottom: 1px solid ${COLORS.bgDivider};
+  border-bottom: 1px solid ${colors.bgDivider};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,17 +23,17 @@ const Title = styled.div`
 
 const NavLink = styled.a`
   font-size: 13px;
-  color: ${COLORS.textBlack};
+  color: ${colors.textBlack};
   padding: 4px 2px;
   cursor: default;
 
   &:hover {
-    color: ${COLORS.linkPrimary};
+    color: ${colors.linkPrimary};
   }
 
   &[data-current="true"] {
     pointer-events: none;
-    color: ${COLORS.textLightGrey};
+    color: ${colors.textLightGrey};
   }
 `;
 

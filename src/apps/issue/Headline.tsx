@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-import { COLORS, mq } from "common/theme";
+import { mq } from "common/theme";
 import { Issue } from "global.types";
+import { colors } from "style.types";
 
 const Box = styled.div`
   padding: 40px 0 20px 0;
@@ -11,7 +12,7 @@ const Box = styled.div`
 `;
 
 const Title = styled.h1`
-  color: ${COLORS.textBlack};
+  color: ${colors.textBlack};
   font-size: 15px;
   line-height: 1.2;
   font-weight: 600;

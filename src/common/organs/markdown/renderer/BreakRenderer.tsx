@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 const Break = styled.div`
   margin: 36px 0;
   display: flex;
   font-size: 16px;
-  color: ${COLORS.bgDivider};
+  color: ${colors.bgDivider};
   justify-content: center;
 
   & > div {

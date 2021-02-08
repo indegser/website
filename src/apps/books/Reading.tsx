@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 const Grid = styled.div`
   display: grid;
@@ -8,7 +8,7 @@ const Grid = styled.div`
   align-items: center;
   grid-gap: 4px;
   font-size: 12px;
-  color: ${COLORS.textLightGrey};
+  color: ${colors.textLightGrey};
   margin-top: 0.5rem;
 `;
 
