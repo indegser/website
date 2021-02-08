@@ -1,13 +1,12 @@
-import GlobalStyle from "common/atoms/GlobalStyle";
+import Head from "next/head";
+import { Router } from "next/router";
+import styled from "@emotion/styled";
 
+import { Analytics } from "apis/analytics";
+import GlobalStyle from "common/atoms/GlobalStyle";
 import Footer from "common/organs/footer/Footer";
 import Nav from "common/organs/nav/Nav";
-import styled from "@emotion/styled";
-import Head from "next/head";
-import Banner from "common/organs/banner/Banner";
-import { Router } from "next/router";
-import { Analytics } from "apis/analytics";
-import { themes } from "common/theme";
+import ThemeScript from "common/ThemeScript";
 
 export function reportWebVitals(metric) {
   Analytics.reportWebVitals(metric);
@@ -32,33 +31,7 @@ const App = ({ Component, pageProps }) => {
       <GlobalStyle />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.THEME = ${JSON.stringify(themes)}
-            function changeTheme() {
-              let theme = localStorage.getItem("theme");
-              if (!theme) {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                  theme = 'dark';
-                } else {
-                  theme = 'light';
-                }
-              }
-              
-              let rules = THEME[theme];
-              let root = document.documentElement.style;
-              for (const [property, value] of rules) {
-                root.setProperty(property, value);
-              }
-
-              root.setProperty('--theme', theme);
-            }
-
-            changeTheme();
-          `,
-          }}
-        ></script>
+        <ThemeScript />
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -72,7 +45,6 @@ const App = ({ Component, pageProps }) => {
         ></link>
       </Head>
       <Page>
-        <Banner />
         <Nav />
         <main>
           <Component {...pageProps}></Component>

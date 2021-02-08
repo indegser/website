@@ -2,8 +2,12 @@ import styled from "@emotion/styled";
 import Author from "common/atoms/Author";
 import AuthorContainer from "common/atoms/container/AuthorContainer";
 import PageContainer from "common/atoms/container/PageContainer";
-import { COLORS } from "common/theme";
+import Typography from "common/atoms/Typography";
+import { colors } from "style.types";
 import { useBooks } from "./Books.hooks";
+import Reading from "./Reading";
+
+const Contents = styled.div``;
 
 const BookGrid = styled.div`
   display: grid;
@@ -12,8 +16,11 @@ const BookGrid = styled.div`
   align-items: flex-end;
 `;
 
+const BookContent = styled.div`
+  height: 80px;
+`;
+
 const BookTitle = styled.h4`
-  font-weight: 500;
   margin: 0.75rem 0 0.25rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -23,7 +30,7 @@ const BookTitle = styled.h4`
 const BookAuthor = styled.h5`
   font-weight: 400;
   margin: 0;
-  color: var(${COLORS.textGrey});
+  color: var(${colors.textGrey});
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -54,19 +61,26 @@ const Books = () => {
     <PageContainer>
       <AuthorContainer>
         <Author />
-        <BookGrid>
-          {books?.map((book) => {
-            return (
-              <a key={book.id} href={book.link}>
-                <Book>
-                  <img src={book.cover} />
-                  <BookTitle>{book.title}</BookTitle>
-                  <BookAuthor>{book.author}</BookAuthor>
-                </Book>
-              </a>
-            );
-          })}
-        </BookGrid>
+        <Contents>
+          <BookGrid>
+            {books?.map((book) => {
+              return (
+                <a key={book.id} href={book.link}>
+                  <Book>
+                    <img src={book.cover} />
+                    <BookContent>
+                      <BookTitle>
+                        <Typography.M15>{book.title}</Typography.M15>
+                      </BookTitle>
+                      <BookAuthor>{book.author}</BookAuthor>
+                      {book.isReading && <Reading />}
+                    </BookContent>
+                  </Book>
+                </a>
+              );
+            })}
+          </BookGrid>
+        </Contents>
       </AuthorContainer>
     </PageContainer>
   );

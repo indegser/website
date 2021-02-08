@@ -2,14 +2,14 @@ import Markdown from "react-markdown";
 import { useTocContent } from "./toc.hooks";
 import TocLink from "./TocLink";
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 const Box = styled.div`
   padding: 0;
   text-align: left;
   font-weight: 400;
-  color: ${COLORS.textBlack};
-  border-bottom: 1px solid ${COLORS.bgDivider};
+  color: ${colors.textBlack};
+  border-bottom: 1px solid ${colors.bgDivider};
   font-size: 14px;
   line-height: 1;
   padding-bottom: 1rem;
@@ -36,7 +36,7 @@ const Box = styled.div`
       padding-right: 0.6em;
       font-weight: 400;
       font-size: 13px;
-      color: ${COLORS.textGrey};
+      color: ${colors.textGrey};
     }
   }
 
@@ -63,7 +63,7 @@ const FoldTitle = styled.div`
   flex: 1 1;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: ${COLORS.textBlack};
+  color: ${colors.textBlack};
 `;
 
 interface Props {

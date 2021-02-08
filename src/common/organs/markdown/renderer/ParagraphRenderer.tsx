@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 import BlockLink from "../link/BlockLink";
 
 const Paragraph = styled.div`
@@ -13,7 +13,7 @@ const Paragraph = styled.div`
   blockquote & {
     padding-left: 1em;
     /* font-size: em; */
-    border-left: 2px solid ${COLORS.bgDivider};
+    border-left: 2px solid ${colors.bgDivider};
     box-sizing: border-box;
     margin: 2em auto;
     font-weight: 500;

@@ -3,7 +3,7 @@ import { ComponentProps, FC } from "react";
 import Option from "./Option";
 import Icon from "common/atoms/icons/Icon";
 import styled from "@emotion/styled";
-import { COLORS } from "common/theme";
+import { colors } from "style.types";
 
 interface Props extends ComponentProps<typeof ReactSelect> {
   chromeless?: boolean;
@@ -30,7 +30,7 @@ const Select: FC<Props> = ({
         ...base,
         right: 0,
         minWidth: 120,
-        background: COLORS.bgPaper,
+        background: colors.bgPaper,
       };
     },
     valueContainer: (base) => {
@@ -43,8 +43,8 @@ const Select: FC<Props> = ({
     control: (base) => {
       return {
         ...base,
-        background: COLORS.bgPaper,
-        borderColor: COLORS.bgDivider,
+        background: colors.bgPaper,
+        borderColor: colors.bgDivider,
         ...(props.chromeless
           ? {
               border: "none !important",

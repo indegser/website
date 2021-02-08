@@ -1,12 +1,12 @@
-import create from "zustand";
+import create, { State } from "zustand";
 import { useMemo } from "react";
 
-interface IndegserLangStore {
+interface IndegserLangStore extends State {
   lang: "en" | "ko";
   changeLang: (lang: IndegserLangStore["lang"]) => void;
 }
 
-export const [useIndegserLangStore] = create<IndegserLangStore>((set) => ({
+export const useIndegserLangStore = create<IndegserLangStore>((set) => ({
   lang: "ko",
   changeLang: (lang) =>
     set({

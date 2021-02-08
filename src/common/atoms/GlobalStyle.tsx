@@ -1,17 +1,30 @@
-import { Global, css } from "@emotion/core";
-import { COLORS } from "common/theme";
+import { Global, css } from "@emotion/react";
+import { colors } from "style.types";
 
 const styles = css`
+  @font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Regular.woff2") format("woff2"),
+      url("/fonts/Inter-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-SemiBold.woff2") format("woff2"),
+      url("/fonts/Inter-SemiBold.woff") format("woff");
+    font-weight: 500;
+  }
+
   :root {
-    --font-sans: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --font-sans: --apple-system, BlinkMacSystemFont, Inter, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     --font-serif: IBM Plex Serif, Noto Serif KR, Nanum Myeongjo, Georgia,
       Cambria, "Times New Roman", Times, serif;
   }
 
   html {
     font-family: var(--font-sans);
-    background: ${COLORS.bgPaper};
+    background: ${colors.bgPaper};
     font-size: 16px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -26,7 +39,7 @@ const styles = css`
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    color: ${COLORS.textBlack};
+    color: ${colors.textBlack};
 
     &.prevent-scroll {
       position: fixed;

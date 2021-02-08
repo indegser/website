@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import { ComponentProps, FC } from "react";
 import styled from "@emotion/styled";
-import { COLORS, mq } from "common/theme";
+import { mq } from "common/theme";
 import shortcodes from "remark-shortcodes";
 import ImageRenderer from "./renderer/ImageRenderer";
 import HeadingRenderer from "./renderer/HeadingRenderer";
@@ -13,6 +13,7 @@ import { useFootnote, MarkdownProvider } from "./Markdown.hooks";
 import Footnotes from "./Footnotes";
 import { spacingVariables } from "common/variables";
 import Code from "./renderer/Code";
+import { colors } from "style.types";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
@@ -25,7 +26,7 @@ const Container = styled.div`
   line-height: 1.95;
   word-break: break-word;
   letter-spacing: -0.1px;
-  color: ${COLORS.textMarkdownBlack};
+  color: ${colors.textMarkdownBlack};
   font-family: var(--font-serif);
   /* -webkit-text-stroke: 0.05px; */
 
@@ -54,10 +55,10 @@ const Container = styled.div`
   }
 
   a {
-    color: ${COLORS.linkPrimary};
+    color: ${colors.linkPrimary};
 
     &:hover {
-      color: ${COLORS.linkPrimaryHover};
+      color: ${colors.linkPrimaryHover};
     }
   }
 
@@ -65,7 +66,7 @@ const Container = styled.div`
   pre {
     padding: 4px 6px;
     border-radius: 0.2em;
-    background: ${COLORS.bgCode};
+    background: ${colors.bgCode};
     font-size: 0.9em;
     margin-right: 4px;
   }

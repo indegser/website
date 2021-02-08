@@ -1,4 +1,3 @@
-import PageContainer from "common/atoms/container/PageContainer";
 import { useIndegserLangStore } from "../Indegser.hooks";
 import { useState, useEffect } from "react";
 import Markdown from "common/organs/markdown/Markdown";
@@ -17,8 +16,8 @@ const Portfolio = () => {
     ];
 
     Promise.all(
-      fileNames.map((name) =>
-        import(`./data/${name}.${lang === "ko" ? "md" : "en.md"}`)
+      fileNames.map(
+        (name) => import(`./data/${name}.${lang === "ko" ? "md" : "en.md"}`)
       )
     ).then((c) => setSources(c.map((module) => module.default)));
   }, [lang]);
