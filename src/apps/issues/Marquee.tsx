@@ -38,7 +38,7 @@ const MarqueeContent = styled.div`
 
 const MarqueeTitle = styled.div`
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.35;
   margin-bottom: 2px;
   color: ${colors.textMarqueeTitle};
