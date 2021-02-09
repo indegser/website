@@ -26,6 +26,7 @@ const styles = css`
     font-family: var(--font-sans);
     background: ${colors.bgPaper};
     font-size: 16px;
+    overflow-y: scroll;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
