@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 import { mq } from "common/theme";
 import { IssuesListForRepoResponseData } from "@octokit/types";
 import { colors } from "style.types";
+import Typography from "common/atoms/Typography";
 
 interface Props {
   issue: IssuesListForRepoResponseData[number];
@@ -37,18 +38,12 @@ const MarqueeContent = styled.div`
 `;
 
 const MarqueeTitle = styled.div`
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.35;
   margin-bottom: 2px;
   color: ${colors.textMarqueeTitle};
 `;
 
 const MarqueeExcerpt = styled.div`
   color: ${colors.textMarqueeLabel};
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 0.2px;
 `;
 
 const MarqueeDate = styled.div`
@@ -84,8 +79,12 @@ const IssueMarquee: FC<Props> = ({ issue }) => {
       <MarqueeContent>
         <Link href={`/issue/${issue.number}`} passHref>
           <a>
-            <MarqueeTitle>{issue.title}</MarqueeTitle>
-            <MarqueeExcerpt>{authors}</MarqueeExcerpt>
+            <MarqueeTitle>
+              <Typography.MarqueeTitle>{issue.title}</Typography.MarqueeTitle>
+            </MarqueeTitle>
+            <MarqueeExcerpt>
+              <Typography.MarqueeDesc>{authors}</Typography.MarqueeDesc>
+            </MarqueeExcerpt>
           </a>
         </Link>
       </MarqueeContent>

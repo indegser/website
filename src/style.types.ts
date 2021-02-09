@@ -1,3 +1,5 @@
+export type ThemeType = "light" | "dark";
+
 export const palette = {
   text: {
     colorKeys: ["#2a2c2f"],
@@ -17,6 +19,7 @@ export const palette = {
       bgPaper: 1,
       bgCode: 1.15,
       bgDivider: 1.3,
+      bgIconHover: 1.12,
     },
   },
   primary: {
