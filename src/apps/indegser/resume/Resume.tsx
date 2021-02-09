@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { useTrans } from "../Indegser.hooks";
 import {
   ResumeSection,

@@ -30,7 +30,7 @@ const BookTitle = styled.h4`
 const BookAuthor = styled.h5`
   font-weight: 400;
   margin: 0;
-  color: var(${colors.textGrey});
+  color: ${colors.textMarqueeLabel};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -70,9 +70,15 @@ const Books = () => {
                     <img src={book.cover} />
                     <BookContent>
                       <BookTitle>
-                        <Typography.M15>{book.title}</Typography.M15>
+                        <Typography.MarqueeTitle>
+                          {book.title}
+                        </Typography.MarqueeTitle>
                       </BookTitle>
-                      <BookAuthor>{book.author}</BookAuthor>
+                      <BookAuthor>
+                        <Typography.MarqueeDesc>
+                          {book.author}
+                        </Typography.MarqueeDesc>
+                      </BookAuthor>
                       {book.isReading && <Reading />}
                     </BookContent>
                   </Book>
