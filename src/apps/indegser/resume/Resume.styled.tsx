@@ -24,7 +24,7 @@ export const ResumeSection = styled.div`
 `;
 
 export const ResumeSectionTitle = styled.h2`
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
 `;
 
