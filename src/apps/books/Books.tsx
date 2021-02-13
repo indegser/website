@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
-import Author from "common/atoms/Author";
-import AuthorContainer from "common/atoms/container/AuthorContainer";
+import { colors } from "style.types";
 import PageContainer from "common/atoms/container/PageContainer";
 import Typography from "common/atoms/Typography";
-import { colors } from "style.types";
 import { useBooks } from "./Books.hooks";
 import Reading from "./Reading";
 
@@ -59,35 +57,32 @@ const Books = () => {
 
   return (
     <PageContainer>
-      <AuthorContainer>
-        <Author />
-        <Contents>
-          <BookGrid>
-            {books?.map((book) => {
-              return (
-                <a key={book.id} href={book.link}>
-                  <Book>
-                    <img src={book.cover} />
-                    <BookContent>
-                      <BookTitle>
-                        <Typography.MarqueeTitle>
-                          {book.title}
-                        </Typography.MarqueeTitle>
-                      </BookTitle>
-                      <BookAuthor>
-                        <Typography.MarqueeDesc>
-                          {book.author}
-                        </Typography.MarqueeDesc>
-                      </BookAuthor>
-                      {book.isReading && <Reading />}
-                    </BookContent>
-                  </Book>
-                </a>
-              );
-            })}
-          </BookGrid>
-        </Contents>
-      </AuthorContainer>
+      <Contents>
+        <BookGrid>
+          {books?.map((book) => {
+            return (
+              <a key={book.id} href={book.link}>
+                <Book>
+                  <img src={book.cover} />
+                  <BookContent>
+                    <BookTitle>
+                      <Typography.MarqueeTitle>
+                        {book.title}
+                      </Typography.MarqueeTitle>
+                    </BookTitle>
+                    <BookAuthor>
+                      <Typography.MarqueeDesc>
+                        {book.author}
+                      </Typography.MarqueeDesc>
+                    </BookAuthor>
+                    {book.isReading && <Reading />}
+                  </BookContent>
+                </Book>
+              </a>
+            );
+          })}
+        </BookGrid>
+      </Contents>
     </PageContainer>
   );
 };
