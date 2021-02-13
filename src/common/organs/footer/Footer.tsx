@@ -1,8 +1,7 @@
-import Indegser from "./Indegser";
-import PageContainer from "common/atoms/container/PageContainer";
 import styled from "@emotion/styled";
-import Theme from "./theme/Theme";
-import { mq } from "common/theme";
+import { colors } from "style.types";
+import PageContainer from "common/atoms/container/PageContainer";
+import FooterMenu from "./FooterMenu";
 
 const FooterBox = styled.footer`
   margin-top: 32px;
@@ -10,15 +9,22 @@ const FooterBox = styled.footer`
 `;
 const Layout = styled.div`
   display: grid;
-  grid-template-areas: "indegser theme";
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-gap: 20px;
   align-items: center;
+`;
 
-  ${mq("sm")} {
-    grid-gap: 14px;
-    grid-template-areas:
-      "theme"
-      "indegser";
-  }
+const Divider = styled.div`
+  height: 12px;
+  width: 1px;
+  background: ${colors.bgDivider};
+`;
+
+const Name = styled.div`
+  font-weight: 600;
+  font-size: 12px;
+  color: ${colors.textLightGrey};
 `;
 
 const Footer = () => {
@@ -26,8 +32,11 @@ const Footer = () => {
     <FooterBox>
       <PageContainer>
         <Layout>
-          <Indegser />
-          <Theme />
+          <Name>Jaekwon Han</Name>
+          <Divider />
+          <Name>indegser@gmail.com</Name>
+          <Divider />
+          <FooterMenu />
         </Layout>
       </PageContainer>
     </FooterBox>
