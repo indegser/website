@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const MenuItem = styled.a`
-  font-size: 0.925rem;
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
 
   &[aria-current="true"] {
@@ -17,8 +18,8 @@ const NavMenu = () => {
   const { pathname } = useRouter();
 
   const items = [
-    { href: "/", name: "Issues" },
-    { href: "/books", name: "Books" },
+    { href: "/", name: "이슈" },
+    { href: "/books", name: "책" },
   ];
 
   return (
