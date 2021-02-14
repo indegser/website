@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
-import PageContainer from "common/atoms/container/PageContainer";
 import { colors } from "style.types";
 import NavMenu from "./NavMenu";
 import Theme from "./theme/Theme";
 import Logo from "./Logo";
+import { Container } from "common/atoms/Container";
 
 const Layout = styled.nav``;
 
-const Container = styled.div`
+const NavGrid = styled.div`
   display: grid;
   grid-template-areas: "logo menu theme";
   grid-template-columns: max-content auto max-content;
@@ -33,15 +33,15 @@ export const MenuLogo = styled.div`
 const Nav = () => {
   return (
     <Layout id="global-nav">
-      <PageContainer>
-        <Container>
+      <Container>
+        <NavGrid>
           <Logo />
           <Menus style={{ marginLeft: 32 }}>
             <NavMenu />
           </Menus>
           <Theme />
-        </Container>
-      </PageContainer>
+        </NavGrid>
+      </Container>
     </Layout>
   );
 };

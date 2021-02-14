@@ -1,4 +1,3 @@
-import PageContainer from "common/atoms/container/PageContainer";
 import styled from "@emotion/styled";
 import Language from "./Language";
 import { useTrans } from "./Indegser.hooks";
@@ -7,6 +6,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Portfolio from "./portfolio/Portfolio";
 import { colors } from "style.types";
+import Container from "common/atoms/Container";
 
 const Navigation = styled.div`
   height: 40px;
@@ -53,7 +53,7 @@ const Indegser = () => {
   ];
 
   return (
-    <PageContainer>
+    <Container.Default>
       <Navigation>
         <Title>{useTrans("name")}</Title>
         <Nav>
@@ -68,7 +68,7 @@ const Indegser = () => {
         </Nav>
       </Navigation>
       {isPortfolioPage ? <Portfolio /> : <Resume />}
-    </PageContainer>
+    </Container.Default>
   );
 };
 

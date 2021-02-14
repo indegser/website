@@ -7,6 +7,8 @@ import { colors } from "style.types";
 
 const Container = styled.div`
   position: relative;
+  grid-column: span 5;
+
   ${mq("md")} {
     padding-top: 20px;
     border-top: 1px solid ${colors.bgDivider};
