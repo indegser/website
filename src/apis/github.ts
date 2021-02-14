@@ -1,4 +1,5 @@
 import { request } from "@octokit/request";
+import { RepoType } from "global.types";
 
 const headers = {
   authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
@@ -28,10 +29,10 @@ const githubApi = {
       headers,
     });
   },
-  getBookLabels: () => {
+  getLabels: (repo: RepoType) => {
     return request("GET /repos/:owner/:repo/labels", {
       owner: "indegser",
-      repo: "book",
+      repo,
       headers,
     });
   },

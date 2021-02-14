@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { colors } from "style.types";
-import PageContainer from "common/atoms/container/PageContainer";
+import { Container } from "common/atoms/Container";
 import FooterMenu from "./FooterMenu";
 
 const FooterBox = styled.footer`
@@ -30,7 +30,7 @@ const Name = styled.div`
 const Footer = () => {
   return (
     <FooterBox>
-      <PageContainer>
+      <Container>
         <Layout>
           <Name>Jaekwon Han</Name>
           <Divider />
@@ -38,7 +38,7 @@ const Footer = () => {
           <Divider />
           <FooterMenu />
         </Layout>
-      </PageContainer>
+      </Container>
     </FooterBox>
   );
 };

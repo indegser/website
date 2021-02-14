@@ -1,4 +1,6 @@
 import { Global, css } from "@emotion/react";
+import { mq } from "common/theme";
+import { spacingVariables } from "common/variables";
 import { colors } from "style.types";
 
 const styles = css`
@@ -20,6 +22,16 @@ const styles = css`
       Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     --font-serif: IBM Plex Serif, Noto Serif KR, Nanum Myeongjo, Georgia,
       Cambria, "Times New Roman", Times, serif;
+
+    ${spacingVariables.pagePadding}: 48px;
+
+    ${mq(840)} {
+      ${spacingVariables.pagePadding}: 32px;
+    }
+
+    ${mq(640)} {
+      ${spacingVariables.pagePadding}: 20px;
+    }
   }
 
   html {
