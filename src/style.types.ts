@@ -10,6 +10,8 @@ export const palette = {
       textFigcaption: 9,
       textBlack: 12,
       textGrey: 8,
+      textResume: 10,
+      textLiDot: 3,
       textLightGrey: 4.6,
     },
   },

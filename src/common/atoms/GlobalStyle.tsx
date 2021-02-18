@@ -39,6 +39,7 @@ const styles = css`
       Oxygen, Ubuntu, "Noto Sans KR", sans-serif;
     --font-serif: IBM Plex Serif, Noto Serif KR, Nanum Myeongjo, Georgia,
       Cambria, "Times New Roman", Times, serif;
+    --font-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 
     ${spacingVariables.pagePadding}: 48px;
 
@@ -112,7 +113,7 @@ const styles = css`
   }
 
   code {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    font-family: var(--font-mono);
     white-space: pre;
     overflow-wrap: normal;
     font-feature-settings: normal;
@@ -122,8 +123,7 @@ const styles = css`
   textarea {
     font-size: 0.925rem;
     resize: vertical;
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
-      monospace;
+    font-family: var(--font-mono);
   }
 
   label[for] {
