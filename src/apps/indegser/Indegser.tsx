@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Portfolio from "./portfolio/Portfolio";
 import { colors } from "style.types";
-import Container from "common/atoms/Container";
+import { Container, LayoutGrid } from "common/atoms/Container";
 
 const Navigation = styled.div`
   height: 40px;
@@ -14,6 +14,7 @@ const Navigation = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  grid-column: span 8;
 `;
 
 const Title = styled.div`
@@ -53,7 +54,7 @@ const Indegser = () => {
   ];
 
   return (
-    <Container.Default>
+    <>
       <Navigation>
         <Title>{useTrans("name")}</Title>
         <Nav>
@@ -68,7 +69,7 @@ const Indegser = () => {
         </Nav>
       </Navigation>
       {isPortfolioPage ? <Portfolio /> : <Resume />}
-    </Container.Default>
+    </>
   );
 };
 

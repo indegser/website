@@ -3,36 +3,41 @@ import { ResumeContentHeading } from "./Resume.styled";
 import { useTrans } from "../Indegser.hooks";
 import { mq } from "common/theme";
 
-const Layout = styled.div`
+const Layout = styled.div``;
+
+const Biography = styled.div``;
+
+const BioField = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 24px;
+  grid-gap: 20px;
+  margin-top: 40px;
 
   ${mq("md")} {
     grid-template-columns: 1fr;
   }
 `;
 
-const Biography = styled.div`
-  margin: 0;
-  grid-column: 1 / 3;
-  padding-right: 2rem;
-`;
-
 const Bio = () => {
+  const fields = [
+    { key: "contact", name: "indegser@gmail.com" },
+    { key: "location", name: "서울, 대한민국" },
+    { key: "education", name: "산업디자인과" },
+  ] as const;
+
   return (
     <Layout>
       <Biography
         dangerouslySetInnerHTML={{ __html: useTrans("biography") as string }}
       />
-      <div>
-        <ResumeContentHeading>{useTrans("contact")}</ResumeContentHeading>
-        <div>indegser@gmail.com</div>
-        <ResumeContentHeading>{useTrans("location")}</ResumeContentHeading>
-        <div>Seoul, South Korea</div>
-        <ResumeContentHeading>{useTrans("education")}</ResumeContentHeading>
-        <div>Industrial Design</div>
-      </div>
+      <BioField>
+        {fields.map((field) => (
+          <div key={field.key}>
+            <ResumeContentHeading>{useTrans(field.key)}</ResumeContentHeading>
+            <div>{field.name}</div>
+          </div>
+        ))}
+      </BioField>
     </Layout>
   );
 };
