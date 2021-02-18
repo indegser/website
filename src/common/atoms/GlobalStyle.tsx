@@ -17,9 +17,26 @@ const styles = css`
     font-weight: 500;
   }
 
+  @font-face {
+    font-family: "Noto Sans KR";
+    src: url("/fonts/NotoSansKR-Regular.otf");
+  }
+
+  @font-face {
+    font-family: "Noto Sans KR";
+    src: url("/fonts/NotoSansKR-Medium.otf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Noto Sans KR";
+    src: url("/fonts/NotoSansKR-Medium.otf");
+    font-weight: 600;
+  }
+
   :root {
     --font-sans: --apple-system, BlinkMacSystemFont, Inter, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      Oxygen, Ubuntu, "Noto Sans KR", sans-serif;
     --font-serif: IBM Plex Serif, Noto Serif KR, Nanum Myeongjo, Georgia,
       Cambria, "Times New Roman", Times, serif;
 
