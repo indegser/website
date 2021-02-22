@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Portfolio from "./portfolio/Portfolio";
 import { colors } from "style.types";
-import { Container, LayoutGrid } from "common/atoms/Container";
 
 const Navigation = styled.div`
   height: 40px;
