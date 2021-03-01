@@ -4,9 +4,7 @@
 
 가장 기억에 남는 작업은 디자인 시안과 서비스간의 외관 차이를 줄이기 위해 CSS 속성을 동료들에게 물어보며 수정한 것입니다. 디자인 시안에는 화려한 패턴의 액자와 그 밑에 떨어지는 그림자와 전시 조명 등 CSS로는 표현하기 힘든 효과들이 잔뜩 있었는데, 만족스러운 결과물을 얻고자 개발자 도구를 자주 들여다보곤 했습니다.
 
-![Photoshop으로 작업한 액자와 그림자. 실제 서비스에는 반영이 되지 못했다. (2014)](https://user-images.githubusercontent.com/12758512/82830052-a9b7f880-9eef-11ea-8fa2-3352652e0f1b.jpg)
-
-디자인과 서비스의 괴리, 웹 기술을 학습해서 디자인을 실제 서비스에 옮기는 과정에서의 제약을 없애고 싶다는 생각이 저로 하여금 [Codecademy](https://www.codecademy.com/)에서 HTML, CSS 강좌를 듣게 한 계기가 되었습니다.
+![UHD TV 용 아이노갤러리 (2014)](https://user-images.githubusercontent.com/12758512/82830052-a9b7f880-9eef-11ea-8fa2-3352652e0f1b.jpg)
 
 # 한국영화를 기억하다 전시회
 
@@ -25,4 +23,4 @@
 
 [^1]: 전시회 도록에 들어간 내용
 
-![전시회 포스터](https://user-images.githubusercontent.com/12758512/82830250-2b0f8b00-9ef0-11ea-9c36-a266ecaa8599.jpg)
+![직접 디자인했던 전시회 포스터 (2014)](https://user-images.githubusercontent.com/12758512/82830250-2b0f8b00-9ef0-11ea-9c36-a266ecaa8599.jpg)
