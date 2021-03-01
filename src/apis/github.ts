@@ -6,11 +6,12 @@ const headers = {
 };
 
 const githubApi = {
-  getIssues: () => {
+  getIssues: (_, label: string) => {
     return request("GET /repos/:owner/:repo/issues", {
       owner: "indegser",
       repo: "story",
       state: "open",
+      labels: label,
       headers,
     });
   },
