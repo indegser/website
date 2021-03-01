@@ -1,26 +1,25 @@
 import styled from "@emotion/styled";
-import PageContainer from "common/atoms/container/PageContainer";
 import { colors } from "style.types";
-import Link from "next/link";
 import NavMenu from "./NavMenu";
+import Theme from "./theme/Theme";
+import Logo from "./Logo";
+import { Container } from "common/atoms/Container";
 
-const Layout = styled.nav`
-  position: sticky;
-  top: 0;
-  background: ${colors.bgPaper};
-  border-bottom: 1px solid ${colors.bgDivider};
-  z-index: 99;
+const Layout = styled.nav``;
+
+const NavGrid = styled.div`
+  display: grid;
+  grid-template-areas: "logo menu theme";
+  grid-template-columns: max-content auto max-content;
+  height: 60px;
+  align-items: center;
 `;
 
 const Menus = styled.div`
   display: grid;
   grid-auto-flow: column;
+  grid-gap: 32px;
   grid-auto-columns: max-content;
-  grid-gap: 40px;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  height: 50px;
 `;
 
 export const MenuLogo = styled.div`
@@ -34,29 +33,15 @@ export const MenuLogo = styled.div`
 const Nav = () => {
   return (
     <Layout id="global-nav">
-      <PageContainer>
-        <Menus>
-          <Link href="/" passHref>
-            <a>
-              <MenuLogo>
-                <svg height={21} fill="currentColor" viewBox="0 0 142 165">
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M62.41 17.818c-5.29-2.887-10.239-4.465-14.056-4.264-1.608.085-2.815.259-3.688.467-.098.023-.19.046-.277.07-.28 2.985-2.526 5.524-5.607 6.036-3.67.61-7.136-1.886-7.743-5.575-.338-2.058-.216-4.335.765-6.547.98-2.21 2.582-3.822 4.324-4.945C39.356.978 43.548.252 47.648.036c7.497-.395 15.088 2.556 21.19 5.886 6.249 3.411 11.808 7.705 15.501 11.09 3.843 3.521 7.369 8.084 7.958 13.818.62 6.039-2.181 11.389-6.67 15.941a24.202 24.202 0 0 1-4.359 3.509c13.586 8.34 23.609 19.698 29.729 34.159 3.216 7.602 4.355 15.49-.739 21.243-2.33 2.631-5.363 4.01-8.15 4.765-2.796.756-5.818 1.012-8.712 1.052-4.728.066-10.093-.457-14.893-.925-.982-.096-1.94-.189-2.865-.275-5.951-.551-10.284-.748-12.938-.188-6.23 1.312-11.734 4.55-14.821 10.757-3.18 6.395-4.494 17.315.885 35.426 1.063 3.582-.964 7.352-4.528 8.421-3.564 1.07-7.315-.968-8.38-4.55-5.885-19.819-5.341-34.66-.025-45.349 5.409-10.877 15.041-16.046 24.106-17.955 4.994-1.052 11.423-.553 16.937-.042 1.082.1 2.148.204 3.198.305 4.791.464 9.228.894 13.137.84 2.337-.033 4.118-.243 5.398-.59.62-.167 1.028-.342 1.282-.482a1.821 1.821 0 0 0 .295-.198l.002-.001.004-.014c.021-.059.09-.296.085-.8-.01-1.086-.358-3.034-1.673-6.142-7.12-16.826-20.886-28.962-42.347-36.142-3.316-1.11-5.237-4.585-4.422-8 .815-3.417 4.095-5.638 7.551-5.116 8.99 1.36 13.902-.422 16.676-3.236 2.858-2.9 2.896-4.467 2.84-5.022-.09-.86-.757-2.568-3.637-5.207-3.028-2.776-7.712-6.39-12.854-9.196z"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M87.719 103.108a6.711 6.711 0 0 1 9.486.847l39.29 47.191c2.387 2.866 2.01 7.135-.843 9.534a6.71 6.71 0 0 1-9.486-.847l-39.29-47.19c-2.387-2.867-2.01-7.136.843-9.535zM99.44 64.408c.913.152 2.32.496 4.33 1.195 6.038 2.101 15.174 6.552 27.611 13.612 3.238 1.838 7.347.69 9.176-2.566 1.829-3.255.686-7.384-2.552-9.222-12.573-7.137-22.584-12.095-29.828-14.616-3.525-1.227-7.033-2.11-10.115-2.042-1.585.035-3.545.329-5.407 1.391a9.15 9.15 0 0 0-4.231 5.26c-1.119 3.565.85 7.366 4.397 8.49 2.397.76 4.9.103 6.618-1.502zm-1.156-.1s.009-.002.028-.003a.296.296 0 0 1-.028.002zM.641 38.86c1.583-3.383 5.594-4.836 8.96-3.246l33.416 15.787c3.366 1.59 4.813 5.622 3.23 9.005-1.582 3.383-5.593 4.837-8.96 3.247L3.872 47.866C.505 46.276-.94 42.244.641 38.86z"
-                  />
-                </svg>
-              </MenuLogo>
-            </a>
-          </Link>
-          <NavMenu />
-        </Menus>
-      </PageContainer>
+      <Container>
+        <NavGrid>
+          <Logo />
+          <Menus style={{ marginLeft: 32 }}>
+            <NavMenu />
+          </Menus>
+          <Theme />
+        </NavGrid>
+      </Container>
     </Layout>
   );
 };

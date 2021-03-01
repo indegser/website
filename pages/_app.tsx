@@ -7,20 +7,25 @@ import GlobalStyle from "common/atoms/GlobalStyle";
 import Footer from "common/organs/footer/Footer";
 import Nav from "common/organs/nav/Nav";
 import ThemeScript from "common/ThemeScript";
+import { spacingVariables } from "common/variables";
 
 export function reportWebVitals(metric) {
   Analytics.reportWebVitals(metric);
 }
 
 const Page = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  grid-gap: var(${spacingVariables.pagePadding});
   min-height: 100vh;
+`;
 
-  > main {
-    flex: 1 1;
-    width: 100%;
-  }
+const Main = styled.div`
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 var(${spacingVariables.pagePadding});
 `;
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
@@ -46,9 +51,9 @@ const App = ({ Component, pageProps }) => {
       </Head>
       <Page>
         <Nav />
-        <main>
+        <Main>
           <Component {...pageProps}></Component>
-        </main>
+        </Main>
         <Footer />
       </Page>
     </>

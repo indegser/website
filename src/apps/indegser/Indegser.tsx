@@ -1,4 +1,3 @@
-import PageContainer from "common/atoms/container/PageContainer";
 import styled from "@emotion/styled";
 import Language from "./Language";
 import { useTrans } from "./Indegser.hooks";
@@ -14,6 +13,7 @@ const Navigation = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  grid-column: span 8;
 `;
 
 const Title = styled.div`
@@ -53,7 +53,7 @@ const Indegser = () => {
   ];
 
   return (
-    <PageContainer>
+    <>
       <Navigation>
         <Title>{useTrans("name")}</Title>
         <Nav>
@@ -68,7 +68,7 @@ const Indegser = () => {
         </Nav>
       </Navigation>
       {isPortfolioPage ? <Portfolio /> : <Resume />}
-    </PageContainer>
+    </>
   );
 };
 

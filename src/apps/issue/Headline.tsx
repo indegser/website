@@ -4,11 +4,13 @@ import { Issue } from "global.types";
 import { colors } from "style.types";
 
 const Box = styled.div`
-  padding: 40px 0 20px 0;
+  padding: 20px 0;
 
   ${mq("sm")} {
     padding: 20px 0;
   }
+
+  padding-top: 0;
 `;
 
 const Title = styled.h1`

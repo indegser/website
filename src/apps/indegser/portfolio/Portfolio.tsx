@@ -13,6 +13,7 @@ const Portfolio = () => {
       "alleyswonderlab",
       "eosdaq",
       "keycat",
+      "naverlabs",
     ];
 
     Promise.all(

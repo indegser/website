@@ -56,7 +56,7 @@ const ThemeScript = () => {
         }
         
         let rules = THEME[theme];
-        let root = document.documentElement.style;
+        let root = document.querySelector(':root').style;
         for (const [property, value] of rules) {
           root.setProperty(property, value);
         }
