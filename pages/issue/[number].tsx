@@ -18,7 +18,7 @@ const Page: FC<Props> = ({ issue }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await githubApi.getIssues();
+  const { data } = await githubApi.getIssues(null, null);
   const paths = data.map((issue) => ({
     params: { number: issue.number.toString() },
   }));
