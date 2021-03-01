@@ -4,22 +4,30 @@ import { colors } from "style.types";
 
 const Links = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 18px;
+  grid-template-columns: repeat(3, max-content);
+  align-items: center;
+  grid-gap: 8px;
   position: relative;
 `;
 
 const LinkText = styled.a`
   font-size: 12px;
-  cursor: default;
   padding: 8px 0;
-  color: ${colors.textLightGrey};
+  cursor: pointer;
+  color: ${colors.textBlack};
   display: flex;
   align-items: center;
 
   &:hover {
-    color: ${colors.textGrey};
+    text-decoration: underline;
   }
+`;
+
+const MidDot = styled.div`
+  width: 2px;
+  height: 2px;
+  border-radius: 999rem;
+  background: ${colors.textLiDot};
 `;
 
 const FooterMenu = () => {
@@ -28,6 +36,7 @@ const FooterMenu = () => {
       <Link href="/indegser">
         <LinkText>Resume</LinkText>
       </Link>
+      <MidDot />
       <Link href="/indegser/portfolio">
         <LinkText>Portfolio</LinkText>
       </Link>
