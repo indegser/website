@@ -4,6 +4,7 @@ import Typography from "common/atoms/Typography";
 import { useBooks } from "./Books.hooks";
 import Reading from "./Reading";
 import { LayoutGrid } from "common/atoms/Container";
+import { mq } from "common/theme";
 
 const BookContent = styled.div`
   height: 80px;
@@ -27,9 +28,18 @@ const BookAuthor = styled.h5`
 
 const BookGridItem = styled.div`
   grid-column: span 2;
+
+  ${mq("md")} {
+    grid-column: span 4;
+  }
 `;
 
 const Book = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+
   img {
     width: 100%;
     height: auto;
@@ -49,7 +59,7 @@ const Books = () => {
   const books = useBooks();
 
   return (
-    <LayoutGrid>
+    <LayoutGrid style={{ gap: "40px 20px" }}>
       {books?.map((book) => {
         return (
           <BookGridItem key={book.id}>

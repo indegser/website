@@ -55,10 +55,7 @@ const Logo = () => {
   return (
     <Link href="/" passHref>
       <a>
-        <Container>
-          {icon}
-          {text}
-        </Container>
+        <Container>{icon}</Container>
       </a>
     </Link>
   );

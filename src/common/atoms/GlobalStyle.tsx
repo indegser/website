@@ -22,16 +22,16 @@ const styles = css`
     src: url("/fonts/NotoSansKR-Regular.otf");
   }
 
-  @font-face {
+  /* @font-face {
     font-family: "Noto Sans KR";
     src: url("/fonts/NotoSansKR-Medium.otf");
     font-weight: 500;
-  }
+  } */
 
   @font-face {
     font-family: "Noto Sans KR";
-    src: url("/fonts/NotoSansKR-Medium.otf");
-    font-weight: 600;
+    src: url("/fonts/NotoSansKR-Bold.otf");
+    font-weight: 500;
   }
 
   :root {
