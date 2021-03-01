@@ -7,7 +7,7 @@ const M15 = styled.span`
 
 const MarqueeTitle = styled.span`
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: -0.18px;
 `;
 
