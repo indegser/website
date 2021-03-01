@@ -19,7 +19,7 @@ const Container = styled.div`
 const Heading = styled.div`
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid ${colors.bgDivider};
+  border-bottom: 4px solid ${colors.textBlack};
 `;
 
 const Label = styled.div`
