@@ -22,6 +22,7 @@ const Page = styled.div`
 
 const Main = styled.div`
   max-width: 1040px;
+  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 var(${spacingVariables.pagePadding});
