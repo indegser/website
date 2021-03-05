@@ -53,7 +53,7 @@ const Indegser = () => {
   ];
 
   return (
-    <>
+    <div style={{ marginTop: -20 }}>
       <Navigation>
         <Title>{useTrans("name")}</Title>
         <Nav>
@@ -68,7 +68,7 @@ const Indegser = () => {
         </Nav>
       </Navigation>
       {isPortfolioPage ? <Portfolio /> : <Resume />}
-    </>
+    </div>
   );
 };
 

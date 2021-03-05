@@ -1,11 +1,16 @@
 import styled from "@emotion/styled";
-import { ResumeContentHeading } from "./Resume.styled";
 import { useTrans } from "../Indegser.hooks";
 import { mq } from "common/theme";
+import { colors } from "style.types";
 
 const Layout = styled.div``;
 
-const Biography = styled.div``;
+const Biography = styled.div`
+  column-count: 2;
+  column-gap: 40px;
+  color: ${colors.textLightGrey};
+  line-height: 1.9;
+`;
 
 const BioField = styled.div`
   display: grid;
@@ -18,26 +23,23 @@ const BioField = styled.div`
   }
 `;
 
-const Bio = () => {
-  const fields = [
-    { key: "contact", name: "indegser@gmail.com" },
-    { key: "location", name: "서울, 대한민국" },
-    { key: "education", name: "산업디자인과" },
-  ] as const;
+const Headline = styled.h1`
+  font-size: 120px;
+  line-height: 92px;
+  text-align: center;
+`;
 
+const Bio = () => {
   return (
     <Layout>
+      <Headline>
+        Technical
+        <br />
+        Beauty
+      </Headline>
       <Biography
         dangerouslySetInnerHTML={{ __html: useTrans("biography") as string }}
       />
-      <BioField>
-        {fields.map((field) => (
-          <div key={field.key}>
-            <ResumeContentHeading>{useTrans(field.key)}</ResumeContentHeading>
-            <div>{field.name}</div>
-          </div>
-        ))}
-      </BioField>
     </Layout>
   );
 };

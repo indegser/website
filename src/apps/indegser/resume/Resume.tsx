@@ -11,12 +11,7 @@ import Works from "./Works";
 const Resume = () => {
   return (
     <div>
-      <ResumeSection>
-        <ResumeSectionTitle>{useTrans("bio")}</ResumeSectionTitle>
-        <ResumeContent>
-          <Bio />
-        </ResumeContent>
-      </ResumeSection>
+      <Bio />
       <ResumeSection>
         <ResumeSectionTitle>{useTrans("works")}</ResumeSectionTitle>
         <ResumeContent>
