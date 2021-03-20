@@ -1,10 +1,11 @@
-import { useIndegserLangStore } from "../Indegser.hooks";
+import { useIndegserContext } from "../Indegser.hooks";
 import { useState, useEffect } from "react";
 import Markdown from "common/organs/markdown/Markdown";
 
 const Portfolio = () => {
   const [sources, setSources] = useState<string[]>([]);
-  const lang = useIndegserLangStore((s) => s.lang);
+  const { lang } = useIndegserContext();
+
   useEffect(() => {
     const fileNames = [
       "aurumplanet",

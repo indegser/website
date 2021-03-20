@@ -1,6 +1,7 @@
+import { useRouter } from "next/router";
 import Select from "common/atoms/form/select/Select";
 import styled from "@emotion/styled";
-import { useIndegserLangStore } from "./Indegser.hooks";
+import { useIndegserContext } from "./Indegser.hooks";
 import { colors } from "style.types";
 
 const LangValue = styled.span`
@@ -9,11 +10,16 @@ const LangValue = styled.span`
 `;
 
 const Language = () => {
-  const lang = useIndegserLangStore((s) => s.lang);
-  const changeLang = useIndegserLangStore((s) => s.changeLang);
+  const router = useRouter();
+  const { lang } = useIndegserContext();
 
   const handleChange = ({ value }) => {
-    changeLang(value);
+    router.replace({
+      pathname: router.pathname,
+      query: {
+        lang: value,
+      },
+    });
   };
 
   const options = [

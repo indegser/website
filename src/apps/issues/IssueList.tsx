@@ -30,16 +30,16 @@ const Label = styled.div`
 const IssueList = () => {
   const router = useRouter();
   const label = router.query.label?.toString();
-  const result = useSWR(
+  const { data } = useSWR(
     router.isReady ? ["issues", label] : null,
     githubApi.getIssues
   );
 
-  if (!result.data) return null;
-
-  const contents = result.data.data.map((issue) => (
-    <IssueMarquee key={issue.id} issue={issue} />
-  ));
+  const contents = data ? (
+    data.data.map((issue) => <IssueMarquee key={issue.id} issue={issue} />)
+  ) : (
+    <div></div>
+  );
 
   return (
     <Container>

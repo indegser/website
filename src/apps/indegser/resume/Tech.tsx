@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { colors } from "style.types";
+import { useIndegserContext } from "../Indegser.hooks";
 import { ResumeContentHeading } from "./Resume.styled";
 
 const Box = styled.div`
@@ -39,13 +40,16 @@ const TechItem = styled.li`
 `;
 
 const Tech = () => {
+  const { lang } = useIndegserContext();
+  const isEn = lang === "en";
+
   const section = [
     {
-      key: "프론트엔드",
+      title: isEn ? "Front-end" : "프론트엔드",
       stacks: ["React, Next.js", "Typescript", "Jest, Zustand, Emotion"],
     },
     {
-      key: "2D / 3D 그래픽",
+      title: isEn ? "2D/3D Graphics" : "2D/3D 그래픽",
       stacks: [
         "WebGL, Three.js",
         "SVG, D3.js",
@@ -53,7 +57,7 @@ const Tech = () => {
       ],
     },
     {
-      key: "CI/CD",
+      title: "CI/CD",
       stacks: [
         "Vercel, Netlify",
         "K8s, Docker",
@@ -61,15 +65,15 @@ const Tech = () => {
       ],
     },
     {
-      key: "디자인",
+      title: isEn ? "Etc" : "기타",
       stacks: ["Figma"],
     },
   ];
   return (
     <Box>
-      {section.map((section) => (
-        <div key={section.key}>
-          <ResumeContentHeading>{section.key}</ResumeContentHeading>
+      {section.map((section, i) => (
+        <div key={i}>
+          <ResumeContentHeading>{section.title}</ResumeContentHeading>
           <TechList>
             {section.stacks.map((stack) => (
               <TechItem key={stack}>
