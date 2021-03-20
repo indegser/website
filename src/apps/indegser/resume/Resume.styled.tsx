@@ -23,6 +23,12 @@ export const ResumeSection = styled.div`
   }
 `;
 
+export const ResumeSectionBorder = styled.div`
+  border-top: 1px solid ${colors.bgDivider};
+  margin: 40px 0;
+  width: 100%;
+`;
+
 export const ResumeSectionTitle = styled.h2`
   font-weight: 600;
   margin: 0;

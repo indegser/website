@@ -1,18 +1,12 @@
-import create, { State } from "zustand";
-import { useMemo } from "react";
+import { createContext, useContext } from "react";
 
-interface IndegserLangStore extends State {
-  lang: "en" | "ko";
-  changeLang: (lang: IndegserLangStore["lang"]) => void;
-}
+export type IndegserContextType = {
+  lang?: "en" | "ko";
+};
 
-export const useIndegserLangStore = create<IndegserLangStore>((set) => ({
-  lang: "ko",
-  changeLang: (lang) =>
-    set({
-      lang,
-    }),
-}));
+export const IndegserContext = createContext<IndegserContextType>(null);
+
+export const useIndegserContext = () => useContext(IndegserContext);
 
 const locale = {
   resume: ["Resume", "이력서"],
@@ -55,10 +49,8 @@ const locale = {
 };
 
 export const useTrans = (key: keyof typeof locale) => {
-  const lang = useIndegserLangStore((s) => s.lang);
-  return useMemo(() => {
-    const index = lang === "en" ? 0 : 1;
-    const target = locale[key];
-    return target[index] || target[0];
-  }, [lang]);
+  const { lang } = useIndegserContext();
+  const index = lang === "en" ? 0 : 1;
+  const target = locale[key];
+  return target[index] || target[0];
 };

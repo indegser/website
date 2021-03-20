@@ -1,15 +1,17 @@
 import styled from "@emotion/styled";
 import { ResumeContentHeading } from "./Resume.styled";
-import { useTrans } from "../Indegser.hooks";
+import { useIndegserContext, useTrans } from "../Indegser.hooks";
 import { mq } from "common/theme";
 import { colors } from "style.types";
 
-const Layout = styled.div``;
+const Layout = styled.div`
+  column-count: 2;
+  column-gap: 40px;
+`;
 
 const Work = styled.div`
   display: grid;
-  grid-template-columns: 240px auto;
-  grid-gap: 40px;
+  position: relative;
 
   & + & {
     margin-top: 80px;
@@ -28,19 +30,19 @@ const Date = styled.div`
   line-height: 1.6;
 `;
 
-const Milestone = styled.ul`
+const Milestone = styled.div`
   margin: 0;
   padding: 0;
+  margin-top: 20px;
 `;
 
-const MilestoneLine = styled.li`
-  line-height: 1.4;
+const MilestoneLine = styled.div`
+  line-height: 1.8;
   position: relative;
-  padding-left: 24px;
+  /* padding-left: 24px; */
   font-size: 15px;
   list-style: none;
   color: ${colors.textLiDot};
-  line-height: 1.64;
 
   & + & {
     margin-top: 1em;
@@ -51,7 +53,7 @@ const MilestoneLine = styled.li`
     letter-spacing: 0.2px;
   }
 
-  &::before {
+  /* &::before {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -59,15 +61,26 @@ const MilestoneLine = styled.li`
     width: 16px;
     content: "•";
     text-align: center;
-  }
+  } */
+`;
+
+const Duration = styled.div`
+  font-size: 13px;
+  color: ${colors.textLightGrey};
+  position: absolute;
+  right: 0;
+  top: 0;
 `;
 
 const Works = () => {
+  const { lang } = useIndegserContext();
+  const isEn = lang === "en";
+
   const companies = {
     naverlabs: "Naver Labs",
     eosdaq: "EOSDAQ",
     alleyswonderlab: "AlleysWonderLab",
-    indegs: "Indegs (창업)",
+    indegs: "Indegs",
     aurumplanet: "Aurumplanet",
   };
 
@@ -101,9 +114,13 @@ const Works = () => {
     },
     indegs: {
       stack: ["React", "Electron.js"],
-      milestone: [
-        "디자이너를 위한 Git이 필요하다고 생각해 창업했습니다. Photoshop 파일을 수정할 때마다 자동으로 커밋을 생성하고 썸네일을 생성해 사용자가 “시각적”으로 커밋을 확인할 수 있도록 만들었습니다. Electron을 기반으로 만든 덕분에 웹 프론트엔드 기술을 사용했습니다.",
-      ],
+      milestone: isEn
+        ? [
+            "I started my business because I thought I needed Git for designers. Whenever you create/save a Photoshop file, it automatically creates a commit and generates a thumbnail so you can visualize it. It is based on Electron and uses web frontend technology.",
+          ]
+        : [
+            "디자이너를 위한 Git이 필요하다고 생각해 창업했습니다. Photoshop 파일을 수정할 때마다 자동으로 커밋을 생성하고 썸네일을 생성해 사용자가 “시각적”으로 커밋을 확인할 수 있도록 만들었습니다. Electron을 기반으로 만든 덕분에 웹 프론트엔드 기술을 사용했습니다.",
+          ],
     },
   };
 
@@ -125,19 +142,17 @@ const Works = () => {
                 >
                   {name}
                 </ResumeContentHeading>
-                <Date>{duration}</Date>
+                <Duration>{duration}</Duration>
                 <Date>{role}</Date>
               </Content>
             </Company>
-            <div>
-              <Milestone>
-                {milestone?.map((line, i) => (
-                  <MilestoneLine key={i}>
-                    <span>{line}</span>
-                  </MilestoneLine>
-                ))}
-              </Milestone>
-            </div>
+            <Milestone>
+              {milestone?.map((line, i) => (
+                <MilestoneLine key={i}>
+                  <span>{line}</span>
+                </MilestoneLine>
+              ))}
+            </Milestone>
           </Work>
         );
       })}
