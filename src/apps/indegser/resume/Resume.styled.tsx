@@ -2,6 +2,15 @@ import styled from "@emotion/styled";
 import { mq } from "common/theme";
 import { colors } from "style.types";
 
+export const ResumeGrid = styled.div`
+  column-count: 2;
+  column-gap: 40px;
+
+  ${mq("md")} {
+    column-count: 1;
+  }
+`;
+
 export const ResumeSection = styled.div`
   position: relative;
   border-top: 1px solid ${colors.bgDivider};

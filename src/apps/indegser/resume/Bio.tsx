@@ -1,21 +1,21 @@
 import styled from "@emotion/styled";
 import { colors } from "style.types";
 import { useIndegserContext } from "../Indegser.hooks";
+import { ResumeGrid } from "./Resume.styled";
 
 const Layout = styled.div`
-  padding: 32px 0 20px;
+  padding-top: 40px;
+  margin-bottom: -12px;
 `;
 
-const Biography = styled.div`
-  column-count: 2;
-  column-gap: 40px;
+const Biography = styled(ResumeGrid)`
   color: ${colors.textBlack};
   line-height: 1.8;
   font-size: 15px;
 
   p {
     margin: 0;
-    margin-top: 0.65em;
+    margin-top: 1.25em;
   }
 
   p:first-of-type {
