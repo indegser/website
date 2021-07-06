@@ -2,35 +2,29 @@ import ReactMarkdown from "react-markdown";
 import { ComponentProps, FC } from "react";
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
-import shortcodes from "remark-shortcodes";
+import directive from "remark-directive";
+import visit from "unist-util-visit";
 import ImageRenderer from "./renderer/ImageRenderer";
-import HeadingRenderer from "./renderer/HeadingRenderer";
 import BreakRenderer from "./renderer/BreakRenderer";
-import ParagraphRenderer from "./renderer/ParagraphRenderer";
-import FootnoteReference from "./renderer/footnote/FootnoteReference";
-import Shortcode from "./shortcode/Shortcode";
-import { useFootnote, MarkdownProvider } from "./Markdown.hooks";
-import Footnotes from "./Footnotes";
+import { GoogleMap } from "./shortcode/GoogleMap";
 import { spacingVariables } from "common/variables";
-import Code from "./renderer/Code";
 import { colors } from "style.types";
+import { BookmarkDirective } from "./directives/BookmarkDirective";
+import { CodeBlock } from "./CodeBlock";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
 const Container = styled.div`
-  padding: var(${spacingVariables.markdownPadding});
   text-align: left;
-  max-width: 640px;
+  /* max-width: 640px; */
 
-  font-size: 15px;
-  line-height: 1.95;
-  word-break: break-word;
-  letter-spacing: -0.1px;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.75;
   color: ${colors.textMarkdownBlack};
-  font-family: var(--font-serif);
-  /* -webkit-text-stroke: 0.05px; */
+  font-family: var(--font-sans);
 
-  ${spacingVariables.markdownPadding}: 0 24px;
+  ${spacingVariables.markdownPadding}: 0px;
 
   ${mq("md")} {
     ${spacingVariables.markdownPadding}: 0px;
@@ -39,8 +33,14 @@ const Container = styled.div`
     -webkit-text-stroke: 0.1px;
   }
 
+  p {
+    margin-top: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
   strong {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   blockquote {
@@ -72,33 +72,60 @@ const Container = styled.div`
   }
 `;
 
-const Markdown: FC<Props> = (props) => {
-  const footnote = useFootnote();
+function reactMarkdownRemarkDirective() {
+  function updateNode(node) {
+    console.log(node);
+    node.data = {
+      hName: node.name,
+      hProperties: node.attributes,
+      ...node.data,
+    };
+    return node;
+  }
+  return (tree) => {
+    visit(tree, "textDirective", updateNode);
+    visit(tree, "leafDirective", updateNode);
+    visit(tree, "containerDirective", updateNode);
+  };
+}
 
+const markdownComponents = {
+  GoogleMap,
+  Bookmark: BookmarkDirective,
+};
+
+const Markdown = ({ children }: Props) => {
   return (
     <Container>
-      <MarkdownProvider value={{ source: props.source, footnote }}>
-        <ReactMarkdown
-          {...props}
-          parserOptions={{
-            footnotes: true,
-          }}
-          plugins={[shortcodes]}
-          renderers={{
-            footnoteDefinition: () => null,
-            footnoteReference: FootnoteReference,
-            image: ImageRenderer,
-            heading: HeadingRenderer,
-            thematicBreak: BreakRenderer,
-            paragraph: ParagraphRenderer,
-            shortcode: Shortcode,
-            code: Code,
-          }}
-        />
-        <Footnotes />
-      </MarkdownProvider>
+      <ReactMarkdown
+        remarkPlugins={[directive, reactMarkdownRemarkDirective]}
+        components={{
+          img: (props) => <ImageRenderer {...props} />,
+          hr: BreakRenderer,
+          p: Block,
+          code({ node, inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || "");
+            return !inline && match ? (
+              <CodeBlock language={match[1]} value={String(children)} />
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+          pre: "div",
+          ...markdownComponents,
+        }}
+      >
+        {children}
+      </ReactMarkdown>
     </Container>
   );
 };
+
+const Block = styled.div`
+  margin-top: 1.75em;
+  padding: var(${spacingVariables.markdownPadding});
+`;
 
 export default Markdown;

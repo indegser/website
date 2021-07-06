@@ -1,19 +1,26 @@
 import { request } from "@octokit/request";
-import { RepoType } from "global.types";
+import { GetResponseTypeFromEndpointMethod } from "@octokit/types";
+import camelcaseKeys from "camelcase-keys";
+import { Await, RepoType } from "global.types";
 
 const headers = {
   authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
 };
 
+export type IssueListType = Await<ReturnType<typeof githubApi.getIssues>>;
+export type IssueType = IssueListType[number];
+
 const githubApi = {
-  getIssues: (_, label: string) => {
-    return request("GET /repos/:owner/:repo/issues", {
+  getIssues: async (label?: string) => {
+    const { data } = await request("GET /repos/{owner}/{repo}/issues", {
       owner: "indegser",
       repo: "story",
       state: "open",
       labels: label,
       headers,
     });
+
+    return camelcaseKeys(data, { deep: true });
   },
   getIssue: (issueNumber: number) =>
     request("GET /repos/:owner/:repo/issues/:issue_number", {

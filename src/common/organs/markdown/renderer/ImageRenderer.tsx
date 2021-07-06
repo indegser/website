@@ -2,6 +2,10 @@ import styled from "@emotion/styled";
 import { spacingVariables } from "common/variables";
 import { mq } from "common/theme";
 import { colors } from "style.types";
+import { NormalComponent } from "react-markdown/src/ast-to-react";
+import { HTMLProps } from "react";
+
+interface Props extends HTMLProps<HTMLImageElement> {}
 
 const Image = styled.figure`
   --padding-x: 0px;
@@ -30,7 +34,7 @@ const Image = styled.figure`
   }
 `;
 
-const ImageRenderer = ({ alt, src }) => {
+const ImageRenderer = ({ alt, src }: Props) => {
   return (
     <Image>
       <img src={src} alt={alt} />

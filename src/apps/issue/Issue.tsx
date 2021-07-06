@@ -1,18 +1,21 @@
 import Toc from "./toc/Toc";
-import Headline from "./Headline";
 import Markdown from "common/organs/markdown/Markdown";
 import SEO from "common/SEO";
 import { Issue } from "global.types";
 import { useIssueSEO } from "./Issue.hooks";
 import { Container } from "common/atoms/Container";
 import styled from "@emotion/styled";
+import { IssueContent } from "./IssueContent";
 
 interface Props {
   issue: Issue;
 }
 
 const Layout = styled.div`
-  grid-column: span 8;
+  max-width: 900px;
+  width: 100%;
+  padding: 0 92px;
+  box-sizing: border-box;
 `;
 
 const IssuePage: React.FC<Props> = ({ issue }) => {
@@ -23,9 +26,8 @@ const IssuePage: React.FC<Props> = ({ issue }) => {
       <SEO title={issue.title} image={image} description={description} />
       <Container>
         <Layout>
-          <Headline issue={issue} />
-          <Toc content={issue.body} />
-          <Markdown source={issue.body} />
+          <IssueContent issue={issue} />
+          <Markdown children={issue.body} />
         </Layout>
       </Container>
     </>

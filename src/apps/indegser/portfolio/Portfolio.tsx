@@ -27,7 +27,7 @@ const Portfolio = () => {
   return (
     <>
       {sources.map((source, id) => (
-        <Markdown key={id} source={source}></Markdown>
+        <Markdown key={id} children={source}></Markdown>
       ))}
     </>
   );

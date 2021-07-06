@@ -4,7 +4,7 @@ export const palette = {
   text: {
     colorKeys: ["#2a2c2f"],
     ratios: {
-      textMarkdownBlack: 18,
+      textMarkdownBlack: 12,
       textMarqueeTitle: 20,
       textMarqueeLabel: 9,
       textFigcaption: 9,
@@ -19,9 +19,23 @@ export const palette = {
     colorKeys: ["#2a2c2f"],
     ratios: {
       bgPaper: 1,
-      bgCode: 1.15,
+      bgCode: 1.02,
       bgDivider: 1.3,
       bgIconHover: 1.12,
+    },
+  },
+  red: {
+    colorKeys: ["#cb2431"],
+    ratios: {
+      red100: 5,
+      red200: 6,
+    },
+  },
+  blue: {
+    colorKeys: ["#6cb6ff"],
+    ratios: {
+      blue100: 5,
+      blue200: 6,
     },
   },
   primary: {
