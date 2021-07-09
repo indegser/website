@@ -6,8 +6,19 @@ import { colors } from "style.types";
 Highlighter.registerLanguage("tsx", tsx);
 
 const Box = styled.div`
+  margin-top: 1.75em;
+
   /* 부모 컴포넌트 */
   .prismjs {
+    margin: 0;
+    padding: 12px 20px 12px 4px;
+    border-radius: 4px;
+    border: 1px solid ${colors.coolGray100};
+    overflow-x: scroll;
+  }
+
+  .linenumber {
+    color: ${colors.coolGray300};
   }
 
   pre,
@@ -26,21 +37,21 @@ const Box = styled.div`
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #969896;
+    color: ${colors.warmGray500};
   }
   .token.punctuation,
   .token.string,
   .token.atrule,
   .token.attr-value {
-    color: #183691;
+    color: ${colors.blue500};
   }
   .token.property,
   .token.tag {
-    color: #63a35c;
+    color: ${colors.green500};
   }
   .token.boolean,
   .token.number {
-    color: #0086b3;
+    color: ${colors.blue500};
   }
   .token.selector,
   .token.attr-name,
@@ -48,7 +59,7 @@ const Box = styled.div`
   .token.keyword,
   .token.regex,
   .token.important {
-    color: #795da3;
+    color: ${colors.red400};
   }
 
   .token.punctuation {
@@ -56,14 +67,14 @@ const Box = styled.div`
   }
 
   .token.operator {
-    color: ${colors.blue200};
+    color: ${colors.blue400};
   }
 
   .token.operator.arrow,
   .token.entity,
   .token.url,
   .language-css .token.string {
-    color: ${colors.red200};
+    color: ${colors.red400};
   }
   .token.entity {
     cursor: help;
@@ -78,6 +89,7 @@ export const CodeBlock = ({ language, value }) => {
   return (
     <Box>
       <Highlighter
+        showLineNumbers
         language={language}
         children={value.trim()}
         useInlineStyles={false}

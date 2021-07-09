@@ -1,4 +1,4 @@
-import { LayoutGrid } from "common/atoms/Container";
+import { PageContainer } from "common/atoms/Container";
 import { useIssueList } from "./IssuePage.hooks";
 import IssueMarquee from "./IssueMarquee";
 import styled from "@emotion/styled";
@@ -12,19 +12,12 @@ export const IssuesPage = ({ issues }) => {
   ));
 
   return (
-    <LayoutGrid>
-      <Container>
-        <Heading />
-        {contents}
-      </Container>
-    </LayoutGrid>
+    <PageContainer>
+      <Heading />
+      {contents}
+    </PageContainer>
   );
 };
-
-const Container = styled.div`
-  position: relative;
-  grid-column: span 8;
-`;
 
 const Heading = styled.div`
   margin-bottom: 20px;

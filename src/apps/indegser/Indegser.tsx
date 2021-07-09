@@ -3,6 +3,7 @@ import Resume from "./resume/Resume";
 import { useRouter } from "next/router";
 import Portfolio from "./portfolio/Portfolio";
 import XNavigator from "./XNavigator";
+import { PageContainer } from "common/atoms/Container";
 
 const Indegser = () => {
   const { query, pathname } = useRouter();
@@ -11,10 +12,10 @@ const Indegser = () => {
 
   return (
     <IndegserContext.Provider value={{ lang }}>
-      <div style={{ marginTop: -20 }}>
+      <PageContainer style={{ marginTop: -20 }}>
         <XNavigator />
         {isPortfolioPage ? <Portfolio /> : <Resume />}
-      </div>
+      </PageContainer>
     </IndegserContext.Provider>
   );
 };

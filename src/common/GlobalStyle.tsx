@@ -2,6 +2,7 @@ import { Global, css } from "@emotion/react";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
 import { colors } from "style.types";
+import { themes } from "./ThemeScript";
 
 const styles = css`
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
@@ -34,6 +35,22 @@ const styles = css`
     ${mq(640)} {
       ${spacingVariables.pagePadding}: 20px;
     }
+  }
+
+  html[data-theme="light"] {
+    ${themes.light.map(
+      (rule) => css`
+        ${rule[0]}: ${rule[1]}
+      `
+    )}
+  }
+
+  html[data-theme="dark"] {
+    ${themes.dark.map(
+      (rule) => css`
+        ${rule[0]}: ${rule[1]}
+      `
+    )}
   }
 
   html {

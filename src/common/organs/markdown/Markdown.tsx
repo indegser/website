@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { ComponentProps, FC } from "react";
+import { ComponentProps } from "react";
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
 import directive from "remark-directive";
@@ -15,14 +15,10 @@ import { CodeBlock } from "./CodeBlock";
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
 const Container = styled.div`
-  text-align: left;
-  /* max-width: 640px; */
-
   font-size: 16px;
   font-weight: 450;
   line-height: 1.75;
-  color: ${colors.textMarkdownBlack};
-  font-family: var(--font-sans);
+  color: ${colors.coolGray800};
 
   ${spacingVariables.markdownPadding}: 0px;
 
@@ -62,11 +58,19 @@ const Container = styled.div`
     }
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: ${colors.coolGray900};
+  }
+
   code,
   pre {
     padding: 4px 6px;
     border-radius: 0.2em;
-    background: ${colors.bgCode};
+    background: ${colors.coolGray50};
     font-size: 0.9em;
     margin-right: 4px;
   }

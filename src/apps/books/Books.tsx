@@ -3,7 +3,7 @@ import { colors } from "style.types";
 import Typography from "common/atoms/Typography";
 import { useBooks } from "./Books.hooks";
 import Reading from "./Reading";
-import { LayoutGrid } from "common/atoms/Container";
+import { LayoutGrid, PageContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 
 const BookContent = styled.div`
@@ -29,7 +29,7 @@ const BookAuthor = styled.h5`
 const BookGridItem = styled.div`
   grid-column: span 2;
 
-  ${mq("md")} {
+  ${mq("sm")} {
     grid-column: span 4;
   }
 `;
@@ -59,32 +59,34 @@ const Books = () => {
   const books = useBooks();
 
   return (
-    <LayoutGrid style={{ gap: "40px 20px" }}>
-      {books?.map((book) => {
-        return (
-          <BookGridItem key={book.id}>
-            <a href={book.link}>
-              <Book>
-                <img src={book.cover} />
-                <BookContent>
-                  <BookTitle>
-                    <Typography.MarqueeTitle>
-                      {book.title}
-                    </Typography.MarqueeTitle>
-                  </BookTitle>
-                  <BookAuthor>
-                    <Typography.MarqueeDesc>
-                      {book.author}
-                    </Typography.MarqueeDesc>
-                  </BookAuthor>
-                  {book.isReading && <Reading />}
-                </BookContent>
-              </Book>
-            </a>
-          </BookGridItem>
-        );
-      })}
-    </LayoutGrid>
+    <PageContainer>
+      <LayoutGrid style={{ gap: "40px 20px" }}>
+        {books?.map((book) => {
+          return (
+            <BookGridItem key={book.id}>
+              <a href={book.link}>
+                <Book>
+                  <img src={book.cover} />
+                  <BookContent>
+                    <BookTitle>
+                      <Typography.MarqueeTitle>
+                        {book.title}
+                      </Typography.MarqueeTitle>
+                    </BookTitle>
+                    <BookAuthor>
+                      <Typography.MarqueeDesc>
+                        {book.author}
+                      </Typography.MarqueeDesc>
+                    </BookAuthor>
+                    {book.isReading && <Reading />}
+                  </BookContent>
+                </Book>
+              </a>
+            </BookGridItem>
+          );
+        })}
+      </LayoutGrid>
+    </PageContainer>
   );
 };
 

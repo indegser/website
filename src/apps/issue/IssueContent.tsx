@@ -1,10 +1,16 @@
 import styled from "@emotion/styled";
+import { MarkdownContainer } from "common/atoms/Container";
+import Markdown from "common/organs/markdown/Markdown";
 import { Issue } from "global.types";
-import { colors } from "style.types";
 
 export const IssueContent = ({ issue }: { issue: Issue }) => {
   const { title } = issue;
-  return <Title>{title}</Title>;
+  return (
+    <MarkdownContainer>
+      <Title>{title}</Title>
+      <Markdown children={issue.body} />
+    </MarkdownContainer>
+  );
 };
 
 const Title = styled.div`
