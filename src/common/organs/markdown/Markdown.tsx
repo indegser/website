@@ -6,11 +6,11 @@ import directive from "remark-directive";
 import visit from "unist-util-visit";
 import ImageRenderer from "./renderer/ImageRenderer";
 import BreakRenderer from "./renderer/BreakRenderer";
-import { GoogleMap } from "./shortcode/GoogleMap";
+import { GoogleMap } from "./directives/GoogleMap";
 import { spacingVariables } from "common/variables";
 import { colors } from "style.types";
 import { BookmarkDirective } from "./directives/BookmarkDirective";
-import { CodeBlock } from "./CodeBlock";
+import { CodeBlock } from "./renderer/CodeBlock";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
@@ -78,7 +78,6 @@ const Container = styled.div`
 
 function reactMarkdownRemarkDirective() {
   function updateNode(node) {
-    console.log(node);
     node.data = {
       hName: node.name,
       hProperties: node.attributes,
