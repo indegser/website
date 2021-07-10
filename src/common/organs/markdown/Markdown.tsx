@@ -69,7 +69,13 @@ const Container = styled.div`
   h3,
   h4,
   h5 {
+    margin-top: 3rem;
+    line-height: 1.24;
     color: ${colors.coolGray900};
+  }
+
+  ol {
+    padding-inline-start: 1.5em;
   }
 
   code,

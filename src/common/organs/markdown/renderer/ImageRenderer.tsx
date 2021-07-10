@@ -14,7 +14,7 @@ const Image = styled.figure`
   }
 
   display: block;
-  margin: 3em var(--padding-x);
+  margin: 1.75em var(--padding-x);
 
   img {
     max-width: 100%;
@@ -26,10 +26,11 @@ const Image = styled.figure`
   figcaption {
     display: block;
     padding-top: 12px !important;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.65;
+    font-weight: 400;
     padding: 0 calc(var(--padding-x) * -1);
-    color: ${colors.textFigcaption};
-    letter-spacing: 0.03px;
+    color: ${colors.coolGray500};
   }
 `;
 
