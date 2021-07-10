@@ -30,6 +30,7 @@
     "react-select": "^3.1.0",
     "react-syntax-highlighter": "^15.4.3",
     "remark-directive": "^1.0.1",
+    "remark-gfm": "^1.0.0",
     "remark-parse": "^9.0.0",
     "remark-stringify": "^7.0.4",
     "swr": "^0.4.1",

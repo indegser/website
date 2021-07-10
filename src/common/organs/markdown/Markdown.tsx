@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import { ComponentProps } from "react";
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
+import gfm from "remark-gfm";
 import directive from "remark-directive";
 import visit from "unist-util-visit";
 import ImageRenderer from "./renderer/ImageRenderer";
@@ -42,6 +43,11 @@ const Container = styled.div`
   blockquote {
     margin-left: 0;
     margin-right: 0;
+    padding-left: 1em;
+    border-left: 4px solid ${colors.coolGray700};
+    box-sizing: border-box;
+    margin: 2em auto;
+    font-weight: 500;
   }
 
   sup {
@@ -101,7 +107,7 @@ const Markdown = ({ children }: Props) => {
   return (
     <Container>
       <ReactMarkdown
-        remarkPlugins={[directive, reactMarkdownRemarkDirective]}
+        remarkPlugins={[gfm, directive, reactMarkdownRemarkDirective]}
         components={{
           img: (props) => <ImageRenderer {...props} />,
           hr: BreakRenderer,
