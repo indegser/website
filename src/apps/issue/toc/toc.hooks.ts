@@ -7,7 +7,7 @@ import { useMemo } from "react";
 
 export const useTocContent = (content: string) => {
   const tocContent = useMemo(() => {
-    const tree = unified().use(markdown, { footnotes: true }).parse(content);
+    const tree = unified().use(markdown).parse(content);
 
     const tocTree = toc(tree, {
       maxDepth: 2,

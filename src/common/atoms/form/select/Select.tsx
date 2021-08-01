@@ -1,4 +1,4 @@
-import ReactSelect, { Styles } from "react-select";
+import ReactSelect from "react-select";
 import { ComponentProps, FC } from "react";
 import Option from "./Option";
 import Icon from "common/atoms/icons/Icon";
@@ -19,11 +19,6 @@ const Select: FC<Props> = ({
   styles = {},
   ...props
 }) => {
-  const mergeStyles = (key: keyof Styles) => {
-    const styleFn = styles[key];
-    if (!styleFn) {
-    }
-  };
   const defaultStyles = {
     menu: (base) => {
       return {

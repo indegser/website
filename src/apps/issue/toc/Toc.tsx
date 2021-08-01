@@ -70,7 +70,7 @@ interface Props {
   content: string;
 }
 
-const Toc: React.FC<Props> = ({ content }) => {
+const Toc = ({ content }: Props) => {
   const tocContent = useTocContent(content);
 
   if (!tocContent) return null;
@@ -79,8 +79,8 @@ const Toc: React.FC<Props> = ({ content }) => {
     <Box>
       <FoldTitle>Table of Contents</FoldTitle>
       <Markdown
-        source={tocContent}
-        renderers={{
+        children={tocContent}
+        components={{
           link: TocLink,
         }}
       />

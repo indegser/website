@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 import { spacingVariables } from "common/variables";
 import { mq } from "common/theme";
 import { colors } from "style.types";
+import { HTMLProps } from "react";
+
+interface Props extends HTMLProps<HTMLImageElement> {}
 
 const Image = styled.figure`
   --padding-x: 0px;
@@ -11,7 +14,7 @@ const Image = styled.figure`
   }
 
   display: block;
-  margin: 3em var(--padding-x);
+  margin: 1.75em var(--padding-x);
 
   img {
     max-width: 100%;
@@ -23,14 +26,15 @@ const Image = styled.figure`
   figcaption {
     display: block;
     padding-top: 12px !important;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.65;
+    font-weight: 400;
     padding: 0 calc(var(--padding-x) * -1);
-    color: ${colors.textFigcaption};
-    letter-spacing: 0.03px;
+    color: ${colors.coolGray500};
   }
 `;
 
-const ImageRenderer = ({ alt, src }) => {
+const ImageRenderer = ({ alt, src }: Props) => {
   return (
     <Image>
       <img src={src} alt={alt} />

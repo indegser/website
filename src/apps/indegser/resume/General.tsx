@@ -12,9 +12,11 @@ const Layout = styled(ResumeGrid)`
     row-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
   }
-`;
 
-const Preface = styled.h2``;
+  ${mq("sm")} {
+    grid-template-columns: 1fr;
+  }
+`;
 
 const Label = styled.div`
   font-size: 13px;
