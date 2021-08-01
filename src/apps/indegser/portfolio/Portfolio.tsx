@@ -1,10 +1,12 @@
-import { useIndegserLangStore } from "../Indegser.hooks";
+import { useIndegserContext } from "../Indegser.hooks";
 import { useState, useEffect } from "react";
 import Markdown from "common/organs/markdown/Markdown";
+import { MarkdownContainer } from "common/atoms/Container";
 
 const Portfolio = () => {
   const [sources, setSources] = useState<string[]>([]);
-  const lang = useIndegserLangStore((s) => s.lang);
+  const { lang } = useIndegserContext();
+
   useEffect(() => {
     const fileNames = [
       "aurumplanet",
@@ -24,11 +26,11 @@ const Portfolio = () => {
   }, [lang]);
 
   return (
-    <>
+    <MarkdownContainer>
       {sources.map((source, id) => (
-        <Markdown key={id} source={source}></Markdown>
+        <Markdown key={id} children={source}></Markdown>
       ))}
-    </>
+    </MarkdownContainer>
   );
 };
 

@@ -18,7 +18,7 @@ const Page: FC<Props> = ({ issue }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await githubApi.getIssues(null, null);
+  const data = await githubApi.getIssues();
   const paths = data.map((issue) => ({
     params: { number: issue.number.toString() },
   }));
@@ -38,6 +38,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     );
     return { props: { issue }, revalidate: 60 };
   } catch (err) {
+    console.log(err);
     return { props: {} };
   }
 };

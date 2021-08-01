@@ -1,18 +1,12 @@
-import create, { State } from "zustand";
-import { useMemo } from "react";
+import { createContext, useContext } from "react";
 
-interface IndegserLangStore extends State {
-  lang: "en" | "ko";
-  changeLang: (lang: IndegserLangStore["lang"]) => void;
-}
+export type IndegserContextType = {
+  lang?: "en" | "ko";
+};
 
-export const useIndegserLangStore = create<IndegserLangStore>((set) => ({
-  lang: "ko",
-  changeLang: (lang) =>
-    set({
-      lang,
-    }),
-}));
+export const IndegserContext = createContext<IndegserContextType>(null);
+
+export const useIndegserContext = () => useContext(IndegserContext);
 
 const locale = {
   resume: ["Resume", "이력서"],
@@ -26,7 +20,7 @@ const locale = {
   location: ["Location", "위치"],
   education: ["Education", "교육"],
   biography: [
-    "Web services are the art of the 21st century. Good services depend on a deep understanding and proper use of technology. I want to be an artist who creates a web service where technology and design are perfectly merged.",
+    `When I worked as a web designer, I used to experience the limitations of design being determined by the limitations of technology. To accept the assessment of "hard-to-deploy design," I had to have knowledge of "web technology", and things that could be done in Photoshop or sketches, but not in browsers. Technical concerns about how to move the design to the screen made me as a front-end developer.<br/><br/>I'm as interested in web design as much as front-end technology. When I find beautiful web pages, I find out technology that supports it. On the other hand, when I discover a new technology, I think about what design I can apply. Let me introduce a story of an artist/engineer with this tendency. Leonardo da Vinci.<br /><br />Leonardo da Vinci drew the Mona Lisa with all his aesthetic and scientific knowledge. He used a technique called "spumato". It's blurring the boundaries between colors and colors. When I saw the object in front of me, I was able to complete the mysterious smile of Mona Lisa by melting the principle of blurring the surrounding scenery into the picture. (If you look for Mona Lisa's smile, you can only see her mouth.) I can see a smile as soon as I focus on my eyes)<br /><br />Mona Lisa, which is not only aesthetically excellent, but also scientific (technology) accessible, is a work like a sample of the services I want to make. To create a more beautiful yet technologically advanced web service, I became a front-end developer from a web designer.`,
     `웹디자이너로 일할 당시 디자인의 한계가 기술의 한계에 의해 결정되는 것을 경험하곤 했습니다. “구현하기 어려운 디자인"이라는 평가를 수용하기 위해선 “웹 기술"에 대한 지식이 있어야 했고, 포토샵이나 스케치에선 되지만 브라우저에서는 안 되는 것들을 알아야 했습니다. 어떻게 하면 디자인을 그대로 화면에 옮길 수 있을까 하는 기술적 고민들이 쌓이다 프론트엔드 개발자가 된거라고 볼 수 있죠.<br /><br />
     그래서 저는 프론트엔드 기술만큼이나 웹 디자인에 관심이 많습니다. 멋진 화면을 보면 그것을 지탱하는 기술을 찾아보고, 반대로 새로운 기술을 발견하게 되면 이를 적용해 어떤 디자인을 상상이 아닌 현실로 만들 수 있을 지 고민합니다. 이런 성향을 지닌 예술가/엔지니어의 이야기를 하나 소개해볼까 합니다. 레오나르도 다 빈치입니다.<br /><br />
     레오나르도 다 빈치는 그의 모든 미적/과학적 지식을 집대성하여 모나리자를 그렸습니다. 처음으로 ‘스푸마토’라는 기법을 사용했는데 쉽게 설명하면 색과 색의 경계를 뿌옇게 만드는 겁니다. 눈 앞에 있는 사물을 볼 때 주변 풍경이 흐리게 보이는 원리를 그림에 녹여내면서 모나리자만의 신비스러운 미소를 완성할 수 있었습니다. (모나리자의 미소를 찾겠다고 입을 보고 있으면 입만 보입니다. 눈에 초점을 맞추는 순간 미소가 보입니다)<br /><br />
@@ -55,10 +49,8 @@ const locale = {
 };
 
 export const useTrans = (key: keyof typeof locale) => {
-  const lang = useIndegserLangStore((s) => s.lang);
-  return useMemo(() => {
-    const index = lang === "en" ? 0 : 1;
-    const target = locale[key];
-    return target[index] || target[0];
-  }, [lang]);
+  const { lang } = useIndegserContext();
+  const index = lang === "en" ? 0 : 1;
+  const target = locale[key];
+  return target[index] || target[0];
 };

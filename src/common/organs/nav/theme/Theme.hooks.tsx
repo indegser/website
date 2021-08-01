@@ -13,10 +13,8 @@ export const useTheme = () => {
   };
 
   useEffect(() => {
-    const theme = document.documentElement.style.getPropertyValue(
-      "--theme"
-    ) as ThemeType;
-    setTheme(theme);
+    const theme = document.querySelector("html").getAttribute("data-theme");
+    setTheme(theme as ThemeType);
   }, []);
 
   return {
