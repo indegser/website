@@ -6,14 +6,14 @@ import General from "./General";
 
 const Resume = () => {
   return (
-    <div>
+    <>
       <General />
       <Bio />
       <ResumeSectionBorder />
       <Works />
       <ResumeSectionBorder />
       <Tech />
-    </div>
+    </>
   );
 };
 

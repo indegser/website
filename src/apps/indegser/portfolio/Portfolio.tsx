@@ -1,6 +1,7 @@
 import { useIndegserContext } from "../Indegser.hooks";
 import { useState, useEffect } from "react";
 import Markdown from "common/organs/markdown/Markdown";
+import { MarkdownContainer } from "common/atoms/Container";
 
 const Portfolio = () => {
   const [sources, setSources] = useState<string[]>([]);
@@ -25,11 +26,11 @@ const Portfolio = () => {
   }, [lang]);
 
   return (
-    <>
+    <MarkdownContainer>
       {sources.map((source, id) => (
-        <Markdown key={id} source={source}></Markdown>
+        <Markdown key={id} children={source}></Markdown>
       ))}
-    </>
+    </MarkdownContainer>
   );
 };
 

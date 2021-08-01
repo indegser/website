@@ -3,7 +3,7 @@ import { Router } from "next/router";
 import styled from "@emotion/styled";
 
 import { Analytics } from "apis/analytics";
-import GlobalStyle from "common/atoms/GlobalStyle";
+import GlobalStyle from "common/GlobalStyle";
 import Footer from "common/organs/footer/Footer";
 import Nav from "common/organs/nav/Nav";
 import ThemeScript from "common/ThemeScript";
@@ -21,11 +21,11 @@ const Page = styled.div`
 `;
 
 const Main = styled.div`
-  max-width: 1040px;
+  /* max-width: 100vw;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 var(${spacingVariables.pagePadding});
+  padding: 0 var(${spacingVariables.pagePadding}); */
 `;
 
 Router.events.on("routeChangeComplete", Analytics.pageView);

@@ -1,36 +1,27 @@
 import ReactMarkdown from "react-markdown";
-import { ComponentProps, FC } from "react";
+import { ComponentProps } from "react";
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
-import shortcodes from "remark-shortcodes";
+import gfm from "remark-gfm";
+import directive from "remark-directive";
+import visit from "unist-util-visit";
 import ImageRenderer from "./renderer/ImageRenderer";
-import HeadingRenderer from "./renderer/HeadingRenderer";
 import BreakRenderer from "./renderer/BreakRenderer";
-import ParagraphRenderer from "./renderer/ParagraphRenderer";
-import FootnoteReference from "./renderer/footnote/FootnoteReference";
-import Shortcode from "./shortcode/Shortcode";
-import { useFootnote, MarkdownProvider } from "./Markdown.hooks";
-import Footnotes from "./Footnotes";
+import { GoogleMap } from "./directives/GoogleMap";
 import { spacingVariables } from "common/variables";
-import Code from "./renderer/Code";
 import { colors } from "style.types";
+import { BookmarkDirective } from "./directives/BookmarkDirective";
+import { CodeBlock } from "./renderer/CodeBlock";
 
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
 const Container = styled.div`
-  padding: var(${spacingVariables.markdownPadding});
-  text-align: left;
-  max-width: 640px;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.75;
+  color: ${colors.coolGray800};
 
-  font-size: 15px;
-  line-height: 1.95;
-  word-break: break-word;
-  letter-spacing: -0.1px;
-  color: ${colors.textMarkdownBlack};
-  font-family: var(--font-serif);
-  /* -webkit-text-stroke: 0.05px; */
-
-  ${spacingVariables.markdownPadding}: 0 24px;
+  ${spacingVariables.markdownPadding}: 0px;
 
   ${mq("md")} {
     ${spacingVariables.markdownPadding}: 0px;
@@ -39,13 +30,24 @@ const Container = styled.div`
     -webkit-text-stroke: 0.1px;
   }
 
+  p {
+    margin-top: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
   strong {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   blockquote {
     margin-left: 0;
     margin-right: 0;
+    padding-left: 1em;
+    border-left: 4px solid ${colors.coolGray700};
+    box-sizing: border-box;
+    margin: 2em auto;
+    font-weight: 500;
   }
 
   sup {
@@ -62,43 +64,83 @@ const Container = styled.div`
     }
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 3rem;
+    line-height: 1.24;
+    color: ${colors.coolGray900};
+  }
+
+  ol {
+    padding-inline-start: 1.5em;
+  }
+
   code,
   pre {
     padding: 4px 6px;
     border-radius: 0.2em;
-    background: ${colors.bgCode};
+    background: ${colors.coolGray50};
     font-size: 0.9em;
     margin-right: 4px;
   }
 `;
 
-const Markdown: FC<Props> = (props) => {
-  const footnote = useFootnote();
+function reactMarkdownRemarkDirective() {
+  function updateNode(node) {
+    node.data = {
+      hName: node.name,
+      hProperties: node.attributes,
+      ...node.data,
+    };
+    return node;
+  }
+  return (tree) => {
+    visit(tree, "textDirective", updateNode);
+    visit(tree, "leafDirective", updateNode);
+    visit(tree, "containerDirective", updateNode);
+  };
+}
 
+const markdownComponents = {
+  GoogleMap,
+  Bookmark: BookmarkDirective,
+};
+
+const Markdown = ({ children }: Props) => {
   return (
     <Container>
-      <MarkdownProvider value={{ source: props.source, footnote }}>
-        <ReactMarkdown
-          {...props}
-          parserOptions={{
-            footnotes: true,
-          }}
-          plugins={[shortcodes]}
-          renderers={{
-            footnoteDefinition: () => null,
-            footnoteReference: FootnoteReference,
-            image: ImageRenderer,
-            heading: HeadingRenderer,
-            thematicBreak: BreakRenderer,
-            paragraph: ParagraphRenderer,
-            shortcode: Shortcode,
-            code: Code,
-          }}
-        />
-        <Footnotes />
-      </MarkdownProvider>
+      <ReactMarkdown
+        remarkPlugins={[gfm, directive, reactMarkdownRemarkDirective]}
+        components={{
+          img: (props) => <ImageRenderer {...props} />,
+          hr: BreakRenderer,
+          p: Block,
+          code({ node, inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || "");
+            return !inline && match ? (
+              <CodeBlock language={match[1]} value={String(children)} />
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+          pre: "div",
+          ...markdownComponents,
+        }}
+      >
+        {children}
+      </ReactMarkdown>
     </Container>
   );
 };
+
+const Block = styled.div`
+  margin-top: 1.75em;
+  padding: var(${spacingVariables.markdownPadding});
+`;
 
 export default Markdown;

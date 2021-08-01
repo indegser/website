@@ -3,7 +3,7 @@ import { colors } from "style.types";
 import NavMenu from "./NavMenu";
 import Theme from "./theme/Theme";
 import Logo from "./Logo";
-import { Container } from "common/atoms/Container";
+import { PageContainer } from "common/atoms/Container";
 
 const Layout = styled.nav``;
 
@@ -33,7 +33,7 @@ export const MenuLogo = styled.div`
 const Nav = () => {
   return (
     <Layout id="global-nav">
-      <Container>
+      <PageContainer>
         <NavGrid>
           <Logo />
           <Menus style={{ marginLeft: 32 }}>
@@ -41,7 +41,7 @@ const Nav = () => {
           </Menus>
           <Theme />
         </NavGrid>
-      </Container>
+      </PageContainer>
     </Layout>
   );
 };
