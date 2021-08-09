@@ -14,18 +14,13 @@ export function reportWebVitals(metric) {
 }
 
 const Page = styled.div`
-  display: grid;
-  grid-template-rows: max-content auto max-content;
-  grid-gap: var(${spacingVariables.pagePadding});
-  min-height: 100vh;
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
 `;
 
 const Main = styled.div`
-  /* max-width: 100vw;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 0 var(${spacingVariables.pagePadding}); */
+  flex: 1 1;
 `;
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
@@ -54,7 +49,6 @@ const App = ({ Component, pageProps }) => {
         <Main>
           <Component {...pageProps}></Component>
         </Main>
-        <Footer />
       </Page>
     </>
   );

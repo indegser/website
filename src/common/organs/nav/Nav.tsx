@@ -1,47 +1,72 @@
 import styled from "@emotion/styled";
 import { colors } from "style.types";
-import NavMenu from "./NavMenu";
 import Theme from "./theme/Theme";
 import Logo from "./Logo";
-import { PageContainer } from "common/atoms/Container";
+import Emoji from "react-emoji-render";
+import { useCategories } from "apps/issues/IssuePage.hooks";
+import Link from "next/link";
 
-const Layout = styled.nav``;
+const Layout = styled.nav`
+  flex: 0 0 auto;
+  width: 240px;
+  height: 100vh;
+  background: ${colors.gray50};
+`;
 
-const NavGrid = styled.div`
-  display: grid;
-  grid-template-areas: "logo menu theme";
-  grid-template-columns: max-content auto max-content;
-  height: 60px;
+const Heading = styled.div`
+  display: flex;
+  padding: 0 16px;
+  height: 45px;
   align-items: center;
+  font-size: 14px;
+  font-weight: 600;
 `;
 
-const Menus = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 32px;
-  grid-auto-columns: max-content;
-`;
+const Menu = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 2px 14px;
+  font-size: 14px;
+  min-height: 27px;
+  color: ${colors.gray600};
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 20ms ease-in;
 
-export const MenuLogo = styled.div`
-  color: ${colors.textBlack};
+  .emoji {
+    font-size: 18px;
+    line-height: 1;
+    margin-right: 10px;
+  }
 
-  svg {
-    display: block;
+  &:hover {
+    background: ${colors.gray100};
   }
 `;
 
 const Nav = () => {
+  const { data } = useCategories();
+
+  console.log(data);
   return (
-    <Layout id="global-nav">
-      <PageContainer>
-        <NavGrid>
-          <Logo />
-          <Menus style={{ marginLeft: 32 }}>
-            <NavMenu />
-          </Menus>
-          <Theme />
-        </NavGrid>
-      </PageContainer>
+    <Layout>
+      <Heading>
+        <Logo />
+        Indegser
+      </Heading>
+      {data?.map((category) => (
+        <div key={category.id}>
+          <Link href={`/${category.id}`} passHref>
+            <a>
+              <Menu>
+                <Emoji text={category.emoji} onlyEmojiClassName="emoji" />
+                <div>{category.name}</div>
+              </Menu>
+            </a>
+          </Link>
+        </div>
+      ))}
+      <Theme />
     </Layout>
   );
 };
