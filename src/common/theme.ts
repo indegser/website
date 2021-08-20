@@ -17,3 +17,7 @@ export const mq = (key: keyof typeof media | number) => {
   }
   return `@media (max-width: ${px}px)`;
 };
+
+export const mediaQueries = {
+  hoverable: "@media(hover: hover) and (pointer: fine)",
+};

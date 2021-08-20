@@ -21,6 +21,7 @@
     "@octokit/types": "^5.5.0",
     "camelcase-keys": "^7.0.0",
     "dayjs": "^1.9.1",
+    "framer-motion": "^4.1.17",
     "mdast-util-to-string": "^2.0.0",
     "mdast-util-toc": "^5.0.2",
     "next": "^11.0.1",

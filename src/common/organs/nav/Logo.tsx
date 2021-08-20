@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
 import { colors } from "style.types";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
-  color: ${colors.textBlack};
+  color: ${colors.warmGray900};
 
   svg {
     display: block;
@@ -34,13 +33,7 @@ const Logo = () => {
     </Icon>
   );
 
-  return (
-    <Link href="/" passHref>
-      <a>
-        <Container>{icon}</Container>
-      </a>
-    </Link>
-  );
+  return <Container>{icon}</Container>;
 };
 
 export default Logo;

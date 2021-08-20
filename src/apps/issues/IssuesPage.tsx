@@ -1,17 +1,21 @@
 import { PageContainer } from "common/atoms/Container";
-import { useCategories, useIssueList } from "./IssuePage.hooks";
-import IssueMarquee from "./IssueMarquee";
-import styled from "@emotion/styled";
-import { colors } from "style.types";
+import { IssueItem } from "./IssueItem";
+import { IssueListType } from "apis/github";
+import SEO from "common/SEO";
 
-export const IssuesPage = ({ issues }) => {
-  const { data } = useIssueList(issues);
-  const { data: d } = useCategories();
-  console.log(d);
+interface Props {
+  issues: IssueListType;
+}
 
-  const contents = data?.map((issue) => (
-    <IssueMarquee key={issue.id} issue={issue} />
+export const IssuesPage = ({ issues }: Props) => {
+  const contents = issues.map((issue) => (
+    <IssueItem key={issue.id} issue={issue} />
   ));
 
-  return contents;
+  return (
+    <PageContainer>
+      <SEO title="Pages - Indegser" />
+      {contents}
+    </PageContainer>
+  );
 };

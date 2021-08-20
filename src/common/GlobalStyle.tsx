@@ -6,22 +6,12 @@ import { themes } from "./ThemeScript";
 
 const styles = css`
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
-  /* @font-face {
-    font-family: "Inter";
-    src: url("/fonts/Inter-Regular.woff2") format("woff2"),
-      url("/fonts/Inter-Regular.woff") format("woff");
-  }
-
-  @font-face {
-    font-family: "Inter";
-    src: url("/fonts/Inter-SemiBold.woff2") format("woff2"),
-      url("/fonts/Inter-SemiBold.woff") format("woff");
-    font-weight: 500;
-  } */
+  @import url("https://rsms.me/inter/inter.css");
 
   :root {
-    --font-sans: --apple-system, BlinkMacSystemFont, "Pretendard Variable",
-      Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, "Noto Sans KR", sans-serif;
+    --font-sans: Inter var, Inter, --apple-system, BlinkMacSystemFont,
+      "Pretendard Variable", "Segoe UI", Roboto, Oxygen, Ubuntu, "Noto Sans KR",
+      sans-serif;
     --font-serif: IBM Plex Serif, Noto Serif KR, Nanum Myeongjo, Georgia,
       Cambria, "Times New Roman", Times, serif;
     --font-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
@@ -60,6 +50,7 @@ const styles = css`
     overflow-y: scroll;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 
   body {
