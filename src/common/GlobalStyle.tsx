@@ -6,12 +6,11 @@ import { themes } from "./ThemeScript";
 
 const styles = css`
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
-  @import url("https://rsms.me/inter/inter.css");
 
   :root {
-    --font-sans: Inter var, Inter, --apple-system, BlinkMacSystemFont,
-      "Pretendard Variable", "Segoe UI", Roboto, Oxygen, Ubuntu, "Noto Sans KR",
-      sans-serif;
+    --font-sans: "Pretendard Variable", --apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR",
+      "Malgun Gothic", sans-serif;
     --font-serif: IBM Plex Serif, Noto Serif KR, Nanum Myeongjo, Georgia,
       Cambria, "Times New Roman", Times, serif;
     --font-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
