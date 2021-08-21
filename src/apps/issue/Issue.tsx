@@ -1,4 +1,4 @@
-import SEO from "common/SEO";
+import { SEO } from "common/SEO";
 import { Issue } from "global.types";
 import { useIssueSEO } from "./Issue.hooks";
 import { PageContainer } from "common/atoms/Container";
