@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mediaQueries } from "common/theme";
 import { colors } from "style.types";
 import { useTheme } from "./Theme.hooks";
 
@@ -6,6 +7,7 @@ const Box = styled.div`
   flex: 0 0 auto;
   grid-area: theme;
   max-width: 140px;
+  padding: 0 16px;
   justify-self: flex-end;
 `;
 
@@ -14,10 +16,13 @@ const ThemeButton = styled.div`
   border-radius: 4px;
   transition: 0.1s background ease;
   color: ${colors.textGrey};
+  cursor: pointer;
 
-  &:hover {
-    color: ${colors.textBlack};
-    background-color: ${colors.bgIconHover};
+  ${mediaQueries.hoverable} {
+    &:hover {
+      color: ${colors.textBlack};
+      background-color: ${colors.bgIconHover};
+    }
   }
 `;
 

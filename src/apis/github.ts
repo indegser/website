@@ -1,16 +1,40 @@
 import { request } from "@octokit/request";
-import { GetResponseTypeFromEndpointMethod } from "@octokit/types";
+import { graphql as _graphql } from "@octokit/graphql";
 import camelcaseKeys from "camelcase-keys";
 import { Await, RepoType } from "global.types";
+import { Repository } from "@octokit/graphql-schema";
 
 const headers = {
   authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
 };
 
+const graphql = _graphql.defaults({ headers });
+
 export type IssueListType = Await<ReturnType<typeof githubApi.getIssues>>;
 export type IssueType = IssueListType[number];
 
 const githubApi = {
+  getCategories: async () => {
+    const {
+      repository: {
+        discussionCategories: { nodes: result },
+      },
+    } = await graphql<{ repository: Repository }>(`
+      {
+        repository(owner: "indegser", name: "story") {
+          discussionCategories(first: 20) {
+            nodes {
+              id
+              name
+              emoji
+            }
+          }
+        }
+      }
+    `);
+
+    return result;
+  },
   getIssues: async (label?: string) => {
     const { data } = await request("GET /repos/{owner}/{repo}/issues", {
       owner: "indegser",

@@ -1466,6 +1466,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:^0.8.2":
+  version: 0.8.8
+  resolution: "@emotion/is-prop-valid@npm:0.8.8"
+  dependencies:
+    "@emotion/memoize": 0.7.4
+  checksum: 4a6993c4e6a49bcdc772aa5931fa2f00ce6367f7f6fc9cfe46dd50014c9510f9c6b1e355f297655875a8bfd1481e42546900bbbc84f3c0b629a001b4d82e436e
+  languageName: node
+  linkType: hard
+
 "@emotion/is-prop-valid@npm:^1.1.0":
   version: 1.1.0
   resolution: "@emotion/is-prop-valid@npm:1.1.0"
@@ -1932,6 +1941,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@octokit/graphql-schema@npm:^10.59.0":
+  version: 10.59.0
+  resolution: "@octokit/graphql-schema@npm:10.59.0"
+  dependencies:
+    graphql: ^15.0.0
+    graphql-tag: ^2.10.3
+  checksum: 2b0df758c2c6d14422d5656961677af154f742199ea214f3f30f2f9879cc67e5fb2ed79c1ace8192c6f11c931122f8c90141e6c578a65c9e8c26037142e7d306
+  languageName: node
+  linkType: hard
+
+"@octokit/graphql@npm:^4.6.4":
+  version: 4.6.4
+  resolution: "@octokit/graphql@npm:4.6.4"
+  dependencies:
+    "@octokit/request": ^5.6.0
+    "@octokit/types": ^6.0.3
+    universal-user-agent: ^6.0.0
+  checksum: c3d4c4bf30f27c18c807f8a250c3dadf63665117f6d1682609d75edb16370f6ec39dc5a1eafaf99762304f17cb4a080496483d54b099c08e886f14a39fb4e941
+  languageName: node
+  linkType: hard
+
 "@octokit/openapi-types@npm:^7.3.5":
   version: 7.3.5
   resolution: "@octokit/openapi-types@npm:7.3.5"
@@ -1950,7 +1980,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/request@npm:latest":
+"@octokit/request@npm:^5.6.0, @octokit/request@npm:latest":
   version: 5.6.0
   resolution: "@octokit/request@npm:5.6.0"
   dependencies:
@@ -3420,6 +3450,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classnames@npm:^2.2.5":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: 57d536edede609f81425d24b062d8d720a466565faf1e38d32c881e883920baa71519ac70c7b565e9cd39201fb1c1ff9bdf8aabf8e26544bac481e7924867c83
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -4528,6 +4565,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"emoji-regex@npm:^6.4.1":
+  version: 6.5.1
+  resolution: "emoji-regex@npm:6.5.1"
+  checksum: 4b1bf4b7c7c1c1e972e62d49e813a3babc67eb68dd252f8802bf098b198871d165ec367e209f91c4b287b8fad5592a1996bbd795769a5ab85fa7139ee0f51a89
+  languageName: node
+  linkType: hard
+
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -4981,6 +5025,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^4.1.17":
+  version: 4.1.17
+  resolution: "framer-motion@npm:4.1.17"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    framesync: 5.3.0
+    hey-listen: ^1.0.8
+    popmotion: 9.3.6
+    style-value-types: 4.1.4
+    tslib: ^2.1.0
+  peerDependencies:
+    react: ">=16.8 || ^17.0.0"
+    react-dom: ">=16.8 || ^17.0.0"
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: 4baaa9ef6c9b516452ca2d892b2b16b5cc6f06ce04729f9e3aecb7822073d59a54ff45831c0234a43a9d505bb44b6643d080c1296b9a9d308408cea6b72b91bd
+  languageName: node
+  linkType: hard
+
+"framesync@npm:5.3.0":
+  version: 5.3.0
+  resolution: "framesync@npm:5.3.0"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: 14a6ed7d2a3c3af8f5b8f5aac6117f8e6b20990002e10e9b41c663997390a107ea8d904e4700041103fee551141b3cbac9e1d314b0cd0a16129e27ededa09bf4
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^2.0.0":
   version: 2.1.0
   resolution: "fs-minipass@npm:2.1.0"
@@ -5157,6 +5230,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql-tag@npm:^2.10.3":
+  version: 2.12.5
+  resolution: "graphql-tag@npm:2.12.5"
+  dependencies:
+    tslib: ^2.1.0
+  peerDependencies:
+    graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+  checksum: db324292677bfe1f14e29baea6a4953a756a633a20dfe73939b14bc5f647b981087acf1e8a61245480f57da6587b63bab3562f06bddfda59e6c8233f28042dad
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^15.0.0":
+  version: 15.5.1
+  resolution: "graphql@npm:15.5.1"
+  checksum: 509cdc2fc072e7cd1b5a25cf3fe13838d41892b035434f02419c209608f89e323f5234ca7e2bde77e9371e629339cbd8435f1dbc8c250910e4e9ac0babfa6c64
+  languageName: node
+  linkType: hard
+
 "growly@npm:^1.3.0":
   version: 1.3.0
   resolution: "growly@npm:1.3.0"
@@ -5294,6 +5385,13 @@ __metadata:
   bin:
     he: bin/he
   checksum: 212122003c20c8c17ac0c83a419b4c8e835411ff6ab9195d053ea6e4a0597cc005b5b8eabcbd57b0b0c0fe676f0049e09315845fff4e051198845491cbba260e
+  languageName: node
+  linkType: hard
+
+"hey-listen@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "hey-listen@npm:1.0.8"
+  checksum: b9a3ed8d4851735d221a8c2ecf06fba598b0240d18e7ad46780e00af1d62471a40c65d5c6ec48b004fc86d96056cf7e3599d3ef8ee77a31df3cb9f4ce69721ce
   languageName: node
   linkType: hard
 
@@ -5525,6 +5623,15 @@ __metadata:
   version: 0.1.1
   resolution: "inline-style-parser@npm:0.1.1"
   checksum: 02f3b430cd6b9d13a255dafc54f45855cbb3db3c314228c6e58e19ce8dd2bb8e89f3a311bedcc5ded185ba2cc64195d1dddf54076b2160beee379fd7cdf6fb08
+  languageName: node
+  linkType: hard
+
+"invariant@npm:^2.2.1":
+  version: 2.2.4
+  resolution: "invariant@npm:2.2.4"
+  dependencies:
+    loose-envify: ^1.0.0
+  checksum: 96d8a2a4f0ad21020c5847546fc36bec5c0870d99f071aaa93df00c1036439d48211a1823ab6128f78a15ccc4c4f62baf6a65f6c0ed489270dd44d0a04f443a1
   languageName: node
   linkType: hard
 
@@ -6730,6 +6837,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.flatten@npm:^4.2.0, lodash.flatten@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.flatten@npm:4.4.0"
+  checksum: f22a7f6f163256d87345b07c76122e03d03abbf943b6c3aa5e5fafb7d5bce765013aedfc2aae7e649af0907287a2cf85de24237dbdd3ecd485a77d56e070b54c
+  languageName: node
+  linkType: hard
+
+"lodash.isstring@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.isstring@npm:4.0.1"
+  checksum: 20c46960b74fd63c27b534f1725cd4141ac19b35c7250affee37c8b7899b1a4c5e9820becfafe571a4d48cd4c86206ee03c2e93fe943dbeab82ddd5cab710540
+  languageName: node
+  linkType: hard
+
 "lodash.sortby@npm:^4.7.0":
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
@@ -6751,7 +6872,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.0.0, loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -8104,6 +8225,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"popmotion@npm:9.3.6":
+  version: 9.3.6
+  resolution: "popmotion@npm:9.3.6"
+  dependencies:
+    framesync: 5.3.0
+    hey-listen: ^1.0.8
+    style-value-types: 4.1.4
+    tslib: ^2.1.0
+  checksum: b2ff30e647e4184ddb98778294f1fa856934af389cda9a43a58ccbaaff4b29f5dfa5cbe8c446b58fdbe3e4a3757afa7690c497ad30f15c5edd47a02cb7dc9646
+  languageName: node
+  linkType: hard
+
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
@@ -8370,6 +8503,22 @@ __metadata:
   peerDependencies:
     react: 17.0.2
   checksum: 960a74ff6670766846a73097a599115963df1574833c59ca0c2fd909758ebe7a6214cd14f5e6aa63ce846d8f39fde7f3b80474ccfcfadc45dd7f3246364718c6
+  languageName: node
+  linkType: hard
+
+"react-emoji-render@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "react-emoji-render@npm:1.2.4"
+  dependencies:
+    classnames: ^2.2.5
+    emoji-regex: ^6.4.1
+    lodash.flatten: ^4.4.0
+    prop-types: ^15.5.8
+    string-replace-to-array: ^1.0.1
+  peerDependencies:
+    react: ">=0.14.0"
+    react-dom: ">=0.14.0"
+  checksum: d908bb9f6c27e36f034a1940d5468fe9c459b0cc47e2ea93fa8fbb5404f3f85dadf22833e5e553415370b654b5a47c4da8b02f1265d7774a527d3db1fdd0c512
   languageName: node
   linkType: hard
 
@@ -9380,6 +9529,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"string-replace-to-array@npm:^1.0.1":
+  version: 1.0.3
+  resolution: "string-replace-to-array@npm:1.0.3"
+  dependencies:
+    invariant: ^2.2.1
+    lodash.flatten: ^4.2.0
+    lodash.isstring: ^4.0.1
+  checksum: b265fecdb754fdb6a1618487f1a5f793716fdfda3c85947de7007f8dbccf6c51f3d74869a5efeb4754bed3c26f2b07795c535c94e8e80605fc91c6cb2831c307
+  languageName: node
+  linkType: hard
+
 "string-width@npm:^1.0.1":
   version: 1.0.2
   resolution: "string-width@npm:1.0.2"
@@ -9528,6 +9688,16 @@ __metadata:
   dependencies:
     inline-style-parser: 0.1.1
   checksum: 869b30171c2c0d1ed1928e86c3644d691d96277e484fdafaa99df3ad3b1e11e0fcfc2ac2def4e3dd068df49995de585918dbda2ff833b5691bc8206d1cda37ad
+  languageName: node
+  linkType: hard
+
+"style-value-types@npm:4.1.4":
+  version: 4.1.4
+  resolution: "style-value-types@npm:4.1.4"
+  dependencies:
+    hey-listen: ^1.0.8
+    tslib: ^2.1.0
+  checksum: aca49c70e6dc3e222c1db50b58fb4f339373d6b2583fcffed414888bdfc7bbb77dbcdc7530c730f5286282583ee891d97a84fd76f6273d1c7c2338b19ab740a9
   languageName: node
   linkType: hard
 
@@ -9819,6 +9989,13 @@ __metadata:
     typescript:
       optional: true
   checksum: 78341a27939de565e2754ff65ebb689743c16e3295528089d143c08d91842cf9029c3d6b3c95a9a20854a114a7904329d02c710d63f7ce4dbf671b8a3e560ac1
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.1.0":
+  version: 2.3.0
+  resolution: "tslib@npm:2.3.0"
+  checksum: 7b4fc9feff0f704743c3760f5d8d708f6417fac6458159e63df3a6b1100f0736e3b99edb9fe370f274ad15160a1f49ff05cb49402534c818ff552c48e38c3e6e
   languageName: node
   linkType: hard
 
@@ -10404,6 +10581,8 @@ typescript@latest:
     "@babel/core": ^7.12.3
     "@emotion/react": ^11.1.5
     "@emotion/styled": ^11.1.5
+    "@octokit/graphql": ^4.6.4
+    "@octokit/graphql-schema": ^10.59.0
     "@octokit/request": latest
     "@octokit/types": ^5.5.0
     "@svgr/webpack": ^5.5.0
@@ -10415,6 +10594,7 @@ typescript@latest:
     babel-jest: ^26.6.3
     camelcase-keys: ^7.0.0
     dayjs: ^1.9.1
+    framer-motion: ^4.1.17
     jest: ^26.6.3
     mdast-util-to-string: ^2.0.0
     mdast-util-toc: ^5.0.2
@@ -10423,6 +10603,7 @@ typescript@latest:
     raw-loader: ^4.0.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-emoji-render: ^1.2.4
     react-hook-form: ^5.0.0
     react-markdown: ^6.0.2
     react-select: ^3.1.0

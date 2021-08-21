@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
-import Link from "next/link";
 import { colors } from "style.types";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
-  color: ${colors.textBlack};
+  color: ${colors.warmGray900};
 
   svg {
     display: block;
@@ -16,16 +15,10 @@ const Icon = styled.div`
   margin-right: 8px;
 `;
 
-const Text = styled.div`
-  svg {
-    height: 20px;
-  }
-`;
-
 const Logo = () => {
   const icon = (
     <Icon>
-      <svg height={24} fill="currentColor" viewBox="0 0 142 165">
+      <svg height={18} fill="currentColor" viewBox="0 0 142 165">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -40,25 +33,7 @@ const Logo = () => {
     </Icon>
   );
 
-  const text = (
-    <Text>
-      <svg
-        viewBox="0 0 63 24"
-        fill="currentColor"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M18.392 0.983999H15.2V16.848H18.392V0.983999ZM3.44 7.992C3.44 6.168 4.736 5.112 6.368 5.112C8.024 5.112 9.272 6.168 9.272 7.992C9.272 9.768 8.024 10.848 6.368 10.848C4.736 10.848 3.44 9.768 3.44 7.992ZM12.368 7.992C12.368 4.728 9.752 2.376 6.368 2.376C2.984 2.376 0.344 4.728 0.344 7.992C0.344 11.208 2.984 13.584 6.368 13.584C9.752 13.584 12.368 11.208 12.368 7.992ZM6.848 20.16V15.288H3.68V22.68H18.944V20.16H6.848ZM30.2941 6.624V9.144H33.6541V14.304H36.6061V1.392H33.6541V6.624H30.2941ZM32.1181 10.584C30.3181 10.872 28.7341 10.968 26.1421 10.992V5.064H31.5901V2.568H23.0461V13.464H24.5581C28.2781 13.464 30.1741 13.44 32.4061 13.056L32.1181 10.584ZM25.8781 17.952H37.9021V23.088H41.0701V15.432H25.8781V17.952ZM38.0701 0.959999V14.448H41.0701V0.959999H38.0701ZM52.4923 2.664H49.3003V5.856C49.3003 10.056 47.6203 14.352 43.8763 16.08L45.8443 18.624C48.3163 17.376 49.9723 15.072 50.9323 12.24C51.8443 14.904 53.4523 17.064 55.8763 18.24L57.7483 15.72C54.1003 14.088 52.4923 10.032 52.4923 5.856V2.664ZM59.5723 0.935999V7.872H55.3243V10.416H59.5723V23.112H62.7403V0.935999H59.5723Z" />
-      </svg>
-    </Text>
-  );
-
-  return (
-    <Link href="/" passHref>
-      <a>
-        <Container>{icon}</Container>
-      </a>
-    </Link>
-  );
+  return <Container>{icon}</Container>;
 };
 
 export default Logo;

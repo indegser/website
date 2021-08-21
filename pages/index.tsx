@@ -1,6 +1,6 @@
+import { GetStaticProps } from "next";
 import githubApi from "apis/github";
 import { IssuesPage } from "apps/issues/IssuesPage";
-import { GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   try {
