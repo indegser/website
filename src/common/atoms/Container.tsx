@@ -21,9 +21,3 @@ export const MarkdownContainer = styled.div`
     width: calc(100vw - 2 * var(${spacingVariables.pagePadding}));
   }
 `;
-
-export const LayoutGrid = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(8, 1fr);
-`;

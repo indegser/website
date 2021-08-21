@@ -24,7 +24,7 @@ const Heading = styled.div`
 
 const Nav = () => {
   return (
-    <Layout>
+    <Layout id="global-nav">
       <Link href="/" passHref>
         <a title="home">
           <Heading>

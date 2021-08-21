@@ -8,7 +8,7 @@ interface Props {
   image?: string;
 }
 
-const SEO: FC<Props> = ({ title, description, image }) => {
+export const SEO: FC<Props> = ({ title, description, image }) => {
   const { asPath } = useRouter();
   return (
     <NextSeo
@@ -29,5 +29,3 @@ const SEO: FC<Props> = ({ title, description, image }) => {
     />
   );
 };
-
-export default SEO;

@@ -1,7 +1,7 @@
 import { PageContainer } from "common/atoms/Container";
 import { IssueItem } from "./IssueItem";
 import { IssueListType } from "apis/github";
-import SEO from "common/SEO";
+import { SEO } from "common/SEO";
 
 interface Props {
   issues: IssueListType;
