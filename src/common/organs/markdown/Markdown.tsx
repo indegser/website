@@ -16,10 +16,10 @@ import { CodeBlock } from "./renderer/CodeBlock";
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
 const Container = styled.div`
-  font-size: 16px;
-  font-weight: 450;
+  font-size: 18px;
+  font-weight: 520;
   line-height: 1.75;
-  color: ${colors.coolGray800};
+  color: ${colors.gray800};
 
   ${spacingVariables.markdownPadding}: 0px;
 

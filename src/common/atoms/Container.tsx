@@ -14,7 +14,7 @@ export const PageContainer = styled.div`
 `;
 
 export const MarkdownContainer = styled.div`
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
 
   ${mq("md")} {

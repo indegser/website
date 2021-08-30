@@ -2,6 +2,7 @@ import unified from "unified";
 import parser from "remark-parse";
 import { select } from "unist-util-select";
 import compiler from "remark-stringify";
+import dayjs from "dayjs";
 
 export const useIssueSEO = (body: string) => {
   const tree = unified().use(parser).parse(body) as any;
@@ -22,4 +23,8 @@ export const useIssueSEO = (body: string) => {
     image,
     description,
   };
+};
+
+export const useIssueUpdatedAt = (updatedAt: string) => {
+  return dayjs(updatedAt).format("MMM. D, YYYY, h:mm a.");
 };
