@@ -30,7 +30,7 @@ const Image = styled.figure`
     line-height: 1.65;
     font-weight: 400;
     padding: 0 calc(var(--padding-x) * -1);
-    color: ${colors.coolGray500};
+    color: ${colors.gray500};
   }
 `;
 
