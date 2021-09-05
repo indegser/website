@@ -26,7 +26,7 @@ const createSchemePalette = (
 };
 
 const scheme = {
-  // coolGray: "#6B7280",
+  // gray: "#6B7280",
   gray: "#71717A",
   // trueGray: "#737373",
   red: "#EF4444",

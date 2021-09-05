@@ -44,7 +44,7 @@ const Container = styled.div`
     margin-left: 0;
     margin-right: 0;
     padding-left: 1em;
-    border-left: 4px solid ${colors.coolGray700};
+    border-left: 4px solid ${colors.gray700};
     box-sizing: border-box;
     margin: 2em auto;
     font-weight: 500;
@@ -71,7 +71,7 @@ const Container = styled.div`
   h5 {
     margin-top: 3rem;
     line-height: 1.24;
-    color: ${colors.coolGray900};
+    color: ${colors.gray900};
   }
 
   ol {
@@ -82,7 +82,7 @@ const Container = styled.div`
   pre {
     padding: 4px 6px;
     border-radius: 0.2em;
-    background: ${colors.coolGray50};
+    background: ${colors.gray50};
     font-size: 0.9em;
     margin-right: 4px;
   }
