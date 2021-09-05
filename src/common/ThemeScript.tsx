@@ -13,7 +13,7 @@ const colorScales = Object.keys(palette).map((name) => ({
 
 const adaptiveTheme = generateAdaptiveTheme({
   colorScales,
-  baseScale: "coolGray",
+  baseScale: "gray",
 });
 
 const createThemeVariables = (...args: Parameters<AdaptiveTheme>) => {
@@ -36,7 +36,7 @@ const createThemeVariables = (...args: Parameters<AdaptiveTheme>) => {
 
 export const themes = {
   light: createThemeVariables(97, 1),
-  dark: createThemeVariables(10, 1),
+  dark: createThemeVariables(10, 0.9),
 };
 
 const ThemeScript = () => {
