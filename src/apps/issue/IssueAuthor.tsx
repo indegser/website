@@ -8,8 +8,8 @@ export const IssueAuthor = ({}: Props) => {
     <Container>
       <Name>By Jaekwon Han</Name>
       <Paragraph>
-        Mr. Suri teaches history at the University of Texas, Austin, and has
-        written extensively about modern politics and foreign policy.
+        Jaekwon Han leads Front-end team at 29CM and has worked as a Front-end
+        developer and an UI designer.
       </Paragraph>
     </Container>
   );
