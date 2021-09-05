@@ -13,12 +13,12 @@ const Box = styled.div`
     margin: 0;
     padding: 12px 20px 12px 4px;
     border-radius: 4px;
-    border: 1px solid ${colors.coolGray100};
+    border: 1px solid ${colors.gray100};
     overflow-x: scroll;
   }
 
   .linenumber {
-    color: ${colors.coolGray300};
+    color: ${colors.gray300};
   }
 
   pre,
@@ -37,7 +37,7 @@ const Box = styled.div`
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: ${colors.warmGray500};
+    color: ${colors.gray500};
   }
   .token.punctuation,
   .token.string,
