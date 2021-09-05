@@ -71,6 +71,7 @@ export const palette = {
       textResume: 10,
       textLiDot: 3,
       textLightGrey: 4.6,
+      textTitle: 20,
     },
   },
   bg: {
