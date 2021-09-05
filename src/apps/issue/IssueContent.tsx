@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { MarkdownContainer } from "common/atoms/Container";
 import Markdown from "common/organs/markdown/Markdown";
+import { mq } from "common/theme";
 import { Issue } from "global.types";
 import { colors } from "style.types";
 import { IssueAuthor } from "./IssueAuthor";
@@ -29,4 +30,8 @@ const Title = styled.div`
   word-break: keep-all;
   padding: 60px 0 20px;
   color: ${colors.textTitle};
+
+  ${mq("sm")} {
+    padding-top: 20px;
+  }
 `;
