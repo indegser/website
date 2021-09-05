@@ -65,7 +65,7 @@ const Item = styled(motion.div)`
 
   ${mediaQueries.hoverable} {
     &:hover {
-      background: ${colors.warmGray50};
+      background: ${colors.gray50};
     }
   }
 
@@ -73,7 +73,7 @@ const Item = styled(motion.div)`
     display: block;
     padding-bottom: 18px;
     padding-top: 12px;
-    border-bottom: 1px solid ${colors.warmGray100};
+    border-bottom: 1px solid ${colors.gray100};
   }
 `;
 
@@ -109,7 +109,7 @@ const Label = styled.div`
   letter-spacing: 0.2px;
   line-height: 1;
   font-weight: 560;
-  color: ${colors.warmGray700};
+  color: ${colors.gray700};
   /* background: ${colors.blue50}; */
 `;
 
@@ -125,8 +125,8 @@ const Title = styled.h2`
   margin-right: 20px;
   background-image: linear-gradient(
     to right,
-    ${colors.warmGray100} 0%,
-    ${colors.warmGray100} 100%
+    ${colors.gray100} 0%,
+    ${colors.gray100} 100%
   );
   background-repeat: repeat-x;
   background-position: 0px 100%;
@@ -141,6 +141,6 @@ const Title = styled.h2`
 const Time = styled.div`
   font-size: 12px;
   font-weight: 400;
-  color: ${colors.warmGray300};
+  color: ${colors.gray500};
   line-height: 1.5;
 `;
