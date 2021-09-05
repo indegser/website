@@ -28,10 +28,11 @@ const Title = styled.div`
   word-break: break-word;
   text-align: center;
   word-break: keep-all;
-  padding: 60px 0 20px;
+  padding: 32px 0 20px;
   color: ${colors.textTitle};
 
   ${mq("sm")} {
+    font-size: 48px;
     padding-top: 20px;
   }
 `;
