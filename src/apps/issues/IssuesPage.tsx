@@ -4,6 +4,7 @@ import { SEO } from "common/SEO";
 import useSWRInfinite from "swr/infinite";
 import { IssueConnection, PageInfo } from "@octokit/graphql-schema";
 import githubApi from "apis/github";
+import { IssuesLoadMore } from "./IssuesLoadMore";
 
 interface Props {
   issues: IssueConnection;
@@ -34,9 +35,7 @@ export const IssuesPage = ({ issues }: Props) => {
     <PageContainer>
       <SEO title="Pages - Indegser" />
       {contents}
-      {leftover > 0 ? (
-        <div onClick={() => setSize(size + 1)}>{leftover}개 더 불러오기</div>
-      ) : null}
+      <IssuesLoadMore leftover={leftover} onClick={() => setSize(size + 1)} />
     </PageContainer>
   );
 };
