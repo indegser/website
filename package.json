@@ -18,7 +18,7 @@
     "@octokit/graphql": "^4.8.0",
     "@octokit/graphql-schema": "^10.71.0",
     "@octokit/request": "latest",
-    "@octokit/types": "^6.28.1",
+    "@octokit/types": "latest",
     "camelcase-keys": "^7.0.0",
     "dayjs": "^1.9.1",
     "framer-motion": "^4.1.17",

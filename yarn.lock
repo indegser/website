@@ -1984,10 +1984,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/openapi-types@npm:^10.2.2":
-  version: 10.2.2
-  resolution: "@octokit/openapi-types@npm:10.2.2"
-  checksum: eab63469b0408dff17c9d6c2b44d33b7f4f7d9e5a9097c79d96c40b01d910757400fe972a9d65379b372c7223c9daaf0101b73f594e1c75d2e3bf31433452455
+"@octokit/openapi-types@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "@octokit/openapi-types@npm:11.1.0"
+  checksum: a9869b747687f88325254a8851fec0719e879cd50dfa4159c9922a2ef1b3a57de28da8f91f9d98a51c5946c643a260c60e14614a40aaad64a3ec7f2dd7a54802
   languageName: node
   linkType: hard
 
@@ -2046,12 +2046,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^6.28.1":
-  version: 6.28.1
-  resolution: "@octokit/types@npm:6.28.1"
+"@octokit/types@npm:latest":
+  version: 6.33.0
+  resolution: "@octokit/types@npm:6.33.0"
   dependencies:
-    "@octokit/openapi-types": ^10.2.2
-  checksum: b2ad31358e49c4050de7f7c4088aad97fab38077166fe41d753334c6c256d2c849bbf8c72c836354f88edf2777b44baf8dfdb41935a6656af84d1ccd6d43104f
+    "@octokit/openapi-types": ^11.1.0
+  checksum: 648ec8f6d5a2815d334f230373bd06dd0d5a4da42306fb5c68894e49b7bb847ad6724954f43c0ed97f088586ded47ee917fb33da9c562031152c7fcb327d82ba
   languageName: node
   linkType: hard
 
@@ -10566,7 +10566,7 @@ typescript@latest:
     "@octokit/graphql": ^4.8.0
     "@octokit/graphql-schema": ^10.71.0
     "@octokit/request": latest
-    "@octokit/types": ^6.28.1
+    "@octokit/types": latest
     "@svgr/webpack": ^5.5.0
     "@testing-library/react": ^11.2.5
     "@types/jest": ^25.2.3
