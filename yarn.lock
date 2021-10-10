@@ -1963,6 +1963,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@octokit/graphql-schema@npm:^10.71.0":
+  version: 10.71.0
+  resolution: "@octokit/graphql-schema@npm:10.71.0"
+  dependencies:
+    graphql: ^15.0.0
+    graphql-tag: ^2.10.3
+  checksum: 9532f2b6b16b1fbfa4e53cd93c168ba7a71b60b32a729222530fb62b48cde355cf0ef4bc313b09f6d311485fb1b470c178569fc2a614e02158dc6279c13c8a3c
+  languageName: node
+  linkType: hard
+
+"@octokit/graphql@npm:^4.8.0":
+  version: 4.8.0
+  resolution: "@octokit/graphql@npm:4.8.0"
+  dependencies:
+    "@octokit/request": ^5.6.0
+    "@octokit/types": ^6.0.3
+    universal-user-agent: ^6.0.0
+  checksum: 8ff5cba1b6a2e41b6a1472ad6881a6fae96fa811cd2b0c15f9c98ae8dad5a2423e8a13adcda87cc2c0d8e514fae61134a7d40cf7ad8b91cf4ceea3260a340a8e
+  languageName: node
+  linkType: hard
+
+"@octokit/openapi-types@npm:^10.2.2":
+  version: 10.2.2
+  resolution: "@octokit/openapi-types@npm:10.2.2"
+  checksum: eab63469b0408dff17c9d6c2b44d33b7f4f7d9e5a9097c79d96c40b01d910757400fe972a9d65379b372c7223c9daaf0101b73f594e1c75d2e3bf31433452455
+  languageName: node
+  linkType: hard
+
 "@octokit/openapi-types@npm:^7.3.5":
   version: 7.3.5
   resolution: "@octokit/openapi-types@npm:7.3.5"
@@ -1981,6 +2009,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@octokit/request@npm:^5.6.0":
+  version: 5.6.1
+  resolution: "@octokit/request@npm:5.6.1"
+  dependencies:
+    "@octokit/endpoint": ^6.0.1
+    "@octokit/request-error": ^2.1.0
+    "@octokit/types": ^6.16.1
+    is-plain-object: ^5.0.0
+    node-fetch: ^2.6.1
+    universal-user-agent: ^6.0.0
+  checksum: c4a7fabecdb8d40591a42d732f286165c0aad4f96d86746abdca624fcd55aad0a5ae3e4e9eb821995db98d6c46d76ffc3be6a29efa75e479f8110dd06c94d675
+  languageName: node
+  linkType: hard
+
 "@octokit/request@npm:latest":
   version: 5.6.0
   resolution: "@octokit/request@npm:5.6.0"
@@ -1995,21 +2037,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@octokit/types@npm:5.5.0"
-  dependencies:
-    "@types/node": ">= 8"
-  checksum: ef5429c90b6d8d4a8816611f39ae469f238f0de76085818081b6185c9a53c9dd8e1e024000c633f935920bdb8075c18cea6475bb2c1fc67aa5d0f50c8e104a12
-  languageName: node
-  linkType: hard
-
 "@octokit/types@npm:^6.0.3, @octokit/types@npm:^6.16.1":
   version: 6.16.7
   resolution: "@octokit/types@npm:6.16.7"
   dependencies:
     "@octokit/openapi-types": ^7.3.5
   checksum: 6e2adac895dec35f2dda744086f8a922f43a6ab83b081271086de5b3fd6fe550b1f022606008f09199256724c008fcabfbe33094d13bf0c5c71d4185b60d0326
+  languageName: node
+  linkType: hard
+
+"@octokit/types@npm:^6.28.1":
+  version: 6.28.1
+  resolution: "@octokit/types@npm:6.28.1"
+  dependencies:
+    "@octokit/openapi-types": ^10.2.2
+  checksum: b2ad31358e49c4050de7f7c4088aad97fab38077166fe41d753334c6c256d2c849bbf8c72c836354f88edf2777b44baf8dfdb41935a6656af84d1ccd6d43104f
   languageName: node
   linkType: hard
 
@@ -2325,7 +2367,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>= 8":
+"@types/node@npm:*":
   version: 15.12.5
   resolution: "@types/node@npm:15.12.5"
   checksum: 42485de7a0b7277ddaae25b36ab4174fc8f23e8a5de9ccaedd002ecec17135c48227a5e09088d181c2bc34fe6b2064feb4a468954372076fd8addac2f72dad7e
@@ -4403,6 +4445,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dequal@npm:2.0.2":
+  version: 2.0.2
+  resolution: "dequal@npm:2.0.2"
+  checksum: 3b5b019a873da282a25512c632c077e5e8e2a019e71c5b6968836443b861e44176ee3934facfecdc14994d553c1ff4a6c7232278d6aef87baf65e2413d41760c
+  languageName: node
+  linkType: hard
+
 "des.js@npm:^1.0.0":
   version: 1.0.1
   resolution: "des.js@npm:1.0.1"
@@ -5210,6 +5259,24 @@ __metadata:
   version: 4.2.6
   resolution: "graceful-fs@npm:4.2.6"
   checksum: 84d39c7756892553da990a9db7e45f844b3309b37b5a00174cbb4748476f2250c54f24594d4d252f64f085c65c2fdac7c809419bf6d55f0e6e42eb07ac0f5bf2
+  languageName: node
+  linkType: hard
+
+"graphql-tag@npm:^2.10.3":
+  version: 2.12.5
+  resolution: "graphql-tag@npm:2.12.5"
+  dependencies:
+    tslib: ^2.1.0
+  peerDependencies:
+    graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+  checksum: db324292677bfe1f14e29baea6a4953a756a633a20dfe73939b14bc5f647b981087acf1e8a61245480f57da6587b63bab3562f06bddfda59e6c8233f28042dad
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^15.0.0":
+  version: 15.5.3
+  resolution: "graphql@npm:15.5.3"
+  checksum: 2538efd61b5e1317cfaba796685412aa45f97504002af823a0d0682f8a60f4698343f8ba2793c83c276c76a6b14d8301e58b9f8ad7b61191c380d48e274e6b4d
   languageName: node
   linkType: hard
 
@@ -8459,6 +8526,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-intersection-observer@npm:^8.32.1":
+  version: 8.32.1
+  resolution: "react-intersection-observer@npm:8.32.1"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
+  checksum: c2ea2e0ca50479d110632c08a800b70d90898ca9058bdbaa811559fab20108452ac276c301be685aeaea3fecfff2464934ea38bb78e53443adb2a349f0ef0256
+  languageName: node
+  linkType: hard
+
 "react-is@npm:17.0.2, react-is@npm:^17.0.0, react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
@@ -9715,6 +9791,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swr@npm:latest":
+  version: 1.0.1
+  resolution: "swr@npm:1.0.1"
+  dependencies:
+    dequal: 2.0.2
+  peerDependencies:
+    react: ^16.11.0 || ^17.0.0
+  checksum: aac517e3cde34bbc9904fbf1f9aac79797ec0857d7ec381023ba87505e170ae2fea3689dff659112f150d7a2b6af6df6df3b7e9e6a61f4e21125834d1539f1ee
+  languageName: node
+  linkType: hard
+
 "symbol-tree@npm:^3.2.4":
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
@@ -10476,8 +10563,10 @@ typescript@latest:
     "@babel/core": ^7.12.3
     "@emotion/react": ^11.1.5
     "@emotion/styled": ^11.1.5
+    "@octokit/graphql": ^4.8.0
+    "@octokit/graphql-schema": ^10.71.0
     "@octokit/request": latest
-    "@octokit/types": ^5.5.0
+    "@octokit/types": ^6.28.1
     "@svgr/webpack": ^5.5.0
     "@testing-library/react": ^11.2.5
     "@types/jest": ^25.2.3
@@ -10496,6 +10585,7 @@ typescript@latest:
     raw-loader: ^4.0.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intersection-observer: ^8.32.1
     react-markdown: ^6.0.2
     react-select: ^3.1.0
     react-syntax-highlighter: ^15.4.3
@@ -10503,6 +10593,7 @@ typescript@latest:
     remark-gfm: ^1.0.0
     remark-parse: ^9.0.0
     remark-stringify: ^7.0.4
+    swr: latest
     typescript: latest
     unified: ^8.4.2
     unist-util-map: ^2.0.1
