@@ -10,16 +10,22 @@ interface Props {
   issues: IssueConnection;
 }
 
+const PAGE_SIZE = 20;
+
 export const IssuesPage = ({ issues }: Props) => {
   const { totalCount } = issues;
-  const { data, size, setSize } = useSWRInfinite(
-    (_, prevData) => {
+
+  const { data, size, setSize, isValidating } = useSWRInfinite(
+    (index, prevData) => {
       if (prevData && !prevData.pageInfo.hasNextPage) return null;
 
       return [prevData?.pageInfo ?? null];
     },
     (pageInfo: PageInfo | null) => {
-      return githubApi.getIssues({ after: pageInfo?.endCursor });
+      return githubApi.getIssues({
+        after: pageInfo?.endCursor,
+        pageSize: PAGE_SIZE,
+      });
     },
     {
       fallbackData: [issues],
@@ -30,12 +36,17 @@ export const IssuesPage = ({ issues }: Props) => {
     .flatMap((issues) => issues.nodes)
     .map((issue) => <IssueItem key={issue.id} issue={issue} />);
 
-  const leftover = totalCount - contents.length;
+  const leftover = Math.min(totalCount - contents.length, PAGE_SIZE);
+
+  const handleLoadMore = () => {
+    if (isValidating) return;
+    setSize(size + 1);
+  };
   return (
     <PageContainer>
       <SEO title="Pages - Indegser" />
       {contents}
-      <IssuesLoadMore leftover={leftover} onClick={() => setSize(size + 1)} />
+      <IssuesLoadMore leftover={leftover} onLoadMore={handleLoadMore} />
     </PageContainer>
   );
 };
