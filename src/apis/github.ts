@@ -1,25 +1,56 @@
-import camelcaseKeys from "camelcase-keys";
 import { request } from "@octokit/request";
-import { Await } from "global.types";
+import { graphql } from "@octokit/graphql";
+import { Repository } from "@octokit/graphql-schema";
 
 const headers = {
   authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
 };
 
-export type IssueListType = Await<ReturnType<typeof githubApi.getIssues>>;
-export type IssueType = IssueListType[number];
+const graphqlWithAuth = graphql.defaults({
+  headers,
+});
+
+interface GetIssuesProps {
+  pageSize?: number;
+  after?: string;
+}
 
 const githubApi = {
-  getIssues: async (label?: string) => {
-    const { data } = await request("GET /repos/{owner}/{repo}/issues", {
-      owner: "indegser",
-      repo: "story",
-      state: "open",
-      labels: label,
-      headers,
-    });
+  getIssues: async ({ pageSize = 20, after }: GetIssuesProps = {}) => {
+    const { repository } = await graphqlWithAuth<{ repository: Repository }>(
+      `
+        query stories($first: Int, $after: String) {
+          repository(name: "story", owner: "indegser") {
+            issues (first:$first, after: $after, orderBy: { field: CREATED_AT, direction: DESC }, filterBy: { states: OPEN }) {
+              totalCount
+              pageInfo {
+                endCursor
+                startCursor
+                hasNextPage
+              }
+              nodes {
+                id
+                number
+                title
+                updatedAt
+                labels(first: 5) {
+                  nodes {
+                    id
+                    name
+                  }
+                }
+              }
+            }
+          }
+        }
+    `,
+      {
+        after,
+        first: pageSize,
+      }
+    );
 
-    return camelcaseKeys(data, { deep: true });
+    return repository.issues;
   },
   getIssue: (issueNumber: number) =>
     request("GET /repos/:owner/:repo/issues/:issue_number", {

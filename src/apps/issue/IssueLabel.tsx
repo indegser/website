@@ -10,7 +10,7 @@ export const IssueLabel = ({ labels }: Props) => {
   const headLabel = labels[0];
   if (!headLabel) return null;
 
-  const { name, color } = headLabel;
+  const name = typeof headLabel == "string" ? headLabel : headLabel.name;
 
   return (
     <Container>

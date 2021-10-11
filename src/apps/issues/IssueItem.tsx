@@ -4,14 +4,14 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
 import { colors } from "style.types";
-import { IssueType } from "apis/github";
 import { mediaQueries, mq } from "common/theme";
 import { motion } from "framer-motion";
+import { Issue } from "@octokit/graphql-schema";
 
 dayjs.extend(calendar);
 
 interface Props {
-  issue: IssueType;
+  issue: Issue;
 }
 
 export const IssueItem = ({ issue }: Props) => {
@@ -28,7 +28,7 @@ export const IssueItem = ({ issue }: Props) => {
     return result;
   }, [issue.updatedAt]);
 
-  const labels = issue.labels.map((label) => (
+  const labels = issue.labels.nodes.map((label) => (
     <div key={label.id}>
       <Label>{label.name}</Label>
     </div>
