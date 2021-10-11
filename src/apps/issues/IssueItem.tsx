@@ -16,7 +16,7 @@ interface Props {
 
 export const IssueItem = ({ issue }: Props) => {
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(issue.updatedAt)).calendar(null, {
+    const result = dayjs(dayjs(issue.createdAt)).calendar(null, {
       sameDay: "[Today at] h:mm A", // The same day ( Today at 2:30 AM )
       nextDay: "[Tomorrow at] h:mm A", // The next day ( Tomorrow at 2:30 AM )
       nextWeek: "dddd [at] h:mm A", // The next week ( Sunday at 2:30 AM )
@@ -86,7 +86,7 @@ const Right = styled.div`
   flex: 0 0 auto;
 
   ${mq("sm")} {
-    margin-top: 8px;
+    margin-top: 4px;
   }
 `;
 
@@ -135,6 +135,9 @@ const Title = styled.h2`
   ${mq("sm")} {
     font-size: 17px;
     background: none !important;
+    overflow: auto;
+    white-space: pre-wrap;
+    text-overflow: unset;
   }
 `;
 
