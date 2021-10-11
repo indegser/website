@@ -16,7 +16,7 @@ import { CodeBlock } from "./renderer/CodeBlock";
 interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
 const Container = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 520;
   line-height: 1.75;
   color: ${colors.gray800};
@@ -24,10 +24,8 @@ const Container = styled.div`
   ${spacingVariables.markdownPadding}: 0px;
 
   ${mq("md")} {
-    ${spacingVariables.markdownPadding}: 0px;
-    text-align: left;
-    word-break: break-word;
-    -webkit-text-stroke: 0.1px;
+    font-weight: 450;
+    font-size: 17px;
   }
 
   p {
