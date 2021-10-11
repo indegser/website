@@ -1,6 +1,7 @@
-import { IssuesListForRepoResponseData } from "@octokit/types";
+import { Endpoints } from "@octokit/types";
 
-export type Issue = IssuesListForRepoResponseData[number];
+export type Issue =
+  Endpoints["GET /repos/{owner}/{repo}/issues/{issue_number}"]["response"]["data"];
 
 export type RepoType = "story" | "book";
 
