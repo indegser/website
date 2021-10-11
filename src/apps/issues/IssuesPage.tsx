@@ -11,9 +11,10 @@ interface Props {
 }
 
 export const IssuesPage = ({ issues }: Props) => {
-  const { totalCount } = issues;
-  const { data, size, setSize } = useSWRInfinite(
-    (_, prevData) => {
+  const { totalCount, pageInfo } = issues;
+
+  const { data, size, setSize, isValidating } = useSWRInfinite(
+    (index, prevData) => {
       if (prevData && !prevData.pageInfo.hasNextPage) return null;
 
       return [prevData?.pageInfo ?? null];
@@ -31,11 +32,16 @@ export const IssuesPage = ({ issues }: Props) => {
     .map((issue) => <IssueItem key={issue.id} issue={issue} />);
 
   const leftover = totalCount - contents.length;
+
+  const handleLoadMore = () => {
+    if (isValidating) return;
+    setSize(size + 1);
+  };
   return (
     <PageContainer>
       <SEO title="Pages - Indegser" />
       {contents}
-      <IssuesLoadMore leftover={leftover} onClick={() => setSize(size + 1)} />
+      <IssuesLoadMore leftover={leftover} onLoadMore={handleLoadMore} />
     </PageContainer>
   );
 };
