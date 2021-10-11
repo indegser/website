@@ -32,6 +32,7 @@ const githubApi = {
                 id
                 number
                 title
+                createdAt
                 updatedAt
                 labels(first: 5) {
                   nodes {

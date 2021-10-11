@@ -16,7 +16,7 @@ interface Props {
 
 export const IssueItem = ({ issue }: Props) => {
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(issue.updatedAt)).calendar(null, {
+    const result = dayjs(dayjs(issue.createdAt)).calendar(null, {
       sameDay: "[Today at] h:mm A", // The same day ( Today at 2:30 AM )
       nextDay: "[Tomorrow at] h:mm A", // The next day ( Tomorrow at 2:30 AM )
       nextWeek: "dddd [at] h:mm A", // The next week ( Sunday at 2:30 AM )
