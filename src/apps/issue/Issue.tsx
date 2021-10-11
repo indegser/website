@@ -13,7 +13,12 @@ const IssuePage: React.FC<Props> = ({ issue }) => {
   const { image, description } = useIssueSEO(issue.body);
   return (
     <>
-      <SEO title={issue.title} image={image} description={description} />
+      <SEO
+        title={issue.title}
+        image={image}
+        description={description}
+        ogType="article"
+      />
       <PageContainer>
         <IssueLabel labels={issue.labels} />
         <IssueContent issue={issue} />

@@ -1,4 +1,4 @@
-import unified from "unified";
+import { unified } from "unified";
 import markdown from "remark-parse";
 import compiler from "remark-stringify";
 import unistMap from "unist-util-map";
@@ -27,7 +27,9 @@ export const useTocContent = (content: string) => {
       return node;
     });
 
-    const parsed = unified().use(compiler).stringify(tocNode);
+    const parsed = unified()
+      .use(compiler)
+      .stringify(tocNode as any);
 
     return parsed;
   }, [content]);

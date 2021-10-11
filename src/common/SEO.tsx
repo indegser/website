@@ -6,9 +6,15 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  ogType?: string;
 }
 
-export const SEO: FC<Props> = ({ title, description, image }) => {
+export const SEO: FC<Props> = ({
+  title,
+  description,
+  image,
+  ogType = "website",
+}) => {
   const { asPath } = useRouter();
   return (
     <NextSeo
@@ -18,6 +24,7 @@ export const SEO: FC<Props> = ({ title, description, image }) => {
         url: `${process.env.VERCEL_URL}${asPath}`,
         title,
         description,
+        type: ogType,
         images: image ? [{ url: image }] : [],
         site_name: "Indegser",
       }}
