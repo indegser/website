@@ -31,14 +31,20 @@ const Image = styled.figure`
     font-weight: 400;
     padding: 0 calc(var(--padding-x) * -1);
     color: ${colors.gray500};
+
+    &:empty {
+      display: none;
+    }
   }
 `;
 
-const ImageRenderer = ({ alt, src }: Props) => {
+const ImageRenderer = ({ alt, src, ...p }: Props) => {
+  const isAltEmpty = !Boolean(alt) || alt === "image";
+
   return (
     <Image>
       <img src={src} alt={alt} />
-      <figcaption>{alt}</figcaption>
+      <figcaption>{!isAltEmpty && alt}</figcaption>
     </Image>
   );
 };

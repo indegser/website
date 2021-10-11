@@ -1,22 +1,31 @@
-import unified from "unified";
+import { unified } from "unified";
 import parser from "remark-parse";
-import { select } from "unist-util-select";
-import compiler from "remark-stringify";
+import { select, selectAll } from "unist-util-select";
 import dayjs from "dayjs";
+import { toString } from "mdast-util-to-string/index";
 
 export const useIssueSEO = (body: string) => {
-  const tree = unified().use(parser).parse(body) as any;
+  const tree = unified()
+    .use(parser)
+    .parse(body) as any;
   let image: string;
-  let description: string;
+  let description = "";
 
   const imageNode = select("image", tree);
 
   if (imageNode) {
-    image = imageNode.url as string;
+    image = (imageNode as any).url as string;
   }
 
-  if (tree.children[0].type === "paragraph") {
-    description = unified().use(compiler).stringify(tree.children[0]);
+  const textTree = selectAll("paragraph > text", tree);
+
+  for (const node of textTree) {
+    const string = toString(node);
+
+    description += `${string} `;
+    if (description.length > 300) {
+      break;
+    }
   }
 
   return {
