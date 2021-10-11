@@ -111,7 +111,11 @@ const Markdown = ({ children }: Props) => {
   return (
     <Container>
       <ReactMarkdown
-        remarkPlugins={[gfm, directive, reactMarkdownRemarkDirective]}
+        remarkPlugins={[
+          gfm as any,
+          directive as any,
+          reactMarkdownRemarkDirective,
+        ]}
         components={{
           img: (props) => <ImageRenderer {...props} />,
           hr: BreakRenderer,
@@ -126,7 +130,7 @@ const Markdown = ({ children }: Props) => {
               </code>
             );
           },
-          pre: "div",
+          pre: ({ children }) => <div children={children} />,
           ...markdownComponents,
         }}
       >
