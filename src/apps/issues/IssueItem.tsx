@@ -86,7 +86,7 @@ const Right = styled.div`
   flex: 0 0 auto;
 
   ${mq("sm")} {
-    margin-top: 8px;
+    margin-top: 4px;
   }
 `;
 
@@ -135,6 +135,9 @@ const Title = styled.h2`
   ${mq("sm")} {
     font-size: 17px;
     background: none !important;
+    overflow: auto;
+    white-space: pre-wrap;
+    text-overflow: unset;
   }
 `;
 
