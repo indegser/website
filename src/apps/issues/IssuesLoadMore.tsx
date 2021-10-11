@@ -55,6 +55,9 @@ const Button = styled.div`
   transition: 0.2s background-color ease;
   color: ${colors.gray500};
   font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid ${colors.gray100};
 
   strong {
     font-weight: normal;
