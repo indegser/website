@@ -19,6 +19,29 @@ const Main = styled.div``;
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
 
+const hotjarScript = `
+(function(h,o,t,j,a,r){
+  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+  h._hjSettings={hjid:2698426,hjsv:6};
+  a=o.getElementsByTagName('head')[0];
+  r=o.createElement('script');r.async=1;
+  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+  a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+`;
+
+const beusableScript = `
+(function(w, d, a){
+  w.__beusablerumclient__ = {
+    load : function(src){
+      var b = d.createElement("script");
+      b.src = src; b.async=true; b.type = "text/javascript";
+      d.getElementsByTagName("head")[0].appendChild(b);
+    }
+  };w.__beusablerumclient__.load(a);
+})(window, document, "//rum.beusable.net/script/b211112e215339u478/632f9e97eb");
+`;
+
 const App = ({ Component, pageProps }) => {
   return (
     <>
@@ -38,6 +61,11 @@ const App = ({ Component, pageProps }) => {
           rel="stylesheet"
         ></link>
         <title>Home</title>
+        <script dangerouslySetInnerHTML={{ __html: hotjarScript }} />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{ __html: beusableScript }}
+        />
       </Head>
       <Page>
         <Nav />
