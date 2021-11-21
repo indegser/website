@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.8",
+    "@emotion/css": "^11.5.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
     "@octokit/graphql": "^4.8.0",
@@ -37,10 +38,12 @@
     "remark-parse": "^9.0.0",
     "remark-stringify": "^10.0.0",
     "swr": "latest",
+    "uid": "^2.0.0",
     "unified": "latest",
     "unist-util-map": "^2.0.1",
     "unist-util-select": "^3.0.2",
-    "unist-util-visit": "^2.0.2"
+    "unist-util-visit": "^2.0.2",
+    "zustand": "^3.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
