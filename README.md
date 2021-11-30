@@ -11,3 +11,5 @@
 - react, next.js as base framework
 - emotion for css-in-js
 - jest for testing, typescript for type-strong development
+
+Testing
