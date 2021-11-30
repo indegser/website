@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 const EditorPage = dynamic(
-  () => import("apps/editor/EditorPage").then((mod) => mod.EditorPage),
+  () => import("apps/newsroom/NewsroomPage").then((mod) => mod.NewsroomPage),
   { ssr: false }
 );
 

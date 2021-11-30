@@ -4,3 +4,18 @@ import "react-markdown/src/ast-to-react";
 module "react-markdown" {
   declare function ReactMarkdown(options: any): ReactElement;
 }
+
+// TypeScript users only add this code
+import { BaseEditor, Descendant } from "slate";
+import { ReactEditor } from "slate-react";
+
+type CustomElement = { type: "paragraph" | "code"; children: CustomText[] };
+type CustomText = { text: string };
+
+declare module "slate" {
+  interface CustomTypes {
+    Editor: BaseEditor & ReactEditor;
+    Element: CustomElement;
+    Text: CustomText;
+  }
+}

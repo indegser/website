@@ -37,6 +37,8 @@
     "remark-gfm": "^1.0.0",
     "remark-parse": "^9.0.0",
     "remark-stringify": "^10.0.0",
+    "slate": "^0.71.0",
+    "slate-react": "^0.71.0",
     "swr": "latest",
     "uid": "^2.0.0",
     "unified": "latest",

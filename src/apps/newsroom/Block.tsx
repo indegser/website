@@ -1,5 +1,11 @@
-import { css } from "@emotion/css";
-import { KeyboardEventHandler, useCallback, useEffect, useRef } from "react";
+import styled from "@emotion/styled";
+import {
+  KeyboardEventHandler,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { colors } from "style.types";
 import { useEditor } from "./Editor.hooks";
 
@@ -14,6 +20,7 @@ export const Block = ({ id, onAppendBlock, onDelete }: Props) => {
   const htmlRef = useRef<string>("");
   const previousKeyRef = useRef<string>();
   const isActive = useEditor((s) => s.activeBlockId === id);
+  const [isEmpty, setIsEmpty] = useState(true);
 
   useEffect(() => {
     if (isActive) {
@@ -35,7 +42,7 @@ export const Block = ({ id, onAppendBlock, onDelete }: Props) => {
 
       switch (e.key) {
         case "Enter": {
-          if (e.shiftKey) break;
+          if (!e.ctrlKey && !e.metaKey) break;
           e.preventDefault();
           onAppendBlock(id);
           break;
@@ -52,10 +59,6 @@ export const Block = ({ id, onAppendBlock, onDelete }: Props) => {
           const boxRect = ref.current.getBoundingClientRect();
           const isFirstLine = boxRect.top + rangeRect.height > rangeRect.top;
 
-          if (!isFirstLine) break;
-
-          e.preventDefault();
-
           break;
         }
       }
@@ -65,20 +68,51 @@ export const Block = ({ id, onAppendBlock, onDelete }: Props) => {
     []
   );
 
+  const handleInput = () => {
+    const nextIsEmpty = ref.current.innerText.length === 0;
+    if (nextIsEmpty !== isEmpty) {
+      setIsEmpty(nextIsEmpty);
+    }
+  };
+
   return (
-    <div>
-      <div
+    <Container>
+      {isEmpty && (
+        <Placeholder>
+          Type text, then shift-return. control-space for more options.
+        </Placeholder>
+      )}
+      <Space
         ref={ref}
         contentEditable
+        placeholder="Type text, then shift-return. control-space for more options."
         dangerouslySetInnerHTML={{ __html: htmlRef.current }}
-        className={blockClassName}
         onKeyDown={handleKeyDown}
+        onInput={handleInput}
       />
-    </div>
+    </Container>
   );
 };
 
-const blockClassName = css`
+const Container = styled.div`
+  position: relative;
+
+  & + & {
+    margin-top: 1em;
+  }
+`;
+
+const Space = styled.div`
   outline: none;
-  /* border: 1px solid ${colors.gray200}; */
+  position: relative;
+`;
+
+const Placeholder = styled.div`
+  color: ${colors.gray200};
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
 `;

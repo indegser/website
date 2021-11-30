@@ -6,11 +6,29 @@ interface EditorState extends State {
   activeBlockId: string | null;
   appendBlock: (prevBlockId: string) => void;
   deleteBlocks: (blockIds: string[]) => void;
+  focusUp: (baseBlockId: string) => void;
+  focusDown: (baseBlockId: string) => void;
 }
 
 export const useEditor = create<EditorState>((set, get) => ({
   blocks: [{ id: uid() }],
   activeBlockId: null,
+  focusUp: (baseBlockId) => {
+    const { blocks } = get();
+    const baseBlockIndex = blocks.findIndex(
+      (block) => block.id === baseBlockId
+    );
+    const focusBlock = blocks[baseBlockIndex - 1];
+    set({ activeBlockId: focusBlock?.id ?? null });
+  },
+  focusDown: (baseBlockId) => {
+    const { blocks } = get();
+    const baseBlockIndex = blocks.findIndex(
+      (block) => block.id === baseBlockId
+    );
+    const focusBlock = blocks[baseBlockIndex + 1];
+    set({ activeBlockId: focusBlock?.id ?? null });
+  },
   appendBlock: (prevBlockId) => {
     const { blocks } = get();
     const prevBlockIndex = blocks.findIndex(
