@@ -1,11 +1,14 @@
 import styled from "@emotion/styled";
 import {
+  forwardRef,
   KeyboardEventHandler,
+  PropsWithChildren,
   useCallback,
   useEffect,
   useRef,
   useState,
 } from "react";
+import { Node } from "slate";
 import { colors } from "style.types";
 import { useEditor } from "./Editor.hooks";
 
@@ -15,84 +18,79 @@ interface Props {
   onDelete: (id: string) => void;
 }
 
-export const Block = ({ id, onAppendBlock, onDelete }: Props) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const htmlRef = useRef<string>("");
-  const previousKeyRef = useRef<string>();
-  const isActive = useEditor((s) => s.activeBlockId === id);
-  const [isEmpty, setIsEmpty] = useState(true);
+export const Block = forwardRef<HTMLDivElement>(
+  ({ id, children }: PropsWithChildren<Props>, ref) => {
+    const htmlRef = useRef<string>("");
+    const previousKeyRef = useRef<string>();
+    const isActive = useEditor((s) => s.activeBlockId === id);
+    const [isEmpty, setIsEmpty] = useState(true);
 
-  useEffect(() => {
-    if (isActive) {
-      const range = new Range();
-      const target = ref.current.hasChildNodes()
-        ? ref.current.lastChild
-        : ref.current;
+    // useEffect(() => {
+    //   if (isActive) {
+    //     const range = new Range();
+    //     const target = ref.current.hasChildNodes()
+    //       ? ref.current.lastChild
+    //       : ref.current;
 
-      range.setStart(target, target.textContent.length);
-      range.collapse(true);
-      window.getSelection().removeAllRanges();
-      window.getSelection().addRange(range);
-    }
-  }, [isActive, id]);
+    //     range.setStart(target, target.textContent.length);
+    //     range.collapse(true);
+    //     window.getSelection().removeAllRanges();
+    //     window.getSelection().addRange(range);
+    //   }
+    // }, [isActive, id]);
 
-  const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = useCallback(
-    (e) => {
-      const html = ref.current.innerHTML;
+    // const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = useCallback(
+    //   (e) => {
+    //     const html = ref.current.innerHTML;
 
-      switch (e.key) {
-        case "Enter": {
-          if (!e.ctrlKey && !e.metaKey) break;
-          e.preventDefault();
-          onAppendBlock(id);
-          break;
-        }
-        case "Backspace": {
-          if (html && html !== "<br>") break;
-          e.preventDefault();
-          onDelete(id);
-          break;
-        }
-        case "ArrowUp": {
-          const range = getSelection().getRangeAt(0);
-          const rangeRect = range.getBoundingClientRect();
-          const boxRect = ref.current.getBoundingClientRect();
-          const isFirstLine = boxRect.top + rangeRect.height > rangeRect.top;
+    //     switch (e.key) {
+    //       case "Enter": {
+    //         if (!e.ctrlKey && !e.metaKey) break;
+    //         e.preventDefault();
+    //         onAppendBlock(id);
+    //         break;
+    //       }
+    //       case "Backspace": {
+    //         if (html && html !== "<br>") break;
+    //         e.preventDefault();
+    //         onDelete(id);
+    //         break;
+    //       }
+    //       case "ArrowUp": {
+    //         const range = getSelection().getRangeAt(0);
+    //         const rangeRect = range.getBoundingClientRect();
+    //         const boxRect = ref.current.getBoundingClientRect();
+    //         const isFirstLine = boxRect.top + rangeRect.height > rangeRect.top;
 
-          break;
-        }
-      }
+    //         break;
+    //       }
+    //     }
 
-      previousKeyRef.current = e.key;
-    },
-    []
-  );
+    //     previousKeyRef.current = e.key;
+    //   },
+    //   []
+    // );
 
-  const handleInput = () => {
-    const nextIsEmpty = ref.current.innerText.length === 0;
-    if (nextIsEmpty !== isEmpty) {
-      setIsEmpty(nextIsEmpty);
-    }
-  };
+    // const handleInput = () => {
+    //   const nextIsEmpty = ref.current.innerText.length === 0;
+    //   if (nextIsEmpty !== isEmpty) {
+    //     setIsEmpty(nextIsEmpty);
+    //   }
+    // };
 
-  return (
-    <Container>
-      {isEmpty && (
-        <Placeholder>
-          Type text, then shift-return. control-space for more options.
-        </Placeholder>
-      )}
-      <Space
-        ref={ref}
-        contentEditable
-        placeholder="Type text, then shift-return. control-space for more options."
-        dangerouslySetInnerHTML={{ __html: htmlRef.current }}
-        onKeyDown={handleKeyDown}
-        onInput={handleInput}
-      />
-    </Container>
-  );
-};
+    return <Container ref={ref}>{children}</Container>;
+  }
+);
+{
+  /* <Space
+  ref={ref}
+  contentEditable
+  placeholder="Type text, then shift-return. control-space for more options."
+  dangerouslySetInnerHTML={{ __html: htmlRef.current }}
+  onKeyDown={handleKeyDown}
+  onInput={handleInput}
+/> */
+}
 
 const Container = styled.div`
   position: relative;

@@ -1,61 +1,116 @@
 import styled from "@emotion/styled";
+
+import { createPlugins, Plate } from "@udecode/plate-core";
+import { createBasicMarksPlugin } from "@udecode/plate-basic-marks";
+import { createBasicElementsPlugin } from "@udecode/plate-basic-elements";
+import {
+  ELEMENT_H1,
+  ELEMENT_H2,
+  ELEMENT_H3,
+  KEYS_HEADING,
+} from "@udecode/plate-heading";
+import {
+  createExitBreakPlugin,
+  createSoftBreakPlugin,
+} from "@udecode/plate-break";
+import { createAutoformatPlugin } from "@udecode/plate-autoformat";
+import { createKbdPlugin } from "@udecode/plate-kbd";
 import { MarkdownContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
-import { CustomElement } from "global";
-import { useCallback, useMemo, useState } from "react";
-import { createEditor, Descendant, Editor, Text, Transforms } from "slate";
-import { Editable, Slate, withReact } from "slate-react";
 import { colors } from "style.types";
-import { Code } from "./components/Code";
+import { Heading } from "./blocks/Heading";
 
 export const NewsroomPage = () => {
-  const initialValue: CustomElement[] = [
+  const initialValue = [
     {
-      type: "paragraph",
-      children: [{ text: "A line of text in a paragraph." }],
+      type: ELEMENT_H1,
+      children: [{ text: "Hello1" }],
+    },
+    {
+      type: ELEMENT_H2,
+      children: [{ text: "Hello2" }],
+    },
+    {
+      type: ELEMENT_H3,
+      children: [{ text: "Hello3" }],
     },
   ];
-  const [value, setValue] = useState<Descendant[]>(initialValue);
-  const [editor] = useState(withReact(createEditor()));
 
-  const renderElement = useCallback((props) => {
-    switch (props.element.type) {
-      case "code":
-        return <Code {...props} />;
-      default:
-        return <p {...props.attributes}>{props.children}</p>;
+  const editableProps = {
+    placeholder: "Type…",
+  };
+
+  const plugins = createPlugins(
+    [
+      createBasicElementsPlugin(),
+      createBasicMarksPlugin(),
+      createKbdPlugin(),
+      createExitBreakPlugin({
+        options: {
+          rules: [
+            {
+              hotkey: "enter",
+              query: {
+                start: true,
+                end: true,
+                allow: KEYS_HEADING,
+              },
+            },
+          ],
+        },
+      }),
+      createSoftBreakPlugin({
+        options: {
+          rules: [{ hotkey: "shift+enter" }],
+        },
+      }),
+      createAutoformatPlugin({
+        options: {
+          rules: [
+            {
+              match: "# ",
+              mode: "block",
+              type: "h1",
+            },
+            {
+              match: "## ",
+              mode: "block",
+              type: "h2",
+            },
+            {
+              match: "### ",
+              mode: "block",
+              type: "h3",
+            },
+            { mode: "text", match: "->", format: "→" },
+            { mode: "text", match: "<-", format: "←" },
+            { mode: "text", match: "=>", format: "⇒" },
+            { mode: "text", match: "<=", format: "⇐" },
+          ],
+        },
+      }),
+    ],
+    {
+      components: {
+        p: (props) => {
+          return <p>{props.children}</p>;
+        },
+        h1: Heading,
+        h2: Heading,
+        h3: Heading,
+      },
     }
-  }, []);
+  );
 
   return (
     <MarkdownContainer>
       <Container>
-        <Slate editor={editor} value={value} onChange={setValue}>
-          <Editable
-            renderElement={renderElement}
-            onKeyDown={(event) => {
-              if (event.key === "&") {
-                // Prevent the ampersand character from being inserted.
-                event.preventDefault();
-                // Execute the `insertText` method when the event occurs.
-                editor.insertText("and");
-              }
-
-              if (event.key === "`") {
-                // Prevent the "`" from being inserted by default.
-                event.preventDefault();
-                // Otherwise, set the currently selected blocks type to "code".
-                console.log("hello?");
-                Transforms.setNodes(
-                  editor,
-                  { type: "code" },
-                  { match: (n) => Text.isText(n), split: true }
-                );
-              }
-            }}
-          />
-        </Slate>
+        <Plate
+          editableProps={editableProps}
+          initialValue={initialValue}
+          plugins={plugins}
+        />
       </Container>
     </MarkdownContainer>
   );
@@ -63,14 +118,14 @@ export const NewsroomPage = () => {
 
 const Container = styled.div`
   font-size: 16px;
-  font-weight: 520;
+  font-weight: 420;
   line-height: 1.75;
   color: ${colors.gray800};
 
   ${spacingVariables.markdownPadding}: 0px;
 
   ${mq("md")} {
-    font-weight: 450;
+    font-weight: 440;
     font-size: 17px;
   }
 
