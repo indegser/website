@@ -1,3 +1,4 @@
+import { Timestamp } from "@firebase/firestore/dist/lite";
 import { Component, ReactElement } from "react";
 import "react-markdown/src/ast-to-react";
 
@@ -31,4 +32,11 @@ declare module "slate" {
     Element: CustomElement;
     Text: CustomText;
   }
+}
+
+interface StoryData {
+  id: string;
+  content: string;
+  createdAt: Timestamp;
+  updatedAt: Timestamp;
 }

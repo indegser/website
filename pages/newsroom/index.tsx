@@ -1,8 +1,3 @@
-import dynamic from "next/dynamic";
+import { NewsroomPage } from "apps/newsroom/NewsroomPage";
 
-const EditorPage = dynamic(
-  () => import("apps/newsroom/NewsroomPage").then((mod) => mod.NewsroomPage),
-  { ssr: false }
-);
-
-export default EditorPage;
+export default NewsroomPage;
