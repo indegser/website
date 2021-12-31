@@ -33,10 +33,3 @@ declare module "slate" {
     Text: CustomText;
   }
 }
-
-interface StoryData {
-  id: string;
-  content: string;
-  createdAt: Timestamp;
-  updatedAt: Timestamp;
-}
