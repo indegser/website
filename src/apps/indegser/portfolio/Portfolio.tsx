@@ -1,6 +1,5 @@
 import { useIndegserContext } from "../Indegser.hooks";
 import { useState, useEffect } from "react";
-import Markdown from "common/organs/markdown/Markdown";
 import { MarkdownContainer } from "common/atoms/Container";
 
 const Portfolio = () => {
@@ -25,13 +24,7 @@ const Portfolio = () => {
     ).then((c) => setSources(c.map((module) => module.default)));
   }, [lang]);
 
-  return (
-    <MarkdownContainer>
-      {sources.map((source, id) => (
-        <Markdown key={id} children={source}></Markdown>
-      ))}
-    </MarkdownContainer>
-  );
+  return <MarkdownContainer></MarkdownContainer>;
 };
 
 export default Portfolio;
