@@ -1,16 +1,27 @@
 // @ts-ignore;
 const gtag = process.browser && window.gtag;
 
+/**
+ * NEXT_PUBLIC_GA_TRACKING_ID는 production Vercel 환경에만 주입 됨
+ */
+const trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID ?? "";
 export namespace Analytics {
-  export const id = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
-
-  export function pageView(url) {
-    gtag("config", id, {
+  export function pageView(url: string) {
+    if (!trackingId) {
+      console.info(`Google Analytics disabled. Tracking id is empty`);
+      return;
+    }
+    gtag("config", trackingId, {
       page_path: url,
     });
   }
 
   export function reportWebVitals({ id, name, label, value }) {
+    if (!id) {
+      console.info(`Google Analytics disabled. Tracking id is empty`);
+      return;
+    }
+
     gtag("send", "event", {
       eventCategory:
         label === "web-vital" ? "Web Vitals" : "Next.js custom metric",
