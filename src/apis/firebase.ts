@@ -14,7 +14,6 @@ import {
   orderBy,
   Timestamp,
 } from "@firebase/firestore/lite";
-import { StoryData } from "global";
 import { environment } from "types/env.types";
 import { StoryDocumentData, StoryType } from "types/story.types";
 import dayjs from "dayjs";
@@ -41,7 +40,7 @@ export const firebaseApi = {
     return {
       id,
       ...snapshot.data(),
-    } as StoryData;
+    } as StoryType;
   },
   createStory: ({ title, content }: { title: string; content: string }) => {
     return addDoc(collection(firestore, newsCollection), {

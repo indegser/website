@@ -5,10 +5,12 @@ export type StoryType = {
   title: string;
   updatedAt: string;
   createdAt: string;
+  content: string;
 };
 
 export interface StoryDocumentData extends DocumentData {
   title?: string;
+  content?: string;
   createdAt?: Timestamp;
   updatedAt?: Timestamp;
 }
