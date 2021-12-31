@@ -26,14 +26,21 @@ import { colors } from "style.types";
 import { Heading } from "./blocks/Heading";
 
 interface Props {
-  editor: PlateEditor;
   initialValue: any[];
-  onChange: UseSlatePropsOptions["onChange"];
+  editor?: PlateEditor;
+  isReadOnly?: boolean;
+  onChange?: UseSlatePropsOptions["onChange"];
 }
 
-export const Renderer = ({ editor, initialValue, onChange }: Props) => {
+export const Renderer = ({
+  editor,
+  initialValue,
+  isReadOnly = false,
+  onChange,
+}: Props) => {
   const editableProps = {
     placeholder: "Type…",
+    readOnly: isReadOnly,
   };
 
   const plugins = createPlugins(
