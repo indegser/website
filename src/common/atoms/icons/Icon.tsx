@@ -18,6 +18,7 @@ export enum IconVariant {
   english = "english",
   korean = "korean",
   select = "select",
+  loadMore = "load-more",
 }
 
 interface IIconProps extends SVGAttributes<SVGSVGElement> {

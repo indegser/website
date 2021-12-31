@@ -6,42 +6,35 @@ import calendar from "dayjs/plugin/calendar";
 import { colors } from "style.types";
 import { mediaQueries, mq } from "common/theme";
 import { motion } from "framer-motion";
-import { Issue } from "@octokit/graphql-schema";
+import { StoryType } from "types/story.types";
+import "dayjs/locale/ko";
 
 dayjs.extend(calendar);
+dayjs.locale("ko");
 
 interface Props {
-  issue: Issue;
+  story: StoryType;
 }
 
-export const IssueItem = ({ issue }: Props) => {
+export const DataRow = ({ story }: Props) => {
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(issue.createdAt)).calendar(null, {
-      sameDay: "[Today at] h:mm A", // The same day ( Today at 2:30 AM )
-      nextDay: "[Tomorrow at] h:mm A", // The next day ( Tomorrow at 2:30 AM )
-      nextWeek: "dddd [at] h:mm A", // The next week ( Sunday at 2:30 AM )
-      lastDay: "[Yesterday at] h:mm A", // The day before ( Yesterday at 2:30 AM )
-      lastWeek: "[Last] dddd [at] h:mm A", // Last week ( Last Monday at 2:30 AM )
-      sameElse: "MMMM D[,] YYYY h:mm A", // Everything else ( 17/10/2011 )
+    const result = dayjs(dayjs(story.createdAt)).calendar(null, {
+      sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
+      lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
+      lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
+      sameElse: "YYYY[년] MMMM[월] D[일] A h:mm", // Everything else ( 17/10/2011 )
     });
 
     return result;
-  }, [issue.updatedAt]);
-
-  const labels = issue.labels.nodes.map((label) => (
-    <div key={label.id}>
-      <Label>{label.name}</Label>
-    </div>
-  ));
+  }, [story.updatedAt]);
 
   return (
     <Container>
-      <Link href={`/issue/${issue.number}`} passHref>
+      <Link href={`/newsroom/${story.id}`} passHref>
         <a>
           <Item whileTap={{ opacity: 0.4 }} transition={{ duration: 0.2 }}>
-            <Title>{issue.title}</Title>
+            <Title>{story.title}</Title>
             <Right>
-              <Labels>{labels}</Labels>
               <Time>{desc}</Time>
             </Right>
           </Item>
@@ -53,7 +46,7 @@ export const IssueItem = ({ issue }: Props) => {
 
 const Container = styled.div`
   padding-top: 6;
-  margin: 2px 0;
+  margin-bottom: 4px;
 `;
 
 const Item = styled(motion.div)`
