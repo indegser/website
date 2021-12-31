@@ -15,7 +15,11 @@ import {
   Timestamp,
 } from "@firebase/firestore/lite";
 import { environment } from "types/env.types";
-import { StoryDocumentData, StoryType } from "types/story.types";
+import {
+  storyConverter,
+  StoryDocumentData,
+  StoryType,
+} from "types/story.types";
 import dayjs from "dayjs";
 
 const firebaseConfig = {
@@ -36,7 +40,9 @@ const newsCollection = `news-${environment}`;
 
 export const firebaseApi = {
   getStory: async (id: string) => {
-    const snapshot = await getDoc(doc(firestore, newsCollection, id));
+    const snapshot = await getDoc(
+      doc(firestore, newsCollection, id).withConverter(storyConverter)
+    );
     return {
       id,
       ...snapshot.data(),

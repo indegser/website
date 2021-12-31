@@ -30,7 +30,7 @@ export const DataRow = ({ story }: Props) => {
 
   return (
     <Container>
-      <Link href={`/newsroom/${story.id}`} passHref>
+      <Link href={`/story/${story.id}`} passHref>
         <a>
           <Item whileTap={{ opacity: 0.4 }} transition={{ duration: 0.2 }}>
             <Title>{story.title}</Title>
