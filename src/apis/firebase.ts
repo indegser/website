@@ -44,6 +44,11 @@ export const firebaseApi = {
     const snapshot = await getDoc(
       doc(firestore, newsCollection, id).withConverter(storyConverter)
     );
+
+    if (!snapshot.exists()) {
+      throw new Error("Not found");
+    }
+
     return {
       id,
       ...snapshot.data(),
