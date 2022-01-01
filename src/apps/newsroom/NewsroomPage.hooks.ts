@@ -27,7 +27,7 @@ function debounce<A = unknown, R = void>(
 
 export const useAutoSave = () => {
   const { replace, query } = useRouter();
-  const idRef = useRef(query.storyId.toString() ?? null);
+  const idRef = useRef(query.storyId?.toString() ?? null);
 
   const [handleAutoSave, teardown] = debounce(async (value: any) => {
     const content = JSON.stringify(value);
