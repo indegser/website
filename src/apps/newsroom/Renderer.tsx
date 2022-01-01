@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { createHorizontalRulePlugin } from "@udecode/plate";
 import { createAutoformatPlugin } from "@udecode/plate-autoformat";
 import { createBasicElementsPlugin } from "@udecode/plate-basic-elements";
 import { createBasicMarksPlugin } from "@udecode/plate-basic-marks";
@@ -9,9 +10,11 @@ import {
 } from "@udecode/plate-break";
 import {
   createPlugins,
+  insertNodes,
   isSelectionAtBlockStart,
   Plate,
   PlateEditor,
+  setNodes,
   UseSlatePropsOptions,
 } from "@udecode/plate-core";
 import { ELEMENT_H1, KEYS_HEADING } from "@udecode/plate-heading";
@@ -22,8 +25,10 @@ import { createResetNodePlugin } from "@udecode/plate-reset-node";
 import { MarkdownContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
+import { Editor } from "slate";
 import { colors } from "style.types";
 import { Heading } from "./blocks/Heading";
+import { HorizontalRule } from "./blocks/HorizontalRule";
 
 interface Props {
   initialValue: any[];
@@ -47,6 +52,7 @@ export const Renderer = ({
     [
       createBasicElementsPlugin(),
       createBasicMarksPlugin(),
+      createHorizontalRulePlugin(),
       createNormalizeTypesPlugin({
         options: {
           rules: [{ path: [0], strictType: ELEMENT_H1 }],
@@ -107,6 +113,19 @@ export const Renderer = ({
               mode: "block",
               type: "h3",
             },
+            {
+              match: "---",
+              mode: "block",
+              type: "hr",
+              format: (editor) => {
+                setNodes(
+                  editor,
+                  { type: "hr" },
+                  { match: (n) => Editor.isBlock(editor, n) }
+                );
+                insertNodes(editor, { type: "p", children: [{ text: "" }] });
+              },
+            },
             { mode: "text", match: "->", format: "→" },
             { mode: "text", match: "<-", format: "←" },
             { mode: "text", match: "=>", format: "⇒" },
@@ -144,6 +163,7 @@ export const Renderer = ({
         h1: Heading,
         h2: Heading,
         h3: Heading,
+        hr: HorizontalRule,
       },
     }
   );
