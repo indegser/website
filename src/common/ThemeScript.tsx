@@ -36,7 +36,7 @@ const createThemeVariables = (...args: Parameters<AdaptiveTheme>) => {
 
 export const themes = {
   light: createThemeVariables(97, 1),
-  dark: createThemeVariables(10, 0.9),
+  dark: createThemeVariables(3, 0.9),
 };
 
 const ThemeScript = () => {

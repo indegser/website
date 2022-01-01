@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
-import Icon from "common/atoms/icons/Icon";
-import { mediaQueries, mq } from "common/theme";
+import { Row } from "common/atoms/Row";
+import { mq } from "common/theme";
 import { useEffect } from "react";
 import { ComponentProps } from "react";
+import { HiOutlineArrowDown } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import { colors } from "style.types";
 
@@ -31,23 +32,28 @@ export const DataLoader = ({
   return (
     <Container>
       <Desktop onClick={onLoadMore}>
-        <Button role="button" tabIndex={0}>
-          <Icon variant="loadMore" width={14} fill={colors.gray300} />
-          <ButtonStrong>{pageSize}개 더</ButtonStrong>
-          {" 불러오기"}
-        </Button>
+        <Row role="button" tabIndex={0}>
+          <Button>
+            <HiOutlineArrowDown />
+            <ButtonStrong>{pageSize}개 더</ButtonStrong>
+            {" 불러오기"}
+          </Button>
+        </Row>
       </Desktop>
       <Mobile ref={ref} />
     </Container>
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  &:last-child {
+    margin-top: 2px;
+    padding-top: 2px;
+    border-top: 1px solid ${colors.gray70};
+  }
+`;
 
 const Desktop = styled.div`
-  border-top: 1px solid ${colors.gray100};
-  padding-top: 4px;
-
   ${mq("sm")} {
     display: none;
   }
@@ -62,25 +68,14 @@ const Mobile = styled.div`
 `;
 
 const Button = styled.div`
-  padding: 4px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: 0.2s background-color ease;
-  color: ${colors.gray500};
-  font-size: 14px;
-  height: 26px;
   display: flex;
   align-items: center;
-
-  ${mediaQueries.hoverable} {
-    &:hover {
-      background: ${colors.gray50};
-    }
-  }
+  font-size: 14px;
+  color: ${colors.gray400};
 `;
 
 const ButtonStrong = styled.strong`
   font-weight: normal;
-  color: ${colors.gray900};
+  color: ${colors.gray800};
   margin: 0 4px 0 4px;
 `;

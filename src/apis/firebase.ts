@@ -21,6 +21,7 @@ import {
   StoryType,
 } from "types/story.types";
 import dayjs from "dayjs";
+import { STORY_DEFAULT_PAGE_SIZE } from "types/const.types";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -70,7 +71,7 @@ export const firebaseApi = {
       { merge: true }
     );
   },
-  getStories: async (cursor = "", limitCount = 20) => {
+  getStories: async (cursor = "", limitCount = STORY_DEFAULT_PAGE_SIZE) => {
     const ref = collection(firestore, newsCollection);
     const queryArgs = [
       orderBy("createdAt", "desc"),
