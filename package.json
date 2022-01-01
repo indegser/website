@@ -26,7 +26,6 @@
     "@udecode/plate-placeholder": "^8.3.0",
     "@udecode/plate-reset-node": "^8.3.0",
     "@udecode/plate-trailing-block": "^8.3.0",
-    "camelcase-keys": "^7.0.0",
     "dayjs": "^1.9.1",
     "firebase": "^9.6.1",
     "framer-motion": "^4.1.17",
@@ -36,13 +35,12 @@
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.22.5",
     "react-intersection-observer": "^8.32.1",
-    "react-select": "^3.1.0",
     "react-syntax-highlighter": "^15.4.3",
     "reakit": "^1.3.11",
     "slate": "^0.71.0",
     "slate-history": "^0.66.0",
     "slate-react": "^0.71.0",
-    "swr": "latest",
+    "swr": "^1.1.2",
     "zustand": "^3.6.8"
   },
   "devDependencies": {

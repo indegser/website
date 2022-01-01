@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import Select from "common/atoms/form/select/Select";
 import styled from "@emotion/styled";
 import { useIndegserContext } from "./Indegser.hooks";
 import { colors } from "style.types";
@@ -27,29 +26,30 @@ const Language = () => {
     { value: "ko", label: "한글" },
   ];
 
-  return (
-    <Select
-      chromeless
-      value={options.find((o) => o.value === lang)}
-      onChange={handleChange}
-      options={options}
-      isSearchable={false}
-      styles={{
-        container: (base) => {
-          return {
-            ...base,
-            alignSelf: "center",
-          };
-        },
-      }}
-      components={{
-        SingleValue: ({ data }) => {
-          const name = data.value === "en" ? "EN" : data.label;
-          return <LangValue>{name}</LangValue>;
-        },
-      }}
-    ></Select>
-  );
+  return null;
+  // return (
+  //   <Select
+  //     chromeless
+  //     value={options.find((o) => o.value === lang)}
+  //     onChange={handleChange}
+  //     options={options}
+  //     isSearchable={false}
+  //     styles={{
+  //       container: (base) => {
+  //         return {
+  //           ...base,
+  //           alignSelf: "center",
+  //         };
+  //       },
+  //     }}
+  //     components={{
+  //       SingleValue: ({ data }) => {
+  //         const name = data.value === "en" ? "EN" : data.label;
+  //         return <LangValue>{name}</LangValue>;
+  //       },
+  //     }}
+  //   ></Select>
+  // );
 };
 
 export default Language;
