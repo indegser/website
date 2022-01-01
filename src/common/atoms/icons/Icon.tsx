@@ -2,22 +2,6 @@ import React, { SVGAttributes } from "react";
 import styled from "@emotion/styled";
 
 export enum IconVariant {
-  logo = "logo",
-  facebook = "facebook-logo",
-  google = "google-logo",
-  github = "github-logo",
-  twitter = "twitter-logo",
-  logoSimple = "logo-simple",
-  link = "link",
-  arrowDown = "arrow-down",
-  footnoteLink = "footnote-link",
-  close = "close",
-  more = "more",
-  lightTheme = "light-theme",
-  darkTheme = "dark-theme",
-  english = "english",
-  korean = "korean",
-  select = "select",
   loadMore = "load-more",
 }
 
