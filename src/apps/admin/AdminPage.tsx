@@ -18,12 +18,12 @@ export const AdminPage = () => {
         <form onSubmit={handleSignIn}>
           <StyledInput
             type="email"
-            placeholder="E-mail"
+            placeholder="이메일"
             {...form.register("email")}
           />
           <StyledInput
             type="password"
-            placeholder="Password"
+            placeholder="비밀번호"
             {...form.register("password")}
           />
           <Button type="submit">관리자 계정 로그인</Button>
@@ -52,6 +52,8 @@ const StyledInput = styled(Input)`
   background: ${colors.gray50};
   border-color: ${colors.gray200};
   color: ${colors.gray900};
+  font-size: 14px;
+  line-height: 1.8;
 
   &:hover,
   &:focus {
@@ -59,7 +61,7 @@ const StyledInput = styled(Input)`
   }
 
   &:focus {
-    box-shadow: 0 0 2px 3px ${colors.blue400};
+    box-shadow: 0 0 2px 2px ${colors.blue200};
   }
 
   & + & {

@@ -4,10 +4,10 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
 import { colors } from "style.types";
-import { mediaQueries, mq } from "common/theme";
-import { motion } from "framer-motion";
+import { mq } from "common/theme";
 import { StoryType } from "types/story.types";
 import "dayjs/locale/ko";
+import { Row } from "common/atoms/Row";
 
 dayjs.extend(calendar);
 dayjs.locale("ko");
@@ -32,12 +32,12 @@ export const DataRow = ({ story }: Props) => {
     <Container>
       <Link href={`/story/${story.id}`} passHref>
         <a>
-          <Item whileTap={{ opacity: 0.4 }} transition={{ duration: 0.2 }}>
+          <Row>
             <Title>{story.title}</Title>
             <Right>
               <Time>{desc}</Time>
             </Right>
-          </Item>
+          </Row>
         </a>
       </Link>
     </Container>
@@ -45,29 +45,7 @@ export const DataRow = ({ story }: Props) => {
 };
 
 const Container = styled.div`
-  padding-top: 6;
-  margin-bottom: 4px;
-`;
-
-const Item = styled(motion.div)`
-  display: flex;
-  padding: 4px;
-  border-radius: 3px;
-  justify-content: space-between;
-  transition: 0.2s background-color ease;
-
-  ${mediaQueries.hoverable} {
-    &:hover {
-      background: ${colors.gray50};
-    }
-  }
-
-  ${mq("sm")} {
-    display: block;
-    padding-bottom: 18px;
-    padding-top: 12px;
-    border-bottom: 1px solid ${colors.gray100};
-  }
+  margin-bottom: 2px;
 `;
 
 const Right = styled.div`
@@ -81,29 +59,6 @@ const Right = styled.div`
   ${mq("sm")} {
     margin-top: 4px;
   }
-`;
-
-const Labels = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: max-content;
-  grid-gap: 4px;
-  align-items: center;
-
-  &:empty {
-    display: none;
-  }
-`;
-
-const Label = styled.div`
-  padding: 2px 0px;
-  border-radius: 3px;
-  font-size: 12px;
-  letter-spacing: 0.2px;
-  line-height: 1;
-  font-weight: 560;
-  color: ${colors.gray700};
-  /* background: ${colors.blue50}; */
 `;
 
 const Title = styled.h2`
