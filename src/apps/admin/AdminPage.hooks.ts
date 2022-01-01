@@ -1,4 +1,4 @@
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
@@ -19,8 +19,17 @@ export const useAdminAuth = () => {
       });
   });
 
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
   return {
     form,
     handleSignIn,
+    handleSignOut,
   };
 };
