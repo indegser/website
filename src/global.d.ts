@@ -12,7 +12,7 @@ import { ReactEditor } from "slate-react";
 
 type CustomElement =
   | {
-      type: "paragraph" | "code" | "bold" | "image";
+      type: "p" | "code" | "bold" | "image";
       children: CustomText[];
     }
   | CustomImage;
