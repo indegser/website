@@ -27,7 +27,7 @@ function debounce<A = unknown, R = void>(
 
 export const useAutoSave = () => {
   const { replace, query } = useRouter();
-  const idRef = useRef(query.id?.toString() ?? null);
+  const idRef = useRef(query.storyId.toString() ?? null);
 
   const [handleAutoSave, teardown] = debounce(async (value: any) => {
     const content = JSON.stringify(value);
@@ -37,7 +37,7 @@ export const useAutoSave = () => {
     if (!id) {
       const { id: refId } = await firebaseApi.createStory({ title, content });
 
-      replace(`/newsroom/${refId}`, null, { shallow: true });
+      replace(`/story/${refId}`, null, { shallow: true });
 
       idRef.current = refId;
     } else {

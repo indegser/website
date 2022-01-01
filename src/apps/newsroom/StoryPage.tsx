@@ -1,6 +1,7 @@
+import { useIsAdmin } from "common/hooks/admin.hooks";
 import { SEO } from "common/SEO";
 import { StoryType } from "types/story.types";
-import { Renderer } from "./Renderer";
+import { NewsroomPage } from "./NewsroomPage";
 import { useStorySEO } from "./StoryPage.hooks";
 
 interface Props {
@@ -8,13 +9,14 @@ interface Props {
 }
 
 export const StoryPage = ({ story }: Props) => {
+  const isAdmin = useIsAdmin();
   const initialValue = JSON.parse(story.content);
   const seo = useStorySEO(story);
 
   return (
     <>
       <SEO title={seo.title} description={seo.description} ogType="article" />
-      <Renderer isReadOnly initialValue={initialValue} />
+      <NewsroomPage isReadOnly={!isAdmin} content={initialValue} />
     </>
   );
 };

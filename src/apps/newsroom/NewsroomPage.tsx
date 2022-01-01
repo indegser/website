@@ -9,9 +9,10 @@ import { Renderer } from "./Renderer";
 
 interface Props {
   content: any;
+  isReadOnly?: boolean;
 }
 
-export const NewsroomPage = ({ content }: Props) => {
+export const NewsroomPage = ({ content, isReadOnly }: Props) => {
   const initialValue = content ?? [
     {
       type: ELEMENT_H1,
@@ -36,6 +37,7 @@ export const NewsroomPage = ({ content }: Props) => {
   return (
     <Renderer
       editor={editor}
+      isReadOnly={isReadOnly}
       initialValue={initialValue}
       onChange={handleChange}
     />
