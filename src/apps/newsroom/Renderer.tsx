@@ -8,6 +8,7 @@ import {
   createExitBreakPlugin,
   createSoftBreakPlugin,
 } from "@udecode/plate-break";
+import { createImagePlugin } from "@udecode/plate-image";
 import {
   createPlugins,
   insertNodes,
@@ -20,6 +21,13 @@ import {
 import { ELEMENT_H1, KEYS_HEADING } from "@udecode/plate-heading";
 import { createKbdPlugin } from "@udecode/plate-kbd";
 import { createLinkPlugin } from "@udecode/plate-link";
+import {
+  createListPlugin,
+  ELEMENT_LI,
+  ELEMENT_UL,
+  toggleList,
+  unwrapList,
+} from "@udecode/plate-list";
 import { createNormalizeTypesPlugin } from "@udecode/plate-normalizers";
 import { createResetNodePlugin } from "@udecode/plate-reset-node";
 import { MarkdownContainer } from "common/atoms/Container";
@@ -29,6 +37,7 @@ import { Editor } from "slate";
 import { colors } from "style.types";
 import { Heading } from "./blocks/Heading";
 import { HorizontalRule } from "./blocks/HorizontalRule";
+import { ListItem } from "./blocks/ListItem";
 
 interface Props {
   initialValue: any[];
@@ -58,6 +67,7 @@ export const Renderer = ({
           rules: [{ path: [0], strictType: ELEMENT_H1 }],
         },
       }),
+      createListPlugin(),
       createLinkPlugin(),
       createKbdPlugin(),
       createExitBreakPlugin({
@@ -130,6 +140,16 @@ export const Renderer = ({
             { mode: "text", match: "<-", format: "←" },
             { mode: "text", match: "=>", format: "⇒" },
             { mode: "text", match: "<=", format: "⇐" },
+            {
+              mode: "block",
+              type: ELEMENT_LI,
+              match: ["* ", "- "],
+              preFormat: (editor) => unwrapList(editor as PlateEditor),
+              format: (editor) =>
+                toggleList(editor as PlateEditor, {
+                  type: ELEMENT_UL,
+                }),
+            },
           ],
         },
       }),
@@ -160,10 +180,17 @@ export const Renderer = ({
             </a>
           );
         },
+        img: (props) => {
+          return <img {...props.attributes} src={props.element.url} />;
+        },
         h1: Heading,
         h2: Heading,
         h3: Heading,
         hr: HorizontalRule,
+        ul: (props) => {
+          return <ul>{props.children}</ul>;
+        },
+        li: ListItem,
       },
     }
   );
@@ -188,6 +215,7 @@ const Container = styled.div`
   font-weight: 420;
   line-height: 1.75;
   color: ${colors.gray800};
+  padding-bottom: 80px;
 
   ${spacingVariables.markdownPadding}: 0px;
 
@@ -242,6 +270,7 @@ const Container = styled.div`
     color: ${colors.gray900};
   }
 
+  ul,
   ol {
     padding-inline-start: 1.5em;
   }

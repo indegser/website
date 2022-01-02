@@ -37,12 +37,12 @@ initializeApp(firebaseConfig);
 
 export const firestore = getFirestore();
 
-const newsCollection = `news-${environment}`;
+const storyCollection = `story@${environment}`;
 
 export const firebaseApi = {
   getStory: async (id: string) => {
     const snapshot = await getDoc(
-      doc(firestore, newsCollection, id).withConverter(storyConverter)
+      doc(firestore, storyCollection, id).withConverter(storyConverter)
     );
 
     if (!snapshot.exists()) {
@@ -55,7 +55,7 @@ export const firebaseApi = {
     } as StoryType;
   },
   createStory: ({ title, content }: { title: string; content: string }) => {
-    return addDoc(collection(firestore, newsCollection), {
+    return addDoc(collection(firestore, storyCollection), {
       title,
       content,
       createdAt: Timestamp.fromDate(new Date()),
@@ -67,7 +67,7 @@ export const firebaseApi = {
     { title, content }: { title: string; content: string }
   ) => {
     return setDoc(
-      doc(firestore, newsCollection, id),
+      doc(firestore, storyCollection, id),
       {
         title,
         content,
@@ -77,7 +77,7 @@ export const firebaseApi = {
     );
   },
   getStories: async (cursor = "", limitCount = STORY_DEFAULT_PAGE_SIZE) => {
-    const ref = collection(firestore, newsCollection);
+    const ref = collection(firestore, storyCollection);
     const queryArgs = [
       orderBy("createdAt", "desc"),
       cursor ? startAfter(Timestamp.fromDate(new Date(cursor))) : null,
