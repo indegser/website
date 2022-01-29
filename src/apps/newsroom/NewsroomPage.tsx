@@ -1,6 +1,3 @@
-import { PlateEditor } from "@udecode/plate-core";
-import { ELEMENT_H1 } from "@udecode/plate-heading";
-
 import { useMemo } from "react";
 import { createEditor } from "slate";
 import { withReact } from "slate-react";
@@ -15,12 +12,12 @@ interface Props {
 export const NewsroomPage = ({ content, isReadOnly }: Props) => {
   const initialValue = content ?? [
     {
-      type: ELEMENT_H1,
+      type: "text",
       children: [{ text: "" }],
     },
   ];
 
-  const editor = useMemo(() => withReact(createEditor()), []) as PlateEditor;
+  const editor = useMemo(() => withReact(createEditor()), []);
 
   const { handleAutoSave } = useAutoSave();
 

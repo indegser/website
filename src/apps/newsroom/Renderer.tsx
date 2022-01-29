@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { PlateEditor, UseSlatePropsOptions } from "@udecode/plate-core";
 import { MarkdownContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
@@ -16,9 +15,9 @@ import { ImageBlock } from "./components/ImageBlock";
 
 interface Props {
   initialValue: any[];
-  editor?: PlateEditor;
+  editor?: any;
   isReadOnly?: boolean;
-  onChange?: UseSlatePropsOptions["onChange"];
+  onChange?: any;
 }
 
 export const Renderer = ({
