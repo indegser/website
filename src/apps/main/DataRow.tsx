@@ -22,7 +22,7 @@ export const DataRow = ({ story }: Props) => {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
       lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
       lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
-      sameElse: "YYYY[년] MMMM[월] D[일] A h:mm", // Everything else ( 17/10/2011 )
+      sameElse: "YYYY[년] MMMM D[일] A h:mm", // Everything else ( 17/10/2011 )
     });
 
     return result;
