@@ -69,7 +69,14 @@ export const Renderer = ({
       }
       case "link": {
         return (
-          <a {...attributes} href={element.url}>
+          <a
+            {...attributes}
+            href={element.url}
+            target="_blank"
+            onClick={(event) => {
+              console.log("CLICKED");
+            }}
+          >
             {children}
           </a>
         );
@@ -103,10 +110,10 @@ export const Renderer = ({
 };
 
 const Container = styled.div`
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 420;
-  line-height: 1.75;
-  color: ${colors.gray800};
+  line-height: 1.55;
+  color: ${colors.gray900};
   padding-bottom: 80px;
 
   ${spacingVariables.markdownPadding}: 0px;
@@ -143,12 +150,9 @@ const Container = styled.div`
 
   a {
     cursor: pointer;
-    color: ${colors.linkPrimary};
-
-    &:hover {
-      text-decoration: underline;
-      color: ${colors.linkPrimaryHover};
-    }
+    color: ${colors.gray600};
+    text-decoration: underline;
+    font-weight: 480;
   }
 
   h1,
