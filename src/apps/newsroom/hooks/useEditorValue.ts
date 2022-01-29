@@ -1,10 +1,19 @@
 import { useState } from "react";
 import { Descendant } from "slate";
+import { CustomElement } from "global";
 
 const initialValue: Descendant[] = [
   {
     type: "paragraph",
     children: [
+      {
+        text: "In addition to nodes that contain editable text, you can also create other types of nodes, like images or videos.",
+      },
+      {
+        type: "link",
+        url: "https://en.wikipedia.org/wiki/Hypertext",
+        children: [{ text: "hyperlink" }],
+      },
       {
         text: "In addition to nodes that contain editable text, you can also create other types of nodes, like images or videos.",
       },
