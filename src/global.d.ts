@@ -12,15 +12,22 @@ import { ReactEditor } from "slate-react";
 
 type CustomElement =
   | {
-      type: "p" | "code" | "bold" | "image";
+      type: "paragraph" | "code" | "bold";
       children: CustomText[];
     }
-  | CustomImage;
+  | CustomImage
+  | CustomYoutube;
 
 type CustomImage = {
   type: "image";
-  src: string;
-  alt: string;
+  url: string;
+  alt?: string;
+  children: CustomText[];
+};
+
+type CustomYoutube = {
+  type: "youtube";
+  url: string;
   children: CustomText[];
 };
 
