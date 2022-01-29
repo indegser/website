@@ -19,9 +19,9 @@ export const ImageBlock = ({ children, attributes, element }: Props) => {
   return (
     <Container {...attributes}>
       {children}
-      <ImageContainer>
+      <ImageContainer contentEditable={false}>
         <Image src={url} alt={url} />
-        <ImageHalo animate={{ opacity: isActive ? 0.2 : 0 }} />
+        <ImageHalo animate={{ opacity: isActive ? 0.35 : 0 }} />
       </ImageContainer>
     </Container>
   );

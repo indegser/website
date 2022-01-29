@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 
 const Page = styled.div`
-  width: 100vw;
+  width: 100%;
 `;
 
 const Main = styled.div``;
