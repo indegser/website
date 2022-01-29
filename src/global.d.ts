@@ -10,13 +10,12 @@ module "react-markdown" {
 import { BaseEditor, Descendant } from "slate";
 import { ReactEditor } from "slate-react";
 
-type CustomElement =
-  | {
-      type: "paragraph" | "code" | "bold";
-      children: CustomText[];
-    }
-  | CustomImage
-  | CustomYoutube;
+type CustomElement = CustomParagraph | CustomImage | CustomYoutube | CustomLink;
+
+type CustomParagraph = {
+  type: "paragraph";
+  children: Array<CustomImage | CustomYoutube | CustomLink | CustomText>;
+};
 
 type CustomImage = {
   type: "image";
@@ -27,6 +26,12 @@ type CustomImage = {
 
 type CustomYoutube = {
   type: "youtube";
+  url: string;
+  children: CustomText[];
+};
+
+type CustomLink = {
+  type: "link";
   url: string;
   children: CustomText[];
 };

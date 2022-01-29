@@ -5,13 +5,21 @@ import { spacingVariables } from "common/variables";
 import { createEditor } from "slate";
 import { colors } from "style.types";
 import { useEditorValue } from "./hooks/useEditorValue";
-import { Editable, RenderElementProps, Slate, withReact } from "slate-react";
-import { useCallback, useMemo } from "react";
+import {
+  Editable,
+  RenderElementProps,
+  RenderLeafProps,
+  Slate,
+  withReact,
+} from "slate-react";
+import { useCallback, useState } from "react";
 import { withHistory } from "slate-history";
 import { useEditorImage } from "./hooks/useEditorImage";
 import { YoutubeBlock } from "./components/YoutubeBlock";
 import { useEditorYoutube } from "./hooks/useEditorYoutube";
 import { ImageBlock } from "./components/ImageBlock";
+import { TextLeaf } from "./components/TextLeaf";
+import { useEditorInline } from "./hooks/useEditorInline";
 
 interface Props {
   initialValue: any[];
@@ -30,11 +38,13 @@ export const Renderer = ({
 
   const { withImage } = useEditorImage();
   const { withYoutube } = useEditorYoutube();
-
-  const slateEditor = useMemo(() => {
+  const { withInline } = useEditorInline();
+  const [slateEditor] = useState(() => {
     const baseEditor = createEditor();
-    return withYoutube(withImage(withHistory(withReact(baseEditor))));
-  }, []);
+    return withInline(
+      withYoutube(withImage(withHistory(withReact(baseEditor))))
+    );
+  });
 
   const renderElement = useCallback((props: RenderElementProps) => {
     const { attributes, children, element } = props;
@@ -57,9 +67,20 @@ export const Renderer = ({
           />
         );
       }
+      case "link": {
+        return (
+          <a {...attributes} href={element.url}>
+            {children}
+          </a>
+        );
+      }
       default:
         return <p {...attributes}>{children}</p>;
     }
+  }, []);
+
+  const renderLeaf = useCallback((props: RenderLeafProps) => {
+    return <TextLeaf {...props} />;
   }, []);
 
   return (
@@ -72,6 +93,7 @@ export const Renderer = ({
         >
           <Editable
             renderElement={renderElement}
+            renderLeaf={renderLeaf}
             placeholder="Enter some text..."
           />
         </Slate>
