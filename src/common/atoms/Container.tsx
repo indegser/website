@@ -1,23 +1,17 @@
-import styled from "@emotion/styled";
-import { mq } from "common/theme";
-import { spacingVariables } from "common/variables";
+import { styled } from "common/stitches.config";
 
-export const PageContainer = styled.div`
-  max-width: 1040px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 48px var(${spacingVariables.pagePadding});
+export const PageContainer = styled("div", {
+  maxWidth: 1040,
+  margin: "0 auto",
+  boxSizing: "border-box",
+  paddingTop: 24,
 
-  ${mq("sm")} {
-    padding-top: 24px;
-  }
-`;
+  "@bp1": {
+    paddingTop: 0,
+  },
+});
 
-export const MarkdownContainer = styled.div`
-  max-width: 640px;
-  margin: 0 auto;
-
-  ${mq("md")} {
-    width: calc(100vw - 2 * var(${spacingVariables.pagePadding}));
-  }
-`;
+export const MarkdownContainer = styled("div", {
+  maxWidth: 640,
+  margin: "0 auto",
+});

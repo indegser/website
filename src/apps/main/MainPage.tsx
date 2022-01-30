@@ -1,5 +1,5 @@
 import { PageContainer } from "common/atoms/Container";
-import { DataRow } from "./DataRow";
+import { StoryRow } from "./StoryRow";
 import { SEO } from "common/SEO";
 import { StoryType } from "types/story.types";
 import useSWRInfinite from "swr/infinite";
@@ -37,7 +37,7 @@ export const MainPage = ({ initialData }: Props) => {
 
   const contents = data
     .flatMap((stories) => stories)
-    .map((story) => <DataRow key={story.id} story={story} />);
+    .map((story) => <StoryRow key={story.id} story={story} />);
 
   const isReachedEnd = data[data.length - 1].length < STORY_DEFAULT_PAGE_SIZE;
 
