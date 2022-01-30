@@ -1,7 +1,7 @@
 import { ReactEditor } from "slate-react";
 import imageExtensions from "image-extensions";
 import isUrl from "is-url";
-import { CustomImage } from "global";
+import { CustomImage } from "types/editor.types";
 import { Transforms } from "slate";
 
 const isImageUrl = (url: string) => {

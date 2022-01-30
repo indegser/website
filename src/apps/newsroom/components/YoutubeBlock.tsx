@@ -1,4 +1,4 @@
-import { CustomYoutube } from "global";
+import { CustomYoutube } from "types/editor.types";
 import { RenderElementProps } from "slate-react";
 import YouTube from "react-youtube";
 import getYoutubeId from "get-youtube-id";

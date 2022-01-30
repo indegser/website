@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { Descendant } from "slate";
-import { CustomElement } from "global";
 
 const initialValue: Descendant[] = [
+  {
+    type: "title",
+    children: [
+      {
+        text: "The Next.js Static Site Generator",
+      },
+    ],
+  },
   {
     type: "paragraph",
     children: [
@@ -52,6 +59,7 @@ const initialValue: Descendant[] = [
   },
 ];
 
-export const useEditorValue = () => {
+export const useEditorValue = (defaultValue: Descendant[]) => {
+  // return useState(defaultValue ?? initialValue);
   return useState(initialValue);
 };
