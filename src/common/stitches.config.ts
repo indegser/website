@@ -14,6 +14,14 @@ export const {
     colors: {
       gray400: "gainsboro",
       gray500: "lightgray",
+      fgDefault: "#24292f",
+      fgMuted: "#57606a",
+      fgSubtle: "#6e7781",
+      canvasInset: "#f6f8fa",
+      canvasSubtle: "#f6f8fa",
+      borderDefault: "#d0d7de",
+      borderMuted: "hsla(210,18%,87%,1)",
+      borderSubtle: "rgba(27,31,36,0.15)",
     },
     fonts: {
       sans: '"Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',

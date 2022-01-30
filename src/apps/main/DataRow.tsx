@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import styled from "@emotion/styled";
 import Link from "next/link";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
@@ -7,6 +6,7 @@ import { mq } from "common/theme";
 import { StoryType } from "types/story.types";
 import "dayjs/locale/ko";
 import { Row } from "common/atoms/Row";
+import { styled, theme } from "common/stitches.config";
 
 dayjs.extend(calendar);
 dayjs.locale("ko");
@@ -43,50 +43,49 @@ export const DataRow = ({ story }: Props) => {
   );
 };
 
-const Container = styled.div`
-  margin-bottom: 2px;
-`;
+const Container = styled("div", {
+  marginBottom: 2,
+});
 
-const Right = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: max-content;
-  grid-gap: 8px;
-  align-items: center;
-  flex: 0 0 auto;
+const Right = styled("div", {
+  display: "grid",
+  gridAutoFlow: "column",
+  gridTemplateColumns: "max-content",
+  gridGap: "8px",
+  alignItems: "center",
+  flex: "0 0 auto",
+  [mq("sm")]: {
+    marginTop: 4,
+  },
+});
 
-  ${mq("sm")} {
-    margin-top: 4px;
-  }
-`;
+const Title = styled("h2", {
+  fontWeight: 580,
+  fontSize: 16,
+  lineHeight: 1.5,
+  paddingBottom: 0,
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  textOverflow: "ellipsis",
+  margin: 0,
+  marginRight: 20,
+  backgroundImage: `linear-gradient(to right, ${theme.colors.borderSubtle} 0%, ${theme.colors.borderSubtle} 100%)`,
+  backgroundRepeat: "repeat-x",
+  backgroundPosition: "0px 100%",
+  backgroundSize: "100% 1px",
 
-const Title = styled.h2`
-  font-weight: 580;
-  font-size: 16px;
-  line-height: 1.5;
-  padding-bottom: 0px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin: 0;
-  margin-right: 20px;
-  background-image: linear-gradient(to right, #fefefe 0%, #fefefe 100%);
-  background-repeat: repeat-x;
-  background-position: 0px 100%;
-  background-size: 100% 1px;
+  [mq("sm")]: {
+    fontSize: 17,
+    background: "none !important",
+    overflow: "auto",
+    whiteSpace: "pre-wrap",
+    textOverflow: "unset",
+  },
+});
 
-  ${mq("sm")} {
-    font-size: 17px;
-    background: none !important;
-    overflow: auto;
-    white-space: pre-wrap;
-    text-overflow: unset;
-  }
-`;
-
-const Time = styled.div`
-  font-size: 12px;
-  font-weight: 400;
-  color: #ddd;
-  line-height: 1.5;
-`;
+const Time = styled("div", {
+  fontSize: 12,
+  fontWeight: 400,
+  color: theme.colors.fgMuted,
+  lineHeight: 1,
+});
