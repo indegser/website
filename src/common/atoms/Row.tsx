@@ -31,8 +31,7 @@ const Container = styled(motion.div, {
   },
 
   [mq("sm")]: {
+    padding: "4px 16px",
     display: "block",
-    paddingBottom: 18,
-    paddingTop: 12,
   },
 });

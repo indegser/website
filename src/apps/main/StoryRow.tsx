@@ -15,7 +15,7 @@ interface Props {
   story: StoryType;
 }
 
-export const DataRow = ({ story }: Props) => {
+export const StoryRow = ({ story }: Props) => {
   const desc = useMemo(() => {
     const result = dayjs(dayjs(story.createdAt)).calendar(null, {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
@@ -44,7 +44,11 @@ export const DataRow = ({ story }: Props) => {
 };
 
 const Container = styled("div", {
-  marginBottom: 2,
+  marginBottom: 16,
+
+  "@bp1": {
+    marginBottom: 2,
+  },
 });
 
 const Right = styled("div", {
@@ -54,6 +58,7 @@ const Right = styled("div", {
   gridGap: "8px",
   alignItems: "center",
   flex: "0 0 auto",
+
   [mq("sm")]: {
     marginTop: 4,
   },
@@ -62,7 +67,7 @@ const Right = styled("div", {
 const Title = styled("h2", {
   fontWeight: 580,
   fontSize: 16,
-  lineHeight: 1.5,
+  lineHeight: 1.38,
   paddingBottom: 0,
   overflow: "hidden",
   whiteSpace: "nowrap",
@@ -86,6 +91,6 @@ const Title = styled("h2", {
 const Time = styled("div", {
   fontSize: 12,
   fontWeight: 400,
-  color: theme.colors.fgMuted,
+  color: "$fgMuted",
   lineHeight: 1,
 });

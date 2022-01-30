@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled, theme } from "common/stitches.config";
 import { RenderElementProps } from "slate-react";
 import { CustomHeading } from "types/editor.types";
 
@@ -16,11 +16,13 @@ export const HeadingBlock = ({ attributes, element, children }: Props) => {
   );
 };
 
-const Container = styled.div``;
+const Container = styled("div", {});
 
-const Heading = styled.h1`
-  font-size: 2rem;
-  line-height: 1.19;
-  letter-spacing: -0.5px;
-  font-weight: 700;
-`;
+const Heading = styled("h1", {
+  borderBottom: `1px solid ${theme.colors.borderMuted}`,
+  paddingBottom: 6,
+  fontSize: "1.68rem",
+  fontWeight: 600,
+  marginTop: "3rem",
+  marginBottom: "2rem",
+});
