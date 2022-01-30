@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { CustomImage } from "types/editor.types";
 import { RenderElementProps, useFocused, useSelected } from "slate-react";
-import { colors } from "types/style.types";
+import { theme } from "common/stitches.config";
 
 interface Props extends RenderElementProps {
   element: CustomImage;
@@ -42,7 +42,7 @@ const ImageHalo = styled(motion.div)`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${colors.blue500};
+  background-color: ${theme.colors.accentSubtle.computedValue};
 `;
 
 const Image = styled.img`

@@ -1,13 +1,11 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { colors } from "types/style.types";
 import { useTrans } from "./Indegser.hooks";
 import Language from "./Language";
 
 const Navigation = styled.div`
   height: 40px;
-  border-bottom: 1px solid ${colors.bgDivider};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,17 +19,14 @@ const Title = styled.div`
 
 const NavLink = styled.a`
   font-size: 13px;
-  color: ${colors.textBlack};
   padding: 4px 2px;
   cursor: default;
 
   &:hover {
-    color: ${colors.linkPrimary};
   }
 
   &[data-current="true"] {
     pointer-events: none;
-    color: ${colors.textLightGrey};
   }
 `;
 

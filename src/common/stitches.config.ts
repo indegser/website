@@ -22,6 +22,9 @@ export const {
       borderDefault: "#d0d7de",
       borderMuted: "hsla(210,18%,87%,1)",
       borderSubtle: "rgba(27,31,36,0.15)",
+      accentFg: "#0969da",
+      accentMuted: "rgba(84,174,255,0.4)",
+      accentSubtle: "#ddf4ff",
     },
     fonts: {
       sans: '"Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',

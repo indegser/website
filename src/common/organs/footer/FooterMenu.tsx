@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { colors } from "types/style.types";
 
 const Links = styled.div`
   display: grid;
@@ -14,7 +13,6 @@ const LinkText = styled.a`
   font-size: 12px;
   padding: 8px 0;
   cursor: pointer;
-  color: ${colors.textBlack};
   display: flex;
   align-items: center;
 
@@ -27,7 +25,6 @@ const MidDot = styled.div`
   width: 2px;
   height: 2px;
   border-radius: 999rem;
-  background: ${colors.textLiDot};
 `;
 
 const FooterMenu = () => {

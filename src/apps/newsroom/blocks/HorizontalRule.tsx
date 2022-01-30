@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "types/style.types";
+import { theme } from "common/stitches.config";
 
 export const HorizontalRule = ({ children, attributes }) => {
   return (
@@ -11,7 +11,7 @@ export const HorizontalRule = ({ children, attributes }) => {
 };
 
 const Container = styled.hr`
-  background-color: ${colors.gray100};
+  background-color: ${theme.colors.fgSubtle.computedValue};
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   margin-top: 1.5rem;

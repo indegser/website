@@ -3,7 +3,6 @@ import { MarkdownContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
 import { Descendant } from "slate";
-import { colors } from "types/style.types";
 import { useEditorValue } from "./hooks/useEditorValue";
 import {
   Editable,
@@ -111,7 +110,6 @@ const Container = styled.div`
   font-size: 17px;
   font-weight: 420;
   line-height: 1.55;
-  color: ${colors.gray900};
   padding-bottom: 80px;
 
   ${spacingVariables.markdownPadding}: 0px;
@@ -130,16 +128,6 @@ const Container = styled.div`
     font-weight: 700;
   }
 
-  blockquote {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 1em;
-    border-left: 4px solid ${colors.gray700};
-    box-sizing: border-box;
-    margin: 2em auto;
-    font-weight: 500;
-  }
-
   sup {
     line-height: 1;
     padding: 0 2px;
@@ -153,7 +141,6 @@ const Container = styled.div`
   h5 {
     margin-top: 3rem;
     line-height: 1.24;
-    color: ${colors.gray900};
   }
 
   ul,
@@ -165,7 +152,6 @@ const Container = styled.div`
   pre {
     padding: 4px 6px;
     border-radius: 0.2em;
-    background: ${colors.gray50};
     font-size: 0.9em;
     margin-right: 4px;
   }

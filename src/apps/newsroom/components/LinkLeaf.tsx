@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
+import { theme } from "common/stitches.config";
 import { RenderElementProps } from "slate-react";
-import { colors } from "types/style.types";
 import { CustomLink } from "types/editor.types";
 
 interface Props extends RenderElementProps {
@@ -21,6 +21,6 @@ const MotionContainer = styled.span`
 
 const MotionLink = styled.a`
   cursor: pointer;
-  color: ${colors.blue500};
+  color: ${theme.colors.accentFg.computedValue};
   text-decoration: underline;
 `;
