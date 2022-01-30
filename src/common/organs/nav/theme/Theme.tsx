@@ -15,13 +15,10 @@ const ThemeButton = styled.div`
   padding: 4px;
   border-radius: 4px;
   transition: 0.1s background ease;
-  color: ${colors.gray500};
   cursor: pointer;
 
   ${mediaQueries.hoverable} {
     &:hover {
-      color: ${colors.gray600};
-      background-color: ${colors.bgIconHover};
     }
   }
 `;

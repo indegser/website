@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
-import { colors } from "types/style.types";
 import { mq } from "common/theme";
 import { StoryType } from "types/story.types";
 import "dayjs/locale/ko";
@@ -71,11 +70,7 @@ const Title = styled.h2`
   text-overflow: ellipsis;
   margin: 0;
   margin-right: 20px;
-  background-image: linear-gradient(
-    to right,
-    ${colors.gray100} 0%,
-    ${colors.gray100} 100%
-  );
+  background-image: linear-gradient(to right, #fefefe 0%, #fefefe 100%);
   background-repeat: repeat-x;
   background-position: 0px 100%;
   background-size: 100% 1px;
@@ -92,6 +87,6 @@ const Title = styled.h2`
 const Time = styled.div`
   font-size: 12px;
   font-weight: 400;
-  color: ${colors.gray500};
+  color: #ddd;
   line-height: 1.5;
 `;
