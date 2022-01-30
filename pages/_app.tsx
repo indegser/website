@@ -3,8 +3,6 @@ import { Router } from "next/router";
 import styled from "@emotion/styled";
 
 import { Analytics } from "apis/analytics";
-import GlobalStyle from "common/GlobalStyle";
-import ThemeScript from "common/ThemeScript";
 import Nav from "common/organs/nav/Nav";
 import { AppProps } from "next/app";
 
@@ -12,6 +10,7 @@ Router.events.on("routeChangeComplete", Analytics.pageView);
 import "apis/firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useAdminStore } from "common/hooks/admin.hooks";
+import { globalStyles } from "common/globalStyles";
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -20,11 +19,11 @@ onAuthStateChanged(auth, (user) => {
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  globalStyles();
+
   return (
     <>
-      <GlobalStyle />
       <Head>
-        <ThemeScript />
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

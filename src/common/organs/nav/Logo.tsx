@@ -4,7 +4,6 @@ import { colors } from "types/style.types";
 const Container = styled.div`
   display: flex;
   align-items: center;
-  color: ${colors.gray900};
 
   svg {
     display: block;

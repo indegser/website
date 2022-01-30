@@ -16,6 +16,7 @@
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
+    "@stitches/react": "^1.2.6",
     "dayjs": "^1.9.1",
     "firebase": "^9.6.1",
     "framer-motion": "^4.1.17",

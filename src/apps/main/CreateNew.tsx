@@ -23,11 +23,11 @@ export const CreateNew = () => {
 const Container = styled.div`
   margin-top: 2px;
   padding-top: 2px;
-  border-top: 1px solid ${colors.gray70};
+  border-top: 1px solid #eee;
 `;
 
 const Button = styled.div`
-  color: ${colors.gray400};
+  color: #000;
   display: grid;
   grid-auto-flow: column;
   gap: 4px;

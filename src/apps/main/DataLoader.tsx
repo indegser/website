@@ -49,7 +49,7 @@ const Container = styled.div`
   &:last-child {
     margin-top: 2px;
     padding-top: 2px;
-    border-top: 1px solid ${colors.gray70};
+    border-top: 1px solid #eee;
   }
 `;
 
@@ -71,11 +71,11 @@ const Button = styled.div`
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: ${colors.gray400};
+  color: #ddd;
 `;
 
 const ButtonStrong = styled.strong`
   font-weight: normal;
-  color: ${colors.gray800};
+  color: #222;
   margin: 0 4px 0 4px;
 `;

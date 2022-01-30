@@ -28,7 +28,6 @@ const Container = styled(motion.div)`
 
   ${mediaQueries.hoverable} {
     &:hover {
-      background: ${colors.gray60};
     }
   }
 
@@ -36,6 +35,5 @@ const Container = styled(motion.div)`
     display: block;
     padding-bottom: 18px;
     padding-top: 12px;
-    border-bottom: 1px solid ${colors.gray100};
   }
 `;
