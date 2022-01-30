@@ -17,6 +17,8 @@ import { ImageBlock } from "./components/ImageBlock";
 import { TextLeaf } from "./components/TextLeaf";
 import { useEditor } from "./hooks/useEditor";
 import { TitleBlock } from "./components/TitleBlock";
+import { HeadingBlock } from "./components/HeadingBlock";
+import { LinkLeaf } from "./components/LinkLeaf";
 
 interface Props {
   initialValue: any[];
@@ -59,20 +61,22 @@ export const Renderer = ({
           />
         );
       }
-      case "link": {
-        return (
-          <a
-            {...attributes}
-            href={element.url}
-            target="_blank"
-            onClick={(event) => {
-              console.log("CLICKED");
-            }}
-          >
-            {children}
-          </a>
-        );
+      case "link":
+      case "a": {
+        return <LinkLeaf {...props} element={element} />;
       }
+      case "heading": {
+        return <HeadingBlock {...props} element={element} />;
+      }
+
+      case "ul": {
+        return <ul {...attributes} children={children} />;
+      }
+
+      case "li": {
+        return <li {...attributes} children={children} />;
+      }
+
       default:
         return <p {...attributes}>{children}</p>;
     }
@@ -142,13 +146,6 @@ const Container = styled.div`
     font-size: 80%;
   }
 
-  a {
-    cursor: pointer;
-    color: ${colors.gray600};
-    text-decoration: underline;
-    font-weight: 480;
-  }
-
   h1,
   h2,
   h3,
@@ -157,13 +154,6 @@ const Container = styled.div`
     margin-top: 3rem;
     line-height: 1.24;
     color: ${colors.gray900};
-  }
-
-  h1 {
-    font-size: 3.4rem;
-    line-height: 1.19;
-    letter-spacing: -0.5px;
-    font-weight: 700;
   }
 
   ul,

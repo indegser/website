@@ -7,10 +7,11 @@ export type CustomElement =
   | CustomImage
   | CustomYoutube
   | CustomLink
-  | CustomTitle;
+  | CustomTitle
+  | CustomHeading;
 
 export type CustomParagraph = {
-  type: "paragraph";
+  type: "paragraph" | "p" | "ul" | "li";
   children: Array<CustomImage | CustomYoutube | CustomLink | CustomText>;
 };
 
@@ -28,13 +29,19 @@ export type CustomYoutube = {
 };
 
 export type CustomLink = {
-  type: "link";
+  type: "link" | "a";
   url: string;
   children: CustomText[];
 };
 
 export type CustomTitle = {
   type: "title";
+  children: CustomText[];
+};
+
+export type CustomHeading = {
+  type: "heading";
+  level: 1 | 2 | 3;
   children: CustomText[];
 };
 
