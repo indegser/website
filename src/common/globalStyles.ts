@@ -22,6 +22,6 @@ export const globalStyles = globalCss({
     "-moz-osx-font-smoothing": "grayscale",
     fontKerning: "normal",
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
-    color: theme.colors.gray500,
+    color: theme.colors.fgDefault,
   },
 });
