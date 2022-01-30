@@ -1,9 +1,8 @@
 import Head from "next/head";
 import { Router } from "next/router";
-import styled from "@emotion/styled";
 
 import { Analytics } from "apis/analytics";
-import Nav from "common/organs/nav/Nav";
+import { Nav } from "common/organs/nav/Nav";
 import { AppProps } from "next/app";
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
@@ -11,6 +10,7 @@ import "apis/firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useAdminStore } from "common/hooks/admin.hooks";
 import { globalStyles } from "common/globalStyles";
+import { styled } from "common/stitches.config";
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -38,8 +38,8 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 }
 
-const Page = styled.div`
-  width: 100%;
-`;
+const Page = styled("div", {
+  width: "100%",
+});
 
-const Main = styled.div``;
+const Main = styled("div", {});
