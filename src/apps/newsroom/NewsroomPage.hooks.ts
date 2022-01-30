@@ -1,7 +1,7 @@
 import { firebaseApi } from "apis/firebase";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
-import { Node } from "slate";
+import { Descendant, Node } from "slate";
 
 function debounce<A = unknown, R = void>(
   fn: (args: A) => R,
@@ -29,9 +29,17 @@ export const useAutoSave = () => {
   const { replace, query } = useRouter();
   const idRef = useRef(query.storyId?.toString() ?? null);
 
-  const [handleAutoSave, teardown] = debounce(async (value: any) => {
+  const [handleAutoSave, teardown] = debounce(async (value: Descendant[]) => {
     const content = JSON.stringify(value);
-    const title = Node.string(value[0]);
+    const titleBlock =
+      value.find((node) => {
+        if ("type" in node) {
+          return node.type === "title";
+        }
+        return false;
+      }) ?? value[0];
+
+    const title = Node.string(titleBlock);
     const id = idRef.current;
 
     if (!id) {
