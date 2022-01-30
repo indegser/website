@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import { Row } from "common/atoms/Row";
+import { theme } from "common/stitches.config";
 import Link from "next/link";
 import { HiOutlinePlus } from "react-icons/hi";
-import { colors } from "types/style.types";
+
 export const CreateNew = () => {
   return (
     <Container>
@@ -23,11 +24,11 @@ export const CreateNew = () => {
 const Container = styled.div`
   margin-top: 2px;
   padding-top: 2px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid ${theme.colors.borderMuted.computedValue};
 `;
 
 const Button = styled.div`
-  color: #000;
+  color: ${theme.colors.fgSubtle.computedValue};
   display: grid;
   grid-auto-flow: column;
   gap: 4px;

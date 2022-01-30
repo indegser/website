@@ -1,20 +1,18 @@
-import styled from "@emotion/styled";
-import { colors } from "types/style.types";
+import { styled } from "common/stitches.config";
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
+const Container = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  ["& svg"]: {
+    display: "block",
+  },
+});
 
-  svg {
-    display: block;
-  }
-`;
+const Icon = styled("div", {
+  marginRight: 8,
+});
 
-const Icon = styled.div`
-  margin-right: 8px;
-`;
-
-const Logo = () => {
+export const Logo = () => {
   const icon = (
     <Icon>
       <svg height={18} fill="currentColor" viewBox="0 0 142 165">
@@ -34,5 +32,3 @@ const Logo = () => {
 
   return <Container>{icon}</Container>;
 };
-
-export default Logo;
