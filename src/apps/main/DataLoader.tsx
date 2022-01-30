@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { ComponentProps } from "react";
 import { HiOutlineArrowDown } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 interface Props extends ComponentProps<typeof Container> {
   pageSize: number;

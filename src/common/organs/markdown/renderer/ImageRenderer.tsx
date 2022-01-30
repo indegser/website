@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { spacingVariables } from "common/variables";
 import { mq } from "common/theme";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { HTMLProps } from "react";
 
 interface Props extends HTMLProps<HTMLImageElement> {}

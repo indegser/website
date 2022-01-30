@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { mediaQueries } from "common/theme";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { useTheme } from "./Theme.hooks";
 
 const Box = styled.div`
@@ -15,12 +15,12 @@ const ThemeButton = styled.div`
   padding: 4px;
   border-radius: 4px;
   transition: 0.1s background ease;
-  color: ${colors.textGrey};
+  color: ${colors.gray500};
   cursor: pointer;
 
   ${mediaQueries.hoverable} {
     &:hover {
-      color: ${colors.textBlack};
+      color: ${colors.gray600};
       background-color: ${colors.bgIconHover};
     }
   }

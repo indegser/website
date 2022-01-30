@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 const Links = styled.div`
   display: grid;

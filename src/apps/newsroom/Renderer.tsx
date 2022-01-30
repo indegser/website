@@ -3,7 +3,7 @@ import { MarkdownContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
 import { Descendant } from "slate";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { useEditorValue } from "./hooks/useEditorValue";
 import {
   Editable,

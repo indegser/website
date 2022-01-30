@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ThemeType } from "style.types";
+import { ThemeType } from "types/style.types";
 
 export const useTheme = () => {
   const [theme, setTheme] = useState<ThemeType>(undefined);

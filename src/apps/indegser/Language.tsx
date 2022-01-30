@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import { useIndegserContext } from "./Indegser.hooks";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 const LangValue = styled.span`
   color: ${colors.textGrey};

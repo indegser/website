@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { mq } from "common/theme";
 import { StoryType } from "types/story.types";
 import "dayjs/locale/ko";

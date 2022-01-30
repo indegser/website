@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { useTrans } from "./Indegser.hooks";
 import Language from "./Language";
 

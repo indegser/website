@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Row } from "common/atoms/Row";
 import Link from "next/link";
 import { HiOutlinePlus } from "react-icons/hi";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 export const CreateNew = () => {
   return (
     <Container>

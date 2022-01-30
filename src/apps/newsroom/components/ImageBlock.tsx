@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { CustomImage } from "types/editor.types";
 import { RenderElementProps, useFocused, useSelected } from "slate-react";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 interface Props extends RenderElementProps {
   element: CustomImage;

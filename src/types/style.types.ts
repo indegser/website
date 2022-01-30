@@ -30,26 +30,10 @@ const createSchemePalette = (
 };
 
 const scheme = {
-  // gray: "#6B7280",
-  gray: "#71717A",
-  // trueGray: "#737373",
+  gray: "#2a2c2f",
   red: "#EF4444",
-  // orange: "#F97316",
-  // amber: "#F59E0B",
-  // yellow: "#EAB308",
-  // lime: "#84CC16",
   green: "#22C55E",
-  // emerald: "#10B981",
-  // teal: "#14B8A6",
-  // cyan: "#06B6D4",
-  // sky: "#0EA5E9",
-  blue: "#3B82F6",
-  // indigo: "#6366F1",
-  // violet: "#8B5CF6",
-  // purple: "#A855F7",
-  // fuchsia: "#D946EF",
-  // pink: "#EC4899",
-  // rose: "#F43F5E",
+  blue: "#0088ff",
 } as const;
 
 export const palette = {
@@ -61,21 +45,6 @@ export const palette = {
     res[schemeName] = data;
     return res;
   }, {} as Record<keyof typeof scheme, ReturnType<typeof createSchemePalette>>),
-  text: {
-    colorKeys: ["#2a2c2f"],
-    ratios: {
-      textMarkdownBlack: 12,
-      textMarqueeTitle: 20,
-      textMarqueeLabel: 9,
-      textFigcaption: 9,
-      textBlack: 12,
-      textGrey: 8,
-      textResume: 10,
-      textLiDot: 3,
-      textLightGrey: 4.6,
-      textTitle: 20,
-    },
-  },
   bg: {
     colorKeys: ["#2a2c2f"],
     ratios: {
@@ -83,13 +52,6 @@ export const palette = {
       bgCode: 1.02,
       bgDivider: 1.3,
       bgIconHover: 1.12,
-    },
-  },
-  primary: {
-    colorKeys: ["#0088ff"],
-    ratios: {
-      linkPrimary: 4.6,
-      linkPrimaryHover: 6,
     },
   },
 } as const;

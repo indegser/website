@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { mediaQueries, mq } from "common/theme";
 import { motion } from "framer-motion";
 import { ComponentProps, PropsWithChildren } from "react";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 interface Props extends ComponentProps<typeof Container> {}
 

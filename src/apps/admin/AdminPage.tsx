@@ -3,7 +3,7 @@ import { Button } from "reakit/Button";
 import styled from "@emotion/styled";
 import { useAdminAuth } from "./AdminPage.hooks";
 import { useIsAdmin } from "common/hooks/admin.hooks";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 export const AdminPage = () => {
   const isAdmin = useIsAdmin();
