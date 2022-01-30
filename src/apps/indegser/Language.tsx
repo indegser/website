@@ -1,12 +1,6 @@
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import { useIndegserContext } from "./Indegser.hooks";
-import { colors } from "types/style.types";
-
-const LangValue = styled.span`
-  color: ${colors.textGrey};
-  font-size: 13px;
-`;
 
 const Language = () => {
   const router = useRouter();

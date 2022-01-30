@@ -3,7 +3,6 @@ import { Button } from "reakit/Button";
 import styled from "@emotion/styled";
 import { useAdminAuth } from "./AdminPage.hooks";
 import { useIsAdmin } from "common/hooks/admin.hooks";
-import { colors } from "types/style.types";
 
 export const AdminPage = () => {
   const isAdmin = useIsAdmin();
@@ -49,19 +48,14 @@ const FormBox = styled.div``;
 
 const StyledInput = styled(Input)`
   width: 240px;
-  background: ${colors.gray50};
-  border-color: ${colors.gray200};
-  color: ${colors.gray900};
   font-size: 14px;
   line-height: 1.8;
 
   &:hover,
   &:focus {
-    background: ${colors.gray50} !important;
   }
 
   &:focus {
-    box-shadow: 0 0 2px 2px ${colors.blue200};
   }
 
   & + & {

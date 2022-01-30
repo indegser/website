@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { spacingVariables } from "common/variables";
 import { mq } from "common/theme";
-import { colors } from "types/style.types";
 import { HTMLProps } from "react";
 
 interface Props extends HTMLProps<HTMLImageElement> {}
@@ -30,7 +29,6 @@ const Image = styled.figure`
     line-height: 1.65;
     font-weight: 400;
     padding: 0 calc(var(--padding-x) * -1);
-    color: ${colors.gray500};
 
     &:empty {
       display: none;

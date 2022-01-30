@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { colors } from "types/style.types";
 import { PageContainer } from "common/atoms/Container";
 import FooterMenu from "./FooterMenu";
 import { mq } from "common/theme";
@@ -24,7 +23,6 @@ const Layout = styled.div`
 const Name = styled.div`
   font-weight: 500;
   font-size: 12px;
-  color: ${colors.textBlack};
 `;
 
 const Footer = () => {
