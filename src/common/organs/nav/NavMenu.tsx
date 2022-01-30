@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import Link from "next/link";
 import { useRouter } from "next/router";
 

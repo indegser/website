@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 const Break = styled.div`
   margin: 36px 0;

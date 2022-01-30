@@ -1,7 +1,7 @@
 import { Global, css } from "@emotion/react";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { themes } from "./ThemeScript";
 
 const styles = css`

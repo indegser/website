@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { PrismLight as Highlighter } from "react-syntax-highlighter";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 
 Highlighter.registerLanguage("tsx", tsx);
 

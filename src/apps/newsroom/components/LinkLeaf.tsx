@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { RenderElementProps } from "slate-react";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { CustomLink } from "types/editor.types";
 
 interface Props extends RenderElementProps {

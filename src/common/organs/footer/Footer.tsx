@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import { PageContainer } from "common/atoms/Container";
 import FooterMenu from "./FooterMenu";
 import { mq } from "common/theme";

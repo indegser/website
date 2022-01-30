@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Theme from "./theme/Theme";
 import Logo from "./Logo";
-import { colors } from "style.types";
+import { colors } from "types/style.types";
 import Link from "next/link";
 
 const Layout = styled.nav`
