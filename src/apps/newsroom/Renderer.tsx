@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { MarkdownContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
-import { createEditor } from "slate";
+import { Descendant } from "slate";
 import { colors } from "style.types";
 import { useEditorValue } from "./hooks/useEditorValue";
 import {
@@ -10,16 +10,13 @@ import {
   RenderElementProps,
   RenderLeafProps,
   Slate,
-  withReact,
 } from "slate-react";
-import { useCallback, useState } from "react";
-import { withHistory } from "slate-history";
-import { useEditorImage } from "./hooks/useEditorImage";
+import { useCallback } from "react";
 import { YoutubeBlock } from "./components/YoutubeBlock";
-import { useEditorYoutube } from "./hooks/useEditorYoutube";
 import { ImageBlock } from "./components/ImageBlock";
 import { TextLeaf } from "./components/TextLeaf";
-import { useEditorInline } from "./hooks/useEditorInline";
+import { useEditor } from "./hooks/useEditor";
+import { TitleBlock } from "./components/TitleBlock";
 
 interface Props {
   initialValue: any[];
@@ -34,21 +31,16 @@ export const Renderer = ({
   isReadOnly = false,
   onChange,
 }: Props) => {
-  const [value, setValue] = useEditorValue();
+  const [value, setValue] = useEditorValue(initialValue);
 
-  const { withImage } = useEditorImage();
-  const { withYoutube } = useEditorYoutube();
-  const { withInline } = useEditorInline();
-  const [slateEditor] = useState(() => {
-    const baseEditor = createEditor();
-    return withInline(
-      withYoutube(withImage(withHistory(withReact(baseEditor))))
-    );
-  });
+  const slateEditor = useEditor(editor);
 
   const renderElement = useCallback((props: RenderElementProps) => {
     const { attributes, children, element } = props;
     switch (element.type) {
+      case "title": {
+        return <TitleBlock {...props} element={element} />;
+      }
       case "image": {
         return (
           <ImageBlock
@@ -90,15 +82,17 @@ export const Renderer = ({
     return <TextLeaf {...props} />;
   }, []);
 
+  const handleChange = useCallback((value: Descendant[]) => {
+    setValue(value);
+    onChange(value);
+  }, []);
+
   return (
     <MarkdownContainer>
       <Container>
-        <Slate
-          editor={slateEditor}
-          value={value}
-          onChange={(value) => setValue(value)}
-        >
+        <Slate editor={slateEditor} value={value} onChange={handleChange}>
           <Editable
+            readOnly={isReadOnly}
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             placeholder="Enter some text..."

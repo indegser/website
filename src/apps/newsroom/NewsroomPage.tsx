@@ -1,6 +1,5 @@
-import { useMemo } from "react";
-import { createEditor } from "slate";
-import { withReact } from "slate-react";
+import { Descendant } from "slate";
+import { useEditor } from "./hooks/useEditor";
 import { useAutoSave } from "./NewsroomPage.hooks";
 import { Renderer } from "./Renderer";
 
@@ -17,11 +16,11 @@ export const NewsroomPage = ({ content, isReadOnly }: Props) => {
     },
   ];
 
-  const editor = useMemo(() => withReact(createEditor()), []);
+  const editor = useEditor();
 
   const { handleAutoSave } = useAutoSave();
 
-  const handleChange = (value) => {
+  const handleChange = (value: Descendant[]) => {
     const isAstChange = editor.operations.some(
       (op) => "set_selection" !== op.type
     );

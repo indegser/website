@@ -1,6 +1,6 @@
 import { ReactEditor } from "slate-react";
 import isUrl from "is-url";
-import { CustomLink } from "global";
+import { CustomLink } from "types/editor.types";
 import { Editor, Range, Transforms, Element } from "slate";
 
 const isLinkActive = (editor: ReactEditor) => {
@@ -47,7 +47,6 @@ export const useEditorInline = () => {
       ["link", "button"].includes(element.type) || isInline(element);
 
     editor.insertText = (text) => {
-      console.log("Text", text, "!!!");
       if (text && isUrl(text)) {
         wrapLink(editor, text);
       } else {
@@ -57,11 +56,10 @@ export const useEditorInline = () => {
 
     editor.insertData = (data) => {
       const text = data.getData("text/plain");
-      const parsed = new DOMParser().parseFromString(
-        data.getData("text/html"),
-        "text/html"
-      );
-      console.log(parsed, "PARSED");
+      // const parsed = new DOMParser().parseFromString(
+      //   data.getData("text/html"),
+      //   "text/html"
+      // );
       if (text && isUrl(text)) {
         wrapLink(editor, text);
       } else {

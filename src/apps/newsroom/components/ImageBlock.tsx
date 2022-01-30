@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { CustomImage } from "global";
+import { CustomImage } from "types/editor.types";
 import { RenderElementProps, useFocused, useSelected } from "slate-react";
 import { colors } from "style.types";
 
