@@ -1,6 +1,7 @@
 import { ReactEditor } from "slate-react";
 import imageExtensions from "image-extensions";
 import isUrl from "is-url";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { CustomImage } from "types/editor.types";
 import { Transforms } from "slate";
 
@@ -25,22 +26,23 @@ export const useEditorImage = () => {
       return element.type === "image" ? true : isVoid(element);
     };
 
-    editor.insertData = (data) => {
+    editor.insertData = async (data) => {
       const text = data.getData("text/plain");
       const { files } = data;
 
       if (files && files.length > 0) {
         for (const file of files) {
-          const reader = new FileReader();
           const [mime] = file.type.split("/");
 
           if (mime === "image") {
-            reader.addEventListener("load", () => {
-              const url = reader.result;
-              insertImage(editor, url.toString());
-            });
+            const storage = getStorage();
+            const uploadRef = ref(storage, Date.now().toString());
 
-            reader.readAsDataURL(file);
+            uploadBytes(uploadRef, file).then((snapshot) => {
+              getDownloadURL(uploadRef).then((url) => {
+                insertImage(editor, url);
+              });
+            });
           }
         }
       } else if (isImageUrl(text)) {
