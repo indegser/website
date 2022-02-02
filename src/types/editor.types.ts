@@ -45,7 +45,14 @@ export type CustomHeading = {
   children: CustomText[];
 };
 
-export type CustomText = { text: string; bold?: boolean };
+export type CustomText = {
+  text: string;
+  bold?: boolean;
+  italic?: boolean;
+  code?: boolean;
+  underline?: boolean;
+  highlight?: boolean;
+};
 
 declare module "slate" {
   interface CustomTypes {
