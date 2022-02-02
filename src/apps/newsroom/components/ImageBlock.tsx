@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { CustomImage } from "types/editor.types";
-import { RenderElementProps, useFocused, useSelected } from "slate-react";
+import { RenderElementProps } from "slate-react";
 import { theme } from "common/stitches.config";
 
 interface Props extends RenderElementProps {
@@ -11,24 +11,18 @@ interface Props extends RenderElementProps {
 export const ImageBlock = ({ children, attributes, element }: Props) => {
   const { url } = element;
 
-  const selected = useSelected();
-  const focused = useFocused();
-
-  const isActive = selected && focused;
-
   return (
     <Container {...attributes}>
       {children}
       <ImageContainer contentEditable={false}>
         <Image src={url} alt={url} />
-        <ImageHalo animate={{ opacity: isActive ? 0.35 : 0 }} />
       </ImageContainer>
     </Container>
   );
 };
 
 const Container = styled.div`
-  margin: 3rem 0;
+  margin: 0.25rem 0;
 `;
 
 const ImageContainer = styled.div`
@@ -43,6 +37,7 @@ const ImageHalo = styled(motion.div)`
   right: 0;
   bottom: 0;
   background-color: ${theme.colors.accentSubtle.computedValue};
+  pointer-events: none;
 `;
 
 const Image = styled.img`

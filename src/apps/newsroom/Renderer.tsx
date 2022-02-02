@@ -2,15 +2,15 @@ import styled from "@emotion/styled";
 import { MarkdownContainer } from "common/atoms/Container";
 import { mq } from "common/theme";
 import { spacingVariables } from "common/variables";
-import { Descendant } from "slate";
+import { Descendant, Editor, Range } from "slate";
 import { useEditorValue } from "./hooks/useEditorValue";
 import {
   Editable,
+  ReactEditor,
   RenderElementProps,
   RenderLeafProps,
   Slate,
 } from "slate-react";
-import { useCallback } from "react";
 import { YoutubeBlock } from "./components/YoutubeBlock";
 import { ImageBlock } from "./components/ImageBlock";
 import { TextLeaf } from "./components/TextLeaf";
@@ -18,6 +18,7 @@ import { useEditor } from "./hooks/useEditor";
 import { TitleBlock } from "./components/TitleBlock";
 import { HeadingBlock } from "./components/HeadingBlock";
 import { LinkLeaf } from "./components/LinkLeaf";
+import isHotkey from "is-hotkey";
 
 interface Props {
   initialValue: any[];
@@ -25,6 +26,29 @@ interface Props {
   isReadOnly?: boolean;
   onChange?: any;
 }
+
+const HOTKEYS = {
+  "mod+b": "bold",
+  "mod+i": "italic",
+  "mod+u": "underline",
+  "`": "code",
+  "mod+'": "highlight",
+};
+
+const isMarkActive = (editor: ReactEditor, format: string) => {
+  const marks = Editor.marks(editor);
+  return marks ? marks[format] === true : false;
+};
+
+const toggleMark = (editor: ReactEditor, format: string) => {
+  const isActive = isMarkActive(editor, format);
+
+  if (isActive) {
+    Editor.removeMark(editor, format);
+  } else {
+    Editor.addMark(editor, format, true);
+  }
+};
 
 export const Renderer = ({
   editor,
@@ -36,7 +60,7 @@ export const Renderer = ({
 
   const slateEditor = useEditor(editor);
 
-  const renderElement = useCallback((props: RenderElementProps) => {
+  const renderElement = (props: RenderElementProps) => {
     const { attributes, children, element } = props;
     switch (element.type) {
       case "title": {
@@ -79,16 +103,16 @@ export const Renderer = ({
       default:
         return <p {...attributes}>{children}</p>;
     }
-  }, []);
+  };
 
-  const renderLeaf = useCallback((props: RenderLeafProps) => {
+  const renderLeaf = (props: RenderLeafProps) => {
     return <TextLeaf {...props} />;
-  }, []);
+  };
 
-  const handleChange = useCallback((value: Descendant[]) => {
+  const handleChange = (value: Descendant[]) => {
     setValue(value);
     onChange(value);
-  }, []);
+  };
 
   return (
     <MarkdownContainer>
@@ -98,7 +122,18 @@ export const Renderer = ({
             readOnly={isReadOnly}
             renderElement={renderElement}
             renderLeaf={renderLeaf}
-            placeholder="Enter some text..."
+            onKeyDown={(event) => {
+              const isCollapsed = Range.isCollapsed(slateEditor.selection);
+              if (isCollapsed) return;
+
+              for (const hotkey in HOTKEYS) {
+                if (isHotkey(hotkey, event)) {
+                  event.preventDefault();
+                  const mark = HOTKEYS[hotkey];
+                  toggleMark(editor, mark);
+                }
+              }
+            }}
           />
         </Slate>
       </Container>
@@ -150,9 +185,5 @@ const Container = styled.div`
 
   code,
   pre {
-    padding: 4px 6px;
-    border-radius: 0.2em;
-    font-size: 0.9em;
-    margin-right: 4px;
   }
 `;
