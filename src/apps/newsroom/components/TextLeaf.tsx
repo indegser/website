@@ -62,7 +62,8 @@ const Container = styled("span", {
 const Code = styled("code", {
   padding: "4px 6px",
   borderRadius: "0.2em",
-  fontSize: "0.9em",
+  fontSize: "0.85em",
   margin: "0 4px",
+  fontFamily: "$mono",
   backgroundColor: "$canvasInset",
 });
