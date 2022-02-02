@@ -4,14 +4,14 @@ import { useAutoSave } from "./NewsroomPage.hooks";
 import { Renderer } from "./Renderer";
 
 interface Props {
-  content: any;
+  content: Descendant[];
   isReadOnly?: boolean;
 }
 
 export const NewsroomPage = ({ content, isReadOnly }: Props) => {
-  const initialValue = content ?? [
+  const initialValue: Descendant[] = content ?? [
     {
-      type: "text",
+      type: "title",
       children: [{ text: "" }],
     },
   ];
