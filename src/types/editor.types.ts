@@ -46,6 +46,7 @@ export type CustomHeading = {
 };
 
 export type CustomText = {
+  type?: string;
   text: string;
   bold?: boolean;
   italic?: boolean;

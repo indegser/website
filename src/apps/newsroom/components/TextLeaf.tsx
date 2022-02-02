@@ -5,7 +5,6 @@ interface Props extends RenderLeafProps {}
 
 export const TextLeaf = (props: Props) => {
   const { attributes, children, leaf } = props;
-
   let wrappedChildren = children;
 
   if (leaf.code) {

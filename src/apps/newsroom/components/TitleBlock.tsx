@@ -7,7 +7,7 @@ interface Props extends RenderElementProps {
 }
 
 export const TitleBlock = (props: Props) => {
-  const { attributes, children, element } = props;
+  const { attributes, children } = props;
 
   return (
     <Container>
