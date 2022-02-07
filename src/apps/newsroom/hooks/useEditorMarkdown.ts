@@ -1,16 +1,19 @@
 import { Editor, Element, Point, Range, Transforms } from "slate";
 import { ReactEditor } from "slate-react";
-import { CustomBulletList } from "types/editor.types";
+import {
+  CustomBlockquote,
+  CustomBulletList,
+  CustomHeading,
+  CustomListItem,
+} from "types/editor.types";
 
 const SHORTCUTS = {
-  "*": "list-item",
-  "-": "list-item",
-  "+": "list-item",
-  ">": "block-quote",
-  "#": "heading-one",
-  "##": "heading-two",
-  "###": "heading-three",
-};
+  "-": { type: "list-item" } as CustomListItem,
+  ">": { type: "block-quote" } as CustomBlockquote,
+  "#": { type: "heading", level: 1 } as CustomHeading,
+  "##": { type: "heading", level: 2 } as CustomHeading,
+  "###": { type: "heading", level: 3 } as CustomHeading,
+} as const;
 
 export const useEditorMarkdown = () => {
   const withMarkdown = (editor: ReactEditor) => {
@@ -27,14 +30,17 @@ export const useEditorMarkdown = () => {
         const start = Editor.start(editor, path);
         const range = { anchor, focus: start };
         const beforeText = Editor.string(editor, range);
-        const type = SHORTCUTS[beforeText];
+        const match = SHORTCUTS[beforeText];
 
-        if (type) {
+        if (match) {
+          const { type, ...props } = match;
           Transforms.select(editor, range);
           Transforms.delete(editor);
           const newProperties: Partial<Element> = {
             type,
+            ...props,
           };
+
           Transforms.setNodes<Element>(editor, newProperties, {
             match: (n) => Editor.isBlock(editor, n),
           });
@@ -52,11 +58,9 @@ export const useEditorMarkdown = () => {
                 n.type === "list-item",
             });
           }
-
           return;
         }
       }
-
       insertText(text);
     };
 
