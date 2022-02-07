@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createEditor } from "slate";
 import { withHistory } from "slate-history";
 import { ReactEditor, withReact } from "slate-react";
+import { useEditorExitBreak } from "./useEditorExitBreak";
 import { useEditorImage } from "./useEditorImage";
 import { useEditorInline } from "./useEditorInline";
 import { useEditorLayout } from "./useEditorLayout";
@@ -14,14 +15,18 @@ export const useEditor = (editor?: ReactEditor) => {
   const { withInline } = useEditorInline();
   const { withLayout } = useEditorLayout();
   const { withMarkdown } = useEditorMarkdown();
+  const { withExitBreak } = useEditorExitBreak();
 
   const [slateEditor] = useState(() => {
     if (editor) return editor;
 
     const baseEditor = createEditor();
+
     return withLayout(
-      withMarkdown(
-        withInline(withYoutube(withImage(withHistory(withReact(baseEditor)))))
+      withExitBreak(
+        withMarkdown(
+          withInline(withYoutube(withImage(withHistory(withReact(baseEditor)))))
+        )
       )
     );
   });
