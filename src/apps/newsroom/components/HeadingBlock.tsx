@@ -16,6 +16,8 @@ export const HeadingBlock = ({ attributes, element, children }: Props) => {
   );
 };
 
+HeadingBlock.toString = () => ".heading-block";
+
 const Container = styled("div", {});
 
 const Heading = styled("h1", {

@@ -8,11 +8,16 @@ export type CustomElement =
   | CustomYoutube
   | CustomLink
   | CustomTitle
-  | CustomHeading;
+  | CustomHeading
+  | CustomBulletList
+  | CustomListItem
+  | CustomBlockquote;
 
 export type CustomParagraph = {
   type: "paragraph" | "p" | "ul" | "li";
-  children: Array<CustomImage | CustomYoutube | CustomLink | CustomText>;
+  children: Array<
+    CustomImage | CustomYoutube | CustomLink | CustomText | CustomBulletList
+  >;
 };
 
 export type CustomImage = {
@@ -43,6 +48,23 @@ export type CustomHeading = {
   type: "heading";
   level: 1 | 2 | 3;
   children: CustomText[];
+};
+
+export type CustomBulletList = {
+  type: "bullet-list";
+  children: CustomText[];
+};
+
+export type CustomListItem = {
+  type: "list-item";
+  children: CustomText[];
+};
+
+export type CustomBlockquote = {
+  type: "block-quote";
+  children: CustomText[];
+  backgroundColor?: string;
+  emoji?: string;
 };
 
 export type CustomText = {
