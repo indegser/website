@@ -5,6 +5,7 @@ import { ReactEditor, withReact } from "slate-react";
 import { useEditorImage } from "./useEditorImage";
 import { useEditorInline } from "./useEditorInline";
 import { useEditorLayout } from "./useEditorLayout";
+import { useEditorMarkdown } from "./useEditorMarkdown";
 import { useEditorYoutube } from "./useEditorYoutube";
 
 export const useEditor = (editor?: ReactEditor) => {
@@ -12,13 +13,16 @@ export const useEditor = (editor?: ReactEditor) => {
   const { withYoutube } = useEditorYoutube();
   const { withInline } = useEditorInline();
   const { withLayout } = useEditorLayout();
+  const { withMarkdown } = useEditorMarkdown();
 
   const [slateEditor] = useState(() => {
     if (editor) return editor;
 
     const baseEditor = createEditor();
     return withLayout(
-      withInline(withYoutube(withImage(withHistory(withReact(baseEditor)))))
+      withMarkdown(
+        withInline(withYoutube(withImage(withHistory(withReact(baseEditor)))))
+      )
     );
   });
 

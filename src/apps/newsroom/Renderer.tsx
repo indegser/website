@@ -1,7 +1,4 @@
-import styled from "@emotion/styled";
 import { MarkdownContainer } from "common/atoms/Container";
-import { mq } from "common/theme";
-import { spacingVariables } from "common/variables";
 import { Descendant, Editor, Range } from "slate";
 import { useEditorValue } from "./hooks/useEditorValue";
 import {
@@ -19,6 +16,7 @@ import { TitleBlock } from "./components/TitleBlock";
 import { HeadingBlock } from "./components/HeadingBlock";
 import { LinkLeaf } from "./components/LinkLeaf";
 import isHotkey from "is-hotkey";
+import { styled } from "common/stitches.config";
 
 interface Props {
   initialValue: any[];
@@ -100,6 +98,17 @@ export const Renderer = ({
         return <li {...attributes} children={children} />;
       }
 
+      case "bullet-list": {
+        return <ul {...attributes}>{children}</ul>;
+      }
+
+      case "list-item": {
+        return <li {...attributes}>{children}</li>;
+      }
+
+      case "block-quote":
+        return <blockquote {...attributes}>{children}</blockquote>;
+
       default:
         return <p {...attributes}>{children}</p>;
     }
@@ -159,49 +168,29 @@ export const Renderer = ({
   );
 };
 
-const Container = styled.div`
-  font-size: 17px;
-  font-weight: 420;
-  line-height: 1.55;
-  padding-bottom: 80px;
+const Container = styled("article", {
+  fontSize: 17,
+  fontWeight: 420,
+  lineHeight: 1.55,
+  paddingBottom: 80,
 
-  ${spacingVariables.markdownPadding}: 0px;
-
-  ${mq("md")} {
-    font-weight: 440;
-    font-size: 17px;
-  }
-
-  p {
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
-  sup {
-    line-height: 1;
-    padding: 0 2px;
-    font-size: 80%;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin-top: 3rem;
-    line-height: 1.24;
-  }
-
-  ul,
-  ol {
-    padding-inline-start: 1.5em;
-  }
-
-  code,
-  pre {
-  }
-`;
+  ["& p"]: {
+    whiteSpace: "pre-wrap",
+    wordBreak: "break-word",
+  },
+  ["& strong"]: {
+    fontWeight: 700,
+  },
+  ["& sup"]: {
+    lineHeight: 1,
+    padding: "0 2px",
+    fontSize: "0.8rem",
+  },
+  [`& ${HeadingBlock}`]: {
+    marginTop: "3rem",
+    lineHeight: 1.24,
+  },
+  ["& ul, & ol"]: {
+    paddingInlineStart: "1.5em",
+  },
+});
