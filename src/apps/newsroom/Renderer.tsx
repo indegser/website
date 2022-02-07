@@ -193,4 +193,9 @@ const Container = styled("article", {
   ["& ul, & ol"]: {
     paddingInlineStart: "1.5em",
   },
+  ["& blockquote"]: {
+    background: "$canvasSubtle",
+    margin: 0,
+    padding: 16,
+  },
 });
