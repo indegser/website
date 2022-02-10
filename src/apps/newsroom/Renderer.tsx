@@ -150,6 +150,15 @@ export const Renderer = ({
             //   return [];
             // }}
             onKeyDown={(event) => {
+              /**
+               * SOFT_BREAK
+               */
+              if (event.key === "Enter" && event.shiftKey) {
+                event.preventDefault();
+                slateEditor.insertText("\n");
+                return;
+              }
+
               const isCollapsed = Range.isCollapsed(slateEditor.selection);
               if (isCollapsed) return;
 
