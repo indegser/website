@@ -1,7 +1,16 @@
-import { Editor, Transforms } from "slate";
+import { Ancestor, Editor, NodeEntry, Transforms } from "slate";
 import { ReactEditor } from "slate-react";
 
 export const useEditorExitBreak = () => {
+  const shouldExit = (block: NodeEntry<Ancestor>) => {
+    const whitelist = ["heading", "block-quote"];
+
+    if (!block || !block[0]) return;
+    const [target] = block;
+
+    return "type" in target && whitelist.includes(target.type);
+  };
+
   const withExitBreak = (editor: ReactEditor) => {
     const { insertBreak } = editor;
 
@@ -12,10 +21,9 @@ export const useEditorExitBreak = () => {
         match: (n) => Editor.isBlock(editor, n),
       });
 
-      const isHeading =
-        block && "type" in block[0] && block[0].type === "heading";
+      const exit = shouldExit(block);
 
-      if (isHeading) {
+      if (exit) {
         const { anchor } = selection;
 
         Transforms.insertNodes(
