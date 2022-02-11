@@ -21,7 +21,7 @@ export const {
       canvasSubtle: "#f6f8fa",
       borderDefault: "#d0d7de",
       borderMuted: "hsla(210,18%,87%,1)",
-      borderSubtle: "rgba(27,31,36,0.15)",
+      borderSubtle: "rgba(27,31,36,0.1)",
       accentFg: "#0969da",
       accentMuted: "rgba(84,174,255,0.4)",
       accentSubtle: "#ddf4ff",

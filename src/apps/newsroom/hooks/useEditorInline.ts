@@ -25,6 +25,7 @@ const wrapLink = (editor: ReactEditor, url: string) => {
 
   const { selection } = editor;
   const isCollapsed = selection && Range.isCollapsed(selection);
+
   const link: CustomLink = {
     type: "link",
     url,
@@ -32,7 +33,20 @@ const wrapLink = (editor: ReactEditor, url: string) => {
   };
 
   if (isCollapsed) {
-    Transforms.insertNodes(editor, link);
+    const { offset } = Range.start(selection);
+
+    /**
+     * offset 사용하면 Block 중간인지, 시작지점인지 알 수 있음.
+     */
+    if (offset === 0) {
+      Transforms.insertNodes(editor, {
+        type: "bookmark",
+        url,
+        children: [{ text: "" }],
+      });
+    } else {
+      Transforms.insertNodes(editor, link);
+    }
   } else {
     Transforms.wrapNodes(editor, link, { split: true });
     Transforms.collapse(editor, { edge: "end" });
@@ -41,7 +55,9 @@ const wrapLink = (editor: ReactEditor, url: string) => {
 
 export const useEditorInline = () => {
   const withInline = (editor: ReactEditor) => {
-    const { insertData, insertText, isInline } = editor;
+    const { insertData, insertText, isVoid, isInline } = editor;
+
+    editor.isVoid = (element) => element.type === "bookmark" || isVoid(element);
 
     editor.isInline = (element) =>
       ["link", "button"].includes(element.type) || isInline(element);
