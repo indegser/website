@@ -62,7 +62,7 @@ const initialValue: Descendant[] = [
 
 export const useEditorValue = (defaultValue: Descendant[]) => {
   const migrateHeading = defaultValue.map((block) => {
-    if ("type" in block) {
+    if ("type" in block && "children" in block) {
       switch (block.type as any) {
         case "h1": {
           return {
