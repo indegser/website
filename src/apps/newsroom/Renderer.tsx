@@ -17,6 +17,7 @@ import { HeadingBlock } from "./components/HeadingBlock";
 import { LinkLeaf } from "./components/LinkLeaf";
 import isHotkey from "is-hotkey";
 import { styled } from "common/stitches.config";
+import { BookmarkBlock } from "./components/BookmarkBlock";
 
 interface Props {
   initialValue: any[];
@@ -66,22 +67,27 @@ export const Renderer = ({
       }
       case "image": {
         return (
-          <ImageBlock
-            attributes={attributes}
-            element={element}
-            children={children}
-          />
+          <ImageBlock attributes={attributes} element={element}>
+            {children}
+          </ImageBlock>
         );
       }
       case "youtube": {
         return (
-          <YoutubeBlock
-            attributes={attributes}
-            element={element}
-            children={children}
-          />
+          <YoutubeBlock attributes={attributes} element={element}>
+            {children}
+          </YoutubeBlock>
         );
       }
+
+      case "bookmark": {
+        return (
+          <BookmarkBlock attributes={attributes} element={element}>
+            {children}
+          </BookmarkBlock>
+        );
+      }
+
       case "link":
       case "a": {
         return <LinkLeaf {...props} element={element} />;
@@ -91,11 +97,11 @@ export const Renderer = ({
       }
 
       case "ul": {
-        return <ul {...attributes} children={children} />;
+        return <ul {...attributes}>{children}</ul>;
       }
 
       case "li": {
-        return <li {...attributes} children={children} />;
+        return <li {...attributes}>{children}</li>;
       }
 
       case "bullet-list": {

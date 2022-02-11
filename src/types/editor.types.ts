@@ -11,7 +11,8 @@ export type CustomElement =
   | CustomHeading
   | CustomBulletList
   | CustomListItem
-  | CustomBlockquote;
+  | CustomBlockquote
+  | CustomBookmark;
 
 export type CustomParagraph = {
   type: "paragraph" | "p" | "ul" | "li";
@@ -65,6 +66,18 @@ export type CustomBlockquote = {
   children: CustomText[];
   backgroundColor?: string;
   emoji?: string;
+};
+
+export type CustomBookmark = {
+  type: "bookmark";
+  children: CustomText[];
+  url: string;
+  openGraph?: {
+    title: string;
+    description: string;
+    favicon: string;
+    imageUrl: string;
+  };
 };
 
 export type CustomText = {
