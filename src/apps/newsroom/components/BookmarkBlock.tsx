@@ -1,4 +1,6 @@
-import { styled } from "common/stitches.config";
+import { styled, theme } from "common/stitches.config";
+import { mediaQueries } from "common/theme";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Transforms } from "slate";
 import { RenderElementProps, useSlate } from "slate-react";
@@ -25,34 +27,48 @@ export const BookmarkBlock = (props: Props) => {
   return (
     <div {...attributes}>
       {children}
-      <Container contentEditable={false}>
-        {openGraph && (
-          <>
+      {openGraph && (
+        <a
+          href={url}
+          title={openGraph.title}
+          target="_blank"
+          rel="noreferrer"
+          contentEditable={false}
+        >
+          <Container whileTap={{ opacity: 0.8 }} transition={{ duration: 0.2 }}>
             <Metadata>
               <Title>{openGraph.title}</Title>
               <Desc>{openGraph.description}</Desc>
               <Url>
                 <img src={openGraph.favicon} alt={openGraph.title} />
-                <div>{decodeURIComponent(url)}</div>
+                <UrlText>{decodeURIComponent(url)}</UrlText>
               </Url>
             </Metadata>
             <Cover style={{ backgroundImage: `url(${openGraph.imageUrl})` }} />
-          </>
-        )}
-      </Container>
+          </Container>
+        </a>
+      )}
     </div>
   );
 };
 
-const Container = styled("div", {
-  border: "1px solid",
-  borderColor: "$borderSubtle",
+const Container = styled(motion.div, {
+  boxShadow: `0 0 0 .5px ${theme.colors.borderSubtle}`,
   display: "flex",
-  margin: "8px 0",
+  margin: "8px -16px",
   cursor: "pointer",
+  borderRadius: 1,
+  overflow: "hidden",
   transition: ".2s background ease",
-  ["&:hover"]: {
-    backgroundColor: "$canvasSubtle",
+
+  [mediaQueries.hoverable]: {
+    ["&:hover"]: {
+      background: theme.colors.canvasInset,
+    },
+  },
+
+  "@bp1": {
+    margin: "8px 0",
   },
 });
 
@@ -62,8 +78,6 @@ const Metadata = styled("div", {
   position: "relative",
   boxSizing: "border-box",
   overflow: "hidden",
-  borderRight: "1px solid",
-  borderColor: "$borderSubtle",
 });
 
 const Title = styled("div", {
@@ -98,6 +112,12 @@ const Url = styled("div", {
     objectFit: "cover",
     marginRight: 6,
   },
+});
+
+const UrlText = styled("div", {
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  whiteSpace: "nowrap",
 });
 
 const Cover = styled("div", {
