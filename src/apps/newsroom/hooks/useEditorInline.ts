@@ -1,7 +1,7 @@
 import { ReactEditor } from "slate-react";
 import isUrl from "is-url";
 import { CustomLink } from "types/editor.types";
-import { Editor, Range, Transforms, Element } from "slate";
+import { Editor, Range, Transforms, Element, Path, Node } from "slate";
 
 const isLinkActive = (editor: ReactEditor) => {
   const [link] = Editor.nodes(editor, {
@@ -55,7 +55,14 @@ const wrapLink = (editor: ReactEditor, url: string) => {
 
 export const useEditorInline = () => {
   const withInline = (editor: ReactEditor) => {
-    const { insertData, insertText, isVoid, isInline } = editor;
+    const {
+      insertData,
+      insertText,
+      isVoid,
+      isInline,
+      deleteBackward,
+      deleteForward,
+    } = editor;
 
     editor.isVoid = (element) => element.type === "bookmark" || isVoid(element);
 
@@ -81,6 +88,57 @@ export const useEditorInline = () => {
       } else {
         insertData(data);
       }
+    };
+
+    editor.deleteBackward = (unit) => {
+      if (
+        !editor.selection ||
+        !Range.isCollapsed(editor.selection) ||
+        editor.selection.anchor.offset !== 0
+      ) {
+        return deleteBackward(unit);
+      }
+
+      const parentPath = Path.parent(editor.selection.anchor.path);
+      const parentNode = Node.get(editor, parentPath);
+      const parentIsEmpty = Node.string(parentNode).length === 0;
+
+      if (parentIsEmpty && Path.hasPrevious(parentPath)) {
+        const prevNodePath = Path.previous(parentPath);
+        const prevNode = Node.get(editor, prevNodePath);
+        if (Editor.isVoid(editor, prevNode)) {
+          Transforms.removeNodes(editor);
+          Transforms.move(editor, { unit: "line", distance: 1, reverse: true });
+          return;
+        }
+      }
+
+      deleteBackward(unit);
+    };
+
+    editor.deleteForward = (unit) => {
+      if (
+        !editor.selection ||
+        !Range.isCollapsed(editor.selection) ||
+        editor.selection.anchor.offset !== 0
+      ) {
+        return deleteForward(unit);
+      }
+
+      const parentPath = Path.parent(editor.selection.anchor.path);
+      const parentNode = Node.get(editor, parentPath);
+      const parentIsEmpty = Node.string(parentNode).length === 0;
+
+      if (parentIsEmpty) {
+        const nextNodePath = Path.next(parentPath);
+        const nextNode = Node.get(editor, nextNodePath);
+        if (Editor.isVoid(editor, nextNode)) {
+          Transforms.removeNodes(editor);
+          return;
+        }
+      }
+
+      deleteForward(unit);
     };
 
     return editor;
