@@ -187,7 +187,7 @@ const Container = styled("article", {
   fontSize: 17,
   fontWeight: 420,
   lineHeight: 1.55,
-  padding: "0 20px",
+  padding: "0 30px",
   paddingBottom: 80,
 
   ["& p"]: {
