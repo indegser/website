@@ -44,7 +44,11 @@ export const BookmarkBlock = (props: Props) => {
                 <UrlText>{decodeURIComponent(url)}</UrlText>
               </Url>
             </Metadata>
-            <Cover style={{ backgroundImage: `url(${openGraph.imageUrl})` }} />
+            {openGraph.imageUrl && (
+              <Cover
+                style={{ backgroundImage: `url(${openGraph.imageUrl})` }}
+              />
+            )}
           </Container>
         </a>
       )}
