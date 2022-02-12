@@ -1,5 +1,4 @@
 import { styled } from "common/stitches.config";
-import Image from "next/image";
 import { useEffect } from "react";
 import { Transforms } from "slate";
 import { RenderElementProps, useSlate } from "slate-react";
@@ -24,9 +23,9 @@ export const BookmarkBlock = (props: Props) => {
   }, [url, editor, openGraph]);
 
   return (
-    <div contentEditable={false}>
+    <div {...attributes}>
       {children}
-      <Container {...attributes}>
+      <Container contentEditable={false}>
         {openGraph && (
           <>
             <Metadata>
