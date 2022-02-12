@@ -10,8 +10,11 @@ type Data = {
 
 const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const url = req.query.url.toString();
-  const result = await unfurl(url);
+  const result = await unfurl(url, {
+    userAgent: "Googlebot",
+  });
 
+  console.log(result, "RESULT");
   const {
     title,
     description,
