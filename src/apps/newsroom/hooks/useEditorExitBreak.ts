@@ -2,13 +2,16 @@ import { Ancestor, Editor, NodeEntry, Transforms } from "slate";
 import { ReactEditor } from "slate-react";
 
 export const useEditorExitBreak = () => {
-  const shouldExit = (block: NodeEntry<Ancestor>) => {
+  const shouldExit = (editor: ReactEditor, block: NodeEntry<Ancestor>) => {
     const whitelist = ["heading", "block-quote"];
 
     if (!block || !block[0]) return;
     const [target] = block;
 
-    return "type" in target && whitelist.includes(target.type);
+    return (
+      "type" in target &&
+      (whitelist.includes(target.type) || editor.isVoid(target))
+    );
   };
 
   const withExitBreak = (editor: ReactEditor) => {
@@ -21,7 +24,7 @@ export const useEditorExitBreak = () => {
         match: (n) => Editor.isBlock(editor, n),
       });
 
-      const exit = shouldExit(block);
+      const exit = shouldExit(editor, block);
 
       if (exit) {
         const { anchor } = selection;
