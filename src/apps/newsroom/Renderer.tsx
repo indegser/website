@@ -138,6 +138,17 @@ export const Renderer = ({
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             // decorate={([node, path]) => {
+            //   if (!slateEditor.selection) return [];
+            //   const include = Range.includes(editor.selection, path);
+
+            //   if (include) {
+            //     if (!slateEditor.isVoid(node as CustomElement)) return [];
+            //     return [{ ...slateEditor.selection, placeholder: true }];
+            //   }
+
+            //   return [];
+            // }}
+            // decorate={([node, path]) => {
             //   if (editor.selection != null) {
             //     if (
             //       !Editor.isEditor(node) &&

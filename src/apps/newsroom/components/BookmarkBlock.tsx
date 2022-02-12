@@ -3,7 +3,7 @@ import { mediaQueries } from "common/theme";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Transforms } from "slate";
-import { RenderElementProps, useSlate } from "slate-react";
+import { RenderElementProps, useSelected, useSlate } from "slate-react";
 import { CustomBookmark } from "types/editor.types";
 
 interface Props extends RenderElementProps {
@@ -14,6 +14,7 @@ export const BookmarkBlock = (props: Props) => {
   const { attributes, children, element } = props;
   const { openGraph, url } = element;
   const editor = useSlate();
+  const selected = useSelected();
 
   useEffect(() => {
     if (openGraph) return;
@@ -49,6 +50,7 @@ export const BookmarkBlock = (props: Props) => {
                 style={{ backgroundImage: `url(${openGraph.imageUrl})` }}
               />
             )}
+            {selected && <Halo />}
           </Container>
         </a>
       )}
@@ -64,6 +66,7 @@ const Container = styled(motion.div, {
   borderRadius: 1,
   overflow: "hidden",
   transition: ".2s background ease",
+  position: "relative",
 
   [mediaQueries.hoverable]: {
     ["&:hover"]: {
@@ -128,4 +131,13 @@ const Cover = styled("div", {
   flex: "1 1 100px",
   backgroundSize: "cover",
   backgroundPosition: "50% 50%",
+});
+
+const Halo = styled("div", {
+  position: "absolute",
+  pointerEvents: "none",
+  inset: "0px",
+  background: "rgba(46, 170, 220, 0.2)",
+  zIndex: 81,
+  opacity: 1,
 });
