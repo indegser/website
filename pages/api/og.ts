@@ -33,9 +33,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     imageUrl = ogImage.url;
   }
 
+  const fullFavicon = favicon?.startsWith("/")
+    ? new URL(url).origin + favicon
+    : favicon;
+
   res
     .status(200)
-    .json({ title: ogTitle, description: ogDescription, favicon, imageUrl });
+    .json({
+      title: ogTitle,
+      description: ogDescription,
+      favicon: fullFavicon,
+      imageUrl,
+    });
 };
 
 export default handler;
