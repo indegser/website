@@ -27,11 +27,14 @@ const TopArea = styled("div", {
 });
 
 const Title = styled("h1", {
-  fontSize: "2rem",
-  lineHeight: 1.24,
   margin: 0,
+  fontWeight: 760,
+  fontSize: 41,
+  letterSpacing: `-0.055em`,
+  lineHeight: "1.1em",
+  transform: "skew(-5deg)",
 
   "@bp1": {
-    fontSize: "2.4rem",
+    fontSize: 51,
   },
 });

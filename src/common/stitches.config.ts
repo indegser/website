@@ -28,7 +28,7 @@ export const {
       linkDefault: "#737371",
     },
     fonts: {
-      sans: '"Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
+      sans: '"Inter var", "Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
       mono: "SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace",
     },
   },
