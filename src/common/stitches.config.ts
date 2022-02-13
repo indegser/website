@@ -25,6 +25,7 @@ export const {
       accentFg: "#0969da",
       accentMuted: "rgba(84,174,255,0.4)",
       accentSubtle: "#ddf4ff",
+      linkDefault: "rgb(55, 53, 47)",
     },
     fonts: {
       sans: '"Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
