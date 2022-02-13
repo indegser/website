@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { theme } from "common/stitches.config";
+import { styled, theme } from "common/stitches.config";
 import { RenderElementProps } from "slate-react";
 import { CustomLink } from "types/editor.types";
 
@@ -15,12 +14,10 @@ export const LinkLeaf = ({ attributes, element, children }: Props) => {
   );
 };
 
-const MotionContainer = styled.span`
-  display: inline-block;
-`;
+const MotionContainer = styled("span", {});
 
-const MotionLink = styled.a`
-  cursor: pointer;
-  color: ${theme.colors.accentFg.computedValue};
-  text-decoration: underline;
-`;
+const MotionLink = styled("a", {
+  cursor: "pointer",
+  textDecoration: "underline",
+  color: theme.colors.linkDefault,
+});
