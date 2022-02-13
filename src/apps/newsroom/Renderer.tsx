@@ -195,7 +195,7 @@ export const Renderer = ({
 };
 
 const Container = styled("article", {
-  fontSize: 17,
+  fontSize: 16,
   fontWeight: 420,
   lineHeight: 1.55,
   padding: "0 30px",
