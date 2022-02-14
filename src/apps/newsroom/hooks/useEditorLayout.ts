@@ -11,7 +11,7 @@ export const useEditorLayout = () => {
         if (editor.children.length < 1) {
           const title: CustomTitle = {
             type: "title",
-            children: [{ text: "Untitled" }],
+            children: [{ text: "" }],
           };
           Transforms.insertNodes(editor, title, { at: path.concat(0) });
         }

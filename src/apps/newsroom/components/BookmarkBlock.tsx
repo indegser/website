@@ -3,7 +3,12 @@ import { mediaQueries } from "common/theme";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Transforms } from "slate";
-import { RenderElementProps, useSelected, useSlate } from "slate-react";
+import {
+  ReactEditor,
+  RenderElementProps,
+  useSelected,
+  useSlate,
+} from "slate-react";
 import { CustomBookmark } from "types/editor.types";
 
 interface Props extends RenderElementProps {
@@ -21,9 +26,10 @@ export const BookmarkBlock = (props: Props) => {
     fetch(`/api/og?url=${url}`)
       .then((res) => res.json())
       .then((openGraph) => {
-        Transforms.setNodes(editor, { openGraph });
+        const path = ReactEditor.findPath(editor, element);
+        Transforms.setNodes(editor, { openGraph }, { at: path });
       });
-  }, [url, editor, openGraph]);
+  }, [url, editor, openGraph, element]);
 
   return (
     <div {...attributes}>
