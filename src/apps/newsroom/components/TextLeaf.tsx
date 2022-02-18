@@ -37,7 +37,7 @@ const Container = styled("span", {
   variants: {
     bold: {
       true: {
-        fontWeight: "bold",
+        fontWeight: 640,
       },
     },
     italic: {
