@@ -1,5 +1,5 @@
 // TypeScript users only add this code
-import { BaseEditor } from "slate";
+import { BaseEditor, Descendant } from "slate";
 import { ReactEditor } from "slate-react";
 
 export type CustomElement =
@@ -12,7 +12,8 @@ export type CustomElement =
   | CustomBulletList
   | CustomListItem
   | CustomBlockquote
-  | CustomBookmark;
+  | CustomBookmark
+  | CustomCaption;
 
 export type CustomParagraph = {
   type: "paragraph" | "p" | "ul" | "li";
@@ -72,12 +73,21 @@ export type CustomBookmark = {
   type: "bookmark";
   children: CustomText[];
   url: string;
+  caption: {
+    isEnabled: boolean;
+    children?: Descendant[];
+  };
   openGraph?: {
     title: string;
     description: string;
     favicon: string;
     imageUrl: string;
   };
+};
+
+export type CustomCaption = {
+  type: "caption";
+  children: CustomText[];
 };
 
 export type CustomText = {
