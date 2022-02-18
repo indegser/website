@@ -42,6 +42,7 @@ export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
         }}
       >
         <Editable
+          readOnly={ReactEditor.isReadOnly(parentEditor)}
           placeholder="캡션을 달아주세요"
           renderLeaf={TextLeaf}
           onKeyDown={(event) => {

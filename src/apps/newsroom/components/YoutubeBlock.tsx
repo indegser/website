@@ -2,9 +2,8 @@ import { CustomYoutube } from "types/editor.types";
 import { RenderElementProps, useSlateStatic } from "slate-react";
 import YouTube from "react-youtube";
 import getYoutubeId from "get-youtube-id";
-import { css } from "@emotion/css";
-import styled from "@emotion/styled";
 import { CaptionBlock } from "./CaptionBlock";
+import { css, styled } from "common/stitches.config";
 
 interface Props extends RenderElementProps {
   element: CustomYoutube;
@@ -22,7 +21,7 @@ export const YoutubeBlock = (props: Props) => {
         <YoutubeWrapper>
           <YouTube
             opts={{ width: "100%", height: "100%" }}
-            containerClassName={containerClassName}
+            containerClassName={containerClassName().className}
             videoId={getYoutubeId(url)}
           />
         </YoutubeWrapper>
@@ -32,14 +31,14 @@ export const YoutubeBlock = (props: Props) => {
   );
 };
 
-const YoutubeWrapper = styled.div`
-  position: relative;
-  padding-bottom: calc(9 / 16 * 100%);
-  margin: 1rem 0;
-`;
+const containerClassName = css({
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+});
 
-const containerClassName = css`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`;
+const YoutubeWrapper = styled("div", {
+  position: "relative",
+  paddingBottom: "calc(9 / 16 * 100%)",
+  margin: "1rem 0",
+});
