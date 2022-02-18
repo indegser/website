@@ -2,7 +2,7 @@ import { styled, theme } from "common/stitches.config";
 import { mediaQueries } from "common/theme";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { Transforms } from "slate";
+import { Path, Transforms } from "slate";
 import {
   ReactEditor,
   RenderElementProps,
@@ -10,6 +10,7 @@ import {
   useSlate,
 } from "slate-react";
 import { CustomBookmark } from "types/editor.types";
+import { CaptionBlock } from "./CaptionBlock";
 
 interface Props extends RenderElementProps {
   element: CustomBookmark;
@@ -17,7 +18,14 @@ interface Props extends RenderElementProps {
 
 export const BookmarkBlock = (props: Props) => {
   const { attributes, children, element } = props;
-  const { openGraph, url } = element;
+  const {
+    openGraph,
+    url,
+    caption = {
+      isEnabled: false,
+    },
+  } = element;
+
   const editor = useSlate();
   const selected = useSelected();
 
@@ -35,30 +43,57 @@ export const BookmarkBlock = (props: Props) => {
     <div {...attributes}>
       {children}
       {openGraph && (
-        <a
-          href={url}
-          title={openGraph.title}
-          target="_blank"
-          rel="noreferrer"
-          contentEditable={false}
-        >
-          <Container whileTap={{ opacity: 0.8 }} transition={{ duration: 0.2 }}>
-            <Metadata>
-              <Title>{openGraph.title}</Title>
-              <Desc>{openGraph.description}</Desc>
-              <Url>
-                <img src={openGraph.favicon} alt={openGraph.title} />
-                <UrlText>{decodeURIComponent(url)}</UrlText>
-              </Url>
-            </Metadata>
-            {openGraph.imageUrl && (
-              <Cover
-                style={{ backgroundImage: `url(${openGraph.imageUrl})` }}
-              />
-            )}
-            {selected && <Halo />}
-          </Container>
-        </a>
+        <div contentEditable={false}>
+          <a
+            href={url}
+            title={openGraph.title}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Container
+              whileTap={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Metadata>
+                <Title>{openGraph.title}</Title>
+                <Desc>{openGraph.description}</Desc>
+                <Url>
+                  <img src={openGraph.favicon} alt={openGraph.title} />
+                  <UrlText>{decodeURIComponent(url)}</UrlText>
+                </Url>
+              </Metadata>
+              {openGraph.imageUrl && (
+                <Cover
+                  style={{ backgroundImage: `url(${openGraph.imageUrl})` }}
+                />
+              )}
+              {selected && <Halo />}
+            </Container>
+          </a>
+          <CaptionBlock
+            value={
+              caption.children ?? [
+                { type: "paragraph", children: [{ text: "" }] },
+              ]
+            }
+            onSubmit={() => {
+              ReactEditor.focus(editor);
+              const path = ReactEditor.findPath(editor, element);
+
+              Transforms.select(editor, path);
+              editor.insertBreak();
+            }}
+            onChange={(value) => {
+              const path = ReactEditor.findPath(editor, element);
+
+              Transforms.setNodes(
+                editor,
+                { caption: { ...caption, children: value } },
+                { at: path }
+              );
+            }}
+          />
+        </div>
       )}
     </div>
   );

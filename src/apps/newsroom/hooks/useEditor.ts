@@ -9,7 +9,7 @@ import { useEditorLayout } from "./useEditorLayout";
 import { useEditorMarkdown } from "./useEditorMarkdown";
 import { useEditorYoutube } from "./useEditorYoutube";
 
-export const useEditor = (editor?: ReactEditor) => {
+export const useEditor = (editor?: ReactEditor, isLeafOnly?: boolean) => {
   const { withImage } = useEditorImage();
   const { withYoutube } = useEditorYoutube();
   const { withInline } = useEditorInline();
@@ -21,6 +21,10 @@ export const useEditor = (editor?: ReactEditor) => {
     if (editor) return editor;
 
     const baseEditor = createEditor();
+
+    if (isLeafOnly) {
+      return withReact(baseEditor);
+    }
 
     return withLayout(
       withExitBreak(

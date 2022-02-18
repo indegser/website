@@ -42,6 +42,7 @@ const wrapLink = (editor: ReactEditor, url: string) => {
       Transforms.insertNodes(editor, {
         type: "bookmark",
         url,
+        caption: { isEnabled: false },
         children: [{ text: "" }],
       });
     } else {
