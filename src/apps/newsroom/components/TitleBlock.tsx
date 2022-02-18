@@ -30,11 +30,10 @@ const Title = styled("h1", {
   margin: 0,
   fontWeight: 760,
   fontSize: 41,
-  letterSpacing: `-0.055em`,
+  letterSpacing: `-0.025em`,
   lineHeight: "1.1em",
-  transform: "skew(-5deg)",
 
   "@bp1": {
-    fontSize: 51,
+    fontSize: 48,
   },
 });
