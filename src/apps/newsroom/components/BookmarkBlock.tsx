@@ -2,7 +2,7 @@ import { styled, theme } from "common/stitches.config";
 import { mediaQueries } from "common/theme";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { Path, Transforms } from "slate";
+import { Transforms } from "slate";
 import {
   ReactEditor,
   RenderElementProps,
@@ -18,13 +18,7 @@ interface Props extends RenderElementProps {
 
 export const BookmarkBlock = (props: Props) => {
   const { attributes, children, element } = props;
-  const {
-    openGraph,
-    url,
-    caption = {
-      isEnabled: false,
-    },
-  } = element;
+  const { openGraph, url } = element;
 
   const editor = useSlate();
   const selected = useSelected();
@@ -70,29 +64,7 @@ export const BookmarkBlock = (props: Props) => {
               {selected && <Halo />}
             </Container>
           </a>
-          <CaptionBlock
-            value={
-              caption.children ?? [
-                { type: "paragraph", children: [{ text: "" }] },
-              ]
-            }
-            onSubmit={() => {
-              ReactEditor.focus(editor);
-              const path = ReactEditor.findPath(editor, element);
-
-              Transforms.select(editor, path);
-              editor.insertBreak();
-            }}
-            onChange={(value) => {
-              const path = ReactEditor.findPath(editor, element);
-
-              Transforms.setNodes(
-                editor,
-                { caption: { ...caption, children: value } },
-                { at: path }
-              );
-            }}
-          />
+          <CaptionBlock parentEditor={editor} parentElement={element} />
         </div>
       )}
     </div>

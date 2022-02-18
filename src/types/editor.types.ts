@@ -32,6 +32,10 @@ export type CustomImage = {
 export type CustomYoutube = {
   type: "youtube";
   url: string;
+  caption: {
+    isEnabled: boolean;
+    children?: Descendant[];
+  };
   children: CustomText[];
 };
 
