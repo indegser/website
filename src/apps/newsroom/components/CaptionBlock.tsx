@@ -32,6 +32,12 @@ export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
         editor={editor}
         value={caption.children ?? INITIAL_CAPTION}
         onChange={(value) => {
+          const isAstChange = editor.operations.some(
+            (op) => "set_selection" !== op.type
+          );
+
+          if (!isAstChange) return;
+
           const path = getPath();
 
           Transforms.setNodes(
