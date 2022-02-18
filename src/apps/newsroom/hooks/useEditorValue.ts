@@ -34,6 +34,7 @@ const initialValue: Descendant[] = [
   },
   {
     type: "youtube",
+    caption: { isEnabled: true },
     url: "https://www.youtube.com/watch?v=46hO2j7Y_Q4",
     children: [{ text: "" }],
   },
