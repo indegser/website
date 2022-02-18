@@ -15,6 +15,7 @@ const INITIAL_CAPTION: Descendant[] = [
 
 export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
   const editor = useEditor(undefined, true);
+  const isReadOnly = ReactEditor.isReadOnly(parentEditor);
 
   const getPath = () => {
     return ReactEditor.findPath(parentEditor, parentElement);
@@ -25,6 +26,10 @@ export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
   }
 
   const { caption } = parentElement;
+  const textNode = caption?.children?.[0];
+  const hasContent = textNode && Node.string(caption?.children?.[0]) !== "";
+
+  if (!hasContent && isReadOnly) return null;
 
   return (
     <Container>
