@@ -1,30 +1,56 @@
 import { styled, theme } from "common/stitches.config";
-import { ComponentProps } from "react";
-import { Descendant } from "slate";
-import { Editable, Slate } from "slate-react";
+import { Descendant, Node, Path, Transforms } from "slate";
+import { Editable, ReactEditor, Slate } from "slate-react";
 import { useEditor } from "../hooks/useEditor";
 import { TextLeaf } from "./TextLeaf";
 
-interface Props
-  extends Omit<ComponentProps<typeof Slate>, "children" | "editor"> {
-  editableProps?: ComponentProps<typeof Editable>;
-  onSubmit: (value: Descendant[]) => void;
+interface Props {
+  parentElement: Node;
+  parentEditor: ReactEditor;
 }
 
-export const CaptionBlock = ({ editableProps, onSubmit, ...props }: Props) => {
+const INITIAL_CAPTION: Descendant[] = [
+  { type: "paragraph", children: [{ text: "" }] },
+];
+
+export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
   const editor = useEditor(undefined, true);
+
+  const getPath = () => {
+    return ReactEditor.findPath(parentEditor, parentElement);
+  };
+
+  if (!("caption" in parentElement)) {
+    return null;
+  }
+
+  const { caption } = parentElement;
+
   return (
     <Container>
-      <Slate editor={editor} {...props}>
+      <Slate
+        editor={editor}
+        value={caption.children ?? INITIAL_CAPTION}
+        onChange={(value) => {
+          const path = getPath();
+
+          Transforms.setNodes(
+            parentEditor,
+            { caption: { isEnabled: true, children: value } },
+            { at: path }
+          );
+        }}
+      >
         <Editable
-          {...editableProps}
           placeholder="캡션을 달아주세요"
           renderLeaf={TextLeaf}
           onKeyDown={(event) => {
             if (event.key === "Enter") {
               event.preventDefault();
-              const value = editor.children;
-              onSubmit(value);
+
+              ReactEditor.focus(parentEditor);
+              Transforms.select(parentEditor, getPath());
+              parentEditor.insertBreak();
             }
           }}
         />

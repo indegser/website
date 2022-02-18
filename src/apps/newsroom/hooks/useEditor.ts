@@ -29,7 +29,7 @@ export const useEditor = (editor?: ReactEditor, isLeafOnly?: boolean) => {
     return withLayout(
       withExitBreak(
         withMarkdown(
-          withInline(withYoutube(withImage(withHistory(withReact(baseEditor)))))
+          withYoutube(withInline(withImage(withHistory(withReact(baseEditor)))))
         )
       )
     );
