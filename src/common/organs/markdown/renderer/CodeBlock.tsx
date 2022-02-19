@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { PrismLight as Highlighter } from "react-syntax-highlighter";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
-import { colors } from "style.types";
 
 Highlighter.registerLanguage("tsx", tsx);
 
@@ -13,12 +12,12 @@ const Box = styled.div`
     margin: 0;
     padding: 12px 20px 12px 4px;
     border-radius: 4px;
-    border: 1px solid ${colors.gray100};
+    border: 1px solid gray;
     overflow-x: scroll;
   }
 
   .linenumber {
-    color: ${colors.gray300};
+    color: gray;
   }
 
   pre,
@@ -37,21 +36,21 @@ const Box = styled.div`
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: ${colors.gray500};
+    color: gray;
   }
   .token.punctuation,
   .token.string,
   .token.atrule,
   .token.attr-value {
-    color: ${colors.blue500};
+    color: blue;
   }
   .token.property,
   .token.tag {
-    color: ${colors.green500};
+    color: green;
   }
   .token.boolean,
   .token.number {
-    color: ${colors.blue500};
+    color: blue;
   }
   .token.selector,
   .token.attr-name,
@@ -59,22 +58,22 @@ const Box = styled.div`
   .token.keyword,
   .token.regex,
   .token.important {
-    color: ${colors.red400};
+    color: red;
   }
 
   .token.punctuation {
-    color: ${colors.textGrey};
+    color: gray;
   }
 
   .token.operator {
-    color: ${colors.blue400};
+    color: blue;
   }
 
   .token.operator.arrow,
   .token.entity,
   .token.url,
   .language-css .token.string {
-    color: ${colors.red400};
+    color: red;
   }
   .token.entity {
     cursor: help;

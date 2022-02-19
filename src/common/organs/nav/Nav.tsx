@@ -1,28 +1,8 @@
-import styled from "@emotion/styled";
-import Theme from "./theme/Theme";
-import Logo from "./Logo";
-import { colors } from "style.types";
+import { Logo } from "./Logo";
 import Link from "next/link";
+import { styled } from "common/stitches.config";
 
-const Layout = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 4px;
-`;
-
-const Heading = styled.div`
-  display: flex;
-  padding: 0 16px;
-  height: 45px;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  color: ${colors.gray900};
-`;
-
-const Nav = () => {
+export const Nav = () => {
   return (
     <Layout id="global-nav">
       <Link href="/" passHref>
@@ -33,9 +13,23 @@ const Nav = () => {
           </Heading>
         </a>
       </Link>
-      <Theme />
     </Layout>
   );
 };
 
-export default Nav;
+const Layout = styled("nav", {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  paddingTop: 4,
+});
+
+const Heading = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  padding: "0 16px",
+  height: 45,
+  fontSize: 14,
+  fontWeight: 600,
+  cursor: "pointer",
+});

@@ -1,52 +1,45 @@
 import Head from "next/head";
 import { Router } from "next/router";
-import styled from "@emotion/styled";
 
 import { Analytics } from "apis/analytics";
-import GlobalStyle from "common/GlobalStyle";
-import ThemeScript from "common/ThemeScript";
-import Nav from "common/organs/nav/Nav";
-
-export function reportWebVitals(metric) {
-  Analytics.reportWebVitals(metric);
-}
-
-const Page = styled.div`
-  width: 100vw;
-`;
-
-const Main = styled.div``;
+import { Nav } from "common/organs/nav/Nav";
+import { AppProps } from "next/app";
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
+import "apis/firebase";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useAdminStore } from "common/hooks/admin.hooks";
+import { globalStyles } from "common/globalStyles";
+import { styled } from "common/stitches.config";
 
-const App = ({ Component, pageProps }) => {
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  const state = useAdminStore.getState();
+  state.setStatus(user ? "admin" : "anonymous");
+});
+
+export default function App({ Component, pageProps }: AppProps) {
+  globalStyles();
+
   return (
     <>
-      <GlobalStyle />
       <Head>
-        <ThemeScript />
+        <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-          rel="stylesheet"
-        ></link>
-        <title>Home</title>
       </Head>
       <Page>
         <Nav />
         <Main>
-          <Component {...pageProps}></Component>
+          <Component {...pageProps} />
         </Main>
       </Page>
     </>
   );
-};
+}
 
-export default App;
+const Page = styled("div", {
+  width: "100%",
+});
+
+const Main = styled("div", {});

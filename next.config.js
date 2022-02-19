@@ -1,33 +1,18 @@
-// This file sets a custom webpack configuration to use your Next.js app
-// with Sentry.
-// https://nextjs.org/docs/api-reference/next.config.js/introduction
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
-
-// const { withSentryConfig } = require("@sentry/nextjs");
+const { withSentryConfig } = require("@sentry/nextjs");
 
 const moduleExports = {
+  swcMinify: true,
   env: {
     VERCEL_URL: process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
       : "http://localhost:3000",
   },
-  webpack: (config) => {
-    config.module.rules.push(
-      {
-        test: /\.svg$/,
-        use: ["@svgr/webpack"],
-      },
-      {
-        test: /\.mdx?$/,
-        use: ["raw-loader"],
-      }
-    );
-
-    return config;
-  },
+  // webpack: (config) => {
+  //   return config;
+  // },
 };
 
-const SentryWebpackPluginOptions = {
+const sentryWebpackPluginOptions = {
   // Additional config options for the Sentry Webpack plugin. Keep in mind that
   // the following options are set automatically, and overriding them is not
   // recommended:
@@ -41,4 +26,4 @@ const SentryWebpackPluginOptions = {
 
 // Make sure adding Sentry options is the last code to run before exporting, to
 // ensure that your source maps include changes from all other Webpack plugins
-module.exports = moduleExports;
+module.exports = withSentryConfig(moduleExports, sentryWebpackPluginOptions);

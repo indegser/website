@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { ResumeContentHeading, ResumeGrid } from "./Resume.styled";
 import { useIndegserContext, useTrans } from "../Indegser.hooks";
-import { colors } from "style.types";
 import { mq } from "common/theme";
 
 const Layout = styled(ResumeGrid)`
@@ -38,7 +37,6 @@ const Company = styled.div`
 const Content = styled.div``;
 
 const Date = styled.div`
-  color: ${colors.textGrey};
   font-size: 14px;
   line-height: 1.6;
 `;
@@ -55,14 +53,12 @@ const MilestoneLine = styled.div`
   /* padding-left: 24px; */
   font-size: 15px;
   list-style: none;
-  color: ${colors.textLiDot};
 
   & + & {
     margin-top: 1em;
   }
 
   span {
-    color: ${colors.textResume};
     letter-spacing: 0.2px;
   }
 
@@ -79,7 +75,6 @@ const MilestoneLine = styled.div`
 
 const Duration = styled.div`
   font-size: 13px;
-  color: ${colors.textLightGrey};
   position: absolute;
   right: 0;
   top: 0;

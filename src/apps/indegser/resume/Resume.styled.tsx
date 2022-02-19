@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
-import { colors } from "style.types";
 
 export const ResumeGrid = styled.div`
   column-count: 2;
@@ -13,7 +12,6 @@ export const ResumeGrid = styled.div`
 
 export const ResumeSection = styled.div`
   position: relative;
-  border-top: 1px solid ${colors.bgDivider};
   padding-top: 3em;
   padding-bottom: 3em;
   display: grid;
@@ -33,7 +31,6 @@ export const ResumeSection = styled.div`
 `;
 
 export const ResumeSectionBorder = styled.div`
-  border-top: 1px solid ${colors.bgDivider};
   margin: 40px 0;
   width: 100%;
 `;

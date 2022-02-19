@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { colors } from "style.types";
 import { useIndegserContext } from "../Indegser.hooks";
 import { ResumeContentHeading } from "./Resume.styled";
 
@@ -21,10 +20,8 @@ const TechItem = styled.li`
   padding-left: 24px;
   font-size: 15px;
   list-style: none;
-  color: ${colors.textLiDot};
 
   span {
-    color: ${colors.textResume};
     letter-spacing: 0.2px;
   }
 
