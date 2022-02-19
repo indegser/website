@@ -2,14 +2,6 @@ const { withSentryConfig } = require("@sentry/nextjs");
 
 const moduleExports = {
   swcMinify: true,
-  env: {
-    VERCEL_URL: process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000",
-  },
-  // webpack: (config) => {
-  //   return config;
-  // },
 };
 
 const sentryWebpackPluginOptions = {
@@ -18,7 +10,6 @@ const sentryWebpackPluginOptions = {
   // recommended:
   //   release, url, org, project, authToken, configFile, stripPrefix,
   //   urlPrefix, include, ignore
-
   silent: true, // Suppresses all logs
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options.
