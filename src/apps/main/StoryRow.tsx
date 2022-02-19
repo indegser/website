@@ -60,7 +60,7 @@ const Right = styled("div", {
   flex: "0 0 auto",
 
   [mq("sm")]: {
-    marginTop: 4,
+    marginTop: 6,
   },
 });
 
@@ -81,6 +81,7 @@ const Title = styled("h2", {
 
   [mq("sm")]: {
     fontSize: 17,
+    lineHeight: 1.2,
     background: "none !important",
     overflow: "auto",
     whiteSpace: "pre-wrap",

@@ -227,4 +227,6 @@ const Container = styled("article", {
   },
 });
 
-const BaseBlock = styled("div", {});
+const BaseBlock = styled("div", {
+  margin: "1.25rem 0",
+});
