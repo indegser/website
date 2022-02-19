@@ -9,17 +9,15 @@ export type CustomElement =
   | CustomLink
   | CustomTitle
   | CustomHeading
-  | CustomBulletList
   | CustomListItem
   | CustomBlockquote
   | CustomBookmark
-  | CustomCaption;
+  | CustomCaption
+  | CustomBulletedList;
 
 export type CustomParagraph = {
   type: "paragraph" | "p" | "ul" | "li";
-  children: Array<
-    CustomImage | CustomYoutube | CustomLink | CustomText | CustomBulletList
-  >;
+  children: Array<CustomImage | CustomYoutube | CustomLink | CustomText>;
 };
 
 export type CustomImage = {
@@ -56,11 +54,6 @@ export type CustomHeading = {
   children: CustomText[];
 };
 
-export type CustomBulletList = {
-  type: "bullet-list";
-  children: CustomText[];
-};
-
 export type CustomListItem = {
   type: "list-item";
   children: CustomText[];
@@ -91,6 +84,11 @@ export type CustomBookmark = {
 
 export type CustomCaption = {
   type: "caption";
+  children: CustomText[];
+};
+
+export type CustomBulletedList = {
+  type: "bulleted-list";
   children: CustomText[];
 };
 
