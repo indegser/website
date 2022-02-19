@@ -1,6 +1,6 @@
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { ORIGIN } from "types/const.types";
+import { GIT_COMMIT_SHA, ORIGIN } from "types/const.types";
 
 interface Props {
   title: string;
@@ -39,7 +39,7 @@ export const SEO = ({
       additionalMetaTags={[
         {
           property: "git:commit:sha",
-          content: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA,
+          content: GIT_COMMIT_SHA,
         },
       ]}
     />
