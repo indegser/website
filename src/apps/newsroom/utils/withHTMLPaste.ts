@@ -21,7 +21,6 @@ const ELEMENT_TAGS: Record<
   P: () => ({ type: "paragraph" }),
   DIV: () => ({ type: "paragraph" }),
   PRE: () => ({ type: "paragraph" }),
-  UL: () => ({ type: "bullet-list" }),
 };
 
 // COMPAT: `B` is omitted here because Google Docs uses `<b>` in weird ways.

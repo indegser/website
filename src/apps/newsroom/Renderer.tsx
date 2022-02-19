@@ -19,6 +19,7 @@ import isHotkey from "is-hotkey";
 import { styled } from "common/stitches.config";
 import { BookmarkBlock } from "./components/BookmarkBlock";
 import { mq } from "common/theme";
+import { BulletedListBlock } from "./components/BulletedListBlock";
 
 interface Props {
   initialValue: any[];
@@ -105,12 +106,12 @@ export const Renderer = ({
         return <li {...attributes}>{children}</li>;
       }
 
-      case "bullet-list": {
-        return <ul {...attributes}>{children}</ul>;
-      }
-
-      case "list-item": {
-        return <li {...attributes}>{children}</li>;
+      case "bulleted-list": {
+        return (
+          <BulletedListBlock {...props} element={element}>
+            {children}
+          </BulletedListBlock>
+        );
       }
 
       case "block-quote":
@@ -198,7 +199,7 @@ export const Renderer = ({
 const Container = styled("article", {
   fontSize: 17,
   fontWeight: 460,
-  lineHeight: 1.65,
+  lineHeight: 1.46,
   padding: "0 30px",
   paddingBottom: 80,
 
@@ -235,5 +236,6 @@ const Container = styled("article", {
 });
 
 const BaseBlock = styled("div", {
-  margin: "1.25rem 0",
+  margin: "1px 0",
+  padding: "5px 2px",
 });

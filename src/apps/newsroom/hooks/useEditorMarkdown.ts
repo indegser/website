@@ -1,14 +1,8 @@
 import { Editor, Element, Point, Range, Transforms } from "slate";
 import { ReactEditor } from "slate-react";
-import {
-  CustomBlockquote,
-  CustomBulletList,
-  CustomHeading,
-  CustomListItem,
-} from "types/editor.types";
+import { CustomBlockquote, CustomHeading } from "types/editor.types";
 
 const SHORTCUTS = {
-  "-": { type: "list-item" } as CustomListItem,
   ">": { type: "block-quote" } as CustomBlockquote,
   "#": { type: "heading", level: 1 } as CustomHeading,
   "##": { type: "heading", level: 2 } as CustomHeading,
@@ -45,19 +39,19 @@ export const useEditorMarkdown = () => {
             match: (n) => Editor.isBlock(editor, n),
           });
 
-          if (type === "list-item") {
-            const list: CustomBulletList = {
-              type: "bullet-list",
-              children: [],
-            };
+          // if (type === "list-item") {
+          //   const list: CustomBulletList = {
+          //     type: "bullet-list",
+          //     children: [],
+          //   };
 
-            Transforms.wrapNodes(editor, list, {
-              match: (n) =>
-                !Editor.isEditor(n) &&
-                Element.isElement(n) &&
-                n.type === "list-item",
-            });
-          }
+          //   Transforms.wrapNodes(editor, list, {
+          //     match: (n) =>
+          //       !Editor.isEditor(n) &&
+          //       Element.isElement(n) &&
+          //       n.type === "list-item",
+          //   });
+          // }
           return;
         }
       }
@@ -87,15 +81,15 @@ export const useEditorMarkdown = () => {
             };
             Transforms.setNodes(editor, newProperties);
 
-            if (block.type === "list-item") {
-              Transforms.unwrapNodes(editor, {
-                match: (n) =>
-                  !Editor.isEditor(n) &&
-                  Element.isElement(n) &&
-                  n.type === "bullet-list",
-                split: true,
-              });
-            }
+            // if (block.type === "list-item") {
+            //   Transforms.unwrapNodes(editor, {
+            //     match: (n) =>
+            //       !Editor.isEditor(n) &&
+            //       Element.isElement(n) &&
+            //       n.type === "bullet-list",
+            //     split: true,
+            //   });
+            // }
 
             return;
           }
