@@ -18,6 +18,7 @@ import { LinkLeaf } from "./components/LinkLeaf";
 import isHotkey from "is-hotkey";
 import { styled } from "common/stitches.config";
 import { BookmarkBlock } from "./components/BookmarkBlock";
+import { mq } from "common/theme";
 
 interface Props {
   initialValue: any[];
@@ -195,11 +196,17 @@ export const Renderer = ({
 };
 
 const Container = styled("article", {
-  fontSize: 16,
-  fontWeight: 420,
-  lineHeight: 1.55,
+  fontSize: 17,
+  fontWeight: 460,
+  lineHeight: 1.65,
   padding: "0 30px",
   paddingBottom: 80,
+
+  [mq("sm")]: {
+    fontSize: 17,
+    lineHeight: 1.6,
+    padding: "0 24px 80px 24px",
+  },
 
   ["& p"]: {
     whiteSpace: "pre-wrap",
