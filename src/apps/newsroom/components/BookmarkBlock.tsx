@@ -1,7 +1,7 @@
 import { styled, theme } from "common/stitches.config";
 import { mediaQueries } from "common/theme";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Transforms } from "slate";
 import {
   ReactEditor,
@@ -17,6 +17,7 @@ interface Props extends RenderElementProps {
 }
 
 export const BookmarkBlock = (props: Props) => {
+  const [faviconLoaded, setFaviconLoaded] = useState(false);
   const { attributes, children, element } = props;
   const { openGraph, url } = element;
 
@@ -32,6 +33,16 @@ export const BookmarkBlock = (props: Props) => {
         Transforms.setNodes(editor, { openGraph }, { at: path });
       });
   }, [url, editor, openGraph, element]);
+
+  useEffect(() => {
+    if (!openGraph) return;
+    const favicon = new Image();
+    favicon.onload = (e) => {
+      setFaviconLoaded(true);
+    };
+
+    favicon.src = openGraph.favicon;
+  }, [openGraph]);
 
   return (
     <div {...attributes}>
@@ -52,7 +63,7 @@ export const BookmarkBlock = (props: Props) => {
                 <Title>{openGraph.title}</Title>
                 <Desc>{openGraph.description}</Desc>
                 <Url>
-                  <img src={openGraph.favicon} alt={openGraph.title} />
+                  {faviconLoaded && <CoverImage src={openGraph.favicon} />}
                   <UrlText>{decodeURIComponent(url)}</UrlText>
                 </Url>
               </Metadata>
@@ -126,12 +137,14 @@ const Url = styled("div", {
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
 
-  ["& img"]: {
-    width: 14,
-    height: 14,
-    objectFit: "cover",
-    marginRight: 6,
-  },
+  ["& img"]: {},
+});
+
+const CoverImage = styled("img", {
+  width: 14,
+  height: 14,
+  objectFit: "cover",
+  marginRight: 6,
 });
 
 const UrlText = styled("div", {

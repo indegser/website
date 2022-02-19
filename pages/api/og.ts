@@ -8,6 +8,18 @@ type Data = {
   imageUrl: string;
 };
 
+const parseUrl = (originalUrl: string, url: string) => {
+  if (!url) return null;
+  if (url.startsWith("//")) {
+    return `https:${url}`;
+  }
+  if (url.startsWith("/")) {
+    return new URL(originalUrl).origin + url;
+  }
+
+  return url;
+};
+
 const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const url = req.query.url.toString();
 
@@ -33,13 +45,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     imageUrl = ogImage.url;
   }
 
-  if (imageUrl && imageUrl.startsWith("/")) {
-    imageUrl = new URL(url).origin + imageUrl;
-  }
-
-  const fullFavicon = favicon?.startsWith("/")
-    ? new URL(url).origin + favicon
-    : favicon;
+  imageUrl = parseUrl(url, imageUrl);
+  const fullFavicon = parseUrl(url, favicon);
 
   res.status(200).json({
     title: ogTitle,
