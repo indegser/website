@@ -39,7 +39,7 @@ export const SEO = ({
       additionalMetaTags={[
         {
           property: "git:commit:sha",
-          content: process.env.EXT_PUBLIC_VERCEL_GIT_COMMIT_SHA,
+          content: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA,
         },
       ]}
     />
