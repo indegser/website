@@ -1,6 +1,6 @@
 import { NextSeo } from "next-seo";
-import { FC } from "react";
 import { useRouter } from "next/router";
+import { GIT_COMMIT_SHA, ORIGIN } from "types/const.types";
 
 interface Props {
   title: string;
@@ -9,19 +9,22 @@ interface Props {
   ogType?: string;
 }
 
-export const SEO: FC<Props> = ({
+export const SEO = ({
   title,
   description,
   image,
   ogType = "website",
-}) => {
+}: Props) => {
   const { asPath } = useRouter();
+
+  const url = ORIGIN + asPath;
   return (
     <NextSeo
       title={title}
       description={description}
+      canonical={url}
       openGraph={{
-        url: `${process.env.VERCEL_URL}${asPath}`,
+        url,
         title,
         description,
         type: ogType,
@@ -30,9 +33,15 @@ export const SEO: FC<Props> = ({
       }}
       twitter={{
         handle: "@indegser",
-        site: "@indegsercom",
+        site: ORIGIN,
         cardType: "summary_large_image",
       }}
+      additionalMetaTags={[
+        {
+          property: "git:commit:sha",
+          content: GIT_COMMIT_SHA,
+        },
+      ]}
     />
   );
 };
