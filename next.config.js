@@ -3,13 +3,8 @@ const { withSentryConfig } = require("@sentry/nextjs");
 const moduleExports = {
   swcMinify: true,
   env: {
-    VERCEL_URL: process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000",
+    VERCEL_URL: process.env.VERCEL_URL,
   },
-  // webpack: (config) => {
-  //   return config;
-  // },
 };
 
 const sentryWebpackPluginOptions = {
