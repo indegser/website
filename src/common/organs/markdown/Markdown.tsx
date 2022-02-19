@@ -1,148 +1,150 @@
-import ReactMarkdown from "react-markdown";
-import { ComponentProps } from "react";
-import styled from "@emotion/styled";
-import { mq } from "common/theme";
-import gfm from "remark-gfm";
-import directive from "remark-directive";
-import visit from "unist-util-visit";
-import ImageRenderer from "./renderer/ImageRenderer";
-import BreakRenderer from "./renderer/BreakRenderer";
-import { GoogleMap } from "./directives/GoogleMap";
-import { spacingVariables } from "common/variables";
-import { colors } from "style.types";
-import { BookmarkDirective } from "./directives/BookmarkDirective";
-import { CodeBlock } from "./renderer/CodeBlock";
+export const Markdown = () => null;
 
-interface Props extends ComponentProps<typeof ReactMarkdown> {}
+// import ReactMarkdown from "react-markdown";
+// import { ComponentProps } from "react";
+// import styled from "@emotion/styled";
+// import { mq } from "common/theme";
+// import gfm from "remark-gfm";
+// import directive from "remark-directive";
+// import visit from "unist-util-visit";
+// import ImageRenderer from "./renderer/ImageRenderer";
+// import BreakRenderer from "./renderer/BreakRenderer";
+// import { GoogleMap } from "./directives/GoogleMap";
+// import { spacingVariables } from "common/variables";
+// import { colors } from "style.types";
+// import { BookmarkDirective } from "./directives/BookmarkDirective";
+// import { CodeBlock } from "./renderer/CodeBlock";
 
-const Container = styled.div`
-  font-size: 16px;
-  font-weight: 520;
-  line-height: 1.75;
-  color: ${colors.gray800};
+// interface Props extends ComponentProps<typeof ReactMarkdown> {}
 
-  ${spacingVariables.markdownPadding}: 0px;
+// const Container = styled.div`
+//   font-size: 16px;
+//   font-weight: 520;
+//   line-height: 1.75;
+//   color: ${colors.gray800};
 
-  ${mq("md")} {
-    font-weight: 450;
-    font-size: 17px;
-  }
+//   ${spacingVariables.markdownPadding}: 0px;
 
-  p {
-    margin-top: 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
+//   ${mq("md")} {
+//     font-weight: 450;
+//     font-size: 17px;
+//   }
 
-  strong {
-    font-weight: 700;
-  }
+//   p {
+//     margin-top: 0;
+//     white-space: pre-wrap;
+//     word-break: break-word;
+//   }
 
-  blockquote {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 1em;
-    border-left: 4px solid ${colors.gray700};
-    box-sizing: border-box;
-    margin: 2em auto;
-    font-weight: 500;
-  }
+//   strong {
+//     font-weight: 700;
+//   }
 
-  sup {
-    line-height: 1;
-    padding: 0 2px;
-    font-size: 80%;
-  }
+//   blockquote {
+//     margin-left: 0;
+//     margin-right: 0;
+//     padding-left: 1em;
+//     border-left: 4px solid ${colors.gray700};
+//     box-sizing: border-box;
+//     margin: 2em auto;
+//     font-weight: 500;
+//   }
 
-  a {
-    color: ${colors.linkPrimary};
+//   sup {
+//     line-height: 1;
+//     padding: 0 2px;
+//     font-size: 80%;
+//   }
 
-    &:hover {
-      color: ${colors.linkPrimaryHover};
-    }
-  }
+//   a {
+//     color: ${colors.linkPrimary};
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin-top: 3rem;
-    line-height: 1.24;
-    color: ${colors.gray900};
-  }
+//     &:hover {
+//       color: ${colors.linkPrimaryHover};
+//     }
+//   }
 
-  ol {
-    padding-inline-start: 1.5em;
-  }
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5 {
+//     margin-top: 3rem;
+//     line-height: 1.24;
+//     color: ${colors.gray900};
+//   }
 
-  code,
-  pre {
-    padding: 4px 6px;
-    border-radius: 0.2em;
-    background: ${colors.gray50};
-    font-size: 0.9em;
-    margin-right: 4px;
-  }
-`;
+//   ol {
+//     padding-inline-start: 1.5em;
+//   }
 
-function reactMarkdownRemarkDirective() {
-  function updateNode(node) {
-    node.data = {
-      hName: node.name,
-      hProperties: node.attributes,
-      ...node.data,
-    };
-    return node;
-  }
-  return (tree) => {
-    visit(tree, "textDirective", updateNode);
-    visit(tree, "leafDirective", updateNode);
-    visit(tree, "containerDirective", updateNode);
-  };
-}
+//   code,
+//   pre {
+//     padding: 4px 6px;
+//     border-radius: 0.2em;
+//     background: ${colors.gray50};
+//     font-size: 0.9em;
+//     margin-right: 4px;
+//   }
+// `;
 
-const markdownComponents = {
-  GoogleMap,
-  Bookmark: BookmarkDirective,
-};
+// function reactMarkdownRemarkDirective() {
+//   function updateNode(node) {
+//     node.data = {
+//       hName: node.name,
+//       hProperties: node.attributes,
+//       ...node.data,
+//     };
+//     return node;
+//   }
+//   return (tree) => {
+//     visit(tree, "textDirective", updateNode);
+//     visit(tree, "leafDirective", updateNode);
+//     visit(tree, "containerDirective", updateNode);
+//   };
+// }
 
-const Markdown = ({ children }: Props) => {
-  return (
-    <Container>
-      <ReactMarkdown
-        remarkPlugins={[
-          gfm as any,
-          directive as any,
-          reactMarkdownRemarkDirective,
-        ]}
-        components={{
-          img: (props) => <ImageRenderer {...props} />,
-          hr: BreakRenderer,
-          p: Block,
-          code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || "");
-            return !inline && match ? (
-              <CodeBlock language={match[1]} value={String(children)} />
-            ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
-            );
-          },
-          pre: ({ children }) => <div children={children} />,
-          ...markdownComponents,
-        }}
-      >
-        {children}
-      </ReactMarkdown>
-    </Container>
-  );
-};
+// const markdownComponents = {
+//   GoogleMap,
+//   Bookmark: BookmarkDirective,
+// };
 
-const Block = styled.div`
-  margin-top: 1.75em;
-  padding: var(${spacingVariables.markdownPadding});
-`;
+// const Markdown = ({ children }: Props) => {
+//   return (
+//     <Container>
+//       <ReactMarkdown
+//         remarkPlugins={[
+//           gfm as any,
+//           directive as any,
+//           reactMarkdownRemarkDirective,
+//         ]}
+//         components={{
+//           img: (props) => <ImageRenderer {...props} />,
+//           hr: BreakRenderer,
+//           p: Block,
+//           code({ node, inline, className, children, ...props }) {
+//             const match = /language-(\w+)/.exec(className || "");
+//             return !inline && match ? (
+//               <CodeBlock language={match[1]} value={String(children)} />
+//             ) : (
+//               <code className={className} {...props}>
+//                 {children}
+//               </code>
+//             );
+//           },
+//           pre: ({ children }) => <div children={children} />,
+//           ...markdownComponents,
+//         }}
+//       >
+//         {children}
+//       </ReactMarkdown>
+//     </Container>
+//   );
+// };
 
-export default Markdown;
+// const Block = styled.div`
+//   margin-top: 1.75em;
+//   padding: var(${spacingVariables.markdownPadding});
+// `;
+
+// export default Markdown;

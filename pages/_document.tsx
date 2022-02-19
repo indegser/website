@@ -1,11 +1,16 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { Analytics } from "apis/analytics";
+import { getCssText } from "common/stitches.config";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { mq } from "common/theme";
-import { colors } from "style.types";
 import { ResumeGrid } from "./Resume.styled";
 
 const Layout = styled(ResumeGrid)`
@@ -21,12 +20,9 @@ const Layout = styled(ResumeGrid)`
 const Label = styled.div`
   font-size: 13px;
   margin-bottom: 4px;
-  color: ${colors.textLightGrey};
 `;
 
-const GeneralLink = styled.a`
-  color: ${colors.linkPrimaryHover};
-`;
+const GeneralLink = styled.a``;
 
 const General = () => {
   const columns = [

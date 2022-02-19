@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { colors } from "style.types";
 import { useIndegserContext } from "../Indegser.hooks";
 import { ResumeGrid } from "./Resume.styled";
 
@@ -9,7 +8,6 @@ const Layout = styled.div`
 `;
 
 const Biography = styled(ResumeGrid)`
-  color: ${colors.textBlack};
   line-height: 1.8;
   font-size: 15px;
 
