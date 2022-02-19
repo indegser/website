@@ -116,7 +116,7 @@ export const Renderer = ({
         return <blockquote {...attributes}>{children}</blockquote>;
 
       default:
-        return <p {...attributes}>{children}</p>;
+        return <BaseBlock {...attributes}>{children}</BaseBlock>;
     }
   };
 
@@ -226,3 +226,5 @@ const Container = styled("article", {
     padding: 16,
   },
 });
+
+const BaseBlock = styled("div", {});
