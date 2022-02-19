@@ -8,6 +8,8 @@ import { DataLoader } from "./DataLoader";
 import { CreateNew } from "./CreateNew";
 import { useIsAdmin } from "common/hooks/admin.hooks";
 import { STORY_DEFAULT_PAGE_SIZE } from "types/const.types";
+import { styled } from "common/stitches.config";
+import { mq } from "common/theme";
 
 interface Props {
   initialData: StoryType[];
@@ -48,7 +50,7 @@ export const MainPage = ({ initialData }: Props) => {
   return (
     <PageContainer>
       <SEO title="Pages - Indegser" />
-      {contents}
+      <ContentList>{contents}</ContentList>
       <DataLoader
         isValidating={isValidating}
         pageSize={STORY_DEFAULT_PAGE_SIZE}
@@ -59,3 +61,11 @@ export const MainPage = ({ initialData }: Props) => {
     </PageContainer>
   );
 };
+
+const ContentList = styled("section", {
+  marginTop: 40,
+
+  [mq("sm")]: {
+    marginTop: 20,
+  },
+});

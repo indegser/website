@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
 import { Row } from "common/atoms/Row";
-import { theme } from "common/stitches.config";
+import { styled, theme } from "common/stitches.config";
+import { mq } from "common/theme";
 import Link from "next/link";
 import { HiOutlinePlus } from "react-icons/hi";
 
@@ -21,18 +21,23 @@ export const CreateNew = () => {
   );
 };
 
-const Container = styled.div`
-  margin-top: 2px;
-  padding-top: 2px;
-  border-top: 1px solid ${theme.colors.borderMuted.computedValue};
-`;
+const Container = styled("div", {
+  marginTop: 2,
+  paddingTop: 2,
+  borderTop: `1px solid ${theme.colors.borderMuted}`,
+});
 
-const Button = styled.div`
-  color: ${theme.colors.fgSubtle.computedValue};
-  display: grid;
-  grid-auto-flow: column;
-  gap: 4px;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 450;
-`;
+const Button = styled("div", {
+  color: theme.colors.fgSubtle,
+  display: "grid",
+  gridAutoFlow: "column",
+  gap: 4,
+  alignItems: "center",
+  fontSize: 14,
+  fontWeight: 450,
+
+  [mq("sm")]: {
+    height: 30,
+    display: "flex",
+  },
+});
