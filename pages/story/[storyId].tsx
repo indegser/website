@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   try {
     const story = await firebaseApi.getStory(storyId.toString());
-    return { props: { story }, revalidate: 60 };
+    return { props: { story } };
   } catch (err) {
     return { notFound: true };
   }

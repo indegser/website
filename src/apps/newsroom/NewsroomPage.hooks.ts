@@ -1,3 +1,5 @@
+import { captureMessage, Severity } from "@sentry/nextjs";
+import { extraApi } from "apis/extra";
 import { firebaseApi } from "apis/firebase";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
@@ -50,6 +52,19 @@ export const useAutoSave = () => {
       idRef.current = refId;
     } else {
       await firebaseApi.updateStory(id, { title, content });
+
+      extraApi
+        .revalidateStory(id)
+        .then((res) => {
+          console.info("💡 Updated static page!");
+        })
+        .catch((err) => {
+          console.warn("😮‍💨 Failed to update static page...");
+          captureMessage(
+            "😮‍💨 Failed to update static page...",
+            Severity.Warning
+          );
+        });
     }
   }, 1000);
 
