@@ -1,8 +1,6 @@
 import { NextSeo } from "next-seo";
-import { FC } from "react";
 import { useRouter } from "next/router";
-import { environment } from "types/env.types";
-import { PRODUCTION_URL } from "types/const.types";
+import { ORIGIN } from "types/const.types";
 
 interface Props {
   title: string;
@@ -11,24 +9,22 @@ interface Props {
   ogType?: string;
 }
 
-export const SEO: FC<Props> = ({
+export const SEO = ({
   title,
   description,
   image,
   ogType = "website",
-}) => {
+}: Props) => {
   const { asPath } = useRouter();
-  const isProduction = environment === "production";
 
-  console.log(process.env.VERCEL_URL, "VERCEL_URL");
+  const url = ORIGIN + asPath;
   return (
     <NextSeo
       title={title}
       description={description}
+      canonical={url}
       openGraph={{
-        url: `${
-          isProduction ? PRODUCTION_URL : process.env.VERCEL_URL
-        }${asPath}`,
+        url,
         title,
         description,
         type: ogType,
@@ -37,7 +33,7 @@ export const SEO: FC<Props> = ({
       }}
       twitter={{
         handle: "@indegser",
-        site: "@indegsercom",
+        site: ORIGIN,
         cardType: "summary_large_image",
       }}
     />
