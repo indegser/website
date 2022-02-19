@@ -3,7 +3,7 @@ import { ReactEditor } from "slate-react";
 
 export const useEditorExitBreak = () => {
   const shouldExit = (editor: ReactEditor, block: NodeEntry<Ancestor>) => {
-    const whitelist = ["title", "heading", "block-quote"];
+    const whitelist = ["title", "heading", "paragraph", "block-quote"];
 
     if (!block || !block[0]) return;
     const [target] = block;
