@@ -17,7 +17,9 @@ export const TitleBlock = (props: Props) => {
   );
 };
 
-const Container = styled("div", {});
+const Container = styled("div", {
+  paddingBottom: 20,
+});
 
 const TopArea = styled("div", {
   marginTop: 40,
