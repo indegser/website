@@ -36,6 +36,12 @@ export const SEO = ({
         site: ORIGIN,
         cardType: "summary_large_image",
       }}
+      additionalMetaTags={[
+        {
+          property: "git:commit:sha",
+          content: process.env.EXT_PUBLIC_VERCEL_GIT_COMMIT_SHA,
+        },
+      ]}
     />
   );
 };
