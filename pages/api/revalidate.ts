@@ -10,6 +10,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   try {
+    await res.unstable_revalidate("/");
     await res.unstable_revalidate(`/story/${storyId}`);
     await flush(2000);
 
