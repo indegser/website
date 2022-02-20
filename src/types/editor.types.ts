@@ -100,6 +100,7 @@ export type CustomText = {
   code?: boolean;
   underline?: boolean;
   highlight?: boolean;
+  placeholder?: boolean;
 };
 
 declare module "slate" {
