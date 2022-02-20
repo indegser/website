@@ -12,18 +12,33 @@ export const TextLeaf = (props: Props) => {
   }
 
   return (
-    <Container
-      data-is-empty={leaf.text === ""}
-      {...attributes}
-      bold={leaf.bold}
-      italic={leaf.italic}
-      underline={leaf.underline}
-      highlight={leaf.highlight}
-    >
-      {wrappedChildren}
-    </Container>
+    <Wrapper>
+      {leaf.placeholder ? (
+        <Placeholder contentEditable={false}>Write Something...</Placeholder>
+      ) : null}
+      <Container
+        {...attributes}
+        bold={leaf.bold}
+        italic={leaf.italic}
+        underline={leaf.underline}
+        highlight={leaf.highlight}
+      >
+        {wrappedChildren}
+      </Container>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled("span", {});
+
+const Placeholder = styled("span", {
+  opacity: 0.3,
+  position: "absolute",
+  pointerEvents: "none",
+  left: 2,
+  minWidth: 200,
+  fontSize: "0.95em",
+});
 
 const Container = styled("span", {
   // The following is a workaround for a Chromium bug where,
@@ -31,9 +46,7 @@ const Container = styled("span", {
   // clicking the end of a block puts the cursor inside the inline
   // instead of inside the final {text: ''} node
   // https://github.com/ianstormtaylor/slate/issues/4704#issuecomment-1006696364
-  // ['&[data-is-empty="true"']: {
-  //   paddingLeft: 0.1,
-  // },
+
   variants: {
     bold: {
       true: {

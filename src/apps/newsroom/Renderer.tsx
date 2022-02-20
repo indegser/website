@@ -139,35 +139,24 @@ export const Renderer = ({
             readOnly={isReadOnly}
             renderElement={renderElement}
             renderLeaf={renderLeaf}
-            // decorate={([node, path]) => {
-            //   if (!slateEditor.selection) return [];
-            //   const include = Range.includes(editor.selection, path);
-
-            //   if (include) {
-            //     if (!slateEditor.isVoid(node as CustomElement)) return [];
-            //     return [{ ...slateEditor.selection, placeholder: true }];
-            //   }
-
-            //   return [];
-            // }}
-            // decorate={([node, path]) => {
-            //   if (editor.selection != null) {
-            //     if (
-            //       !Editor.isEditor(node) &&
-            //       Editor.string(editor, [path[0]]) === "" &&
-            //       Range.includes(editor.selection, path) &&
-            //       Range.isCollapsed(editor.selection)
-            //     ) {
-            //       return [
-            //         {
-            //           ...editor.selection,
-            //           placeholder: true,
-            //         },
-            //       ];
-            //     }
-            //   }
-            //   return [];
-            // }}
+            decorate={([node, path]) => {
+              if (editor.selection != null) {
+                if (
+                  !Editor.isEditor(node) &&
+                  Editor.string(editor, [path[0]]) === "" &&
+                  Range.includes(editor.selection, path) &&
+                  Range.isCollapsed(editor.selection)
+                ) {
+                  return [
+                    {
+                      ...editor.selection,
+                      placeholder: true,
+                    },
+                  ];
+                }
+              }
+              return [];
+            }}
             onKeyDown={(event) => {
               /**
                * SOFT_BREAK
