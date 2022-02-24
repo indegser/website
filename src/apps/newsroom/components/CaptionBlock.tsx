@@ -1,11 +1,12 @@
 import { styled, theme } from "common/stitches.config";
-import { Descendant, Node, Path, Transforms } from "slate";
+import { Descendant, Node, Transforms } from "slate";
 import { Editable, ReactEditor, Slate } from "slate-react";
+import { CustomBookmark, CustomImage, CustomYoutube } from "types/editor.types";
 import { useEditor } from "../hooks/useEditor";
 import { TextLeaf } from "./TextLeaf";
 
 interface Props {
-  parentElement: Node;
+  parentElement: CustomImage | CustomYoutube | CustomBookmark;
   parentEditor: ReactEditor;
 }
 
@@ -21,10 +22,6 @@ export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
     return ReactEditor.findPath(parentEditor, parentElement);
   };
 
-  if (!("caption" in parentElement)) {
-    return null;
-  }
-
   const { caption } = parentElement;
   const textNode = caption?.children?.[0];
   const hasContent = textNode && Node.string(caption?.children?.[0]) !== "";
@@ -35,7 +32,7 @@ export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
     <Container>
       <Slate
         editor={editor}
-        value={caption.children ?? INITIAL_CAPTION}
+        value={caption?.children ?? INITIAL_CAPTION}
         onChange={(value) => {
           const isAstChange = editor.operations.some(
             (op) => "set_selection" !== op.type

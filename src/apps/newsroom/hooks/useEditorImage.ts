@@ -15,7 +15,12 @@ const isImageUrl = (url: string) => {
 export const useEditorImage = () => {
   const insertImage = (editor: ReactEditor, url: string) => {
     const text = { text: "" };
-    const image: CustomImage = { type: "image", url, children: [text] };
+    const image: CustomImage = {
+      type: "image",
+      url,
+      children: [text],
+      caption: { isEnabled: true },
+    };
     Transforms.insertNodes(editor, image);
   };
 

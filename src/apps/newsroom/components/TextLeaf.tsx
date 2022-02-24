@@ -32,7 +32,7 @@ export const TextLeaf = (props: Props) => {
 const Wrapper = styled("span", {});
 
 const Placeholder = styled("span", {
-  opacity: 0.3,
+  opacity: 0.333,
   position: "absolute",
   pointerEvents: "none",
   left: 2,
