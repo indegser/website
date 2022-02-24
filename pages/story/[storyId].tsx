@@ -18,8 +18,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { storyId } = params;
 
   try {
-    const story = await firebaseApi.getStory(storyId.toString());
-    return { props: { story } };
+    const strStoryId = storyId.toString();
+    const story = await firebaseApi.getStory(strStoryId);
+    return { props: { fallback: { [strStoryId]: story } } };
   } catch (err) {
     return { notFound: true };
   }
