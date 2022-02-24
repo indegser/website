@@ -1,8 +1,7 @@
-import styled from "@emotion/styled";
-import { motion } from "framer-motion";
 import { CustomImage } from "types/editor.types";
-import { RenderElementProps } from "slate-react";
-import { theme } from "common/stitches.config";
+import { RenderElementProps, useSlateStatic } from "slate-react";
+import { CaptionBlock } from "./CaptionBlock";
+import { styled } from "common/stitches.config";
 
 interface Props extends RenderElementProps {
   element: CustomImage;
@@ -10,6 +9,7 @@ interface Props extends RenderElementProps {
 
 export const ImageBlock = ({ children, attributes, element }: Props) => {
   const { url } = element;
+  const editor = useSlateStatic();
 
   return (
     <Container {...attributes}>
@@ -17,21 +17,23 @@ export const ImageBlock = ({ children, attributes, element }: Props) => {
       <ImageContainer contentEditable={false}>
         <Image src={url} alt={url} />
       </ImageContainer>
+      <CaptionBlock parentEditor={editor} parentElement={element} />
     </Container>
   );
 };
 
-const Container = styled.div`
-  margin: 0.25rem 0;
-`;
+const Container = styled("div", {
+  margin: "0.25rem 0",
+});
 
-const ImageContainer = styled.div`
-  cursor: pointer;
-  position: relative;
-`;
+const ImageContainer = styled("div", {
+  cursor: "pointer",
+  position: "relative",
+  margin: "1rem 0",
+});
 
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  display: block;
-`;
+const Image = styled("img", {
+  width: "100%",
+  height: "auto",
+  display: "block",
+});
