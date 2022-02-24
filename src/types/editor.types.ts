@@ -24,6 +24,10 @@ export type CustomImage = {
   type: "image";
   url: string;
   alt?: string;
+  caption: {
+    isEnabled: boolean;
+    children?: Descendant[];
+  };
   children: CustomText[];
 };
 
