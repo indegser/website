@@ -16,8 +16,8 @@ export const ImageBlock = ({ children, attributes, element }: Props) => {
       {children}
       <ImageContainer contentEditable={false}>
         <Image src={url} alt={url} />
+        <CaptionBlock parentEditor={editor} parentElement={element} />
       </ImageContainer>
-      <CaptionBlock parentEditor={editor} parentElement={element} />
     </Container>
   );
 };
@@ -27,13 +27,12 @@ const Container = styled("div", {
 });
 
 const ImageContainer = styled("div", {
-  cursor: "pointer",
   position: "relative",
-  margin: "1rem 0",
 });
 
 const Image = styled("img", {
   width: "100%",
   height: "auto",
   display: "block",
+  margin: "1rem 0",
 });
