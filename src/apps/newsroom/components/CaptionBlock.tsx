@@ -74,4 +74,5 @@ export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
 const Container = styled("div", {
   fontSize: "0.85em",
   color: theme.colors.fgSubtle,
+  marginBottom: "1rem",
 });
