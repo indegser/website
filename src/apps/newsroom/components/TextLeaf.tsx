@@ -13,8 +13,8 @@ export const TextLeaf = (props: Props) => {
 
   return (
     <Wrapper>
-      {leaf.placeholder ? (
-        <Placeholder contentEditable={false}>Write Something...</Placeholder>
+      {leaf.placeholder === true ? (
+        <Placeholder contentEditable={false}>텍스트 추가</Placeholder>
       ) : null}
       <Container
         {...attributes}
