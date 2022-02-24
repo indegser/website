@@ -1,22 +1,17 @@
-import { useIsAdmin } from "common/hooks/admin.hooks";
-import { SEO } from "common/SEO";
+import { SWRConfig } from "swr";
 import { StoryType } from "types/story.types";
-import { NewsroomPage } from "./NewsroomPage";
-import { useStorySEO } from "./StoryPage.hooks";
+import { StoryContent } from "./StoryContent";
+import { StorySeo } from "./StorySeo";
 
 interface Props {
-  story: StoryType;
+  fallback: { string: StoryType };
 }
 
-export const StoryPage = ({ story }: Props) => {
-  const isAdmin = useIsAdmin();
-  const initialValue = JSON.parse(story.content);
-  const seo = useStorySEO(story);
-
+export const StoryPage = ({ fallback }: Props) => {
   return (
-    <>
-      <SEO title={seo.title} description={seo.description} ogType="article" />
-      <NewsroomPage isReadOnly={!isAdmin} content={initialValue} />
-    </>
+    <SWRConfig value={{ fallback }}>
+      <StorySeo />
+      <StoryContent />
+    </SWRConfig>
   );
 };
