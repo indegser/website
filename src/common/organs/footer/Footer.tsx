@@ -1,41 +1,42 @@
-import styled from "@emotion/styled";
 import { PageContainer } from "common/atoms/Container";
-import FooterMenu from "./FooterMenu";
 import { mq } from "common/theme";
+import { styled, theme } from "common/stitches.config";
+import { Sns } from "./Sns";
 
-const FooterBox = styled.footer`
-  margin-top: 32px;
-  padding: 16px 0;
-`;
-const Layout = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  grid-gap: 20px;
-  align-items: center;
-
-  ${mq("md")} {
-    grid-auto-flow: row;
-    grid-gap: 0;
-  }
-`;
-
-const Name = styled.div`
-  font-weight: 500;
-  font-size: 12px;
-`;
-
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterBox>
       <PageContainer>
         <Layout>
-          <Name>Jaekwon Han (indegser@gmail.com)</Name>
-          <FooterMenu />
+          <Name>Indegser. Designer at Seoul, South Korea.</Name>
+          <Sns />
         </Layout>
       </PageContainer>
     </FooterBox>
   );
 };
 
-export default Footer;
+const FooterBox = styled("footer", {
+  marginTop: 32,
+  padding: "16px 0 48px 0",
+});
+
+const Layout = styled("div", {
+  display: "grid",
+  gridAutoColumns: "max-content",
+  gridGap: "0 20px",
+  alignItems: "center",
+  gridTemplateAreas: `"name sns"`,
+
+  [mq("md")]: {
+    gridGap: "12px 0",
+    justifyContent: "center",
+    gridTemplateAreas: `"sns" "name"`,
+  },
+});
+
+const Name = styled("div", {
+  fontSize: 14,
+  color: theme.colors.fgSubtle,
+  gridArea: "name",
+});
