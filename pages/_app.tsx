@@ -11,6 +11,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useAdminStore } from "common/hooks/admin.hooks";
 import { globalStyles } from "common/globalStyles";
 import { styled } from "common/stitches.config";
+import { Footer } from "common/organs/footer/Footer";
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -33,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Main>
           <Component {...pageProps} />
         </Main>
+        <Footer />
       </Page>
     </>
   );
@@ -42,4 +44,4 @@ const Page = styled("div", {
   width: "100%",
 });
 
-const Main = styled("div", {});
+const Main = styled("div", { minHeight: "100vh" });
