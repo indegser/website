@@ -1,7 +1,7 @@
 import { PageContainer } from "common/atoms/Container";
 import { NewsPreview } from "./NewsPreview";
 import { SEO } from "common/SEO";
-import { CreateNew } from "./CreateNew";
+import { CreateNews } from "./CreateNews";
 import { useIsAdmin } from "common/hooks/admin.hooks";
 import { styled } from "common/stitches.config";
 import { mq } from "common/theme";
@@ -19,7 +19,7 @@ export const NewsroomPage = () => {
           <NewsPreview key={news.id} news={news} />
         ))}
       </ContentList>
-      {isAdmin && <CreateNew />}
+      {isAdmin && <CreateNews />}
     </PageContainer>
   );
 };

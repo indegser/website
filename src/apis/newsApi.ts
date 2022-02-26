@@ -21,6 +21,10 @@ const getLatestNews = async () => {
 };
 
 const getNews = async (newsId: NewsType["id"]) => {
+  const isNew = newsId === "new";
+
+  if (isNew) return {} as NewsType;
+
   const response = await supabase
     .from<NewsType>("news")
     .select("*")

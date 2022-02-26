@@ -16,7 +16,7 @@ export const NewsHeadline = () => {
   const value = dayjs(news.published_at).format("YYYY-MM-DD");
   const publishedAt = dayjs(news.published_at).format("MMMM D, YYYY");
   const [headlineValue, setHeadlineValue] = useState<Descendant[]>(() => [
-    { type: "title", children: [{ text: news.title }] },
+    { type: "title", children: [{ text: news.title ?? "" }] },
     { type: "excerpt", children: [{ text: news.excerpt ?? "" }] },
   ]);
 

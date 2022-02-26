@@ -13,7 +13,7 @@ export const NewsContent = () => {
   const { autoSaveNewsContent } = useNewsContent();
 
   const initialValue = useMemo(() => {
-    if (news.content === null) {
+    if (!news.content) {
       return [{ type: "paragraph", children: [{ text: "" }] }];
     }
 

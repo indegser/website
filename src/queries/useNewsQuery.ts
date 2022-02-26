@@ -8,11 +8,17 @@ export const buildUseNewsQueryKey = (newsId: NewsType["id"]) => {
 };
 
 export const useNewsQuery = () => {
+  const newsId = useNewsId();
   const key = useNewsQueryKey();
-  return useSWR(key, () => newsApi.getNews(key.split("/")[1]));
+  return useSWR(key, () => newsApi.getNews(newsId));
+};
+
+const useNewsId = () => {
+  const { query } = useRouter();
+  return query.newsId?.toString() as string;
 };
 
 export const useNewsQueryKey = () => {
-  const newsId = useRouter().query.newsId?.toString();
+  const newsId = useNewsId();
   return buildUseNewsQueryKey(newsId);
 };
