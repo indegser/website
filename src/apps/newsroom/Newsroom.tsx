@@ -1,5 +1,5 @@
 import { PageContainer } from "common/atoms/Container";
-import { StoryRow } from "./StoryRow";
+import { NewsPreview } from "./NewsPreview";
 import { SEO } from "common/SEO";
 import { CreateNew } from "./CreateNew";
 import { useIsAdmin } from "common/hooks/admin.hooks";
@@ -7,7 +7,7 @@ import { styled } from "common/stitches.config";
 import { mq } from "common/theme";
 import { useNewsroomQuery } from "queries/useNewsroomQuery";
 
-export const MainPage = () => {
+export const NewsroomPage = () => {
   const { data: newsroom } = useNewsroomQuery();
   const isAdmin = useIsAdmin();
 
@@ -16,7 +16,7 @@ export const MainPage = () => {
       <SEO title="Newsroom" />
       <ContentList>
         {newsroom.map((news) => (
-          <StoryRow key={news.id} news={news} />
+          <NewsPreview key={news.id} news={news} />
         ))}
       </ContentList>
       {isAdmin && <CreateNew />}

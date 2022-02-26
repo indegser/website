@@ -2,8 +2,16 @@ import { newsApi } from "apis/newsApi";
 import { NewsType } from "types/news.types";
 import dayjs from "dayjs";
 import { useNewsQuery, useNewsQueryKey } from "queries/useNewsQuery";
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, useState } from "react";
 import { mutate } from "swr";
+import { withReact } from "slate-react";
+import { createEditor } from "slate";
+import { withHistory } from "slate-history";
+
+export const useHeadlineEditor = () => {
+  const [editor] = useState(() => withHistory(withReact(createEditor())));
+  return editor;
+};
 
 export const useNewsPublishedAt = () => {
   const { data } = useNewsQuery();

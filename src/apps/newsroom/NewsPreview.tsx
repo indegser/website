@@ -15,13 +15,13 @@ interface Props {
   news: NewsType;
 }
 
-export const StoryRow = ({ news }: Props) => {
+export const NewsPreview = ({ news }: Props) => {
   const desc = useMemo(() => {
     const result = dayjs(dayjs(news.published_at)).calendar(null, {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
       lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
-      lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
-      sameElse: "YYYY[년] MMMM D[일] A h:mm", // Everything else ( 17/10/2011 )
+      lastWeek: "[지난] dddd A", // Last week ( Last Monday at 2:30 AM )
+      sameElse: "YYYY[년] MMMM D[일]", // Everything else ( 17/10/2011 )
     });
 
     return result;

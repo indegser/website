@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { MainPage } from "apps/main/MainPage";
+import { NewsroomPage } from "apps/newsroom/Newsroom";
 import { newsApi } from "apis/newsApi";
 import { USE_NEWSROOM_QUERY_KEY } from "queries/useNewsroomQuery";
 
@@ -19,4 +19,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 };
 
-export default MainPage;
+export default NewsroomPage;

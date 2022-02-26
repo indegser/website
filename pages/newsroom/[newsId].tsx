@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { NewsPage } from "apps/newsroom/NewsPage";
+import { NewsPage } from "apps/news/NewsPage";
 import { newsApi } from "apis/newsApi";
 import { buildUseNewsQueryKey } from "queries/useNewsQuery";
 
