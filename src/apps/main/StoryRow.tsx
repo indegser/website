@@ -3,21 +3,21 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
 import { mq } from "common/theme";
-import { StoryType } from "types/story.types";
-import "dayjs/locale/ko";
 import { Row } from "common/atoms/Row";
 import { styled, theme } from "common/stitches.config";
+import { NewsType } from "types/news.types";
 
+import "dayjs/locale/ko";
 dayjs.extend(calendar);
 dayjs.locale("ko");
 
 interface Props {
-  story: StoryType;
+  news: NewsType;
 }
 
-export const StoryRow = ({ story }: Props) => {
+export const StoryRow = ({ news }: Props) => {
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(story.createdAt)).calendar(null, {
+    const result = dayjs(dayjs(news.published_at)).calendar(null, {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
       lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
       lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
@@ -25,14 +25,14 @@ export const StoryRow = ({ story }: Props) => {
     });
 
     return result;
-  }, [story.updatedAt]);
+  }, [news.published_at]);
 
   return (
     <Container>
-      <Link href={`/story/${story.id}`} passHref>
+      <Link href={`/newsroom/${news.id}`} passHref>
         <a>
           <Row>
-            <Title>{story.title}</Title>
+            <Title>{news.title}</Title>
             <Right>
               <Time>{desc}</Time>
             </Right>

@@ -1,6 +1,8 @@
 import { CustomTitle } from "types/editor.types";
 import { RenderElementProps } from "slate-react";
 import { styled } from "common/stitches.config";
+import { useTagsQuery } from "queries/useTagsQuery";
+import * as Popover from "@radix-ui/react-popover";
 
 interface Props extends RenderElementProps {
   element: CustomTitle;

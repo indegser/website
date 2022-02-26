@@ -1,4 +1,4 @@
-import { CustomParagraph, CustomTitle } from "types/editor.types";
+import { CustomParagraph } from "types/editor.types";
 import { Element, Node, Transforms } from "slate";
 import { ReactEditor } from "slate-react";
 
@@ -9,19 +9,11 @@ export const useEditorLayout = () => {
     editor.normalizeNode = ([node, path]) => {
       if (path.length === 0) {
         if (editor.children.length < 1) {
-          const title: CustomTitle = {
-            type: "title",
-            children: [{ text: "" }],
-          };
-          Transforms.insertNodes(editor, title, { at: path.concat(0) });
-        }
-
-        if (editor.children.length < 2) {
           const paragraph: CustomParagraph = {
             type: "paragraph",
             children: [{ text: "" }],
           };
-          Transforms.insertNodes(editor, paragraph, { at: path.concat(1) });
+          Transforms.insertNodes(editor, paragraph, { at: path.concat(0) });
         }
 
         for (const [child, childPath] of Node.children(editor, path)) {
@@ -39,7 +31,7 @@ export const useEditorLayout = () => {
 
           switch (slateIndex) {
             case 0:
-              type = "title";
+              type = "paragraph";
               enforceType(type);
               break;
             default:

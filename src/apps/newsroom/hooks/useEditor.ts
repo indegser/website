@@ -28,14 +28,12 @@ export const useEditor = (editor?: ReactEditor, isLeafOnly?: boolean) => {
       return withReact(baseEditor);
     }
 
-    return withLayout(
-      withList(
-        withExitBreak(
-          withMarkdown(
-            withYoutube(
-              withInline(
-                withImage(withHTMLPaste(withHistory(withReact(baseEditor))))
-              )
+    return withList(
+      withExitBreak(
+        withMarkdown(
+          withYoutube(
+            withInline(
+              withImage(withHTMLPaste(withHistory(withReact(baseEditor))))
             )
           )
         )
