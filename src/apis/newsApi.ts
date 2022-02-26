@@ -33,6 +33,14 @@ const getNews = async (newsId: NewsType["id"]) => {
   return response.data[0];
 };
 
+const createNews = async (news: Partial<NewsType>) => {
+  const response = await supabase
+    .from<NewsType>("news")
+    .insert(news, { returning: "representation" });
+
+  return response.data[0];
+};
+
 const updateNewsById = async (news: NewsType) => {
   const response = await supabase
     .from<NewsType>("news")
@@ -44,6 +52,7 @@ const updateNewsById = async (news: NewsType) => {
 
 export const newsApi = {
   getNews,
+  createNews,
   getAllNews,
   getLatestNews,
   updateNewsById,

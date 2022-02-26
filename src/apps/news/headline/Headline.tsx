@@ -69,7 +69,9 @@ export const NewsHeadline = () => {
 };
 
 const Section = styled("section", {
-  padding: "50px 0",
+  padding: "50px 0 20px",
+  marginBottom: "20px",
+  borderBottom: `1px solid ${theme.colors.borderDefault}`,
 });
 
 const Metadata = styled("div", {

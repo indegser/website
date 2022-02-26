@@ -7,7 +7,7 @@ export const NewsSeo = () => {
 
   return (
     <SEO
-      title={title}
+      title={title ?? "제목없음"}
       description={excerpt}
       image={cover_url}
       ogType="article"
