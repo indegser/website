@@ -4,13 +4,7 @@ const content = `
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://indegser.com/</loc>
-  </url>
-  <url>
-    <loc>https://indegser.com/indegser</loc>
-  </url>
-  <url>
-    <loc>https://indegser.com/indegser/portfolio</loc>
+    <loc>https://indegser.pro/</loc>
   </url>
 </urlset>
 `.trim();
@@ -23,4 +17,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   return { props: {} };
 };
 
-export default () => {};
+function SitemapPage() {
+  return null;
+}
+
+export default SitemapPage;
