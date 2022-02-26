@@ -1,6 +1,6 @@
 import { MarkdownContainer } from "common/atoms/Container";
 import { Descendant, Editor, Range } from "slate";
-import { useEditorValue } from "./hooks/useEditorValue";
+import { useEditorValue } from "../hooks/useEditorValue";
 import {
   Editable,
   ReactEditor,
@@ -8,22 +8,22 @@ import {
   RenderLeafProps,
   Slate,
 } from "slate-react";
-import { YoutubeBlock } from "./components/YoutubeBlock";
-import { ImageBlock } from "./components/ImageBlock";
-import { TextLeaf } from "./components/TextLeaf";
-import { useEditor } from "./hooks/useEditor";
-import { TitleBlock } from "./components/TitleBlock";
-import { HeadingBlock } from "./components/HeadingBlock";
-import { LinkLeaf } from "./components/LinkLeaf";
+import { YoutubeBlock } from "../components/YoutubeBlock";
+import { ImageBlock } from "../components/ImageBlock";
+import { TextLeaf } from "../components/TextLeaf";
+import { useEditor } from "../hooks/useEditor";
+import { TitleBlock } from "../components/TitleBlock";
+import { HeadingBlock } from "../components/HeadingBlock";
+import { LinkLeaf } from "../components/LinkLeaf";
 import isHotkey from "is-hotkey";
 import { styled } from "common/stitches.config";
-import { BookmarkBlock } from "./components/BookmarkBlock";
+import { BookmarkBlock } from "../components/BookmarkBlock";
 import { mq } from "common/theme";
-import { BulletedListBlock } from "./components/BulletedListBlock";
+import { BulletedListBlock } from "../components/BulletedListBlock";
 
 interface Props {
   initialValue: any[];
-  editor?: any;
+  editor?: ReactEditor;
   isReadOnly?: boolean;
   onChange?: any;
 }
@@ -51,14 +51,13 @@ const toggleMark = (editor: ReactEditor, format: string) => {
   }
 };
 
-export const Renderer = ({
+export const ContentEditable = ({
   editor,
   initialValue,
   isReadOnly = false,
   onChange,
 }: Props) => {
   const [value, setValue] = useEditorValue(initialValue);
-
   const slateEditor = useEditor(editor);
 
   const renderElement = (props: RenderElementProps) => {
@@ -127,8 +126,15 @@ export const Renderer = ({
   };
 
   const handleChange = (value: Descendant[]) => {
+    const isAstChange = editor.operations.some(
+      (op) => "set_selection" !== op.type
+    );
+
     setValue(value);
-    onChange(value);
+
+    if (isAstChange) {
+      onChange(value);
+    }
   };
 
   return (
@@ -136,6 +142,7 @@ export const Renderer = ({
       <Container>
         <Slate editor={slateEditor} value={value} onChange={handleChange}>
           <Editable
+            autoFocus
             readOnly={isReadOnly}
             renderElement={renderElement}
             renderLeaf={renderLeaf}
