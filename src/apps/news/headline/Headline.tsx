@@ -1,68 +1,25 @@
 import { MarkdownContainer } from "common/atoms/Container";
 import { styled, theme } from "common/stitches.config";
 import { mq } from "common/theme";
-import dayjs from "dayjs";
-import { useNewsQuery } from "queries/useNewsQuery";
-import { useRef, useState } from "react";
-import { Descendant } from "slate";
-import { Editable, RenderElementProps, Slate } from "slate-react";
-import { useHeadlineEditor, useNewsPublishedAt } from "./Headline.hooks";
+import { RenderElementProps } from "slate-react";
+import { CustomHeadline } from "types/editor.types";
+import { NewsDate } from "./NewsDate";
 import { NewsTag } from "./NewsTag";
 
-export const NewsHeadline = () => {
-  const editor = useHeadlineEditor();
-  const dateInputRef = useRef<HTMLInputElement>();
-  const { data: news } = useNewsQuery();
-  const value = dayjs(news.published_at).format("YYYY-MM-DD");
-  const publishedAt = dayjs(news.published_at).format("MMMM D, YYYY");
-  const [headlineValue, setHeadlineValue] = useState<Descendant[]>(() => [
-    { type: "title", children: [{ text: news.title ?? "" }] },
-    { type: "excerpt", children: [{ text: news.excerpt ?? "" }] },
-  ]);
+interface Props extends RenderElementProps {
+  element: CustomHeadline;
+}
 
-  const { handleDateInputChange } = useNewsPublishedAt();
-
-  const renderElement = ({
-    element,
-    attributes,
-    children,
-  }: RenderElementProps) => {
-    switch (element.type) {
-      case "title": {
-        return <Title {...attributes}>{children}</Title>;
-      }
-      case "excerpt": {
-        return <Excerpt {...attributes}>{children}</Excerpt>;
-      }
-      default: {
-        return null;
-      }
-    }
-  };
-
+export const NewsHeadline = ({ element, attributes, children }: Props) => {
   return (
     <Section>
       <MarkdownContainer>
-        <Metadata>
+        <Metadata contentEditable={false}>
           <NewsTag />
           <Divider />
-          <PublishedAt>
-            {publishedAt}
-            <input
-              ref={dateInputRef}
-              type="date"
-              defaultValue={value}
-              onChange={handleDateInputChange}
-            />
-          </PublishedAt>
+          <NewsDate />
         </Metadata>
-        <Slate
-          editor={editor}
-          value={headlineValue}
-          onChange={setHeadlineValue}
-        >
-          <Editable placeholder="제목없음" renderElement={renderElement} />
-        </Slate>
+        <Title {...attributes}>{children}</Title>
       </MarkdownContainer>
     </Section>
   );
@@ -81,6 +38,7 @@ const Metadata = styled("div", {
   gridGap: "0 12px",
   alignItems: "center",
   paddingBottom: 12,
+  userSelect: "none",
 });
 
 const Title = styled("h1", {
@@ -106,12 +64,6 @@ const Excerpt = styled("h3", {
   [mq("sm")]: {
     fontSize: 18,
   },
-});
-
-const PublishedAt = styled("div", {
-  fontSize: 14,
-  fontWeight: 560,
-  color: theme.colors.fgSubtle,
 });
 
 const Divider = styled("div", {

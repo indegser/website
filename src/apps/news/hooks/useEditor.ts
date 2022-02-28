@@ -7,7 +7,6 @@ import { withList } from "../utils/withList";
 import { useEditorExitBreak } from "./useEditorExitBreak";
 import { useEditorImage } from "./useEditorImage";
 import { useEditorInline } from "./useEditorInline";
-import { useEditorLayout } from "./useEditorLayout";
 import { useEditorMarkdown } from "./useEditorMarkdown";
 import { useEditorYoutube } from "./useEditorYoutube";
 
@@ -15,7 +14,6 @@ export const useEditor = (editor?: ReactEditor, isLeafOnly?: boolean) => {
   const { withImage } = useEditorImage();
   const { withYoutube } = useEditorYoutube();
   const { withInline } = useEditorInline();
-  const { withLayout } = useEditorLayout();
   const { withMarkdown } = useEditorMarkdown();
   const { withExitBreak } = useEditorExitBreak();
 

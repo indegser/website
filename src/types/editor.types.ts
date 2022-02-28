@@ -14,7 +14,8 @@ export type CustomElement =
   | CustomBookmark
   | CustomCaption
   | CustomBulletedList
-  | CustomExcerpt;
+  | CustomExcerpt
+  | CustomHeadline;
 
 export type CustomParagraph = {
   type: "paragraph" | "p" | "ul" | "li";
@@ -29,6 +30,11 @@ export type CustomImage = {
     isEnabled: boolean;
     children?: Descendant[];
   };
+  children: CustomText[];
+};
+
+export type CustomHeadline = {
+  type: "headline";
   children: CustomText[];
 };
 
