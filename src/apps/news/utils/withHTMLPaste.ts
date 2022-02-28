@@ -1,4 +1,4 @@
-import { Transforms } from "slate";
+import { Element, Node, Transforms } from "slate";
 import { jsx } from "slate-hyperscript";
 import { ReactEditor } from "slate-react";
 import { CustomElement } from "types/editor.types";
@@ -78,7 +78,24 @@ export const deserialize = (el: HTMLElement) => {
 };
 
 export const withHTMLPaste = (editor: ReactEditor) => {
-  const { insertData } = editor;
+  const { insertData, normalizeNode } = editor;
+
+  editor.normalizeNode = (entry) => {
+    const [node, path] = entry;
+
+    // If the element is a paragraph, ensure its children are valid.
+    if (Element.isElement(node) && node.type === "paragraph") {
+      for (const [child, childPath] of Node.children(editor, path)) {
+        if (Element.isElement(child) && !editor.isInline(child)) {
+          Transforms.unwrapNodes(editor, { at: childPath });
+          return;
+        }
+      }
+    }
+
+    // Fall back to the original `normalizeNode` to enforce other constraints.
+    normalizeNode(entry);
+  };
 
   editor.insertData = (data) => {
     const html = data.getData("text/html");

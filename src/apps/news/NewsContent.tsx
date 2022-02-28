@@ -2,8 +2,9 @@ import { useIsAdmin } from "common/hooks/admin.hooks";
 import { useNewsQuery } from "queries/useNewsQuery";
 import { useMemo } from "react";
 import { useEditor } from "./hooks/useEditor";
-import { ContentEditable } from "./content-editable/ContentEditable";
+import { ContentEditable } from "./ContentEditable";
 import { useNewsContent } from "./NewsContent.hooks";
+import { Descendant } from "slate";
 
 export const NewsContent = () => {
   const isAdmin = useIsAdmin();
@@ -12,13 +13,16 @@ export const NewsContent = () => {
 
   const { autoSaveNewsContent } = useNewsContent();
 
-  const initialValue = useMemo(() => {
+  const initialValue = useMemo<Descendant[]>(() => {
     if (!news.content) {
-      return [{ type: "paragraph", children: [{ text: "" }] }];
+      return [
+        { type: "headline", children: [{ text: "" }] },
+        { type: "paragraph", children: [{ text: "" }] },
+      ];
     }
 
     return JSON.parse(news.content);
-  }, [news.content]);
+  }, []);
 
   return (
     <ContentEditable
