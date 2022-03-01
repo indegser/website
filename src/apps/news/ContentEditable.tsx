@@ -209,7 +209,7 @@ const Container = styled("article", {
   [mq("sm")]: {
     fontSize: 17,
     lineHeight: 1.6,
-    padding: "0 24px 80px 24px",
+    padding: "0 0 80px 0",
   },
 
   ["& p"]: {

@@ -1,13 +1,18 @@
 import { useTagsQuery } from "queries/useTagsQuery";
 import * as Select from "@radix-ui/react-select";
 import { styled, theme } from "common/stitches.config";
-import { IoPricetagsSharp } from "react-icons/io5";
-import { mediaQueries, mq } from "common/theme";
+import { mediaQueries } from "common/theme";
 import { useState } from "react";
+import { useIsAdmin } from "common/hooks/admin.hooks";
 
 export const NewsTag = () => {
+  const isAdmin = useIsAdmin();
   const { data } = useTagsQuery();
   const [value, setValue] = useState("Reading");
+
+  if (!isAdmin) {
+    return <Container>{value}</Container>;
+  }
 
   return (
     <Container>
@@ -30,16 +35,18 @@ export const NewsTag = () => {
 };
 
 const Container = styled("div", {
-  margin: "4px 0",
+  fontSize: 14,
+  fontWeight: 560,
+  color: theme.colors.fgSubtle,
 });
 
 const StyledTrigger = styled(Select.Trigger, {
   background: "none",
   outline: "none",
   border: "none",
+  font: "inherit",
+  color: "inherit",
   cursor: "pointer",
-  color: theme.colors.fgSubtle,
-  fontSize: 14,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -70,14 +77,12 @@ const StyledContent = styled(Select.Content, {
 
 const StyledItem = styled(Select.Item, {
   all: "unset",
-  fontSize: 13,
   lineHeight: 1,
-  // color: violet.violet11,
   borderRadius: 3,
   display: "flex",
   alignItems: "center",
-  height: 25,
-  padding: "0 35px 0 25px",
+  color: theme.colors.fgSubtle,
+  padding: "8px 35px 8px 25px",
   position: "relative",
   userSelect: "none",
 
