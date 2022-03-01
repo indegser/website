@@ -15,6 +15,10 @@ export const useNewsDate = () => {
     return dayjs(news.published_at).format("MMMM D, YYYY");
   }, [news.published_at]);
 
+  const inputValue = useMemo(() => {
+    return dayjs(news.published_at).format("YYYY-MM-DD");
+  }, [news.published_at]);
+
   const handleChange: ChangeEventHandler<HTMLInputElement> = async (event) => {
     const nextPublishedAt = dayjs(event.target.value).format();
     const nextNews: NewsType = { ...news, published_at: nextPublishedAt };
@@ -26,6 +30,7 @@ export const useNewsDate = () => {
   };
 
   return {
+    inputValue,
     displayDate,
     handleChange,
   };

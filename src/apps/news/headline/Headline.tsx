@@ -26,7 +26,7 @@ export const NewsHeadline = ({ element, attributes, children }: Props) => {
 };
 
 const Section = styled("section", {
-  padding: "50px 0 20px",
+  padding: "50px 0 10px",
   marginBottom: "20px",
   borderBottom: `1px solid ${theme.colors.borderDefault}`,
 });

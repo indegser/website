@@ -4,11 +4,15 @@ import { useNewsDate } from "./NewsDate.hooks";
 
 export const NewsDate = () => {
   const isAdmin = useIsAdmin();
-  const { displayDate, handleChange } = useNewsDate();
+  const { inputValue, displayDate, handleChange } = useNewsDate();
 
   return (
     <PublishedAt>
-      {isAdmin ? <input type="date" onChange={handleChange} /> : displayDate}
+      {isAdmin ? (
+        <input type="date" defaultValue={inputValue} onChange={handleChange} />
+      ) : (
+        displayDate
+      )}
     </PublishedAt>
   );
 };
