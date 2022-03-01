@@ -5,14 +5,12 @@ import { ChangeEventHandler, useMemo } from "react";
 import { mutate } from "swr";
 import { NewsType } from "types/news.types";
 
-dayjs.locale("en");
-
 export const useNewsDate = () => {
   const { data: news } = useNewsQuery();
   const newsQueryKey = useNewsQueryKey();
 
   const displayDate = useMemo(() => {
-    return dayjs(news.published_at).format("MMMM D, YYYY");
+    return dayjs(news.published_at).locale("en").format("MMMM D, YYYY");
   }, [news.published_at]);
 
   const inputValue = useMemo(() => {

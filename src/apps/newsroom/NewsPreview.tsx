@@ -6,10 +6,9 @@ import { mq } from "common/theme";
 import { Row } from "common/atoms/Row";
 import { styled, theme } from "common/stitches.config";
 import { NewsType } from "types/news.types";
-
 import "dayjs/locale/ko";
+
 dayjs.extend(calendar);
-dayjs.locale("ko");
 
 interface Props {
   news: NewsType;
@@ -17,7 +16,7 @@ interface Props {
 
 export const NewsPreview = ({ news }: Props) => {
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(news.published_at)).calendar(null, {
+    const result = dayjs(dayjs(news.published_at)).locale("ko").calendar(null, {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
       lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
       lastWeek: "[지난] dddd A", // Last week ( Last Monday at 2:30 AM )
