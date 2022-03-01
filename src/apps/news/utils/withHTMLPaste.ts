@@ -122,18 +122,15 @@ export const withHTMLPaste = (editor: ReactEditor) => {
     const isHeadline = editor.selection.anchor.path[0] === 0;
 
     if (isHeadline) {
-      Transforms.insertText(editor, "", {
-        at: Editor.after(editor, editor.selection.anchor.path),
-      });
-      Transforms.select(
-        editor,
-        Editor.after(editor, editor.selection.anchor.path)
-      );
+      if (fragment.length === 1) {
+        Editor.insertText(editor, Node.string(fragment[0]));
+        return;
+      }
+
+      Editor.insertBreak(editor);
     }
 
-    Transforms.insertFragment(editor, fragment, {
-      at: Editor.after(editor, editor.selection.anchor.path),
-    });
+    Transforms.insertFragment(editor, fragment);
   };
 
   return editor;

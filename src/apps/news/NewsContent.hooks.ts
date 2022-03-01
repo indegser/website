@@ -25,9 +25,9 @@ export const useNewsContent = () => {
     };
 
     if (!nextNews.id) {
-      // const result = await newsApi.createNews(nextNews);
-      // mutate(buildUseNewsQueryKey(result.id), nextNews, false);
-      // router.replace(`/newsroom/${result.id}`, null, { shallow: true });
+      const result = await newsApi.createNews(nextNews);
+      mutate(buildUseNewsQueryKey(result.id), nextNews, false);
+      router.replace(`/newsroom/${result.id}`, null, { shallow: true });
       return;
     }
 
