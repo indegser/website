@@ -17,6 +17,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@radix-ui/react-popover": "^0.1.5",
+    "@radix-ui/react-select": "^0.1.1",
     "@sentry/nextjs": "^6.17.9",
     "@stitches/react": "^1.2.6",
     "@supabase/supabase-js": "^1.30.6",

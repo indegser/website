@@ -87,6 +87,10 @@ export const withHTMLPaste = (editor: ReactEditor) => {
     if (Element.isElement(node) && node.type === "paragraph") {
       for (const [child, childPath] of Node.children(editor, path)) {
         if (Element.isElement(child) && !editor.isInline(child)) {
+          if (child.type === "heading") {
+            Transforms.liftNodes(editor, { at: childPath });
+            return;
+          }
           Transforms.unwrapNodes(editor, { at: childPath });
           return;
         }
@@ -106,8 +110,8 @@ export const withHTMLPaste = (editor: ReactEditor) => {
     }
 
     const parsed = new DOMParser().parseFromString(html, "text/html");
-
     const fragment = deserialize(parsed.body);
+    console.log(fragment);
     Transforms.insertFragment(editor, fragment);
   };
 
