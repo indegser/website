@@ -83,14 +83,6 @@ export const withHTMLPaste = (editor: ReactEditor) => {
   editor.normalizeNode = (entry) => {
     const [node, path] = entry;
 
-    /**
-     * Headline이 두 개 이상 있으면 두 번째 Headline은 paragraph로 변환한다.
-     */
-    if (Element.isElement(node) && node.type === "headline" && path[0] !== 0) {
-      Transforms.splitNodes(editor);
-      Transforms.setNodes(editor, { type: "paragraph" });
-    }
-
     // If the element is a paragraph, ensure its children are valid.
     if (Element.isElement(node) && node.type === "paragraph") {
       for (const [child, childPath] of Node.children(editor, path)) {

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createEditor } from "slate";
 import { withHistory } from "slate-history";
 import { ReactEditor, withReact } from "slate-react";
+import { withHeadline } from "../utils/withHeadline";
 import { withHTMLPaste } from "../utils/withHTMLPaste";
 import { withList } from "../utils/withList";
 import { useEditorExitBreak } from "./useEditorExitBreak";
@@ -27,11 +28,13 @@ export const useEditor = (editor?: ReactEditor, isLeafOnly?: boolean) => {
     }
 
     return withList(
-      withExitBreak(
-        withMarkdown(
-          withYoutube(
-            withInline(
-              withImage(withHTMLPaste(withHistory(withReact(baseEditor))))
+      withHeadline(
+        withExitBreak(
+          withMarkdown(
+            withYoutube(
+              withInline(
+                withImage(withHTMLPaste(withHistory(withReact(baseEditor))))
+              )
             )
           )
         )
