@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { ContentEditable } from "./ContentEditable";
 import { useNewsContent } from "./NewsContent.hooks";
 import { Descendant } from "slate";
+import { normalize } from "./utils/normalize";
 
 export const NewsContent = () => {
   const { data: news } = useNewsQuery();
@@ -19,7 +20,7 @@ export const NewsContent = () => {
       ];
     }
 
-    return JSON.parse(news.content);
+    return normalize(JSON.parse(news.content));
   }, []);
 
   return (

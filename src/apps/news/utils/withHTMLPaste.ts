@@ -1,4 +1,4 @@
-import { Element, Node, Transforms } from "slate";
+import { Editor, Element, Node, Path, Transforms } from "slate";
 import { jsx } from "slate-hyperscript";
 import { ReactEditor } from "slate-react";
 import { CustomElement } from "types/editor.types";
@@ -83,6 +83,14 @@ export const withHTMLPaste = (editor: ReactEditor) => {
   editor.normalizeNode = (entry) => {
     const [node, path] = entry;
 
+    /**
+     * Headline이 두 개 이상 있으면 두 번째 Headline은 paragraph로 변환한다.
+     */
+    if (Element.isElement(node) && node.type === "headline" && path[0] !== 0) {
+      Transforms.splitNodes(editor);
+      Transforms.setNodes(editor, { type: "paragraph" });
+    }
+
     // If the element is a paragraph, ensure its children are valid.
     if (Element.isElement(node) && node.type === "paragraph") {
       for (const [child, childPath] of Node.children(editor, path)) {
@@ -91,13 +99,13 @@ export const withHTMLPaste = (editor: ReactEditor) => {
             Transforms.liftNodes(editor, { at: childPath });
             return;
           }
+
           Transforms.unwrapNodes(editor, { at: childPath });
           return;
         }
       }
     }
 
-    // Fall back to the original `normalizeNode` to enforce other constraints.
     normalizeNode(entry);
   };
 
@@ -111,8 +119,21 @@ export const withHTMLPaste = (editor: ReactEditor) => {
 
     const parsed = new DOMParser().parseFromString(html, "text/html");
     const fragment = deserialize(parsed.body);
-    console.log(fragment);
-    Transforms.insertFragment(editor, fragment);
+    const isHeadline = editor.selection.anchor.path[0] === 0;
+
+    if (isHeadline) {
+      Transforms.insertText(editor, "", {
+        at: Editor.after(editor, editor.selection.anchor.path),
+      });
+      Transforms.select(
+        editor,
+        Editor.after(editor, editor.selection.anchor.path)
+      );
+    }
+
+    Transforms.insertFragment(editor, fragment, {
+      at: Editor.after(editor, editor.selection.anchor.path),
+    });
   };
 
   return editor;
