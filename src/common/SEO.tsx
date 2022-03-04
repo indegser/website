@@ -21,6 +21,7 @@ export const SEO = ({
   return (
     <NextSeo
       title={title}
+      titleTemplate="%s - Indegser"
       description={description}
       canonical={url}
       openGraph={{

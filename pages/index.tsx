@@ -1,15 +1,22 @@
 import { GetStaticProps } from "next";
-import { MainPage } from "apps/main/MainPage";
-import { firebaseApi } from "apis/firebase";
+import { NewsroomPage } from "apps/newsroom/Newsroom";
+import { newsApi } from "apis/newsApi";
+import { USE_NEWSROOM_QUERY_KEY } from "queries/useNewsroomQuery";
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   try {
-    const initialData = await firebaseApi.getStories();
-    return { props: { initialData }, revalidate: 60 }; // 1min.
+    const news = await newsApi.getAllNews();
+    return {
+      props: {
+        fallback: {
+          [USE_NEWSROOM_QUERY_KEY]: news,
+        },
+      },
+      revalidate: 60,
+    }; // 1min.
   } catch (err) {
-    console.warn(err);
     return { props: {} };
   }
 };
 
-export default MainPage;
+export default NewsroomPage;

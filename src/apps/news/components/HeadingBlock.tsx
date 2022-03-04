@@ -24,20 +24,21 @@ HeadingBlock.toString = () => ".heading-block";
 const Container = styled("div", {});
 
 const Heading = styled("h1", {
-  fontWeight: 600,
+  fontWeight: 720,
   ['&[data-level="1"]']: {
     paddingBottom: 6,
-    marginTop: "3rem",
-    marginBottom: "2rem",
-    fontSize: "1.68rem",
-    borderBottom: `1px solid ${theme.colors.borderMuted}`,
+    marginTop: "2rem",
+    marginBottom: "0rem",
+    fontSize: "1.88rem",
   },
   ['&[data-level="2"]']: {
-    fontSize: "1.4rem",
-    margin: "1rem 0",
+    fontSize: "1.52rem",
+    marginTop: "1rem",
+    marginBottom: 0,
   },
   ['&[data-level="3"]']: {
-    fontSize: "1.2rem",
-    margin: "1rem 0",
+    fontSize: "1.24rem",
+    marginTop: "1rem",
+    marginBottom: 0,
   },
 });

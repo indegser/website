@@ -12,6 +12,7 @@ import { useAdminStore } from "common/hooks/admin.hooks";
 import { globalStyles } from "common/globalStyles";
 import { styled } from "common/stitches.config";
 import { Footer } from "common/organs/footer/Footer";
+import { SWRConfig } from "swr";
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -23,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
   globalStyles();
 
   return (
-    <>
+    <SWRConfig value={{ fallback: pageProps.fallback }}>
       <Head>
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Main>
         <Footer />
       </Page>
-    </>
+    </SWRConfig>
   );
 }
 

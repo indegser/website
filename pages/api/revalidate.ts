@@ -2,7 +2,7 @@ import { flush, withSentry } from "@sentry/nextjs";
 import { NextApiRequest, NextApiResponse } from "next";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { secret, storyId } = req.query;
+  const { secret, newsId } = req.query;
 
   // Check for secret to confirm this is a valid request
   if (secret !== process.env.API_SECRET_TOKEN) {
@@ -11,7 +11,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     await res.unstable_revalidate("/");
-    await res.unstable_revalidate(`/story/${storyId}`);
+    await res.unstable_revalidate(`/newsroom/${newsId}`);
     await flush(2000);
 
     return res.json({ revalidated: true });

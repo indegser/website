@@ -4,10 +4,10 @@ import { mq } from "common/theme";
 import Link from "next/link";
 import { HiOutlinePlus } from "react-icons/hi";
 
-export const CreateNew = () => {
+export const CreateNews = () => {
   return (
     <Container>
-      <Link href="/newsroom" passHref>
+      <Link href="/newsroom/new" passHref>
         <a>
           <Row>
             <Button>

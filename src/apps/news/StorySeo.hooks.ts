@@ -1,6 +1,5 @@
 import { Descendant, Node } from "slate";
 import { CustomImage } from "types/editor.types";
-import { StoryType } from "types/story.types";
 
 const parseDescription = (nodes: Descendant[]) => {
   let description = "";
@@ -28,7 +27,7 @@ const parseOgImage = (nodes: Descendant[]) => {
   return imageNode ? imageNode.url : undefined;
 };
 
-export const useStorySEO = (story: StoryType) => {
+export const useStorySEO = (story: any) => {
   const nodes = JSON.parse(story.content);
 
   return {
