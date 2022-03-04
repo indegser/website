@@ -10,7 +10,7 @@ interface Props extends RenderElementProps {
   element: CustomHeadline;
 }
 
-export const NewsHeadline = ({ element, attributes, children }: Props) => {
+export const NewsHeadline = ({ attributes, children }: Props) => {
   return (
     <Section>
       <MarkdownContainer>

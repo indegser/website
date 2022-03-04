@@ -23,8 +23,6 @@ export const useNewsDate = () => {
     mutate(newsQueryKey, nextNews, false);
 
     await newsApi.updateNewsById(nextNews);
-
-    mutate(newsQueryKey);
   };
 
   return {
