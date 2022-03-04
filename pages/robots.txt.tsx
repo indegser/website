@@ -14,4 +14,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
   return { props: {} };
 };
 
-export default () => {};
+function RobotsTxtPage() {
+  return null;
+}
+
+export default RobotsTxtPage;

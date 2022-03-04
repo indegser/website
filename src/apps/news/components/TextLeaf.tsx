@@ -38,6 +38,7 @@ const Placeholder = styled("span", {
   left: 2,
   minWidth: 200,
   fontSize: "0.95em",
+  userSelect: "none",
 });
 
 const Container = styled("span", {

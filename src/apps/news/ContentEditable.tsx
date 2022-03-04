@@ -20,10 +20,10 @@ import { styled } from "common/stitches.config";
 import { BookmarkBlock } from "./components/BookmarkBlock";
 import { mq } from "common/theme";
 import { BulletedListBlock } from "./components/BulletedListBlock";
+import { NewsHeadline } from "./headline/Headline";
 
 interface Props {
   initialValue: any[];
-  editor?: any;
   isReadOnly?: boolean;
   onChange?: any;
 }
@@ -51,19 +51,24 @@ const toggleMark = (editor: ReactEditor, format: string) => {
   }
 };
 
-export const Renderer = ({
-  editor,
+export const ContentEditable = ({
   initialValue,
-  isReadOnly = false,
   onChange,
+  isReadOnly,
 }: Props) => {
   const [value, setValue] = useEditorValue(initialValue);
-
-  const slateEditor = useEditor(editor);
+  const editor = useEditor();
 
   const renderElement = (props: RenderElementProps) => {
     const { attributes, children, element } = props;
     switch (element.type) {
+      case "headline": {
+        return (
+          <NewsHeadline attributes={attributes} element={element}>
+            {children}
+          </NewsHeadline>
+        );
+      }
       case "title": {
         return <TitleBlock {...props} element={element} />;
       }
@@ -127,15 +132,23 @@ export const Renderer = ({
   };
 
   const handleChange = (value: Descendant[]) => {
+    const isAstChange = editor.operations.some(
+      (op) => "set_selection" !== op.type
+    );
+
     setValue(value);
-    onChange(value);
+
+    if (isAstChange) {
+      onChange(value);
+    }
   };
 
   return (
     <MarkdownContainer>
       <Container>
-        <Slate editor={slateEditor} value={value} onChange={handleChange}>
+        <Slate editor={editor} value={value} onChange={handleChange}>
           <Editable
+            autoFocus
             readOnly={isReadOnly}
             renderElement={renderElement}
             renderLeaf={renderLeaf}
@@ -155,6 +168,7 @@ export const Renderer = ({
                   ];
                 }
               }
+
               return [];
             }}
             onKeyDown={(event) => {
@@ -163,11 +177,11 @@ export const Renderer = ({
                */
               if (event.key === "Enter" && event.shiftKey) {
                 event.preventDefault();
-                slateEditor.insertText("\n");
+                editor.insertText("\n");
                 return;
               }
 
-              const isCollapsed = Range.isCollapsed(slateEditor.selection);
+              const isCollapsed = Range.isCollapsed(editor.selection);
               if (isCollapsed) return;
 
               for (const hotkey in HOTKEYS) {
@@ -186,7 +200,7 @@ export const Renderer = ({
 };
 
 const Container = styled("article", {
-  fontSize: 17,
+  fontSize: 16,
   fontWeight: 460,
   lineHeight: 1.46,
   padding: "0 30px",
@@ -195,7 +209,7 @@ const Container = styled("article", {
   [mq("sm")]: {
     fontSize: 17,
     lineHeight: 1.6,
-    padding: "0 24px 80px 24px",
+    padding: "0 0 80px 0",
   },
 
   ["& p"]: {

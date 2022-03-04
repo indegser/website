@@ -1,19 +1,22 @@
 import { Logo } from "./Logo";
 import Link from "next/link";
 import { styled } from "common/stitches.config";
+import { PageContainer } from "common/atoms/Container";
 
 export const Nav = () => {
   return (
-    <Layout id="global-nav">
-      <Link href="/" passHref>
-        <a title="home">
-          <Heading>
-            <Logo />
-            Indegser
-          </Heading>
-        </a>
-      </Link>
-    </Layout>
+    <PageContainer>
+      <Layout id="global-nav">
+        <Link href="/" passHref>
+          <a title="home">
+            <Heading>
+              <Logo />
+              Indegser
+            </Heading>
+          </a>
+        </Link>
+      </Layout>
+    </PageContainer>
   );
 };
 
@@ -27,7 +30,7 @@ const Layout = styled("nav", {
 const Heading = styled("div", {
   display: "flex",
   alignItems: "center",
-  padding: "0 16px",
+  padding: "0 16px 0 0",
   height: 45,
   fontSize: 14,
   fontWeight: 600,
