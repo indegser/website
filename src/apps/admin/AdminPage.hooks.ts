@@ -1,27 +1,17 @@
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { useRouter } from "next/router";
+import { supabase } from "apis/supabase";
 import { useForm } from "react-hook-form";
-
-const auth = getAuth();
 
 export const useAdminAuth = () => {
   const form = useForm();
-  const router = useRouter();
 
-  const handleSignIn = form.handleSubmit(({ email, password }) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        router.push("/");
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        form.setError("error", { type: "manual", message: errorMessage });
-      });
+  const handleSignIn = form.handleSubmit(async ({ email }) => {
+    await supabase.auth.signIn({ email });
+    alert(`Sent Magic Link! 🔗`);
   });
 
   const handleSignOut = async () => {
     try {
-      await signOut(auth);
+      await supabase.auth.signOut();
     } catch (err) {
       alert(err.message);
     }

@@ -12,7 +12,6 @@ import { YoutubeBlock } from "./components/YoutubeBlock";
 import { ImageBlock } from "./components/ImageBlock";
 import { TextLeaf } from "./components/TextLeaf";
 import { useEditor } from "./hooks/useEditor";
-import { TitleBlock } from "./components/TitleBlock";
 import { HeadingBlock } from "./components/HeadingBlock";
 import { LinkLeaf } from "./components/LinkLeaf";
 import isHotkey from "is-hotkey";
@@ -69,9 +68,7 @@ export const ContentEditable = ({
           </NewsHeadline>
         );
       }
-      case "title": {
-        return <TitleBlock {...props} element={element} />;
-      }
+
       case "image": {
         return (
           <ImageBlock attributes={attributes} element={element}>
@@ -149,7 +146,7 @@ export const ContentEditable = ({
         <Slate editor={editor} value={value} onChange={handleChange}>
           <Editable
             autoFocus
-            readOnly={isReadOnly}
+            readOnly={typeof window === "undefined" ? false : isReadOnly}
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             decorate={([node, path]) => {

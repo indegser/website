@@ -20,11 +20,6 @@ export const AdminPage = () => {
             placeholder="이메일"
             {...form.register("email")}
           />
-          <StyledInput
-            type="password"
-            placeholder="비밀번호"
-            {...form.register("password")}
-          />
           <Button type="submit">관리자 계정 로그인</Button>
         </form>
         {isAdmin && (
