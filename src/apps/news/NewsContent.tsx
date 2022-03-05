@@ -1,10 +1,18 @@
 import { useIsAdmin } from "common/hooks/admin.hooks";
 import { useNewsQuery } from "queries/useNewsQuery";
 import { useMemo } from "react";
-import { ContentEditable } from "./ContentEditable";
 import { useNewsContent } from "./NewsContent.hooks";
 import { Descendant } from "slate";
 import { normalize } from "./utils/normalize";
+import dynamic from "next/dynamic";
+
+const ContentEditable = dynamic(
+  () =>
+    import("./ContentEditable").then(
+      (mod) => mod.ContentEditable as typeof ContentEditable
+    ),
+  { ssr: false }
+);
 
 export const NewsContent = () => {
   const { data: news } = useNewsQuery();
