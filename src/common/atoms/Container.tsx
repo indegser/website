@@ -1,5 +1,4 @@
 import { styled } from "common/stitches.config";
-import { mq } from "common/theme";
 
 export const PageContainer = styled("div", {
   margin: "0 auto",
