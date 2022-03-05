@@ -1,9 +1,13 @@
 import { SEO } from "common/SEO";
 import { useNewsQuery } from "queries/useNewsQuery";
+import { useNewsMeta } from "./NewsSeo.hooks";
 
 export const NewsSeo = () => {
   const { data: news } = useNewsQuery();
-  const { title, excerpt, cover_url } = news;
+  const { extractNewsMeta } = useNewsMeta();
+  const { title, excerpt, cover_url } = extractNewsMeta(
+    JSON.parse(news.content)
+  );
 
   return (
     <SEO
