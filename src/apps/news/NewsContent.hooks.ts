@@ -5,27 +5,24 @@ import {
   useNewsQuery,
   useNewsQueryKey,
 } from "queries/useNewsQuery";
-import { Descendant, Node } from "slate";
+import { Descendant } from "slate";
 import { mutate } from "swr";
 import debounce from "lodash-es/debounce";
 import { extraApi } from "apis/extra";
 import { captureException } from "@sentry/nextjs";
 import { useRouter } from "next/router";
-
-const extractTitle = (content: Descendant[]) => {
-  const headlineNode = content.find((node) => node.type === "headline");
-  return headlineNode ? Node.string(headlineNode) : "Untitled";
-};
+import { useNewsMeta } from "./NewsSeo.hooks";
 
 export const useNewsContent = () => {
   const key = useNewsQueryKey();
   const router = useRouter();
   const { data: news } = useNewsQuery();
+  const { extractNewsMeta } = useNewsMeta();
 
   const autoSaveNewsContent = async (nextContent: Descendant[]) => {
     const nextNews: NewsType = {
       ...news,
-      title: extractTitle(nextContent),
+      ...extractNewsMeta(nextContent),
       content: JSON.stringify(nextContent),
     };
 
