@@ -1,6 +1,7 @@
 import { Descendant } from "slate";
+import { CustomElement, CustomHeading } from "types/editor.types";
 
-export const normalize = (source: Descendant[]) => {
+export const normalize = (source: CustomElement[]) => {
   if (source[0].type !== "headline") {
     source.unshift({
       type: "headline",
@@ -8,5 +9,15 @@ export const normalize = (source: Descendant[]) => {
     });
   }
 
-  return source;
+  return source.map((node) => {
+    if (node.type === "title") {
+      return {
+        type: "heading",
+        children: node.children,
+        level: 1,
+      } as CustomHeading;
+    }
+
+    return node;
+  });
 };
