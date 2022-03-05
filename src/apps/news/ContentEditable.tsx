@@ -146,7 +146,7 @@ export const ContentEditable = ({
         <Slate editor={editor} value={value} onChange={handleChange}>
           <Editable
             autoFocus
-            readOnly={typeof window === "undefined" ? false : isReadOnly}
+            readOnly={isReadOnly}
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             decorate={([node, path]) => {
