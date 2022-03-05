@@ -1,3 +1,4 @@
+import { supabase } from "apis/supabase";
 import create from "zustand";
 
 type AdminState = {
@@ -6,9 +7,11 @@ type AdminState = {
   setStatus: (status: AdminState["status"]) => void;
 };
 
+const initialUser = supabase.auth.user();
+
 export const useAdminStore = create<AdminState>((set) => ({
-  status: "unset",
-  isAdmin: false,
+  status: initialUser === null ? "unset" : "admin",
+  isAdmin: Boolean(initialUser),
   setStatus: (status) => {
     set({
       status,

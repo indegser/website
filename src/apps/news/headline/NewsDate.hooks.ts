@@ -14,7 +14,7 @@ export const useNewsDate = () => {
   }, [news.published_at]);
 
   const inputValue = useMemo(() => {
-    return dayjs(news.published_at).format("YYYY-MM-DD");
+    return dayjs(news.published_at).format("YYYY-MM-DDThh:mm");
   }, [news.published_at]);
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = async (event) => {

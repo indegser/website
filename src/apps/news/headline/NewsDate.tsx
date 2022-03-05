@@ -9,7 +9,11 @@ export const NewsDate = () => {
   return (
     <PublishedAt>
       {isAdmin ? (
-        <input type="date" defaultValue={inputValue} onChange={handleChange} />
+        <input
+          type="datetime-local"
+          defaultValue={inputValue}
+          onChange={handleChange}
+        />
       ) : (
         displayDate
       )}
