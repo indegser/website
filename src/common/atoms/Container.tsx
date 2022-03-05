@@ -9,10 +9,6 @@ export const PageContainer = styled("div", {
   boxSizing: "content-box",
   paddingLeft: "max(22px,env(safe-area-inset-left))",
   paddingRight: "max(22px,env(safe-area-inset-right))",
-
-  [mq("sm")]: {
-    width: "100%",
-  },
 });
 
 export const MarkdownContainer = styled("div", {
