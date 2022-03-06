@@ -197,22 +197,18 @@ export const ContentEditable = ({
 };
 
 const Container = styled("article", {
-  fontSize: 16,
-  fontWeight: 460,
+  fontSize: 19,
   lineHeight: 1.46,
-  padding: "0 30px",
   paddingBottom: 80,
+  letterSpacing: "-0.12px",
+  fontWeight: 420,
 
   [mq("sm")]: {
     fontSize: 17,
-    lineHeight: 1.6,
+    lineHeight: 1.49,
     padding: "0 0 80px 0",
   },
 
-  ["& p"]: {
-    whiteSpace: "pre-wrap",
-    wordBreak: "break-word",
-  },
   ["& strong"]: {
     fontWeight: 700,
   },
@@ -236,6 +232,5 @@ const Container = styled("article", {
 });
 
 const BaseBlock = styled("div", {
-  margin: "1px 0",
-  padding: "5px 2px",
+  marginBottom: "1.4211em",
 });

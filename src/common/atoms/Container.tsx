@@ -11,6 +11,6 @@ export const PageContainer = styled("div", {
 });
 
 export const MarkdownContainer = styled("div", {
-  maxWidth: 640,
+  maxWidth: 653,
   margin: "0 auto",
 });

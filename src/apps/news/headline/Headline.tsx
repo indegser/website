@@ -27,8 +27,7 @@ export const NewsHeadline = ({ attributes, children }: Props) => {
 
 const Section = styled("section", {
   padding: "50px 0 10px",
-  marginBottom: "20px",
-  borderBottom: `1px solid ${theme.colors.borderDefault}`,
+  marginBottom: "40px",
 });
 
 const Metadata = styled("div", {
@@ -43,13 +42,14 @@ const Metadata = styled("div", {
 
 const Title = styled("h1", {
   margin: 0,
-  fontWeight: 760,
+  fontWeight: 700,
   fontSize: 48,
   letterSpacing: `-0.025em`,
-  lineHeight: "1.25em",
+  lineHeight: 1.15,
 
   [mq("sm")]: {
-    fontSize: 41,
+    fontSize: 32,
+    lineHeight: 1.25,
   },
 });
 
