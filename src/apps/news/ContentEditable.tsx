@@ -150,20 +150,22 @@ export const ContentEditable = ({
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             decorate={([node, path]) => {
-              if (editor.selection != null) {
-                if (
-                  !Editor.isEditor(node) &&
-                  Editor.string(editor, [path[0]]) === "" &&
-                  Range.includes(editor.selection, path) &&
-                  Range.isCollapsed(editor.selection)
-                ) {
-                  return [
-                    {
-                      ...editor.selection,
-                      placeholder: true,
-                    },
-                  ];
-                }
+              if (editor.selection === null || isReadOnly) {
+                return [];
+              }
+
+              if (
+                !Editor.isEditor(node) &&
+                Editor.string(editor, [path[0]]) === "" &&
+                Range.includes(editor.selection, path) &&
+                Range.isCollapsed(editor.selection)
+              ) {
+                return [
+                  {
+                    ...editor.selection,
+                    placeholder: true,
+                  },
+                ];
               }
 
               return [];
