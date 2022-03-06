@@ -4,8 +4,8 @@ import { useTagsQuery } from "queries/useTagsQuery";
 import { NewsType, TagType } from "types/news.types";
 
 export const useNewsTag = () => {
-  const { data: news, isValidating: isNewsValidating, mutate } = useNewsQuery();
-  const { data: tags, isValidating: isTagsValidating } = useTagsQuery();
+  const { data: news, mutate } = useNewsQuery();
+  const { data: tags } = useTagsQuery();
 
   const tag = tags?.find((tag) => tag.id === news?.tag)?.name;
 
@@ -23,7 +23,7 @@ export const useNewsTag = () => {
   return {
     tag: tag ?? "News",
     tags,
-    isReady: !isNewsValidating && !isTagsValidating,
+    isReady: Boolean(news) && Boolean(tags),
     updateNewsTag,
   };
 };
