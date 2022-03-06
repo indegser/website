@@ -2,6 +2,7 @@ import { supabase } from "apis/supabase";
 import useSWR from "swr";
 
 export interface TagType {
+  id: string;
   name: string;
   created_at: string;
 }

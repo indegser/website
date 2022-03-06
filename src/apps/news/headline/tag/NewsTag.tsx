@@ -1,14 +1,19 @@
 import { useTagsQuery } from "queries/useTagsQuery";
-import * as Select from "@radix-ui/react-select";
 import { styled, theme } from "common/stitches.config";
 import { mediaQueries } from "common/theme";
-import { useState } from "react";
 import { useIsAdmin } from "common/hooks/admin.hooks";
+import * as Popover from "@radix-ui/react-popover";
+import { TagForm } from "./TagForm";
+import { useNewsQuery } from "queries/useNewsQuery";
+import { useNewsTag } from "./NewsTag.hooks";
 
 export const NewsTag = () => {
   const isAdmin = useIsAdmin();
-  const { data } = useTagsQuery();
-  const [value, setValue] = useState("Reading");
+  const { data: tags } = useTagsQuery();
+  const { data: news } = useNewsQuery();
+  const { updateNewsTag } = useNewsTag();
+  const tag = tags?.find((tag) => tag.id === news.tag);
+  const value = tag?.name;
 
   if (!isAdmin) {
     return <Container>{value}</Container>;
@@ -16,20 +21,21 @@ export const NewsTag = () => {
 
   return (
     <Container>
-      <Select.Root value={value} onValueChange={setValue}>
-        <StyledTrigger aria-label={value}>
-          <Select.Value>{value ? value : "카테고리 태그"}</Select.Value>
+      <Popover.Root>
+        <StyledTrigger asChild>
+          <div>{value ? value : "카테고리 태그"}</div>
         </StyledTrigger>
-        <StyledContent>
-          <Select.Viewport>
-            {data?.map((tag) => (
-              <StyledItem key={tag.name} value={tag.name}>
-                <Select.ItemText>{tag.name}</Select.ItemText>
-              </StyledItem>
+        <StyledContent align="start">
+          <TagForm />
+          <TagList>
+            {tags?.map((tag) => (
+              <Item key={tag.name} onClick={() => updateNewsTag(tag)}>
+                <Tag>{tag.name}</Tag>
+              </Item>
             ))}
-          </Select.Viewport>
+          </TagList>
         </StyledContent>
-      </Select.Root>
+      </Popover.Root>
     </Container>
   );
 };
@@ -40,7 +46,7 @@ const Container = styled("div", {
   color: theme.colors.fgSubtle,
 });
 
-const StyledTrigger = styled(Select.Trigger, {
+const StyledTrigger = styled(Popover.Trigger, {
   background: "none",
   outline: "none",
   border: "none",
@@ -61,28 +67,31 @@ const StyledTrigger = styled(Select.Trigger, {
   },
 });
 
-const TriggerText = styled("span", {
-  marginLeft: 6,
-});
-
-const StyledContent = styled(Select.Content, {
+const StyledContent = styled(Popover.Content, {
   borderRadius: 4,
-  // padding: "20px 0",
-  // width: 260,
+  width: 260,
   overflow: "hidden",
   backgroundColor: "white",
+  border: `1px solid ${theme.colors.borderSubtle}`,
   boxShadow:
     "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
 });
 
-const StyledItem = styled(Select.Item, {
+const TagList = styled("div", {
+  padding: "4px 0",
+});
+
+const Item = styled("div", {
   all: "unset",
   lineHeight: 1,
   borderRadius: 3,
+  fontSize: 14,
   display: "flex",
   alignItems: "center",
   color: theme.colors.fgSubtle,
-  padding: "8px 35px 8px 25px",
+  height: 28,
+  padding: "0 8px 0 16px",
+  margin: "0 4px",
   position: "relative",
   userSelect: "none",
 
@@ -95,4 +104,11 @@ const StyledItem = styled(Select.Item, {
     backgroundColor: theme.colors.fgDefault,
     color: theme.colors.canvasInset,
   },
+});
+
+const Tag = styled("div", {
+  color: theme.colors.fgDefault,
+  background: theme.colors.canvasSubtle,
+  padding: 4,
+  borderRadius: 4,
 });

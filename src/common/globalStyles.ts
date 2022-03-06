@@ -25,4 +25,8 @@ export const globalStyles = globalCss({
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
     color: theme.colors.fgDefault,
   },
+
+  [":focus-visible"]: {
+    outline: `none`,
+  },
 });

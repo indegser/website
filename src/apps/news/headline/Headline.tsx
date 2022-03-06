@@ -4,7 +4,7 @@ import { mq } from "common/theme";
 import { RenderElementProps } from "slate-react";
 import { CustomHeadline } from "types/editor.types";
 import { NewsDate } from "./NewsDate";
-import { NewsTag } from "./NewsTag";
+import { NewsTag } from "./tag/NewsTag";
 
 interface Props extends RenderElementProps {
   element: CustomHeadline;
