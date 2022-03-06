@@ -1,29 +1,27 @@
-import { useTagsQuery } from "queries/useTagsQuery";
 import { styled, theme } from "common/stitches.config";
 import { mediaQueries } from "common/theme";
 import { useIsAdmin } from "common/hooks/admin.hooks";
 import * as Popover from "@radix-ui/react-popover";
 import { TagForm } from "./TagForm";
-import { useNewsQuery } from "queries/useNewsQuery";
 import { useNewsTag } from "./NewsTag.hooks";
 
 export const NewsTag = () => {
   const isAdmin = useIsAdmin();
-  const { data: tags } = useTagsQuery();
-  const { data: news } = useNewsQuery();
-  const { updateNewsTag } = useNewsTag();
-  const tag = tags?.find((tag) => tag.id === news.tag);
-  const value = tag?.name;
+  const { tag, tags, isReady, updateNewsTag } = useNewsTag();
+
+  if (!isReady) {
+    return <Container>...</Container>;
+  }
 
   if (!isAdmin) {
-    return <Container>{value}</Container>;
+    return <Container>{tag}</Container>;
   }
 
   return (
     <Container>
       <Popover.Root>
         <StyledTrigger asChild>
-          <div>{value ? value : "카테고리 태그"}</div>
+          <div>{tag}</div>
         </StyledTrigger>
         <StyledContent align="start">
           <TagForm />
