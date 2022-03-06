@@ -18,6 +18,10 @@ const MotionContainer = styled("span", {});
 
 const MotionLink = styled("a", {
   cursor: "pointer",
-  textDecoration: "underline",
-  color: theme.colors.linkDefault,
+  textDecoration: "none",
+  color: theme.colors.accentFg,
+
+  ["&:hover"]: {
+    textDecoration: "underline",
+  },
 });
