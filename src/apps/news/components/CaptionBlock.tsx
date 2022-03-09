@@ -69,7 +69,10 @@ export const CaptionBlock = ({ parentElement, parentEditor }: Props) => {
 };
 
 const Container = styled("div", {
-  fontSize: "0.85em",
+  fontSize: "12px",
+  letterSpacing: "0",
+  lineHeight: "17px",
+  fontWeight: 500,
   color: theme.colors.fgSubtle,
-  marginBottom: "1rem",
+  margin: "16px 0 0 0",
 });

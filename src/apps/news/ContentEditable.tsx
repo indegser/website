@@ -199,15 +199,15 @@ export const ContentEditable = ({
 };
 
 const Container = styled("article", {
-  fontSize: 19,
-  lineHeight: 1.46,
+  fontSize: 18,
+  lineHeight: "25px",
+  letterSpacing: "-0.014em",
   paddingBottom: 80,
-  letterSpacing: "-0.12px",
-  fontWeight: 420,
+  fontWeight: 400,
 
   [mq("sm")]: {
     fontSize: 17,
-    lineHeight: 1.49,
+    lineHeight: 1.5,
     padding: "0 0 80px 0",
   },
 

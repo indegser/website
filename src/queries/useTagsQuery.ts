@@ -12,7 +12,7 @@ export const useTagsQuery = () => {
     const response = await supabase
       .from<TagType>("tags")
       .select("*")
-      .order("created_at");
+      .order("created_at", { ascending: false });
     return response.data;
   });
 };
