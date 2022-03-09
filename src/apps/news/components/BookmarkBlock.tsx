@@ -45,7 +45,7 @@ export const BookmarkBlock = (props: Props) => {
   }, [openGraph]);
 
   return (
-    <div {...attributes}>
+    <Figure {...attributes}>
       {children}
       {openGraph && (
         <div contentEditable={false}>
@@ -78,9 +78,13 @@ export const BookmarkBlock = (props: Props) => {
           <CaptionBlock parentEditor={editor} parentElement={element} />
         </div>
       )}
-    </div>
+    </Figure>
   );
 };
+
+const Figure = styled("figure", {
+  margin: "44px 0",
+});
 
 const Container = styled(motion.div, {
   boxShadow: `0 0 0 .5px ${theme.colors.borderSubtle}`,
@@ -121,6 +125,8 @@ const Title = styled("div", {
 
 const Desc = styled("div", {
   fontSize: 12,
+  lineHeight: "17px",
+  letterSpacing: "0em",
   color: "$fgMuted",
   display: "-webkit-box",
   "-webkit-box-orient": "vertical",
