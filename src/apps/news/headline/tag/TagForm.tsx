@@ -1,4 +1,4 @@
-import { styled, theme } from "common/stitches.config";
+import { styled, theme } from "@src/common/stitches.config";
 import { useTagForm } from "./TagForm.hooks";
 
 export const TagForm = () => {

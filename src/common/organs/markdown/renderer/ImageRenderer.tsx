@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { spacingVariables } from "common/variables";
-import { mq } from "common/theme";
+import { spacingVariables } from "@src/common/variables";
+import { mq } from "@src/common/theme";
 import { HTMLProps } from "react";
 
 interface Props extends HTMLProps<HTMLImageElement> {}

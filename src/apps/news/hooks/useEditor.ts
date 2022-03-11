@@ -4,15 +4,14 @@ import { withHistory } from "slate-history";
 import { ReactEditor, withReact } from "slate-react";
 import { withHeadline } from "../utils/withHeadline";
 import { withHTMLPaste } from "../utils/withHTMLPaste";
+import { withImage } from "../utils/withImage";
 import { withList } from "../utils/withList";
 import { useEditorExitBreak } from "./useEditorExitBreak";
-import { useEditorImage } from "./useEditorImage";
 import { useEditorInline } from "./useEditorInline";
 import { useEditorMarkdown } from "./useEditorMarkdown";
 import { useEditorYoutube } from "./useEditorYoutube";
 
 export const useEditor = (editor?: ReactEditor, isLeafOnly?: boolean) => {
-  const { withImage } = useEditorImage();
   const { withYoutube } = useEditorYoutube();
   const { withInline } = useEditorInline();
   const { withMarkdown } = useEditorMarkdown();

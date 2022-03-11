@@ -1,7 +1,7 @@
 import { Editor, Element, Node, Path, Transforms } from "slate";
 import { jsx } from "slate-hyperscript";
 import { ReactEditor } from "slate-react";
-import { CustomElement } from "types/editor.types";
+import { CustomElement } from "@src/types/editor.types";
 
 const ELEMENT_TAGS: Record<
   string,

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "common/theme";
+import { mq } from "@src/common/theme";
 import { ResumeGrid } from "./Resume.styled";
 
 const Layout = styled(ResumeGrid)`

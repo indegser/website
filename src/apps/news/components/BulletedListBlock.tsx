@@ -1,6 +1,6 @@
-import { styled } from "common/stitches.config";
+import { styled } from "@src/common/stitches.config";
 import { RenderElementProps } from "slate-react";
-import { CustomBulletedList } from "types/editor.types";
+import { CustomBulletedList } from "@src/types/editor.types";
 
 interface Props extends RenderElementProps {
   element: CustomBulletedList;

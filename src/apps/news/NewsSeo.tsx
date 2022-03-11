@@ -1,5 +1,5 @@
-import { SEO } from "common/SEO";
-import { useNewsQuery } from "queries/useNewsQuery";
+import { SEO } from "@src/common/SEO";
+import { useNewsQuery } from "@src/queries/useNewsQuery";
 import { useNewsMeta } from "./NewsSeo.hooks";
 
 export const NewsSeo = () => {

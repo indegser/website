@@ -1,7 +1,7 @@
-import { supabase } from "apis/supabase";
-import { useNewsQuery } from "queries/useNewsQuery";
-import { useTagsQuery } from "queries/useTagsQuery";
-import { NewsType, TagType } from "types/news.types";
+import { supabase } from "@src/apis/supabase";
+import { useNewsQuery } from "@src/queries/useNewsQuery";
+import { useTagsQuery } from "@src/queries/useTagsQuery";
+import { NewsType, TagType } from "@src/types/news.types";
 
 export const useNewsTag = () => {
   const { data: news, mutate } = useNewsQuery();

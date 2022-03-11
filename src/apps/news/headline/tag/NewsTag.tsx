@@ -1,6 +1,6 @@
-import { styled, theme } from "common/stitches.config";
-import { mediaQueries } from "common/theme";
-import { useIsAdmin } from "common/hooks/admin.hooks";
+import { styled, theme } from "@src/common/stitches.config";
+import { mediaQueries } from "@src/common/theme";
+import { useIsAdmin } from "@src/common/hooks/admin.hooks";
 import * as Popover from "@radix-ui/react-popover";
 import { TagForm } from "./TagForm";
 import { useNewsTag } from "./NewsTag.hooks";

@@ -2,10 +2,10 @@ import { useMemo } from "react";
 import Link from "next/link";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
-import { mq } from "common/theme";
-import { Row } from "common/atoms/Row";
-import { styled, theme } from "common/stitches.config";
-import { NewsType } from "types/news.types";
+import { mq } from "@src/common/theme";
+import { Row } from "@src/common/atoms/Row";
+import { styled, theme } from "@src/common/stitches.config";
+import { NewsType } from "@src/types/news.types";
 import "dayjs/locale/ko";
 
 dayjs.extend(calendar);

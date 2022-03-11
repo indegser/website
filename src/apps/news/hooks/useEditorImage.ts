@@ -2,7 +2,7 @@ import { ReactEditor } from "slate-react";
 import imageExtensions from "image-extensions";
 import isUrl from "is-url";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { CustomImage } from "types/editor.types";
+import { CustomImage } from "@src/types/editor.types";
 import { Transforms } from "slate";
 
 const isImageUrl = (url: string) => {

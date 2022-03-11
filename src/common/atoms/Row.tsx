@@ -1,5 +1,5 @@
-import { styled, theme } from "common/stitches.config";
-import { mediaQueries, mq } from "common/theme";
+import { styled, theme } from "@src/common/stitches.config";
+import { mediaQueries, mq } from "@src/common/theme";
 import { motion } from "framer-motion";
 import { ComponentProps, PropsWithChildren } from "react";
 

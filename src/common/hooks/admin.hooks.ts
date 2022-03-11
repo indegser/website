@@ -1,4 +1,4 @@
-import { supabase } from "apis/supabase";
+import { supabase } from "@src/apis/supabase";
 import create from "zustand";
 
 type AdminState = {

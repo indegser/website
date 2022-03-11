@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
-import { NewsroomPage } from "apps/newsroom/Newsroom";
-import { newsApi } from "apis/newsApi";
-import { USE_NEWSROOM_QUERY_KEY } from "queries/useNewsroomQuery";
+import { NewsroomPage } from "@src/apps/newsroom/Newsroom";
+import { newsApi } from "@src/apis/newsApi";
+import { USE_NEWSROOM_QUERY_KEY } from "@src/queries/useNewsroomQuery";
 
 export const getStaticProps: GetStaticProps = async () => {
   try {

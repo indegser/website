@@ -1,4 +1,4 @@
-import { styled } from "common/stitches.config";
+import { styled } from "@src/common/stitches.config";
 import { RenderLeafProps } from "slate-react";
 
 interface Props extends RenderLeafProps {}

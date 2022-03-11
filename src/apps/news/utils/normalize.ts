@@ -1,5 +1,5 @@
 import { Descendant } from "slate";
-import { CustomElement, CustomHeading } from "types/editor.types";
+import { CustomElement, CustomHeading } from "@src/types/editor.types";
 
 export const normalize = (source: CustomElement[]) => {
   if (source[0].type !== "headline") {

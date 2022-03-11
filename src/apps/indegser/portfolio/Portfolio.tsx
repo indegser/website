@@ -1,6 +1,6 @@
 import { useIndegserContext } from "../Indegser.hooks";
 import { useState, useEffect } from "react";
-import { MarkdownContainer } from "common/atoms/Container";
+import { MarkdownContainer } from "@src/common/atoms/Container";
 
 const Portfolio = () => {
   const [sources, setSources] = useState<string[]>([]);

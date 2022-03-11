@@ -1,11 +1,11 @@
-import { PageContainer } from "common/atoms/Container";
+import { PageContainer } from "@src/common/atoms/Container";
 import { NewsPreview } from "./NewsPreview";
-import { SEO } from "common/SEO";
+import { SEO } from "@src/common/SEO";
 import { CreateNews } from "./CreateNews";
-import { useIsAdmin } from "common/hooks/admin.hooks";
-import { styled } from "common/stitches.config";
-import { mq } from "common/theme";
-import { useNewsroomQuery } from "queries/useNewsroomQuery";
+import { useIsAdmin } from "@src/common/hooks/admin.hooks";
+import { styled } from "@src/common/stitches.config";
+import { mq } from "@src/common/theme";
+import { useNewsroomQuery } from "@src/queries/useNewsroomQuery";
 
 export const NewsroomPage = () => {
   const { data: newsroom } = useNewsroomQuery();

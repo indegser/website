@@ -1,5 +1,5 @@
-import { useIsAdmin } from "common/hooks/admin.hooks";
-import { styled, theme } from "common/stitches.config";
+import { useIsAdmin } from "@src/common/hooks/admin.hooks";
+import { styled, theme } from "@src/common/stitches.config";
 import { useNewsDate } from "./NewsDate.hooks";
 
 export const NewsDate = () => {

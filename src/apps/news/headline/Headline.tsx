@@ -1,8 +1,8 @@
-import { MarkdownContainer } from "common/atoms/Container";
-import { styled, theme } from "common/stitches.config";
-import { mq } from "common/theme";
+import { MarkdownContainer } from "@src/common/atoms/Container";
+import { styled, theme } from "@src/common/stitches.config";
+import { mq } from "@src/common/theme";
 import { RenderElementProps } from "slate-react";
-import { CustomHeadline } from "types/editor.types";
+import { CustomHeadline } from "@src/types/editor.types";
 import { NewsDate } from "./NewsDate";
 import { NewsTag } from "./tag/NewsTag";
 

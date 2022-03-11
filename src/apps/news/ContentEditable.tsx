@@ -1,4 +1,4 @@
-import { MarkdownContainer } from "common/atoms/Container";
+import { MarkdownContainer } from "@src/common/atoms/Container";
 import { Descendant, Editor, Range } from "slate";
 import { useEditorValue } from "./hooks/useEditorValue";
 import {
@@ -15,9 +15,9 @@ import { useEditor } from "./hooks/useEditor";
 import { HeadingBlock } from "./components/HeadingBlock";
 import { LinkLeaf } from "./components/LinkLeaf";
 import isHotkey from "is-hotkey";
-import { styled } from "common/stitches.config";
+import { styled } from "@src/common/stitches.config";
 import { BookmarkBlock } from "./components/BookmarkBlock";
-import { mq } from "common/theme";
+import { mq } from "@src/common/theme";
 import { BulletedListBlock } from "./components/BulletedListBlock";
 import { NewsHeadline } from "./headline/Headline";
 

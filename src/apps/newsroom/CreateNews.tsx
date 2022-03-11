@@ -1,6 +1,6 @@
-import { Row } from "common/atoms/Row";
-import { styled, theme } from "common/stitches.config";
-import { mq } from "common/theme";
+import { Row } from "@src/common/atoms/Row";
+import { styled, theme } from "@src/common/stitches.config";
+import { mq } from "@src/common/theme";
 import Link from "next/link";
 import { HiOutlinePlus } from "react-icons/hi";
 

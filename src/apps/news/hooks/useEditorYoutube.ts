@@ -1,7 +1,7 @@
 import { ReactEditor } from "slate-react";
 import isUrl from "is-url";
 import { Transforms } from "slate";
-import { CustomYoutube } from "types/editor.types";
+import { CustomYoutube } from "@src/types/editor.types";
 
 export const useEditorYoutube = () => {
   const insertYoutubeNode = (editor: ReactEditor, url: string) => {

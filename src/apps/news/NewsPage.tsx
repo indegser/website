@@ -1,4 +1,4 @@
-import { PageContainer } from "common/atoms/Container";
+import { PageContainer } from "@src/common/atoms/Container";
 import { NewsContent } from "./NewsContent";
 import { NewsSeo } from "./NewsSeo";
 

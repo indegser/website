@@ -3,7 +3,7 @@ import Resume from "./resume/Resume";
 import { useRouter } from "next/router";
 import Portfolio from "./portfolio/Portfolio";
 import XNavigator from "./XNavigator";
-import { PageContainer } from "common/atoms/Container";
+import { PageContainer } from "@src/common/atoms/Container";
 
 const Indegser = () => {
   const { query, pathname } = useRouter();

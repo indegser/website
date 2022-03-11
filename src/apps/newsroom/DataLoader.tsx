@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Row } from "common/atoms/Row";
-import { mq } from "common/theme";
+import { Row } from "@src/common/atoms/Row";
+import { mq } from "@src/common/theme";
 import { useEffect } from "react";
 import { ComponentProps } from "react";
 import { HiOutlineArrowDown } from "react-icons/hi";

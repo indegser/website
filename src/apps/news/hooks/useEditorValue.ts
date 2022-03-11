@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Descendant } from "slate";
-import { CustomHeading } from "types/editor.types";
+import { CustomHeading } from "@src/types/editor.types";
 
 const initialValue: Descendant[] = [
   {

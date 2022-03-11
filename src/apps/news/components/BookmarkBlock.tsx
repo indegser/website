@@ -1,5 +1,5 @@
-import { styled, theme } from "common/stitches.config";
-import { mediaQueries } from "common/theme";
+import { styled, theme } from "@src/common/stitches.config";
+import { mediaQueries } from "@src/common/theme";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Transforms } from "slate";
@@ -9,7 +9,7 @@ import {
   useSelected,
   useSlate,
 } from "slate-react";
-import { CustomBookmark } from "types/editor.types";
+import { CustomBookmark } from "@src/types/editor.types";
 import { CaptionBlock } from "./CaptionBlock";
 
 interface Props extends RenderElementProps {

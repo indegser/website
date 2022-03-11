@@ -1,7 +1,7 @@
-import { newsApi } from "apis/newsApi";
-import { NewsType } from "types/news.types";
+import { newsApi } from "@src/apis/newsApi";
+import { NewsType } from "@src/types/news.types";
 import dayjs from "dayjs";
-import { useNewsQuery, useNewsQueryKey } from "queries/useNewsQuery";
+import { useNewsQuery, useNewsQueryKey } from "@src/queries/useNewsQuery";
 import { ChangeEventHandler, useState } from "react";
 import { mutate } from "swr";
 import { withReact } from "slate-react";

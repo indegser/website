@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "common/theme";
+import { mq } from "@src/common/theme";
 
 export const ResumeGrid = styled.div`
   column-count: 2;

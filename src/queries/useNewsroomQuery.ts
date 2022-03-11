@@ -1,4 +1,4 @@
-import { newsApi } from "apis/newsApi";
+import { newsApi } from "@src/apis/newsApi";
 import useSWR from "swr";
 
 export const USE_NEWSROOM_QUERY_KEY = "newsroom";

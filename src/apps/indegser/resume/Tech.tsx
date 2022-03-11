@@ -43,7 +43,7 @@ const Tech = () => {
   const section = [
     {
       title: isEn ? "Front-end" : "프론트엔드",
-      stacks: ["React, Next.js", "Typescript", "Jest, Zustand, Emotion"],
+      stacks: ["React, Next.js", "@src/typescript", "Jest, Zustand, Emotion"],
     },
     {
       title: isEn ? "2D/3D Graphics" : "2D/3D 그래픽",

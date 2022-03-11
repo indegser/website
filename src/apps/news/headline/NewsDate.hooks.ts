@@ -1,9 +1,9 @@
-import { newsApi } from "apis/newsApi";
+import { newsApi } from "@src/apis/newsApi";
 import dayjs from "dayjs";
-import { useNewsQuery, useNewsQueryKey } from "queries/useNewsQuery";
+import { useNewsQuery, useNewsQueryKey } from "@src/queries/useNewsQuery";
 import { ChangeEventHandler, useMemo } from "react";
 import { mutate } from "swr";
-import { NewsType } from "types/news.types";
+import { NewsType } from "@src/types/news.types";
 
 export const useNewsDate = () => {
   const { data: news } = useNewsQuery();

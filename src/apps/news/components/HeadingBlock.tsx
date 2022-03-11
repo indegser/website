@@ -1,6 +1,6 @@
-import { styled, theme } from "common/stitches.config";
+import { styled, theme } from "@src/common/stitches.config";
 import { RenderElementProps } from "slate-react";
-import { CustomHeading } from "types/editor.types";
+import { CustomHeading } from "@src/types/editor.types";
 
 interface Props extends RenderElementProps {
   element: CustomHeading;

@@ -1,9 +1,9 @@
-import { CustomYoutube } from "types/editor.types";
+import { CustomYoutube } from "@src/types/editor.types";
 import { RenderElementProps, useSlateStatic } from "slate-react";
 import YouTube from "react-youtube";
 import getYoutubeId from "get-youtube-id";
 import { CaptionBlock } from "./CaptionBlock";
-import { css, styled } from "common/stitches.config";
+import { css, styled } from "@src/common/stitches.config";
 
 interface Props extends RenderElementProps {
   element: CustomYoutube;

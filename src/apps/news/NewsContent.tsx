@@ -1,5 +1,5 @@
-import { useIsAdmin } from "common/hooks/admin.hooks";
-import { useNewsQuery } from "queries/useNewsQuery";
+import { useIsAdmin } from "@src/common/hooks/admin.hooks";
+import { useNewsQuery } from "@src/queries/useNewsQuery";
 import { useMemo } from "react";
 import { useNewsContent } from "./NewsContent.hooks";
 import { Descendant } from "slate";

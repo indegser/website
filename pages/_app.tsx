@@ -1,18 +1,18 @@
 import Head from "next/head";
 import { Router } from "next/router";
 
-import { Analytics } from "apis/analytics";
-import { Nav } from "common/organs/nav/Nav";
+import { Analytics } from "@src/apis/analytics";
+import { Nav } from "@src/common/organs/nav/Nav";
 import { AppProps } from "next/app";
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
-import "apis/firebase";
-import { useAdminStore } from "common/hooks/admin.hooks";
-import { globalStyles } from "common/globalStyles";
-import { styled } from "common/stitches.config";
-import { Footer } from "common/organs/footer/Footer";
+import "@src/apis/firebase";
+import { useAdminStore } from "@src/common/hooks/admin.hooks";
+import { globalStyles } from "@src/common/globalStyles";
+import { styled } from "@src/common/stitches.config";
+import { Footer } from "@src/common/organs/footer/Footer";
 import { SWRConfig } from "swr";
-import { supabase } from "apis/supabase";
+import { supabase } from "@src/apis/supabase";
 
 supabase.auth.onAuthStateChange((event) => {
   const state = useAdminStore.getState();

@@ -2,7 +2,7 @@ import { Input } from "reakit/Input";
 import { Button } from "reakit/Button";
 import styled from "@emotion/styled";
 import { useAdminAuth } from "./AdminPage.hooks";
-import { useIsAdmin } from "common/hooks/admin.hooks";
+import { useIsAdmin } from "@src/common/hooks/admin.hooks";
 
 export const AdminPage = () => {
   const isAdmin = useIsAdmin();

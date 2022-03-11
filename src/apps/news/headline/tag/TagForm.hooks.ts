@@ -1,7 +1,7 @@
-import { supabase } from "apis/supabase";
+import { supabase } from "@src/apis/supabase";
 import { useForm } from "react-hook-form";
 import { useSWRConfig } from "swr";
-import { TagType } from "types/news.types";
+import { TagType } from "@src/types/news.types";
 import { useNewsTag } from "./NewsTag.hooks";
 
 export const useTagForm = () => {

@@ -1,14 +1,14 @@
-import { newsApi } from "apis/newsApi";
-import { NewsType } from "types/news.types";
+import { newsApi } from "@src/apis/newsApi";
+import { NewsType } from "@src/types/news.types";
 import {
   buildUseNewsQueryKey,
   useNewsQuery,
   useNewsQueryKey,
-} from "queries/useNewsQuery";
+} from "@src/queries/useNewsQuery";
 import { Descendant } from "slate";
 import { mutate } from "swr";
 import debounce from "lodash-es/debounce";
-import { extraApi } from "apis/extra";
+import { extraApi } from "@src/apis/extra";
 import { captureException } from "@sentry/nextjs";
 import { useRouter } from "next/router";
 import { useNewsMeta } from "./NewsSeo.hooks";

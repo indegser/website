@@ -1,7 +1,11 @@
-import { styled, theme } from "common/stitches.config";
+import { styled, theme } from "@src/common/stitches.config";
 import { Descendant, Node, Transforms } from "slate";
 import { Editable, ReactEditor, Slate } from "slate-react";
-import { CustomBookmark, CustomImage, CustomYoutube } from "types/editor.types";
+import {
+  CustomBookmark,
+  CustomImage,
+  CustomYoutube,
+} from "@src/types/editor.types";
 import { useEditor } from "../hooks/useEditor";
 import { TextLeaf } from "./TextLeaf";
 

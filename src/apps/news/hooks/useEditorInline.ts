@@ -1,6 +1,6 @@
 import { ReactEditor } from "slate-react";
 import isUrl from "is-url";
-import { CustomLink } from "types/editor.types";
+import { CustomLink } from "@src/types/editor.types";
 import { Editor, Range, Transforms, Element, Path, Node } from "slate";
 
 const isLinkActive = (editor: ReactEditor) => {

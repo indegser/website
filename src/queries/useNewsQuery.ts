@@ -1,5 +1,5 @@
-import { newsApi } from "apis/newsApi";
-import { NewsType } from "types/news.types";
+import { newsApi } from "@src/apis/newsApi";
+import { NewsType } from "@src/types/news.types";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 

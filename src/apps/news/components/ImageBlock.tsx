@@ -1,7 +1,7 @@
-import { CustomImage } from "types/editor.types";
+import { CustomImage } from "@src/types/editor.types";
 import { RenderElementProps, useSlateStatic } from "slate-react";
 import { CaptionBlock } from "./CaptionBlock";
-import { styled } from "common/stitches.config";
+import { styled } from "@src/common/stitches.config";
 
 interface Props extends RenderElementProps {
   element: CustomImage;

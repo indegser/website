@@ -1,6 +1,6 @@
 import { Editor, Element, Point, Range, Transforms } from "slate";
 import { ReactEditor } from "slate-react";
-import { CustomBlockquote, CustomHeading } from "types/editor.types";
+import { CustomBlockquote, CustomHeading } from "@src/types/editor.types";
 
 const SHORTCUTS = {
   ">": { type: "block-quote" } as CustomBlockquote,

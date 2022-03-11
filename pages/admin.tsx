@@ -1,3 +1,3 @@
-import { AdminPage } from "apps/admin/AdminPage";
+import { AdminPage } from "@src/apps/admin/AdminPage";
 
 export default AdminPage;

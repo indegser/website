@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ResumeContentHeading, ResumeGrid } from "./Resume.styled";
 import { useIndegserContext, useTrans } from "../Indegser.hooks";
-import { mq } from "common/theme";
+import { mq } from "@src/common/theme";
 
 const Layout = styled(ResumeGrid)`
   column-count: 1;
