@@ -31,11 +31,11 @@ export const withImage = (editor: ReactEditor) => {
           .from("images")
           .upload(imageKey, file);
 
-        Transforms.insertNodes(editor, {
-          type: "image",
-          url: supabase.storage.from("images").getPublicUrl(imageKey).publicURL,
-          children: [{ text: "" }],
-        });
+        // Transforms.insertNodes(editor, {
+        //   type: "image",
+        //   url: supabase.storage.from("images").getPublicUrl(imageKey).publicURL,
+        //   children: [{ text: "" }],
+        // });
         // console.log(imageExtensions, imageExtensions.includes(file.type));
       }
 

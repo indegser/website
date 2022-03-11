@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import { mq } from 'common/theme'
+import styled from "@emotion/styled";
+import { mq } from "@src/common/theme";
 
 interface Props {}
 
@@ -9,10 +9,10 @@ const Grid = styled.div`
   margin-bottom: var(--column-gap);
   position: relative;
 
-  ${mq('sm')} {
+  ${mq("sm")} {
     --column-count: 1;
   }
-`
+`;
 
 const Cards = styled.div`
   column-count: var(--column-count);
@@ -23,7 +23,7 @@ const Cards = styled.div`
     page-break-inside: avoid;
     position: relative;
   }
-`
+`;
 
 const Dividers = styled.div`
   overflow: hidden;
@@ -33,7 +33,7 @@ const Dividers = styled.div`
   left: 0;
   top: 0;
   pointer-events: none;
-`
+`;
 
 const Divider = styled.div`
   position: absolute;
@@ -50,10 +50,10 @@ const Divider = styled.div`
   --add: calc(var(--half-gap) * (2 * var(--divider-i) + 1));
   --left: calc(var(--box-width) * (var(--divider-i) + 1) + var(--add));
   left: var(--left);
-`
+`;
 
 const NewsGrid: React.FC<Props> = ({ children }) => {
-  const dividers = new Array(4).fill(true)
+  const dividers = new Array(4).fill(true);
 
   return (
     <Grid>
@@ -65,14 +65,14 @@ const NewsGrid: React.FC<Props> = ({ children }) => {
               key={i}
               style={{
                 // @ts-ignore
-                '--divider-i': i,
+                "--divider-i": i,
               }}
             />
-          )
+          );
         })}
       </Dividers>
     </Grid>
-  )
-}
+  );
+};
 
-export default NewsGrid
+export default NewsGrid;
