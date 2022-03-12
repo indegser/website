@@ -1,4 +1,4 @@
-import { styled } from "common/stitches.config";
+import { styled } from "@src/common/stitches.config";
 
 export const PageContainer = styled("div", {
   margin: "0 auto",
