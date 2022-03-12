@@ -38,7 +38,7 @@ export const NewsPreview = ({ news }: Props) => {
         <a>
           <Row>
             <Title>
-              <RichText data={title.title} />
+              <RichText data={title.title} shouldRenderPlainText />
             </Title>
             <Right>
               <Time>{desc}</Time>
