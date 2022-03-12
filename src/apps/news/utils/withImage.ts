@@ -1,10 +1,11 @@
-import { supabase } from "@src/apis/supabase";
 import imageExtensions from "image-extensions";
 import isUrl from "is-url";
+import { nanoid } from "nanoid";
 import { Transforms } from "slate";
 import { ReactEditor } from "slate-react";
+
+import { supabase } from "@src/apis/supabase";
 import { CustomImage } from "@src/types/editor.types";
-import { nanoid } from "nanoid";
 
 const isImageUrl = (url: string) => {
   if (!url) return false;

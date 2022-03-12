@@ -1,7 +1,8 @@
-import { newsApi } from "@src/apis/newsApi";
-import { NewsType } from "@src/types/news.types";
 import { useRouter } from "next/router";
 import useSWR from "swr";
+
+import { newsApi } from "@src/apis/newsApi";
+import { NewsType } from "@src/types/news.types";
 
 export const buildUseNewsQueryKey = (newsId: NewsType["id"]) => {
   return `news/${newsId}`;

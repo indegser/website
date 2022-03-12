@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+
 import { theme } from "@src/common/stitches.config";
 
 export const HorizontalRule = ({ children, attributes }) => {

@@ -1,5 +1,6 @@
-import { supabase } from "@src/apis/supabase";
 import useSWR from "swr";
+
+import { supabase } from "@src/apis/supabase";
 
 export interface TagType {
   id: string;

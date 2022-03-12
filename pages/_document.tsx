@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+
 import { Analytics } from "@src/apis/analytics";
 import { getCssText } from "@src/common/stitches.config";
 

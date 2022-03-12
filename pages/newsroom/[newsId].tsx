@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { NewsPage } from "@src/apps/news/NewsPage";
+
 import { newsApi } from "@src/apis/newsApi";
+import { NewsPage } from "@src/apps/news/NewsPage";
 import { buildUseNewsQueryKey } from "@src/queries/useNewsQuery";
 
 export const getStaticPaths: GetStaticPaths = async () => {

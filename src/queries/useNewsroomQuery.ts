@@ -1,5 +1,6 @@
-import { newsApi } from "@src/apis/newsApi";
 import useSWR from "swr";
+
+import { newsApi } from "@src/apis/newsApi";
 
 export const USE_NEWSROOM_QUERY_KEY = "newsroom";
 

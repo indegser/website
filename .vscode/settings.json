@@ -5,5 +5,8 @@
   "@src/typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "editor.scrollBeyondLastLine": false
+  "editor.scrollBeyondLastLine": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
