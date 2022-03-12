@@ -24,5 +24,14 @@ export type NewsType = DatabasePageType & {
   properties: NewsPropertyType;
 };
 
+export type BlockChildrenType = Awaited<
+  ReturnType<typeof notion["blocks"]["children"]["list"]>
+>;
+
+export type BlockType = Extract<
+  BlockChildrenType["results"][number],
+  { type: string }
+>;
+
 export type RichText = TitlePropertyType["title"][number];
 export type RichTextItemResponse = Array<RichText>;

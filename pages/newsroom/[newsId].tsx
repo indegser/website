@@ -1,29 +1,37 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
-// import { NewsPage } from "@src/apps/news/NewsPage";
+import { News } from "@src/pages/news/News";
+import { notion } from "@src/sdks/notion";
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const news = await newsApi.getLatestNews();
+export const getStaticPaths: GetStaticPaths = async () => {
+  const news = await notion.databases.query({
+    database_id: "0021f4b0494546a596716a7a5d9db452",
+    page_size: 20,
+  });
 
-//   const paths = news.map((item) => ({
-//     params: { newsId: item.id },
-//   }));
+  const paths = news.results.map((result) => ({
+    params: { newsId: result.id },
+  }));
 
-//   return {
-//     paths,
-//     fallback: "blocking",
-//   };
-// };
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
 
-// export const getStaticProps: GetStaticProps = async ({ params }) => {
-//   const newsId = params.newsId.toString();
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const newsId = params.newsId.toString();
 
-//   try {
-//     const news = await newsApi.getNews(newsId);
-//     return { props: { fallback: { [buildUseNewsQueryKey(newsId)]: news } } };
-//   } catch (err) {
-//     return { notFound: true };
-//   }
-// };
+  try {
+    const news = await notion.blocks.children.list({
+      block_id: newsId,
+      page_size: 100,
+    });
 
-export default () => null;
+    return { props: { news } };
+  } catch (err) {
+    return { notFound: true };
+  }
+};
+
+export default News;

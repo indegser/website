@@ -1,3 +1,5 @@
+import { RichTextWithLink } from "./RichTextWithLink";
+
 import { styled } from "@src/common/stitches.config";
 import { RichTextItemResponse } from "@src/types/notion.types";
 
@@ -15,10 +17,13 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
             const annotations = !shouldRenderPlainText
               ? richText.annotations
               : {};
+
+            const { link } = richText.text;
+
             return (
-              <RichTextContent key={i} {...annotations}>
-                {richText.text.content}
-              </RichTextContent>
+              <RichTextWithLink key={i} link={link}>
+                <Text {...annotations}>{richText.text.content}</Text>
+              </RichTextWithLink>
             );
           }
           default:
@@ -29,7 +34,7 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
   );
 };
 
-const RichTextContent = styled("span", {
+const Text = styled("span", {
   variants: {
     code: {
       true: {},
