@@ -1,12 +1,14 @@
-import { useMemo } from "react";
-import Link from "next/link";
+import "dayjs/locale/ko";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
-import { mq } from "@src/common/theme";
+import Link from "next/link";
+import { useMemo } from "react";
+
 import { Row } from "@src/common/atoms/Row";
 import { styled, theme } from "@src/common/stitches.config";
-import { NewsType } from "@src/types/news.types";
-import "dayjs/locale/ko";
+import { mq } from "@src/common/theme";
+import { RichText } from "@src/design/RichText";
+import { NewsType } from "@src/types/notion.types";
 
 dayjs.extend(calendar);
 
@@ -15,23 +17,29 @@ interface Props {
 }
 
 export const NewsPreview = ({ news }: Props) => {
+  const { published_time, title } = news.properties;
+
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(news.published_at)).locale("ko").calendar(null, {
-      sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
-      lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
-      lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
-      sameElse: "YYYY[년] MMMM D[일] h:mm", // Everything else ( 17/10/2011 )
-    });
+    const result = dayjs(dayjs(published_time.date.start))
+      .locale("ko")
+      .calendar(null, {
+        sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
+        lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
+        lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
+        sameElse: "YYYY[년] MMMM D[일] h:mm", // Everything else ( 17/10/2011 )
+      });
 
     return result;
-  }, [news.published_at]);
+  }, [published_time]);
 
   return (
     <Container>
       <Link href={`/newsroom/${news.id}`} passHref>
         <a>
           <Row>
-            <Title>{news.title}</Title>
+            <Title>
+              <RichText data={title.title} />
+            </Title>
             <Right>
               <Time>{desc}</Time>
             </Right>

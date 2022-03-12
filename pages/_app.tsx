@@ -3,21 +3,13 @@ import Head from "next/head";
 import { Router } from "next/router";
 import { SWRConfig } from "swr";
 
-import { Analytics } from "@src/apis/analytics";
-import { supabase } from "@src/apis/supabase";
 import { globalStyles } from "@src/common/globalStyles";
-import { useAdminStore } from "@src/common/hooks/admin.hooks";
 import { Footer } from "@src/common/organs/footer/Footer";
 import { Nav } from "@src/common/organs/nav/Nav";
-import "@src/apis/firebase";
 import { styled } from "@src/common/stitches.config";
+import { Analytics } from "@src/sdks/analytics";
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
-
-supabase.auth.onAuthStateChange((event) => {
-  const state = useAdminStore.getState();
-  state.setStatus(event === "SIGNED_IN" ? "admin" : "anonymous");
-});
 
 export default function App({ Component, pageProps }: AppProps) {
   globalStyles();

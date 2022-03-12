@@ -16,6 +16,7 @@
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@notionhq/client": "^1.0.2",
     "@radix-ui/react-popover": "^0.1.5",
     "@radix-ui/react-select": "^0.1.1",
     "@radix-ui/react-toast": "^0.1.1",
