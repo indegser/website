@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       page_size: 100,
     });
 
-    return { props: { news } };
+    return { props: { news }, revalidate: 60 };
   } catch (err) {
     return { notFound: true };
   }
