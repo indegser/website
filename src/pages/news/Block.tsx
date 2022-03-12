@@ -1,3 +1,4 @@
+import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
 
 import { styled } from "@src/common/stitches.config";
@@ -17,8 +18,16 @@ export const Block = ({ block }: Props) => {
       case "image": {
         return <ImageBlock block={block} />;
       }
+      case "heading_1": {
+        return <HeadingBlock level={1} heading={block.heading_1} />;
+      }
+      case "heading_2": {
+        return <HeadingBlock level={2} heading={block.heading_2} />;
+      }
+      case "heading_3": {
+        return <HeadingBlock level={3} heading={block.heading_3} />;
+      }
       default: {
-        console.log(block);
         return null;
       }
     }
