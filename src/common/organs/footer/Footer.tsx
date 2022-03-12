@@ -1,7 +1,8 @@
-import { PageContainer } from "@src/common/atoms/Container";
-import { mq } from "@src/common/theme";
-import { styled, theme } from "@src/common/stitches.config";
 import { Sns } from "./Sns";
+
+import { PageContainer } from "@src/common/atoms/Container";
+import { styled, theme } from "@src/common/stitches.config";
+import { mq } from "@src/common/theme";
 
 export const Footer = () => {
   return (

@@ -1,9 +1,10 @@
-import { styled, theme } from "@src/common/stitches.config";
 import copyTextToClipboard from "copy-text-to-clipboard";
 import Link from "next/link";
 import { Fragment, MouseEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { SiNotion, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
+
+import { styled, theme } from "@src/common/stitches.config";
 
 const snsList = [
   {
