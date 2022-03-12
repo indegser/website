@@ -1,7 +1,9 @@
-import { Logo } from "./Logo";
 import Link from "next/link";
-import { styled } from "common/stitches.config";
-import { PageContainer } from "common/atoms/Container";
+
+import { Logo } from "./Logo";
+
+import { PageContainer } from "@src/common/atoms/Container";
+import { styled } from "@src/common/stitches.config";
 
 export const Nav = () => {
   return (
