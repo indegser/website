@@ -12,11 +12,14 @@ interface Props {
 }
 
 export const NewsHeadline = ({ news }: Props) => {
+  const { last_edited_time } = news;
   const { title, category, published_time } = news.properties;
 
   const publishedAt = useMemo(() => {
-    return dayjs(published_time.date.start).locale("en").format("MMMM D, YYYY");
-  }, [published_time]);
+    return dayjs(published_time.date?.start ?? last_edited_time)
+      .locale("en")
+      .format("MMMM D, YYYY");
+  }, [published_time, last_edited_time]);
 
   const categoryName = category.multi_select[0]?.name;
 
