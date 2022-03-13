@@ -1,5 +1,6 @@
 import { takeRightWhile } from "lodash-es";
 
+import { BookmarkBlock } from "./BookmarkBlock";
 import { BulletedListItemBlock } from "./BulletedListItemBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
@@ -44,6 +45,9 @@ export const Block = ({ block, index, blocks }: Props) => {
       }
       case "bulleted_list_item": {
         return <BulletedListItemBlock block={block} />;
+      }
+      case "bookmark": {
+        return <BookmarkBlock block={block} />;
       }
       default: {
         console.log(block);
