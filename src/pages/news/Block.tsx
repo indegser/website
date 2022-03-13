@@ -5,6 +5,7 @@ import { BulletedListItemBlock } from "./BulletedListItemBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
+import { QuoteBlock } from "./QuoteBlock";
 
 import { styled } from "@src/common/stitches.config";
 import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
@@ -48,6 +49,9 @@ export const Block = ({ block, index, blocks }: Props) => {
       }
       case "bookmark": {
         return <BookmarkBlock block={block} />;
+      }
+      case "quote": {
+        return <QuoteBlock block={block} />;
       }
       default: {
         console.log(block);

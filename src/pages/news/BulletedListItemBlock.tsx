@@ -36,7 +36,7 @@ const Marker = styled("div", {
   height: `25px`,
   marginRight: 2,
   lineHeight: `25px`,
-  fontSize: `2em`,
+  fontSize: `1.1em`,
 });
 
 const Content = styled("div", {
