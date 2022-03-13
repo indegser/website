@@ -17,10 +17,11 @@ interface Props {
 }
 
 export const NewsPreview = ({ news }: Props) => {
+  const { last_edited_time } = news;
   const { published_time, title } = news.properties;
 
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(published_time.date.start))
+    const result = dayjs(dayjs(published_time.date?.start ?? last_edited_time))
       .locale("ko")
       .calendar(null, {
         sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
@@ -30,7 +31,7 @@ export const NewsPreview = ({ news }: Props) => {
       });
 
     return result;
-  }, [published_time]);
+  }, [published_time, last_edited_time]);
 
   return (
     <Container>
