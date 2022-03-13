@@ -9,13 +9,19 @@ interface Props {
 }
 
 export const ImageBlock = ({ block }: Props) => {
-  if (!("file" in block.image)) {
-    console.warn("file is empty");
-    return null;
+  let url = "";
+
+  if ("file" in block.image) {
+    url = block.image.file.url;
   }
 
+  if ("external" in block.image) {
+    url = block.image.external.url;
+  }
+
+  if (!url) return null;
+
   const { caption } = block.image;
-  const { url } = block.image.file;
 
   return (
     <Container>
