@@ -1,3 +1,5 @@
+import { useCallback, useEffect, useState } from "react";
+
 import { Caption } from "./Caption";
 
 import { styled } from "@src/common/stitches.config";
@@ -9,6 +11,9 @@ interface Props {
 }
 
 export const ImageBlock = ({ block }: Props) => {
+  const [metadata, setMetadata] =
+    useState<{ width: number; height: number }>(null);
+
   let url = "";
 
   if ("file" in block.image) {
@@ -19,13 +24,34 @@ export const ImageBlock = ({ block }: Props) => {
     url = block.image.external.url;
   }
 
-  if (!url) return null;
+  const handleImageLoad = useCallback((event: Event) => {
+    const image = event.target as HTMLImageElement;
+    setMetadata({ width: image.width, height: image.height });
+  }, []);
 
+  useEffect(() => {
+    if (!url) return null;
+
+    const image = new Image();
+    image.addEventListener("load", handleImageLoad);
+
+    image.src = url;
+
+    return () => {
+      image.removeEventListener("load", handleImageLoad);
+    };
+  }, [url, handleImageLoad]);
+
+  if (!url || !metadata) return null;
+
+  const { width, height } = metadata;
   const { caption } = block.image;
 
   return (
     <Container>
-      <Image src={url} alt="" />
+      <ImageLayout>
+        <ImageElement src={url} alt="" layout={width > height ? "x" : "y"} />
+      </ImageLayout>
       <CaptionContainer>
         <Caption caption={caption} />
       </CaptionContainer>
@@ -42,14 +68,34 @@ const Container = styled("div", {
   },
 });
 
-const Image = styled("img", {
-  width: "100%",
-  height: "auto",
+const ImageLayout = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+});
+
+const ImageElement = styled("img", {
   display: "block",
   borderRadius: "8px",
 
+  variants: {
+    layout: {
+      x: {
+        maxWidth: "100%",
+        height: "auto",
+      },
+      y: {
+        width: "auto",
+        maxHeight: "80vh",
+      },
+    },
+  },
+
   [mq("sm")]: {
     borderRadius: 0,
+    width: "100% !important",
+    height: "auto !important",
+    maxWidth: "auto !important",
+    maxHeight: "auto !important",
   },
 });
 
