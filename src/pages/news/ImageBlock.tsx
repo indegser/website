@@ -1,5 +1,6 @@
-import { styled, theme } from "@src/common/stitches.config";
-import { RichText } from "@src/design/RichText";
+import { Caption } from "./Caption";
+
+import { styled } from "@src/common/stitches.config";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {
@@ -12,28 +13,19 @@ export const ImageBlock = ({ block }: Props) => {
     return null;
   }
 
+  const { caption } = block.image;
   const { url } = block.image.file;
 
   return (
     <Container>
       <Image src={url} alt="" />
-      <Caption>
-        <RichText data={block.image.caption} />
-      </Caption>
+      <Caption caption={caption} />
     </Container>
   );
 };
 
 const Container = styled("div", {
   margin: "0.25rem 0",
-});
-
-const Caption = styled("div", {
-  fontSize: 12,
-  letterSpacing: 0,
-  lineHeight: "16px",
-  fontWeight: 600,
-  color: theme.colors.fgMuted,
 });
 
 const Image = styled("img", {
