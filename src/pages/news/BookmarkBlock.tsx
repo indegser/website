@@ -76,7 +76,7 @@ const Figure = styled("figure", {
 const Container = styled(motion.div, {
   boxShadow: `0 0 0 .5px ${theme.colors.borderMuted}`,
   display: "flex",
-  margin: "8px -16px",
+  margin: "8px 0",
   cursor: "pointer",
   borderRadius: 1,
   overflow: "hidden",
@@ -87,10 +87,6 @@ const Container = styled(motion.div, {
     ["&:hover"]: {
       background: theme.colors.canvasInset,
     },
-  },
-
-  "@bp1": {
-    margin: "8px 0",
   },
 });
 
