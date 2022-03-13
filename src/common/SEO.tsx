@@ -1,6 +1,7 @@
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { GIT_COMMIT_SHA, ORIGIN } from "types/const.types";
+
+import { GIT_COMMIT_SHA, ORIGIN } from "@src/types/const.types";
 
 interface Props {
   title: string;
