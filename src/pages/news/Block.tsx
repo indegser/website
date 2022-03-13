@@ -1,5 +1,6 @@
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
+import { NumberedListItemBlock } from "./NumberedListItemBlock";
 
 import { styled } from "@src/common/stitches.config";
 import { RichText } from "@src/design/RichText";
@@ -26,6 +27,9 @@ export const Block = ({ block }: Props) => {
       }
       case "heading_3": {
         return <HeadingBlock level={3} heading={block.heading_3} />;
+      }
+      case "numbered_list_item": {
+        return <NumberedListItemBlock block={block} />;
       }
       default: {
         return null;

@@ -17,9 +17,9 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
 
     const isBackground = color.includes("_background");
     const colorValue = isBackground
-      ? color.replace("_background", "4")
+      ? color.replace("_background", "3")
       : `${color}11`;
-    const colorKey = isBackground ? "backgroundColor" : "color";
+    const colorKey = isBackground ? "background" : "color";
 
     return { [colorKey]: theme.colors[colorValue] };
   };
@@ -53,6 +53,9 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
 
 const Text = styled("span", {
   fontWeight: 420,
+  boxDecorationBreak: "clone",
+  display: "inline",
+
   variants: {
     code: {
       true: {},
