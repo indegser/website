@@ -5,8 +5,9 @@ import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
 
 import { styled } from "@src/common/stitches.config";
+import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
 import { RichText } from "@src/design/RichText";
-import { BlockType } from "@src/types/notion.types";
+import { AnnotationColorType, BlockType } from "@src/types/notion.types";
 
 interface Props {
   index: number;
@@ -46,7 +47,10 @@ export const Block = ({ block, index, blocks }: Props) => {
     }
   };
 
-  return <Section>{renderContent()}</Section>;
+  const { color } = block[block.type] as { color: AnnotationColorType };
+  const styleProps = convertApiColorToStyleProps(color);
+
+  return <Section style={styleProps}>{renderContent()}</Section>;
 };
 
 const Section = styled("div", {

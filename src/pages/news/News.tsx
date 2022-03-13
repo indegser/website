@@ -33,8 +33,8 @@ export const News = ({ news }: Props) => {
 };
 
 const Content = styled("article", {
-  fontSize: 16,
-  lineHeight: "25px",
+  fontSize: 17,
+  lineHeight: "28px",
   letterSpacing: "-0.014em",
   paddingBottom: 80,
   fontWeight: 400,
