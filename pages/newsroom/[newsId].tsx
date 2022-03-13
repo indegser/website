@@ -28,7 +28,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       page_size: 100,
     });
 
-    return { props: { news }, revalidate: 60 };
+    const page = await notion.pages.retrieve({
+      page_id: newsId,
+    });
+
+    return { props: { news, page }, revalidate: 60 };
   } catch (err) {
     return { notFound: true };
   }
