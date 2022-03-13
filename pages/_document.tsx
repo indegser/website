@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { Analytics } from "apis/analytics";
-import { getCssText } from "common/stitches.config";
+
+import { getCssText } from "@src/common/stitches.config";
+import { Analytics } from "@src/sdks/analytics";
 
 export default class MyDocument extends Document {
   render() {

@@ -1,4 +1,4 @@
-import { styled } from "common/stitches.config";
+import { styled } from "@src/common/stitches.config";
 
 export const PageContainer = styled("div", {
   margin: "0 auto",
@@ -10,7 +10,7 @@ export const PageContainer = styled("div", {
   paddingRight: "max(22px,env(safe-area-inset-right))",
 });
 
-export const MarkdownContainer = styled("div", {
+export const PageContent = styled("div", {
   maxWidth: 653,
   margin: "0 auto",
 });

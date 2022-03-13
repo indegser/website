@@ -19,8 +19,7 @@ export const globalStyles = globalCss({
   },
   ["body"]: {
     margin: 0,
-    "-webkit-font-smoothing": "antialiased",
-    "-moz-osx-font-smoothing": "grayscale",
+    "-webkit-font-smoothing": "auto",
     fontKerning: "normal",
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
     color: theme.colors.fgDefault,

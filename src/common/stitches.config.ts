@@ -1,3 +1,14 @@
+import {
+  gray,
+  blue,
+  red,
+  green,
+  yellow,
+  orange,
+  purple,
+  pink,
+  brown,
+} from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
 export const {
@@ -26,8 +37,18 @@ export const {
       accentMuted: "rgba(84,174,255,0.4)",
       accentSubtle: "#ddf4ff",
       linkDefault: "#737371",
+      ...gray,
+      ...blue,
+      ...red,
+      ...green,
+      ...yellow,
+      ...orange,
+      ...purple,
+      ...pink,
+      ...brown,
     },
     fonts: {
+      // sans: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"',
       sans: '"Inter var", "Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
       mono: "SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace",
     },
