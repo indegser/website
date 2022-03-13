@@ -9,6 +9,7 @@ interface Props {
 
 export const NumberedListItemBlock = ({ block, marker }: Props) => {
   const { numbered_list_item } = block;
+
   return (
     <Container>
       <Marker>{marker}.</Marker>
