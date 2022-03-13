@@ -7,6 +7,7 @@ import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
 import { QuoteBlock } from "./QuoteBlock";
 
+import { PageContent } from "@src/common/atoms/Container";
 import { styled } from "@src/common/stitches.config";
 import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
 import { RichText } from "@src/design/RichText";
@@ -19,22 +20,41 @@ interface Props {
 }
 
 export const Block = ({ block, index, blocks }: Props) => {
+  const { color } = block[block.type] as { color: AnnotationColorType };
+  const styleProps = convertApiColorToStyleProps(color);
+
   const renderContent = () => {
     switch (block.type) {
       case "paragraph": {
-        return <RichText data={block.paragraph.rich_text} />;
+        return (
+          <PageContent style={styleProps}>
+            <RichText data={block.paragraph.rich_text} />
+          </PageContent>
+        );
       }
       case "image": {
         return <ImageBlock block={block} />;
       }
       case "heading_1": {
-        return <HeadingBlock level={1} heading={block.heading_1} />;
+        return (
+          <PageContent style={styleProps}>
+            <HeadingBlock level={1} heading={block.heading_1} />
+          </PageContent>
+        );
       }
       case "heading_2": {
-        return <HeadingBlock level={2} heading={block.heading_2} />;
+        return (
+          <PageContent style={styleProps}>
+            <HeadingBlock level={2} heading={block.heading_2} />
+          </PageContent>
+        );
       }
       case "heading_3": {
-        return <HeadingBlock level={3} heading={block.heading_3} />;
+        return (
+          <PageContent style={styleProps}>
+            <HeadingBlock level={3} heading={block.heading_3} />
+          </PageContent>
+        );
       }
       case "numbered_list_item": {
         const marker = takeRightWhile(
@@ -42,16 +62,32 @@ export const Block = ({ block, index, blocks }: Props) => {
           (result) => result.type === "numbered_list_item"
         ).length;
 
-        return <NumberedListItemBlock block={block} marker={marker} />;
+        return (
+          <PageContent style={styleProps}>
+            <NumberedListItemBlock block={block} marker={marker} />
+          </PageContent>
+        );
       }
       case "bulleted_list_item": {
-        return <BulletedListItemBlock block={block} />;
+        return (
+          <PageContent style={styleProps}>
+            <BulletedListItemBlock block={block} />
+          </PageContent>
+        );
       }
       case "bookmark": {
-        return <BookmarkBlock block={block} />;
+        return (
+          <PageContent style={styleProps}>
+            <BookmarkBlock block={block} />
+          </PageContent>
+        );
       }
       case "quote": {
-        return <QuoteBlock block={block} />;
+        return (
+          <PageContent style={styleProps}>
+            <QuoteBlock block={block} />
+          </PageContent>
+        );
       }
       default: {
         console.log(block);
@@ -60,14 +96,9 @@ export const Block = ({ block, index, blocks }: Props) => {
     }
   };
 
-  const { color } = block[block.type] as { color: AnnotationColorType };
-  const styleProps = convertApiColorToStyleProps(color);
-
-  return <Section style={styleProps}>{renderContent()}</Section>;
+  return <Section>{renderContent()}</Section>;
 };
 
 const Section = styled("div", {
-  margin: "0 auto",
   marginBottom: "1.4211em",
-  maxWidth: 700,
 });

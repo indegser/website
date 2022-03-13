@@ -19,6 +19,6 @@ const Container = styled("div", {
   letterSpacing: 0,
   lineHeight: "16px",
   fontWeight: 500,
-  color: theme.colors.fgMuted,
+  color: theme.colors.gray10,
   marginTop: 14,
 });

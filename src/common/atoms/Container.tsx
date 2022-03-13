@@ -10,7 +10,7 @@ export const PageContainer = styled("div", {
   paddingRight: "max(22px,env(safe-area-inset-right))",
 });
 
-export const MarkdownContainer = styled("div", {
+export const PageContent = styled("div", {
   maxWidth: 653,
   margin: "0 auto",
 });

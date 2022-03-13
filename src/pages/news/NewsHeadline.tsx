@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { useMemo } from "react";
 
-import { MarkdownContainer } from "@src/common/atoms/Container";
+import { PageContent } from "@src/common/atoms/Container";
 import { styled, theme } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
 import { RichText } from "@src/design/RichText";
@@ -25,7 +25,7 @@ export const NewsHeadline = ({ news }: Props) => {
 
   return (
     <Section>
-      <MarkdownContainer>
+      <PageContent>
         <Metadata>
           {categoryName ? (
             <>
@@ -38,7 +38,7 @@ export const NewsHeadline = ({ news }: Props) => {
         <Title>
           <RichText shouldRenderPlainText data={title.title} />
         </Title>
-      </MarkdownContainer>
+      </PageContent>
     </Section>
   );
 };
