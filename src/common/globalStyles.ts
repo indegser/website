@@ -1,10 +1,10 @@
 import { globalCss, theme } from "./stitches.config";
 
 export const globalStyles = globalCss({
-  ["@import"]: [
-    "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css",
-    "https://rsms.me/inter/inter.css",
-  ],
+  // ["@import"]: [
+  //   "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css",
+  //   "https://rsms.me/inter/inter.css",
+  // ],
   ["a"]: {
     textDecoration: "none",
     font: "inherit",
@@ -19,8 +19,7 @@ export const globalStyles = globalCss({
   },
   ["body"]: {
     margin: 0,
-    "-webkit-font-smoothing": "antialiased",
-    "-moz-osx-font-smoothing": "grayscale",
+    "-webkit-font-smoothing": "auto",
     fontKerning: "normal",
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
     color: theme.colors.fgDefault,
