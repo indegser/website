@@ -1,15 +1,22 @@
+import { takeRightWhile } from "lodash-es";
+
+import { BulletedListItemBlock } from "./BulletedListItemBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
+import { NumberedListItemBlock } from "./NumberedListItemBlock";
 
 import { styled } from "@src/common/stitches.config";
+import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
 import { RichText } from "@src/design/RichText";
-import { BlockType } from "@src/types/notion.types";
+import { AnnotationColorType, BlockType } from "@src/types/notion.types";
 
 interface Props {
+  index: number;
   block: BlockType;
+  blocks: BlockType[];
 }
 
-export const Block = ({ block }: Props) => {
+export const Block = ({ block, index, blocks }: Props) => {
   const renderContent = () => {
     switch (block.type) {
       case "paragraph": {
@@ -27,13 +34,28 @@ export const Block = ({ block }: Props) => {
       case "heading_3": {
         return <HeadingBlock level={3} heading={block.heading_3} />;
       }
+      case "numbered_list_item": {
+        const marker = takeRightWhile(
+          blocks.slice(0, index + 1),
+          (result) => result.type === "numbered_list_item"
+        ).length;
+
+        return <NumberedListItemBlock block={block} marker={marker} />;
+      }
+      case "bulleted_list_item": {
+        return <BulletedListItemBlock block={block} />;
+      }
       default: {
+        console.log(block);
         return null;
       }
     }
   };
 
-  return <Section>{renderContent()}</Section>;
+  const { color } = block[block.type] as { color: AnnotationColorType };
+  const styleProps = convertApiColorToStyleProps(color);
+
+  return <Section style={styleProps}>{renderContent()}</Section>;
 };
 
 const Section = styled("div", {

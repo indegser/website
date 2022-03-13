@@ -33,5 +33,7 @@ export type BlockType = Extract<
   { type: string }
 >;
 
-export type RichText = TitlePropertyType["title"][number];
-export type RichTextItemResponse = Array<RichText>;
+export type RichTextType = TitlePropertyType["title"][number];
+export type RichTextItemResponse = Array<RichTextType>;
+export type AnnotationType = RichTextType["annotations"];
+export type AnnotationColorType = AnnotationType["color"];
