@@ -1,17 +1,24 @@
 import { Block } from "./Block";
+import { NewsHeadline } from "./NewsHeadline";
 
 import { PageContainer } from "@src/common/atoms/Container";
 import { styled } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
-import { BlockChildrenType, BlockType } from "@src/types/notion.types";
+import {
+  BlockChildrenType,
+  BlockType,
+  NewsType,
+} from "@src/types/notion.types";
 
 interface Props {
   news: BlockChildrenType;
+  page: NewsType;
 }
 
-export const News = ({ news }: Props) => {
+export const News = ({ news, page }: Props) => {
   return (
     <PageContainer>
+      <NewsHeadline news={page} />
       <Content>
         {news.results.map((block, index) => {
           if (!("type" in block)) {
