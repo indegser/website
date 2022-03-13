@@ -1,3 +1,5 @@
+import { takeRightWhile } from "lodash-es";
+
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
@@ -7,10 +9,12 @@ import { RichText } from "@src/design/RichText";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {
+  index: number;
   block: BlockType;
+  blocks: BlockType[];
 }
 
-export const Block = ({ block }: Props) => {
+export const Block = ({ block, index, blocks }: Props) => {
   const renderContent = () => {
     switch (block.type) {
       case "paragraph": {
@@ -29,7 +33,12 @@ export const Block = ({ block }: Props) => {
         return <HeadingBlock level={3} heading={block.heading_3} />;
       }
       case "numbered_list_item": {
-        return <NumberedListItemBlock block={block} />;
+        const marker = takeRightWhile(
+          blocks.slice(0, index + 1),
+          (result) => result.type === "numbered_list_item"
+        ).length;
+
+        return <NumberedListItemBlock block={block} marker={marker} />;
       }
       default: {
         return null;
