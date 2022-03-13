@@ -6,7 +6,7 @@ interface Props {
   block: Extract<BlockType, { type: "bulleted_list_item" }>;
 }
 
-export const BulletedListItemBlock = ({ block, marker }: Props) => {
+export const BulletedListItemBlock = ({ block }: Props) => {
   const { bulleted_list_item } = block;
 
   return (
