@@ -1,7 +1,10 @@
 import { RichTextWithLink } from "./RichTextWithLink";
 
-import { styled } from "@src/common/stitches.config";
-import { RichTextItemResponse } from "@src/types/notion.types";
+import { styled, theme } from "@src/common/stitches.config";
+import {
+  RichText as RichTextType,
+  RichTextItemResponse,
+} from "@src/types/notion.types";
 
 interface Props {
   shouldRenderPlainText?: boolean;
@@ -9,6 +12,18 @@ interface Props {
 }
 
 export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
+  const getStyleProp = ({ color }: RichTextType["annotations"]) => {
+    if (color === "default") return {};
+
+    const isBackground = color.includes("_background");
+    const colorValue = isBackground
+      ? color.replace("_background", "4")
+      : `${color}11`;
+    const colorKey = isBackground ? "backgroundColor" : "color";
+
+    return { [colorKey]: theme.colors[colorValue] };
+  };
+
   return (
     <>
       {data.map((richText, i) => {
@@ -16,13 +31,15 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
           case "text": {
             const annotations = !shouldRenderPlainText
               ? richText.annotations
-              : {};
+              : ({} as typeof richText["annotations"]);
 
             const { link } = richText.text;
 
             return (
               <RichTextWithLink key={i} link={link}>
-                <Text {...annotations}>{richText.text.content}</Text>
+                <Text {...annotations} style={getStyleProp(annotations)}>
+                  {richText.text.content}
+                </Text>
               </RichTextWithLink>
             );
           }
@@ -35,6 +52,7 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
 };
 
 const Text = styled("span", {
+  fontWeight: 420,
   variants: {
     code: {
       true: {},
