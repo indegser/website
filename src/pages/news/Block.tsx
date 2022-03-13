@@ -1,5 +1,6 @@
 import { takeRightWhile } from "lodash-es";
 
+import { BulletedListItemBlock } from "./BulletedListItemBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
@@ -41,7 +42,11 @@ export const Block = ({ block, index, blocks }: Props) => {
 
         return <NumberedListItemBlock block={block} marker={marker} />;
       }
+      case "bulleted_list_item": {
+        return <BulletedListItemBlock block={block} />;
+      }
       default: {
+        console.log(block);
         return null;
       }
     }
