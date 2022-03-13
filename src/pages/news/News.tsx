@@ -47,8 +47,7 @@ const Content = styled("article", {
   fontWeight: 400,
 
   [mq("sm")]: {
-    fontSize: 17,
-    lineHeight: 1.5,
+    fontSize: 18,
     padding: "0 0 80px 0",
   },
 });
