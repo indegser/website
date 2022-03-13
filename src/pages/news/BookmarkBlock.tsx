@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+import { Caption } from "./Caption";
+
 import { styled, theme } from "@src/common/stitches.config";
 import { mediaQueries } from "@src/common/theme";
 import { BlockType } from "@src/types/notion.types";
@@ -42,29 +44,23 @@ export const BookmarkBlock = ({ block }: Props) => {
   return (
     <Figure>
       {metadata && (
-        <div contentEditable={false}>
-          <a href={url} title={metadata.title} target="_blank" rel="noreferrer">
-            <Container
-              whileTap={{ opacity: 0.8 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Metadata>
-                <Title>{metadata.title}</Title>
-                <Desc>{metadata.description}</Desc>
-                <Url>
-                  {faviconLoaded && <CoverImage src={metadata.favicon} />}
-                  <UrlText>{decodeURIComponent(url)}</UrlText>
-                </Url>
-              </Metadata>
-              {metadata.imageUrl && (
-                <Cover
-                  style={{ backgroundImage: `url(${metadata.imageUrl})` }}
-                />
-              )}
-            </Container>
-          </a>
-        </div>
+        <a href={url} title={metadata.title} target="_blank" rel="noreferrer">
+          <Container whileTap={{ opacity: 0.8 }} transition={{ duration: 0.2 }}>
+            <Metadata>
+              <Title>{metadata.title}</Title>
+              <Desc>{metadata.description}</Desc>
+              <Url>
+                {faviconLoaded && <CoverImage src={metadata.favicon} />}
+                <UrlText>{decodeURIComponent(url)}</UrlText>
+              </Url>
+            </Metadata>
+            {metadata.imageUrl && (
+              <Cover style={{ backgroundImage: `url(${metadata.imageUrl})` }} />
+            )}
+          </Container>
+        </a>
       )}
+      <Caption caption={block.bookmark.caption} />
     </Figure>
   );
 };

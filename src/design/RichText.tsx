@@ -42,7 +42,6 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
 };
 
 const Text = styled("span", {
-  fontWeight: 420,
   boxDecorationBreak: "clone",
   display: "inline",
 
@@ -52,7 +51,7 @@ const Text = styled("span", {
     },
     bold: {
       true: {
-        fontWeight: 640,
+        fontWeight: 600,
       },
     },
     italic: {
