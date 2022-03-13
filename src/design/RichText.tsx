@@ -13,7 +13,7 @@ interface Props {
 
 export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
   const getStyleProp = ({ color }: RichTextType["annotations"]) => {
-    if (color === "default") return {};
+    if (!color || color === "default") return {};
 
     const isBackground = color.includes("_background");
     const colorValue = isBackground
