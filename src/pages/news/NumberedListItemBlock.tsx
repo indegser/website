@@ -3,14 +3,15 @@ import { RichText } from "@src/design/RichText";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {
+  marker: number;
   block: Extract<BlockType, { type: "numbered_list_item" }>;
 }
 
-export const NumberedListItemBlock = ({ block }: Props) => {
+export const NumberedListItemBlock = ({ block, marker }: Props) => {
   const { numbered_list_item } = block;
   return (
     <Container>
-      <Marker>1.</Marker>
+      <Marker>{marker}.</Marker>
       <Content>
         <div>
           <RichText data={numbered_list_item.rich_text} />
