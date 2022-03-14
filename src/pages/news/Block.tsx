@@ -90,7 +90,6 @@ export const Block = ({ block, index, blocks }: Props) => {
         );
       }
       default: {
-        console.log(block);
         return null;
       }
     }
