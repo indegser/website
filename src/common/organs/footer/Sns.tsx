@@ -72,8 +72,8 @@ const LinkIcon = styled("div", {
   },
 
   ["&:hover"]: {
-    color: theme.colors.gray11,
-    fill: theme.colors.gray11,
+    color: theme.colors.gray12,
+    fill: theme.colors.gray12,
   },
 });
 
