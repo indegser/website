@@ -73,7 +73,7 @@ const Right = styled("div", {
 });
 
 const Title = styled("h2", {
-  fontWeight: 400,
+  fontWeight: 600,
   fontSize: 16,
   lineHeight: 1.38,
   paddingBottom: 0,
@@ -83,7 +83,7 @@ const Title = styled("h2", {
   margin: 0,
   marginRight: 20,
   color: theme.colors.gray12,
-  backgroundImage: `linear-gradient(to right, ${theme.colors.borderSubtle} 0%, ${theme.colors.borderSubtle} 100%)`,
+  backgroundImage: `linear-gradient(to right, ${theme.colors.gray8} 0%, ${theme.colors.gray8} 100%)`,
   backgroundRepeat: "repeat-x",
   backgroundPosition: "0px 100%",
   backgroundSize: "100% 1px",

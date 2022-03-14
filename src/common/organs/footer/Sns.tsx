@@ -64,15 +64,22 @@ const Links = styled("div", {
 
 const LinkIcon = styled("div", {
   padding: "4px",
+  color: theme.colors.gray10,
+  fill: theme.colors.gray10,
+
   ["& svg"]: {
     display: "block",
-    color: theme.colors.fgMuted,
+  },
+
+  ["&:hover"]: {
+    color: theme.colors.gray11,
+    fill: theme.colors.gray11,
   },
 });
 
 const MidDot = styled("div", {
   width: 2,
   height: 2,
-  background: theme.colors.fgMuted,
+  background: theme.colors.gray10,
   borderRadius: "999rem",
 });
