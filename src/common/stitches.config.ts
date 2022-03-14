@@ -8,6 +8,15 @@ import {
   purple,
   pink,
   brown,
+  grayDark,
+  blueDark,
+  redDark,
+  greenDark,
+  yellowDark,
+  orangeDark,
+  purpleDark,
+  pinkDark,
+  brownDark,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -53,10 +62,18 @@ export const {
       mono: "SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace",
     },
   },
-  media: {
-    bp1: "(min-width: 480px)",
-  },
-  utils: {
-    marginX: (value) => ({ marginLeft: value, marginRight: value }),
+});
+
+export const darkTheme = createTheme("dark-theme", {
+  colors: {
+    ...grayDark,
+    ...blueDark,
+    ...redDark,
+    ...greenDark,
+    ...yellowDark,
+    ...orangeDark,
+    ...purpleDark,
+    ...pinkDark,
+    ...brownDark,
   },
 });

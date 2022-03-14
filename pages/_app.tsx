@@ -6,7 +6,7 @@ import { SWRConfig } from "swr";
 import { globalStyles } from "@src/common/globalStyles";
 import { Footer } from "@src/common/organs/footer/Footer";
 import { Nav } from "@src/common/organs/nav/Nav";
-import { styled } from "@src/common/stitches.config";
+import { darkTheme, styled } from "@src/common/stitches.config";
 import { Analytics } from "@src/sdks/analytics";
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Page>
+      <Page className={darkTheme}>
         <Nav />
         <Main>
           <Component {...pageProps} />
