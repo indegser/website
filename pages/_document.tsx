@@ -1,12 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import { getCssText } from "@src/common/stitches.config";
+import { darkTheme, getCssText } from "@src/common/stitches.config";
 import { Analytics } from "@src/sdks/analytics";
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className={darkTheme}>
         <Head>
           <style
             id="stitches"
