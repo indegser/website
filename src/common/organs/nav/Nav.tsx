@@ -3,9 +3,13 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 
 import { PageContainer } from "@src/common/atoms/Container";
-import { styled } from "@src/common/stitches.config";
+import { styled, theme } from "@src/common/stitches.config";
+import { useThemeStore } from "@src/design/themeStore";
 
 export const Nav = () => {
+  const theme = useThemeStore((s) => s.theme);
+  const toggleTheme = useThemeStore((s) => s.toggleTheme);
+
   return (
     <PageContainer>
       <Layout id="global-nav">
@@ -17,6 +21,7 @@ export const Nav = () => {
             </Heading>
           </a>
         </Link>
+        <button onClick={() => toggleTheme()}>{theme}</button>
       </Layout>
     </PageContainer>
   );
@@ -37,4 +42,5 @@ const Heading = styled("div", {
   fontSize: 14,
   fontWeight: 600,
   cursor: "pointer",
+  color: theme.colors.gray12,
 });

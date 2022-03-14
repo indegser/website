@@ -2,7 +2,7 @@ import { Block } from "./Block";
 import { NewsHeadline } from "./NewsHeadline";
 
 import { PageContainer } from "@src/common/atoms/Container";
-import { styled } from "@src/common/stitches.config";
+import { styled, theme } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
 import {
   BlockChildrenType,
@@ -45,6 +45,7 @@ const Content = styled("article", {
   letterSpacing: "-0.014em",
   paddingBottom: 80,
   fontWeight: 400,
+  color: theme.colors.gray12,
 
   [mq("sm")]: {
     fontSize: 18,

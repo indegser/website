@@ -70,7 +70,7 @@ const Figure = styled("figure", {
 });
 
 const Container = styled(motion.div, {
-  boxShadow: `0 0 0 .5px ${theme.colors.borderMuted}`,
+  boxShadow: `0 0 0 .5px ${theme.colors.gray6}`,
   display: "flex",
   margin: "8px 0",
   cursor: "pointer",
@@ -81,7 +81,7 @@ const Container = styled(motion.div, {
 
   [mediaQueries.hoverable]: {
     ["&:hover"]: {
-      background: theme.colors.canvasInset,
+      background: theme.colors.gray3,
     },
   },
 });
@@ -95,19 +95,20 @@ const Metadata = styled("div", {
 });
 
 const Title = styled("div", {
-  fontSize: 15,
+  fontSize: 14,
   lineHeight: "22px",
   overflow: "hidden",
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
   marginBottom: 2,
+  color: theme.colors.gray12,
 });
 
 const Desc = styled("div", {
   fontSize: 13,
   lineHeight: "17px",
   letterSpacing: "0em",
-  color: "$fgMuted",
+  color: theme.colors.gray11,
   display: "-webkit-box",
   "-webkit-box-orient": "vertical",
   "-webkit-line-clamp": 2,
@@ -122,6 +123,7 @@ const Url = styled("div", {
   overflow: "hidden",
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
+  color: theme.colors.gray10,
 
   ["& img"]: {},
 });
