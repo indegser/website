@@ -20,7 +20,7 @@ export const RichTextWithLink = ({
 const Link = styled("a", {
   cursor: "pointer",
   textDecoration: "none",
-  color: theme.colors.accentFg,
+  color: theme.colors.blue11,
 
   ["&:hover"]: {
     textDecoration: "underline",

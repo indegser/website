@@ -73,6 +73,7 @@ const Title = styled("h1", {
   fontSize: 48,
   letterSpacing: `-0.025em`,
   lineHeight: 1.15,
+  color: theme.colors.gray12,
 
   [mq("sm")]: {
     fontSize: 36,
@@ -96,11 +97,11 @@ const Excerpt = styled("h3", {
 const Property = styled("div", {
   fontSize: 14,
   fontWeight: 500,
-  color: theme.colors.fgSubtle,
+  color: theme.colors.gray11,
 });
 
 const Divider = styled("div", {
   width: 1,
   height: 10,
-  background: theme.colors.borderDefault,
+  background: theme.colors.gray11,
 });
