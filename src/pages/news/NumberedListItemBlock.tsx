@@ -4,15 +4,59 @@ import { BlockType } from "@src/types/notion.types";
 
 interface Props {
   marker: number;
+  depth: number;
   block: Extract<BlockType, { type: "numbered_list_item" }>;
 }
 
-export const NumberedListItemBlock = ({ block, marker }: Props) => {
+const alphabet = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+
+function counterGenerator(type: number, marker: number) {
+  switch (type) {
+    case 0: {
+      return marker + 1;
+    }
+    case 1: {
+      return alphabet[marker % alphabet.length];
+    }
+    default: {
+      return;
+    }
+  }
+}
+
+export const NumberedListItemBlock = ({ block, depth, marker }: Props) => {
   const { numbered_list_item } = block;
 
   return (
     <Container>
-      <Marker>{marker}.</Marker>
+      <Marker>{counterGenerator(depth % 2, marker)}.</Marker>
       <Content>
         <div>
           <RichText data={numbered_list_item.rich_text} />

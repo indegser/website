@@ -3,15 +3,17 @@ import { RichText } from "@src/design/RichText";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {
+  depth: number;
   block: Extract<BlockType, { type: "bulleted_list_item" }>;
 }
 
-export const BulletedListItemBlock = ({ block }: Props) => {
+const bullets = ["•", "◦", "▪"];
+export const BulletedListItemBlock = ({ depth, block }: Props) => {
   const { bulleted_list_item } = block;
 
   return (
     <Container>
-      <Marker>•</Marker>
+      <Marker>{bullets[depth % 3]}</Marker>
       <Content>
         <div>
           <RichText data={bulleted_list_item.rich_text} />
@@ -36,7 +38,7 @@ const Marker = styled("div", {
   height: `25px`,
   marginRight: 2,
   lineHeight: `25px`,
-  fontSize: `1.1em`,
+  fontSize: `1.15em`,
 });
 
 const Content = styled("div", {

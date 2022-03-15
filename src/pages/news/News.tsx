@@ -13,25 +13,21 @@ import {
 interface Props {
   news: BlockChildrenType;
   page: NewsType;
+  blocks: BlockType[];
 }
 
-export const News = ({ news, page }: Props) => {
+export const News = ({ page, blocks }: Props) => {
   return (
     <PageContainer>
       <NewsHeadline news={page} />
       <Content>
-        {news.results.map((block, index) => {
+        {blocks.map((block, index) => {
           if (!("type" in block)) {
             return null;
           }
 
           return (
-            <Block
-              key={block.id}
-              block={block}
-              index={index}
-              blocks={news.results as BlockType[]}
-            />
+            <Block key={block.id} block={block} index={index} blocks={blocks} />
           );
         })}
       </Content>
