@@ -33,7 +33,9 @@ export type BlockChildrenType = Awaited<
 export type BlockType = Extract<
   BlockChildrenType["results"][number],
   { type: string }
->;
+> & {
+  children?: BlockType[];
+};
 
 export type RichTextType = TitlePropertyType["title"][number];
 export type RichTextItemResponse = Array<RichTextType>;

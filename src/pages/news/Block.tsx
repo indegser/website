@@ -17,13 +17,14 @@ interface Props {
   index: number;
   block: BlockType;
   blocks: BlockType[];
+  depth?: number;
 }
 
-export const Block = ({ block, index, blocks }: Props) => {
+export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
   const { color } = block[block.type] as { color: AnnotationColorType };
   const styleProps = convertApiColorToStyleProps(color);
 
-  const renderContent = () => {
+  const renderContent = (block: BlockType) => {
     switch (block.type) {
       case "paragraph": {
         return (
@@ -58,20 +59,24 @@ export const Block = ({ block, index, blocks }: Props) => {
       }
       case "numbered_list_item": {
         const marker = takeRightWhile(
-          blocks.slice(0, index + 1),
+          blocks.slice(0, index),
           (result) => result.type === "numbered_list_item"
         ).length;
 
         return (
           <PageContent style={styleProps}>
-            <NumberedListItemBlock block={block} marker={marker} />
+            <NumberedListItemBlock
+              depth={depth}
+              block={block}
+              marker={marker}
+            />
           </PageContent>
         );
       }
       case "bulleted_list_item": {
         return (
           <PageContent style={styleProps}>
-            <BulletedListItemBlock block={block} />
+            <BulletedListItemBlock depth={depth} block={block} />
           </PageContent>
         );
       }
@@ -95,9 +100,31 @@ export const Block = ({ block, index, blocks }: Props) => {
     }
   };
 
-  return <Section>{renderContent()}</Section>;
+  return (
+    <Section>
+      {renderContent(block)}
+      {block.children ? (
+        <ChildSection>
+          {block.children.map((childBlock, index) => (
+            <Block
+              key={childBlock.id}
+              block={childBlock}
+              index={index}
+              depth={depth + 1}
+              blocks={block.children}
+            />
+          ))}
+        </ChildSection>
+      ) : null}
+    </Section>
+  );
 };
 
 const Section = styled("div", {
-  marginBottom: "1.4211em",
+  padding: "4px 0",
+  margin: "1px 0",
+});
+
+const ChildSection = styled(PageContent, {
+  paddingLeft: "27px",
 });

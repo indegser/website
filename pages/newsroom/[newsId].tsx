@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { News } from "@src/pages/news/News";
 import { notion } from "@src/sdks/notion";
 import { isProduction } from "@src/types/env.types";
+import { BlockType } from "@src/types/notion.types";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const news = await notion.databases.query({
@@ -28,6 +29,32 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
+const getBlocksWithChildren = async (blocks: BlockType[]) => {
+  return await Promise.all(
+    blocks.map(async (block) => {
+      return await getBlockWithChildren(block);
+    })
+  );
+};
+const getBlockWithChildren = async (block: BlockType) => {
+  if (block.has_children === true) {
+    const result = await notion.blocks.children.list({
+      block_id: block.id,
+      page_size: 100,
+    });
+
+    /**
+     * @todo has_more 체크
+     */
+
+    block["children"] = await getBlocksWithChildren(
+      result.results as BlockType[]
+    );
+  }
+
+  return block;
+};
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const newsId = params.newsId.toString();
 
@@ -37,11 +64,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       page_size: 100,
     });
 
+    const blocks = await getBlocksWithChildren(news.results as BlockType[]);
+
     const page = await notion.pages.retrieve({
       page_id: newsId,
     });
 
-    return { props: { news, page }, revalidate: 60 };
+    return { props: { blocks, page }, revalidate: 60 };
   } catch (err) {
     return { notFound: true };
   }
