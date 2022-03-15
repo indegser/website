@@ -123,6 +123,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
 const Section = styled("div", {
   padding: "4px 0",
   margin: "1px 0",
+  marginBottom: "1em",
 });
 
 const ChildSection = styled(PageContent, {
