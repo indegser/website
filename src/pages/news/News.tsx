@@ -40,7 +40,7 @@ const Content = styled("article", {
   lineHeight: "28px",
   letterSpacing: "-0.014em",
   paddingBottom: 80,
-  fontWeight: 400,
+  fontWeight: 420,
   color: theme.colors.gray12,
 
   [mq("sm")]: {
