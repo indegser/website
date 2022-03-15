@@ -23,19 +23,18 @@ export const HeadingBlock = ({ level, heading }: Props) => {
 const Heading = styled("h1", {
   fontWeight: 600,
   lineHeight: 1.25,
+  marginBottom: 0,
 
   ['&[data-level="1"]']: {
     marginTop: 50,
-    marginBottom: 25,
-    fontSize: "1.45em",
+    fontWeight: 700,
+    fontSize: "1.65em",
   },
   ['&[data-level="2"]']: {
     fontSize: "1.25em",
     marginTop: 50,
-    marginBottom: 20,
   },
   ['&[data-level="3"]']: {
     fontSize: "1.15em",
-    margin: "1em 0",
   },
 });
