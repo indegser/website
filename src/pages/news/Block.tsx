@@ -9,6 +9,7 @@ import { QuoteBlock } from "./QuoteBlock";
 
 import { PageContent } from "@src/common/atoms/Container";
 import { styled } from "@src/common/stitches.config";
+import { mq } from "@src/common/theme";
 import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
 import { RichText } from "@src/design/RichText";
 import { AnnotationColorType, BlockType } from "@src/types/notion.types";
@@ -100,11 +101,29 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
     }
   };
 
+  if (block.type === "column_list") {
+    return (
+      <ColumnGrid>
+        {block.children.map((childBlock, index) => (
+          <Block
+            key={childBlock.id}
+            block={childBlock}
+            index={index}
+            depth={depth + 1}
+            blocks={block.children}
+          />
+        ))}
+      </ColumnGrid>
+    );
+  }
+
   return (
     <Section>
       {renderContent(block)}
       {block.children ? (
-        <ChildSection>
+        <ChildSection
+          style={{ padding: block.type === "column" ? "0px !important" : "" }}
+        >
           {block.children.map((childBlock, index) => (
             <Block
               key={childBlock.id}
@@ -119,6 +138,17 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
     </Section>
   );
 };
+
+const ColumnGrid = styled(PageContent, {
+  display: "grid",
+  columnGap: 20,
+  gridAutoFlow: "column",
+  gridAutoColumns: "1fr",
+
+  [mq("sm")]: {
+    display: "block",
+  },
+});
 
 const Section = styled("div", {
   padding: "4px 0",
