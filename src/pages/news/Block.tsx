@@ -2,6 +2,9 @@ import { takeRightWhile } from "lodash-es";
 
 import { BookmarkBlock } from "./BookmarkBlock";
 import { BulletedListItemBlock } from "./BulletedListItemBlock";
+import { CalloutBlock } from "./CalloutBlock";
+import { CodeBlock } from "./CodeBlock";
+import { DividerBlock } from "./DividerBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
@@ -95,7 +98,17 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
           </PageContent>
         );
       }
+      case "callout": {
+        return <CalloutBlock block={block} />;
+      }
+      case "divider": {
+        return <DividerBlock />;
+      }
+      case "code": {
+        return <CodeBlock block={block} />;
+      }
       default: {
+        console.log(block);
         return null;
       }
     }
@@ -116,6 +129,9 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       </ColumnGrid>
     );
   }
+
+  if (!block.has_children && block[block.type].rich_text?.length === 0)
+    return null;
 
   return (
     <Section>
@@ -151,8 +167,6 @@ const ColumnGrid = styled(PageContent, {
 });
 
 const Section = styled("div", {
-  padding: "4px 0",
-  margin: "1px 0",
   marginBottom: "1em",
 });
 

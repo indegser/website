@@ -17,6 +17,10 @@ import {
   purpleDark,
   pinkDark,
   brownDark,
+  limeDark,
+  lime,
+  crimsonDark,
+  crimson,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -53,13 +57,15 @@ export const {
       ...yellow,
       ...orange,
       ...purple,
+      ...lime,
       ...pink,
       ...brown,
+      ...crimson,
     },
     fonts: {
       // sans: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"',
       sans: '"Inter var", "Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
-      mono: `"SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
+      mono: `'JetBrains Mono', "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
     },
   },
 });
@@ -72,8 +78,10 @@ export const darkTheme = createTheme("dark-theme", {
     ...greenDark,
     ...yellowDark,
     ...orangeDark,
+    ...limeDark,
     ...purpleDark,
     ...pinkDark,
     ...brownDark,
+    ...crimsonDark,
   },
 });
