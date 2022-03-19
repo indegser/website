@@ -28,6 +28,6 @@ const Content = styled("div", {
 });
 
 const Text = styled("div", {
-  padding: "0 14px",
+  padding: "0 0 0 14px",
   borderLeft: "3px solid currentColor",
 });
