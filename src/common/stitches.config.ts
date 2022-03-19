@@ -61,6 +61,7 @@ export const {
       ...pink,
       ...brown,
       ...crimson,
+      codeString: green.green10,
     },
     fonts: {
       // sans: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"',
@@ -83,5 +84,6 @@ export const darkTheme = createTheme("dark-theme", {
     ...pinkDark,
     ...brownDark,
     ...crimsonDark,
+    codeString: limeDark.lime9,
   },
 });

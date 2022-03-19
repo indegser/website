@@ -95,7 +95,7 @@ export const codeStyle = {
     color: "#690",
   },
   string: {
-    color: theme.colors.lime9,
+    color: theme.colors.codeString,
   },
   char: {
     color: "#690",
