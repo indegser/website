@@ -1,7 +1,7 @@
 import create from "zustand";
 
 type State = {
-  theme: "dark" | "light";
+  theme: "system" | "dark" | "light";
   setTheme: (theme: State["theme"]) => void;
   toggleTheme: () => void;
 };

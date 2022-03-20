@@ -16,7 +16,18 @@ export default function App({ Component, pageProps }: AppProps) {
   const theme = useThemeStore((s) => s.theme);
 
   useEffect(() => {
-    document.body.classList.toggle(darkTheme.toString());
+    const darkCss = darkTheme.toString();
+
+    switch (theme) {
+      case "light": {
+        document.body.classList.remove(darkCss);
+        break;
+      }
+      case "dark": {
+        document.body.classList.add(darkCss);
+        break;
+      }
+    }
   }, [theme]);
 
   return (
