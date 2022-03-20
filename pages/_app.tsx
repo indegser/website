@@ -1,34 +1,56 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { Router } from "next/router";
-import { SWRConfig } from "swr";
 
-import { globalStyles } from "@src/common/globalStyles";
 import { Footer } from "@src/common/organs/footer/Footer";
 import { Nav } from "@src/common/organs/nav/Nav";
-import { styled } from "@src/common/stitches.config";
+import { darkTheme, styled } from "@src/common/stitches.config";
+import { GlobalStyles } from "@src/design/GlobalStyles";
+import { useThemeStore } from "@src/design/themeStore";
+import { useIsomorphicLayoutEffect } from "@src/hooks/useIsomorphicLayoutEffect";
 import { Analytics } from "@src/sdks/analytics";
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
 
 export default function App({ Component, pageProps }: AppProps) {
-  globalStyles();
+  const theme = useThemeStore((s) => s.theme);
+  const restoreCachedTheme = useThemeStore((s) => s.restoreCachedTheme);
+
+  useIsomorphicLayoutEffect(() => {
+    restoreCachedTheme();
+  }, []);
+
+  useIsomorphicLayoutEffect(() => {
+    const darkCss = darkTheme.toString();
+
+    switch (theme) {
+      case "light": {
+        document.body.classList.remove(darkCss);
+        break;
+      }
+      case "dark": {
+        document.body.classList.add(darkCss);
+        break;
+      }
+    }
+  }, [theme]);
 
   return (
-    <SWRConfig value={{ fallback: pageProps.fallback }}>
+    <>
       <Head>
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>
+        <GlobalStyles />
         <Nav />
         <Main>
           <Component {...pageProps} />
         </Main>
         <Footer />
       </Page>
-    </SWRConfig>
+    </>
   );
 }
 

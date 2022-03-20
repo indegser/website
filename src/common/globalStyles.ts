@@ -4,6 +4,7 @@ export const globalStyles = globalCss({
   ["@import"]: [
     "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css",
     "https://rsms.me/inter/inter.css",
+    "https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap",
   ],
   ["a"]: {
     textDecoration: "none",
@@ -19,13 +20,22 @@ export const globalStyles = globalCss({
   },
   ["body"]: {
     margin: 0,
-    "-webkit-font-smoothing": "auto",
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
     fontKerning: "normal",
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
-    color: theme.colors.fgDefault,
+    color: theme.colors.gray11,
+    background: theme.colors.gray1,
   },
 
   [":focus-visible"]: {
     outline: `none`,
+  },
+  ["div[type='button']"]: {
+    cursor: "pointer",
+    borderRadius: 4,
+    ["&:hover"]: {
+      background: theme.colors.gray3,
+    },
   },
 });

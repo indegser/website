@@ -1,7 +1,7 @@
 import { convertApiColorToStyleProps } from "./convertApiColorToStyleProps";
 import { RichTextWithLink } from "./RichTextWithLink";
 
-import { styled } from "@src/common/stitches.config";
+import { styled, theme } from "@src/common/stitches.config";
 import { RichTextItemResponse } from "@src/types/notion.types";
 
 interface Props {
@@ -20,15 +20,16 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
               ? fontStyleProps
               : ({} as typeof richText["annotations"]);
 
-            const { link } = richText.text;
+            const { link, content } = richText.text;
 
             return (
               <RichTextWithLink key={i} link={link}>
                 <Text
+                  as={annotations.code ? "code" : "span"}
                   {...annotations}
                   style={convertApiColorToStyleProps(color)}
                 >
-                  {richText.text.content}
+                  {content}
                 </Text>
               </RichTextWithLink>
             );
@@ -44,10 +45,18 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
 const Text = styled("span", {
   boxDecorationBreak: "clone",
   display: "inline",
+  whiteSpace: "pre-line",
 
   variants: {
     code: {
-      true: {},
+      true: {
+        fontFamily: theme.fonts.mono,
+        borderRadius: 3,
+        fontSize: "85%",
+        padding: "0.2em 0.4em",
+        background: theme.colors.green4,
+        color: theme.colors.green11,
+      },
     },
     bold: {
       true: {
