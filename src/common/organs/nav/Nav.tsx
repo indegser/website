@@ -5,12 +5,8 @@ import { Theme } from "./Theme";
 
 import { PageContainer } from "@src/common/atoms/Container";
 import { styled, theme } from "@src/common/stitches.config";
-import { useThemeStore } from "@src/design/themeStore";
 
 export const Nav = () => {
-  const theme = useThemeStore((s) => s.theme);
-  const toggleTheme = useThemeStore((s) => s.toggleTheme);
-
   return (
     <PageContainer>
       <Layout id="global-nav">

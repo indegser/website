@@ -108,7 +108,6 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
         return <CodeBlock block={block} />;
       }
       default: {
-        console.log(block);
         return null;
       }
     }

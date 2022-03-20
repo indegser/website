@@ -1,21 +1,26 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { Router } from "next/router";
-import { useEffect } from "react";
 
 import { Footer } from "@src/common/organs/footer/Footer";
 import { Nav } from "@src/common/organs/nav/Nav";
 import { darkTheme, styled } from "@src/common/stitches.config";
 import { GlobalStyles } from "@src/design/GlobalStyles";
 import { useThemeStore } from "@src/design/themeStore";
+import { useIsomorphicLayoutEffect } from "@src/hooks/useIsomorphicLayoutEffect";
 import { Analytics } from "@src/sdks/analytics";
 
 Router.events.on("routeChangeComplete", Analytics.pageView);
 
 export default function App({ Component, pageProps }: AppProps) {
   const theme = useThemeStore((s) => s.theme);
+  const restoreCachedTheme = useThemeStore((s) => s.restoreCachedTheme);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
+    restoreCachedTheme();
+  }, []);
+
+  useIsomorphicLayoutEffect(() => {
     const darkCss = darkTheme.toString();
 
     switch (theme) {
