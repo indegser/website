@@ -44,7 +44,7 @@ const Content = styled("article", {
   color: theme.colors.gray12,
 
   [mq("sm")]: {
-    fontSize: 17,
+    fontSize: 18,
     padding: "0 0 80px 0",
   },
 });
