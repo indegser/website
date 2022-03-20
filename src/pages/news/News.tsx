@@ -36,7 +36,7 @@ export const News = ({ page, blocks }: Props) => {
 };
 
 const Content = styled("article", {
-  fontSize: 17,
+  fontSize: 18,
   lineHeight: "28px",
   letterSpacing: "-0.014em",
   paddingBottom: 80,

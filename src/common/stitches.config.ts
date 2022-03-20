@@ -21,6 +21,9 @@ import {
   lime,
   crimsonDark,
   crimson,
+  grayA,
+  grayDarkA,
+  blackA,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -61,6 +64,7 @@ export const {
       ...pink,
       ...brown,
       ...crimson,
+      popoverShadow: blackA.blackA5,
       codeString: green.green10,
     },
     fonts: {

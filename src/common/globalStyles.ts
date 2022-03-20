@@ -31,4 +31,11 @@ export const globalStyles = globalCss({
   [":focus-visible"]: {
     outline: `none`,
   },
+  ["div[type='button']"]: {
+    cursor: "pointer",
+    borderRadius: 4,
+    ["&:hover"]: {
+      background: theme.colors.gray3,
+    },
+  },
 });

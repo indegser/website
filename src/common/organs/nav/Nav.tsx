@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Logo } from "./Logo";
+import { Theme } from "./Theme";
 
 import { PageContainer } from "@src/common/atoms/Container";
 import { styled, theme } from "@src/common/stitches.config";
@@ -21,7 +22,7 @@ export const Nav = () => {
             </Heading>
           </a>
         </Link>
-        <button onClick={() => toggleTheme()}>{theme}</button>
+        <Theme />
       </Layout>
     </PageContainer>
   );
