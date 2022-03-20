@@ -52,10 +52,10 @@ export const NewsPreview = ({ news }: Props) => {
 };
 
 const Container = styled("div", {
-  marginBottom: 16,
+  marginBottom: 2,
 
-  "@bp1": {
-    marginBottom: 2,
+  [mq("sm")]: {
+    marginBottom: 16,
   },
 });
 
@@ -73,7 +73,7 @@ const Right = styled("div", {
 });
 
 const Title = styled("h2", {
-  fontWeight: 580,
+  fontWeight: 600,
   fontSize: 16,
   lineHeight: 1.38,
   paddingBottom: 0,
@@ -82,7 +82,8 @@ const Title = styled("h2", {
   textOverflow: "ellipsis",
   margin: 0,
   marginRight: 20,
-  backgroundImage: `linear-gradient(to right, ${theme.colors.borderSubtle} 0%, ${theme.colors.borderSubtle} 100%)`,
+  color: theme.colors.gray12,
+  backgroundImage: `linear-gradient(to right, ${theme.colors.gray8} 0%, ${theme.colors.gray8} 100%)`,
   backgroundRepeat: "repeat-x",
   backgroundPosition: "0px 100%",
   backgroundSize: "100% 1px",
@@ -100,6 +101,6 @@ const Title = styled("h2", {
 const Time = styled("div", {
   fontSize: 12,
   fontWeight: 400,
-  color: "$fgMuted",
+  color: theme.colors.gray11,
   lineHeight: 1,
 });

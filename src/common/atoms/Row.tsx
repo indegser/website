@@ -27,7 +27,7 @@ const Container = styled(motion.div, {
   boxSizing: "border-box",
   [mediaQueries.hoverable]: {
     ["&:hover"]: {
-      background: theme.colors.canvasInset,
+      background: theme.colors.gray3,
     },
   },
 

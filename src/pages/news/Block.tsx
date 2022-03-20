@@ -1,7 +1,10 @@
 import { takeRightWhile } from "lodash-es";
 
-import { BookmarkBlock } from "./BookmarkBlock";
+import { BookmarkBlock } from "./bookmark/BookmarkBlock";
 import { BulletedListItemBlock } from "./BulletedListItemBlock";
+import { CalloutBlock } from "./CalloutBlock";
+import { CodeBlock } from "./CodeBlock";
+import { DividerBlock } from "./DividerBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
@@ -9,6 +12,7 @@ import { QuoteBlock } from "./QuoteBlock";
 
 import { PageContent } from "@src/common/atoms/Container";
 import { styled } from "@src/common/stitches.config";
+import { mq } from "@src/common/theme";
 import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
 import { RichText } from "@src/design/RichText";
 import { AnnotationColorType, BlockType } from "@src/types/notion.types";
@@ -17,13 +21,14 @@ interface Props {
   index: number;
   block: BlockType;
   blocks: BlockType[];
+  depth?: number;
 }
 
-export const Block = ({ block, index, blocks }: Props) => {
+export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
   const { color } = block[block.type] as { color: AnnotationColorType };
   const styleProps = convertApiColorToStyleProps(color);
 
-  const renderContent = () => {
+  const renderContent = (block: BlockType) => {
     switch (block.type) {
       case "paragraph": {
         return (
@@ -58,20 +63,24 @@ export const Block = ({ block, index, blocks }: Props) => {
       }
       case "numbered_list_item": {
         const marker = takeRightWhile(
-          blocks.slice(0, index + 1),
+          blocks.slice(0, index),
           (result) => result.type === "numbered_list_item"
         ).length;
 
         return (
           <PageContent style={styleProps}>
-            <NumberedListItemBlock block={block} marker={marker} />
+            <NumberedListItemBlock
+              depth={depth}
+              block={block}
+              marker={marker}
+            />
           </PageContent>
         );
       }
       case "bulleted_list_item": {
         return (
           <PageContent style={styleProps}>
-            <BulletedListItemBlock block={block} />
+            <BulletedListItemBlock depth={depth} block={block} />
           </PageContent>
         );
       }
@@ -89,16 +98,77 @@ export const Block = ({ block, index, blocks }: Props) => {
           </PageContent>
         );
       }
+      case "callout": {
+        return <CalloutBlock block={block} />;
+      }
+      case "divider": {
+        return <DividerBlock />;
+      }
+      case "code": {
+        return <CodeBlock block={block} />;
+      }
       default: {
-        console.log(block);
         return null;
       }
     }
   };
 
-  return <Section>{renderContent()}</Section>;
+  if (block.type === "column_list") {
+    return (
+      <ColumnGrid>
+        {block.children.map((childBlock, index) => (
+          <Block
+            key={childBlock.id}
+            block={childBlock}
+            index={index}
+            depth={depth + 1}
+            blocks={block.children}
+          />
+        ))}
+      </ColumnGrid>
+    );
+  }
+
+  if (!block.has_children && block[block.type].rich_text?.length === 0)
+    return null;
+
+  return (
+    <Section>
+      {renderContent(block)}
+      {block.children ? (
+        <ChildSection
+          style={{ padding: block.type === "column" ? "0px !important" : "" }}
+        >
+          {block.children.map((childBlock, index) => (
+            <Block
+              key={childBlock.id}
+              block={childBlock}
+              index={index}
+              depth={depth + 1}
+              blocks={block.children}
+            />
+          ))}
+        </ChildSection>
+      ) : null}
+    </Section>
+  );
 };
 
+const ColumnGrid = styled(PageContent, {
+  display: "grid",
+  columnGap: 20,
+  gridAutoFlow: "column",
+  gridAutoColumns: "1fr",
+
+  [mq("sm")]: {
+    display: "block",
+  },
+});
+
 const Section = styled("div", {
-  marginBottom: "1.4211em",
+  marginBottom: "1em",
+});
+
+const ChildSection = styled(PageContent, {
+  paddingLeft: "27px",
 });

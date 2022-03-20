@@ -37,7 +37,8 @@ const Layout = styled("div", {
 });
 
 const Name = styled("div", {
-  fontSize: 14,
-  color: theme.colors.fgSubtle,
+  fontSize: 13,
+  fontWeight: 500,
+  color: theme.colors.gray10,
   gridArea: "name",
 });

@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 import { Logo } from "./Logo";
+import { Theme } from "./Theme";
 
 import { PageContainer } from "@src/common/atoms/Container";
-import { styled } from "@src/common/stitches.config";
+import { styled, theme } from "@src/common/stitches.config";
 
 export const Nav = () => {
   return (
@@ -17,6 +18,7 @@ export const Nav = () => {
             </Heading>
           </a>
         </Link>
+        <Theme />
       </Layout>
     </PageContainer>
   );
@@ -37,4 +39,5 @@ const Heading = styled("div", {
   fontSize: 14,
   fontWeight: 600,
   cursor: "pointer",
+  color: theme.colors.gray12,
 });

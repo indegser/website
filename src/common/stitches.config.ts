@@ -8,6 +8,22 @@ import {
   purple,
   pink,
   brown,
+  grayDark,
+  blueDark,
+  redDark,
+  greenDark,
+  yellowDark,
+  orangeDark,
+  purpleDark,
+  pinkDark,
+  brownDark,
+  limeDark,
+  lime,
+  crimsonDark,
+  crimson,
+  grayA,
+  grayDarkA,
+  blackA,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
@@ -44,19 +60,34 @@ export const {
       ...yellow,
       ...orange,
       ...purple,
+      ...lime,
       ...pink,
       ...brown,
+      ...crimson,
+      popoverShadow: blackA.blackA5,
+      codeString: green.green10,
     },
     fonts: {
       // sans: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"',
       sans: '"Inter var", "Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
-      mono: "SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace",
+      mono: `'JetBrains Mono', "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
     },
   },
-  media: {
-    bp1: "(min-width: 480px)",
-  },
-  utils: {
-    marginX: (value) => ({ marginLeft: value, marginRight: value }),
+});
+
+export const darkTheme = createTheme("dark-theme", {
+  colors: {
+    ...grayDark,
+    ...blueDark,
+    ...redDark,
+    ...greenDark,
+    ...yellowDark,
+    ...orangeDark,
+    ...limeDark,
+    ...purpleDark,
+    ...pinkDark,
+    ...brownDark,
+    ...crimsonDark,
+    codeString: limeDark.lime9,
   },
 });

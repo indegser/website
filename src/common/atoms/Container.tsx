@@ -13,4 +13,5 @@ export const PageContainer = styled("div", {
 export const PageContent = styled("div", {
   maxWidth: 653,
   margin: "0 auto",
+  boxSizing: "border-box",
 });
