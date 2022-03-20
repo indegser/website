@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import { Caption } from "./Caption";
+import { Caption } from "../Caption";
+import { useBookmarkBlock } from "./BookmarkBlock.hooks";
 
 import { styled, theme } from "@src/common/stitches.config";
 import { mediaQueries } from "@src/common/theme";
@@ -14,22 +15,7 @@ interface Props {
 export const BookmarkBlock = ({ block }: Props) => {
   const { url } = block.bookmark;
   const [faviconLoaded, setFaviconLoaded] = useState(false);
-  const [metadata, setMetadata] = useState<{
-    title: string;
-    description: string;
-    favicon: string;
-    imageUrl: string;
-  }>(null);
-
-  useEffect(() => {
-    if (metadata || !url) return;
-
-    fetch(`/api/og?url=${url}`)
-      .then((res) => res.json())
-      .then((metadata) => {
-        setMetadata(metadata);
-      });
-  }, [url, metadata]);
+  const { data: metadata } = useBookmarkBlock(url);
 
   useEffect(() => {
     if (!metadata || !metadata.favicon) return;

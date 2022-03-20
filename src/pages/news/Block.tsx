@@ -1,6 +1,6 @@
 import { takeRightWhile } from "lodash-es";
 
-import { BookmarkBlock } from "./BookmarkBlock";
+import { BookmarkBlock } from "./bookmark/BookmarkBlock";
 import { BulletedListItemBlock } from "./BulletedListItemBlock";
 import { CalloutBlock } from "./CalloutBlock";
 import { CodeBlock } from "./CodeBlock";

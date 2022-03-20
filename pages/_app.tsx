@@ -2,7 +2,6 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { Router } from "next/router";
 import { useEffect } from "react";
-import { SWRConfig } from "swr";
 
 import { Footer } from "@src/common/organs/footer/Footer";
 import { Nav } from "@src/common/organs/nav/Nav";
@@ -21,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [theme]);
 
   return (
-    <SWRConfig value={{ fallback: pageProps.fallback }}>
+    <>
       <Head>
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Main>
         <Footer />
       </Page>
-    </SWRConfig>
+    </>
   );
 }
 
