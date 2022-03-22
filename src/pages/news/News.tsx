@@ -1,7 +1,9 @@
 import { Block } from "./Block";
+import { useNewsSeo } from "./News.hooks";
 import { NewsHeadline } from "./NewsHeadline";
 
 import { PageContainer } from "@src/common/atoms/Container";
+import { SEO } from "@src/common/SEO";
 import { styled, theme } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
 import {
@@ -17,8 +19,11 @@ interface Props {
 }
 
 export const News = ({ page, blocks }: Props) => {
+  const { title, excerpt, imageUrl } = useNewsSeo(page, blocks);
+
   return (
     <PageContainer>
+      <SEO title={title} description={excerpt} image={imageUrl} />
       <NewsHeadline news={page} />
       <Content>
         {blocks.map((block, index) => {

@@ -45,6 +45,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@testing-library/react": "^11.2.5",
+    "@types/gtag.js": "^0.0.10",
     "@types/jest": "^25.2.3",
     "@types/lodash-es": "^4.17.5",
     "@types/node": "^13.1.2",
