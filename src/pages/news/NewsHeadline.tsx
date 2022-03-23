@@ -74,6 +74,7 @@ const Title = styled("h1", {
   letterSpacing: `-0.025em`,
   lineHeight: 1.15,
   color: theme.colors.gray12,
+  wordBreak: "keep-all",
 
   [mq("sm")]: {
     fontSize: 36,

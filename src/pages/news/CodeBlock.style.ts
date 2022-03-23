@@ -50,7 +50,7 @@ export const codeStyle = {
   //   whiteSpace: "normal",
   // },
   comment: {
-    color: theme.colors.gray5,
+    color: theme.colors.gray9,
   },
   prolog: {
     color: theme.colors.gray5,
@@ -62,7 +62,7 @@ export const codeStyle = {
     color: theme.colors.gray5,
   },
   punctuation: {
-    color: "#999",
+    color: theme.colors.gray12,
   },
   namespace: {
     Opacity: ".7",
@@ -125,6 +125,10 @@ export const codeStyle = {
     color: "#9a6e3a",
     background: "hsla(0, 0%, 100%, .5)",
   },
+  ".token": {
+    color: "#9a6e3a",
+    background: "hsla(0, 0%, 100%, .5)",
+  },
   atrule: {
     color: "#07a",
   },
@@ -135,10 +139,10 @@ export const codeStyle = {
     color: theme.colors.crimson9,
   },
   function: {
-    color: theme.colors.gray12,
+    color: theme.colors.purple11,
   },
   "class-name": {
-    color: theme.colors.gray12,
+    color: theme.colors.purple11,
   },
   regex: {
     color: "#e90",
