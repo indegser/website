@@ -41,9 +41,9 @@ export const News = ({ page, blocks }: Props) => {
 };
 
 const Content = styled("article", {
-  fontSize: 18,
-  lineHeight: "28px",
-  letterSpacing: "-0.014em",
+  fontSize: 16,
+  lineHeight: "26px",
+  letterSpacing: "-0.018em",
   paddingBottom: 80,
   fontWeight: 420,
   color: theme.colors.gray12,
