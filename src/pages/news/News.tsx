@@ -1,5 +1,5 @@
 import { Block } from "./Block";
-import { useNewsSeo } from "./News.hooks";
+import { useNewsHashRouter, useNewsSeo } from "./News.hooks";
 import { NewsHeadline } from "./NewsHeadline";
 
 import { PageContainer } from "@src/common/atoms/Container";
@@ -20,12 +20,13 @@ interface Props {
 
 export const News = ({ page, blocks }: Props) => {
   const { title, excerpt, imageUrl } = useNewsSeo(page, blocks);
+  useNewsHashRouter();
 
   return (
     <PageContainer>
       <SEO title={title} description={excerpt} image={imageUrl} />
       <NewsHeadline news={page} />
-      <Content>
+      <Article>
         {blocks.map((block, index) => {
           if (!("type" in block)) {
             return null;
@@ -35,12 +36,12 @@ export const News = ({ page, blocks }: Props) => {
             <Block key={block.id} block={block} index={index} blocks={blocks} />
           );
         })}
-      </Content>
+      </Article>
     </PageContainer>
   );
 };
 
-const Content = styled("article", {
+const Article = styled("article", {
   fontSize: 16,
   lineHeight: "26px",
   letterSpacing: "-0.018em",
