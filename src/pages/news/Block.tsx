@@ -7,6 +7,7 @@ import { CodeBlock } from "./CodeBlock";
 import { DividerBlock } from "./DividerBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
+import { NewsToc } from "./NewsToc";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
 import { QuoteBlock } from "./QuoteBlock";
 
@@ -107,6 +108,9 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       case "code": {
         return <CodeBlock block={block} />;
       }
+      case "table_of_contents": {
+        return <NewsToc blocks={blocks} />;
+      }
       default: {
         return null;
       }
@@ -133,7 +137,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
     return null;
 
   return (
-    <Section>
+    <Section data-block-id={block.id}>
       {renderContent(block)}
       {block.children ? (
         <ChildSection
