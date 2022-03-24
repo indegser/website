@@ -24,7 +24,11 @@ export const CodeBlock = ({ block }: Props) => {
     <PageContent>
       <Container>
         <Language>{capitalize(language)}</Language>
-        <Highlighter style={codeStyle} language={language}>
+        <Highlighter
+          style={codeStyle}
+          customStyle={{ overflowX: "scroll" }}
+          language={language}
+        >
           {rich_text[0].plain_text}
         </Highlighter>
       </Container>
@@ -39,6 +43,11 @@ const Container = styled("div", {
   padding: "12px 16px 24px 16px",
   background: theme.colors.gray3,
   borderRadius: 3,
+  ["& pre"]: {
+    ["&::-webkit-scrollbar"]: {
+      display: "none",
+    },
+  },
 });
 
 const Language = styled("div", {
