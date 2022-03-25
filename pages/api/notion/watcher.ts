@@ -10,6 +10,12 @@ const REDIS_KEY = `database:${DATABASE_ID}`;
 type Cache = Record<string, string>;
 
 const handler = async (req: NextApiRequest, res: NextApiResponse<Cache>) => {
+  const { secret } = req.query;
+
+  if (secret !== process.env.API_SECRET_TOKEN) {
+    return res.status(401).json({ message: "Invalid token" });
+  }
+
   const cached = (await redis.hgetall<Cache>(REDIS_KEY)) ?? {};
 
   const database = await notion.databases.query({
@@ -45,9 +51,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Cache>) => {
      * 1. Newsroom 업데이트
      * 2. News 페이지 업데이트
      */
-    res.unstable_revalidate("/");
+    await res.unstable_revalidate("/");
 
-    Promise.all(
+    await Promise.all(
       updatedPageIds.map((id) => res.unstable_revalidate(`/newsroom/${id}`))
     );
 
