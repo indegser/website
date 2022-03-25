@@ -4,6 +4,7 @@ import { PageContainer } from "@src/common/atoms/Container";
 import { SEO } from "@src/common/SEO";
 import { styled } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
+import { usePageTracking } from "@src/hooks/usePageTracking";
 import { DatabaseResponseType, NewsType } from "@src/types/notion.types";
 
 interface Props {
@@ -14,6 +15,8 @@ export const Newsroom = ({ database }: Props) => {
   const news = database.results.map((result) => (
     <NewsPreview key={result.id} news={result as NewsType} />
   ));
+
+  usePageTracking("visit_newsroom");
 
   return (
     <PageContainer>
