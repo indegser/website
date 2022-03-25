@@ -4,39 +4,13 @@ import { Router } from "next/router";
 
 import { Footer } from "@src/common/organs/footer/Footer";
 import { Nav } from "@src/common/organs/nav/Nav";
-import { darkTheme, styled } from "@src/common/stitches.config";
+import { styled } from "@src/common/stitches.config";
 import { GlobalStyles } from "@src/design/GlobalStyles";
-import { useThemeStore } from "@src/design/themeStore";
-import { useIsomorphicLayoutEffect } from "@src/hooks/useIsomorphicLayoutEffect";
-import { Analytics } from "@src/sdks/analytics";
-
-Router.events.on("routeChangeComplete", Analytics.pageView);
+import { BaseApp } from "@src/pages/BaseApp";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const theme = useThemeStore((s) => s.theme);
-  const restoreCachedTheme = useThemeStore((s) => s.restoreCachedTheme);
-
-  useIsomorphicLayoutEffect(() => {
-    restoreCachedTheme();
-  }, []);
-
-  useIsomorphicLayoutEffect(() => {
-    const darkCss = darkTheme.toString();
-
-    switch (theme) {
-      case "light": {
-        document.body.classList.remove(darkCss);
-        break;
-      }
-      case "dark": {
-        document.body.classList.add(darkCss);
-        break;
-      }
-    }
-  }, [theme]);
-
   return (
-    <>
+    <BaseApp>
       <Head>
         <title>Home</title>
         <meta
@@ -53,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Main>
         <Footer />
       </Page>
-    </>
+    </BaseApp>
   );
 }
 
