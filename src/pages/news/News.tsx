@@ -6,6 +6,7 @@ import { PageContainer } from "@src/common/atoms/Container";
 import { SEO } from "@src/common/SEO";
 import { styled, theme } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
+import { usePageTracking } from "@src/hooks/usePageTracking";
 import {
   BlockChildrenType,
   BlockType,
@@ -21,6 +22,7 @@ interface Props {
 export const News = ({ page, blocks }: Props) => {
   const { title, excerpt, imageUrl } = useNewsSeo(page, blocks);
   useNewsHashRouter();
+  usePageTracking("visit_news", { id: page.id, title });
 
   return (
     <PageContainer>
