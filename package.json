@@ -25,6 +25,7 @@
     "@radix-ui/react-toast": "^0.1.1",
     "@sentry/nextjs": "^6.17.9",
     "@stitches/react": "^1.2.6",
+    "amplitude-js": "^8.17.0",
     "copy-text-to-clipboard": "^3.0.1",
     "dayjs": "^1.9.1",
     "framer-motion": "^4.1.17",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@testing-library/react": "^11.2.5",
+    "@types/amplitude-js": "^8.16.0",
     "@types/gtag.js": "^0.0.10",
     "@types/jest": "^25.2.3",
     "@types/lodash-es": "^4.17.5",
