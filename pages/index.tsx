@@ -4,10 +4,12 @@ import { Newsroom } from "@src/pages/newsroom/Newsroom";
 import { notion } from "@src/sdks/notion";
 import { isProduction } from "@src/types/env.types";
 
+const DATABASE_ID = "0021f4b0494546a596716a7a5d9db452";
+
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const database = await notion.databases.query({
-      database_id: "0021f4b0494546a596716a7a5d9db452",
+      database_id: DATABASE_ID,
       sorts: [{ property: "published_time", direction: "descending" }],
       filter: isProduction
         ? {
