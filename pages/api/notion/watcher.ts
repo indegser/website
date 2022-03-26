@@ -9,11 +9,11 @@ const REDIS_KEY = `database:${DATABASE_ID}`;
 
 type Cache = Record<string, string>;
 
-const handler = async (req: NextApiRequest, res: NextApiResponse<Cache>) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse<string[]>) => {
   const { secret } = req.query;
 
   if (secret !== process.env.API_SECRET_TOKEN) {
-    return res.status(401).json({ message: "Invalid token" });
+    return res.status(401).json([]);
   }
 
   const cached = (await redis.hgetall<Cache>(REDIS_KEY)) ?? {};
@@ -60,7 +60,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Cache>) => {
     await redis.hset(REDIS_KEY, nextCache);
   }
 
-  res.json(nextCache);
+  res.json(updatedPageIds);
 };
 
 export default withSentry(handler);
