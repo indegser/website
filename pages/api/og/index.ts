@@ -2,6 +2,8 @@ import { withSentry } from "@sentry/nextjs";
 import type { NextApiRequest, NextApiResponse } from "next";
 import ogs from "open-graph-scraper";
 
+import { redis } from "@src/sdks/redis";
+
 type Data = {
   title: string;
   description: string;
@@ -49,12 +51,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   imageUrl = parseUrl(url, imageUrl);
   const fullFavicon = parseUrl(url, favicon);
 
-  res.status(200).json({
+  const openGraph = {
     title: ogTitle,
     description: ogDescription,
     favicon: fullFavicon,
     imageUrl,
-  });
+  };
+
+  await redis.hset(`opengraph:${url}`, openGraph);
+  res.status(200).json(openGraph);
 };
 
 export default withSentry(handler);
