@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps = async () => {
   try {
     const database = await notion.databases.query({
       database_id: DATABASE_ID,
-      sorts: [{ property: "published_time", direction: "descending" }],
+      sorts: [{ timestamp: "last_edited_time", direction: "descending" }],
       filter: isProduction
         ? {
             property: "status",
