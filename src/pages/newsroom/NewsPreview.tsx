@@ -18,20 +18,18 @@ interface Props {
 
 export const NewsPreview = ({ news }: Props) => {
   const { last_edited_time } = news;
-  const { published_time, title } = news.properties;
+  const { title } = news.properties;
 
   const desc = useMemo(() => {
-    const result = dayjs(dayjs(published_time.date?.start ?? last_edited_time))
-      .locale("ko")
-      .calendar(null, {
-        sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
-        lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
-        lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
-        sameElse: "YYYY[년] MMMM D[일] h:mm", // Everything else ( 17/10/2011 )
-      });
+    const result = dayjs(dayjs(last_edited_time)).locale("ko").calendar(null, {
+      sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
+      lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
+      lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
+      sameElse: "YYYY[년] MMMM D[일] h:mm", // Everything else ( 17/10/2011 )
+    });
 
     return result;
-  }, [published_time, last_edited_time]);
+  }, [last_edited_time]);
 
   return (
     <Container>
