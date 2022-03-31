@@ -11,8 +11,9 @@ interface Props {
 }
 
 export const ImageBlock = ({ block }: Props) => {
-  const [metadata, setMetadata] =
-    useState<{ width: number; height: number }>(null);
+  const [metadata, setMetadata] = useState<{ width: number; height: number }>(
+    null
+  );
 
   let url = "";
 
@@ -30,7 +31,7 @@ export const ImageBlock = ({ block }: Props) => {
   }, []);
 
   useEffect(() => {
-    if (!url) return null;
+    if (!url || url.startsWith("data:image")) return;
 
     const image = new Image();
     image.addEventListener("load", handleImageLoad);
