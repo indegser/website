@@ -22,6 +22,7 @@
     "@radix-ui/react-toast": "^0.1.1",
     "@sentry/nextjs": "^6.17.9",
     "@stitches/react": "^1.2.6",
+    "@supabase/supabase-js": "^1.33.2",
     "@upstash/redis": "^1.0.3",
     "amplitude-js": "^8.17.0",
     "copy-text-to-clipboard": "^3.0.1",
