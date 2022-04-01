@@ -1,13 +1,35 @@
+import { useForm } from "react-hook-form";
+
 import { PageContainer } from "@src/common/atoms/Container";
-import { NOTION_CLIENT_ID, NOTION_REDIRECT_URI } from "@src/types/const.types";
+import { Fieldset } from "@src/design/atoms/Fieldset";
+import { Input } from "@src/design/atoms/Input";
+import { Label } from "@src/design/atoms/Label";
+import { supabase } from "@src/sdks/supabase";
+import { ORIGIN } from "@src/types/const.types";
+
+type Data = {
+  database_id: string;
+};
 
 export default function Page() {
-  const href = `https://api.notion.com/v1/oauth/authorize?owner=user&client_id=${NOTION_CLIENT_ID}&redirect_uri=${encodeURIComponent(
-    NOTION_REDIRECT_URI
-  )}&response_type=code`;
+  const { register, handleSubmit } = useForm<Data>();
+
+  const handleSignIn = (data: Data) => {
+    supabase.auth.signIn(
+      { provider: "notion" },
+      { redirectTo: `${ORIGIN}/auth/notion?database_id=${data.database_id}` }
+    );
+  };
+
   return (
     <PageContainer>
-      <a href={href}>Add to Notion</a>
+      <form onSubmit={handleSubmit((data) => handleSignIn(data))}>
+        <Fieldset>
+          <Label>Database ID</Label>
+          <Input {...register("database_id")} defaultValue="" />
+        </Fieldset>
+        <button type="submit">Sign in with Notion</button>
+      </form>
     </PageContainer>
   );
 }
