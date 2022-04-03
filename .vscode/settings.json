@@ -2,7 +2,6 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "git.ignoreLimitWarning": true,
-  "@src/typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.scrollBeyondLastLine": false,
