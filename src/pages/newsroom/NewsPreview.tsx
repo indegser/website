@@ -2,7 +2,6 @@ import "dayjs/locale/ko";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useMemo } from "react";
 
 import { Row } from "@src/common/atoms/Row";
@@ -18,9 +17,6 @@ interface Props {
 }
 
 export const NewsPreview = ({ news }: Props) => {
-  const { query } = useRouter();
-  const databaseId = query.databaseId.toString();
-
   const { last_edited_time } = news;
   const { title } = news.properties;
 
@@ -37,7 +33,7 @@ export const NewsPreview = ({ news }: Props) => {
 
   return (
     <Container>
-      <Link href={`/${databaseId}/${news.id}`} passHref>
+      <Link href={`/newsroom/${news.id}`} passHref>
         <a>
           <Row>
             <Title>

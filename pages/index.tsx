@@ -1,9 +1,16 @@
-import { PageContainer } from "@src/common/atoms/Container";
+import { GetServerSideProps } from "next";
 
-export default function Page() {
-  return (
-    <PageContainer>
-      <h1>Construction...</h1>
-    </PageContainer>
-  );
-}
+import { getNewsDatabase } from "@src/apis/notion";
+import { Newsroom } from "@src/pages/newsroom/Newsroom";
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const database = await getNewsDatabase();
+
+  return {
+    props: {
+      database,
+    },
+  };
+};
+
+export default Newsroom;
