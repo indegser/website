@@ -23,7 +23,7 @@ export const useNewsSeo = (news: NewsType, blocks: BlockType[]) => {
 
   return {
     title: title.title[0]?.plain_text,
-    excerpt: excerpt.rich_text[0]?.plain_text,
+    excerpt: excerpt?.rich_text[0]?.plain_text,
     imageUrl,
   };
 };
