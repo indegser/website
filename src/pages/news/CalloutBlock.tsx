@@ -1,7 +1,7 @@
 import { NotionIcon } from "./NotionIcon";
 
-import { PageContent } from "@src/common/atoms/Container";
 import { styled } from "@src/common/stitches.config";
+import { PageContent } from "@src/design/atoms/Container";
 import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
 import { RichText } from "@src/design/RichText";
 import { BlockType } from "@src/types/notion.types";

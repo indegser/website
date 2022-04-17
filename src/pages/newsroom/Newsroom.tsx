@@ -1,9 +1,9 @@
 import { NewsPreview } from "./NewsPreview";
 
-import { PageContainer } from "@src/common/atoms/Container";
 import { SEO } from "@src/common/SEO";
 import { styled } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
+import { PageContainer } from "@src/design/atoms/Container";
 import { usePageTracking } from "@src/hooks/usePageTracking";
 import { DatabaseResponseType, NewsType } from "@src/types/notion.types";
 

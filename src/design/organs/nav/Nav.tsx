@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import { Theme } from "./Theme";
 
-import { PageContainer } from "@src/common/atoms/Container";
 import { styled, theme } from "@src/common/stitches.config";
+import { PageContainer } from "@src/design/atoms/Container";
 
 export const Nav = () => {
   return (
