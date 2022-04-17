@@ -1,10 +1,10 @@
 import { GetServerSideProps } from "next";
 
-import { getNewsDatabase } from "@src/apis/notion";
+import { newsApi } from "@src/apis/newsApi";
 import { Newsroom } from "@src/pages/newsroom/Newsroom";
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const database = await getNewsDatabase();
+  const database = await newsApi.getNewsDatabase();
 
   return {
     props: {

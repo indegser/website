@@ -1,11 +1,10 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { Router } from "next/router";
 
-import { Footer } from "@src/common/organs/footer/Footer";
-import { Nav } from "@src/common/organs/nav/Nav";
 import { styled } from "@src/common/stitches.config";
 import { GlobalStyles } from "@src/design/GlobalStyles";
+import { Footer } from "@src/design/organs/footer/Footer";
+import { Nav } from "@src/design/organs/nav/Nav";
 import { BaseApp } from "@src/pages/BaseApp";
 
 export default function App({ Component, pageProps }: AppProps) {

@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 import { useMemo } from "react";
 
-import { PageContent } from "@src/common/atoms/Container";
 import { styled, theme } from "@src/common/stitches.config";
 import { mq } from "@src/common/theme";
+import { PageContent } from "@src/design/atoms/Container";
 import { RichText } from "@src/design/RichText";
 import { NewsType } from "@src/types/notion.types";
 
