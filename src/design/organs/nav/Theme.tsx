@@ -1,8 +1,8 @@
 import * as Primitive from "@radix-ui/react-dropdown-menu";
 import { CaretDownIcon, CheckIcon } from "@radix-ui/react-icons";
 
-import { styled, theme } from "@src/common/stitches.config";
-import { useThemeStore } from "@src/design/themeStore";
+import { styled, theme } from "@src/design/theme/stitches.config";
+import { useThemeStore } from "@src/design/theme/themeStore";
 import { Analytics } from "@src/sdks/analytics";
 
 export const Theme = () => {

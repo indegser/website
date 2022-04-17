@@ -1,4 +1,4 @@
-import { styled, theme } from "@src/common/stitches.config";
+import { styled, theme } from "@src/design/theme/stitches.config";
 
 export const Input = styled("input", {
   all: "unset",

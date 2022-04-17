@@ -1,5 +1,5 @@
-import { darkTheme } from "@src/common/stitches.config";
-import { useThemeStore } from "@src/design/themeStore";
+import { darkTheme } from "@src/design/theme/stitches.config";
+import { useThemeStore } from "@src/design/theme/themeStore";
 import { useIsomorphicLayoutEffect } from "@src/hooks/useIsomorphicLayoutEffect";
 import { amplitudeSdk } from "@src/sdks/amplitude";
 

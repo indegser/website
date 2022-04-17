@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { ComponentProps, PropsWithChildren } from "react";
 
-import { styled, theme } from "@src/common/stitches.config";
-import { mediaQueries, mq } from "@src/common/theme";
+import { mediaQueries, mq } from "@src/design/theme/mediaQueries";
+import { styled, theme } from "@src/design/theme/stitches.config";
 
 interface Props extends ComponentProps<typeof Container> {}
 

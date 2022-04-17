@@ -1,4 +1,4 @@
-import { styled } from "@src/common/stitches.config";
+import { styled } from "@src/design/theme/stitches.config";
 
 export const Fieldset = styled("fieldset", {
   all: "unset",

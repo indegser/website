@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { Caption } from "../Caption";
 import { useBookmarkBlock } from "./BookmarkBlock.hooks";
 
-import { styled, theme } from "@src/common/stitches.config";
-import { mediaQueries } from "@src/common/theme";
+import { mediaQueries } from "@src/design/theme/mediaQueries";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {

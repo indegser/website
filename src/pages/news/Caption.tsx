@@ -1,5 +1,5 @@
-import { styled, theme } from "@src/common/stitches.config";
 import { RichText } from "@src/design/RichText";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { RichTextType } from "@src/types/notion.types";
 
 interface Props {

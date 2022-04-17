@@ -1,4 +1,4 @@
-import { theme } from "@src/common/stitches.config";
+import { theme } from "@src/design/theme/stitches.config";
 import { AnnotationColorType } from "@src/types/notion.types";
 
 export const convertApiColorToStyleProps = (color: AnnotationColorType) => {

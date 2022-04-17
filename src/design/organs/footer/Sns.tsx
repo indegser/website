@@ -4,7 +4,7 @@ import { Fragment, MouseEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { SiNotion, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
 
-import { styled, theme } from "@src/common/stitches.config";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { Analytics } from "@src/sdks/analytics";
 
 const snsList = [
