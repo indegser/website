@@ -4,7 +4,7 @@ import { toArray } from "react-emoji-render";
 import { convertApiColorToStyleProps } from "./convertApiColorToStyleProps";
 import { RichTextWithLink } from "./RichTextWithLink";
 
-import { styled, theme } from "@src/common/stitches.config";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { RichTextItemResponse } from "@src/types/notion.types";
 
 interface Props {

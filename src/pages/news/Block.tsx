@@ -11,11 +11,11 @@ import { NewsToc } from "./NewsToc";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
 import { QuoteBlock } from "./QuoteBlock";
 
-import { styled } from "@src/common/stitches.config";
-import { mq } from "@src/common/theme";
 import { PageContent } from "@src/design/atoms/Container";
 import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
 import { RichText } from "@src/design/RichText";
+import { mq } from "@src/design/theme/mediaQueries";
+import { styled } from "@src/design/theme/stitches.config";
 import { AnnotationColorType, BlockType } from "@src/types/notion.types";
 
 interface Props {

@@ -4,10 +4,10 @@ import calendar from "dayjs/plugin/calendar";
 import Link from "next/link";
 import { useMemo } from "react";
 
-import { styled, theme } from "@src/common/stitches.config";
-import { mq } from "@src/common/theme";
 import { Row } from "@src/design/atoms/Row";
 import { RichText } from "@src/design/RichText";
+import { mq } from "@src/design/theme/mediaQueries";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { NewsType } from "@src/types/notion.types";
 
 dayjs.extend(calendar);
