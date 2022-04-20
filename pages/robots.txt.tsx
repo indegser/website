@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next";
 const content = `
 User-agent: *
 Disallow: /_next/static/
-Sitemap: https://indegser.com/sitemap.xml
+Sitemap: https://www.indegser.pro/sitemap.xml
 `.trim();
 
 export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {

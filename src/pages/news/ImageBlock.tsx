@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 
 import { Caption } from "./Caption";
 
-import { styled } from "@src/common/stitches.config";
-import { mq } from "@src/common/theme";
+import { mq } from "@src/design/theme/mediaQueries";
+import { styled } from "@src/design/theme/stitches.config";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {

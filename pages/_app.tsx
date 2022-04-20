@@ -1,14 +1,15 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { Router } from "next/router";
 
-import { Footer } from "@src/common/organs/footer/Footer";
-import { Nav } from "@src/common/organs/nav/Nav";
-import { styled } from "@src/common/stitches.config";
-import { GlobalStyles } from "@src/design/GlobalStyles";
+import { Footer } from "@src/design/organs/footer/Footer";
+import { Nav } from "@src/design/organs/nav/Nav";
+import { globalStyles } from "@src/design/theme/globalStyles";
+import { styled } from "@src/design/theme/stitches.config";
 import { BaseApp } from "@src/pages/BaseApp";
 
 export default function App({ Component, pageProps }: AppProps) {
+  globalStyles();
+
   return (
     <BaseApp>
       <Head>
@@ -20,7 +21,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Page>
-        <GlobalStyles />
         <Nav />
         <Main>
           <Component {...pageProps} />

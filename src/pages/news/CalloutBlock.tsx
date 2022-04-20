@@ -1,9 +1,9 @@
 import { NotionIcon } from "./NotionIcon";
 
-import { PageContent } from "@src/common/atoms/Container";
-import { styled } from "@src/common/stitches.config";
-import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
-import { RichText } from "@src/design/RichText";
+import { PageContent } from "@src/design/atoms/Container";
+import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorToStyleProps";
+import { RichText } from "@src/design/notion/RichText";
+import { styled } from "@src/design/theme/stitches.config";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {

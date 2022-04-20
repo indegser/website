@@ -1,4 +1,4 @@
-import { theme } from "@src/common/stitches.config";
+import { theme } from "@src/design/theme/stitches.config";
 
 export const codeStyle = {
   'code[class*="language-"]': {

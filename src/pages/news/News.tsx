@@ -2,10 +2,10 @@ import { Block } from "./Block";
 import { useNewsHashRouter, useNewsSeo } from "./News.hooks";
 import { NewsHeadline } from "./NewsHeadline";
 
-import { PageContainer } from "@src/common/atoms/Container";
-import { SEO } from "@src/common/SEO";
-import { styled, theme } from "@src/common/stitches.config";
-import { mq } from "@src/common/theme";
+import { PageContainer } from "@src/design/atoms/Container";
+import { SEO } from "@src/design/atoms/SEO";
+import { mq } from "@src/design/theme/mediaQueries";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/hooks/usePageTracking";
 import {
   BlockChildrenType,

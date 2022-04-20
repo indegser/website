@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import { PageContent } from "@src/common/atoms/Container";
-import { Row } from "@src/common/atoms/Row";
-import { styled, theme } from "@src/common/stitches.config";
-import { RichText } from "@src/design/RichText";
+import { PageContent } from "@src/design/atoms/Container";
+import { Row } from "@src/design/atoms/Row";
+import { RichText } from "@src/design/notion/RichText";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {

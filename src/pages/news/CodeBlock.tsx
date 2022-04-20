@@ -5,8 +5,8 @@ Highlighter.registerLanguage("typescript", tsx);
 
 import { codeStyle } from "./CodeBlock.style";
 
-import { PageContent } from "@src/common/atoms/Container";
-import { styled, theme } from "@src/common/stitches.config";
+import { PageContent } from "@src/design/atoms/Container";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { BlockType } from "@src/types/notion.types";
 
 interface Props {

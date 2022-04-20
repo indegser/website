@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import { styled, theme } from "@src/common/stitches.config";
+import { styled, theme } from "@src/design/theme/stitches.config";
 
 interface Props {
   link: { url: string } | null;

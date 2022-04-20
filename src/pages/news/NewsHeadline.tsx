@@ -1,10 +1,10 @@
 import dayjs from "dayjs";
 import { useMemo } from "react";
 
-import { PageContent } from "@src/common/atoms/Container";
-import { styled, theme } from "@src/common/stitches.config";
-import { mq } from "@src/common/theme";
-import { RichText } from "@src/design/RichText";
+import { PageContent } from "@src/design/atoms/Container";
+import { RichText } from "@src/design/notion/RichText";
+import { mq } from "@src/design/theme/mediaQueries";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { NewsType } from "@src/types/notion.types";
 
 interface Props {
