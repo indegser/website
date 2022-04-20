@@ -12,8 +12,8 @@ import { NumberedListItemBlock } from "./NumberedListItemBlock";
 import { QuoteBlock } from "./QuoteBlock";
 
 import { PageContent } from "@src/design/atoms/Container";
-import { convertApiColorToStyleProps } from "@src/design/convertApiColorToStyleProps";
-import { RichText } from "@src/design/RichText";
+import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorToStyleProps";
+import { RichText } from "@src/design/notion/RichText";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
 import { AnnotationColorType, BlockType } from "@src/types/notion.types";
