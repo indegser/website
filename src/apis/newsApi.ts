@@ -17,6 +17,13 @@ const getNewsDatabase = () => {
   });
 };
 
+const retrieveNewsroom = () => {
+  return notion.databases.retrieve({
+    database_id: "0021f4b0494546a596716a7a5d9db452",
+  });
+};
+
 export const newsApi = {
   getNewsDatabase,
+  retrieveNewsroom,
 };
