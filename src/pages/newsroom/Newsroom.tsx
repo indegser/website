@@ -8,6 +8,7 @@ import { usePageTracking } from "@src/hooks/usePageTracking";
 import { DatabaseResponseType, NewsType } from "@src/types/notion.types";
 
 interface Props {
+  newsroom: any;
   database: DatabaseResponseType;
 }
 
@@ -19,17 +20,32 @@ export const Newsroom = ({ database }: Props) => {
   usePageTracking("visit_newsroom");
 
   return (
-    <PageContainer>
+    <NewsroomContainer>
       <SEO title="Newsroom" />
       <ContentList>{news}</ContentList>
-    </PageContainer>
+    </NewsroomContainer>
   );
 };
 
+const NewsroomContainer = styled(PageContainer, {
+  overflow: "hidden",
+});
+
 const ContentList = styled("section", {
   marginTop: 40,
+  marginRight: -64,
+  display: "grid",
+  gridTemplateColumns: "repeat(2, 1fr)",
 
+  [mq("lg")]: {
+    width: 692,
+    marginLeft: "auto",
+    marginRight: "auto",
+    gridTemplateColumns: "1fr",
+  },
   [mq("sm")]: {
     marginTop: 20,
+    width: "auto",
+    marginRight: 0,
   },
 });

@@ -1,7 +1,9 @@
-import { PropertyType } from "@src/types/notion.types";
+import { NewsType, PropertyType } from "@src/types/notion.types";
 
 interface Props {
-  file: Extract<PropertyType, { type: "files" }>["files"][number];
+  file:
+    | Extract<PropertyType, { type: "files" }>["files"][number]
+    | NewsType["cover"];
 }
 
 export const useNotionFileUrl = () => {
