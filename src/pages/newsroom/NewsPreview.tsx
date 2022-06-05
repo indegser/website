@@ -38,13 +38,11 @@ export const NewsPreview = ({ news }: Props) => {
       <Link href={`/newsroom/${news.id}`} passHref>
         <a>
           <Content>
-            <NewsCover news={news} />
             <Right>
-              <NewsCategory category={news.properties.category} />
               <Title>
                 <RichText data={title.title} shouldRenderPlainText />
               </Title>
-              <Time>{desc}</Time>
+              <NewsCategory category={news.properties.category} />
             </Right>
           </Content>
         </a>
@@ -54,7 +52,7 @@ export const NewsPreview = ({ news }: Props) => {
 };
 
 const Container = styled("div", {
-  marginBottom: 32,
+  marginBottom: 16,
   marginRight: 64,
   display: "flex",
   flexDirection: "column",
@@ -65,7 +63,7 @@ const Container = styled("div", {
 
   ["&::after"]: {
     content: "",
-    marginTop: 32,
+    marginTop: 16,
     height: 1,
     display: "block",
     flex: "0 0 auto",
@@ -88,8 +86,8 @@ const Right = styled("div", {
 });
 
 const Title = styled("h2", {
-  fontWeight: 640,
-  fontSize: 17,
+  fontWeight: 500,
+  fontSize: 14,
   lineHeight: 1.28,
   paddingBottom: 0,
   overflow: "hidden",
@@ -100,7 +98,6 @@ const Title = styled("h2", {
   color: theme.colors.gray12,
 
   [mq("sm")]: {
-    fontSize: 17,
     lineHeight: 1.2,
     background: "none !important",
     overflow: "auto",
