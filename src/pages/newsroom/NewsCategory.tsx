@@ -21,9 +21,9 @@ const Container = styled("div", {
 });
 
 const Text = styled("div", {
-  fontSize: 12,
+  fontSize: 14,
   color: theme.colors.gray11,
-  fontWeight: 560,
+  fontWeight: 400,
   textTransform: "uppercase",
   letterSpacing: 0.2,
 });

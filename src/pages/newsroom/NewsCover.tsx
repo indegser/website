@@ -34,7 +34,7 @@ export const NewsCover = ({ news }: Props) => {
 const Container = styled("div", {
   width: 132,
   height: 132,
-  borderRadius: 16,
+  borderRadius: 8,
   flex: "0 0 auto",
   background: theme.colors.gray3,
   overflow: "hidden",
