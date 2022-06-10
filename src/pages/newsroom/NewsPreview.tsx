@@ -4,7 +4,9 @@ import calendar from "dayjs/plugin/calendar";
 import Link from "next/link";
 import { useMemo } from "react";
 
-import { Row } from "@src/design/atoms/Row";
+import { NewsCategory } from "./NewsCategory";
+import { NewsCover } from "./NewsCover";
+
 import { RichText } from "@src/design/notion/RichText";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
@@ -24,8 +26,8 @@ export const NewsPreview = ({ news }: Props) => {
     const result = dayjs(dayjs(last_edited_time)).locale("ko").calendar(null, {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
       lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
-      lastWeek: "[지난] dddd A h:mm", // Last week ( Last Monday at 2:30 AM )
-      sameElse: "YYYY[년] MMMM D[일] h:mm", // Everything else ( 17/10/2011 )
+      lastWeek: "[지난] dddd", // Last week ( Last Monday at 2:30 AM )
+      sameElse: "YYYY[년] MMMM D[일]", // Everything else ( 17/10/2011 )
     });
 
     return result;
@@ -35,14 +37,14 @@ export const NewsPreview = ({ news }: Props) => {
     <Container>
       <Link href={`/newsroom/${news.id}`} passHref>
         <a>
-          <Row>
-            <Title>
-              <RichText data={title.title} shouldRenderPlainText />
-            </Title>
+          <Content>
             <Right>
-              <Time>{desc}</Time>
+              <Title>
+                <RichText data={title.title} shouldRenderPlainText />
+              </Title>
+              <NewsCategory category={news.properties.category} />
             </Right>
-          </Row>
+          </Content>
         </a>
       </Link>
     </Container>
@@ -50,30 +52,43 @@ export const NewsPreview = ({ news }: Props) => {
 };
 
 const Container = styled("div", {
-  marginBottom: 2,
+  marginBottom: 16,
+  marginRight: 64,
+  display: "flex",
+  flexDirection: "column",
 
   [mq("sm")]: {
-    marginBottom: 16,
+    marginRight: 0,
+  },
+
+  ["&::after"]: {
+    content: "",
+    marginTop: 16,
+    height: 1,
+    display: "block",
+    flex: "0 0 auto",
+    background: theme.colors.gray6,
   },
 });
 
-const Right = styled("div", {
-  display: "grid",
-  gridAutoFlow: "column",
-  gridTemplateColumns: "max-content",
-  gridGap: "8px",
+const Content = styled("div", {
+  display: "flex",
   alignItems: "center",
-  flex: "0 0 auto",
+});
 
-  [mq("sm")]: {
-    marginTop: 6,
+const Right = styled("div", {
+  flex: "1 1",
+  paddingLeft: 24,
+
+  ["&:first-child"]: {
+    paddingLeft: 0,
   },
 });
 
 const Title = styled("h2", {
-  fontWeight: 600,
-  fontSize: 16,
-  lineHeight: 1.38,
+  fontWeight: 500,
+  fontSize: 14,
+  lineHeight: 1.28,
   paddingBottom: 0,
   overflow: "hidden",
   whiteSpace: "nowrap",
@@ -81,13 +96,8 @@ const Title = styled("h2", {
   margin: 0,
   marginRight: 20,
   color: theme.colors.gray12,
-  backgroundImage: `linear-gradient(to right, ${theme.colors.gray8} 0%, ${theme.colors.gray8} 100%)`,
-  backgroundRepeat: "repeat-x",
-  backgroundPosition: "0px 100%",
-  backgroundSize: "100% 1px",
 
   [mq("sm")]: {
-    fontSize: 17,
     lineHeight: 1.2,
     background: "none !important",
     overflow: "auto",
@@ -97,8 +107,9 @@ const Title = styled("h2", {
 });
 
 const Time = styled("div", {
-  fontSize: 12,
-  fontWeight: 400,
+  fontSize: 14,
+  fontWeight: 500,
   color: theme.colors.gray11,
   lineHeight: 1,
+  marginTop: 8,
 });
