@@ -1,17 +1,16 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 
 import { newsApi } from "@src/apis/newsApi";
 import { Newsroom } from "@src/pages/newsroom/Newsroom";
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const database = await newsApi.getNewsDatabase();
-  const newsroom = await newsApi.retrieveNewsroom();
 
   return {
     props: {
-      newsroom,
       database,
     },
+    revalidate: 10,
   };
 };
 
