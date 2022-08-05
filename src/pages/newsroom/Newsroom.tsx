@@ -8,7 +8,6 @@ import { usePageTracking } from "@src/hooks/usePageTracking";
 import { DatabaseResponseType, NewsType } from "@src/types/notion.types";
 
 interface Props {
-  newsroom: any;
   database: DatabaseResponseType;
 }
 
