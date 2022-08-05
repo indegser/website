@@ -3,6 +3,9 @@
   "description": "Indegser website built with Next.js, Vercel and Github",
   "license": "None",
   "version": "0.2.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "dev:prod": "NEXT_PUBLIC_VERCEL_ENV=production next dev",
