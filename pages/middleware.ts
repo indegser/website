@@ -1,8 +1,9 @@
-import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 import { redis } from "@src/sdks/redis";
 
-export async function middleware(request: NextRequest, event: NextFetchEvent) {
+export async function middleware(request: NextRequest) {
   const url = request.nextUrl.searchParams.get("url");
   if (!url) return NextResponse.next();
 
@@ -12,3 +13,7 @@ export async function middleware(request: NextRequest, event: NextFetchEvent) {
 
   return NextResponse.json(cached);
 }
+
+export const config = {
+  matcher: ["/api/og"],
+};
