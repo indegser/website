@@ -23,8 +23,20 @@ const parseUrl = (originalUrl: string, url: string) => {
   return url;
 };
 
+const hasCachedVersion = async (url: string) => {
+  const cached = await redis.hgetall<Data>(`opengraph:${url}`);
+  return cached;
+};
+
 const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const url = req.query.url.toString();
+
+  const cachedVersion = await hasCachedVersion(url);
+
+  if (cachedVersion) {
+    res.json(cachedVersion);
+    return;
+  }
 
   const { result } = await ogs({
     url,
