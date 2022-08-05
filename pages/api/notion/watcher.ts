@@ -51,10 +51,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<string[]>) => {
      * 1. Newsroom 업데이트
      * 2. News 페이지 업데이트
      */
-    await res.unstable_revalidate("/");
+    await res.revalidate("/");
 
     await Promise.all(
-      updatedPageIds.map((id) => res.unstable_revalidate(`/newsroom/${id}`))
+      updatedPageIds.map((id) => res.revalidate(`/newsroom/${id}`))
     );
 
     await redis.hset(REDIS_KEY, nextCache);
