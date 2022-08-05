@@ -10,8 +10,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   try {
-    await res.unstable_revalidate("/");
-    await res.unstable_revalidate(`/newsroom/${newsId}`);
+    await res.revalidate("/");
+    await res.revalidate(`/newsroom/${newsId}`);
     await flush(2000);
 
     return res.json({ revalidated: true });
