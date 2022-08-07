@@ -1,3 +1,4 @@
+import { Books } from "./books/Books";
 import { NewsPreview } from "./NewsPreview";
 
 import { PageContainer } from "@src/design/atoms/Container";
@@ -5,13 +6,15 @@ import { SEO } from "@src/design/atoms/SEO";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/hooks/usePageTracking";
+import { BookDatabaseType } from "@src/types/book.types";
 import { DatabaseResponseType, NewsType } from "@src/types/notion.types";
 
 interface Props {
   database: DatabaseResponseType;
+  books: BookDatabaseType;
 }
 
-export const Newsroom = ({ database }: Props) => {
+export const Newsroom = ({ database, books }: Props) => {
   const news = database.results.map((result) => (
     <NewsPreview key={result.id} news={result as NewsType} />
   ));
@@ -21,6 +24,7 @@ export const Newsroom = ({ database }: Props) => {
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
+      <Books books={books} />
       <ContentList>{news}</ContentList>
     </NewsroomContainer>
   );
@@ -32,9 +36,9 @@ const NewsroomContainer = styled(PageContainer, {
 
 const ContentList = styled("section", {
   marginTop: 40,
-  marginRight: -64,
   display: "grid",
-  gridTemplateColumns: "repeat(2, 1fr)",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "0 24px",
 
   [mq("lg")]: {
     width: 692,
