@@ -16,13 +16,11 @@ export const NewsCategory = ({ category }: Props) => {
   );
 };
 
-const Container = styled("div", {
-  marginBottom: 4,
-});
+const Container = styled("div", {});
 
 const Text = styled("div", {
-  fontSize: 14,
-  color: theme.colors.gray11,
+  fontSize: 13,
+  color: theme.colors.gray10,
   fontWeight: 400,
   textTransform: "uppercase",
   letterSpacing: 0.2,

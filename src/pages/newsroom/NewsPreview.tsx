@@ -52,22 +52,13 @@ export const NewsPreview = ({ news }: Props) => {
 };
 
 const Container = styled("div", {
-  marginBottom: 16,
-  marginRight: 64,
   display: "flex",
   flexDirection: "column",
+  borderTop: `1px solid ${theme.colors.gray6}`,
+  padding: `8px 0`,
 
   [mq("sm")]: {
     marginRight: 0,
-  },
-
-  ["&::after"]: {
-    content: "",
-    marginTop: 16,
-    height: 1,
-    display: "block",
-    flex: "0 0 auto",
-    background: theme.colors.gray6,
   },
 });
 
@@ -86,8 +77,8 @@ const Right = styled("div", {
 });
 
 const Title = styled("h2", {
-  fontWeight: 500,
-  fontSize: 14,
+  fontWeight: 400,
+  fontSize: 13,
   lineHeight: 1.28,
   paddingBottom: 0,
   overflow: "hidden",
