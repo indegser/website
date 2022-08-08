@@ -10,7 +10,7 @@ interface Props {
   blocks: BlockType[];
 }
 
-export const NewsToc = ({ blocks }: Props) => {
+export const TocBlock = ({ blocks }: Props) => {
   const headings = blocks.filter((block) => block.type.startsWith("heading"));
 
   const { result: depthList } = headings.reduce(
