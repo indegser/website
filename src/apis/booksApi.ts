@@ -17,6 +17,11 @@ const getBooks = () => {
   });
 };
 
+const getBook = (bookId: string) => {
+  return notion.pages.retrieve({ page_id: bookId });
+};
+
 export const booksApi = {
   getBooks,
+  getBook,
 };
