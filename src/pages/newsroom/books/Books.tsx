@@ -1,5 +1,6 @@
 import { styled } from "@stitches/react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { RichText } from "@src/design/notion/RichText";
 import { theme } from "@src/design/theme/stitches.config";
@@ -15,21 +16,24 @@ export const Books = ({ books }: Props) => {
     <Container>
       {books.results.slice(0, 4).map((book) => {
         return (
-          <BookPreview key={book.id}>
-            <BookCover>
-              <Image
-                src={getNotionFileUrl(book.properties.Cover)}
-                layout="fill"
-                objectFit="cover"
-                alt={getNotionTitle(book.properties.Name)}
-              />
-            </BookCover>
-            <div>
-              <BookTitle>
-                <RichText data={book.properties.Name.title} />
-              </BookTitle>
-            </div>
-          </BookPreview>
+          <Link key={book.id} href={`/books/${book.id}`}>
+            <BookPreview>
+              <BookCover>
+                <Image
+                  src={getNotionFileUrl(book.properties.Cover)}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="top"
+                  alt={getNotionTitle(book.properties.Name)}
+                />
+              </BookCover>
+              <div>
+                <BookTitle>
+                  <RichText data={book.properties.Name.title} />
+                </BookTitle>
+              </div>
+            </BookPreview>
+          </Link>
         );
       })}
     </Container>
@@ -38,8 +42,7 @@ export const Books = ({ books }: Props) => {
 
 const Container = styled("div", {
   display: "grid",
-  gridAutoFlow: "column",
-  gridAutoColumns: "max-content",
+  gridTemplateColumns: "repeat(4, 1fr)",
   gridGap: "0 20px",
   padding: "20px 0",
 });
@@ -48,10 +51,11 @@ const BookPreview = styled("div", {});
 
 const BookCover = styled("div", {
   width: 240,
-  height: 240,
+  height: 320,
   position: "relative",
-  borderRadius: 16,
+  borderRadius: 4,
   overflow: "hidden",
+  marginBottom: 12,
 });
 
 const BookTitle = styled("div", {
