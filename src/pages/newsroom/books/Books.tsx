@@ -16,23 +16,25 @@ export const Books = ({ books }: Props) => {
     <Container>
       {books.results.slice(0, 4).map((book) => {
         return (
-          <Link key={book.id} href={`/books/${book.id}`}>
-            <BookPreview>
-              <BookCover>
-                <Image
-                  src={getNotionFileUrl(book.properties.Cover)}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="top"
-                  alt={getNotionTitle(book.properties.Name)}
-                />
-              </BookCover>
-              <div>
-                <BookTitle>
-                  <RichText data={book.properties.Name.title} />
-                </BookTitle>
-              </div>
-            </BookPreview>
+          <Link key={book.id} href={`/books/${book.id}`} passHref>
+            <a>
+              <BookPreview>
+                <BookCover>
+                  <Image
+                    src={getNotionFileUrl(book.properties.Cover)}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="top"
+                    alt={getNotionTitle(book.properties.Name)}
+                  />
+                </BookCover>
+                <div>
+                  <BookTitle>
+                    <RichText data={book.properties.Name.title} />
+                  </BookTitle>
+                </div>
+              </BookPreview>
+            </a>
           </Link>
         );
       })}
