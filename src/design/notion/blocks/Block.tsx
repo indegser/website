@@ -7,9 +7,9 @@ import { CodeBlock } from "./CodeBlock";
 import { DividerBlock } from "./DividerBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { ImageBlock } from "./ImageBlock";
-import { NewsToc } from "./NewsToc";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
 import { QuoteBlock } from "./QuoteBlock";
+import { TocBlock } from "./TocBlock";
 
 import { PageContent } from "@src/design/atoms/Container";
 import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorToStyleProps";
@@ -109,7 +109,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
         return <CodeBlock block={block} />;
       }
       case "table_of_contents": {
-        return <NewsToc blocks={blocks} />;
+        return <TocBlock blocks={blocks} />;
       }
       default: {
         return null;
