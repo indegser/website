@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const page = (await booksApi.getBook(bookId)) as BookType;
   const blocks = await getNotionContent(bookId);
-  const meta = getMetaFromNotionPage(page);
+  const meta = getMetaFromNotionPage(page, blocks);
 
   return {
     props: { meta, blocks },

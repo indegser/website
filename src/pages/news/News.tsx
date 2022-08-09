@@ -1,31 +1,27 @@
-import { useNewsHashRouter, useNewsSeo } from "./News.hooks";
-import { NewsHeadline } from "./NewsHeadline";
+import { useNewsHashRouter } from "./News.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { NotionContent } from "@src/design/notion/NotionContent";
+import { ContentHeadline } from "@src/design/organs/content/ContentHeadline";
 import { usePageTracking } from "@src/hooks/usePageTracking";
-import {
-  BlockChildrenType,
-  BlockType,
-  NewsType,
-} from "@src/types/notion.types";
+import { ContentMetaType } from "@src/types/content.types";
+import { BlockType } from "@src/types/notion.types";
 
 interface Props {
-  news: BlockChildrenType;
-  page: NewsType;
+  meta: ContentMetaType;
   blocks: BlockType[];
 }
 
-export const News = ({ page, blocks }: Props) => {
-  const { title, excerpt, imageUrl } = useNewsSeo(page, blocks);
+export const News = ({ meta, blocks }: Props) => {
+  // const { title, excerpt, imageUrl } = useNewsSeo(page, blocks);
   useNewsHashRouter();
-  usePageTracking("visit_news", { id: page.id, title });
+  usePageTracking("visit_news", { id: meta.id, title: meta.title });
 
   return (
     <PageContainer>
-      <SEO title={title} description={excerpt} image={imageUrl} />
-      <NewsHeadline news={page} />
+      <SEO {...meta} />
+      <ContentHeadline {...meta} />
       <NotionContent blocks={blocks} />
     </PageContainer>
   );

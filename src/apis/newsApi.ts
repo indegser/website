@@ -18,6 +18,13 @@ const getNewsDatabase = () => {
   });
 };
 
+const getNews = (newsId: string) => {
+  return notion.pages.retrieve({
+    page_id: newsId,
+  });
+};
+
 export const newsApi = {
   getNewsDatabase,
+  getNews,
 };

@@ -5,7 +5,9 @@ import {
   TitlePropertyType,
 } from "@src/types/notion.types";
 
-export const getNotionFileUrl = (filesProperty: FilesPropertyType) => {
+export const getNotionFileUrl = (filesProperty?: FilesPropertyType) => {
+  if (!filesProperty) return null;
+
   for (const file of filesProperty.files) {
     if (file.type === "file") {
       return file.file.url;

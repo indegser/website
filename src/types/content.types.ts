@@ -1,4 +1,5 @@
 export type ContentMetaType = {
+  id: string;
   title: string;
   description?: string;
   image?: string;

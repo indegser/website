@@ -8,7 +8,6 @@ import { BlockType } from "@src/types/notion.types";
 interface Props {
   meta: ContentMetaType;
   blocks: BlockType[];
-  lastEditedTime: string;
 }
 
 export const BookPage = ({ meta, blocks }: Props) => {
