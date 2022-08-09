@@ -7,8 +7,8 @@ import {
 
 export type BookType = Omit<DatabasePageType, "properties"> & {
   properties: {
-    Name: TitlePropertyType;
-    Cover: FilesPropertyType;
+    title: TitlePropertyType;
+    cover: FilesPropertyType;
   };
 };
 

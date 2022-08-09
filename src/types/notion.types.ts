@@ -18,12 +18,13 @@ export type FilesPropertyType = Extract<PropertyType, { type: "files" }>;
 export type NewsPropertyType = {
   title: TitlePropertyType;
   status: SelectPropertyType;
+  cover?: FilesPropertyType;
   published_time: DatePropertyType;
   category: Extract<PropertyType, { type: "multi_select" }>;
   excerpt: Extract<PropertyType, { type: "rich_text" }>;
 };
 
-export type NewsType = DatabasePageType & {
+export type NewsType = Omit<DatabasePageType, "properties"> & {
   properties: NewsPropertyType;
 };
 

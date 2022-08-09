@@ -21,16 +21,16 @@ export const Books = ({ books }: Props) => {
               <BookPreview>
                 <BookCover>
                   <Image
-                    src={getNotionFileUrl(book.properties.Cover)}
+                    src={getNotionFileUrl(book.properties.cover)}
                     layout="fill"
                     objectFit="cover"
                     objectPosition="top"
-                    alt={getNotionTitle(book.properties.Name)}
+                    alt={getNotionTitle(book.properties.title)}
                   />
                 </BookCover>
                 <div>
                   <BookTitle>
-                    <RichText data={book.properties.Name.title} />
+                    <RichText data={book.properties.title.title} />
                   </BookTitle>
                 </div>
               </BookPreview>
