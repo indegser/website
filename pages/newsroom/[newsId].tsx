@@ -7,9 +7,9 @@ import { getNotionContent } from "@src/utils/notion";
 import { getMetaFromNotionPage } from "@src/utils/notion/meta";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const news = await newsApi.getNewsDatabase();
+  const { results } = await newsApi.getNewsDatabase();
 
-  const paths = news.results.map((result) => ({
+  const paths = results.map((result) => ({
     params: { newsId: result.id },
   }));
 
