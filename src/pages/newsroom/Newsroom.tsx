@@ -4,8 +4,8 @@ import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
-import { usePageTracking } from "@src/hooks/usePageTracking";
 import { DatabaseResponseType, NewsType } from "@src/types/notion.types";
+import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 interface Props {
   database: DatabaseResponseType;
