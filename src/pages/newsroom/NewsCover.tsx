@@ -1,6 +1,9 @@
+import Image from "next/image";
+
 import { useNotionFileUrl } from "@src/design/notion/useNotionFileUrl";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
+import { CDN_ORIGIN } from "@src/types/const.types";
 import { NewsType } from "@src/types/news.types";
 
 interface Props {
@@ -14,17 +17,20 @@ export const NewsCover = ({ news }: Props) => {
   if (cover === null) return null;
 
   const src = getUrl({ file: cover });
+  const isFromCDN = src.includes(CDN_ORIGIN);
 
   return (
     <Container>
-      {cover && (
-        <ImageBox>
+      <ImageBox>
+        {isFromCDN ? (
+          <Image src={src} layout="fill" objectFit="cover" alt="Title" />
+        ) : (
           <picture>
             <source srcSet={src} />
-            <img src={src} alt="Title" />
+            <PlainImage src={src} alt="Title" />
           </picture>
-        </ImageBox>
-      )}
+        )}
+      </ImageBox>
     </Container>
   );
 };
@@ -46,9 +52,10 @@ const ImageBox = styled("div", {
   width: "100%",
   height: "100%",
   position: "relative",
-  ["img"]: {
-    objectFit: "cover",
-    width: "100%",
-    height: "100%",
-  },
+});
+
+const PlainImage = styled("img", {
+  objectFit: "cover",
+  width: "100%",
+  height: "100%",
 });
