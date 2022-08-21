@@ -7,10 +7,12 @@ import { useMemo } from "react";
 import { NewsCategory } from "./NewsCategory";
 import { NewsCover } from "./NewsCover";
 
+import { Text } from "@src/design/atoms/typography/Text";
+import { Title } from "@src/design/atoms/typography/Title";
 import { RichText } from "@src/design/notion/RichText";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { NewsType } from "@src/types/notion.types";
+import { NewsType } from "@src/types/news.types";
 
 dayjs.extend(calendar);
 
@@ -20,9 +22,9 @@ interface Props {
 
 export const NewsPreview = ({ news }: Props) => {
   const { last_edited_time } = news;
-  const { title } = news.properties;
+  const { title, excerpt } = news.properties;
 
-  const desc = useMemo(() => {
+  const time = useMemo(() => {
     const result = dayjs(dayjs(last_edited_time)).locale("ko").calendar(null, {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
       lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
@@ -38,11 +40,17 @@ export const NewsPreview = ({ news }: Props) => {
       <Link href={`/newsroom/${news.id}`} passHref>
         <a>
           <Content>
-            <Right>
-              <Title>
-                <RichText data={title.title} shouldRenderPlainText />
-              </Title>
+            <Left>
               <NewsCategory category={news.properties.category} />
+              <NewsTitle>
+                <RichText data={title.title} shouldRenderPlainText />
+              </NewsTitle>
+              <Excerpt type="description">
+                <RichText data={excerpt.rich_text} />
+              </Excerpt>
+            </Left>
+            <Right>
+              <NewsCover news={news} />
             </Right>
           </Content>
         </a>
@@ -55,7 +63,7 @@ const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
   borderTop: `1px solid ${theme.colors.gray6}`,
-  padding: `8px 0`,
+  padding: `24px 0`,
 
   [mq("sm")]: {
     marginRight: 0,
@@ -64,11 +72,14 @@ const Container = styled("div", {
 
 const Content = styled("div", {
   display: "flex",
-  alignItems: "center",
+});
+
+const Left = styled("div", {
+  flex: "1 1",
 });
 
 const Right = styled("div", {
-  flex: "1 1",
+  flex: "0 0 auto",
   paddingLeft: 24,
 
   ["&:first-child"]: {
@@ -76,31 +87,11 @@ const Right = styled("div", {
   },
 });
 
-const Title = styled("h2", {
-  fontWeight: 400,
-  fontSize: 13,
-  lineHeight: 1.28,
-  paddingBottom: 0,
-  overflow: "hidden",
-  whiteSpace: "nowrap",
-  textOverflow: "ellipsis",
-  margin: 0,
+const NewsTitle = styled(Title, {
   marginRight: 20,
-  color: theme.colors.gray12,
-
-  [mq("sm")]: {
-    lineHeight: 1.2,
-    background: "none !important",
-    overflow: "auto",
-    whiteSpace: "pre-wrap",
-    textOverflow: "unset",
-  },
+  marginTop: 4,
 });
 
-const Time = styled("div", {
-  fontSize: 14,
-  fontWeight: 500,
-  color: theme.colors.gray11,
-  lineHeight: 1,
-  marginTop: 8,
+const Excerpt = styled(Text, {
+  marginTop: 4,
 });

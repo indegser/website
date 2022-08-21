@@ -1,9 +1,7 @@
-import Image from "next/image";
-
 import { useNotionFileUrl } from "@src/design/notion/useNotionFileUrl";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { NewsType } from "@src/types/notion.types";
+import { NewsType } from "@src/types/news.types";
 
 interface Props {
   news: NewsType;
@@ -15,16 +13,16 @@ export const NewsCover = ({ news }: Props) => {
 
   if (cover === null) return null;
 
+  const src = getUrl({ file: cover });
+
   return (
     <Container>
       {cover && (
         <ImageBox>
-          <Image
-            src={getUrl({ file: cover })}
-            layout="fill"
-            objectFit="cover"
-            alt="Title"
-          />
+          <picture>
+            <source srcSet={src} />
+            <img src={src} alt="Title" />
+          </picture>
         </ImageBox>
       )}
     </Container>
@@ -34,7 +32,6 @@ export const NewsCover = ({ news }: Props) => {
 const Container = styled("div", {
   width: 132,
   height: 132,
-  borderRadius: 8,
   flex: "0 0 auto",
   background: theme.colors.gray3,
   overflow: "hidden",
@@ -49,4 +46,9 @@ const ImageBox = styled("div", {
   width: "100%",
   height: "100%",
   position: "relative",
+  ["img"]: {
+    objectFit: "cover",
+    width: "100%",
+    height: "100%",
+  },
 });

@@ -31,7 +31,7 @@ const Article = styled("article", {
   lineHeight: "26px",
   letterSpacing: "-0.018em",
   paddingBottom: 80,
-  fontWeight: 420,
+  fontWeight: 400,
   color: theme.colors.gray12,
 
   [mq("sm")]: {
