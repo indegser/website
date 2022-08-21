@@ -8,11 +8,7 @@ const { withSentryConfig } = require("@sentry/nextjs");
 const nextConfig = {
   swcMinify: true,
   images: {
-    domains: [
-      "s3.us-west-2.amazonaws.com",
-      "images.unsplash.com",
-      "www.notion.so",
-    ],
+    domains: [process.env.NEXT_PUBLIC_SUPABASE_URL || ""],
   },
 };
 

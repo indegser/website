@@ -2,6 +2,8 @@ import { environment } from "./env.types";
 
 export const STORY_DEFAULT_PAGE_SIZE = 20;
 
+export const CDN_ORIGIN = process.env.NEXT_PUBLIC_SUPABASE_URL;
+
 export const ORIGIN =
   environment === "production"
     ? "https://www.indegser.com"
