@@ -1,8 +1,8 @@
 import {
-  DatabasePageType,
   DatabaseType,
   DatePropertyType,
   FilesPropertyType,
+  PageType,
   PropertyType,
   RelationPropertyType,
   SelectPropertyType,
@@ -19,8 +19,6 @@ type NewsPropertiesType = {
   series: RelationPropertyType;
 };
 
-export type NewsDatabaseType = DatabaseType<NewsType>;
+export type NewsPageType = PageType<NewsPropertiesType>;
 
-export type NewsType = Omit<DatabasePageType, "properties"> & {
-  properties: NewsPropertiesType;
-};
+export type NewsDatabaseType = DatabaseType<NewsPageType>;

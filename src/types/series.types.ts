@@ -1,7 +1,7 @@
 import {
-  DatabasePageType,
   DatabaseType,
   FilesPropertyType,
+  PageType,
   TitlePropertyType,
 } from "./notion.types";
 
@@ -16,8 +16,6 @@ type SeriesPropertiesType = {
   cover: FilesPropertyType;
 };
 
-export type SeriesPageType = Omit<DatabasePageType, "properties"> & {
-  properties: SeriesPropertiesType;
-};
+export type SeriesPageType = PageType<SeriesPropertiesType>;
 
 export type SeriesDatabaseType = DatabaseType<SeriesPageType>;

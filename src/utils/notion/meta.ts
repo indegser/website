@@ -1,7 +1,7 @@
 import { getNotionFileUrl, getNotionTitle } from "../notion";
 
 import { ContentMetaType } from "@src/types/content.types";
-import { NewsType } from "@src/types/news.types";
+import { NewsPageType } from "@src/types/news.types";
 import { BlockType } from "@src/types/notion.types";
 
 const getCoverImageFromBlocks = (blocks: BlockType[]) => {
@@ -24,7 +24,7 @@ const getCoverImageFromBlocks = (blocks: BlockType[]) => {
 };
 
 export const getMetaFromNotionPage = (
-  page: NewsType,
+  page: NewsPageType,
   blocks: BlockType[]
 ): ContentMetaType => {
   const { id, properties } = page;
