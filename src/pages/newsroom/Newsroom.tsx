@@ -4,7 +4,7 @@ import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
-import { NewsType } from "@src/types/news.types";
+import { NewsPageType } from "@src/types/news.types";
 import { DatabaseResponseType } from "@src/types/notion.types";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
@@ -14,7 +14,7 @@ interface Props {
 
 export const Newsroom = ({ database }: Props) => {
   const news = database.results.map((result) => (
-    <NewsPreview key={result.id} news={result as NewsType} />
+    <NewsPreview key={result.id} news={result as NewsPageType} />
   ));
 
   usePageTracking("visit_newsroom");

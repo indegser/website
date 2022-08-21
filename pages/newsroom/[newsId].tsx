@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 
 import { newsApi } from "@src/apis/newsApi";
 import { News } from "@src/pages/news/News";
-import { NewsType } from "@src/types/news.types";
+import { NewsPageType } from "@src/types/news.types";
 import { getNotionContent } from "@src/utils/notion";
 import { getMetaFromNotionPage } from "@src/utils/notion/meta";
 
@@ -22,7 +22,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const newsId = params.newsId.toString();
 
-  const page = (await newsApi.getNews(newsId)) as NewsType;
+  const page = (await newsApi.getNews(newsId)) as NewsPageType;
   const blocks = await getNotionContent(newsId);
   const meta = getMetaFromNotionPage(page, blocks);
 

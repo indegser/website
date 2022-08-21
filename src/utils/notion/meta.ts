@@ -1,7 +1,7 @@
 import { getNotionFileUrl, getNotionTitle } from "../notion";
 
 import { ContentMetaType } from "@src/types/content.types";
-import { NewsType } from "@src/types/news.types";
+import { NewsPageType } from "@src/types/news.types";
 import { BlockType } from "@src/types/notion.types";
 
 const getCoverImageFromBlocks = (blocks: BlockType[]) => {
@@ -24,17 +24,22 @@ const getCoverImageFromBlocks = (blocks: BlockType[]) => {
 };
 
 export const getMetaFromNotionPage = (
-  page: NewsType,
+  page: NewsPageType,
   blocks: BlockType[]
 ): ContentMetaType => {
-  const { id, properties } = page;
-  const title = getNotionTitle(properties.title);
+  const {
+    id,
+    cover,
+    properties: { title, excerpt },
+  } = page;
+
   const image =
-    getNotionFileUrl(properties.cover) || getCoverImageFromBlocks(blocks) || "";
+    getNotionFileUrl(cover) || getCoverImageFromBlocks(blocks) || "";
 
   return {
     id,
-    title,
+    title: getNotionTitle(title),
+    description: excerpt?.rich_text[0]?.plain_text ?? "",
     image,
     lastEditedTime: page.last_edited_time,
   };

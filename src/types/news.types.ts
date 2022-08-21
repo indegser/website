@@ -1,10 +1,8 @@
 import {
-  DatabasePageType,
   DatabaseType,
-  DatePropertyType,
-  FilesPropertyType,
-  PropertyType,
+  PageType,
   RelationPropertyType,
+  RichTextPropertyType,
   SelectPropertyType,
   TitlePropertyType,
 } from "./notion.types";
@@ -12,15 +10,10 @@ import {
 type NewsPropertiesType = {
   title: TitlePropertyType;
   status: SelectPropertyType;
-  cover?: FilesPropertyType;
-  published_time: DatePropertyType;
-  category: Extract<PropertyType, { type: "multi_select" }>;
-  excerpt: Extract<PropertyType, { type: "rich_text" }>;
+  excerpt: RichTextPropertyType;
   series: RelationPropertyType;
 };
 
-export type NewsDatabaseType = DatabaseType<NewsType>;
+export type NewsPageType = PageType<NewsPropertiesType>;
 
-export type NewsType = Omit<DatabasePageType, "properties"> & {
-  properties: NewsPropertiesType;
-};
+export type NewsDatabaseType = DatabaseType<NewsPageType>;

@@ -4,10 +4,10 @@ import { useNotionFileUrl } from "@src/design/notion/useNotionFileUrl";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { CDN_ORIGIN } from "@src/types/const.types";
-import { NewsType } from "@src/types/news.types";
+import { NewsPageType } from "@src/types/news.types";
 
 interface Props {
-  news: NewsType;
+  news: NewsPageType;
 }
 
 export const NewsCover = ({ news }: Props) => {
