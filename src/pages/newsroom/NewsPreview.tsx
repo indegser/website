@@ -7,6 +7,8 @@ import { useMemo } from "react";
 import { NewsCategory } from "./NewsCategory";
 import { NewsCover } from "./NewsCover";
 
+import { Text } from "@src/design/atoms/typography/Text";
+import { Title } from "@src/design/atoms/typography/Title";
 import { RichText } from "@src/design/notion/RichText";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
@@ -22,7 +24,7 @@ export const NewsPreview = ({ news }: Props) => {
   const { last_edited_time } = news;
   const { title, excerpt } = news.properties;
 
-  const desc = useMemo(() => {
+  const time = useMemo(() => {
     const result = dayjs(dayjs(last_edited_time)).locale("ko").calendar(null, {
       sameDay: "[오늘] A h:mm", // The same day ( Today at 2:30 AM )
       lastDay: "[어제] A h:mm", // The day before ( Yesterday at 2:30 AM )
@@ -40,10 +42,10 @@ export const NewsPreview = ({ news }: Props) => {
           <Content>
             <Left>
               <NewsCategory category={news.properties.category} />
-              <Title>
+              <NewsTitle>
                 <RichText data={title.title} shouldRenderPlainText />
-              </Title>
-              <Excerpt>
+              </NewsTitle>
+              <Excerpt type="description">
                 <RichText data={excerpt.rich_text} />
               </Excerpt>
             </Left>
@@ -85,40 +87,11 @@ const Right = styled("div", {
   },
 });
 
-const Title = styled("h2", {
-  fontWeight: 600,
-  fontSize: 16,
-  lineHeight: 1.28,
-  paddingBottom: 0,
-  overflow: "hidden",
-  whiteSpace: "nowrap",
-  textOverflow: "ellipsis",
-  margin: 0,
+const NewsTitle = styled(Title, {
   marginRight: 20,
   marginTop: 4,
-  color: theme.colors.gray12,
-
-  [mq("sm")]: {
-    lineHeight: 1.2,
-    background: "none !important",
-    overflow: "auto",
-    whiteSpace: "pre-wrap",
-    textOverflow: "unset",
-  },
 });
 
-const Excerpt = styled("div", {
-  fontSize: 14,
-  lineHeight: 1.4,
-  marginTop: 8,
-  wordBreak: "keep-all",
-  color: theme.colors.gray11,
-});
-
-const Time = styled("div", {
-  fontSize: 14,
-  fontWeight: 500,
-  color: theme.colors.gray11,
-  lineHeight: 1,
-  marginTop: 8,
+const Excerpt = styled(Text, {
+  marginTop: 4,
 });
