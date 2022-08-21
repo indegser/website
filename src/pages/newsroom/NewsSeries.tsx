@@ -1,9 +1,9 @@
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { useSeriesStore } from "@src/hooks/store/StoreProvider";
-import { NewsType } from "@src/types/news.types";
+import { NewsPageType } from "@src/types/news.types";
 
 interface Props {
-  series: NewsType["properties"]["series"];
+  series: NewsPageType["properties"]["series"];
 }
 
 export const NewsSeries = ({ series }: Props) => {
