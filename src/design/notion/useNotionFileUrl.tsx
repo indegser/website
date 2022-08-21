@@ -1,4 +1,5 @@
-import { NewsType, PropertyType } from "@src/types/notion.types";
+import { NewsType } from "@src/types/news.types";
+import { PropertyType } from "@src/types/notion.types";
 
 interface Props {
   file:

@@ -1,9 +1,7 @@
-import Image from "next/image";
-
 import { useNotionFileUrl } from "@src/design/notion/useNotionFileUrl";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { NewsType } from "@src/types/notion.types";
+import { NewsType } from "@src/types/news.types";
 
 interface Props {
   news: NewsType;
