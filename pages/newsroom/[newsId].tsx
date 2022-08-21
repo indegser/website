@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 
 import { newsApi } from "@src/apis/newsApi";
 import { News } from "@src/pages/news/News";
-import { NewsType } from "@src/types/notion.types";
+import { NewsType } from "@src/types/news.types";
 import { getNotionContent } from "@src/utils/notion";
 import { getMetaFromNotionPage } from "@src/utils/notion/meta";
 

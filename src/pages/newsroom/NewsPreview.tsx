@@ -12,7 +12,7 @@ import { Title } from "@src/design/atoms/typography/Title";
 import { RichText } from "@src/design/notion/RichText";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { NewsType } from "@src/types/notion.types";
+import { NewsType } from "@src/types/news.types";
 
 dayjs.extend(calendar);
 
