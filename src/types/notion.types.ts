@@ -4,13 +4,12 @@ export type DatabaseResponseType = Awaited<
   ReturnType<typeof notion["databases"]["query"]>
 >;
 
-export type PageType<T> = Omit<
-  Extract<
-    DatabaseResponseType["results"][number],
-    { properties: Record<string, any> }
-  >,
-  "properties"
-> & {
+type DefaultPageType = Extract<
+  DatabaseResponseType["results"][number],
+  { properties: Record<string, any> }
+>;
+
+export type PageType<T> = Omit<DefaultPageType, "properties"> & {
   properties: T;
 };
 
@@ -18,7 +17,6 @@ export interface DatabaseType<T> extends Omit<DatabaseResponseType, "results"> {
   results: Array<T>;
 }
 
-type DefaultPageType = PageType<Record<string, any>>;
 export type CoverType = DefaultPageType["cover"];
 export type PropertyType = DefaultPageType["properties"][string];
 export type TitlePropertyType = Extract<PropertyType, { type: "title" }>;
@@ -26,6 +24,7 @@ export type DatePropertyType = Extract<PropertyType, { type: "date" }>;
 export type SelectPropertyType = Extract<PropertyType, { type: "select" }>;
 export type FilesPropertyType = Extract<PropertyType, { type: "files" }>;
 export type RelationPropertyType = Extract<PropertyType, { type: "relation" }>;
+export type RichTextPropertyType = Extract<PropertyType, { type: "rich_text" }>;
 
 export type BlockChildrenType = Awaited<
   ReturnType<typeof notion["blocks"]["children"]["list"]>

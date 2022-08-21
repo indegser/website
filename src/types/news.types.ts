@@ -1,8 +1,8 @@
 import {
   DatabaseType,
   PageType,
-  PropertyType,
   RelationPropertyType,
+  RichTextPropertyType,
   SelectPropertyType,
   TitlePropertyType,
 } from "./notion.types";
@@ -10,7 +10,7 @@ import {
 type NewsPropertiesType = {
   title: TitlePropertyType;
   status: SelectPropertyType;
-  excerpt: Extract<PropertyType, { type: "rich_text" }>;
+  excerpt: RichTextPropertyType;
   series: RelationPropertyType;
 };
 
