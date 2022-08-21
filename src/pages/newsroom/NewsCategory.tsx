@@ -19,9 +19,8 @@ export const NewsCategory = ({ category }: Props) => {
 const Container = styled("div", {});
 
 const Text = styled("div", {
-  fontSize: 13,
-  color: theme.colors.gray10,
-  fontWeight: 400,
-  textTransform: "uppercase",
+  fontSize: 12,
+  color: theme.colors.gray11,
+  fontWeight: 500,
   letterSpacing: 0.2,
 });
