@@ -13,11 +13,13 @@ export interface DatabaseType<T> extends Omit<DatabaseResponseType, "results"> {
   results: Array<T>;
 }
 
+export type CoverType = DatabasePageType["cover"];
 export type PropertyType = DatabasePageType["properties"][string];
 export type TitlePropertyType = Extract<PropertyType, { type: "title" }>;
 export type DatePropertyType = Extract<PropertyType, { type: "date" }>;
 export type SelectPropertyType = Extract<PropertyType, { type: "select" }>;
 export type FilesPropertyType = Extract<PropertyType, { type: "files" }>;
+export type RelationPropertyType = Extract<PropertyType, { type: "relation" }>;
 
 export type BlockChildrenType = Awaited<
   ReturnType<typeof notion["blocks"]["children"]["list"]>
