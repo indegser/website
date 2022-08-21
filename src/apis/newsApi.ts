@@ -23,7 +23,7 @@ const getNewsDatabase = async () => {
 
   const promises = response.results.map(async (page) => {
     const cover = getNotionFileUrl(page.cover);
-    if (cover.includes(CDN_ORIGIN)) return;
+    if (!cover || cover.includes(CDN_ORIGIN)) return;
 
     const response = await uploadImageToSupabase(cover, "cover");
 
