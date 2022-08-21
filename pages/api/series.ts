@@ -4,7 +4,7 @@ import { seriesApi } from "@src/apis/seriesApi";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const response = await seriesApi.getSeriesDatabase();
+    const response = await seriesApi.getSeriesList();
 
     res.json(response);
   } catch (err) {
