@@ -30,7 +30,7 @@ export const getMetaFromNotionPage = (
   const { id, properties } = page;
   const title = getNotionTitle(properties.title);
   const image =
-    getNotionFileUrl(properties.cover) || getCoverImageFromBlocks(blocks) || "";
+    getNotionFileUrl(page.cover) || getCoverImageFromBlocks(blocks) || "";
 
   return {
     id,
