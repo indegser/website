@@ -27,14 +27,19 @@ export const getMetaFromNotionPage = (
   page: NewsPageType,
   blocks: BlockType[]
 ): ContentMetaType => {
-  const { id, properties } = page;
-  const title = getNotionTitle(properties.title);
+  const {
+    id,
+    cover,
+    properties: { title, excerpt },
+  } = page;
+
   const image =
-    getNotionFileUrl(page.cover) || getCoverImageFromBlocks(blocks) || "";
+    getNotionFileUrl(cover) || getCoverImageFromBlocks(blocks) || "";
 
   return {
     id,
-    title,
+    title: getNotionTitle(title),
+    description: excerpt?.rich_text[0]?.plain_text ?? "",
     image,
     lastEditedTime: page.last_edited_time,
   };
