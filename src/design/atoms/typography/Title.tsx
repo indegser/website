@@ -5,9 +5,9 @@ import { theme } from "@src/design/theme/stitches.config";
 
 export const Title = styled("h2", {
   margin: 0,
-  fontSize: 15,
+  fontSize: 16,
   lineHeight: 1.28,
-  fontWeight: 600,
+  fontWeight: 700,
   color: theme.colors.gray12,
   wordBreak: "keep-all",
 

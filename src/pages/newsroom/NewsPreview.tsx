@@ -89,7 +89,7 @@ const Right = styled("div", {
 
 const NewsTitle = styled(Title, {
   marginRight: 20,
-  marginTop: 4,
+  marginTop: 2,
 });
 
 const Excerpt = styled(Text, {

@@ -16,17 +16,29 @@ export const NewsSeries = ({ series }: Props) => {
 
         if (!joined) return null;
 
-        return <Text key={id}>{joined.name}</Text>;
+        return (
+          <Tag key={id}>
+            <Text>{joined.name}</Text>
+          </Tag>
+        );
       })}
     </Container>
   );
 };
 
-const Container = styled("div", {});
+const Container = styled("div", {
+  display: "grid",
+  gap: "8px 16px",
+  gridAutoFlow: "column",
+  gridAutoColumns: "max-content",
+});
+
+const Tag = styled("div", {
+  color: theme.colors.gray12,
+  padding: "2px 0px",
+});
 
 const Text = styled("div", {
   fontSize: 12,
-  color: theme.colors.gray11,
-  fontWeight: 500,
-  letterSpacing: 0.2,
+  fontWeight: 600,
 });
