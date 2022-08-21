@@ -8,7 +8,7 @@ import { getNotionFileUrl } from "@src/utils/notion";
 const getNewsDatabase = async () => {
   const response = (await notion.databases.query({
     database_id: "0021f4b0494546a596716a7a5d9db452",
-    sorts: [{ timestamp: "last_edited_time", direction: "descending" }],
+    sorts: [{ timestamp: "created_time", direction: "descending" }],
     filter: {
       or: [
         environment === "production" && {
