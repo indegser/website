@@ -8,7 +8,9 @@ const { withSentryConfig } = require("@sentry/nextjs");
 const nextConfig = {
   swcMinify: true,
   images: {
-    domains: [process.env.NEXT_PUBLIC_SUPABASE_URL || ""],
+    domains: [
+      process.env.NEXT_PUBLIC_SUPABASE_URL?.replace("https://", "") || "",
+    ],
   },
 };
 
