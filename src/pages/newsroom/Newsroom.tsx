@@ -33,8 +33,8 @@ const NewsroomContainer = styled(PageContainer, {
 const ContentList = styled("section", {
   marginTop: 40,
   display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gap: "0 24px",
+  gridTemplateColumns: "repeat(2, 1fr)",
+  gap: "0 48px",
 
   [mq("lg")]: {
     width: 692,

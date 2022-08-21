@@ -20,7 +20,7 @@ interface Props {
 
 export const NewsPreview = ({ news }: Props) => {
   const { last_edited_time } = news;
-  const { title } = news.properties;
+  const { title, excerpt } = news.properties;
 
   const desc = useMemo(() => {
     const result = dayjs(dayjs(last_edited_time)).locale("ko").calendar(null, {
@@ -38,11 +38,17 @@ export const NewsPreview = ({ news }: Props) => {
       <Link href={`/newsroom/${news.id}`} passHref>
         <a>
           <Content>
-            <Right>
+            <Left>
+              <NewsCategory category={news.properties.category} />
               <Title>
                 <RichText data={title.title} shouldRenderPlainText />
               </Title>
-              <NewsCategory category={news.properties.category} />
+              <Excerpt>
+                <RichText data={excerpt.rich_text} />
+              </Excerpt>
+            </Left>
+            <Right>
+              <NewsCover news={news} />
             </Right>
           </Content>
         </a>
@@ -55,7 +61,7 @@ const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
   borderTop: `1px solid ${theme.colors.gray6}`,
-  padding: `8px 0`,
+  padding: `24px 0`,
 
   [mq("sm")]: {
     marginRight: 0,
@@ -64,11 +70,14 @@ const Container = styled("div", {
 
 const Content = styled("div", {
   display: "flex",
-  alignItems: "center",
+});
+
+const Left = styled("div", {
+  flex: "1 1",
 });
 
 const Right = styled("div", {
-  flex: "1 1",
+  flex: "0 0 auto",
   paddingLeft: 24,
 
   ["&:first-child"]: {
@@ -77,8 +86,8 @@ const Right = styled("div", {
 });
 
 const Title = styled("h2", {
-  fontWeight: 400,
-  fontSize: 13,
+  fontWeight: 600,
+  fontSize: 16,
   lineHeight: 1.28,
   paddingBottom: 0,
   overflow: "hidden",
@@ -86,6 +95,7 @@ const Title = styled("h2", {
   textOverflow: "ellipsis",
   margin: 0,
   marginRight: 20,
+  marginTop: 4,
   color: theme.colors.gray12,
 
   [mq("sm")]: {
@@ -95,6 +105,14 @@ const Title = styled("h2", {
     whiteSpace: "pre-wrap",
     textOverflow: "unset",
   },
+});
+
+const Excerpt = styled("div", {
+  fontSize: 14,
+  lineHeight: 1.4,
+  marginTop: 8,
+  wordBreak: "keep-all",
+  color: theme.colors.gray11,
 });
 
 const Time = styled("div", {
