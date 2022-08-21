@@ -4,8 +4,8 @@ import calendar from "dayjs/plugin/calendar";
 import Link from "next/link";
 import { useMemo } from "react";
 
-import { NewsCategory } from "./NewsCategory";
 import { NewsCover } from "./NewsCover";
+import { NewsSeries } from "./NewsSeries";
 
 import { Text } from "@src/design/atoms/typography/Text";
 import { Title } from "@src/design/atoms/typography/Title";
@@ -22,7 +22,7 @@ interface Props {
 
 export const NewsPreview = ({ news }: Props) => {
   const { last_edited_time } = news;
-  const { title, excerpt } = news.properties;
+  const { title, excerpt, series } = news.properties;
 
   const time = useMemo(() => {
     const result = dayjs(dayjs(last_edited_time)).locale("ko").calendar(null, {
@@ -41,7 +41,7 @@ export const NewsPreview = ({ news }: Props) => {
         <a>
           <Content>
             <Left>
-              <NewsCategory category={news.properties.category} />
+              <NewsSeries series={series} />
               <NewsTitle>
                 <RichText data={title.title} shouldRenderPlainText />
               </NewsTitle>
@@ -89,7 +89,7 @@ const Right = styled("div", {
 
 const NewsTitle = styled(Title, {
   marginRight: 20,
-  marginTop: 4,
+  marginTop: 2,
 });
 
 const Excerpt = styled(Text, {

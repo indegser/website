@@ -1,19 +1,30 @@
 import { notion } from "@src/sdks/notion";
 import {
   BlockType,
+  CoverType,
   FilesPropertyType,
   TitlePropertyType,
 } from "@src/types/notion.types";
 
-export const getNotionFileUrl = (filesProperty?: FilesPropertyType) => {
-  if (!filesProperty) return null;
+export const getNotionFileUrl = (
+  coverOrFiles?: FilesPropertyType | CoverType
+) => {
+  if (!coverOrFiles) return null;
 
-  for (const file of filesProperty.files) {
-    if (file.type === "file") {
-      return file.file.url;
+  if ("files" in coverOrFiles) {
+    for (const file of coverOrFiles.files) {
+      if (file.type === "file") {
+        return file.file.url;
+      }
+
+      return file.external.url;
+    }
+  } else {
+    if (coverOrFiles.type === "file") {
+      return coverOrFiles.file.url;
     }
 
-    return file.external.url;
+    return coverOrFiles.external.url;
   }
 };
 
