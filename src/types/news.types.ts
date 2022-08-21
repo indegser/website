@@ -1,6 +1,5 @@
 import {
   DatabaseType,
-  DatePropertyType,
   PageType,
   PropertyType,
   RelationPropertyType,
@@ -11,8 +10,6 @@ import {
 type NewsPropertiesType = {
   title: TitlePropertyType;
   status: SelectPropertyType;
-  published_time: DatePropertyType;
-  category: Extract<PropertyType, { type: "multi_select" }>;
   excerpt: Extract<PropertyType, { type: "rich_text" }>;
   series: RelationPropertyType;
 };
