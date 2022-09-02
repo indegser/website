@@ -29,7 +29,7 @@ export const NotionContent = ({ blocks }: Props) => {
 const Article = styled("article", {
   fontSize: 16,
   lineHeight: "26px",
-  letterSpacing: "-0.018em",
+  letterSpacing: "-0.008em",
   paddingBottom: 80,
   fontWeight: 400,
   color: theme.colors.gray12,

@@ -5,12 +5,12 @@ import { seriesApi } from "@src/apis/seriesApi";
 import { Newsroom } from "@src/pages/newsroom/Newsroom";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const database = await newsApi.getNewsDatabase();
+  const initialData = await newsApi.getNewsDatabase();
   const series = await seriesApi.getSeriesList();
 
   return {
     props: {
-      database,
+      initialData,
       store: {
         series,
       },
