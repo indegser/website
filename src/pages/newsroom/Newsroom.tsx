@@ -1,28 +1,29 @@
 import { NewsPreview } from "./NewsPreview";
+import { SeriesFilter } from "./series-filter/SeriesFilter";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
-import { NewsPageType } from "@src/types/news.types";
-import { DatabaseResponseType } from "@src/types/notion.types";
+import { NewsDatabaseType } from "@src/types/news.types";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 interface Props {
-  database: DatabaseResponseType;
+  initialData: NewsDatabaseType;
 }
 
-export const Newsroom = ({ database }: Props) => {
-  const news = database.results.map((result) => (
-    <NewsPreview key={result.id} news={result as NewsPageType} />
-  ));
-
+export const Newsroom = ({ initialData }: Props) => {
   usePageTracking("visit_newsroom");
 
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
-      <ContentList>{news}</ContentList>
+      <SeriesFilter />
+      <ContentList>
+        {initialData.results.map((news) => (
+          <NewsPreview key={news.id} news={news} />
+        ))}
+      </ContentList>
     </NewsroomContainer>
   );
 };
