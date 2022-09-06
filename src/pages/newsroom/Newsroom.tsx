@@ -1,4 +1,5 @@
 import { NewsPreview } from "./NewsPreview";
+import { useNewsroomQuery } from "./Newsroom.hooks";
 import { SeriesFilter } from "./series-filter/SeriesFilter";
 
 import { PageContainer } from "@src/design/atoms/Container";
@@ -14,13 +15,14 @@ interface Props {
 
 export const Newsroom = ({ initialData }: Props) => {
   usePageTracking("visit_newsroom");
+  const { data } = useNewsroomQuery();
 
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
       <SeriesFilter />
       <ContentList>
-        {initialData.results.map((news) => (
+        {data?.results.map((news) => (
           <NewsPreview key={news.id} news={news} />
         ))}
       </ContentList>
@@ -33,7 +35,7 @@ const NewsroomContainer = styled(PageContainer, {
 });
 
 const ContentList = styled("section", {
-  marginTop: 40,
+  marginTop: 0,
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)",
   gap: "0 48px",

@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AppProps } from "next/app";
 import Head from "next/head";
 
@@ -8,29 +9,34 @@ import { styled } from "@src/design/theme/stitches.config";
 import { StoreProvider } from "@src/hooks/store/StoreProvider";
 import { BaseApp } from "@src/pages/BaseApp";
 
+// Create a client
+const queryClient = new QueryClient();
+
 export default function App({ Component, pageProps }: AppProps) {
   globalStyles();
 
   return (
-    <StoreProvider value={pageProps.store}>
-      <BaseApp>
-        <Head>
-          <title>Home</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, viewport-fit=cover"
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Page>
-          <Nav />
-          <Main>
-            <Component {...pageProps} />
-          </Main>
-          <Footer />
-        </Page>
-      </BaseApp>
-    </StoreProvider>
+    <QueryClientProvider client={queryClient}>
+      <StoreProvider value={pageProps.store}>
+        <BaseApp>
+          <Head>
+            <title>Home</title>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, viewport-fit=cover"
+            />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Page>
+            <Nav />
+            <Main>
+              <Component {...pageProps} />
+            </Main>
+            <Footer />
+          </Page>
+        </BaseApp>
+      </StoreProvider>
+    </QueryClientProvider>
   );
 }
 
