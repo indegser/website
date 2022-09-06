@@ -24,7 +24,7 @@ export const globalStyles = globalCss({
     // "-moz-osx-font-smoothing": "grayscale",
     fontKerning: "normal",
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
-    color: theme.colors.gray11,
+    color: theme.colors.gray12,
     background: theme.colors.gray1,
   },
 
