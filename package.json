@@ -39,6 +39,7 @@
     "next": "^12.2.4",
     "next-seo": "^4.7.3",
     "open-graph-scraper": "^4.11.0",
+    "query-string": "^7.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-emoji-render": "^1.2.4",
