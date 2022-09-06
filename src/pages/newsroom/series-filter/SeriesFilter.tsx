@@ -1,27 +1,36 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
 
-import { styled } from "@src/design/theme/stitches.config";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { useSeriesStore } from "@src/hooks/store/StoreProvider";
 
 export const SeriesFilter = () => {
+  const router = useRouter();
   const data = useSeriesStore();
-  const keys = Object.keys(data);
+
+  const tabList = useMemo(() => {
+    const defaultTab = { name: "Today", id: "" };
+    const seriesTabList = Object.keys(data).map((key) => {
+      return data[key];
+    });
+    return [defaultTab, ...seriesTabList];
+  }, [data]);
 
   return (
     <Container>
-      {keys.map((key) => {
-        const series = data[key];
+      {tabList.map((tab) => {
+        const seriesQuery = tab.id === "" ? {} : { series: tab.id };
+        const isTodayActive = !Boolean(router.query.series);
+        const isActive =
+          (tab.id === "" && isTodayActive) ||
+          (tab.id !== "" && router.query.series?.includes(tab.id));
 
         return (
-          <Link
-            key={key}
-            href={{ query: { series: series.id } }}
-            passHref
-            shallow
-          >
-            <a>
-              <Item key={key}>{series.name}</Item>
-            </a>
+          <Link key={tab.id} href={{ query: seriesQuery }} passHref shallow>
+            <A aria-current={Boolean(isActive)}>
+              <Item>{tab.name}</Item>
+            </A>
           </Link>
         );
       })}
@@ -34,14 +43,23 @@ const Container = styled("div", {
   display: "grid",
   gridAutoFlow: "column",
   gridAutoColumns: "max-content",
-  gap: "0 32px",
-  margin: `20px 0`,
+  gap: "0 24px",
+  margin: `20px 0 4px 0`,
   scrollbarWidth: "none",
   "&::-webkit-scrollbar": {
     display: "none",
   },
+  borderBottom: `4px solid`,
+  paddingBottom: "12px",
+});
+
+const A = styled("a", {
+  fontWeight: 700,
+  [`&[aria-current='false']`]: {
+    color: theme.colors.gray10,
+  },
 });
 
 const Item = styled("div", {
-  fontSize: 14,
+  fontSize: 15,
 });
