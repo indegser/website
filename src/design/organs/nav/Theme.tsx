@@ -3,7 +3,7 @@ import { CaretDownIcon, CheckIcon } from "@radix-ui/react-icons";
 
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { useThemeStore } from "@src/design/theme/themeStore";
-import { Analytics } from "@src/sdks/analytics";
+import { trackEvent } from "@src/utils/analytics/trackEvent";
 
 export const Theme = () => {
   const menus = [
@@ -18,10 +18,9 @@ export const Theme = () => {
   const setTheme = useThemeStore((s) => s.setTheme);
 
   const handleClick = (value: typeof menus[number]["value"]) => {
-    Analytics.event(`switch_theme_to_${value}`, {
-      event_category: "theme",
-      event_label: value,
-    });
+    trackEvent('switch_theme', {
+      theme: value,
+    })
 
     setTheme(value);
   };
