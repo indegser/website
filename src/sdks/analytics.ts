@@ -3,6 +3,7 @@ import { isServer } from "@src/types/env.types";
 const gtag = !isServer && window.gtag;
 
 const trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID ?? "";
+
 export namespace Analytics {
   export const id = trackingId;
 
