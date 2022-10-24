@@ -20,7 +20,6 @@ export const Newsroom = ({ initialData }: Props) => {
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
-      <SeriesFilter />
       <ContentList>
         {data?.results.map((news) => (
           <NewsPreview key={news.id} news={news} />
