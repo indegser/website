@@ -63,10 +63,12 @@ export const Sns = () => {
       {snsList.map((sns, index) => (
         <Fragment key={sns.link}>
           {index > 0 ? <MidDot /> : null}
-          <Link href={sns.link}>
-            <a title={sns.alt} onClick={(event) => handleSnsClick(event, sns)}>
-              <LinkIcon>{sns.icon}</LinkIcon>
-            </a>
+          <Link
+            href={sns.link}
+            title={sns.alt}
+            onClick={(event) => handleSnsClick(event, sns)}
+          >
+            <LinkIcon>{sns.icon}</LinkIcon>
           </Link>
         </Fragment>
       ))}

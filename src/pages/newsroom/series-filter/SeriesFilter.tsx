@@ -27,10 +27,14 @@ export const SeriesFilter = () => {
           (tab.id !== "" && router.query.series?.includes(tab.id));
 
         return (
-          <Link key={tab.id} href={{ query: seriesQuery }} passHref shallow>
-            <A aria-current={Boolean(isActive)}>
-              <Item>{tab.name}</Item>
-            </A>
+          <Link
+            aria-current={Boolean(isActive)}
+            key={tab.id}
+            href={{ query: seriesQuery }}
+            passHref
+            shallow
+          >
+            <Item>{tab.name}</Item>
           </Link>
         );
       })}
