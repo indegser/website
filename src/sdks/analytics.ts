@@ -1,4 +1,4 @@
-import { isServer } from "@src/types/env.types";
+import { isServer } from "@src/types/env";
 
 const gtag = !isServer && window.gtag;
 
