@@ -24,6 +24,7 @@
     "@radix-ui/react-popover": "^0.1.5",
     "@radix-ui/react-select": "^0.1.1",
     "@radix-ui/react-toast": "^0.1.1",
+    "@sanity/client": "^3.4.1",
     "@stitches/react": "^1.2.8",
     "@supabase/supabase-js": "^1.33.2",
     "@tanstack/react-query": "^4.0.10",
