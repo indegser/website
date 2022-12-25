@@ -38,22 +38,20 @@ export const NewsPreview = ({ news }: Props) => {
   return (
     <Container>
       <Link href={`/newsroom/${news.id}`} passHref>
-        <a>
-          <Content>
-            <Left>
-              <NewsSeries series={series} />
-              <NewsTitle>
-                <RichText data={title.title} shouldRenderPlainText />
-              </NewsTitle>
-              <Excerpt type="description">
-                <RichText data={excerpt.rich_text} />
-              </Excerpt>
-            </Left>
-            <Right>
-              <NewsCover news={news} />
-            </Right>
-          </Content>
-        </a>
+        <Content>
+          <Left>
+            <NewsSeries series={series} />
+            <NewsTitle>
+              <RichText data={title.title} shouldRenderPlainText />
+            </NewsTitle>
+            <Excerpt type="description">
+              <RichText data={excerpt.rich_text} />
+            </Excerpt>
+          </Left>
+          <Right>
+            <NewsCover news={news} />
+          </Right>
+        </Content>
       </Link>
     </Container>
   );

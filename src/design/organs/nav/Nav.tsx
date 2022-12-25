@@ -11,12 +11,10 @@ export const Nav = () => {
     <PageContainer>
       <Layout id="global-nav">
         <Link href="/" passHref>
-          <a title="home">
-            <Heading>
-              <Logo />
-              Indegser
-            </Heading>
-          </a>
+          <Heading>
+            <Logo />
+            Indegser
+          </Heading>
         </Link>
         <Theme />
       </Layout>
