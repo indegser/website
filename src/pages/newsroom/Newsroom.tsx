@@ -1,3 +1,4 @@
+import { PortableText } from "@portabletext/react";
 import Link from "next/link";
 
 import { useBookListQuery, useJournalListQuery } from "./Newsroom.hooks";
@@ -5,7 +6,7 @@ import { useBookListQuery, useJournalListQuery } from "./Newsroom.hooks";
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { mq } from "@src/design/theme/mediaQueries";
-import { styled } from "@src/design/theme/stitches.config";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 export const Newsroom = () => {
@@ -13,12 +14,10 @@ export const Newsroom = () => {
   const { data, isLoading } = useBookListQuery();
   const { data: journalList } = useJournalListQuery();
 
-  console.log(journalList);
-
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
-      <ContentList>
+      <div>
         {data?.map((book) => (
           <Link
             key={book._id}
@@ -27,7 +26,19 @@ export const Newsroom = () => {
             <div>{book.title}</div>
           </Link>
         ))}
-      </ContentList>
+      </div>
+      <div>
+        {journalList?.map((journal) => {
+          return (
+            <div key={journal._id}>
+              <h2>{journal.title}</h2>
+              <Article>
+                <PortableText value={journal.content} />
+              </Article>
+            </div>
+          );
+        })}
+      </div>
     </NewsroomContainer>
   );
 };
@@ -36,21 +47,16 @@ const NewsroomContainer = styled(PageContainer, {
   overflow: "hidden",
 });
 
-const ContentList = styled("section", {
-  marginTop: 0,
-  display: "grid",
-  gridTemplateColumns: "repeat(2, 1fr)",
-  gap: "0 48px",
+const Article = styled("article", {
+  fontSize: 16,
+  lineHeight: "26px",
+  letterSpacing: "-0.008em",
+  paddingBottom: 80,
+  fontWeight: 400,
+  color: theme.colors.gray12,
 
-  [mq("lg")]: {
-    width: 692,
-    marginLeft: "auto",
-    marginRight: "auto",
-    gridTemplateColumns: "1fr",
-  },
   [mq("sm")]: {
-    marginTop: 20,
-    width: "auto",
-    marginRight: 0,
+    fontSize: 18,
+    padding: "0 0 80px 0",
   },
 });
