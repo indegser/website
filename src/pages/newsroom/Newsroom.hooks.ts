@@ -20,6 +20,8 @@ export const useJournalListQuery = () => {
     return sanity.fetch<Array<JournalType>>(`
       *[_type == 'journal'] {
         _id,
+        _createdAt,
+        _updatedAt,
         title,
         content,
         book->{ title }
