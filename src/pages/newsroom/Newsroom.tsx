@@ -1,28 +1,21 @@
-import { NewsPreview } from "./NewsPreview";
-import { useNewsroomQuery } from "./Newsroom.hooks";
-import { SeriesFilter } from "./series-filter/SeriesFilter";
+import { useBooksQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
-import { NewsDatabaseType } from "@src/types/news.types";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
-interface Props {
-  initialData: NewsDatabaseType;
-}
-
-export const Newsroom = ({ initialData }: Props) => {
+export const Newsroom = () => {
   usePageTracking("visit_newsroom");
-  const { data } = useNewsroomQuery();
+  const { data, isLoading } = useBooksQuery();
 
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
       <ContentList>
-        {data?.results.map((news) => (
-          <NewsPreview key={news.id} news={news} />
+        {data?.map((book) => (
+          <div key={book._id}>{book.title}</div>
         ))}
       </ContentList>
     </NewsroomContainer>

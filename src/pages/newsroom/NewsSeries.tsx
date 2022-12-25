@@ -7,23 +7,24 @@ interface Props {
 }
 
 export const NewsSeries = ({ series }: Props) => {
-  const seriesStore = useSeriesStore();
-  return (
-    <Container>
-      {series.relation.map((seriesItem) => {
-        const { id } = seriesItem;
-        const joined = seriesStore[id];
+  return null;
+  // const seriesStore = useSeriesStore();
+  // return (
+  //   <Container>
+  //     {series.relation.map((seriesItem) => {
+  //       const { id } = seriesItem;
+  //       const joined = seriesStore[id];
 
-        if (!joined) return null;
+  //       if (!joined) return null;
 
-        return (
-          <Tag key={id}>
-            <Text>{joined.name}</Text>
-          </Tag>
-        );
-      })}
-    </Container>
-  );
+  //       return (
+  //         <Tag key={id}>
+  //           <Text>{joined.name}</Text>
+  //         </Tag>
+  //       );
+  //     })}
+  //   </Container>
+  // );
 };
 
 const Container = styled("div", {
