@@ -1,7 +1,6 @@
 import { PortableText } from "@portabletext/react";
-import Link from "next/link";
 
-import { useBookListQuery, useJournalListQuery } from "./Newsroom.hooks";
+import { useJournalListQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
@@ -11,32 +10,21 @@ import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 export const Newsroom = () => {
   usePageTracking("visit_newsroom");
-  const { data, isLoading } = useBookListQuery();
   const { data: journalList } = useJournalListQuery();
 
-  console.log(journalList);
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
       <div>
-        {data?.map((book) => (
-          <Link
-            key={book._id}
-            href={{ pathname: "journals", query: { book: book._id } }}
-          >
-            <div>{book.title}</div>
-          </Link>
-        ))}
-      </div>
-      <div>
         {journalList?.map((journal) => {
+          console.log(journal.book);
           return (
-            <div key={journal._id}>
+            <JournalPreview key={journal._id}>
               <h2>{journal.title}</h2>
               <Article>
                 <PortableText value={journal.content} />
               </Article>
-            </div>
+            </JournalPreview>
           );
         })}
       </div>
@@ -56,8 +44,16 @@ const Article = styled("article", {
   fontWeight: 400,
   color: theme.colors.gray12,
 
+  ["p"]: {
+    margin: 0,
+  },
+
   [mq("sm")]: {
     fontSize: 18,
     padding: "0 0 80px 0",
   },
+});
+
+const JournalPreview = styled("div", {
+  width: 640,
 });

@@ -11,5 +11,6 @@ export type BookType = DocumentType & {
 
 export type JournalType = DocumentType & {
   title: string;
+  book: BookType;
   content: Array<PortableTextBlock>;
 };

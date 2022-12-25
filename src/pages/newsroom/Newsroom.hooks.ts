@@ -21,7 +21,8 @@ export const useJournalListQuery = () => {
       *[_type == 'journal'] {
         _id,
         title,
-        content
+        content,
+        book->{ title }
       }
     `);
   });
