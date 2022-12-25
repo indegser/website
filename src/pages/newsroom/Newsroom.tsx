@@ -1,5 +1,6 @@
 import { PortableText } from "@portabletext/react";
 
+import { JournalMeta } from "./JournalMeta";
 import { useJournalListQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
@@ -15,19 +16,20 @@ export const Newsroom = () => {
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
-      <div>
+      <JournalList>
         {journalList?.map((journal) => {
-          console.log(journal.book);
           return (
             <JournalPreview key={journal._id}>
-              <h2>{journal.title}</h2>
+              <Attribution>
+                <JournalMeta journal={journal} />
+              </Attribution>
               <Article>
                 <PortableText value={journal.content} />
               </Article>
             </JournalPreview>
           );
         })}
-      </div>
+      </JournalList>
     </NewsroomContainer>
   );
 };
@@ -36,11 +38,20 @@ const NewsroomContainer = styled(PageContainer, {
   overflow: "hidden",
 });
 
+const JournalList = styled("div", {
+  width: 600,
+  margin: "0 auto",
+});
+
+const Attribution = styled("div", {
+  color: theme.colors.gray10,
+  marginBottom: 4,
+});
+
 const Article = styled("article", {
   fontSize: 16,
   lineHeight: "26px",
   letterSpacing: "-0.008em",
-  paddingBottom: 80,
   fontWeight: 400,
   color: theme.colors.gray12,
 
