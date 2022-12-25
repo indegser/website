@@ -1,4 +1,6 @@
-import { useBooksQuery } from "./Newsroom.hooks";
+import Link from "next/link";
+
+import { useBookListQuery, useJournalListQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
@@ -8,14 +10,22 @@ import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 export const Newsroom = () => {
   usePageTracking("visit_newsroom");
-  const { data, isLoading } = useBooksQuery();
+  const { data, isLoading } = useBookListQuery();
+  const { data: journalList } = useJournalListQuery();
+
+  console.log(journalList);
 
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
       <ContentList>
         {data?.map((book) => (
-          <div key={book._id}>{book.title}</div>
+          <Link
+            key={book._id}
+            href={{ pathname: "journals", query: { book: book._id } }}
+          >
+            <div>{book.title}</div>
+          </Link>
         ))}
       </ContentList>
     </NewsroomContainer>
