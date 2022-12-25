@@ -1,6 +1,6 @@
 import { notion } from "@src/sdks/notion";
 import { CDN_ORIGIN } from "@src/types/const.types";
-import { environment } from "@src/types/env.types";
+import { environment } from "@src/types/env";
 import { NewsDatabaseType } from "@src/types/news.types";
 import { uploadImageToSupabase } from "@src/utils/image/uploadImageToSupabase";
 import { getNotionFileUrl } from "@src/utils/notion";

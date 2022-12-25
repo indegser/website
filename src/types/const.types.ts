@@ -1,4 +1,4 @@
-import { environment } from "./env.types";
+import { environment } from "./env";
 
 export const STORY_DEFAULT_PAGE_SIZE = 20;
 
