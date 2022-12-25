@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import { stringifyUrl } from "query-string";
 
+import { sanity } from "@src/sdks/sanity";
+import { BookType } from "@src/types/cms.types";
 import { NewsDatabaseType } from "@src/types/news.types";
 
 export const useNewsroomQuery = () => {
@@ -16,4 +18,16 @@ export const useNewsroomQuery = () => {
         .then((data) => data as NewsDatabaseType),
     { enabled: isReady }
   );
+};
+
+export const useBooksQuery = () => {
+  return useQuery(["book"], () => {
+    return sanity.fetch<Array<BookType>>(`
+      *[_type == 'book'] {
+        _id,
+        title,
+        "posterUrl": poster.asset->url
+      }    
+    `);
+  });
 };
