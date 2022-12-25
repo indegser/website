@@ -1,3 +1,5 @@
+import { PortableTextBlock } from "@sanity/types";
+
 type DocumentType = {
   _id: string;
 };
@@ -5,4 +7,9 @@ type DocumentType = {
 export type BookType = DocumentType & {
   title: string;
   posterUrl: string;
+};
+
+export type JournalType = DocumentType & {
+  title: string;
+  content: Array<PortableTextBlock>;
 };

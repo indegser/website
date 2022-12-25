@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { sanity } from "@src/sdks/sanity";
-import { BookType } from "@src/types/cms";
+import { BookType, JournalType } from "@src/types/cms";
 
 export const useBookListQuery = () => {
   return useQuery(["bookList"], () => {
@@ -17,7 +17,7 @@ export const useBookListQuery = () => {
 
 export const useJournalListQuery = () => {
   return useQuery(["journalList"], () => {
-    return sanity.fetch(`
+    return sanity.fetch<Array<JournalType>>(`
       *[_type == 'journal'] {
         _id,
         title,

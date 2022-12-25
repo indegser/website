@@ -14,6 +14,7 @@ export const Newsroom = () => {
   const { data, isLoading } = useBookListQuery();
   const { data: journalList } = useJournalListQuery();
 
+  console.log(journalList);
   return (
     <NewsroomContainer>
       <SEO title="Newsroom" />
