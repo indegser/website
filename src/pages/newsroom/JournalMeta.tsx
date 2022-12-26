@@ -1,7 +1,7 @@
 import { useJournalUpdatedAt } from "./Journal.hooks";
 
 import { mq } from "@src/design/theme/mediaQueries";
-import { styled } from "@src/design/theme/stitches.config";
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { JournalType } from "@src/types/cms";
 
 interface Props {
@@ -23,8 +23,9 @@ const Container = styled("div", {
   display: "grid",
   gridTemplateColumns: "repeat(2, max-content)",
   gap: "12px",
-  fontWeight: 500,
-  fontSize: 15,
+  fontWeight: 600,
+  fontSize: 14,
+  color: theme.colors.gray12,
 
   [mq("sm")]: {
     marginRight: 0,
