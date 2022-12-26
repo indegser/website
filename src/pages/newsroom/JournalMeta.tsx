@@ -13,7 +13,8 @@ export const JournalMeta = (props: Props) => {
   const updatedAt = useJournalUpdatedAt(journal);
   return (
     <Container>
-      <div>{journal.book.title}</div>
+      <div>{journal.book?.title}</div>
+      <Divider />
       <div>{updatedAt}</div>
     </Container>
   );
@@ -21,8 +22,9 @@ export const JournalMeta = (props: Props) => {
 
 const Container = styled("div", {
   display: "grid",
-  gridTemplateColumns: "repeat(2, max-content)",
-  gap: "12px",
+  gridTemplateColumns: "repeat(3, max-content)",
+  alignItems: "center",
+  gap: "4px",
   fontWeight: 600,
   fontSize: 14,
   color: theme.colors.gray12,
@@ -30,4 +32,10 @@ const Container = styled("div", {
   [mq("sm")]: {
     marginRight: 0,
   },
+});
+
+const Divider = styled("div", {
+  width: 16,
+  height: 1,
+  background: theme.colors.gray12,
 });

@@ -1,12 +1,9 @@
-import { PortableText } from "@portabletext/react";
-
-import { BookFilter } from "./BookFilter";
+import { JournalContent } from "./JournalContent";
 import { JournalMeta } from "./JournalMeta";
 import { useJournalListQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
-import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
@@ -17,7 +14,6 @@ export const Newsroom = () => {
   return (
     <NewsroomContainer>
       <Layout>
-        <BookFilter />
         <Center>
           <JournalList>
             {journalList?.map((journal) => {
@@ -26,15 +22,12 @@ export const Newsroom = () => {
                   <Attribution>
                     <JournalMeta journal={journal} />
                   </Attribution>
-                  <Article>
-                    <PortableText value={journal.content} />
-                  </Article>
+                  <JournalContent journal={journal} />
                 </JournalPreview>
               );
             })}
           </JournalList>
         </Center>
-        <div />
       </Layout>
       <SEO title="Newsroom" />
     </NewsroomContainer>
@@ -45,11 +38,7 @@ const NewsroomContainer = styled(PageContainer, {
   overflow: "hidden",
 });
 
-const Layout = styled("div", {
-  display: "grid",
-  gap: 20,
-  gridTemplateColumns: `1fr max-content 1fr`,
-});
+const Layout = styled("div", {});
 
 const Center = styled("div", {
   display: "flex",
@@ -59,9 +48,7 @@ const Center = styled("div", {
 const JournalList = styled("div", {
   display: "flex",
   flexDirection: "column",
-  borderLeft: `1px solid`,
-  borderRight: `1px solid`,
-  maxWidth: 640,
+  maxWidth: 600,
   borderColor: theme.colors.gray5,
 });
 
@@ -70,25 +57,8 @@ const Attribution = styled("div", {
   marginBottom: 8,
 });
 
-const Article = styled("div", {
-  fontSize: 18,
-  lineHeight: 1.58,
-  letterSpacing: "-0.008em",
-  fontWeight: 400,
-  color: theme.colors.gray12,
-
-  ["p"]: {
-    margin: 0,
-  },
-
-  [mq("sm")]: {
-    fontSize: 18,
-    padding: "0 0 80px 0",
-  },
-});
-
 const JournalPreview = styled("div", {
-  padding: "32px 24px",
+  padding: "32px 0px",
   boxSizing: "border-box",
   borderBottom: `1px solid ${theme.colors.gray5}`,
 });
