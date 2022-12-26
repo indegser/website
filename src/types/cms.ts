@@ -9,6 +9,7 @@ type DocumentType = {
 export type BookType = DocumentType & {
   title: string;
   posterUrl: string;
+  journalCount: number;
 };
 
 export type JournalType = DocumentType & {
