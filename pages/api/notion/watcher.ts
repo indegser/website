@@ -1,4 +1,3 @@
-import { withSentry } from "@sentry/nextjs";
 import { NextApiRequest, NextApiResponse } from "next";
 
 import { notion } from "@src/sdks/notion";
@@ -63,4 +62,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<string[]>) => {
   res.json(updatedPageIds);
 };
 
-export default withSentry(handler);
+export default handler;
