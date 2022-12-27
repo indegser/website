@@ -1,8 +1,8 @@
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
-import { JournalEmbed } from "./JournalEmbed";
 import { JournalImage } from "./JournalImage";
 
+import { Embed } from "@src/design/organs/content/embed/Embed";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { JournalType } from "@src/types/cms";
@@ -20,7 +20,7 @@ const components: Partial<PortableTextReactComponents> = {
       return <JournalImage asset={value.asset} />;
     },
     embed: ({ value }) => {
-      return <JournalEmbed url={value.url} />;
+      return <Embed url={value.url} />;
     },
   },
 };
