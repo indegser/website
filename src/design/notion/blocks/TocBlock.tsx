@@ -52,13 +52,11 @@ export const TocBlock = ({ blocks }: Props) => {
               hash: block.id,
             }}
           >
-            <a>
-              <TocRow style={{ paddingLeft: 24 * depth }}>
-                <TextWrapper>
-                  <RichText data={block[block.type].rich_text} />
-                </TextWrapper>
-              </TocRow>
-            </a>
+            <TocRow style={{ paddingLeft: 24 * depth }}>
+              <TextWrapper>
+                <RichText data={block[block.type].rich_text} />
+              </TextWrapper>
+            </TocRow>
           </Link>
         );
       })}
