@@ -1,4 +1,3 @@
-import { withSentry } from "@sentry/nextjs";
 import type { NextApiRequest, NextApiResponse } from "next";
 import ogs from "open-graph-scraper";
 
@@ -74,4 +73,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   res.status(200).json(openGraph);
 };
 
-export default withSentry(handler);
+export default handler;

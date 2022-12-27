@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@babel/core': ^7.12.3
-  '@notionhq/client': ^1.0.4
+  '@notionhq/client': ^2.2.3
   '@portabletext/react': ^2.0.0
   '@radix-ui/colors': ^0.1.8
   '@radix-ui/react-dropdown-menu': ^2.0.1
@@ -57,7 +57,7 @@ specifiers:
   zustand: ^3.7.1
 
 dependencies:
-  '@notionhq/client': 1.0.4
+  '@notionhq/client': 2.2.3
   '@portabletext/react': 2.0.0_react@18.2.0
   '@radix-ui/colors': 0.1.8
   '@radix-ui/react-dropdown-menu': 2.0.1_ib3m5ricvtkl2cll7qpr2f6lvq
@@ -923,8 +923,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@notionhq/client/1.0.4:
-    resolution: {integrity: sha512-m7zZ5l3RUktayf1lRBV1XMb8HSKsmWTv/LZPqP7UGC1NMzOlc+bbTOPNQ4CP/c1P4cP61VWLb/zBq7a3c0nMaw==}
+  /@notionhq/client/2.2.3:
+    resolution: {integrity: sha512-ZqUzY0iRg/LIrwS+wzz/6osSB2nxIpmqdAtdUwzpcimc9Jlu1j85FeYdaU26Shr193CFrl2TLFeKqpk/APRQ4g==}
     engines: {node: '>=12'}
     dependencies:
       '@types/node-fetch': 2.6.2
