@@ -1,5 +1,6 @@
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
+import { JournalEmbed } from "./JournalEmbed";
 import { JournalImage } from "./JournalImage";
 
 import { mq } from "@src/design/theme/mediaQueries";
@@ -17,6 +18,9 @@ const components: Partial<PortableTextReactComponents> = {
   types: {
     image: ({ value }) => {
       return <JournalImage asset={value.asset} />;
+    },
+    embed: ({ value }) => {
+      return <JournalEmbed url={value.url} />;
     },
   },
 };
