@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import { useBookmarkBlock } from "@src/design/notion/blocks/bookmark/BookmarkBlock.hooks";
+import { useEmbed } from "./Embed.hooks";
+
 import { mediaQueries } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
 
@@ -10,10 +11,10 @@ interface Props {
   caption?: string;
 }
 
-export const JournalEmbed = (props: Props) => {
+export const Embed = (props: Props) => {
   const { url, caption } = props;
   const [faviconLoaded, setFaviconLoaded] = useState(false);
-  const { data: metadata } = useBookmarkBlock(url);
+  const { data: metadata } = useEmbed(url);
 
   useEffect(() => {
     if (!metadata || !metadata.favicon) return;
