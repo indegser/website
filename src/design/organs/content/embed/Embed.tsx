@@ -53,6 +53,7 @@ export const Embed = (props: Props) => {
 
 const Figure = styled("figure", {
   margin: "1.65em 0",
+  fontWeight: 500,
 });
 
 const Container = styled(motion.div, {
