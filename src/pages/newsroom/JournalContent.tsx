@@ -36,18 +36,19 @@ export const JournalContent = (props: Props) => {
 };
 
 const Content = styled("div", {
-  fontSize: 16,
-  lineHeight: "26px",
+  fontSize: 23,
+  lineHeight: 1.4,
+  fontWeight: 700,
   letterSpacing: "-0.008em",
   color: theme.colors.gray12,
+  [mq("sm")]: {
+    fontSize: 18,
+    fontWeight: 600,
+  },
 });
 
 const Paragraph = styled("div", {
   ["& + &"]: {
     marginTop: "1em",
-  },
-
-  [mq("sm")]: {
-    fontSize: 17,
   },
 });
