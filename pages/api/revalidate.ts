@@ -1,4 +1,3 @@
-import { flush } from "@sentry/nextjs";
 import { NextApiRequest, NextApiResponse } from "next";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,7 +11,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await res.revalidate("/");
     await res.revalidate(`/newsroom/${newsId}`);
-    await flush(2000);
 
     return res.json({ revalidated: true });
   } catch (err) {
