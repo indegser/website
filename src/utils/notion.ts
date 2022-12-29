@@ -4,7 +4,7 @@ import {
   CoverType,
   FilesPropertyType,
   TitlePropertyType,
-} from "@src/types/notion.types";
+} from "@src/types/notion";
 
 export const getNotionFileUrl = (
   coverOrFiles?: FilesPropertyType | CoverType

@@ -4,7 +4,7 @@ import { PageContent } from "@src/design/atoms/Container";
 import { Row } from "@src/design/atoms/Row";
 import { RichText } from "@src/design/notion/RichText";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion.types";
+import { BlockType } from "@src/types/notion";
 
 interface Props {
   blocks: BlockType[];

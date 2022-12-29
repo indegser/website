@@ -10,15 +10,15 @@ import { useContentGroupQuery } from "./ContentGroup.hooks";
 import { NotionContent } from "@src/design/notion/NotionContent";
 import { ContentHeadline } from "@src/design/organs/content/ContentHeadline";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { TitlePropertyType } from "@src/types/notion.types";
-import { getNotionTitle } from "@src/utils/notion";
+import { DatabaseType, JournalPageType } from "@src/types/notion";
 
 interface Props {
-  page: QueryDatabaseResponse;
+  page: DatabaseType<JournalPageType>;
 }
 
 export const ContentGroup = (props: Props) => {
   const { page } = props;
+
   const results = useContentGroupQuery(page.results.map((page) => page.id));
   return (
     <Fragment>
@@ -30,10 +30,7 @@ export const ContentGroup = (props: Props) => {
 
         return (
           <Journal key={page.id}>
-            <ContentHeadline
-              title={getNotionTitle(page.properties.title as TitlePropertyType)}
-              lastEditedTime={page.last_edited_time}
-            />
+            <ContentHeadline page={page} />
             <NotionContent
               blocks={result.data.results as BlockObjectResponse[]}
             />

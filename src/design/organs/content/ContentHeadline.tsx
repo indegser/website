@@ -6,14 +6,25 @@ import Balancer from "react-wrap-balancer";
 import { PageContent } from "@src/design/atoms/Container";
 import { mq } from "@src/design/theme/mediaQueries";
 import { theme } from "@src/design/theme/stitches.config";
-import { ContentHeadlineType } from "@src/types/content.types";
+import { useBooksQuery } from "@src/queries/useBooksQuery";
+import { JournalPageType } from "@src/types/notion";
+import { getNotionTitle } from "@src/utils/notion";
 
-interface Props extends ContentHeadlineType {}
+interface Props {
+  page: JournalPageType;
+}
 
-export const ContentHeadline = ({ title, lastEditedTime }: Props) => {
+export const ContentHeadline = (props: Props) => {
+  const {
+    page: { last_edited_time, properties },
+  } = props;
+
+  const { data: books } = useBooksQuery();
   const formattedLastEditedTime = useMemo(() => {
-    return dayjs(lastEditedTime).locale("en").format("MMMM D, YYYY");
-  }, [lastEditedTime]);
+    return dayjs(last_edited_time).locale("en").format("MMMM D, YYYY");
+  }, [last_edited_time]);
+
+  const bookPage = books?.[properties.Book?.relation[0]?.id];
 
   return (
     <Section>
@@ -22,7 +33,7 @@ export const ContentHeadline = ({ title, lastEditedTime }: Props) => {
           <Property>{formattedLastEditedTime}</Property>
         </Metadata>
         <Balancer>
-          <Title>{title}</Title>
+          <Title>{getNotionTitle(properties.Title)}</Title>
         </Balancer>
       </PageContent>
     </Section>
