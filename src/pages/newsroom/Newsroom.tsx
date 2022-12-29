@@ -4,6 +4,7 @@ import { useJournalListQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
+import { Embed } from "@src/design/organs/content/embed/Embed";
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
@@ -23,6 +24,7 @@ export const Newsroom = () => {
                     <JournalMeta journal={journal} />
                   </Attribution>
                   <JournalContent journal={journal} />
+                  {journal.url && <Embed url={journal.url} />}
                 </JournalPreview>
               );
             })}

@@ -38,7 +38,7 @@ export const JournalContent = (props: Props) => {
 const Content = styled("div", {
   fontSize: 23,
   lineHeight: 1.4,
-  fontWeight: 700,
+  fontWeight: 500,
   letterSpacing: "-0.008em",
   color: theme.colors.gray12,
   [mq("sm")]: {

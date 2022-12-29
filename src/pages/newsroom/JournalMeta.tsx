@@ -11,10 +11,22 @@ interface Props {
 export const JournalMeta = (props: Props) => {
   const { journal } = props;
   const updatedAt = useJournalUpdatedAt(journal);
+
+  const getPage = () => {
+    const { page } = journal.quote;
+    if (typeof page == "undefined") return null;
+    return `, p.${journal.quote.page}`;
+  };
+
   return (
     <Container>
-      <div>{journal.book?.title}</div>
-      <Divider />
+      {journal.quote && (
+        <div>
+          {journal.quote.book.title}
+          {getPage()}
+        </div>
+      )}
+      {journal.quote && <Divider />}
       <div>{updatedAt}</div>
     </Container>
   );
