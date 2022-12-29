@@ -1,23 +1,32 @@
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 
-import { sanity } from "@src/sdks/sanity";
-import { JournalType } from "@src/types/cms";
+import { notionApi } from "@src/apis/notion";
+import { environment } from "@src/types/env";
 
-export const useJournalListQuery = () => {
-  return useQuery(["journalList"], () => {
-    return sanity.fetch<Array<JournalType>>(`
-      *[_type == 'journal'] {
-        _id,
-        _createdAt,
-        _updatedAt,
-        title,
-        url,
-        quote {
-          ...,
-          book -> { title }
+export const useJournalQuery = () => {
+  return useInfiniteQuery(
+    ["journal"],
+    ({ pageParam }: { pageParam?: string }) => {
+      return notionApi.getDatabase({
+        database_id: "82649fda5ba84801a464d7ef2f7552b3",
+        page_size: 1,
+        start_cursor: pageParam,
+        filter: {
+          property: "status",
+          select: {
+            equals: environment === "production" ? "Production" : "Development",
+          },
         },
-        content
-      }
-    `);
-  });
+        sorts: [
+          {
+            timestamp: "last_edited_time",
+            direction: "descending",
+          },
+        ],
+      });
+    },
+    {
+      getNextPageParam: (lastPage) => lastPage.next_cursor,
+    }
+  );
 };
