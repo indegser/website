@@ -1,5 +1,5 @@
-import { PageType, RichTextPropertyType } from "./notion";
+import { PageType, PropertyType } from "./notion";
 
 export type BookPageType = PageType<{
-  author: RichTextPropertyType;
+  author: PropertyType<"rich_text">;
 }>;
