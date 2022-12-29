@@ -117,21 +117,21 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
     }
   };
 
-  if (block.type === "column_list") {
-    return (
-      <ColumnGrid>
-        {block.children.map((childBlock, index) => (
-          <Block
-            key={childBlock.id}
-            block={childBlock}
-            index={index}
-            depth={depth + 1}
-            blocks={block.children}
-          />
-        ))}
-      </ColumnGrid>
-    );
-  }
+  // if (block.type === "column_list") {
+  //   return (
+  //     <ColumnGrid>
+  //       {block.children.map((childBlock, index) => (
+  //         <Block
+  //           key={childBlock.id}
+  //           block={childBlock}
+  //           index={index}
+  //           depth={depth + 1}
+  //           blocks={block.children}
+  //         />
+  //       ))}
+  //     </ColumnGrid>
+  //   );
+  // }
 
   if (!block.has_children && block[block.type].rich_text?.length === 0)
     return null;

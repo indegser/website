@@ -9,7 +9,7 @@ export const useJournalQuery = () => {
     ({ pageParam }: { pageParam?: string }) => {
       return notionApi.getDatabase({
         database_id: "82649fda5ba84801a464d7ef2f7552b3",
-        page_size: 1,
+        page_size: 5,
         start_cursor: pageParam,
         filter: {
           property: "status",
