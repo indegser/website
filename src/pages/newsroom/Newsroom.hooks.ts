@@ -11,14 +11,12 @@ export const useJournalListQuery = () => {
         _createdAt,
         _updatedAt,
         title,
-        content[] {
+        url,
+        quote {
           ...,
-          _type == 'image' => {
-            ...,
-            asset->
-          }
+          book -> { title }
         },
-        book->{ title }
+        content
       }
     `);
   });
