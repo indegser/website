@@ -1,4 +1,4 @@
-import { BlockType } from "@src/types/notion.types";
+import { BlockType } from "@src/types/notion";
 
 interface Props {
   icon: Extract<BlockType, { type: "callout" }>["callout"]["icon"];

@@ -1,6 +1,6 @@
 import { RichText } from "@src/design/notion/RichText";
 import { styled } from "@src/design/theme/stitches.config";
-import { RichTextItemResponse } from "@src/types/notion.types";
+import { RichTextItemResponse } from "@src/types/notion";
 
 interface Props {
   level: 1 | 2 | 3;

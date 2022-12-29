@@ -6,7 +6,7 @@ import { useBookmarkBlock } from "./BookmarkBlock.hooks";
 
 import { mediaQueries } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion.types";
+import { BlockType } from "@src/types/notion";
 
 interface Props {
   block: Extract<BlockType, { type: "bookmark" }>;

@@ -4,7 +4,7 @@ import { PageContent } from "@src/design/atoms/Container";
 import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorToStyleProps";
 import { RichText } from "@src/design/notion/RichText";
 import { styled } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion.types";
+import { BlockType } from "@src/types/notion";
 
 interface Props {
   block: Extract<BlockType, { type: "callout" }>;

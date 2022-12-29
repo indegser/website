@@ -16,7 +16,7 @@ import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorT
 import { RichText } from "@src/design/notion/RichText";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
-import { AnnotationColorType, BlockType } from "@src/types/notion.types";
+import { AnnotationColorType, BlockType } from "@src/types/notion";
 
 interface Props {
   index: number;

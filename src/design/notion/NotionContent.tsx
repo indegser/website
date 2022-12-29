@@ -4,7 +4,7 @@ import { mq } from "../theme/mediaQueries";
 import { theme } from "../theme/stitches.config";
 import { Block } from "./blocks/Block";
 
-import { BlockType } from "@src/types/notion.types";
+import { BlockType } from "@src/types/notion";
 
 interface Props {
   blocks: BlockType[];

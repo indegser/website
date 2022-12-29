@@ -13,7 +13,8 @@ export const Newsroom = () => {
   usePageTracking("visit_newsroom");
   const { ref, inView } = useInView();
 
-  const { data, fetchNextPage, hasNextPage } = useJournalQuery();
+  const { data, fetchNextPage, isFetching, isInitialLoading, hasNextPage } =
+    useJournalQuery();
 
   useEffect(() => {
     if (inView) fetchNextPage();
@@ -26,7 +27,7 @@ export const Newsroom = () => {
         {data?.pages.map((page) => (
           <ContentGroup key={page.next_cursor} page={page} />
         ))}
-        {hasNextPage && <div ref={ref} />}
+        {!isInitialLoading && <div ref={ref} />}
       </Layout>
     </NewsroomContainer>
   );

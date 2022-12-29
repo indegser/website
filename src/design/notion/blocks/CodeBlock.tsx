@@ -7,7 +7,7 @@ import { codeStyle } from "./CodeBlock.style";
 
 import { PageContent } from "@src/design/atoms/Container";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion.types";
+import { BlockType } from "@src/types/notion";
 
 interface Props {
   block: Extract<BlockType, { type: "code" }>;
