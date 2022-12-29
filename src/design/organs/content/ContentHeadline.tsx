@@ -1,6 +1,7 @@
 import { styled } from "@stitches/react";
 import dayjs from "dayjs";
 import { useMemo } from "react";
+import Balancer from "react-wrap-balancer";
 
 import { PageContent } from "@src/design/atoms/Container";
 import { mq } from "@src/design/theme/mediaQueries";
@@ -20,7 +21,9 @@ export const ContentHeadline = ({ title, lastEditedTime }: Props) => {
         <Metadata>
           <Property>{formattedLastEditedTime}</Property>
         </Metadata>
-        <Title>{title}</Title>
+        <Balancer>
+          <Title>{title}</Title>
+        </Balancer>
       </PageContent>
     </Section>
   );
