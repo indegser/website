@@ -46,7 +46,9 @@
     "react-hook-form": "^7.29.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.3.1",
+    "react-intersection-observer": "^9.4.1",
     "react-syntax-highlighter": "^15.5.0",
+    "react-wrap-balancer": "^0.2.4",
     "swr": "^1.2.2",
     "unfetch": "^4.2.0",
     "zustand": "^3.7.1"
@@ -54,7 +56,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@sanity/types": "^3.1.2",
-    "@sentry/nextjs": "^7.28.1",
     "@testing-library/react": "^11.2.5",
     "@types/amplitude-js": "^8.16.0",
     "@types/gtag.js": "^0.0.10",
