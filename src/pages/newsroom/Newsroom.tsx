@@ -1,37 +1,33 @@
-import { JournalContent } from "./JournalContent";
-import { JournalMeta } from "./JournalMeta";
-import { useJournalListQuery } from "./Newsroom.hooks";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
+import { ContentGroup } from "./ContentGroup";
+import { useJournalQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
-import { Embed } from "@src/design/organs/content/embed/Embed";
-import { styled, theme } from "@src/design/theme/stitches.config";
+import { styled } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 export const Newsroom = () => {
   usePageTracking("visit_newsroom");
-  const { data: journalList } = useJournalListQuery();
+  const { ref, inView } = useInView();
+
+  const { data, fetchNextPage, hasNextPage } = useJournalQuery();
+
+  useEffect(() => {
+    if (inView) fetchNextPage();
+  }, [inView]);
 
   return (
     <NewsroomContainer>
+      <SEO title="홈" />
       <Layout>
-        <Center>
-          <JournalList>
-            {journalList?.map((journal) => {
-              return (
-                <JournalPreview key={journal._id}>
-                  <Attribution>
-                    <JournalMeta journal={journal} />
-                  </Attribution>
-                  <JournalContent journal={journal} />
-                  {journal.url && <Embed url={journal.url} />}
-                </JournalPreview>
-              );
-            })}
-          </JournalList>
-        </Center>
+        {data?.pages.map((page) => (
+          <ContentGroup key={page.next_cursor} page={page} />
+        ))}
+        {hasNextPage && <div ref={ref} />}
       </Layout>
-      <SEO title="Newsroom" />
     </NewsroomContainer>
   );
 };
@@ -41,26 +37,3 @@ const NewsroomContainer = styled(PageContainer, {
 });
 
 const Layout = styled("div", {});
-
-const Center = styled("div", {
-  display: "flex",
-  justifyContent: "center",
-});
-
-const JournalList = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  maxWidth: 600,
-  borderColor: theme.colors.gray5,
-});
-
-const Attribution = styled("div", {
-  color: theme.colors.gray10,
-  marginBottom: 8,
-});
-
-const JournalPreview = styled("div", {
-  padding: "32px 0px",
-  boxSizing: "border-box",
-  borderBottom: `1px solid ${theme.colors.gray5}`,
-});
