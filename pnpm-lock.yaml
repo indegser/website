@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': ^7.12.3
   '@notionhq/client': ^2.2.3
-  '@portabletext/react': ^2.0.0
   '@radix-ui/colors': ^0.1.8
   '@radix-ui/react-dropdown-menu': ^2.0.1
   '@radix-ui/react-icons': ^1.1.1
@@ -42,11 +41,9 @@ specifiers:
   next: ^13.1.1
   next-seo: ^4.7.3
   open-graph-scraper: ^4.11.0
-  query-string: ^7.1.1
   react: ^18.2.0
   react-dom: ^18.2.0
   react-emoji-render: ^1.2.4
-  react-hook-form: ^7.29.0
   react-hot-toast: ^2.4.0
   react-icons: ^4.3.1
   react-intersection-observer: ^9.4.1
@@ -59,7 +56,6 @@ specifiers:
 
 dependencies:
   '@notionhq/client': 2.2.3
-  '@portabletext/react': 2.0.0_react@18.2.0
   '@radix-ui/colors': 0.1.8
   '@radix-ui/react-dropdown-menu': 2.0.1_ib3m5ricvtkl2cll7qpr2f6lvq
   '@radix-ui/react-icons': 1.1.1_react@18.2.0
@@ -80,11 +76,9 @@ dependencies:
   next: 13.1.1_672uxklweod7ene3nqtsh262ca
   next-seo: 4.29.0_q76c2b4vyoegvsbrcwkfvimnai
   open-graph-scraper: 4.11.1
-  query-string: 7.1.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-emoji-render: 1.2.4_biqbaboplfbrettd7655fr4n2y
-  react-hook-form: 7.40.0_react@18.2.0
   react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
   react-icons: 4.7.1_react@18.2.0
   react-intersection-observer: 9.4.1_react@18.2.0
@@ -960,29 +954,6 @@ packages:
       tiny-glob: 0.2.9
       tslib: 2.4.1
     dev: true
-
-  /@portabletext/react/2.0.0_react@18.2.0:
-    resolution: {integrity: sha512-8AaTfRdRAzWxs2ADbMXV32/LTOJaRDp/m89hax/NTbC8F+OBOgHLBl+M7zSJDVIS1k+fuorFCLcOoq+PuAGJvQ==}
-    engines: {node: ^14.13.1 || >=16.0.0}
-    peerDependencies:
-      react: ^17 || ^18
-    dependencies:
-      '@portabletext/toolkit': 2.0.0
-      '@portabletext/types': 2.0.0
-      react: 18.2.0
-    dev: false
-
-  /@portabletext/toolkit/2.0.0:
-    resolution: {integrity: sha512-2Ljk7dnofxqam9u4B0h1UmpU18h+6SerSU/UanEHQW/IfjmOi48qZDre6MsOrQJ9/LsmlA8MDrmlCND5r/tg3A==}
-    engines: {node: ^14.13.1 || >=16.0.0}
-    dependencies:
-      '@portabletext/types': 2.0.0
-    dev: false
-
-  /@portabletext/types/2.0.0:
-    resolution: {integrity: sha512-AjbCPt9x9U0XFwLuVnIxweBrDAlKKcPJRVkpckjMk77VKEQoYvX2dITf5QtQf1TlLIx8zHJFtMcLmiqDJiGuLg==}
-    engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
-    dev: false
 
   /@radix-ui/colors/0.1.8:
     resolution: {integrity: sha512-jwRMXYwC0hUo0mv6wGpuw254Pd9p/R6Td5xsRpOmaWkUHlooNWqVcadgyzlRumMq3xfOTXwJReU0Jv+EIy4Jbw==}
@@ -3139,11 +3110,6 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /filter-obj/1.1.0:
-    resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
-    engines: {node: '>=0.10.0'}
-    dev: false
-
   /find-up/4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
@@ -5112,16 +5078,6 @@ packages:
       strict-uri-encode: 1.1.0
     dev: false
 
-  /query-string/7.1.2:
-    resolution: {integrity: sha512-KPbFzz/8pmtYOMH6zlYZgqTYJKQ18FxwfW3RLHIBwHWQ0iQG18X16XtIOk68ddfaM6j3grjYSnMPMrqQEjwR4w==}
-    engines: {node: '>=6'}
-    dependencies:
-      decode-uri-component: 0.2.2
-      filter-obj: 1.1.0
-      split-on-first: 1.1.0
-      strict-uri-encode: 2.0.0
-    dev: false
-
   /querystringify/2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
 
@@ -5156,15 +5112,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       string-replace-to-array: 1.0.3
-    dev: false
-
-  /react-hook-form/7.40.0_react@18.2.0:
-    resolution: {integrity: sha512-0rokdxMPJs0k9bvFtY6dbcSydyNhnZNXCR49jgDr/aR03FDHFOK6gfh8ccqB3fl696Mk7lqh04xdm+agqWXKSw==}
-    engines: {node: '>=12.22.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17 || ^18
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react-hot-toast/2.4.0_owo25xnefcwdq3zjgtohz6dbju:
@@ -5512,11 +5459,6 @@ packages:
   /speedometer/1.0.0:
     resolution: {integrity: sha512-lgxErLl/7A5+vgIIXsh9MbeukOaCb2axgQ+bKCdIE+ibNT4XNYGNCR1qFEGq6F+YDASXK3Fh/c5FgtZchFolxw==}
 
-  /split-on-first/1.1.0:
-    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
-    engines: {node: '>=6'}
-    dev: false
-
   /sprintf-js/1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: true
@@ -5531,11 +5473,6 @@ packages:
   /strict-uri-encode/1.1.0:
     resolution: {integrity: sha512-R3f198pcvnB+5IpnBlRkphuE9n46WyVl8I39W/ZUTZLz4nqSP/oLYUrcnJrw462Ds8he4YKMov2efsTIw1BDGQ==}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /strict-uri-encode/2.0.0:
-    resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
-    engines: {node: '>=4'}
     dev: false
 
   /string-length/4.0.2:
