@@ -1,13 +1,8 @@
 import { notion } from "@src/sdks/notion";
-import {
-  BlockType,
-  CoverType,
-  FilesPropertyType,
-  TitlePropertyType,
-} from "@src/types/notion";
+import { BlockType, CoverType, PropertyType } from "@src/types/notion";
 
 export const getNotionFileUrl = (
-  coverOrFiles?: FilesPropertyType | CoverType
+  coverOrFiles?: PropertyType<"files"> | CoverType
 ) => {
   if (!coverOrFiles) return null;
 
@@ -28,7 +23,7 @@ export const getNotionFileUrl = (
   }
 };
 
-export const getNotionTitle = (titleProperty: TitlePropertyType) => {
+export const getNotionTitle = (titleProperty: PropertyType<"title">) => {
   return titleProperty.title.map((text) => text.plain_text).join("");
 };
 
