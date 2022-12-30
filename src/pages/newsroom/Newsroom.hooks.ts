@@ -7,10 +7,10 @@ import { JournalPageType } from "@src/types/notion";
 
 export const useJournalQuery = () => {
   const { query, isReady } = useRouter();
-  const hashtag = query.hashtag?.toString();
+  const subject = query.subject?.toString();
 
   return useInfiniteQuery({
-    queryKey: ["journalList", hashtag],
+    queryKey: ["journalList", subject],
     queryFn: ({ pageParam }: { pageParam?: string }) => {
       return notionApi.getDatabase<JournalPageType>({
         database_id: "82649fda5ba84801a464d7ef2f7552b3",
@@ -25,10 +25,14 @@ export const useJournalQuery = () => {
                   environment === "production" ? "Production" : "Development",
               },
             },
-            hashtag && {
-              property: "Hashtags",
-              multi_select: {
-                contains: hashtag,
+            subject && {
+              property: "Subjects",
+              rollup: {
+                any: {
+                  rich_text: {
+                    contains: subject,
+                  },
+                },
               },
             },
           ].filter(Boolean),

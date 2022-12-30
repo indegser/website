@@ -30,7 +30,7 @@ export type JournalPageType = PageType<{
   _book: PropertyType<"relation">;
   Title: PropertyType<"title">;
   Quote: PropertyType<"formula">;
-  Hashtags: PropertyType<"multi_select">;
+  Subjects: PropertyType<"rollup">;
 }>;
 
 export type BlockChildrenType = Awaited<

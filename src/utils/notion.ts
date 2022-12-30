@@ -36,7 +36,9 @@ export const getNotionFileUrl = (
   }
 };
 
-export const getNotionTitle = (titleProperty: PropertyType<"title">) => {
+export const getNotionTitle = (
+  titleProperty: Partial<PropertyType<"title">>
+) => {
   return titleProperty.title.map((text) => text.plain_text).join("");
 };
 
