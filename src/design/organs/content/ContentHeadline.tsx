@@ -87,7 +87,7 @@ const Title = styled("h1", {
   wordBreak: "keep-all",
 
   [mq("sm")]: {
-    fontSize: 32,
+    fontSize: 36,
     letterSpacing: "-0.005em",
   },
 });
