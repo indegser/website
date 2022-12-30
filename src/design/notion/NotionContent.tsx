@@ -34,6 +34,7 @@ const Article = styled("article", {
   color: theme.colors.gray12,
 
   [mq("sm")]: {
-    fontSize: 16,
+    fontSize: 18,
+    lineHeight: "28px",
   },
 });

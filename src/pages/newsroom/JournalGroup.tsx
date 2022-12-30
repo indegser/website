@@ -1,8 +1,7 @@
 import { Fragment } from "react";
 
-import { NotionContent } from "@src/design/notion/NotionContent";
-import { ContentHeadline } from "@src/design/organs/content/ContentHeadline";
-import { styled, theme } from "@src/design/theme/stitches.config";
+import { Journal } from "./Journal";
+
 import { useJournalQueries } from "@src/queries/useJournalQueries";
 import { DatabaseType, JournalPageType } from "@src/types/notion";
 
@@ -21,18 +20,9 @@ export const JournalGroup = (props: Props) => {
         if (!result.data) return null;
 
         return (
-          <Journal key={page.id}>
-            <ContentHeadline page={page} />
-            <NotionContent blocks={result.data.results} />
-          </Journal>
+          <Journal key={page.id} page={page} blocks={result.data.results} />
         );
       })}
     </Fragment>
   );
 };
-
-const Journal = styled("div", {
-  padding: "32px 0px",
-  boxSizing: "border-box",
-  borderBottom: `1px solid ${theme.colors.gray5}`,
-});

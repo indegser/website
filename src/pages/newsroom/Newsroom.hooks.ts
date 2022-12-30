@@ -13,7 +13,7 @@ export const useJournalQuery = () => {
         page_size: 5,
         start_cursor: pageParam,
         filter: {
-          property: "status",
+          property: "_status",
           select: {
             equals: environment === "production" ? "Production" : "Development",
           },
