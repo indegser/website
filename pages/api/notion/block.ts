@@ -24,8 +24,6 @@ const handler = async (
   res: NextApiResponse<ListBlockChildrenResponse>
 ) => {
   const { args } = JSON.parse(req.body);
-  console.log(args, req.method);
-
   const result = await fetchNextPage(args);
   res.json(result);
 };
