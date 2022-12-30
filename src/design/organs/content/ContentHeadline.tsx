@@ -8,9 +8,10 @@ import { RelatedBook } from "./RelatedBook";
 import { PageContent } from "@src/design/atoms/Container";
 import { mq } from "@src/design/theme/mediaQueries";
 import { theme } from "@src/design/theme/stitches.config";
-import { useBooksQuery } from "@src/queries/useBooksQuery";
 import { JournalPageType } from "@src/types/notion";
 import { getNotionTitle } from "@src/utils/notion";
+
+import "dayjs/locale/ko";
 
 interface Props {
   page: JournalPageType;
@@ -22,26 +23,34 @@ export const ContentHeadline = (props: Props) => {
   } = props;
 
   const formattedLastEditedTime = useMemo(() => {
-    return dayjs(last_edited_time).locale("en").format("MMMM D, YYYY");
+    return dayjs(last_edited_time).locale("ko").format("YYYY년 MMMM D일");
   }, [last_edited_time]);
 
   return (
     <Section>
       <PageContent>
-        <Metadata>
-          <Property>
-            <RelatedBook relation={properties.Book} />
-            <Divider />
-            {formattedLastEditedTime}
-          </Property>
-        </Metadata>
-        <Balancer>
-          <Title>{getNotionTitle(properties.Title)}</Title>
-        </Balancer>
+        <Center>
+          <Metadata>
+            <Property>
+              <RelatedBook relation={properties.Book} />
+              <Divider />
+              {formattedLastEditedTime}
+            </Property>
+          </Metadata>
+          <Balancer>
+            <Title>{getNotionTitle(properties.Title)}</Title>
+          </Balancer>
+        </Center>
       </PageContent>
     </Section>
   );
 };
+
+const Center = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+});
 
 const Section = styled("section", {
   padding: "50px 0 10px",
@@ -59,11 +68,11 @@ const Metadata = styled("div", {
   gridAutoColumns: "max-content",
   gridGap: "0 12px",
   alignItems: "center",
-  paddingBottom: 12,
+  paddingBottom: 24,
   userSelect: "none",
 
   [mq("sm")]: {
-    paddingBottom: 6,
+    paddingBottom: 12,
   },
 });
 
@@ -73,12 +82,13 @@ const Title = styled("h1", {
   fontSize: 48,
   letterSpacing: `-0.025em`,
   lineHeight: 1.15,
+  textAlign: "center",
   color: theme.colors.gray12,
   wordBreak: "keep-all",
 
   [mq("sm")]: {
-    fontSize: 36,
-    letterSpacing: "-0.015em",
+    fontSize: 32,
+    letterSpacing: "-0.005em",
   },
 });
 
