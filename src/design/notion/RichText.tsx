@@ -82,7 +82,7 @@ const Text = styled("span", {
     },
     bold: {
       true: {
-        fontWeight: 600,
+        fontWeight: 700,
       },
     },
     italic: {
