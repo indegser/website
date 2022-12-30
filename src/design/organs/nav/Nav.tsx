@@ -8,25 +8,35 @@ import { styled, theme } from "@src/design/theme/stitches.config";
 
 export const Nav = () => {
   return (
-    <PageContainer>
-      <Layout id="global-nav">
-        <Link href="/" passHref>
-          <Heading>
-            <Logo />
-            Indegser
-          </Heading>
-        </Link>
-        <Theme />
-      </Layout>
-    </PageContainer>
+    <Backdrop>
+      <PageContainer>
+        <Layout id="global-nav">
+          <Link href="/" passHref>
+            <Heading>
+              <Logo />
+              Indegser
+            </Heading>
+          </Link>
+          <Theme />
+        </Layout>
+      </PageContainer>
+    </Backdrop>
   );
 };
+
+const Backdrop = styled("div", {
+  position: "sticky",
+  top: 0,
+  backdropFilter: `blur(12px)`,
+  backgroundColor: theme.colors.backdrop,
+  zIndex: 1,
+});
 
 const Layout = styled("nav", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  paddingTop: 4,
+  padding: `4px 0px 2px 0px`,
 });
 
 const Heading = styled("div", {

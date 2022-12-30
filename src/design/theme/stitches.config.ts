@@ -53,6 +53,7 @@ export const {
       accentMuted: "rgba(84,174,255,0.4)",
       accentSubtle: "#ddf4ff",
       linkDefault: "#737371",
+      backdrop: "rgba(255, 255, 255, 0.85)",
       ...gray,
       ...blue,
       ...red,
@@ -76,6 +77,7 @@ export const {
 
 export const darkTheme = createTheme("dark-theme", {
   colors: {
+    backdrop: "rgba(0, 0, 0, 0.65)",
     ...grayDark,
     ...blueDark,
     ...redDark,
