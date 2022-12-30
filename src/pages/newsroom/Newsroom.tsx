@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -11,15 +12,15 @@ import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 export const Newsroom = () => {
   usePageTracking("visit_newsroom");
+  const { isReady } = useRouter();
   const { ref, inView } = useInView();
 
-  const { data, fetchNextPage, isFetching, isInitialLoading, hasNextPage } =
-    useJournalQuery();
+  const { data, fetchNextPage } = useJournalQuery();
 
   useEffect(() => {
-    if (inView) fetchNextPage();
+    if (inView && isReady) fetchNextPage();
     // eslint-disable-next-line
-  }, [inView]);
+  }, [inView, isReady]);
 
   return (
     <NewsroomContainer>
@@ -28,7 +29,7 @@ export const Newsroom = () => {
         {data?.pages.map((page) => (
           <JournalGroup key={page.next_cursor} page={page} />
         ))}
-        {!isInitialLoading && <div ref={ref} />}
+        <div ref={ref} />
       </Layout>
     </NewsroomContainer>
   );
