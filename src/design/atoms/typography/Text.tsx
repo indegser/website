@@ -9,6 +9,12 @@ export const Text = styled("div", {
 
   variants: {
     type: {
+      tag: {
+        color: theme.colors.gray11,
+        fontSize: 12,
+        lineHeight: 1,
+        fontWeight: 700,
+      },
       description: {
         color: theme.colors.gray11,
       },
