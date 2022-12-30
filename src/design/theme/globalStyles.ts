@@ -3,7 +3,7 @@ import { globalCss, theme } from "./stitches.config";
 export const globalStyles = globalCss({
   ["@import"]: [
     "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css",
-    // "https://rsms.me/inter/inter.css",
+    "https://rsms.me/inter/inter.css",
     "https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap",
   ],
   ["a"]: {
