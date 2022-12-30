@@ -2,9 +2,9 @@ import { useQueries } from "@tanstack/react-query";
 
 import { notionApi } from "@src/apis/notion";
 
-export const useContentGroupQuery = (ids: string[]) => {
+export const useJournalQueries = (journalIds: string[] = []) => {
   return useQueries({
-    queries: ids.map((id) => {
+    queries: journalIds.map((id) => {
       return {
         queryKey: ["journal", id],
         queryFn: () =>
