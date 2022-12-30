@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { ContentGroup } from "./ContentGroup";
+import { JournalGroup } from "./JournalGroup";
 import { useJournalQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
@@ -18,6 +18,7 @@ export const Newsroom = () => {
 
   useEffect(() => {
     if (inView) fetchNextPage();
+    // eslint-disable-next-line
   }, [inView]);
 
   return (
@@ -25,7 +26,7 @@ export const Newsroom = () => {
       <SEO title="홈" />
       <Layout>
         {data?.pages.map((page) => (
-          <ContentGroup key={page.next_cursor} page={page} />
+          <JournalGroup key={page.next_cursor} page={page} />
         ))}
         {!isInitialLoading && <div ref={ref} />}
       </Layout>
