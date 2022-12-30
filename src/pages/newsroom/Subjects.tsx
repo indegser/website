@@ -2,24 +2,30 @@ import Link from "next/link";
 
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { JournalPageType } from "@src/types/notion";
+import { getNotionTitle } from "@src/utils/notion";
 
 interface Props {
   properties: JournalPageType["properties"];
 }
 
-export const Hashtags = (props: Props) => {
+export const Subjects = (props: Props) => {
   const {
-    properties: { Hashtags: hashtags },
+    properties: { Subjects: subjects },
   } = props;
+
+  if (subjects.rollup.type !== "array") return null;
+
+  const { array } = subjects.rollup;
+
   return (
     <Container>
-      {hashtags.multi_select.map((hashtag) => {
+      {array.map((item, index) => {
+        if (item.type !== "title") return null;
+        const title = getNotionTitle(item);
+
         return (
-          <Link
-            key={hashtag.id}
-            href={{ pathname: "/", query: { hashtag: hashtag.name } }}
-          >
-            <Tag>{hashtag.name}</Tag>
+          <Link key={index} href={{ pathname: "/", query: { subject: title } }}>
+            <Tag>{title}</Tag>
           </Link>
         );
       })}

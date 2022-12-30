@@ -1,6 +1,6 @@
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import { Hashtags } from "./Hashtags";
+import { Subjects } from "./Subjects";
 
 import { NotionContent } from "@src/design/notion/NotionContent";
 import { ContentHeadline } from "@src/design/organs/content/ContentHeadline";
@@ -19,7 +19,7 @@ export const Journal = (props: Props) => {
     <Container>
       <ContentHeadline page={page} />
       <NotionContent blocks={blocks} />
-      <Hashtags properties={page.properties} />
+      <Subjects properties={page.properties} />
     </Container>
   );
 };
