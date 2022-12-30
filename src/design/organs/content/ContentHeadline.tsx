@@ -32,7 +32,7 @@ export const ContentHeadline = (props: Props) => {
         <Center>
           <Metadata>
             <Property>
-              <RelatedBook relation={properties.Book} />
+              <RelatedBook properties={properties} />
               <Divider />
               {formattedLastEditedTime}
             </Property>

@@ -1,26 +1,16 @@
 import { Text } from "@src/design/atoms/typography/Text";
-import { useBooksQuery } from "@src/queries/useBooksQuery";
-import { PropertyType } from "@src/types/notion";
-import { getNotionTitle } from "@src/utils/notion";
+import { JournalPageType } from "@src/types/notion";
+import { notionUtils } from "@src/utils/notion";
 
 interface Props {
-  relation: PropertyType<"relation">;
+  properties: JournalPageType["properties"];
 }
 
 export const RelatedBook = (props: Props) => {
-  const {
-    relation: { relation },
-  } = props;
-  const { data: books } = useBooksQuery();
+  const { properties } = props;
+  const text = notionUtils.toString(properties.Quote);
 
-  const isNotRelated = relation.length === 0;
+  if (text.length === 0) return null;
 
-  if (isNotRelated) return null;
-
-  /** @todo Skeleton으로 교체 */
-  if (!books) return <div>Loading ...</div>;
-
-  const bookPage = books[relation[0].id];
-
-  return <Text type="tag">{getNotionTitle(bookPage.properties.Title)}</Text>;
+  return <Text type="tag">{text}</Text>;
 };

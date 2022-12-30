@@ -1,6 +1,19 @@
 import { notion } from "@src/sdks/notion";
 import { BlockType, CoverType, PropertyType } from "@src/types/notion";
 
+const toString = (property: PropertyType<"formula">) => {
+  switch (property.formula.type) {
+    case "string":
+      return property.formula.string;
+    default:
+      return "";
+  }
+};
+
+export const notionUtils = {
+  toString,
+};
+
 export const getNotionFileUrl = (
   coverOrFiles?: PropertyType<"files"> | CoverType
 ) => {

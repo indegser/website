@@ -27,8 +27,9 @@ export type PropertyType<T extends AllPropertyType["type"]> = Extract<
 >;
 
 export type JournalPageType = PageType<{
-  Book: PropertyType<"relation">;
+  _book: PropertyType<"relation">;
   Title: PropertyType<"title">;
+  Quote: PropertyType<"formula">;
 }>;
 
 export type BlockChildrenType = Awaited<
