@@ -30,10 +30,10 @@ const Article = styled("article", {
   fontSize: 16,
   lineHeight: "26px",
   letterSpacing: "-0.008em",
-  fontWeight: 400,
+  fontWeight: 450,
   color: theme.colors.gray12,
 
   [mq("sm")]: {
-    fontSize: 18,
+    fontSize: 16,
   },
 });

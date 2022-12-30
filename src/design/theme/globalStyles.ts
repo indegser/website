@@ -3,7 +3,7 @@ import { globalCss, theme } from "./stitches.config";
 export const globalStyles = globalCss({
   ["@import"]: [
     "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css",
-    "https://rsms.me/inter/inter.css",
+    // "https://rsms.me/inter/inter.css",
     "https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap",
   ],
   ["a"]: {
@@ -20,8 +20,8 @@ export const globalStyles = globalCss({
   },
   ["body"]: {
     margin: 0,
-    // "-webkit-font-smoothing": "antialiased",
-    // "-moz-osx-font-smoothing": "grayscale",
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
     fontKerning: "normal",
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
     color: theme.colors.gray12,
