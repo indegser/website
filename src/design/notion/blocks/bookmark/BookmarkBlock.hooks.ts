@@ -1,4 +1,4 @@
-import useSWR from "swr";
+import { useQuery } from "@tanstack/react-query";
 import fetch from "unfetch";
 
 interface OpenGraphType {
@@ -14,7 +14,10 @@ const fetcher = (url: string) =>
   );
 
 export const useBookmarkBlock = (url: string) => {
-  const { data } = useSWR(url, fetcher);
+  const { data } = useQuery({
+    queryKey: ["bookmark", url],
+    queryFn: () => fetcher(url),
+  });
 
   return { data };
 };
