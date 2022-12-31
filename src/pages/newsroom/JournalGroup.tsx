@@ -1,7 +1,9 @@
 import { Fragment } from "react";
+import { SpinnerCircular } from "spinners-react";
 
 import { Journal } from "./Journal";
 
+import { styled, theme } from "@src/design/theme/stitches.config";
 import { useJournalQueries } from "@src/queries/useJournalQueries";
 import { DatabaseType, JournalPageType } from "@src/types/notion";
 
@@ -12,6 +14,18 @@ interface Props {
 export const JournalGroup = (props: Props) => {
   const { page } = props;
   const queryResults = useJournalQueries(page.results.map((page) => page.id));
+  const isSuccess = queryResults.every((result) => result.isSuccess);
+
+  if (!isSuccess)
+    return (
+      <Spinner>
+        <SpinnerCircular
+          size={28}
+          color={theme.colors.gray10.toString()}
+          secondaryColor={theme.colors.gray4.toString()}
+        />
+      </Spinner>
+    );
 
   return (
     <Fragment>
@@ -26,3 +40,9 @@ export const JournalGroup = (props: Props) => {
     </Fragment>
   );
 };
+
+const Spinner = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+  padding: "24px 0",
+});
