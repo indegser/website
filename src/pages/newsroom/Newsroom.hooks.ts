@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import { journalApi } from "@src/apis/journal";
 
-export const useJournalQuery = (firstPage: any) => {
+export const useJournalQuery = () => {
   const { query, isReady } = useRouter();
   const subject = query.subject?.toString();
 
@@ -14,10 +14,6 @@ export const useJournalQuery = (firstPage: any) => {
     },
     enabled: isReady,
     refetchOnWindowFocus: false,
-    initialData: {
-      pages: [firstPage],
-      pageParams: [firstPage.next_cursor || undefined],
-    },
     getNextPageParam: (lastPage) => {
       return lastPage.next_cursor || undefined;
     },
