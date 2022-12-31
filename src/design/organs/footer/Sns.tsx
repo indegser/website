@@ -1,27 +1,25 @@
-import copyTextToClipboard from "copy-text-to-clipboard";
 import Link from "next/link";
 import { Fragment, MouseEvent } from "react";
-import toast, { Toaster } from "react-hot-toast";
-import { SiNotion, SiTwitter, SiGithub, SiGmail } from "react-icons/si";
+import { SiNotion, SiTwitter, SiGithub } from "react-icons/si";
 
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { Analytics } from "@src/sdks/analytics";
 
 const snsList = [
-  {
-    key: "email",
-    link: "mailto:indegser@gmail.com",
-    alt: "indegser",
-    icon: <SiGmail />,
-    onClick: (event: MouseEvent<HTMLAnchorElement>) => {
-      event.preventDefault();
-      copyTextToClipboard("indegser@gmail.com");
-      toast.success("Copied E-mail address to clipboard!", {
-        icon: "😃",
-        style: { fontSize: 14 },
-      });
-    },
-  },
+  // {
+  //   key: "email",
+  //   link: "mailto:indegser@gmail.com",
+  //   alt: "indegser",
+  //   icon: <SiGmail />,
+  //   onClick: (event: MouseEvent<HTMLAnchorElement>) => {
+  //     event.preventDefault();
+  //     copyTextToClipboard("indegser@gmail.com");
+  //     toast.success("Copied E-mail address to clipboard!", {
+  //       icon: "😃",
+  //       style: { fontSize: 14 },
+  //     });
+  //   },
+  // },
   {
     key: "twitter",
     link: "https://twitter.com/indegser",
@@ -47,15 +45,11 @@ export const Sns = () => {
     event: MouseEvent<HTMLAnchorElement>,
     sns: typeof snsList[number]
   ) => {
-    const { key, onClick } = sns;
+    const { key } = sns;
     Analytics.event(`contact_with_${key}`, {
       event_category: "contact",
       event_label: key,
     });
-
-    if (sns.onClick) {
-      sns.onClick(event);
-    }
   };
 
   return (
@@ -72,7 +66,6 @@ export const Sns = () => {
           </Link>
         </Fragment>
       ))}
-      <Toaster />
     </Links>
   );
 };
