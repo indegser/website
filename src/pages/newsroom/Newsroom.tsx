@@ -5,17 +5,23 @@ import { useInView } from "react-intersection-observer";
 import { JournalGroup } from "./JournalGroup";
 import { useJournalQuery } from "./Newsroom.hooks";
 
+import { journalApi } from "@src/apis/journal";
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { styled } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
-export const Newsroom = () => {
+interface Props {
+  firstPage: ReturnType<typeof journalApi["fetchJournalList"]>;
+}
+
+export const Newsroom = (props: Props) => {
+  const { firstPage } = props;
   usePageTracking("visit_newsroom");
   const { isReady } = useRouter();
   const { ref, inView } = useInView();
 
-  const { data, fetchNextPage } = useJournalQuery();
+  const { data, fetchNextPage } = useJournalQuery(firstPage);
 
   useEffect(() => {
     if (inView && isReady) fetchNextPage();
