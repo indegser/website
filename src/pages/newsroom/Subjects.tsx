@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { PageContent } from "@src/design/atoms/Container";
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { JournalPageType } from "@src/types/notion";
 import { getNotionTitle } from "@src/utils/notion";
@@ -18,18 +19,23 @@ export const Subjects = (props: Props) => {
   const { array } = subjects.rollup;
 
   return (
-    <Container>
-      {array.map((item, index) => {
-        if (item.type !== "title") return null;
-        const title = getNotionTitle(item);
+    <PageContent>
+      <Container>
+        {array.map((item, index) => {
+          if (item.type !== "title") return null;
+          const title = getNotionTitle(item);
 
-        return (
-          <Link key={index} href={{ pathname: "/", query: { subject: title } }}>
-            <Tag>{title}</Tag>
-          </Link>
-        );
-      })}
-    </Container>
+          return (
+            <Link
+              key={index}
+              href={{ pathname: "/", query: { subject: title } }}
+            >
+              <Tag>{title}</Tag>
+            </Link>
+          );
+        })}
+      </Container>
+    </PageContent>
   );
 };
 
