@@ -10,12 +10,11 @@ import { DatabaseType, JournalPageType } from "@src/types/notion";
 
 interface Props {
   page: DatabaseType<JournalPageType>;
-  isLastPage: boolean;
   onScrollToEnd: () => void;
 }
 
 export const JournalGroup = (props: Props) => {
-  const { page, isLastPage, onScrollToEnd } = props;
+  const { page, onScrollToEnd } = props;
   const queryResults = useJournalQueries(page.results.map((page) => page.id));
   const isSuccess = queryResults.every((result) => result.isSuccess);
 
@@ -40,13 +39,11 @@ export const JournalGroup = (props: Props) => {
           <Journal key={page.id} page={page} blocks={result.data.results} />
         );
       })}
-      {isLastPage && (
-        <InView
-          as="div"
-          triggerOnce
-          onChange={(inView) => inView && onScrollToEnd()}
-        />
-      )}
+      <InView
+        as="div"
+        triggerOnce
+        onChange={(inView) => inView && onScrollToEnd()}
+      />
     </Fragment>
   );
 };
