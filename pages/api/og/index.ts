@@ -37,20 +37,21 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     return;
   }
 
-  const { result } = await ogs({
+  const result = await ogs({
     url,
     headers: {
       "user-agent":
         "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
     },
+    downloadLimit: 10000000,
   });
 
-  if (!result.success) {
+  if (result.error) {
     res.status(400).end();
     return;
   }
 
-  const { ogTitle, ogDescription, ogImage, favicon } = result;
+  const { ogTitle, ogDescription, ogImage, favicon } = result.result as any;
 
   let imageUrl: string = null;
   if (Array.isArray(ogImage)) {
