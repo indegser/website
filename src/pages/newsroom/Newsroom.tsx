@@ -17,11 +17,10 @@ export const Newsroom = (props: Props) => {
     <NewsroomContainer>
       <SEO title="홈" />
       <Layout>
-        {data?.pages.map((page, index) => (
+        {data?.pages.map((page) => (
           <JournalGroup
             key={page.next_cursor}
             page={page}
-            isLastPage={index === data.pages.length - 1}
             onScrollToEnd={() => fetchNextPage()}
           />
         ))}
