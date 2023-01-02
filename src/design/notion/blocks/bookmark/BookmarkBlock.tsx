@@ -1,3 +1,4 @@
+import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -6,14 +7,15 @@ import { useBookmarkBlock } from "./BookmarkBlock.hooks";
 
 import { mediaQueries } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion";
 
 interface Props {
-  block: Extract<BlockType, { type: "bookmark" }>;
+  url: string;
+  caption?: RichTextItemResponse[];
 }
 
-export const BookmarkBlock = ({ block }: Props) => {
-  const { url } = block.bookmark;
+export const BookmarkBlock = (props: Props) => {
+  const { url, caption = [] } = props;
+
   const [faviconLoaded, setFaviconLoaded] = useState(false);
   const { data: metadata } = useBookmarkBlock(url);
 
@@ -47,7 +49,7 @@ export const BookmarkBlock = ({ block }: Props) => {
           />
         </Container>
       </a>
-      <Caption caption={block.bookmark.caption} />
+      <Caption caption={caption} />
     </Figure>
   );
 };
