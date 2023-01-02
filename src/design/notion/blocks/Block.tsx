@@ -125,7 +125,6 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       }
 
       default: {
-        console.log(block, "BLOCK");
         return null;
       }
     }
