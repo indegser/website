@@ -89,7 +89,10 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       case "bookmark": {
         return (
           <PageContent style={styleProps}>
-            <BookmarkBlock block={block} />
+            <BookmarkBlock
+              url={block.bookmark.url}
+              caption={block.bookmark.caption}
+            />
           </PageContent>
         );
       }
@@ -115,6 +118,10 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
 
       case "video": {
         return <VideoBlock video={block.video} />;
+      }
+
+      case "link_preview": {
+        return <BookmarkBlock url={block.link_preview.url} />;
       }
 
       default: {

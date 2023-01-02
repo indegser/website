@@ -1,9 +1,10 @@
+import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+
 import { RichText } from "@src/design/notion/RichText";
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { RichTextType } from "@src/types/notion";
 
 interface Props {
-  caption: RichTextType[];
+  caption: RichTextItemResponse[];
 }
 
 export const Caption = ({ caption }: Props) => {
