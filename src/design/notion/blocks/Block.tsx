@@ -10,6 +10,7 @@ import { ImageBlock } from "./ImageBlock";
 import { NumberedListItemBlock } from "./NumberedListItemBlock";
 import { QuoteBlock } from "./QuoteBlock";
 import { TocBlock } from "./TocBlock";
+import { VideoBlock } from "./VideoBlock";
 
 import { PageContent } from "@src/design/atoms/Container";
 import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorToStyleProps";
@@ -111,6 +112,11 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       case "table_of_contents": {
         return <TocBlock blocks={blocks} />;
       }
+
+      case "video": {
+        return <VideoBlock video={block.video} />;
+      }
+
       default: {
         return null;
       }
