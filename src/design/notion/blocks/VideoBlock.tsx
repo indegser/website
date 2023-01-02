@@ -1,12 +1,11 @@
 import { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import getYouTubeID from "get-youtube-id";
 import { useMemo } from "react";
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
-import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import YouTube from "react-youtube";
 
+import { PageContent } from "@src/design/atoms/Container";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
-
 interface Props {
   video: VideoBlockObjectResponse["video"];
 }
@@ -26,9 +25,16 @@ export const VideoBlock = ({ video }: Props) => {
   if (!youtubeId) return null;
 
   return (
-    <Container>
-      <LiteYouTubeEmbed id={youtubeId} title="" poster="maxresdefault" />
-    </Container>
+    <PageContent>
+      <Container>
+        <YouTube
+          videoId={youtubeId}
+          className={"youtubeContainer"}
+          title=""
+          opts={{ width: "100%", height: "100%" }}
+        />
+      </Container>
+    </PageContent>
   );
 };
 
@@ -38,5 +44,9 @@ const Container = styled("div", {
   [mq("sm")]: {
     marginLeft: "calc(-1 * max(22px,env(safe-area-inset-left)))",
     marginRight: "calc(-1 * max(22px,env(safe-area-inset-right)))",
+  },
+
+  [".youtubeContainer"]: {
+    aspectRatio: "16 / 9",
   },
 });
