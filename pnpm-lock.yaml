@@ -39,6 +39,7 @@ specifiers:
   react-emoji-render: ^1.2.4
   react-icons: ^4.3.1
   react-intersection-observer: ^9.4.1
+  react-lite-youtube-embed: ^2.3.52
   react-syntax-highlighter: ^15.5.0
   react-wrap-balancer: ^0.2.4
   spinners-react: ^1.0.7
@@ -71,6 +72,7 @@ dependencies:
   react-emoji-render: 1.2.4_biqbaboplfbrettd7655fr4n2y
   react-icons: 4.7.1_react@18.2.0
   react-intersection-observer: 9.4.1_react@18.2.0
+  react-lite-youtube-embed: 2.3.52_biqbaboplfbrettd7655fr4n2y
   react-syntax-highlighter: 15.5.0_react@18.2.0
   react-wrap-balancer: 0.2.4_react@18.2.0
   spinners-react: 1.0.7_ie75ejlwqy5zh3tldgt7pftwcu
@@ -2750,6 +2752,16 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  /react-lite-youtube-embed/2.3.52_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-G010PvCavA4EqL8mZ/Sv9XXiHnjMfONW+lmNeCRnSEPluPdptv2lZ0cNlngrj7K9j7luc8pbpyrmNpKbD9VMmw==}
+    peerDependencies:
+      react: '>=16.0.8'
+      react-dom: '>=16.0.8'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /react-syntax-highlighter/15.5.0_react@18.2.0:
     resolution: {integrity: sha512-+zq2myprEnQmH5yw6Gqc8lD55QHnpKaU8TOcFeC/Lg/MQSs8UknEA0JC4nTZGFAXC2J2Hyj/ijJ7NlabyPi2gg==}
