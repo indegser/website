@@ -9,13 +9,13 @@ export const useJournalQuery = () => {
 
   return useInfiniteQuery({
     queryKey: ["journalList", subject],
-    queryFn: ({ pageParam }: { pageParam?: string }) => {
-      return journalApi.fetchJournalList({ pageParam, subject });
+    queryFn: ({ pageParam }) => {
+      return journalApi.fetchJournalList({ offset: pageParam });
     },
     enabled: isReady,
     refetchOnWindowFocus: false,
-    getNextPageParam: (lastPage) => {
-      return lastPage.next_cursor || undefined;
+    getNextPageParam: (current) => {
+      return current.nextOffset;
     },
   });
 };
