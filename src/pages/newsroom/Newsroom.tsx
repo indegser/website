@@ -4,6 +4,7 @@ import { useJournalQuery } from "./Newsroom.hooks";
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { styled } from "@src/design/theme/stitches.config";
+import { JournalPageType } from "@src/types/notion";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
 interface Props {}

@@ -1,4 +1,5 @@
 import { supabase } from "@src/sdks/supabase";
+import { JournalPageType } from "@src/types/notion";
 
 type FetchJournalListParameters = {
   offset?: number;
@@ -18,7 +19,9 @@ const fetchJournalList = async ({
       const hasMore = result.data.length > pageSize;
       return {
         nextOffset: hasMore ? offset + pageSize : undefined,
-        data: result.data.slice(0, 5).map((item) => item.data),
+        data: result.data
+          .slice(0, 5)
+          .map((item) => item.data as JournalPageType),
       };
     });
 };
