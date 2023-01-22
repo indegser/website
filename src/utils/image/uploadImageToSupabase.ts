@@ -22,9 +22,7 @@ export const uploadImageToSupabase = async (
     contentType,
   });
 
-  const { publicURL, error } = supabase.storage
-    .from("image")
-    .getPublicUrl(path);
+  const { data, error } = supabase.storage.from("image").getPublicUrl(path);
 
   if (error) return false;
 
@@ -33,6 +31,6 @@ export const uploadImageToSupabase = async (
     path,
     extension,
     contentType,
-    publicURL,
+    publicURL: data.publicUrl,
   };
 };
