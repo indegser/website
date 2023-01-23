@@ -3,6 +3,7 @@ import { useJournalQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
+import { mq } from "@src/design/theme/mediaQueries";
 import { styled } from "@src/design/theme/stitches.config";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
@@ -30,6 +31,15 @@ export const Newsroom = (props: Props) => {
 
 const NewsroomContainer = styled(PageContainer, {
   overflow: "hidden",
+  paddingTop: 32,
 });
 
-const Layout = styled("div", {});
+const Layout = styled("div", {
+  display: "grid",
+  gap: 20,
+  gridTemplateColumns: "repeat(4, 1fr)",
+
+  [mq("sm")]: {
+    gridTemplateColumns: "repeat(1, 1fr)",
+  },
+});

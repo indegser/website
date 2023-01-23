@@ -40,12 +40,12 @@ export const JournalGroup = (props: Props) => {
           <Journal key={page.id} page={page} blocks={result.data.results} />
         );
       })}
-      <InView
+      {/* <InView
         as="div"
         style={{ height: 1 }}
         triggerOnce
         onChange={(inView) => inView && onScrollToEnd()}
-      />
+      /> */}
     </Fragment>
   );
 };
