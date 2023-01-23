@@ -30,7 +30,7 @@ export const ContentHeadline = (props: Props) => {
         <Text type="tag">{formattedLastEditedTime}</Text>
       </Metadata>
       <Balancer>
-        <Title>{getNotionTitle(properties.Title)}</Title>
+        <Text type="title">{getNotionTitle(properties.Title)}</Text>
       </Balancer>
       <Balancer>
         <Text type="description">
@@ -53,17 +53,4 @@ const Metadata = styled("div", {
   gridGap: "0 12px",
   alignItems: "center",
   userSelect: "none",
-});
-
-const Title = styled("h1", {
-  margin: 0,
-  fontWeight: 700,
-  fontSize: 20,
-  lineHeight: 1.15,
-  color: theme.colors.gray12,
-  wordBreak: "keep-all",
-
-  [mq("sm")]: {
-    fontSize: 20,
-  },
 });
