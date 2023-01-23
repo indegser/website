@@ -34,8 +34,7 @@ export const ContentHeadline = (props: Props) => {
       </Balancer>
       <Balancer>
         <Text type="description">
-          Over the years, the type system of TypeScript has grown from basic
-          type annotations to a large and complex programming language.
+          {properties.Description.rich_text[0]?.plain_text}
         </Text>
       </Balancer>
     </Section>
