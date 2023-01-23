@@ -22,17 +22,15 @@ export const uploadImageToSupabase = async (
     contentType,
   });
 
-  const { publicURL, error } = supabase.storage
-    .from("image")
-    .getPublicUrl(path);
+  const { data } = supabase.storage.from("image").getPublicUrl(path);
 
-  if (error) return false;
+  if (!data) return false;
 
   return {
     id,
     path,
     extension,
     contentType,
-    publicURL,
+    publicURL: data.publicUrl,
   };
 };

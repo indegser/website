@@ -12,15 +12,14 @@ export const Newsroom = (props: Props) => {
   usePageTracking("visit_newsroom");
 
   const { data, fetchNextPage } = useJournalQuery();
-
   return (
     <NewsroomContainer>
       <SEO title="홈" />
       <Layout>
-        {data?.pages.map((page) => (
+        {data?.pages.map((result, i) => (
           <JournalGroup
-            key={page.next_cursor}
-            page={page}
+            key={i}
+            page={result.data}
             onScrollToEnd={() => fetchNextPage()}
           />
         ))}

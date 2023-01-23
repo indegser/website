@@ -6,16 +6,17 @@ import { Journal } from "./Journal";
 
 import { styled, theme } from "@src/design/theme/stitches.config";
 import { useJournalQueries } from "@src/queries/useJournalQueries";
-import { DatabaseType, JournalPageType } from "@src/types/notion";
+import { JournalPageType } from "@src/types/notion";
 
 interface Props {
-  page: DatabaseType<JournalPageType>;
+  page: Array<JournalPageType>;
   onScrollToEnd: () => void;
 }
 
 export const JournalGroup = (props: Props) => {
   const { page, onScrollToEnd } = props;
-  const queryResults = useJournalQueries(page.results.map((page) => page.id));
+
+  const queryResults = useJournalQueries(page.map((page) => page.id));
   const isSuccess = queryResults.every((result) => result.isSuccess);
 
   if (!isSuccess)
@@ -31,7 +32,7 @@ export const JournalGroup = (props: Props) => {
 
   return (
     <Fragment>
-      {page.results.map((page, index) => {
+      {page.map((page, index) => {
         const result = queryResults[index];
         if (!result.data) return null;
 
@@ -41,6 +42,7 @@ export const JournalGroup = (props: Props) => {
       })}
       <InView
         as="div"
+        style={{ height: 1 }}
         triggerOnce
         onChange={(inView) => inView && onScrollToEnd()}
       />
