@@ -1,6 +1,6 @@
 import { useQueries } from "@tanstack/react-query";
 
-import { notionApi } from "@src/apis/notion";
+import { supabase } from "@src/sdks/supabase";
 
 export const useJournalQueries = (journalIds: string[] = []) => {
   return useQueries({
@@ -8,7 +8,12 @@ export const useJournalQueries = (journalIds: string[] = []) => {
       return {
         queryKey: ["journal", id],
         queryFn: () =>
-          notionApi.getBlockChildren({ block_id: id, page_size: 100 }),
+          supabase
+            .from("pages")
+            .select("data")
+            .eq("id", id)
+            .single()
+            .then((result) => result.data.data),
       };
     }),
   });
