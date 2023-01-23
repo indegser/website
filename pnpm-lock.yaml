@@ -19,13 +19,13 @@ specifiers:
   '@types/react-select': ^3.0.13
   '@types/react-syntax-highlighter': ^13.5.2
   '@upstash/redis': ^1.18.4
-  amplitude-js: ^8.17.0
+  amplitude-js: ^8.21.4
   dayjs: ^1.11.7
   eslint: 8.8.0
   eslint-config-next: ^13.1.1
   eslint-config-prettier: ^8.5.0
   eslint-plugin-import: ^2.25.4
-  framer-motion: ^4.1.17
+  framer-motion: ^8.5.2
   get-youtube-id: ^1.0.1
   lodash-es: ^4.17.21
   mime-types: ^2.1.35
@@ -55,9 +55,9 @@ dependencies:
   '@tanstack/react-query': 4.20.4_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-query-devtools': 4.20.4_fu3ixcwltlssi3ozitelgaebme
   '@upstash/redis': 1.18.4
-  amplitude-js: 8.21.2
+  amplitude-js: 8.21.4
   dayjs: 1.11.7
-  framer-motion: 4.1.17_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 8.5.2_biqbaboplfbrettd7655fr4n2y
   get-youtube-id: 1.0.1
   lodash-es: 4.17.21
   mime-types: 2.1.35
@@ -177,6 +177,53 @@ packages:
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@motionone/animation/10.15.1:
+    resolution: {integrity: sha512-mZcJxLjHor+bhcPuIFErMDNyrdb2vJur8lSfMCsuCB4UyV8ILZLvK+t+pg56erv8ud9xQGK/1OGPt10agPrCyQ==}
+    dependencies:
+      '@motionone/easing': 10.15.1
+      '@motionone/types': 10.15.1
+      '@motionone/utils': 10.15.1
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/dom/10.15.5:
+    resolution: {integrity: sha512-Xc5avlgyh3xukU9tydh9+8mB8+2zAq+WlLsC3eEIp7Ax7DnXgY7Bj/iv0a4X2R9z9ZFZiaXK3BO0xMYHKbAAdA==}
+    dependencies:
+      '@motionone/animation': 10.15.1
+      '@motionone/generators': 10.15.1
+      '@motionone/types': 10.15.1
+      '@motionone/utils': 10.15.1
+      hey-listen: 1.0.8
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/easing/10.15.1:
+    resolution: {integrity: sha512-6hIHBSV+ZVehf9dcKZLT7p5PEKHGhDwky2k8RKkmOvUoYP3S+dXsKupyZpqx5apjd9f+php4vXk4LuS+ADsrWw==}
+    dependencies:
+      '@motionone/utils': 10.15.1
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/generators/10.15.1:
+    resolution: {integrity: sha512-67HLsvHJbw6cIbLA/o+gsm7h+6D4Sn7AUrB/GPxvujse1cGZ38F5H7DzoH7PhX+sjvtDnt2IhFYF2Zp1QTMKWQ==}
+    dependencies:
+      '@motionone/types': 10.15.1
+      '@motionone/utils': 10.15.1
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/types/10.15.1:
+    resolution: {integrity: sha512-iIUd/EgUsRZGrvW0jqdst8st7zKTzS9EsKkP+6c6n4MPZoQHwiHuVtTQLD6Kp0bsBLhNzKIBlHXponn/SDT4hA==}
+    dev: false
+
+  /@motionone/utils/10.15.1:
+    resolution: {integrity: sha512-p0YncgU+iklvYr/Dq4NobTRdAPv9PveRDUXabPEeOjBLSO/1FNB2phNTZxOxpi1/GZwYpAoECEa0Wam+nsmhSw==}
+    dependencies:
+      '@motionone/types': 10.15.1
+      hey-listen: 1.0.8
+      tslib: 2.4.1
+    dev: false
 
   /@next/env/13.1.1:
     resolution: {integrity: sha512-vFMyXtPjSAiOXOywMojxfKIqE3VWN5RCAx+tT3AS3pcKjMLFTCJFUWsKv8hC+87Z1F4W3r68qTwDFZIFmd5Xkw==}
@@ -704,15 +751,15 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /amplitude-js/8.21.2:
-    resolution: {integrity: sha512-tUO8lQUFNY6Y84W6LMitjyniaiQZFhl4IE10Vy7KwroA1jzukg+KLKy4bT4OmPuyttKQERMoOZY9TWXEb6Dnlw==}
+  /amplitude-js/8.21.4:
+    resolution: {integrity: sha512-XeWwwqaA4wvWh52Mc2yzfofJATy9biyCFpmPQttOM5iGN0NujjTESyEcV+XN4ud0Q67mnAA4tfjTfhYjXSTHEg==}
     dependencies:
       '@amplitude/analytics-connector': 1.4.6
       '@amplitude/ua-parser-js': 0.7.31
       '@amplitude/utils': 1.10.2
       '@babel/runtime': 7.20.6
       blueimp-md5: 2.19.0
-      query-string: 5.1.1
+      query-string: 8.0.3
     dev: false
 
   /ansi-regex/5.0.1:
@@ -1649,6 +1696,11 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
+  /filter-obj/5.1.0:
+    resolution: {integrity: sha512-qWeTREPoT7I0bifpPUXtxkZJ1XJzxWtfoWWkdVGqa+eCr3SHW/Ocp89o8vLvbUuQnadybJpjOKu4V+RwO6sGng==}
+    engines: {node: '>=14.16'}
+    dev: false
+
   /flat-cache/3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -1696,27 +1748,19 @@ packages:
     engines: {node: '>=0.4.x'}
     dev: false
 
-  /framer-motion/4.1.17_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-thx1wvKzblzbs0XaK2X0G1JuwIdARcoNOW7VVwjO8BUltzXPyONGAElLu6CiCScsOQRI7FIk/45YTFtJw5Yozw==}
+  /framer-motion/8.5.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-dt1WwCUIlJ24N/PCCayr0BZJcHOfU/L7kO8fgG8SxcAiGufaNg+Xl0oD14z7mRTGLrqRdA1ZlMW5Wr77aO1Xuw==}
     peerDependencies:
-      react: '>=16.8 || ^17.0.0'
-      react-dom: '>=16.8 || ^17.0.0'
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
-      framesync: 5.3.0
+      '@motionone/dom': 10.15.5
       hey-listen: 1.0.8
-      popmotion: 9.3.6
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      style-value-types: 4.1.4
       tslib: 2.4.1
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
-    dev: false
-
-  /framesync/5.3.0:
-    resolution: {integrity: sha512-oc5m68HDO/tuK2blj7ZcdEBRx3p1PjrgHazL8GYEpvULhrtGIFbQArN6cQS2QhW8mitffaB+VYzMjDqBxxQeoA==}
-    dependencies:
-      tslib: 2.4.1
     dev: false
 
   /from2/2.3.0:
@@ -2653,15 +2697,6 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /popmotion/9.3.6:
-    resolution: {integrity: sha512-ZTbXiu6zIggXzIliMi8LGxXBF5ST+wkpXGEjeTUDUOCdSQ356hij/xjeUdv0F8zCQNeqB1+PR5/BB+gC+QLAPw==}
-    dependencies:
-      framesync: 5.3.0
-      hey-listen: 1.0.8
-      style-value-types: 4.1.4
-      tslib: 2.4.1
-    dev: false
-
   /postcss/8.4.14:
     resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
     engines: {node: ^10 || ^12 || >=14}
@@ -2715,13 +2750,13 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /query-string/5.1.1:
-    resolution: {integrity: sha512-gjWOsm2SoGlgLEdAGt7a6slVOk9mGiXmPFMqrEhLQ68rhQuBnpfs3+EmlvqKyxnCo9/PPlF+9MtY02S1aFg+Jw==}
-    engines: {node: '>=0.10.0'}
+  /query-string/8.0.3:
+    resolution: {integrity: sha512-RtRwkRFCLPQWz27ETbeqIA9UdaLv2Ps7EiNjIS57BaZyx/gWi4QKq7K4+rYBEHToSo/dvLZ+S1fEOKcacojA/Q==}
+    engines: {node: '>=14.16'}
     dependencies:
       decode-uri-component: 0.2.2
-      object-assign: 4.1.1
-      strict-uri-encode: 1.1.0
+      filter-obj: 5.1.0
+      split-on-first: 1.1.0
     dev: false
 
   /querystringify/2.2.0:
@@ -3031,9 +3066,9 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /strict-uri-encode/1.1.0:
-    resolution: {integrity: sha512-R3f198pcvnB+5IpnBlRkphuE9n46WyVl8I39W/ZUTZLz4nqSP/oLYUrcnJrw462Ds8he4YKMov2efsTIw1BDGQ==}
-    engines: {node: '>=0.10.0'}
+  /split-on-first/1.1.0:
+    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
+    engines: {node: '>=6'}
     dev: false
 
   /string-replace-to-array/1.0.3:
@@ -3095,13 +3130,6 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
     dev: true
-
-  /style-value-types/4.1.4:
-    resolution: {integrity: sha512-LCJL6tB+vPSUoxgUBt9juXIlNJHtBMy8jkXzUJSBzeHWdBu6lhzHqCvLVkXFGsFIlNa2ln1sQHya/gzaFmB2Lg==}
-    dependencies:
-      hey-listen: 1.0.8
-      tslib: 2.4.1
-    dev: false
 
   /styled-jsx/5.1.1_react@18.2.0:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}

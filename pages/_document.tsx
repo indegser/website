@@ -1,7 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 import { getCssText } from "@src/design/theme/stitches.config";
-import { Analytics } from "@src/sdks/analytics";
 
 export default function Document() {
   return (
@@ -10,23 +9,6 @@ export default function Document() {
         <style
           id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
-        />
-        {/* Global Site Tag (gtag.js) - Google Analytics */}
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${Analytics.id}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${Analytics.id}', {
-            page_path: window.location.pathname,
-          });
-        `,
-          }}
         />
       </Head>
       <body>
