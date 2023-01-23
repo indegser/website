@@ -42,6 +42,7 @@ export const JournalGroup = (props: Props) => {
       })}
       <InView
         as="div"
+        style={{ height: 1 }}
         triggerOnce
         onChange={(inView) => inView && onScrollToEnd()}
       />
