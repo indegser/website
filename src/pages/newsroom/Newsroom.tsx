@@ -1,7 +1,7 @@
 import { InView } from "react-intersection-observer";
 import { SpinnerCircular } from "spinners-react";
 
-import { JournalGroup } from "./JournalGroup";
+import { Journal } from "./Journal";
 import { useJournalQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
@@ -21,9 +21,11 @@ export const Newsroom = (props: Props) => {
     <NewsroomContainer>
       <SEO title="홈" />
       <Layout>
-        {data?.pages.map((result, i) => (
-          <JournalGroup key={i} page={result.data} />
-        ))}
+        {data?.pages
+          .flatMap((result) => result.data)
+          .map((journal) => (
+            <Journal key={journal.id} page={journal} />
+          ))}
       </Layout>
       {isFetching ? (
         <Spinner>
