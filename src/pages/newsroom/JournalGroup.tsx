@@ -1,11 +1,8 @@
 import { Fragment } from "react";
-import { InView } from "react-intersection-observer";
-import { SpinnerCircular } from "spinners-react";
 
 import { Journal } from "./Journal";
 
-import { styled, theme } from "@src/design/theme/stitches.config";
-import { useJournalQueries } from "@src/queries/useJournalQueries";
+import { styled } from "@src/design/theme/stitches.config";
 import { JournalPageType } from "@src/types/notion";
 
 interface Props {
@@ -16,29 +13,21 @@ interface Props {
 export const JournalGroup = (props: Props) => {
   const { page, onScrollToEnd } = props;
 
-  const queryResults = useJournalQueries(page.map((page) => page.id));
-  const isSuccess = queryResults.every((result) => result.isSuccess);
-
-  if (!isSuccess)
-    return (
-      <Spinner>
-        <SpinnerCircular
-          size={28}
-          color={theme.colors.gray10.toString()}
-          secondaryColor={theme.colors.gray4.toString()}
-        />
-      </Spinner>
-    );
+  // if (!isSuccess)
+  //   return (
+  //     <Spinner>
+  //       <SpinnerCircular
+  //         size={28}
+  //         color={theme.colors.gray10.toString()}
+  //         secondaryColor={theme.colors.gray4.toString()}
+  //       />
+  //     </Spinner>
+  //   );
 
   return (
     <Fragment>
-      {page.map((page, index) => {
-        const result = queryResults[index];
-        if (!result.data) return null;
-
-        return (
-          <Journal key={page.id} page={page} blocks={result.data.results} />
-        );
+      {page.map((page) => {
+        return <Journal key={page.id} page={page} />;
       })}
       {/* <InView
         as="div"
