@@ -10,7 +10,7 @@ export const useJournalQuery = () => {
   return useInfiniteQuery({
     queryKey: ["journalList", subject],
     queryFn: ({ pageParam }) => {
-      return journalApi.fetchJournalList({ offset: pageParam });
+      return journalApi.fetchJournalList({ offset: pageParam, pageSize: 2 });
     },
     enabled: isReady,
     refetchOnWindowFocus: false,

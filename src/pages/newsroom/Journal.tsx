@@ -40,6 +40,7 @@ export const Journal = (props: Props) => {
 const Section = styled("section", {
   display: "grid",
   gap: "4px",
+  gridAutoRows: "max-content",
 });
 
 const Metadata = styled("div", {
