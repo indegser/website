@@ -1,5 +1,6 @@
 import { styled } from "@stitches/react";
 import dayjs from "dayjs";
+import Link from "next/link";
 import { useMemo } from "react";
 import Balancer from "react-wrap-balancer";
 
@@ -15,7 +16,7 @@ interface Props {
 
 export const Journal = (props: Props) => {
   const {
-    page: { last_edited_time, properties },
+    page: { id, last_edited_time, properties },
   } = props;
 
   const formattedLastEditedTime = useMemo(() => {
@@ -23,17 +24,21 @@ export const Journal = (props: Props) => {
   }, [last_edited_time]);
 
   return (
-    <Section>
-      <Metadata>
-        <Typography type="tag">{formattedLastEditedTime}</Typography>
-      </Metadata>
-      <Balancer>
-        <Typography type="title">{getNotionTitle(properties.Title)}</Typography>
-      </Balancer>
-      <Typography type="description">
-        {properties.Description.rich_text[0]?.plain_text}
-      </Typography>
-    </Section>
+    <Link href={`/journal/${id}`}>
+      <Section>
+        <Metadata>
+          <Typography type="tag">{formattedLastEditedTime}</Typography>
+        </Metadata>
+        <Balancer>
+          <Typography type="title">
+            {getNotionTitle(properties.Title)}
+          </Typography>
+        </Balancer>
+        <Typography type="description">
+          {properties.Description.rich_text[0]?.plain_text}
+        </Typography>
+      </Section>
+    </Link>
   );
 };
 
