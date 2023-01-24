@@ -1,5 +1,5 @@
 import { supabase } from "@src/sdks/supabase";
-import { JournalPageType } from "@src/types/notion";
+import { BlockType, JournalPageType } from "@src/types/notion";
 
 type FetchJournalListParameters = {
   offset?: number;
@@ -26,6 +26,24 @@ const fetchJournalList = async ({
     });
 };
 
+const fetchJournalBlocks = async (id: string) =>
+  supabase
+    .from("pages")
+    .select<"data", { data: { results: BlockType[] } }>("data")
+    .eq("id", id)
+    .single()
+    .then((result) => result.data.data.results);
+
+const fetchJournal = async (id: string) =>
+  supabase
+    .from("journal")
+    .select<"data", { data: JournalPageType }>("data")
+    .eq("id", id)
+    .single()
+    .then((result) => result.data.data);
+
 export const journalApi = {
   fetchJournalList,
+  fetchJournalBlocks,
+  fetchJournal,
 };

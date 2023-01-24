@@ -1,18 +1,19 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
+import { journalApi } from "@src/apis/journal";
 import { JournalPage } from "@src/pages/journal/JournalPage";
 import { supabase } from "@src/sdks/supabase";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { data } = await supabase
-    .from("pages")
-    .select("data")
-    .eq("id", context.params?.id)
-    .single();
+  const id = context.params.id.toString();
+  const journal = await journalApi.fetchJournal(id);
+  const blocks = await journalApi.fetchJournalBlocks(id);
 
   return {
     props: {
-      blocks: data.data.results,
+      id,
+      journal,
+      blocks,
     },
   };
 };
