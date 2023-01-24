@@ -25,7 +25,7 @@ export const Newsroom = (props: Props) => {
           <JournalGroup key={i} page={result.data} />
         ))}
       </Layout>
-      {isFetching && (
+      {isFetching ? (
         <Spinner>
           <SpinnerCircular
             size={28}
@@ -33,15 +33,16 @@ export const Newsroom = (props: Props) => {
             secondaryColor={theme.colors.gray4.toString()}
           />
         </Spinner>
+      ) : (
+        <InView
+          as="div"
+          style={{ height: 1 }}
+          onChange={(inView) => {
+            if (!inView) return;
+            fetchNextPage();
+          }}
+        />
       )}
-      <InView
-        as="div"
-        style={{ height: 1 }}
-        onChange={(inView) => {
-          if (!inView) return;
-          fetchNextPage();
-        }}
-      />
     </NewsroomContainer>
   );
 };
