@@ -3,9 +3,7 @@ import dayjs from "dayjs";
 import { useMemo } from "react";
 import Balancer from "react-wrap-balancer";
 
-import { Text } from "@src/design/atoms/typography/Text";
-import { mq } from "@src/design/theme/mediaQueries";
-import { theme } from "@src/design/theme/stitches.config";
+import { Typography } from "@src/design/atoms/Typography";
 import { JournalPageType } from "@src/types/notion";
 import { getNotionTitle } from "@src/utils/notion";
 
@@ -17,7 +15,7 @@ interface Props {
 
 export const ContentHeadline = (props: Props) => {
   const {
-    page: { last_edited_time, properties },
+    page: { cover, last_edited_time, properties },
   } = props;
 
   const formattedLastEditedTime = useMemo(() => {
@@ -27,23 +25,21 @@ export const ContentHeadline = (props: Props) => {
   return (
     <Section>
       <Metadata>
-        <Text type="tag">{formattedLastEditedTime}</Text>
+        <Typography type="tag">{formattedLastEditedTime}</Typography>
       </Metadata>
       <Balancer>
-        <Text type="title">{getNotionTitle(properties.Title)}</Text>
+        <Typography type="title">{getNotionTitle(properties.Title)}</Typography>
       </Balancer>
-      <Balancer>
-        <Text type="description">
-          {properties.Description.rich_text[0]?.plain_text}
-        </Text>
-      </Balancer>
+      <Typography type="description">
+        {properties.Description.rich_text[0]?.plain_text}
+      </Typography>
     </Section>
   );
 };
 
 const Section = styled("section", {
   display: "grid",
-  gap: "12px",
+  gap: "4px",
 });
 
 const Metadata = styled("div", {

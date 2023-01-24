@@ -8,7 +8,7 @@ type FetchJournalListParameters = {
 
 const fetchJournalList = async ({
   offset = 0,
-  pageSize = 5,
+  pageSize = 20,
 }: FetchJournalListParameters) => {
   return supabase
     .from("journal")
@@ -20,7 +20,7 @@ const fetchJournalList = async ({
       return {
         nextOffset: hasMore ? offset + pageSize : undefined,
         data: result.data
-          .slice(0, 5)
+          .slice(0, pageSize)
           .map((item) => item.data as JournalPageType),
       };
     });

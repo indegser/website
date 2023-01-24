@@ -3,7 +3,7 @@ import { styled } from "@stitches/react";
 import { mq } from "@src/design/theme/mediaQueries";
 import { theme } from "@src/design/theme/stitches.config";
 
-export const Text = styled("div", {
+export const Typography = styled("div", {
   fontSize: 14,
   lineHeight: 1.4,
   wordBreak: "keep-all",
@@ -12,14 +12,15 @@ export const Text = styled("div", {
     type: {
       title: {
         margin: 0,
+        fontSize: 18,
         fontWeight: 600,
-        fontSize: 20,
-        lineHeight: 1.3,
+        lineHeight: 1.4,
         color: theme.colors.gray12,
         wordBreak: "keep-all",
 
         [mq("sm")]: {
-          fontSize: 20,
+          fontWeight: 400,
+          fontSize: 18,
         },
       },
       tag: {
@@ -29,9 +30,9 @@ export const Text = styled("div", {
         fontWeight: 700,
       },
       description: {
-        // color: theme.colors.gray11,
+        color: theme.colors.gray11,
         [mq("sm")]: {
-          fontSize: 16,
+          fontSize: 15,
         },
       },
     },

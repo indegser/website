@@ -13,6 +13,7 @@ export const Newsroom = (props: Props) => {
   usePageTracking("visit_newsroom");
 
   const { data, fetchNextPage } = useJournalQuery();
+
   return (
     <NewsroomContainer>
       <SEO title="홈" />
@@ -36,8 +37,8 @@ const NewsroomContainer = styled(PageContainer, {
 
 const Layout = styled("div", {
   display: "grid",
-  gap: 20,
-  gridTemplateColumns: "repeat(4, 1fr)",
+  gap: `5vh 5vh`,
+  gridTemplateColumns: "repeat(3, 1fr)",
 
   [mq("sm")]: {
     gridTemplateColumns: "repeat(1, 1fr)",
