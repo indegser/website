@@ -3,7 +3,6 @@ import { Fragment, MouseEvent } from "react";
 import { SiNotion, SiTwitter, SiGithub } from "react-icons/si";
 
 import { styled, theme } from "@src/design/theme/stitches.config";
-import { Analytics } from "@src/sdks/analytics";
 
 const snsList = [
   // {
@@ -44,13 +43,7 @@ export const Sns = () => {
   const handleSnsClick = (
     event: MouseEvent<HTMLAnchorElement>,
     sns: typeof snsList[number]
-  ) => {
-    const { key } = sns;
-    Analytics.event(`contact_with_${key}`, {
-      event_category: "contact",
-      event_label: key,
-    });
-  };
+  ) => {};
 
   return (
     <Links>

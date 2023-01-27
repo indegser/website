@@ -31,6 +31,7 @@ export type JournalPageType = PageType<{
   Title: PropertyType<"title">;
   Quote: PropertyType<"formula">;
   Subjects: PropertyType<"rollup">;
+  Description: PropertyType<"rich_text">;
 }>;
 
 export type BlockChildrenType = Awaited<

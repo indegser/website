@@ -1,7 +1,8 @@
-import { useQueries } from "@tanstack/react-query";
+import { useQueries, useQuery } from "@tanstack/react-query";
 
+import { journalApi } from "@src/apis/journal";
 import { supabase } from "@src/sdks/supabase";
-import { BlockType } from "@src/types/notion";
+import { BlockType, JournalPageType } from "@src/types/notion";
 
 export const useJournalQueries = (journalIds: string[] = []) => {
   return useQueries({

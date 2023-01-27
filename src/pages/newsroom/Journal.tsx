@@ -1,31 +1,58 @@
-import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { styled } from "@stitches/react";
+import dayjs from "dayjs";
+import Link from "next/link";
+import { useMemo } from "react";
+import Balancer from "react-wrap-balancer";
 
-import { Subjects } from "./Subjects";
-
-import { NotionContent } from "@src/design/notion/NotionContent";
-import { ContentHeadline } from "@src/design/organs/content/ContentHeadline";
-import { styled, theme } from "@src/design/theme/stitches.config";
+import { Typography } from "@src/design/atoms/Typography";
 import { JournalPageType } from "@src/types/notion";
+import { getNotionTitle } from "@src/utils/notion";
+
+import "dayjs/locale/ko";
 
 interface Props {
   page: JournalPageType;
-  blocks: BlockObjectResponse[];
 }
 
 export const Journal = (props: Props) => {
-  const { page, blocks } = props;
+  const {
+    page: { id, last_edited_time, properties },
+  } = props;
+
+  const formattedLastEditedTime = useMemo(() => {
+    return dayjs(last_edited_time).locale("ko").format("YYYY년 MMMM D일");
+  }, [last_edited_time]);
 
   return (
-    <Container>
-      <ContentHeadline page={page} />
-      <NotionContent blocks={blocks} />
-      <Subjects properties={page.properties} />
-    </Container>
+    <Link href={`/journal/${id}`}>
+      <Section>
+        <Metadata>
+          <Typography type="tag">{formattedLastEditedTime}</Typography>
+        </Metadata>
+        <Balancer>
+          <Typography type="title">
+            {getNotionTitle(properties.Title)}
+          </Typography>
+        </Balancer>
+        <Typography type="description">
+          {properties.Description.rich_text[0]?.plain_text}
+        </Typography>
+      </Section>
+    </Link>
   );
 };
 
-const Container = styled("div", {
-  padding: "32px 0px",
-  boxSizing: "border-box",
-  borderBottom: `1px solid ${theme.colors.gray5}`,
+const Section = styled("section", {
+  display: "grid",
+  gap: "4px",
+  gridAutoRows: "max-content",
+});
+
+const Metadata = styled("div", {
+  display: "grid",
+  gridAutoFlow: "column",
+  gridAutoColumns: "max-content",
+  gridGap: "0 12px",
+  alignItems: "center",
+  userSelect: "none",
 });
