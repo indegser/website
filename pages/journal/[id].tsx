@@ -15,6 +15,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       journal,
       blocks,
     },
+    revalidate: 10, // Seconds
   };
 };
 
