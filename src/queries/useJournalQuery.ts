@@ -1,7 +1,6 @@
-import { isServer, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 import { journalApi } from "@src/apis/journal";
-import { BlockType, JournalPageType } from "@src/types/notion";
 
 export const useJournalQuery = (id: string) => {
   return useQuery(createJournalQueryConfig(id));
@@ -16,5 +15,4 @@ export const createJournalQueryConfig = (id: string) => ({
     ]);
     return { journal, blocks };
   },
-  enabled: !isServer,
 });

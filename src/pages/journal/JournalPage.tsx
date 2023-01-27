@@ -8,14 +8,10 @@ interface Props {
 
 export const JournalPage = (props: Props) => {
   const { id } = props;
-  const { data, isFetching, isFetchedAfterMount } = useJournalQuery(id);
-  if (!data) {
-    console.warn(`Fail to hydrate react-query data`);
-    return null;
-  }
+  const { data, isSuccess } = useJournalQuery(id);
 
-  if (isFetching && !isFetchedAfterMount) {
-    console.info(`Doing background refresh...`);
+  if (!isSuccess) {
+    console.warn(`Fail to hydrate react-query data`);
   }
 
   const { blocks, journal } = data;
