@@ -17,6 +17,7 @@
     "test:dev": "jest --watch"
   },
   "dependencies": {
+    "@next/font": "^13.1.5",
     "@notionhq/client": "^2.2.3",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-icons": "^1.1.1",

@@ -1,3 +1,4 @@
+import { Inter } from "@next/font/google";
 import {
   gray,
   blue,
@@ -26,6 +27,8 @@ import {
   blackA,
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const {
   styled,
@@ -69,7 +72,7 @@ export const {
       codeString: green.green10,
     },
     fonts: {
-      sans: '"Inter var", "Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
+      sans: `${inter.style.fontFamily}, "Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"`,
       mono: `'JetBrains Mono', "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
     },
   },

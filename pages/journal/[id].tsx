@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const id = context.params.id.toString();
   const queryConfig = createJournalQueryConfig(id);
-  await queryClient.prefetchQuery(queryConfig.queryKey, queryConfig.queryFn);
+  await queryClient.prefetchQuery(queryConfig);
 
   return {
     props: {
