@@ -26,9 +26,12 @@ export default function App({ Component, pageProps }: AppProps) {
               <title>Home</title>
               <meta
                 name="viewport"
-                content="width=device-width, initial-scale=1, viewport-fit=cover"
+                content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover"
               />
-              <link rel="icon" href="/favicon.ico" />
+              <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+              <link rel="apple-touch-icon" href="/icon-512x512.png" />
+              <link rel="manifest" href="/manifest.webmanifest" />
+              <meta name="theme-color" content="" />
             </Head>
             <Page>
             <Nav />
