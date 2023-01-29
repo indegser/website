@@ -6,15 +6,13 @@ import {
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { ThemeProvider } from "next-themes";
 
 import { Footer } from "@src/design/organs/footer/Footer";
 import { Nav } from "@src/design/organs/nav/Nav";
 import { globalStyles } from "@src/design/theme/globalStyles";
-import { styled, theme, darkTheme } from "@src/design/theme/stitches.config";
+import { styled } from "@src/design/theme/stitches.config";
 import { BaseApp } from "@src/pages/BaseApp";
 
-// Create a client
 const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -23,7 +21,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <ThemeProvider attribute="class" forcedTheme="system" value={{ light: theme.toString(), dark: darkTheme.toString() }}>
           <BaseApp>
             <Head>
               <title>Home</title>
@@ -34,14 +31,13 @@ export default function App({ Component, pageProps }: AppProps) {
               <link rel="icon" href="/favicon.ico" />
             </Head>
             <Page>
-              <Nav />
+            <Nav />
               <Main>
                 <Component {...pageProps} />
               </Main>
               <Footer />
             </Page>
           </BaseApp>
-        </ThemeProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </Hydrate>
     </QueryClientProvider>

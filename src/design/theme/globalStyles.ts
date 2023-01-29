@@ -16,6 +16,7 @@ export const globalStyles = globalCss({
     "-ms-text-size-adjust": "100%",
     "-webkit-text-size-adjust": "100%",
     "-webkit-tap-highlight-color": "rgba(255, 255, 255, 0)",
+    background: theme.colors.gray1,
   },
   ["body"]: {
     margin: 0,
@@ -24,7 +25,6 @@ export const globalStyles = globalCss({
     fontKerning: "normal",
     fontFeatureSettings: '"kern", "liga", "clig", "calt"',
     color: theme.colors.gray12,
-    background: theme.colors.gray1,
   },
   [":focus-visible"]: {
     outline: `none`,
