@@ -9,7 +9,7 @@ export const useNewsroomQuery = () => {
   return useInfiniteQuery(createNewsroomQueryConfig());
 };
 
-type X = ReturnType<typeof journalApi["fetchJournalList"]>;
+type X = ReturnType<(typeof journalApi)["fetchJournalList"]>;
 
 export const createNewsroomQueryConfig = (): UseInfiniteQueryOptions<
   Awaited<X>

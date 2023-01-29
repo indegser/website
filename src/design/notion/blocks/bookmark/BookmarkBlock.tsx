@@ -2,8 +2,8 @@ import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import { Caption } from "../Caption";
 import { useBookmarkBlock } from "./BookmarkBlock.hooks";
+import { Caption } from "../Caption";
 
 import { mediaQueries } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";

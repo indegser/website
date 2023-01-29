@@ -1,5 +1,5 @@
-import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
 import { GIT_COMMIT_SHA, ORIGIN } from "@src/types/constants";
 

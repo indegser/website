@@ -42,7 +42,7 @@ const snsList = [
 export const Sns = () => {
   const handleSnsClick = (
     event: MouseEvent<HTMLAnchorElement>,
-    sns: typeof snsList[number]
+    sns: (typeof snsList)[number]
   ) => {};
 
   return (

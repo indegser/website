@@ -35,7 +35,7 @@ export type JournalPageType = PageType<{
 }>;
 
 export type BlockChildrenType = Awaited<
-  ReturnType<typeof notion["blocks"]["children"]["list"]>
+  ReturnType<(typeof notion)["blocks"]["children"]["list"]>
 >;
 
 export type BlockType = Extract<
