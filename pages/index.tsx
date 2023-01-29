@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
 
   return {
     props: {
-      dehydratedState: dehydrate(client),
+      dehydratedState: JSON.parse(JSON.stringify(dehydrate(client))),
     },
   };
 };

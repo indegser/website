@@ -6,11 +6,12 @@ import {
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { ThemeProvider } from "next-themes";
 
 import { Footer } from "@src/design/organs/footer/Footer";
 import { Nav } from "@src/design/organs/nav/Nav";
 import { globalStyles } from "@src/design/theme/globalStyles";
-import { styled } from "@src/design/theme/stitches.config";
+import { styled, theme, darkTheme } from "@src/design/theme/stitches.config";
 import { BaseApp } from "@src/pages/BaseApp";
 
 // Create a client
@@ -22,23 +23,25 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <BaseApp>
-          <Head>
-            <title>Home</title>
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1, viewport-fit=cover"
-            />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <Page>
-            <Nav />
-            <Main>
-              <Component {...pageProps} />
-            </Main>
-            <Footer />
-          </Page>
-        </BaseApp>
+        <ThemeProvider attribute="class" forcedTheme="system" value={{ light: theme.toString(), dark: darkTheme.toString() }}>
+          <BaseApp>
+            <Head>
+              <title>Home</title>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, viewport-fit=cover"
+              />
+              <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <Page>
+              <Nav />
+              <Main>
+                <Component {...pageProps} />
+              </Main>
+              <Footer />
+            </Page>
+          </BaseApp>
+        </ThemeProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </Hydrate>
     </QueryClientProvider>

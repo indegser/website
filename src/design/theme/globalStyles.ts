@@ -2,12 +2,12 @@ import { globalCss, theme } from "./stitches.config";
 
 export const globalStyles = globalCss({
   ["@import"]: [
-    "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css",
+    "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css",
     "https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap",
   ],
   ["a"]: {
     textDecoration: "none",
-    font: "inherit",
+    fontFamily: theme.fonts.sans,
     color: "inherit",
   },
   ["html"]: {
@@ -26,7 +26,6 @@ export const globalStyles = globalCss({
     color: theme.colors.gray12,
     background: theme.colors.gray1,
   },
-
   [":focus-visible"]: {
     outline: `none`,
   },
