@@ -11,7 +11,7 @@ import { ThemeProvider } from "next-themes";
 import { Footer } from "@src/design/organs/footer/Footer";
 import { Nav } from "@src/design/organs/nav/Nav";
 import { globalStyles } from "@src/design/theme/globalStyles";
-import { styled } from "@src/design/theme/stitches.config";
+import { styled, theme, darkTheme } from "@src/design/theme/stitches.config";
 import { BaseApp } from "@src/pages/BaseApp";
 
 // Create a client
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" value={{ light: theme.toString(), dark: darkTheme.toString() }}>
           <BaseApp>
             <Head>
               <title>Home</title>

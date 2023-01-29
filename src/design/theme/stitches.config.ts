@@ -78,7 +78,7 @@ export const {
   },
 });
 
-export const darkTheme = createTheme("dark-theme", {
+export const darkTheme = createTheme("dark", {
   colors: {
     backdrop: "rgba(0, 0, 0, 0.65)",
     ...grayDark,

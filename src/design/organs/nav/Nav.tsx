@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import { Logo } from "./Logo";
-import { Theme } from "./Theme";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { styled, theme } from "@src/design/theme/stitches.config";
@@ -17,7 +16,6 @@ export const Nav = () => {
               Indegser
             </Heading>
           </Link>
-          <Theme />
         </Layout>
       </PageContainer>
     </Backdrop>

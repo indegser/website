@@ -26,7 +26,6 @@ export const globalStyles = globalCss({
     color: theme.colors.gray12,
     background: theme.colors.gray1,
   },
-
   [":focus-visible"]: {
     outline: `none`,
   },
