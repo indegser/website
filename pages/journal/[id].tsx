@@ -1,20 +1,23 @@
+import { dehydrate, QueryClient } from "@tanstack/react-query";
 import { GetStaticPaths, GetStaticProps } from "next";
 
-import { journalApi } from "@src/apis/journal";
 import { JournalPage } from "@src/pages/journal/JournalPage";
+import { createJournalQueryConfig } from "@src/queries/useJournalQuery";
 import { supabase } from "@src/sdks/supabase";
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const queryClient = new QueryClient();
+
   const id = context.params.id.toString();
-  const journal = await journalApi.fetchJournal(id);
-  const blocks = await journalApi.fetchJournalBlocks(id);
+  const queryConfig = createJournalQueryConfig(id);
+  await queryClient.prefetchQuery(queryConfig);
 
   return {
     props: {
       id,
-      journal,
-      blocks,
+      dehydratedState: dehydrate(queryClient),
     },
+    revalidate: 10, // Seconds
   };
 };
 

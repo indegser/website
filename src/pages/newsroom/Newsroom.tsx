@@ -2,20 +2,18 @@ import { InView } from "react-intersection-observer";
 import { SpinnerCircular } from "spinners-react";
 
 import { Journal } from "./Journal";
-import { useJournalQuery } from "./Newsroom.hooks";
 
 import { PageContainer } from "@src/design/atoms/Container";
 import { SEO } from "@src/design/atoms/SEO";
 import { mq } from "@src/design/theme/mediaQueries";
 import { styled, theme } from "@src/design/theme/stitches.config";
+import { useNewsroomQuery } from "@src/queries/useNewsroomQuery";
 import { usePageTracking } from "@src/utils/analytics/usePageTracking";
 
-interface Props {}
-
-export const Newsroom = (props: Props) => {
+export const Newsroom = () => {
   usePageTracking("visit_newsroom");
 
-  const { data, isFetching, fetchNextPage } = useJournalQuery();
+  const { data, isFetching, fetchNextPage } = useNewsroomQuery();
 
   return (
     <NewsroomContainer>

@@ -27,7 +27,7 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
             const { color, ...fontStyleProps } = richText.annotations;
             const annotations = !shouldRenderPlainText
               ? fontStyleProps
-              : ({} as typeof richText["annotations"]);
+              : ({} as (typeof richText)["annotations"]);
 
             const { link, content } = richText.text;
             const children = toArray(content) as Array<

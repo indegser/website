@@ -1,8 +1,8 @@
 import { styled } from "@stitches/react";
 
+import { Block } from "./blocks/Block";
 import { mq } from "../theme/mediaQueries";
 import { theme } from "../theme/stitches.config";
-import { Block } from "./blocks/Block";
 
 import { BlockType } from "@src/types/notion";
 
