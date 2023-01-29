@@ -17,7 +17,7 @@ import {
 } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
 export const {
   styled,
