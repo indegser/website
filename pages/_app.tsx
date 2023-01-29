@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <ThemeProvider attribute="class" value={{ light: theme.toString(), dark: darkTheme.toString() }}>
+        <ThemeProvider attribute="class" forcedTheme="system" value={{ light: theme.toString(), dark: darkTheme.toString() }}>
           <BaseApp>
             <Head>
               <title>Home</title>
