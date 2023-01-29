@@ -32,6 +32,7 @@ specifiers:
   nanoid: ^4.0.0
   next: ^13.1.1
   next-seo: ^4.7.3
+  next-themes: ^0.2.1
   open-graph-scraper: ^5.0.2
   prettier: ^2.8.3
   react: ^18.2.0
@@ -67,6 +68,7 @@ dependencies:
   nanoid: 4.0.0
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   next-seo: 4.29.0_q76c2b4vyoegvsbrcwkfvimnai
+  next-themes: 0.2.1_q76c2b4vyoegvsbrcwkfvimnai
   open-graph-scraper: 5.0.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2407,6 +2409,18 @@ packages:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
+    dependencies:
+      next: 13.1.1_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /next-themes/0.2.1_q76c2b4vyoegvsbrcwkfvimnai:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
     dependencies:
       next: 13.1.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
