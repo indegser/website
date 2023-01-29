@@ -19,7 +19,6 @@ export const Typography = styled("div", {
         wordBreak: "keep-all",
 
         [mq("sm")]: {
-          fontWeight: 400,
           fontSize: 18,
         },
       },
@@ -28,11 +27,14 @@ export const Typography = styled("div", {
         fontSize: 12,
         lineHeight: 1,
         fontWeight: 700,
+        [mq('sm')]: {
+          fontWeight: 600,
+        }
       },
       description: {
-        color: theme.colors.gray11,
+        // color: theme.colors.gray11,
         [mq("sm")]: {
-          fontSize: 15,
+          fontSize: 16,
         },
       },
     },
