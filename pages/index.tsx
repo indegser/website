@@ -1,16 +1,12 @@
 import { dehydrate, QueryClient } from "@tanstack/react-query";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 
 import { Newsroom } from "@src/pages/newsroom/Newsroom";
 import { createNewsroomQueryConfig } from "@src/queries/useNewsroomQuery";
 import { CONTENT_SERVER } from "@src/types/constants";
 
-export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
 
+export const getStaticProps: GetStaticProps = async (context) => {
   fetch(`${CONTENT_SERVER}/api/journal`);
 
   const client = new QueryClient();
@@ -21,7 +17,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     props: {
       dehydratedState: JSON.parse(JSON.stringify(dehydrate(client))),
     },
+    revalidate: 60,
   };
-};
+}
 
 export default Newsroom;

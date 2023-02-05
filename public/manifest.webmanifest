@@ -1,0 +1,14 @@
+{
+  "name": "Indegser",
+  "short_name": "Indegser",
+  "description": "A system for thinking, writing, learning, and mindfulness",
+  "icons": [
+    {
+      "src": "icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}
