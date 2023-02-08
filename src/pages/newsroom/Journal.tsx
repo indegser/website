@@ -29,9 +29,9 @@ export const Journal = (props: Props) => {
   return (
     <Link href={`/journal/${id}`}>
       <Section>
-        <ImageContainer>
-          <img src={`/api/og/image?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
-        </ImageContainer>
+        {/* <ImageContainer> */}
+          {/* <img src={`/api/og/image?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} /> */}
+        {/* </ImageContainer> */}
         <Metadata>
           <Typography type="tag">{formattedLastEditedTime}</Typography>
         </Metadata>
