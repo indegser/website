@@ -1,40 +1,40 @@
-import { RichText } from "@src/design/notion/RichText";
-import { styled } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion";
+import { RichText } from '@src/design/notion/RichText';
+import { styled } from '@src/design/theme/stitches.config';
+import { BlockType } from '@src/types/notion';
 
 interface Props {
   marker: number;
   depth: number;
-  block: Extract<BlockType, { type: "numbered_list_item" }>;
+  block: Extract<BlockType, { type: 'numbered_list_item' }>;
 }
 
 const alphabet = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z',
 ];
 
 function counterGenerator(type: number, marker: number) {
@@ -66,25 +66,25 @@ export const NumberedListItemBlock = ({ block, depth, marker }: Props) => {
   );
 };
 
-const Container = styled("div", {
-  display: "flex",
-  alignItems: "start",
+const Container = styled('div', {
+  display: 'flex',
+  alignItems: 'start',
   paddingLeft: 2,
-  width: "100%",
+  width: '100%',
 });
 
-const Marker = styled("div", {
+const Marker = styled('div', {
   width: 24,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   minHeight: 25,
   marginRight: 2,
 });
 
-const Content = styled("div", {
-  flex: "1 1 0px",
+const Content = styled('div', {
+  flex: '1 1 0px',
   minWidth: 1,
-  display: "flex",
-  flexDirection: "column",
+  display: 'flex',
+  flexDirection: 'column',
 });

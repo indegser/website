@@ -1,17 +1,17 @@
-import { InView } from "react-intersection-observer";
-import { SpinnerCircular } from "spinners-react";
+import { InView } from 'react-intersection-observer';
+import { SpinnerCircular } from 'spinners-react';
 
-import { Journal } from "./Journal";
+import { Journal } from './Journal';
 
-import { PageContainer } from "@src/design/atoms/Container";
-import { SEO } from "@src/design/atoms/SEO";
-import { mq } from "@src/design/theme/mediaQueries";
-import { styled, theme } from "@src/design/theme/stitches.config";
-import { useNewsroomQuery } from "@src/queries/useNewsroomQuery";
-import { usePageTracking } from "@src/utils/analytics/usePageTracking";
+import { PageContainer } from '@src/design/atoms/Container';
+import { SEO } from '@src/design/atoms/SEO';
+import { mq } from '@src/design/theme/mediaQueries';
+import { styled, theme } from '@src/design/theme/stitches.config';
+import { useNewsroomQuery } from '@src/queries/useNewsroomQuery';
+import { usePageTracking } from '@src/utils/analytics/usePageTracking';
 
 export const Newsroom = () => {
-  usePageTracking("visit_newsroom");
+  usePageTracking('visit_newsroom');
 
   const { data, isFetching, fetchNextPage } = useNewsroomQuery();
 
@@ -48,22 +48,22 @@ export const Newsroom = () => {
 };
 
 const NewsroomContainer = styled(PageContainer, {
-  overflow: "hidden",
+  overflow: 'hidden',
   paddingTop: 32,
 });
 
-const Layout = styled("div", {
-  display: "grid",
+const Layout = styled('div', {
+  display: 'grid',
   gap: `5vh 5vh`,
-  gridTemplateColumns: "repeat(3, 1fr)",
+  gridTemplateColumns: 'repeat(3, 1fr)',
 
-  [mq("sm")]: {
-    gridTemplateColumns: "repeat(1, 1fr)",
+  [mq('sm')]: {
+    gridTemplateColumns: 'repeat(1, 1fr)',
   },
 });
 
-const Spinner = styled("div", {
-  display: "flex",
-  justifyContent: "center",
-  padding: "24px 0",
+const Spinner = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  padding: '24px 0',
 });

@@ -1,6 +1,6 @@
-import { PageContainer } from "@src/design/atoms/Container";
-import { NotionContent } from "@src/design/notion/NotionContent";
-import { useJournalQuery } from "@src/queries/useJournalQuery";
+import { PageContainer } from '@src/design/atoms/Container';
+import { NotionContent } from '@src/design/notion/NotionContent';
+import { useJournalQuery } from '@src/queries/useJournalQuery';
 
 interface Props {
   id: string;
@@ -14,7 +14,7 @@ export const JournalPage = (props: Props) => {
     console.warn(`Fail to hydrate react-query data`);
   }
 
-  const { blocks, journal } = data;
+  const { blocks } = data;
 
   return (
     <PageContainer>

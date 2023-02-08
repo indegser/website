@@ -7,7 +7,7 @@ const media = {
 
 export const mq = (key: keyof typeof media | number) => {
   let px: number;
-  if (typeof key === "number") {
+  if (typeof key === 'number') {
     px = key;
   } else {
     px = media[key];
@@ -19,5 +19,5 @@ export const mq = (key: keyof typeof media | number) => {
 };
 
 export const mediaQueries = {
-  hoverable: "@media(hover: hover) and (pointer: fine)",
+  hoverable: '@media(hover: hover) and (pointer: fine)',
 };

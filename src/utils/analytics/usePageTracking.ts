@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import { amplitudeSdk } from "@src/sdks/amplitude";
+import { amplitudeSdk } from '@src/sdks/amplitude';
 
 export const usePageTracking = (event: string, data?: any) => {
   useEffect(() => {

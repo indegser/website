@@ -1,12 +1,12 @@
-import { notion } from "@src/sdks/notion";
-import { BlockType, CoverType, PropertyType } from "@src/types/notion";
+import { notion } from '@src/sdks/notion';
+import { BlockType, CoverType, PropertyType } from '@src/types/notion';
 
-const toString = (property: PropertyType<"formula">) => {
+const toString = (property: PropertyType<'formula'>) => {
   switch (property.formula.type) {
-    case "string":
+    case 'string':
       return property.formula.string;
     default:
-      return "";
+      return '';
   }
 };
 
@@ -15,20 +15,20 @@ export const notionUtils = {
 };
 
 export const getNotionFileUrl = (
-  coverOrFiles?: PropertyType<"files"> | CoverType
+  coverOrFiles?: PropertyType<'files'> | CoverType
 ) => {
   if (!coverOrFiles) return null;
 
-  if ("files" in coverOrFiles) {
+  if ('files' in coverOrFiles) {
     for (const file of coverOrFiles.files) {
-      if (file.type === "file") {
+      if (file.type === 'file') {
         return file.file.url;
       }
 
       return file.external.url;
     }
   } else {
-    if (coverOrFiles.type === "file") {
+    if (coverOrFiles.type === 'file') {
       return coverOrFiles.file.url;
     }
 
@@ -37,9 +37,9 @@ export const getNotionFileUrl = (
 };
 
 export const getNotionTitle = (
-  titleProperty: Partial<PropertyType<"title">>
+  titleProperty: Partial<PropertyType<'title'>>
 ) => {
-  return titleProperty.title.map((text) => text.plain_text).join("");
+  return titleProperty.title.map((text) => text.plain_text).join('');
 };
 
 export const getNotionContent = async (blockId: string) => {
@@ -61,7 +61,7 @@ export const getNotionContent = async (blockId: string) => {
        * @todo has_more 체크
        */
 
-      block["children"] = await getBlocksWithChildren(
+      block['children'] = await getBlocksWithChildren(
         result.results as BlockType[]
       );
     }

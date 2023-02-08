@@ -1,13 +1,13 @@
-import { RichText } from "@src/design/notion/RichText";
-import { styled } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion";
+import { RichText } from '@src/design/notion/RichText';
+import { styled } from '@src/design/theme/stitches.config';
+import { BlockType } from '@src/types/notion';
 
 interface Props {
   depth: number;
-  block: Extract<BlockType, { type: "bulleted_list_item" }>;
+  block: Extract<BlockType, { type: 'bulleted_list_item' }>;
 }
 
-const bullets = ["•", "◦", "▪"];
+const bullets = ['•', '◦', '▪'];
 export const BulletedListItemBlock = ({ depth, block }: Props) => {
   const { bulleted_list_item } = block;
 
@@ -23,27 +23,27 @@ export const BulletedListItemBlock = ({ depth, block }: Props) => {
   );
 };
 
-const Container = styled("div", {
-  display: "flex",
-  alignItems: "start",
+const Container = styled('div', {
+  display: 'flex',
+  alignItems: 'start',
   paddingLeft: 2,
-  width: "100%",
+  width: '100%',
 });
 
-const Marker = styled("div", {
+const Marker = styled('div', {
   width: 24,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   height: `25px`,
   marginRight: 2,
   lineHeight: `25px`,
   fontSize: `1.15em`,
 });
 
-const Content = styled("div", {
-  flex: "1 1 0px",
+const Content = styled('div', {
+  flex: '1 1 0px',
   minWidth: 1,
-  display: "flex",
-  flexDirection: "column",
+  display: 'flex',
+  flexDirection: 'column',
 });

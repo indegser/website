@@ -1,4 +1,4 @@
-import { theme } from "@src/design/theme/stitches.config";
+import { theme } from '@src/design/theme/stitches.config';
 
 export const codeStyle = {
   'code[class*="language-"]': {
@@ -65,7 +65,7 @@ export const codeStyle = {
     color: theme.colors.gray12,
   },
   namespace: {
-    Opacity: ".7",
+    Opacity: '.7',
   },
   property: {
     color: theme.colors.blue10,
@@ -89,51 +89,51 @@ export const codeStyle = {
     color: theme.colors.blue10,
   },
   selector: {
-    color: "#690",
+    color: '#690',
   },
-  "attr-name": {
-    color: "#690",
+  'attr-name': {
+    color: '#690',
   },
   string: {
     color: theme.colors.codeString,
   },
   char: {
-    color: "#690",
+    color: '#690',
   },
   builtin: {
-    color: "#690",
+    color: '#690',
   },
   inserted: {
-    color: "#690",
+    color: '#690',
   },
   operator: {
-    color: "#9a6e3a",
+    color: '#9a6e3a',
   },
   entity: {
-    color: "#9a6e3a",
-    cursor: "help",
+    color: '#9a6e3a',
+    cursor: 'help',
   },
   url: {
-    color: "#9a6e3a",
-    background: "hsla(0, 0%, 100%, .5)",
+    color: '#9a6e3a',
+    background: 'hsla(0, 0%, 100%, .5)',
   },
-  ".language-css .token.string": {
-    color: "#9a6e3a",
-    background: "hsla(0, 0%, 100%, .5)",
+  '.language-css .token.string': {
+    color: '#9a6e3a',
+    background: 'hsla(0, 0%, 100%, .5)',
   },
-  ".style .token.string": {
-    color: "#9a6e3a",
-    background: "hsla(0, 0%, 100%, .5)",
+  '.style .token.string': {
+    color: '#9a6e3a',
+    background: 'hsla(0, 0%, 100%, .5)',
   },
-  ".token": {
-    color: "#9a6e3a",
-    background: "hsla(0, 0%, 100%, .5)",
+  '.token': {
+    color: '#9a6e3a',
+    background: 'hsla(0, 0%, 100%, .5)',
   },
   atrule: {
-    color: "#07a",
+    color: '#07a',
   },
-  "attr-value": {
-    color: "#07a",
+  'attr-value': {
+    color: '#07a',
   },
   keyword: {
     color: theme.colors.crimson9,
@@ -141,23 +141,23 @@ export const codeStyle = {
   function: {
     color: theme.colors.purple11,
   },
-  "class-name": {
+  'class-name': {
     color: theme.colors.purple11,
   },
   regex: {
-    color: "#e90",
+    color: '#e90',
   },
   important: {
-    color: "#e90",
-    fontWeight: "bold",
+    color: '#e90',
+    fontWeight: 'bold',
   },
   variable: {
-    color: "#e90",
+    color: '#e90',
   },
   bold: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   italic: {
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
 };

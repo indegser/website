@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
-import { NextSeo } from "next-seo";
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
-import { GIT_COMMIT_SHA, ORIGIN } from "@src/types/constants";
+import { GIT_COMMIT_SHA, ORIGIN } from '@src/types/constants';
 
 interface Props {
   title: string;
@@ -14,7 +14,7 @@ export const SEO = ({
   title,
   description,
   image,
-  ogType = "website",
+  ogType = 'website',
 }: Props) => {
   const { asPath } = useRouter();
 
@@ -31,16 +31,16 @@ export const SEO = ({
         description,
         type: ogType,
         images: image ? [{ url: image }] : [],
-        site_name: "Indegser",
+        site_name: 'Indegser',
       }}
       twitter={{
-        handle: "@indegser",
+        handle: '@indegser',
         site: ORIGIN,
-        cardType: "summary_large_image",
+        cardType: 'summary_large_image',
       }}
       additionalMetaTags={[
         {
-          property: "git:commit:sha",
+          property: 'git:commit:sha',
           content: GIT_COMMIT_SHA,
         },
       ]}

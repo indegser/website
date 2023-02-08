@@ -27,8 +27,6 @@
     "@supabase/supabase-js": "^2.4.0",
     "@tanstack/react-query": "^4.23.0",
     "@tanstack/react-query-devtools": "^4.23.0",
-    "@upstash/redis": "^1.18.4",
-    "@vercel/og": "^0.0.27",
     "amplitude-js": "^8.21.4",
     "dayjs": "^1.11.7",
     "framer-motion": "^8.5.2",
@@ -48,6 +46,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-wrap-balancer": "^0.2.4",
     "react-youtube": "^10.1.0",
+    "sharp": "^0.31.3",
     "spinners-react": "^1.0.7",
     "unfetch": "^4.2.0",
     "zustand": "^3.7.1"
@@ -65,6 +64,7 @@
     "eslint-config-next": "^13.1.6",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.3",
     "typescript": "^4.9.4"
   }
