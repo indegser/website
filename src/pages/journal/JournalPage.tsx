@@ -1,6 +1,6 @@
-import { PageContainer } from "@src/design/atoms/Container";
-import { NotionContent } from "@src/design/notion/NotionContent";
-import { useJournalQuery } from "@src/queries/useJournalQuery";
+import { PageContainer } from '@src/design/atoms/Container';
+import { NotionContent } from '@src/design/notion/NotionContent';
+import { useJournalQuery } from '@src/queries/useJournalQuery';
 
 interface Props {
   id: string;

@@ -1,9 +1,9 @@
-import { dehydrate, QueryClient } from "@tanstack/react-query";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { dehydrate, QueryClient } from '@tanstack/react-query';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
-import { JournalPage } from "@src/pages/journal/JournalPage";
-import { createJournalQueryConfig } from "@src/queries/useJournalQuery";
-import { supabase } from "@src/sdks/supabase";
+import { JournalPage } from '@src/pages/journal/JournalPage';
+import { createJournalQueryConfig } from '@src/queries/useJournalQuery';
+import { supabase } from '@src/sdks/supabase';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const queryClient = new QueryClient();
@@ -23,9 +23,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await supabase
-    .from("journal")
-    .select("id")
-    .order("last_edited_time", { ascending: false })
+    .from('journal')
+    .select('id')
+    .order('last_edited_time', { ascending: false })
     .limit(50);
 
   const paths = data.map((item) => ({
@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // We'll pre-render only these paths at build time.
   // { fallback: blocking } will server-render pages
   // on-demand if the path doesn't exist.
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: 'blocking' };
 };
 
 export default JournalPage;

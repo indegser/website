@@ -1,16 +1,16 @@
-import { PrismLight as Highlighter } from "react-syntax-highlighter";
-import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
+import { PrismLight as Highlighter } from 'react-syntax-highlighter';
+import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 
-Highlighter.registerLanguage("typescript", tsx);
+Highlighter.registerLanguage('typescript', tsx);
 
-import { codeStyle } from "./CodeBlock.style";
+import { codeStyle } from './CodeBlock.style';
 
-import { PageContent } from "@src/design/atoms/Container";
-import { styled, theme } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion";
+import { PageContent } from '@src/design/atoms/Container';
+import { styled, theme } from '@src/design/theme/stitches.config';
+import { BlockType } from '@src/types/notion';
 
 interface Props {
-  block: Extract<BlockType, { type: "code" }>;
+  block: Extract<BlockType, { type: 'code' }>;
 }
 
 const capitalize = (str: string) => {
@@ -26,7 +26,7 @@ export const CodeBlock = ({ block }: Props) => {
         <Language>{capitalize(language)}</Language>
         <Highlighter
           style={codeStyle}
-          customStyle={{ overflowX: "scroll" }}
+          customStyle={{ overflowX: 'scroll' }}
           language={language}
         >
           {rich_text[0].plain_text}
@@ -36,22 +36,22 @@ export const CodeBlock = ({ block }: Props) => {
   );
 };
 
-const Container = styled("div", {
-  fontSize: "80%",
+const Container = styled('div', {
+  fontSize: '80%',
   tabSize: 2,
-  whiteSpace: "pre",
-  padding: "12px 16px 24px 16px",
+  whiteSpace: 'pre',
+  padding: '12px 16px 24px 16px',
   background: theme.colors.gray3,
   borderRadius: 3,
-  ["& pre"]: {
-    ["&::-webkit-scrollbar"]: {
-      display: "none",
+  ['& pre']: {
+    ['&::-webkit-scrollbar']: {
+      display: 'none',
     },
   },
 });
 
-const Language = styled("div", {
+const Language = styled('div', {
   color: theme.colors.gray10,
-  fontSize: "80%",
+  fontSize: '80%',
   letterSpacing: 0,
 });

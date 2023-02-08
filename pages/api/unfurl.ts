@@ -1,18 +1,18 @@
-const DATABASE_ID = "92578db813d44c2db2b04c6222627677";
+const DATABASE_ID = '92578db813d44c2db2b04c6222627677';
 
-import { CreatePageResponse } from "@notionhq/client/build/src/api-endpoints";
-import type { NextApiRequest, NextApiResponse } from "next";
-import ogs from "open-graph-scraper";
+import { CreatePageResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import ogs from 'open-graph-scraper';
 
-import { notion } from "@src/sdks/notion";
-import { uploadImageToSupabase } from "@src/utils/image/uploadImageToSupabase";
+import { notion } from '@src/sdks/notion';
+import { uploadImageToSupabase } from '@src/utils/image/uploadImageToSupabase';
 
 const parseUrl = (originalUrl: string, url: string) => {
   if (!url) return null;
-  if (url.startsWith("//")) {
+  if (url.startsWith('//')) {
     return `https:${url}`;
   }
-  if (url.startsWith("/")) {
+  if (url.startsWith('/')) {
     return new URL(originalUrl).origin + url;
   }
 
@@ -28,8 +28,8 @@ const handler = async (
   const result = await ogs({
     url,
     headers: {
-      "user-agent":
-        "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+      'user-agent':
+        'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
     },
     downloadLimit: 10000000,
   });
@@ -49,7 +49,7 @@ const handler = async (
   }
 
   imageUrl = parseUrl(url, imageUrl);
-  const supabaseResult = await uploadImageToSupabase(imageUrl, "notion");
+  const supabaseResult = await uploadImageToSupabase(imageUrl, 'notion');
 
   const openGraph = {
     title: ogTitle,
@@ -59,11 +59,11 @@ const handler = async (
 
   const response = await notion.pages.create({
     parent: {
-      type: "database_id",
+      type: 'database_id',
       database_id: DATABASE_ID,
     },
     cover: {
-      type: "external",
+      type: 'external',
       external: {
         url: openGraph.imageUrl,
       },

@@ -1,15 +1,15 @@
-import { BlockType } from "@src/types/notion";
+import { BlockType } from '@src/types/notion';
 
 const getCoverImageFromBlocks = (blocks: BlockType[]) => {
   const image = blocks.find(
-    (block): block is Extract<BlockType, { type: "image" }> =>
-      block.type === "image"
+    (block): block is Extract<BlockType, { type: 'image' }> =>
+      block.type === 'image'
   );
 
   let imageUrl: string;
 
   if (image) {
-    if (image.image["type"] === "file") {
+    if (image.image['type'] === 'file') {
       imageUrl = image.image.file.url;
     } else {
       imageUrl = image.image.external.url;

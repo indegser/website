@@ -1,7 +1,7 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document';
 
-import { noFlash } from "@src/design/theme/noFlash";
-import { getCssText } from "@src/design/theme/stitches.config";
+import { noFlash } from '@src/design/theme/noFlash';
+import { getCssText } from '@src/design/theme/stitches.config';
 
 export default function Document() {
   return (
@@ -13,7 +13,11 @@ export default function Document() {
         />
       </Head>
       <body>
-        <script id="no-flash" async={false} dangerouslySetInnerHTML={{ __html: noFlash }} />
+        <script
+          id="no-flash"
+          async={false}
+          dangerouslySetInnerHTML={{ __html: noFlash }}
+        />
         <Main />
         <NextScript />
       </body>

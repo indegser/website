@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import fetch from "unfetch";
+import { useQuery } from '@tanstack/react-query';
+import fetch from 'unfetch';
 
 interface OpenGraphType {
   title: string;
@@ -15,7 +15,7 @@ const fetcher = (url: string) =>
 
 export const useBookmarkBlock = (url: string) => {
   const { data } = useQuery({
-    queryKey: ["bookmark", url],
+    queryKey: ['bookmark', url],
     queryFn: () => fetcher(url),
   });
 

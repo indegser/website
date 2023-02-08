@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import ogs from "open-graph-scraper";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import ogs from 'open-graph-scraper';
 
-import { redis } from "@src/sdks/redis";
+import { redis } from '@src/sdks/redis';
 
 type Data = {
   title: string;
@@ -12,10 +12,10 @@ type Data = {
 
 const parseUrl = (originalUrl: string, url: string) => {
   if (!url) return null;
-  if (url.startsWith("//")) {
+  if (url.startsWith('//')) {
     return `https:${url}`;
   }
-  if (url.startsWith("/")) {
+  if (url.startsWith('/')) {
     return new URL(originalUrl).origin + url;
   }
 
@@ -40,8 +40,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const result = await ogs({
     url,
     headers: {
-      "user-agent":
-        "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+      'user-agent':
+        'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
     },
     downloadLimit: 10000000,
   });

@@ -1,5 +1,5 @@
-import { PageContent } from "@src/design/atoms/Container";
-import { styled, theme } from "@src/design/theme/stitches.config";
+import { PageContent } from '@src/design/atoms/Container';
+import { styled, theme } from '@src/design/theme/stitches.config';
 
 export const DividerBlock = () => {
   return (
@@ -9,7 +9,7 @@ export const DividerBlock = () => {
   );
 };
 
-const Divider = styled("div", {
+const Divider = styled('div', {
   height: 1,
   borderBottom: `1px solid ${theme.colors.gray5}`,
 });

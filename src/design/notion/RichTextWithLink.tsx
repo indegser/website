@@ -1,6 +1,6 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
-import { styled, theme } from "@src/design/theme/stitches.config";
+import { styled, theme } from '@src/design/theme/stitches.config';
 
 interface Props {
   link: { url: string } | null;
@@ -17,12 +17,12 @@ export const RichTextWithLink = ({
   return <Link href={link.url}>{children}</Link>;
 };
 
-const Link = styled("a", {
-  cursor: "pointer",
-  textDecoration: "none",
+const Link = styled('a', {
+  cursor: 'pointer',
+  textDecoration: 'none',
   color: theme.colors.blue11,
 
-  ["&:hover"]: {
-    textDecoration: "underline",
+  ['&:hover']: {
+    textDecoration: 'underline',
   },
 });

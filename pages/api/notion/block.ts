@@ -1,11 +1,11 @@
 import {
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
-} from "@notionhq/client/build/src/api-endpoints";
-import { NextApiRequest, NextApiResponse } from "next";
+} from '@notionhq/client/build/src/api-endpoints';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-import { notion } from "@src/sdks/notion";
-import { redis } from "@src/sdks/redis";
+import { notion } from '@src/sdks/notion';
+import { redis } from '@src/sdks/redis';
 
 const fetchNextPage = async (args: ListBlockChildrenParameters) => {
   const result = await notion.blocks.children.list(args);

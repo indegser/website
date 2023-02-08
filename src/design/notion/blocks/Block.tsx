@@ -1,23 +1,23 @@
-import { takeRightWhile } from "lodash-es";
+import { takeRightWhile } from 'lodash-es';
 
-import { BookmarkBlock } from "./bookmark/BookmarkBlock";
-import { BulletedListItemBlock } from "./BulletedListItemBlock";
-import { CalloutBlock } from "./CalloutBlock";
-import { CodeBlock } from "./CodeBlock";
-import { DividerBlock } from "./DividerBlock";
-import { HeadingBlock } from "./HeadingBlock";
-import { ImageBlock } from "./ImageBlock";
-import { NumberedListItemBlock } from "./NumberedListItemBlock";
-import { QuoteBlock } from "./QuoteBlock";
-import { TocBlock } from "./TocBlock";
-import { VideoBlock } from "./VideoBlock";
+import { BookmarkBlock } from './bookmark/BookmarkBlock';
+import { BulletedListItemBlock } from './BulletedListItemBlock';
+import { CalloutBlock } from './CalloutBlock';
+import { CodeBlock } from './CodeBlock';
+import { DividerBlock } from './DividerBlock';
+import { HeadingBlock } from './HeadingBlock';
+import { ImageBlock } from './ImageBlock';
+import { NumberedListItemBlock } from './NumberedListItemBlock';
+import { QuoteBlock } from './QuoteBlock';
+import { TocBlock } from './TocBlock';
+import { VideoBlock } from './VideoBlock';
 
-import { PageContent } from "@src/design/atoms/Container";
-import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorToStyleProps";
-import { RichText } from "@src/design/notion/RichText";
-import { mq } from "@src/design/theme/mediaQueries";
-import { styled } from "@src/design/theme/stitches.config";
-import { AnnotationColorType, BlockType } from "@src/types/notion";
+import { PageContent } from '@src/design/atoms/Container';
+import { convertApiColorToStyleProps } from '@src/design/notion/convertApiColorToStyleProps';
+import { RichText } from '@src/design/notion/RichText';
+import { mq } from '@src/design/theme/mediaQueries';
+import { styled } from '@src/design/theme/stitches.config';
+import { AnnotationColorType, BlockType } from '@src/types/notion';
 
 interface Props {
   index: number;
@@ -32,41 +32,41 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
 
   const renderContent = (block: BlockType) => {
     switch (block.type) {
-      case "paragraph": {
+      case 'paragraph': {
         return (
           <PageContent style={styleProps}>
             <RichText data={block.paragraph.rich_text} />
           </PageContent>
         );
       }
-      case "image": {
+      case 'image': {
         return <ImageBlock block={block} />;
       }
-      case "heading_1": {
+      case 'heading_1': {
         return (
           <PageContent style={styleProps}>
             <HeadingBlock level={1} heading={block.heading_1} />
           </PageContent>
         );
       }
-      case "heading_2": {
+      case 'heading_2': {
         return (
           <PageContent style={styleProps}>
             <HeadingBlock level={2} heading={block.heading_2} />
           </PageContent>
         );
       }
-      case "heading_3": {
+      case 'heading_3': {
         return (
           <PageContent style={styleProps}>
             <HeadingBlock level={3} heading={block.heading_3} />
           </PageContent>
         );
       }
-      case "numbered_list_item": {
+      case 'numbered_list_item': {
         const marker = takeRightWhile(
           blocks.slice(0, index),
-          (result) => result.type === "numbered_list_item"
+          (result) => result.type === 'numbered_list_item'
         ).length;
 
         return (
@@ -79,14 +79,14 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
           </PageContent>
         );
       }
-      case "bulleted_list_item": {
+      case 'bulleted_list_item': {
         return (
           <PageContent style={styleProps}>
             <BulletedListItemBlock depth={depth} block={block} />
           </PageContent>
         );
       }
-      case "bookmark": {
+      case 'bookmark': {
         return (
           <PageContent style={styleProps}>
             <BookmarkBlock
@@ -96,31 +96,31 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
           </PageContent>
         );
       }
-      case "quote": {
+      case 'quote': {
         return (
           <PageContent style={styleProps}>
             <QuoteBlock block={block} />
           </PageContent>
         );
       }
-      case "callout": {
+      case 'callout': {
         return <CalloutBlock block={block} />;
       }
-      case "divider": {
+      case 'divider': {
         return <DividerBlock />;
       }
-      case "code": {
+      case 'code': {
         return <CodeBlock block={block} />;
       }
-      case "table_of_contents": {
+      case 'table_of_contents': {
         return <TocBlock blocks={blocks} />;
       }
 
-      case "video": {
+      case 'video': {
         return <VideoBlock video={block.video} />;
       }
 
-      case "link_preview": {
+      case 'link_preview': {
         return <BookmarkBlock url={block.link_preview.url} />;
       }
 
@@ -154,7 +154,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       {renderContent(block)}
       {block.children ? (
         <ChildSection
-          style={{ padding: block.type === "column" ? "0px !important" : "" }}
+          style={{ padding: block.type === 'column' ? '0px !important' : '' }}
         >
           {block.children.map((childBlock, index) => (
             <Block
@@ -172,20 +172,20 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
 };
 
 const ColumnGrid = styled(PageContent, {
-  display: "grid",
+  display: 'grid',
   columnGap: 20,
-  gridAutoFlow: "column",
-  gridAutoColumns: "1fr",
+  gridAutoFlow: 'column',
+  gridAutoColumns: '1fr',
 
-  [mq("sm")]: {
-    display: "block",
+  [mq('sm')]: {
+    display: 'block',
   },
 });
 
-const Section = styled("div", {
-  marginBottom: "1em",
+const Section = styled('div', {
+  marginBottom: '1em',
 });
 
 const ChildSection = styled(PageContent, {
-  paddingLeft: "27px",
+  paddingLeft: '27px',
 });

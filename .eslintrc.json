@@ -3,7 +3,7 @@
     "next/core-web-vitals",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "import/order": [

@@ -1,14 +1,14 @@
-import { styled } from "@src/design/theme/stitches.config";
+import { styled } from '@src/design/theme/stitches.config';
 
-const Container = styled("div", {
-  display: "flex",
-  alignItems: "center",
-  ["& svg"]: {
-    display: "block",
+const Container = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  ['& svg']: {
+    display: 'block',
   },
 });
 
-const Icon = styled("div", {
+const Icon = styled('div', {
   marginRight: 8,
 });
 

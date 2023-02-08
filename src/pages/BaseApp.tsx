@@ -1,6 +1,6 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
-import { useInitAmplitude } from "./BaseApp.hooks";
+import { useInitAmplitude } from './BaseApp.hooks';
 
 export const BaseApp = ({ children }: PropsWithChildren<{}>) => {
   useInitAmplitude();

@@ -1,12 +1,12 @@
-import { styled } from "@stitches/react";
+import { styled } from '@stitches/react';
 
-import { mq } from "@src/design/theme/mediaQueries";
-import { theme } from "@src/design/theme/stitches.config";
+import { mq } from '@src/design/theme/mediaQueries';
+import { theme } from '@src/design/theme/stitches.config';
 
-export const Typography = styled("div", {
+export const Typography = styled('div', {
   fontSize: 14,
   lineHeight: 1.4,
-  wordBreak: "keep-all",
+  wordBreak: 'keep-all',
 
   variants: {
     type: {
@@ -16,9 +16,9 @@ export const Typography = styled("div", {
         fontWeight: 600,
         lineHeight: 1.4,
         color: theme.colors.gray12,
-        wordBreak: "keep-all",
+        wordBreak: 'keep-all',
 
-        [mq("sm")]: {
+        [mq('sm')]: {
           fontSize: 18,
         },
       },
@@ -29,11 +29,11 @@ export const Typography = styled("div", {
         fontWeight: 700,
         [mq('sm')]: {
           fontWeight: 600,
-        }
+        },
       },
       description: {
         // color: theme.colors.gray11,
-        [mq("sm")]: {
+        [mq('sm')]: {
           fontSize: 16,
         },
       },

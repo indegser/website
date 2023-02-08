@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps } from 'next';
 
 const content = `
 User-agent: *
@@ -7,7 +7,7 @@ Sitemap: https://www.indegser.com/sitemap.xml
 `.trim();
 
 export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
-  res.setHeader("Content-Type", "text/plain");
+  res.setHeader('Content-Type', 'text/plain');
   res.write(content);
   res.end();
 

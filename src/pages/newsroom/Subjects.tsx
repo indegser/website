@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { PageContent } from "@src/design/atoms/Container";
-import { styled, theme } from "@src/design/theme/stitches.config";
-import { JournalPageType } from "@src/types/notion";
-import { getNotionTitle } from "@src/utils/notion";
+import { PageContent } from '@src/design/atoms/Container';
+import { styled, theme } from '@src/design/theme/stitches.config';
+import { JournalPageType } from '@src/types/notion';
+import { getNotionTitle } from '@src/utils/notion';
 
 interface Props {
-  properties: JournalPageType["properties"];
+  properties: JournalPageType['properties'];
 }
 
 export const Subjects = (props: Props) => {
@@ -14,7 +14,7 @@ export const Subjects = (props: Props) => {
     properties: { Subjects: subjects },
   } = props;
 
-  if (subjects.rollup.type !== "array") return null;
+  if (subjects.rollup.type !== 'array') return null;
 
   const { array } = subjects.rollup;
 
@@ -22,13 +22,13 @@ export const Subjects = (props: Props) => {
     <PageContent>
       <Container>
         {array.map((item, index) => {
-          if (item.type !== "title") return null;
+          if (item.type !== 'title') return null;
           const title = getNotionTitle(item);
 
           return (
             <Link
               key={index}
-              href={{ pathname: "/", query: { subject: title } }}
+              href={{ pathname: '/', query: { subject: title } }}
             >
               <Tag>{title}</Tag>
             </Link>
@@ -39,16 +39,16 @@ export const Subjects = (props: Props) => {
   );
 };
 
-const Container = styled("div", {
-  display: "flex",
-  flexWrap: "wrap",
+const Container = styled('div', {
+  display: 'flex',
+  flexWrap: 'wrap',
   gap: 12,
   fontSize: 12,
   fontWeight: 500,
 });
 
-const Tag = styled("div", {
-  padding: "4px 8px",
+const Tag = styled('div', {
+  padding: '4px 8px',
   background: theme.colors.gray3,
   borderRadius: 4,
 });

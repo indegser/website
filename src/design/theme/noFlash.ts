@@ -1,4 +1,4 @@
-import { darkTheme, theme } from "./stitches.config";
+import { darkTheme, theme } from './stitches.config';
 
 export const noFlash = `
 // https://github.com/donavon/use-dark-mode/blob/develop/noflash.js.txt
@@ -18,4 +18,4 @@ export const noFlash = `
   var mql = window.matchMedia(preferDarkQuery);
   var supportsColorSchemeQuery = mql.media === preferDarkQuery;
   setClassOnDocumentBody(mql.matches);
-})();`
+})();`;

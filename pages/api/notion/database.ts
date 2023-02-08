@@ -1,7 +1,7 @@
-import { QueryDatabaseResponse } from "@notionhq/client/build/src/api-endpoints";
-import { NextApiRequest, NextApiResponse } from "next";
+import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-import { notion } from "@src/sdks/notion";
+import { notion } from '@src/sdks/notion';
 
 const handler = async (
   req: NextApiRequest,

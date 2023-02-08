@@ -1,13 +1,13 @@
-import { NotionIcon } from "./NotionIcon";
+import { NotionIcon } from './NotionIcon';
 
-import { PageContent } from "@src/design/atoms/Container";
-import { convertApiColorToStyleProps } from "@src/design/notion/convertApiColorToStyleProps";
-import { RichText } from "@src/design/notion/RichText";
-import { styled } from "@src/design/theme/stitches.config";
-import { BlockType } from "@src/types/notion";
+import { PageContent } from '@src/design/atoms/Container';
+import { convertApiColorToStyleProps } from '@src/design/notion/convertApiColorToStyleProps';
+import { RichText } from '@src/design/notion/RichText';
+import { styled } from '@src/design/theme/stitches.config';
+import { BlockType } from '@src/types/notion';
 
 interface Props {
-  block: Extract<BlockType, { type: "callout" }>;
+  block: Extract<BlockType, { type: 'callout' }>;
 }
 
 export const CalloutBlock = ({ block }: Props) => {
@@ -28,9 +28,9 @@ export const CalloutBlock = ({ block }: Props) => {
   );
 };
 
-const Container = styled("div", {
+const Container = styled('div', {
   padding: 16,
   paddingLeft: 12,
-  display: "flex",
+  display: 'flex',
   borderRadius: 3,
 });
