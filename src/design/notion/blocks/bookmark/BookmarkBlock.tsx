@@ -22,7 +22,7 @@ export const BookmarkBlock = (props: Props) => {
   useEffect(() => {
     if (!metadata || !metadata.favicon) return;
     const favicon = new Image();
-    favicon.onload = (e) => {
+    favicon.onload = () => {
       setFaviconLoaded(true);
     };
 

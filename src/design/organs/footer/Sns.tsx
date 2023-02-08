@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Fragment, MouseEvent } from 'react';
+import { Fragment } from 'react';
 import { SiNotion, SiTwitter, SiGithub } from 'react-icons/si';
 
 import { styled, theme } from '@src/design/theme/stitches.config';
@@ -40,21 +40,12 @@ const snsList = [
 ];
 
 export const Sns = () => {
-  const handleSnsClick = (
-    event: MouseEvent<HTMLAnchorElement>,
-    sns: (typeof snsList)[number]
-  ) => {};
-
   return (
     <Links>
       {snsList.map((sns, index) => (
         <Fragment key={sns.link}>
           {index > 0 ? <MidDot /> : null}
-          <Link
-            href={sns.link}
-            title={sns.alt}
-            onClick={(event) => handleSnsClick(event, sns)}
-          >
+          <Link href={sns.link} title={sns.alt}>
             <LinkIcon>{sns.icon}</LinkIcon>
           </Link>
         </Fragment>

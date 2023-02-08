@@ -14,7 +14,7 @@ export const JournalPage = (props: Props) => {
     console.warn(`Fail to hydrate react-query data`);
   }
 
-  const { blocks, journal } = data;
+  const { blocks } = data;
 
   return (
     <PageContainer>

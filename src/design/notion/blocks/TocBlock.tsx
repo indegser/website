@@ -24,11 +24,13 @@ export const TocBlock = ({ blocks }: Props) => {
         case 'heading_2': {
           res.hasHeading2 = true;
           res.result.push(res.hasHeading1 ? 1 : 0);
+          break;
         }
         case 'heading_3': {
           res.result.push(
             [res.hasHeading1, res.hasHeading2].filter(Boolean).length
           );
+          break;
         }
       }
       return res;
