@@ -23,19 +23,25 @@ export const Journal = (props: Props) => {
     return dayjs(last_edited_time).locale("ko").format("YYYY년 MMMM D일");
   }, [last_edited_time]);
 
+  const title = getNotionTitle(properties.Title)
+  const description = properties.Description.rich_text[0]?.plain_text
+
   return (
     <Link href={`/journal/${id}`}>
       <Section>
+        <ImageContainer>
+          <img src={`/api/og/image?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
+        </ImageContainer>
         <Metadata>
           <Typography type="tag">{formattedLastEditedTime}</Typography>
         </Metadata>
         <Balancer>
           <Typography type="title">
-            {getNotionTitle(properties.Title)}
+            {title}
           </Typography>
         </Balancer>
         <Typography type="description">
-          {properties.Description.rich_text[0]?.plain_text}
+          {description}
         </Typography>
       </Section>
     </Link>
@@ -47,6 +53,11 @@ const Section = styled("section", {
   gap: "4px",
   gridAutoRows: "max-content",
 });
+
+const ImageContainer = styled('div', {
+  position: 'relative',
+  aspectRatio: `16 / 9`
+})
 
 const Metadata = styled("div", {
   display: "grid",
