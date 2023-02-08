@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import ogs from 'open-graph-scraper';
 
-import { redis } from '@src/sdks/redis';
+import { supabase } from '@src/sdks/supabase';
 
 type Data = {
   title: string;
@@ -23,8 +23,13 @@ const parseUrl = (originalUrl: string, url: string) => {
 };
 
 const hasCachedVersion = async (url: string) => {
-  const cached = await redis.hgetall<Data>(`opengraph:${url}`);
-  return cached;
+  const { data } = await supabase
+    .from('link_previews')
+    .select()
+    .eq('id', url)
+    .maybeSingle();
+
+  return data;
 };
 
 const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
@@ -61,17 +66,22 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   }
 
   imageUrl = parseUrl(url, imageUrl);
-  const fullFavicon = parseUrl(url, favicon);
 
   const openGraph = {
+    id: url,
+    url,
     title: ogTitle,
     description: ogDescription,
-    favicon: fullFavicon,
-    imageUrl,
+    image_url: imageUrl,
   };
 
-  await redis.hset(`opengraph:${url}`, openGraph);
-  res.status(200).json(openGraph);
+  const upsertResult = await supabase
+    .from('link_previews')
+    .upsert(openGraph)
+    .select()
+    .maybeSingle();
+
+  res.status(200).json(upsertResult.data);
 };
 
 export default handler;

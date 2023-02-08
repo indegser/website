@@ -27,7 +27,6 @@
     "@supabase/supabase-js": "^2.4.0",
     "@tanstack/react-query": "^4.23.0",
     "@tanstack/react-query-devtools": "^4.23.0",
-    "@upstash/redis": "^1.18.4",
     "@vercel/og": "^0.0.27",
     "amplitude-js": "^8.21.4",
     "dayjs": "^1.11.7",

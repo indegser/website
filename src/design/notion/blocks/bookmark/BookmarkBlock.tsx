@@ -1,6 +1,5 @@
 import { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 import { useBookmarkBlock } from './BookmarkBlock.hooks';
 import { Caption } from '../Caption';
@@ -15,19 +14,7 @@ interface Props {
 
 export const BookmarkBlock = (props: Props) => {
   const { url, caption = [] } = props;
-
-  const [faviconLoaded, setFaviconLoaded] = useState(false);
   const { data: metadata } = useBookmarkBlock(url);
-
-  useEffect(() => {
-    if (!metadata || !metadata.favicon) return;
-    const favicon = new Image();
-    favicon.onload = () => {
-      setFaviconLoaded(true);
-    };
-
-    favicon.src = metadata.favicon;
-  }, [metadata]);
 
   return (
     <Figure>
@@ -37,14 +24,13 @@ export const BookmarkBlock = (props: Props) => {
             <Title>{metadata?.title}</Title>
             <Desc>{metadata?.description}</Desc>
             <Url>
-              {faviconLoaded && <CoverImage src={metadata.favicon} />}
               <UrlText>{decodeURIComponent(url)}</UrlText>
             </Url>
           </Metadata>
           <Cover
             style={{
               backgroundImage:
-                metadata?.imageUrl && `url(${metadata.imageUrl})`,
+                metadata?.image_url && `url(${metadata.image_url})`,
             }}
           />
         </Container>
@@ -127,13 +113,6 @@ const Url = styled('div', {
   color: theme.colors.gray10,
 
   ['& img']: {},
-});
-
-const CoverImage = styled('img', {
-  width: 14,
-  height: 14,
-  objectFit: 'cover',
-  marginRight: 6,
 });
 
 const UrlText = styled('div', {
