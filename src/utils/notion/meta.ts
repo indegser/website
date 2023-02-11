@@ -1,4 +1,6 @@
-import { BlockType } from '@src/types/notion';
+import { getNotionFileUrl, getNotionTitle } from '../notion';
+
+import { BlockType, JournalPageType } from '@src/types/notion';
 
 const getCoverImageFromBlocks = (blocks: BlockType[]) => {
   const image = blocks.find(
@@ -19,24 +21,24 @@ const getCoverImageFromBlocks = (blocks: BlockType[]) => {
   return imageUrl;
 };
 
-// export const getMetaFromNotionPage = (
-//   page: NewsPageType,
-//   blocks: BlockType[]
-// ): ContentMetaType => {
-//   const {
-//     id,
-//     cover,
-//     properties: { title, excerpt },
-//   } = page;
+export const getMetaFromNotionPage = (
+  page: JournalPageType,
+  blocks: BlockType[]
+) => {
+  const {
+    id,
+    cover,
+    properties: { Title, Description },
+  } = page;
 
-//   const image =
-//     getNotionFileUrl(cover) || getCoverImageFromBlocks(blocks) || "";
+  const image =
+    getNotionFileUrl(cover) || getCoverImageFromBlocks(blocks) || '';
 
-//   return {
-//     id,
-//     title: getNotionTitle(title),
-//     description: excerpt?.rich_text[0]?.plain_text ?? "",
-//     image,
-//     lastEditedTime: page.last_edited_time,
-//   };
-// };
+  return {
+    id,
+    title: getNotionTitle(Title),
+    description: Description?.rich_text[0]?.plain_text ?? '',
+    image,
+    lastEditedTime: page.last_edited_time,
+  };
+};
