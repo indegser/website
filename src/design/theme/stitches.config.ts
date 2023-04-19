@@ -1,4 +1,3 @@
-import { Inter } from '@next/font/google';
 import {
   gray,
   blue,
@@ -16,6 +15,7 @@ import {
   crimson,
 } from '@radix-ui/colors';
 import { createStitches } from '@stitches/react';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
