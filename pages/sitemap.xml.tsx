@@ -15,7 +15,7 @@ const generateSitemap = (journals: JournalPageType[]) =>
     .map(({ id }) => {
       return `
     <url>
-        <loc>${`${ORIGIN}/journal/${id}`}</loc>
+        <loc>${`${ORIGIN}/content/${id}`}</loc>
     </url>
   `;
     })

@@ -28,7 +28,7 @@ export const Journal = (props: Props) => {
   const title = getNotionTitle(properties.Title);
 
   return (
-    <Link href={`/journal/${id}`}>
+    <Link href={`/content/${id}`}>
       <Section>
         <JournalCover src={getNotionFileUrl(props.page.cover)} alt={title} />
         <Content>

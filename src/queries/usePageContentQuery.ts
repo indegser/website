@@ -17,7 +17,7 @@ export const createPageContentQueryConfig = (
   queryFn: ({ pageParam: startCursor }) =>
     notionApi.retrieveBlockChildren({
       block_id: id,
-      page_size: 5,
+      page_size: 50,
       start_cursor: startCursor || undefined,
     }),
   getNextPageParam: (current) => {
