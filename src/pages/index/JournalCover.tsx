@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { breakPoints } from '@src/design/theme/mediaQueries';
 import { styled } from '@src/design/theme/stitches.config';
 
 interface Props {
@@ -14,7 +15,14 @@ export const JournalCover = (props: Props) => {
 
   return (
     <Container>
-      <Image src={src} alt={alt} fill style={{ objectFit: 'cover' }} />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        style={{ objectFit: 'cover' }}
+        sizes={`(max-width: ${breakPoints.sm}px) 100vw,
+              33vw"`}
+      />
     </Container>
   );
 };

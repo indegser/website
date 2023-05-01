@@ -1,16 +1,16 @@
-const media = {
+export const breakPoints = {
   sm: 450,
   md: 768,
   lg: 1080,
   xl: 1440,
 };
 
-export const mq = (key: keyof typeof media | number) => {
+export const mq = (key: keyof typeof breakPoints | number) => {
   let px: number;
   if (typeof key === 'number') {
     px = key;
   } else {
-    px = media[key];
+    px = breakPoints[key];
     if (!px) {
       throw new Error(`Cannot find media query with key ${key}`);
     }
