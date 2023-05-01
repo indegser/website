@@ -1,4 +1,5 @@
 import {
+  DatabaseObjectResponse,
   ListBlockChildrenResponse,
   PageObjectResponse,
   QueryDatabaseResponse,
@@ -12,6 +13,8 @@ export type PageType<T = PageObjectResponse['properties']> = Omit<
 > & {
   properties: T;
 };
+
+export type IndexType = DatabaseObjectResponse;
 
 export type DatabaseType<T = PageObjectResponse> = Omit<
   QueryDatabaseResponse,

@@ -1,5 +1,7 @@
 import { isFullBlock } from '@notionhq/client';
 import {
+  DatabaseObjectResponse,
+  GetDatabaseParameters,
   GetPageParameters,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
@@ -16,6 +18,17 @@ export const queryDatabase = <T>(
   return isServer
     ? notion.databases.query(args)
     : fetch('/api/notion/database', {
+        method: 'post',
+        body: JSON.stringify(args),
+      }).then((res) => res.json());
+};
+
+export const retrieveDatabase = (
+  args: GetDatabaseParameters
+): Promise<DatabaseObjectResponse> => {
+  return isServer
+    ? notion.databases.retrieve(args)
+    : fetch('/api/notion', {
         method: 'post',
         body: JSON.stringify(args),
       }).then((res) => res.json());
@@ -48,4 +61,9 @@ export const retrieveBlockChildren = async (
   };
 };
 
-export const notionApi = { queryDatabase, retrievePage, retrieveBlockChildren };
+export const notionApi = {
+  queryDatabase,
+  retrieveDatabase,
+  retrievePage,
+  retrieveBlockChildren,
+};

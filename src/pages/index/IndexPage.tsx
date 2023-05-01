@@ -7,17 +7,25 @@ import { PageContainer } from '@src/design/atoms/Container';
 import { SEO } from '@src/design/atoms/SEO';
 import { mq } from '@src/design/theme/mediaQueries';
 import { styled, theme } from '@src/design/theme/stitches.config';
-import { useNewsroomQuery } from '@src/queries/useNewsroomQuery';
+import { useDatabaseQuery } from '@src/queries/useDatabaseQuery';
+import { useIndexQuery } from '@src/queries/useIndexQuery';
 import { usePageTracking } from '@src/utils/analytics/usePageTracking';
+import { getNotionTitle } from '@src/utils/notion';
 
-export const Newsroom = () => {
-  usePageTracking('visit_newsroom');
+interface Props {
+  id: string;
+}
 
-  const { data, isFetchingNextPage, fetchNextPage } = useNewsroomQuery();
+export const IndexPage = ({ id }: Props) => {
+  usePageTracking('visit_index');
+
+  const { data: index } = useIndexQuery(id);
+  const { data, isFetchingNextPage, fetchNextPage } = useDatabaseQuery(id);
+  const title = getNotionTitle(index);
 
   return (
-    <NewsroomContainer>
-      <SEO title="홈" />
+    <Container>
+      <SEO title={title} />
       <Layout>
         {data?.pages
           .flatMap((page) => page.results)
@@ -43,11 +51,11 @@ export const Newsroom = () => {
           }}
         />
       )}
-    </NewsroomContainer>
+    </Container>
   );
 };
 
-const NewsroomContainer = styled(PageContainer, {
+const Container = styled(PageContainer, {
   overflow: 'hidden',
   paddingTop: 32,
 });
