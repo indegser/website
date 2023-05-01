@@ -1,8 +1,14 @@
-import { QueryDatabaseParameters } from '@notionhq/client/build/src/api-endpoints';
+import { isFullBlock } from '@notionhq/client';
+import {
+  GetPageParameters,
+  ListBlockChildrenParameters,
+  ListBlockChildrenResponse,
+  QueryDatabaseParameters,
+} from '@notionhq/client/build/src/api-endpoints';
 import { isServer } from '@tanstack/react-query';
 
 import { notion } from '@src/sdks/notion';
-import { DatabaseType } from '@src/types/notion';
+import { DatabaseType, ListBlockChildrenType } from '@src/types/notion';
 
 export const queryDatabase = <T>(
   args: QueryDatabaseParameters
@@ -15,4 +21,31 @@ export const queryDatabase = <T>(
       }).then((res) => res.json());
 };
 
-export const notionApi = { queryDatabase };
+export const retrievePage = <T>(args: GetPageParameters): Promise<T> => {
+  return isServer
+    ? notion.pages.retrieve(args)
+    : fetch('/api/notion/page', {
+        method: 'post',
+        body: JSON.stringify(args),
+      }).then((res) => res.json());
+};
+
+export const retrieveBlockChildren = async (
+  args: ListBlockChildrenParameters
+): Promise<ListBlockChildrenType> => {
+  const response = (
+    isServer
+      ? await notion.blocks.children.list(args)
+      : await fetch('/api/notion/blocks', {
+          method: 'post',
+          body: JSON.stringify(args),
+        }).then((res) => res.json())
+  ) as ListBlockChildrenResponse;
+
+  return {
+    ...response,
+    results: response.results.filter(isFullBlock),
+  };
+};
+
+export const notionApi = { queryDatabase, retrievePage, retrieveBlockChildren };
