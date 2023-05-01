@@ -1,29 +1,32 @@
+import { QueryDatabaseParameters } from '@notionhq/client/build/src/api-endpoints';
+
+import { notionApi } from './notion';
+
 import { supabase } from '@src/sdks/supabase';
+import { isProduction } from '@src/types/env';
 import { BlockType, JournalPageType } from '@src/types/notion';
 
-type FetchJournalListParameters = {
-  offset?: number;
-  pageSize?: number;
-};
-
-const fetchJournalList = async ({
-  offset = 0,
-  pageSize = 20,
-}: FetchJournalListParameters) => {
-  return supabase
-    .from('journal')
-    .select('data')
-    .order('last_edited_time', { ascending: false })
-    .range(offset, offset + pageSize)
-    .then((result) => {
-      const hasMore = result.data.length > pageSize;
-      return {
-        nextOffset: hasMore ? offset + pageSize : undefined,
-        data: result.data
-          .slice(0, pageSize)
-          .map((item) => item.data as JournalPageType),
-      };
-    });
+const queryJournalDatabase = (
+  args: Omit<QueryDatabaseParameters, 'database_id'>
+) => {
+  return notionApi.queryDatabase<JournalPageType>({
+    database_id: '82649fda5ba84801a464d7ef2f7552b3',
+    sorts: [
+      {
+        timestamp: 'created_time',
+        direction: 'descending',
+      },
+    ],
+    filter: isProduction
+      ? {
+          property: 'Status',
+          status: {
+            equals: 'Done',
+          },
+        }
+      : undefined,
+    ...args,
+  });
 };
 
 const fetchJournalBlocks = async (id: string) =>
@@ -43,7 +46,7 @@ const fetchJournal = async (id: string) =>
     .then((result) => result.data.data);
 
 export const journalApi = {
-  fetchJournalList,
+  queryJournalDatabase,
   fetchJournalBlocks,
   fetchJournal,
 };
