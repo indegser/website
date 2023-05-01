@@ -1,3 +1,5 @@
+import { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
+
 import { notion } from '@src/sdks/notion';
 import { BlockType, CoverType, PropertyType } from '@src/types/notion';
 
@@ -10,8 +12,27 @@ const toString = (property: PropertyType<'formula'>) => {
   }
 };
 
+const getBlock = async (id: string) => {
+  const fetchNextPage = async (args: ListBlockChildrenParameters) => {
+    const result = await notion.blocks.children.list(args);
+
+    if (result.has_more) {
+      const nextResult = await fetchNextPage({
+        ...args,
+        start_cursor: result.next_cursor || undefined,
+      });
+      result.results = [...result.results, ...nextResult.results];
+    }
+
+    return result;
+  };
+
+  return fetchNextPage({ block_id: id });
+};
+
 export const notionUtils = {
   toString,
+  getBlock,
 };
 
 export const getNotionFileUrl = (
