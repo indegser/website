@@ -4,6 +4,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -19,31 +20,34 @@ export default function App({ Component, pageProps }: AppProps) {
   globalStyles();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
-        <BaseApp>
-          <Head>
-            <title>Home</title>
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover"
-            />
-            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-            <link rel="apple-touch-icon" href="/icon-512x512.png" />
-            <link rel="manifest" href="/manifest.webmanifest" />
-            <meta name="theme-color" content="" />
-          </Head>
-          <Page>
-            <Nav />
-            <Main>
-              <Component {...pageProps} />
-            </Main>
-            <Footer />
-          </Page>
-        </BaseApp>
-        <ReactQueryDevtools initialIsOpen={false} />
-      </Hydrate>
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <BaseApp>
+            <Head>
+              <title>Home</title>
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover"
+              />
+              <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+              <link rel="apple-touch-icon" href="/icon-512x512.png" />
+              <link rel="manifest" href="/manifest.webmanifest" />
+              <meta name="theme-color" content="" />
+            </Head>
+            <Page>
+              <Nav />
+              <Main>
+                <Component {...pageProps} />
+              </Main>
+              <Footer />
+            </Page>
+          </BaseApp>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </Hydrate>
+      </QueryClientProvider>
+      <Analytics />
+    </>
   );
 }
 
