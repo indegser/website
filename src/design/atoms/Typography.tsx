@@ -12,24 +12,16 @@ export const Typography = styled('div', {
     type: {
       title: {
         margin: 0,
-        fontSize: 18,
-        fontWeight: 600,
-        lineHeight: 1.4,
+        fontSize: 16,
+        fontWeight: 500,
+        lineHeight: 1.3,
         color: theme.colors.gray12,
         wordBreak: 'keep-all',
-
-        [mq('sm')]: {
-          fontSize: 18,
-        },
       },
       tag: {
         color: theme.colors.gray11,
-        fontSize: 12,
+        fontSize: 13,
         lineHeight: 1,
-        fontWeight: 700,
-        [mq('sm')]: {
-          fontWeight: 600,
-        },
       },
       description: {
         // color: theme.colors.gray11,
