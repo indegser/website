@@ -21,11 +21,17 @@ export const Journal = (props: Props) => {
     page: { id, last_edited_time, properties },
   } = props;
 
+  const titlePropKey = Object.keys(properties).find(
+    (key) => properties[key].type === 'title'
+  );
+
+  const titleProp = properties[titlePropKey];
+
   const formattedLastEditedTime = useMemo(() => {
     return dayjs(last_edited_time).locale('ko').format('YYYY년 MMMM D일');
   }, [last_edited_time]);
 
-  const title = getNotionTitle(properties.Title);
+  const title = getNotionTitle(titleProp);
 
   return (
     <Link href={`/content/${id}`}>
