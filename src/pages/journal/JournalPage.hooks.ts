@@ -2,7 +2,8 @@ import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 
 import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect';
-import { useJournalQuery } from '@src/queries/useJournalQuery';
+import { usePageContentQuery } from '@src/queries/usePageContentQuery';
+import { usePageQuery } from '@src/queries/usePageQuery';
 import { getMetaFromNotionPage } from '@src/utils/notion/meta';
 
 export const useJournalRouter = () => {
@@ -35,7 +36,12 @@ export const useJournalRouter = () => {
 };
 
 export const useJournalMetadata = (id: string) => {
-  const { data } = useJournalQuery(id);
+  const { data: page } = usePageQuery(id);
+  const {
+    data: {
+      pages: [{ results: blocks }],
+    },
+  } = usePageContentQuery(id);
 
-  return getMetaFromNotionPage(data.journal, data.blocks);
+  return getMetaFromNotionPage(page, blocks);
 };

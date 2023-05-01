@@ -2,9 +2,8 @@ import { QueryDatabaseParameters } from '@notionhq/client/build/src/api-endpoint
 
 import { notionApi } from './notion';
 
-import { supabase } from '@src/sdks/supabase';
 import { isProduction } from '@src/types/env';
-import { BlockType, JournalPageType } from '@src/types/notion';
+import { JournalPageType } from '@src/types/notion';
 
 const queryJournalDatabase = (
   args: Omit<QueryDatabaseParameters, 'database_id'>
@@ -29,24 +28,15 @@ const queryJournalDatabase = (
   });
 };
 
-const fetchJournalBlocks = async (id: string) =>
-  supabase
-    .from('pages')
-    .select<'data', { data: { results: BlockType[] } }>('data')
-    .eq('id', id)
-    .single()
-    .then((result) => result.data.data.results);
+const retrieveJournalPage = (id: string) => {
+  return notionApi.retrievePage({ page_id: id });
+};
 
-const fetchJournal = async (id: string) =>
-  supabase
-    .from('journal')
-    .select<'data', { data: JournalPageType }>('data')
-    .eq('id', id)
-    .single()
-    .then((result) => result.data.data);
+const fetchJournalBlocks = async (id: string) =>
+  notionApi.retrieveBlockChildren({ block_id: id });
 
 export const journalApi = {
   queryJournalDatabase,
+  retrieveJournalPage,
   fetchJournalBlocks,
-  fetchJournal,
 };

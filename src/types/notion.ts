@@ -1,4 +1,5 @@
 import {
+  ListBlockChildrenResponse,
   PageObjectResponse,
   QueryDatabaseResponse,
 } from '@notionhq/client/build/src/api-endpoints';
@@ -36,12 +37,16 @@ export type JournalPageType = PageType<{
 
 export type BlockChildrenType = Awaited<
   ReturnType<(typeof notion)['blocks']['children']['list']>
->;
+>['results'];
 
-export type BlockType = Extract<
-  BlockChildrenType['results'][number],
-  { type: string }
+export type ListBlockChildrenType = Omit<
+  ListBlockChildrenResponse,
+  'results'
 > & {
+  results: BlockType[];
+};
+
+export type BlockType = Extract<BlockChildrenType[number], { type: string }> & {
   children?: BlockType[];
 };
 
