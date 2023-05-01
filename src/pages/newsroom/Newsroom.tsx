@@ -13,7 +13,7 @@ import { usePageTracking } from '@src/utils/analytics/usePageTracking';
 export const Newsroom = () => {
   usePageTracking('visit_newsroom');
 
-  const { data, isFetching, fetchNextPage } = useNewsroomQuery();
+  const { data, isFetchingNextPage, fetchNextPage } = useNewsroomQuery();
 
   return (
     <NewsroomContainer>
@@ -25,7 +25,7 @@ export const Newsroom = () => {
             <Journal key={journal.id} page={journal} />
           ))}
       </Layout>
-      {isFetching ? (
+      {isFetchingNextPage ? (
         <Spinner>
           <SpinnerCircular
             size={28}
