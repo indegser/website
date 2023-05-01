@@ -24,10 +24,10 @@ const generateSitemap = (journals: JournalPageType[]) =>
 `.trim();
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const { data } = await journalApi.fetchJournalList({ pageSize: 100 });
+  const { results } = await journalApi.queryJournalDatabase({ page_size: 100 });
 
   res.setHeader('Content-Type', 'text/xml');
-  res.write(generateSitemap(data));
+  res.write(generateSitemap(results));
   res.end();
 
   return { props: {} };

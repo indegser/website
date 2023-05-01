@@ -7,7 +7,7 @@ const handler = async (
   req: NextApiRequest,
   res: NextApiResponse<QueryDatabaseResponse>
 ) => {
-  const { args } = JSON.parse(req.body);
+  const args = JSON.parse(req.body);
   const result = await notion.databases.query(args);
   res.json(result);
 };

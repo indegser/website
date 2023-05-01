@@ -20,7 +20,7 @@ export const Newsroom = () => {
       <SEO title="홈" />
       <Layout>
         {data?.pages
-          .flatMap((result) => result.data)
+          .flatMap((page) => page.results)
           .map((journal) => (
             <Journal key={journal.id} page={journal} />
           ))}

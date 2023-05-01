@@ -4,21 +4,24 @@ import {
 } from '@tanstack/react-query';
 
 import { journalApi } from '@src/apis/journal';
+import { DatabaseType, JournalPageType } from '@src/types/notion';
 
 export const useNewsroomQuery = () => {
   return useInfiniteQuery(createNewsroomQueryConfig());
 };
 
-type X = ReturnType<(typeof journalApi)['fetchJournalList']>;
-
 export const createNewsroomQueryConfig = (): UseInfiniteQueryOptions<
-  Awaited<X>
+  DatabaseType<JournalPageType>
 > => ({
   queryKey: ['newsroom'],
-  queryFn: async ({ pageParam = 0 }) => {
-    return journalApi.fetchJournalList({ offset: pageParam, pageSize: 20 });
+  queryFn: async ({ pageParam: startCursor }) => {
+    return journalApi.queryJournalDatabase({
+      page_size: 20,
+      start_cursor: startCursor || undefined,
+    });
   },
+  refetchOnWindowFocus: false,
   getNextPageParam: (current) => {
-    return current.nextOffset;
+    return current.next_cursor || undefined;
   },
 });
