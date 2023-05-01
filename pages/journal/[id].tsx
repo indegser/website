@@ -1,40 +1,36 @@
 import { dehydrate, QueryClient } from '@tanstack/react-query';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
+import { journalApi } from '@src/apis/journal';
 import { JournalPage } from '@src/pages/journal/JournalPage';
-import { createJournalQueryConfig } from '@src/queries/useJournalQuery';
-import { supabase } from '@src/sdks/supabase';
+import { createPageContentQueryConfig } from '@src/queries/usePageContentQuery';
+import { createPageQueryConfig } from '@src/queries/usePageQuery';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const queryClient = new QueryClient();
 
   const id = context.params.id.toString();
-  const queryConfig = createJournalQueryConfig(id);
-  await queryClient.prefetchQuery(queryConfig);
+  await Promise.all([
+    queryClient.prefetchInfiniteQuery(createPageContentQueryConfig(id)),
+    queryClient.prefetchQuery(createPageQueryConfig(id)),
+  ]);
 
   return {
     props: {
       id,
-      dehydratedState: dehydrate(queryClient),
+      dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
     },
-    revalidate: 10, // Seconds
+    revalidate: 60, // Seconds
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await supabase
-    .from('journal')
-    .select('id')
-    .order('last_edited_time', { ascending: false })
-    .limit(50);
+  const { results } = await journalApi.queryJournalDatabase({ page_size: 50 });
 
-  const paths = data.map((item) => ({
-    params: { id: item.id },
+  const paths = results.map((page) => ({
+    params: { id: page.id },
   }));
 
-  // We'll pre-render only these paths at build time.
-  // { fallback: blocking } will server-render pages
-  // on-demand if the path doesn't exist.
   return { paths, fallback: 'blocking' };
 };
 
