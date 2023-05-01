@@ -1,6 +1,7 @@
 import { styled } from '@stitches/react';
 import dayjs from 'dayjs';
 import { useMemo } from 'react';
+import Balancer from 'react-wrap-balancer';
 
 import { useJournalMetadata } from './JournalPage.hooks';
 
@@ -29,7 +30,9 @@ export const JournalHeadline = (props: Props) => {
         <Metadata>
           <Property>{formattedLastEditedTime}</Property>
         </Metadata>
-        <Title>{title}</Title>
+        <Balancer>
+          <Title>{title}</Title>
+        </Balancer>
       </PageContent>
     </Section>
   );
