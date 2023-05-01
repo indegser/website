@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { results } = await journalApi.queryJournalDatabase({ page_size: 50 });
+  const { results } = await journalApi.queryJournalDatabase({ page_size: 20 });
 
   const paths = results.map((page) => ({
     params: { id: page.id },
