@@ -1,17 +1,17 @@
-import { styled } from '@src/design/theme/stitches.config';
+import styled from '@emotion/styled';
 
-export const PageContainer = styled('div', {
-  margin: '0 auto',
-  maxWidth: '980px',
-  padding: '0 22px',
-  position: 'relative',
-  boxSizing: 'content-box',
-  paddingLeft: 'max(22px,env(safe-area-inset-left))',
-  paddingRight: 'max(22px,env(safe-area-inset-right))',
-});
+export const PageContainer = styled.div`
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 22px;
+  position: relative;
+  box-sizing: content-box;
+  padding-left: max(22px, env(safe-area-inset-left));
+  padding-right: max(22px, env(safe-area-inset-right));
+`;
 
-export const PageContent = styled('div', {
-  maxWidth: 653,
-  margin: '0 auto',
-  boxSizing: 'border-box',
-});
+export const PageContent = styled.div`
+  max-width: 653px;
+  margin: 0 auto;
+  box-sizing: border-box;
+`;
