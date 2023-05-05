@@ -1,4 +1,5 @@
 import { dehydrate, QueryClient } from '@tanstack/react-query';
+import { get } from '@vercel/edge-config';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { IndexPage } from '@src/pages/index/IndexPage';
@@ -25,11 +26,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const ids = [
-    '82649fda5ba84801a464d7ef2f7552b3',
-    '22bb63060d624e398960b42c7afb7348',
-    '57dae7d18f6d4045956e894a03d6c81f',
-  ];
+  const indexes = await get<{ id: string }[]>('indexes');
+  const ids = indexes.map((index) => index.id);
 
   const paths = ids.map((id) => ({
     params: { database_id: id },
