@@ -11,7 +11,6 @@ const nextConfig = {
       process.env.NEXT_PUBLIC_SUPABASE_URL?.replace('https://', '') || '',
     ],
   },
-  redirects: async () => [],
   rewrites: async () => {
     return [
       {
