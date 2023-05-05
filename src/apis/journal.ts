@@ -28,15 +28,6 @@ const queryJournalDatabase = (
   });
 };
 
-const retrieveJournalPage = (id: string) => {
-  return notionApi.retrievePage({ page_id: id });
-};
-
-const fetchJournalBlocks = async (id: string) =>
-  notionApi.retrieveBlockChildren({ block_id: id });
-
 export const journalApi = {
   queryJournalDatabase,
-  retrieveJournalPage,
-  fetchJournalBlocks,
 };
