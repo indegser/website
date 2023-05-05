@@ -1,7 +1,7 @@
+import styled from '@emotion/styled';
 import Image from 'next/image';
 
 import { breakPoints } from '@src/design/theme/mediaQueries';
-import { styled } from '@src/design/theme/stitches.config';
 
 interface Props {
   alt: string;
@@ -28,7 +28,7 @@ export const RichItemThumbnail = (props: Props) => {
   );
 };
 
-const Container = styled('div', {
-  position: 'relative',
-  aspectRatio: `16 / 9`,
-});
+const Container = styled.div`
+  position: relative;
+  aspect-ratio: 16 / 9;
+`;
