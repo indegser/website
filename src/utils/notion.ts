@@ -1,7 +1,12 @@
 import { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
 
 import { notion } from '@src/sdks/notion';
-import { BlockType, CoverType, PropertyType } from '@src/types/notion';
+import {
+  BlockType,
+  CoverType,
+  PageType,
+  PropertyType,
+} from '@src/types/notion';
 
 const toString = (property: PropertyType<'formula'>) => {
   switch (property.formula.type) {
@@ -61,6 +66,15 @@ export const getNotionTitle = (
   titleProperty: Partial<PropertyType<'title'>>
 ) => {
   return titleProperty.title.map((text) => text.plain_text).join('');
+};
+
+export const getTitleFromPageProperties = (page: PageType) => {
+  const key = Object.keys(page.properties).find(
+    (key) => page.properties[key].type === 'title'
+  );
+
+  const prop = page.properties[key] as PropertyType<'title'>;
+  return getNotionTitle(prop);
 };
 
 export const getNotionContent = async (blockId: string) => {

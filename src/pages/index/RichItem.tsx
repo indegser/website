@@ -4,39 +4,34 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 import Balancer from 'react-wrap-balancer';
 
-import { JournalCover } from './JournalCover';
+import { RichItemThumbnail } from './RichItemThumbnail';
 
 import { Typography } from '@src/design/atoms/Typography';
-import { JournalPageType } from '@src/types/notion';
-import { getNotionFileUrl, getNotionTitle } from '@src/utils/notion';
+import { PageType } from '@src/types/notion';
+import {
+  getNotionFileUrl,
+  getTitleFromPageProperties,
+} from '@src/utils/notion';
 
 import 'dayjs/locale/ko';
 
 interface Props {
-  page: JournalPageType;
+  page: PageType;
 }
 
-export const Journal = (props: Props) => {
-  const {
-    page: { id, last_edited_time, properties },
-  } = props;
-
-  const titlePropKey = Object.keys(properties).find(
-    (key) => properties[key].type === 'title'
-  );
-
-  const titleProp = properties[titlePropKey];
+export const RichItem = ({ page }: Props) => {
+  const { id, last_edited_time } = page;
 
   const formattedLastEditedTime = useMemo(() => {
     return dayjs(last_edited_time).locale('ko').format('YYYY년 MMMM D일');
   }, [last_edited_time]);
 
-  const title = getNotionTitle(titleProp);
+  const title = getTitleFromPageProperties(page);
 
   return (
     <Link href={`/content/${id}`}>
       <Section>
-        <JournalCover src={getNotionFileUrl(props.page.cover)} alt={title} />
+        <RichItemThumbnail src={getNotionFileUrl(page.cover)} alt={title} />
         <Content>
           <Balancer>
             <Typography type="title">{title}</Typography>

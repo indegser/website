@@ -1,7 +1,7 @@
 import { InView } from 'react-intersection-observer';
 import { SpinnerCircular } from 'spinners-react';
 
-import { Journal } from './Journal';
+import { RichItem } from './RichItem';
 
 import { PageContainer } from '@src/design/atoms/Container';
 import { SEO } from '@src/design/atoms/SEO';
@@ -30,7 +30,7 @@ export const IndexPage = ({ id }: Props) => {
         {data?.pages
           .flatMap((page) => page.results)
           .map((journal) => (
-            <Journal key={journal.id} page={journal} />
+            <RichItem key={journal.id} page={journal} />
           ))}
       </Layout>
       {isFetchingNextPage ? (
