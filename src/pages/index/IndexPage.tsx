@@ -9,14 +9,16 @@ import { mq } from '@src/design/theme/mediaQueries';
 import { styled, theme } from '@src/design/theme/stitches.config';
 import { useDatabaseQuery } from '@src/queries/useDatabaseQuery';
 import { useIndexQuery } from '@src/queries/useIndexQuery';
+import { IndexConfigType } from '@src/types/indexes';
 import { usePageTracking } from '@src/utils/analytics/usePageTracking';
 import { getNotionTitle } from '@src/utils/notion';
 
 interface Props {
   id: string;
+  config: IndexConfigType;
 }
 
-export const IndexPage = ({ id }: Props) => {
+export const IndexPage = ({ id, config }: Props) => {
   usePageTracking('visit_index');
 
   const { data: index } = useIndexQuery(id);
@@ -30,7 +32,7 @@ export const IndexPage = ({ id }: Props) => {
         {data?.pages
           .flatMap((page) => page.results)
           .map((journal) => (
-            <RichItem key={journal.id} page={journal} />
+            <RichItem key={journal.id} page={journal} config={config} />
           ))}
       </Layout>
       {isFetchingNextPage ? (

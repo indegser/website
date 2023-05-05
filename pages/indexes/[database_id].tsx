@@ -5,11 +5,20 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { IndexPage } from '@src/pages/index/IndexPage';
 import { createDatabaseQueryConfig } from '@src/queries/useDatabaseQuery';
 import { createIndexQueryConfig } from '@src/queries/useIndexQuery';
+import { IndexConfigType } from '@src/types/indexes';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const queryClient = new QueryClient();
 
+  const indexes = await get<Array<IndexConfigType>>('indexes');
   const id = context.params.database_id.toString();
+  const config = indexes.find((index) => index.id === id);
+
+  if (!config) {
+    return {
+      notFound: true,
+    };
+  }
 
   await Promise.all([
     queryClient.fetchQuery(createIndexQueryConfig(id)),
@@ -19,6 +28,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       id,
+      config,
       dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
     },
     revalidate: 60, // Seconds

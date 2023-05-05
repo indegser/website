@@ -7,7 +7,8 @@ import Balancer from 'react-wrap-balancer';
 import { RichItemThumbnail } from './RichItemThumbnail';
 
 import { Typography } from '@src/design/atoms/Typography';
-import { PageType } from '@src/types/notion';
+import { IndexConfigType } from '@src/types/indexes';
+import { PageType, PropertyType } from '@src/types/notion';
 import {
   getNotionFileUrl,
   getTitleFromPageProperties,
@@ -17,9 +18,10 @@ import 'dayjs/locale/ko';
 
 interface Props {
   page: PageType;
+  config: IndexConfigType;
 }
 
-export const RichItem = ({ page }: Props) => {
+export const RichItem = ({ page, config }: Props) => {
   const { id, last_edited_time } = page;
 
   const formattedLastEditedTime = useMemo(() => {
@@ -28,8 +30,12 @@ export const RichItem = ({ page }: Props) => {
 
   const title = getTitleFromPageProperties(page);
 
+  const href = config.urlProperty
+    ? (page.properties[config.urlProperty] as PropertyType<'url'>).url
+    : `/content/${id}`;
+
   return (
-    <Link href={`/content/${id}`}>
+    <Link href={href}>
       <Section>
         <RichItemThumbnail src={getNotionFileUrl(page.cover)} alt={title} />
         <Content>

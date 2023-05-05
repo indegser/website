@@ -1,5 +1,7 @@
 // @ts-check
 
+const { get } = require('@vercel/edge-config');
+
 /**
  * @type {import('next').NextConfig}
  */
@@ -12,10 +14,15 @@ const nextConfig = {
     ],
   },
   rewrites: async () => {
+    const indexes = await get('indexes');
+    if (!indexes) return [];
+
+    const { id } = indexes[0];
+
     return [
       {
         source: '/',
-        destination: '/indexes/82649fda5ba84801a464d7ef2f7552b3',
+        destination: `/indexes/${id}`,
       },
     ];
   },
