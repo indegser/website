@@ -1,3 +1,4 @@
+import { Global } from '@emotion/react';
 import {
   Hydrate,
   QueryClient,
@@ -17,10 +18,9 @@ import { BaseApp } from '@src/pages/BaseApp';
 const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
-  globalStyles();
-
   return (
     <>
+      <Global styles={globalStyles} />
       <QueryClientProvider client={queryClient}>
         <Hydrate state={pageProps.dehydratedState}>
           <BaseApp>
