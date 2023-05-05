@@ -1,4 +1,4 @@
-import { styled } from '@stitches/react';
+import styled from '@emotion/styled';
 import { InView } from 'react-intersection-observer';
 import { SpinnerCircular } from 'spinners-react';
 
@@ -49,21 +49,20 @@ export const NotionContent = ({ id }: Props) => {
   );
 };
 
-const Article = styled('article', {
-  fontSize: 16,
-  lineHeight: '26px',
-  letterSpacing: '-0.008em',
-  fontWeight: 450,
-  color: theme.colors.gray12,
+const Article = styled.article`
+  font-size: 16px;
+  line-height: 1.625;
+  letter-spacing: -0.008em;
+  font-weight: 450;
+  color: ${theme.colors.gray12.computedValue};
 
-  [mq('sm')]: {
-    fontSize: 18,
-    lineHeight: '28px',
-  },
-});
+  ${mq('sm')} {
+    font-size: 18;
+  }
+`;
 
-const Spinner = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  padding: '24px 0',
-});
+const Spinner = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+`;

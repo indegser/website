@@ -1,4 +1,4 @@
-import { styled } from '@stitches/react';
+import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import { useMemo } from 'react';
 import Balancer from 'react-wrap-balancer';
@@ -38,47 +38,43 @@ export const JournalHeadline = (props: Props) => {
   );
 };
 
-const Section = styled('section', {
-  padding: '50px 0 10px',
-  marginBottom: '40px',
+const Section = styled.section`
+  padding: 50px 0 10px;
+  margin-bottom: 40px;
 
-  [mq('sm')]: {
-    paddingTop: 30,
-    marginBottom: 20,
-  },
-});
+  ${mq('sm')} {
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+`;
 
-const Metadata = styled('div', {
-  display: 'grid',
-  gridAutoFlow: 'column',
-  gridAutoColumns: 'max-content',
-  gridGap: '0 12px',
-  alignItems: 'center',
-  paddingBottom: 12,
-  userSelect: 'none',
+const Metadata = styled.div`
+  display: grid;
+  grid-gap: 0 12px;
+  padding-bottom: 12px;
 
-  [mq('sm')]: {
-    paddingBottom: 6,
-  },
-});
+  ${mq('sm')} {
+    padding-bottom: 6px;
+  }
+`;
 
-const Title = styled('h1', {
-  margin: 0,
-  fontWeight: 800,
-  fontSize: 48,
-  letterSpacing: `-0.025em`,
-  lineHeight: 1.15,
-  color: theme.colors.gray12,
-  wordBreak: 'keep-all',
+const Title = styled.h1`
+  margin: 0;
+  font-weight: 800;
+  font-size: 48px;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #000;
+  word-break: keep-all;
 
-  [mq('sm')]: {
-    fontSize: 36,
-    letterSpacing: '-0.015em',
-  },
-});
+  ${mq('sm')} {
+    font-size: 36px;
+    letter-spacing: -0.015em;
+  }
+`;
 
-const Property = styled('div', {
-  fontSize: 14,
-  fontWeight: 500,
-  color: theme.colors.gray11,
-});
+const Property = styled.div`
+  font-size: 14px;
+  font-weight: 500;
+  color: ${theme.colors.gray11.computedValue};
+`;

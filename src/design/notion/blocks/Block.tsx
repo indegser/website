@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { takeRightWhile } from 'lodash-es';
 
 import { BookmarkBlock } from './bookmark/BookmarkBlock';
@@ -15,8 +16,6 @@ import { VideoBlock } from './VideoBlock';
 import { PageContent } from '@src/design/atoms/Container';
 import { convertApiColorToStyleProps } from '@src/design/notion/convertApiColorToStyleProps';
 import { RichText } from '@src/design/notion/RichText';
-import { mq } from '@src/design/theme/mediaQueries';
-import { styled } from '@src/design/theme/stitches.config';
 import { AnnotationColorType, BlockType } from '@src/types/notion';
 
 interface Props {
@@ -171,21 +170,10 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
   );
 };
 
-const ColumnGrid = styled(PageContent, {
-  display: 'grid',
-  columnGap: 20,
-  gridAutoFlow: 'column',
-  gridAutoColumns: '1fr',
+const Section = styled.div`
+  margin-bottom: 1em;
+`;
 
-  [mq('sm')]: {
-    display: 'block',
-  },
-});
-
-const Section = styled('div', {
-  marginBottom: '1em',
-});
-
-const ChildSection = styled(PageContent, {
-  paddingLeft: '27px',
-});
+const ChildSection = styled(PageContent)`
+  padding-left: 27px;
+`;

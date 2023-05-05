@@ -1,4 +1,4 @@
-import { styled } from '@stitches/react';
+import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import { useMemo } from 'react';
@@ -51,22 +51,22 @@ export const RichItem = ({ page, config }: Props) => {
   );
 };
 
-const Section = styled('section', {
-  display: 'grid',
-  gap: '8px',
-  gridAutoRows: 'max-content',
-});
+const Section = styled.section`
+  display: grid;
+  gap: 8px;
+  grid-auto-rows: max-content;
+`;
 
-const Content = styled('div', {
-  gap: 4,
-  display: 'grid',
-});
+const Content = styled.div`
+  gap: 4px;
+  display: grid;
+`;
 
-const Metadata = styled('div', {
-  display: 'grid',
-  gridAutoFlow: 'column',
-  gridAutoColumns: 'max-content',
-  gridGap: '0 12px',
-  alignItems: 'center',
-  userSelect: 'none',
-});
+const Metadata = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 0 12px;
+  align-items: center;
+  user-select: none;
+`;
