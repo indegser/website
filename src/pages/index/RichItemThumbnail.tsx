@@ -8,7 +8,7 @@ interface Props {
   src?: string;
 }
 
-export const JournalCover = (props: Props) => {
+export const RichItemThumbnail = (props: Props) => {
   const { src, alt } = props;
 
   if (!src) return null;
@@ -19,6 +19,7 @@ export const JournalCover = (props: Props) => {
         src={src}
         alt={alt}
         fill
+        priority
         style={{ objectFit: 'cover' }}
         sizes={`(max-width: ${breakPoints.sm}px) 100vw,
               33vw"`}

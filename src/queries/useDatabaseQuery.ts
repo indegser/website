@@ -36,7 +36,6 @@ export const createDatabaseQueryConfig = (
         : undefined,
     });
   },
-  refetchOnWindowFocus: false,
   getNextPageParam: (current) => {
     return current.next_cursor || undefined;
   },
