@@ -15,7 +15,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/index/82649fda5ba84801a464d7ef2f7552b3',
+        destination: '/indexes/82649fda5ba84801a464d7ef2f7552b3',
       },
     ];
   },
