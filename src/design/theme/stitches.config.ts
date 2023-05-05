@@ -15,6 +15,10 @@ import {
   crimson,
 } from '@radix-ui/colors';
 import { createStitches } from '@stitches/react';
+import localFont from 'next/font/local';
+
+// Font files can be colocated inside of `pages`
+const font = localFont({ src: './PretendardVariable.woff2' });
 
 export const {
   styled,
@@ -53,7 +57,7 @@ export const {
       codeString: green.green10,
     },
     fonts: {
-      sans: `"Pretendard Variable", --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"`,
+      sans: `${font.style.fontFamily}, --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"`,
       mono: `'JetBrains Mono', "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
     },
   },
