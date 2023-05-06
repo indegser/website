@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { RichText } from '@src/design/notion/RichText';
 import { RichTextItemResponse } from '@src/types/notion';
 
@@ -39,4 +40,4 @@ const Heading = styled.h1`
   &[data-level='3'] {
     font-size: 1.15em;
   }
-
+`;
