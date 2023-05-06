@@ -1,24 +1,11 @@
+import styled from '@emotion/styled';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import { SiNotion, SiTwitter, SiGithub } from 'react-icons/si';
 
-import { styled, theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme/stitches.config';
 
 const snsList = [
-  // {
-  //   key: "email",
-  //   link: "mailto:indegser@gmail.com",
-  //   alt: "indegser",
-  //   icon: <SiGmail />,
-  //   onClick: (event: MouseEvent<HTMLAnchorElement>) => {
-  //     event.preventDefault();
-  //     copyTextToClipboard("indegser@gmail.com");
-  //     toast.success("Copied E-mail address to clipboard!", {
-  //       icon: "😃",
-  //       style: { fontSize: 14 },
-  //     });
-  //   },
-  // },
   {
     key: 'twitter',
     link: 'https://twitter.com/indegser',
@@ -54,35 +41,34 @@ export const Sns = () => {
   );
 };
 
-const Links = styled('div', {
-  display: 'grid',
-  gridAutoFlow: 'column',
-  gridAutoColumns: 'max-content',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gridGap: '8px',
-  position: 'relative',
-  gridArea: 'sns',
-});
+const Links = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  grid-area: sns;
+`;
 
-const LinkIcon = styled('div', {
-  padding: '4px',
-  color: theme.colors.gray10,
-  fill: theme.colors.gray10,
+const LinkIcon = styled.div`
+  padding: 4px;
+  color: ${theme.colors.gray10.computedValue};
+  fill: currentColor;
 
-  ['& svg']: {
-    display: 'block',
-  },
+  & svg {
+    display: block;
+  }
 
-  ['&:hover']: {
-    color: theme.colors.gray12,
-    fill: theme.colors.gray12,
-  },
-});
+  &:hover {
+    color: ${theme.colors.gray12.computedValue};
+  }
+`;
 
-const MidDot = styled('div', {
-  width: 2,
-  height: 2,
-  background: theme.colors.gray10,
-  borderRadius: '999rem',
-});
+const MidDot = styled.div`
+  width: 2px;
+  height: 2px;
+  background: ${theme.colors.gray10.computedValue};
+  border-radius: 999rem;
+`;

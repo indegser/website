@@ -4,5 +4,7 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "editor.scrollBeyondLastLine": false,
-  "editor.codeActionsOnSave": ["source.fixAll.eslint"]
+  "editor.codeActionsOnSave": [
+    "source.fixAll.eslint"
+  ]
 }

@@ -1,4 +1,5 @@
 import { Global } from '@emotion/react';
+import styled from '@emotion/styled';
 import {
   Hydrate,
   QueryClient,
@@ -12,7 +13,6 @@ import Head from 'next/head';
 import { Footer } from '@src/design/organs/footer/Footer';
 import { Nav } from '@src/design/organs/nav/Nav';
 import { globalStyles } from '@src/design/theme/globalStyles';
-import { styled } from '@src/design/theme/stitches.config';
 import { BaseApp } from '@src/pages/BaseApp';
 
 const queryClient = new QueryClient();
@@ -51,8 +51,10 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 }
 
-const Page = styled('div', {
-  width: '100%',
-});
+const Page = styled.div`
+  width: 100%;
+`;
 
-const Main = styled('div', { minHeight: '100vh' });
+const Main = styled.div`
+  min-height: 100vh;
+`;

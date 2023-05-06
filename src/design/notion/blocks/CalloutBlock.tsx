@@ -1,9 +1,10 @@
+import styled from '@emotion/styled';
+
 import { NotionIcon } from './NotionIcon';
 
 import { PageContent } from '@src/design/atoms/Container';
 import { convertApiColorToStyleProps } from '@src/design/notion/convertApiColorToStyleProps';
 import { RichText } from '@src/design/notion/RichText';
-import { styled } from '@src/design/theme/stitches.config';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -28,9 +29,9 @@ export const CalloutBlock = ({ block }: Props) => {
   );
 };
 
-const Container = styled('div', {
-  padding: 16,
-  paddingLeft: 12,
-  display: 'flex',
-  borderRadius: 3,
-});
+const Container = styled.div`
+  padding: 16px;
+  padding-left: 12px;
+  display: flex;
+  border-radius: 3px;
+`;

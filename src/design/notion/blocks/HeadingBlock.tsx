@@ -1,5 +1,5 @@
+import styled from '@emotion/styled';
 import { RichText } from '@src/design/notion/RichText';
-import { styled } from '@src/design/theme/stitches.config';
 import { RichTextItemResponse } from '@src/types/notion';
 
 interface Props {
@@ -20,21 +20,23 @@ export const HeadingBlock = ({ level, heading }: Props) => {
   );
 };
 
-const Heading = styled('h1', {
-  fontWeight: 600,
-  lineHeight: 1.25,
-  marginBottom: 0,
+const Heading = styled.h1`
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0;
 
-  ['&[data-level="1"]']: {
-    marginTop: 50,
-    fontWeight: 700,
-    fontSize: '1.65em',
-  },
-  ['&[data-level="2"]']: {
-    fontSize: '1.25em',
-    marginTop: 50,
-  },
-  ['&[data-level="3"]']: {
-    fontSize: '1.15em',
-  },
-});
+  &[data-level='1'] {
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 1.65em;
+  }
+
+  &[data-level='2'] {
+    font-size: 1.25em;
+    margin-top: 50px;
+  }
+
+  &[data-level='3'] {
+    font-size: 1.15em;
+  }
+

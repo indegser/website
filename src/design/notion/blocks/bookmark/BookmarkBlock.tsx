@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
 import { motion } from 'framer-motion';
 
@@ -5,7 +6,7 @@ import { useBookmarkBlock } from './BookmarkBlock.hooks';
 import { Caption } from '../Caption';
 
 import { mediaQueries } from '@src/design/theme/mediaQueries';
-import { styled, theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme/stitches.config';
 
 interface Props {
   url: string;
@@ -40,92 +41,90 @@ export const BookmarkBlock = (props: Props) => {
   );
 };
 
-const Figure = styled('figure', {
-  margin: '1.65em 0',
-});
+const Figure = styled.figure`
+  margin: 1.65em 0;
+`;
 
-const Container = styled(motion.div, {
-  boxShadow: `0 0 0 1px ${theme.colors.gray6}`,
-  display: 'flex',
-  margin: '8px 0',
-  cursor: 'pointer',
-  borderRadius: 1,
-  overflow: 'hidden',
-  transition: '.2s background ease',
-  position: 'relative',
+const Container = styled(motion.div)`
+  display: flex;
+  cursor: pointer;
+  margin: 8px 0;
+  border-radius: 1px;
+  overflow: hidden;
+  transition: 0.2s background ease;
+  position: relative;
+  box-shadow: 0 0 0 1px ${theme.colors.gray6.computedValue};
 
-  [mediaQueries.hoverable]: {
-    ['&:hover']: {
-      background: theme.colors.gray3,
-    },
-  },
-});
+  ${mediaQueries.hoverable} {
+    &:hover {
+      background: ${theme.colors.gray3.computedValue};
+    }
+  }
+`;
 
-const Metadata = styled('div', {
-  flex: '4 1',
-  padding: 16,
-  position: 'relative',
-  boxSizing: 'border-box',
-  overflow: 'hidden',
-});
+const Metadata = styled.div`
+  flex: 4 1;
+  padding: 16px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+`;
 
-const Title = styled('div', {
-  fontSize: 14,
-  lineHeight: '22px',
-  height: '22px',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  marginBottom: 2,
-  color: theme.colors.gray12,
+const Title = styled.div`
+  font-size: 14px;
+  line-height: 22px;
+  height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 2px;
+  color: ${theme.colors.gray12.computedValue};
 
-  ['&:empty']: {
-    background: theme.colors.gray6,
-    borderRadius: 4,
-  },
-});
+  &:empty {
+    background: ${theme.colors.gray6.computedValue};
+    border-radius: 4px;
+  }
+`;
 
-const Desc = styled('div', {
-  fontSize: 13,
-  lineHeight: '17px',
-  letterSpacing: '0em',
-  color: theme.colors.gray11,
-  display: '-webkit-box',
-  '-webkit-box-orient': 'vertical',
-  '-webkit-line-clamp': 2,
-  overflow: 'hidden',
-  marginBottom: 4,
+const Desc = styled.div`
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 0;
+  color: ${theme.colors.gray11.computedValue};
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 4px;
 
-  ['&:empty']: {
-    background: theme.colors.gray6,
-    borderRadius: 4,
-    height: 17,
-  },
-});
+  &:empty {
+    background: ${theme.colors.gray6.computedValue};
+    border-radius: 4px;
+    height: 17px;
+  }
+`;
 
-const Url = styled('div', {
-  display: 'flex',
-  alignItems: 'center',
-  fontSize: 12,
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  color: theme.colors.gray10,
+const Url = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: ${theme.colors.gray10.computedValue};
+`;
 
-  ['& img']: {},
-});
+const UrlText = styled.div`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 15px;
+  letter-spacing: 0;
+`;
 
-const UrlText = styled('div', {
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  lineHeight: '15px',
-  letterSpacing: 0,
-});
-
-const Cover = styled('div', {
-  flex: '1 1 100px',
-  backgroundSize: 'cover',
-  backgroundPosition: '50% 50%',
-  backgroundColor: theme.colors.gray6,
-});
+const Cover = styled.div`
+  flex: 1 1 100px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: ${theme.colors.gray6.computedValue};
+`;

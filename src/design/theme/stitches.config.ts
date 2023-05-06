@@ -21,7 +21,7 @@ import localFont from 'next/font/local';
 const font = localFont({ src: './PretendardVariable.woff2' });
 
 export const {
-  styled,
+  styled: legacy,
   css,
   globalCss,
   keyframes,

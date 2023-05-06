@@ -1,9 +1,10 @@
+import styled from '@emotion/styled';
 import Link from 'next/link';
 
 import { PageContent } from '@src/design/atoms/Container';
 import { Row } from '@src/design/atoms/Row';
 import { RichText } from '@src/design/notion/RichText';
-import { styled, theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme/stitches.config';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -66,20 +67,24 @@ export const TocBlock = ({ blocks }: Props) => {
   );
 };
 
-const TocRow = styled(Row, {
-  padding: '2px 8px 3px 0px',
-  display: 'flex',
-  alignItems: 'center',
-});
+const TocRow = styled(Row)`
+  padding: 2px 8px 3px 0px;
+  display: flex;
+  align-items: center;
+`;
 
-const TextWrapper = styled('div', {
-  backgroundImage: `linear-gradient(to right, ${theme.colors.gray7} 0%, ${theme.colors.gray7} 100%)`,
-  backgroundRepeat: `repeat-x`,
-  backgroundPosition: `0px 100%`,
-  backgroundSize: `100% 1px`,
-  color: theme.colors.gray11,
-  fontSize: 14,
-  lineHeight: 1.4,
-  letterSpacing: 0,
-  marginLeft: 4,
-});
+const TextWrapper = styled.div`
+  background-image: linear-gradient(
+    to right,
+    ${theme.colors.gray7.computedValue} 0%,
+    ${theme.colors.gray7.computedValue} 100%
+  );
+  background-repeat: repeat-x;
+  background-position: 0px 100%;
+  background-size: 100% 1px;
+  color: ${theme.colors.gray11.computedValue};
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  margin-left: 4px;
+`;

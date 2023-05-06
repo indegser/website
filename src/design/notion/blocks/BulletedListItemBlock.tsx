@@ -1,5 +1,6 @@
+import styled from '@emotion/styled';
+
 import { RichText } from '@src/design/notion/RichText';
-import { styled } from '@src/design/theme/stitches.config';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -23,27 +24,27 @@ export const BulletedListItemBlock = ({ depth, block }: Props) => {
   );
 };
 
-const Container = styled('div', {
-  display: 'flex',
-  alignItems: 'start',
-  paddingLeft: 2,
-  width: '100%',
-});
+const Container = styled.div`
+  display: flex;
+  align-items: start;
+  padding-left: 2px;
+  width: 100%;
+`;
 
-const Marker = styled('div', {
-  width: 24,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: `25px`,
-  marginRight: 2,
-  lineHeight: `25px`,
-  fontSize: `1.15em`,
-});
+const Marker = styled.div`
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  margin-right: 2px;
+  line-height: 25px;
+  font-size: 1.15em;
+`;
 
-const Content = styled('div', {
-  flex: '1 1 0px',
-  minWidth: 1,
-  display: 'flex',
-  flexDirection: 'column',
-});
+const Content = styled.div`
+  flex: 1 1 0px;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+`;
