@@ -1,9 +1,13 @@
 import { css } from '@emotion/react';
 
-import { theme } from './stitches.config';
+import { cssText, theme } from './stitches.config';
 
 export const globalStyles = css`
   @import 'https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap';
+
+  :root {
+    ${cssText};
+  }
 
   html {
     font-size: 16px;
