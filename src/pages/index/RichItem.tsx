@@ -14,8 +14,6 @@ import {
   getTitleFromPageProperties,
 } from '@src/utils/notion';
 
-import 'dayjs/locale/ko';
-
 interface Props {
   page: PageType;
   config: IndexConfigType;
@@ -25,7 +23,7 @@ export const RichItem = ({ page, config }: Props) => {
   const { id, last_edited_time } = page;
 
   const formattedLastEditedTime = useMemo(() => {
-    return dayjs(last_edited_time).locale('ko').format('YYYY년 MMMM D일');
+    return dayjs(last_edited_time).format('LL');
   }, [last_edited_time]);
 
   const title = getTitleFromPageProperties(page);

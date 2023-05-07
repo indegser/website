@@ -1,5 +1,6 @@
 import { Global } from '@emotion/react';
 import styled from '@emotion/styled';
+import dayjs from 'dayjs';
 import {
   Hydrate,
   QueryClient,
@@ -16,6 +17,12 @@ import { globalStyles } from '@src/design/theme/globalStyles';
 import { BaseApp } from '@src/pages/BaseApp';
 
 const queryClient = new QueryClient();
+
+import 'dayjs/locale/ko';
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+
+dayjs.locale('ko');
+dayjs.extend(localizedFormat)
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
