@@ -1,6 +1,7 @@
+import styled from '@emotion/styled';
 import { PropsWithChildren } from 'react';
 
-import { styled, theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme/stitches.config';
 
 interface Props {
   link: { url: string } | null;
@@ -17,12 +18,12 @@ export const RichTextWithLink = ({
   return <Link href={link.url}>{children}</Link>;
 };
 
-const Link = styled('a', {
-  cursor: 'pointer',
-  textDecoration: 'none',
-  color: theme.colors.blue11,
+const Link = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+  color: ${theme.colors.blue11.computedValue};
 
-  ['&:hover']: {
-    textDecoration: 'underline',
-  },
-});
+  & hover {
+    text-decoration: underline;
+  }
+`;

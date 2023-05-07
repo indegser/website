@@ -1,10 +1,12 @@
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { Fragment, ReactElement, ReactNode } from 'react';
 import { toArray } from 'react-emoji-render';
 
 import { convertApiColorToStyleProps } from './convertApiColorToStyleProps';
 import { RichTextWithLink } from './RichTextWithLink';
 
-import { styled, theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme/stitches.config';
 import { RichTextItemResponse } from '@src/types/notion';
 
 interface Props {
@@ -64,49 +66,58 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
   );
 };
 
-const Text = styled('span', {
-  boxDecorationBreak: 'clone',
-  display: 'inline',
-  whiteSpace: 'pre-line',
+type TextProps = {
+  code?: boolean;
+  bold?: boolean;
+  italic?: boolean;
+  underline?: boolean;
+  strikethrough?: boolean;
+};
 
-  variants: {
-    code: {
-      true: {
-        fontFamily: theme.fonts.mono,
-        borderRadius: 3,
-        fontSize: '85%',
-        padding: '0.2em 0.4em',
-        background: theme.colors.green4,
-        color: theme.colors.green11,
-      },
-    },
-    bold: {
-      true: {
-        fontWeight: 700,
-      },
-    },
-    italic: {
-      true: {
-        fontStyle: 'italic',
-      },
-    },
-    underline: {
-      true: {
-        textDecoration: 'underline',
-      },
-    },
-    strikethrough: {
-      true: {
-        textDecoration: 'line-through',
-      },
-    },
-  },
-});
+const Text = styled.span<TextProps>`
+  box-decoration-break: clone;
+  display: inline;
+  white-space: pre-line;
 
-const EmojiIcon = styled('span', {
-  fontFamily:
-    '"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols',
-  lineHeight: 1,
-  whiteSpace: 'nowrap',
-  fontSize: '1em',
-});
+  ${({ code }) =>
+    code &&
+    css`
+      font-family: ${theme.fonts.sans.computedValue};
+      border-radius: 3px;
+      font-size: 85%;
+      padding: 0.2em 0.4em;
+      background: ${theme.colors.green4.computedValue};
+      color: ${theme.colors.green11.computedValue};
+    `}
+  ${({ bold }) =>
+    bold &&
+    css`
+      font-weight: 700;
+    `}
+
+  ${({ italic }) =>
+    italic &&
+    css`
+      font-style: italic;
+    `}
+
+  ${({ underline }) =>
+    underline &&
+    css`
+      text-decoration: underline;
+    `}
+
+  ${({ strikethrough }) =>
+    strikethrough &&
+    css`
+      text-decoration: line-through;
+    `}
+`;
+
+const EmojiIcon = styled.span`
+  line-height: 1;
+  white-space: nowrap;
+  font-size: 1em;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji,
+    'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols;
+`;

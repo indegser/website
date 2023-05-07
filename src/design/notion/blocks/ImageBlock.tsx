@@ -1,9 +1,10 @@
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { useCallback, useEffect, useState } from 'react';
 
 import { Caption } from './Caption';
 
 import { mq } from '@src/design/theme/mediaQueries';
-import { styled } from '@src/design/theme/stitches.config';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -60,49 +61,49 @@ export const ImageBlock = ({ block }: Props) => {
   );
 };
 
-const Container = styled('div', {
-  margin: '44px 0',
+const Container = styled.div`
+  margin: 44px 0;
+  ${mq('sm')} {
+    margin-left: calc(-1 * max(22px, env(safe-area-inset-left)));
+    margin-right: calc(-1 * max(22px, env(safe-area-inset-right)));
+  }
+`;
 
-  [mq('sm')]: {
-    marginLeft: 'calc(-1 * max(22px,env(safe-area-inset-left)))',
-    marginRight: 'calc(-1 * max(22px,env(safe-area-inset-right)))',
-  },
-});
+const ImageLayout = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-const ImageLayout = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-});
+const ImageElement = styled.img<{ layout: 'x' | 'y' }>`
+  display: block;
+  border-radius: 8px;
 
-const ImageElement = styled('img', {
-  display: 'block',
-  borderRadius: '8px',
+  ${({ layout }) =>
+    layout === 'x' &&
+    css`
+      max-width: 100%;
+      height: auto;
+    `}
 
-  variants: {
-    layout: {
-      x: {
-        maxWidth: '100%',
-        height: 'auto',
-      },
-      y: {
-        width: 'auto',
-        maxHeight: '80vh',
-      },
-    },
-  },
+  ${({ layout }) =>
+    layout === 'y' &&
+    css`
+      width: auto;
+      max-height: 80vh;
+    `}
 
-  [mq('sm')]: {
-    borderRadius: 0,
-    width: '100% !important',
-    height: 'auto !important',
-    maxWidth: 'auto !important',
-    maxHeight: 'auto !important',
-  },
-});
+  ${mq('sm')} {
+    border-radius: 0px;
+    width: 100% !important;
+    height: auto !important;
+    max-width: auto !important;
+    max-height: auto !important;
+  }
+`;
 
-const CaptionContainer = styled('div', {
-  [mq('sm')]: {
-    marginLeft: 'max(22px,env(safe-area-inset-left))',
-    marginRight: 'max(22px,env(safe-area-inset-right))',
-  },
-});
+const CaptionContainer = styled.div`
+  ${mq('sm')} {
+    margin-left: max(22px, env(safe-area-inset-left));
+    margin-right: max(22px, env(safe-area-inset-right));
+  }
+`;

@@ -1,5 +1,6 @@
+import styled from '@emotion/styled';
+
 import { RichText } from '@src/design/notion/RichText';
-import { styled } from '@src/design/theme/stitches.config';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -18,16 +19,16 @@ export const QuoteBlock = ({ block }: Props) => {
   );
 };
 
-const Container = styled('div', {
-  margin: '4px 0',
-});
+const Container = styled.div`
+  margin: 4px 0;
+`;
 
-const Content = styled('div', {
-  padding: '3px 2px',
-  display: 'flex',
-});
+const Content = styled.div`
+  padding: 3px 2px;
+  display: flex;
+`;
 
-const Text = styled('div', {
-  padding: '0 0 0 14px',
-  borderLeft: '3px solid currentColor',
-});
+const Text = styled.div`
+  padding-left: 14px;
+  border-left: 3px solid currentColor;
+`;

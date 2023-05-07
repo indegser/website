@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import { PrismLight as Highlighter } from 'react-syntax-highlighter';
 import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 
@@ -6,7 +7,7 @@ Highlighter.registerLanguage('typescript', tsx);
 import { codeStyle } from './CodeBlock.style';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { styled, theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme/stitches.config';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -36,22 +37,22 @@ export const CodeBlock = ({ block }: Props) => {
   );
 };
 
-const Container = styled('div', {
-  fontSize: '80%',
-  tabSize: 2,
-  whiteSpace: 'pre',
-  padding: '12px 16px 24px 16px',
-  background: theme.colors.gray3,
-  borderRadius: 3,
-  ['& pre']: {
-    ['&::-webkit-scrollbar']: {
-      display: 'none',
-    },
-  },
-});
+const Container = styled.div`
+  font-size: 80%;
+  tab-size: 2;
+  white-space: pre;
+  padding: 12px 16px 24px 16px;
+  background: ${theme.colors.gray3.computedValue};
+  border-radius: 3px;
+  & pre {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+`;
 
-const Language = styled('div', {
-  color: theme.colors.gray10,
-  fontSize: '80%',
-  letterSpacing: 0,
-});
+const Language = styled.div`
+  color: ${theme.colors.gray10.computedValue};
+  font-size: 80%;
+  letter-spacing: 0;
+`;
