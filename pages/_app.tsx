@@ -1,6 +1,5 @@
 import { Global } from '@emotion/react';
 import styled from '@emotion/styled';
-import dayjs from 'dayjs';
 import {
   Hydrate,
   QueryClient,
@@ -8,6 +7,8 @@ import {
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Analytics } from '@vercel/analytics/react';
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -19,10 +20,9 @@ import { BaseApp } from '@src/pages/BaseApp';
 const queryClient = new QueryClient();
 
 import 'dayjs/locale/ko';
-import localizedFormat from 'dayjs/plugin/localizedFormat'
 
 dayjs.locale('ko');
-dayjs.extend(localizedFormat)
+dayjs.extend(localizedFormat);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
