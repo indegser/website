@@ -20,7 +20,7 @@ export const JournalHeadline = (props: Props) => {
   );
 
   const formattedLastEditedTime = useMemo(() => {
-    return dayjs(lastEditedTime).locale('en').format('MMMM D, YYYY');
+    return dayjs(lastEditedTime).format('LLL');
   }, [lastEditedTime]);
 
   return (

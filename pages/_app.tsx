@@ -7,6 +7,8 @@ import {
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Analytics } from '@vercel/analytics/react';
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -16,6 +18,11 @@ import { globalStyles } from '@src/design/theme/globalStyles';
 import { BaseApp } from '@src/pages/BaseApp';
 
 const queryClient = new QueryClient();
+
+import 'dayjs/locale/ko';
+
+dayjs.locale('ko');
+dayjs.extend(localizedFormat);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
