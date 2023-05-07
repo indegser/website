@@ -11,15 +11,12 @@ interface Props {
 export const RichItemThumbnail = (props: Props) => {
   const { src, alt } = props;
 
-  if (!src) return null;
-
   return (
     <Container>
       <Image
-        src={src}
+        src={src || `/api/image?title=${alt}`}
         alt={alt}
         fill
-        priority
         style={{ objectFit: 'cover' }}
         sizes={`(max-width: ${breakPoints.sm}px) 100vw,
               33vw"`}
