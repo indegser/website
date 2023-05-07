@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import { useMemo } from 'react';
 import Balancer from 'react-wrap-balancer';
 
-import { useJournalMetadata } from './JournalPage.hooks';
+import { useJournalMetadata } from './ContentPage.hooks';
 
 import { PageContent } from '@src/design/atoms/Container';
 import { SEO } from '@src/design/atoms/SEO';
@@ -14,7 +14,7 @@ interface Props {
   id: string;
 }
 
-export const JournalHeadline = (props: Props) => {
+export const ContentHeadline = (props: Props) => {
   const { title, description, image, lastEditedTime } = useJournalMetadata(
     props.id
   );

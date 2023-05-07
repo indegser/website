@@ -9,10 +9,7 @@ import { RichItemThumbnail } from './RichItemThumbnail';
 import { Typography } from '@src/design/atoms/Typography';
 import { IndexConfigType } from '@src/types/indexes';
 import { PageType, PropertyType } from '@src/types/notion';
-import {
-  getNotionFileUrl,
-  getTitleFromPageProperties,
-} from '@src/utils/notion';
+import { getNotionFileUrl, notionUtils } from '@src/utils/notion';
 
 interface Props {
   page: PageType;
@@ -26,7 +23,7 @@ export const RichItem = ({ page, config }: Props) => {
     return dayjs(last_edited_time).format('LL');
   }, [last_edited_time]);
 
-  const title = getTitleFromPageProperties(page);
+  const title = notionUtils.getTitle(page);
 
   const href = config.urlProperty
     ? (page.properties[config.urlProperty] as PropertyType<'url'>).url

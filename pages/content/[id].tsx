@@ -2,7 +2,7 @@ import { dehydrate, QueryClient } from '@tanstack/react-query';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { journalApi } from '@src/apis/journal';
-import { JournalPage } from '@src/pages/journal/JournalPage';
+import { ContentPage } from '@src/pages/content/ContentPage';
 import { createPageContentQueryConfig } from '@src/queries/usePageContentQuery';
 import { createPageQueryConfig } from '@src/queries/usePageQuery';
 
@@ -34,4 +34,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: 'blocking' };
 };
 
-export default JournalPage;
+export default ContentPage;

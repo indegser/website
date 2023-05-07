@@ -1,4 +1,4 @@
-import { getNotionFileUrl, getNotionTitle } from '../notion';
+import { getNotionFileUrl, notionUtils } from '../notion';
 
 import { BlockType, JournalPageType } from '@src/types/notion';
 
@@ -28,7 +28,7 @@ export const getMetaFromNotionPage = (
   const {
     id,
     cover,
-    properties: { Title, Description },
+    properties: { Description },
   } = page;
 
   const image =
@@ -36,7 +36,7 @@ export const getMetaFromNotionPage = (
 
   return {
     id,
-    title: getNotionTitle(Title),
+    title: notionUtils.getTitle(page),
     description: Description?.rich_text[0]?.plain_text ?? '',
     image,
     lastEditedTime: page.last_edited_time,
