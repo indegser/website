@@ -12,9 +12,9 @@ import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import { globalStyles } from '@src/design/globalStyles';
 import { Footer } from '@src/design/organs/footer/Footer';
 import { Nav } from '@src/design/organs/nav/Nav';
-import { globalStyles } from '@src/design/globalStyles';
 import { BaseApp } from '@src/pages/BaseApp';
 
 const queryClient = new QueryClient();
