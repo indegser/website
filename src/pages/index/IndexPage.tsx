@@ -23,6 +23,9 @@ export const IndexPage = ({ id, config }: Props) => {
   usePageTracking('visit_index');
 
   const { data: index } = useIndexQuery(id);
+  // const { data: tagIndex } = useIndexQuery(
+  //   notionUtils.getTagDatabaseId(index, config)
+  // );
   const { data, isFetchingNextPage, fetchNextPage } = useDatabaseQuery(id);
   const title = notionUtils.getTitle(index);
 
