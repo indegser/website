@@ -12,7 +12,7 @@ import { useDatabaseQuery } from '@src/queries/useDatabaseQuery';
 import { useIndexQuery } from '@src/queries/useIndexQuery';
 import { IndexConfigType } from '@src/types/indexes';
 import { usePageTracking } from '@src/utils/analytics/usePageTracking';
-import { getNotionTitle } from '@src/utils/notion';
+import { notionUtils } from '@src/utils/notion';
 
 interface Props {
   id: string;
@@ -24,7 +24,7 @@ export const IndexPage = ({ id, config }: Props) => {
 
   const { data: index } = useIndexQuery(id);
   const { data, isFetchingNextPage, fetchNextPage } = useDatabaseQuery(id);
-  const title = getNotionTitle(index);
+  const title = notionUtils.getTitle(index);
 
   return (
     <Container>

@@ -1,44 +1,6 @@
-import { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
+import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 
-import { notion } from '@src/sdks/notion';
-import {
-  BlockType,
-  CoverType,
-  PageType,
-  PropertyType,
-} from '@src/types/notion';
-
-const toString = (property: PropertyType<'formula'>) => {
-  switch (property.formula.type) {
-    case 'string':
-      return property.formula.string;
-    default:
-      return '';
-  }
-};
-
-const getBlock = async (id: string) => {
-  const fetchNextPage = async (args: ListBlockChildrenParameters) => {
-    const result = await notion.blocks.children.list(args);
-
-    if (result.has_more) {
-      const nextResult = await fetchNextPage({
-        ...args,
-        start_cursor: result.next_cursor || undefined,
-      });
-      result.results = [...result.results, ...nextResult.results];
-    }
-
-    return result;
-  };
-
-  return fetchNextPage({ block_id: id });
-};
-
-export const notionUtils = {
-  toString,
-  getBlock,
-};
+import { CoverType, PageType, PropertyType } from '@src/types/notion';
 
 export const getNotionFileUrl = (
   coverOrFiles?: PropertyType<'files'> | CoverType
@@ -62,13 +24,15 @@ export const getNotionFileUrl = (
   }
 };
 
-export const getNotionTitle = (
-  titleProperty: Partial<PropertyType<'title'>>
-) => {
+const getNotionTitle = (titleProperty: Partial<PropertyType<'title'>>) => {
   return titleProperty.title.map((text) => text.plain_text).join('');
 };
 
-export const getTitleFromPageProperties = (page: PageType) => {
+const getTitle = (page: PageType | DatabaseObjectResponse) => {
+  if ('title' in page) {
+    return getNotionTitle(page);
+  }
+
   const key = Object.keys(page.properties).find(
     (key) => page.properties[key].type === 'title'
   );
@@ -77,37 +41,6 @@ export const getTitleFromPageProperties = (page: PageType) => {
   return getNotionTitle(prop);
 };
 
-export const getNotionContent = async (blockId: string) => {
-  const getBlocksWithChildren = async (blocks: BlockType[]) => {
-    return await Promise.all(
-      blocks.map(async (block) => {
-        return await getBlockWithChildren(block);
-      })
-    );
-  };
-  const getBlockWithChildren = async (block: BlockType) => {
-    if (block.has_children === true) {
-      const result = await notion.blocks.children.list({
-        block_id: block.id,
-        page_size: 100,
-      });
-
-      /**
-       * @todo has_more 체크
-       */
-
-      block['children'] = await getBlocksWithChildren(
-        result.results as BlockType[]
-      );
-    }
-
-    return block;
-  };
-
-  const children = await notion.blocks.children.list({
-    block_id: blockId,
-    page_size: 100,
-  });
-
-  return getBlocksWithChildren(children.results as BlockType[]);
+export const notionUtils = {
+  getTitle,
 };
