@@ -5,15 +5,14 @@ export const config = {
   runtime: 'edge',
 };
 
-const font = fetch(
-  new URL('../../assets/Pretendard-Bold.otf', import.meta.url)
-).then((res) => res.arrayBuffer());
+// const font = fetch(
+//   new URL('../../assets/Pretendard-Bold.otf', import.meta.url)
+// ).then((res) => res.arrayBuffer());
 
 async function handler(request: NextRequest) {
-  const fontData = await font;
+  // const fontData = await font;
   const { searchParams } = new URL(request.url);
 
-  // ?title=<title>
   const hasTitle = searchParams.has('title');
   const title = hasTitle
     ? searchParams.get('title')?.slice(0, 100)
@@ -54,13 +53,13 @@ async function handler(request: NextRequest) {
     {
       width: 1600,
       height: 900,
-      fonts: [
-        {
-          name: 'Pretendard',
-          data: fontData,
-          style: 'normal',
-        },
-      ],
+      // fonts: [
+      //   {
+      //     name: 'Pretendard',
+      //     data: fontData,
+      //     style: 'normal',
+      //   },
+      // ],
     }
   );
 }

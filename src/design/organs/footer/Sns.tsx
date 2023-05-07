@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 import { SiNotion, SiTwitter, SiGithub } from 'react-icons/si';
 
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 
 const snsList = [
   {

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import { cssText, theme } from './stitches.config';
+import { cssText, theme } from './theme';
 
 export const globalStyles = css`
   @import 'https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap';

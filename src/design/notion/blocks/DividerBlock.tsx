@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 
 export const DividerBlock = () => {
   return (

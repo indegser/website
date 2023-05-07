@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { ComponentProps, PropsWithChildren } from 'react';
 
-import { mediaQueries, mq } from '@src/design/theme/mediaQueries';
-import { theme } from '@src/design/theme/stitches.config';
+import { mediaQueries, mq } from '@src/design/mediaQueries';
+import { theme } from '@src/design/theme';
 
 interface Props extends ComponentProps<typeof Container> {}
 

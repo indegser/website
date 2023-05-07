@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Logo } from './Logo';
 
 import { PageContainer } from '@src/design/atoms/Container';
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 
 export const Nav = () => {
   return (

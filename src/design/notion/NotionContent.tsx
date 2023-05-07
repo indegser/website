@@ -3,8 +3,8 @@ import { InView } from 'react-intersection-observer';
 import { SpinnerCircular } from 'spinners-react';
 
 import { Block } from './blocks/Block';
-import { mq } from '../theme/mediaQueries';
-import { theme } from '../theme/stitches.config';
+import { mq } from '../mediaQueries';
+import { theme } from '../theme';
 
 import { usePageContentQuery } from '@src/queries/usePageContentQuery';
 

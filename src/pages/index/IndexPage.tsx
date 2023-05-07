@@ -6,8 +6,8 @@ import { RichItem } from './RichItem';
 
 import { PageContainer } from '@src/design/atoms/Container';
 import { SEO } from '@src/design/atoms/SEO';
-import { mq } from '@src/design/theme/mediaQueries';
-import { theme } from '@src/design/theme/stitches.config';
+import { mq } from '@src/design/mediaQueries';
+import { theme } from '@src/design/theme';
 import { useDatabaseQuery } from '@src/queries/useDatabaseQuery';
 import { useIndexQuery } from '@src/queries/useIndexQuery';
 import { IndexConfigType } from '@src/types/indexes';
@@ -23,6 +23,9 @@ export const IndexPage = ({ id, config }: Props) => {
   usePageTracking('visit_index');
 
   const { data: index } = useIndexQuery(id);
+  // const { data: tagIndex } = useIndexQuery(
+  //   notionUtils.getTagDatabaseId(index, config)
+  // );
   const { data, isFetchingNextPage, fetchNextPage } = useDatabaseQuery(id);
   const title = notionUtils.getTitle(index);
 

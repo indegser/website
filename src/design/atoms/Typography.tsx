@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { theme } from '../theme/stitches.config';
+import { theme } from '../theme';
 
 export const Typography = styled.div<{ type: 'title' | 'tag' | 'description' }>`
   font-size: 14px;

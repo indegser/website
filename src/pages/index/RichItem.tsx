@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 import Balancer from 'react-wrap-balancer';
 
+import { Relation } from './Relation';
 import { RichItemThumbnail } from './RichItemThumbnail';
 
 import { Typography } from '@src/design/atoms/Typography';
@@ -34,6 +35,7 @@ export const RichItem = ({ page, config }: Props) => {
       <Section>
         <RichItemThumbnail src={getNotionFileUrl(page.cover)} alt={title} />
         <Content>
+          <Relation page={page} config={config} />
           <Balancer>
             <Typography type="title">{title}</Typography>
           </Balancer>
@@ -53,7 +55,7 @@ const Section = styled.section`
 `;
 
 const Content = styled.div`
-  gap: 4px;
+  gap: 6px;
   display: grid;
 `;
 
