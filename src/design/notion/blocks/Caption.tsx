@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
 
 import { RichText } from '@src/design/notion/RichText';
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 
 interface Props {
   caption: RichTextItemResponse[];

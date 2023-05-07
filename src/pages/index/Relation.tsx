@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 import { usePageQueries } from '@src/queries/usePageQueries';
 import { IndexConfigType } from '@src/types/indexes';
 import { PageType } from '@src/types/notion';

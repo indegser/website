@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { useBookmarkBlock } from './BookmarkBlock.hooks';
 import { Caption } from '../Caption';
 
-import { mediaQueries } from '@src/design/theme/mediaQueries';
-import { theme } from '@src/design/theme/stitches.config';
+import { mediaQueries } from '@src/design/mediaQueries';
+import { theme } from '@src/design/theme';
 
 interface Props {
   url: string;

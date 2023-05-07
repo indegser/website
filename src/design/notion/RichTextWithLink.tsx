@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { PropsWithChildren } from 'react';
 
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 
 interface Props {
   link: { url: string } | null;

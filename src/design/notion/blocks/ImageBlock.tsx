@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { Caption } from './Caption';
 
-import { mq } from '@src/design/theme/mediaQueries';
+import { mq } from '@src/design/mediaQueries';
 import { BlockType } from '@src/types/notion';
 
 interface Props {

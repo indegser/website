@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import { Sns } from './Sns';
 
 import { PageContainer } from '@src/design/atoms/Container';
-import { mq } from '@src/design/theme/mediaQueries';
-import { theme } from '@src/design/theme/stitches.config';
+import { mq } from '@src/design/mediaQueries';
+import { theme } from '@src/design/theme';
 
 export const Footer = () => {
   return (

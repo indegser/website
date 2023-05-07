@@ -7,7 +7,7 @@ Highlighter.registerLanguage('typescript', tsx);
 import { codeStyle } from './CodeBlock.style';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 import { BlockType } from '@src/types/notion';
 
 interface Props {

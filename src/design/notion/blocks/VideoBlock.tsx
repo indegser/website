@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 import YouTube from 'react-youtube';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { mq } from '@src/design/theme/mediaQueries';
+import { mq } from '@src/design/mediaQueries';
 interface Props {
   video: VideoBlockObjectResponse['video'];
 }

@@ -6,8 +6,8 @@ import { RichItem } from './RichItem';
 
 import { PageContainer } from '@src/design/atoms/Container';
 import { SEO } from '@src/design/atoms/SEO';
-import { mq } from '@src/design/theme/mediaQueries';
-import { theme } from '@src/design/theme/stitches.config';
+import { mq } from '@src/design/mediaQueries';
+import { theme } from '@src/design/theme';
 import { useDatabaseQuery } from '@src/queries/useDatabaseQuery';
 import { useIndexQuery } from '@src/queries/useIndexQuery';
 import { IndexConfigType } from '@src/types/indexes';

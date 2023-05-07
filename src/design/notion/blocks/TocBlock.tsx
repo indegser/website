@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { PageContent } from '@src/design/atoms/Container';
 import { Row } from '@src/design/atoms/Row';
 import { RichText } from '@src/design/notion/RichText';
-import { theme } from '@src/design/theme/stitches.config';
+import { theme } from '@src/design/theme';
 import { BlockType } from '@src/types/notion';
 
 interface Props {

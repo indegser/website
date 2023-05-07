@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
-import { breakPoints } from '@src/design/theme/mediaQueries';
+import { breakPoints } from '@src/design/mediaQueries';
 
 interface Props {
   alt: string;
