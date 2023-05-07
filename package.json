@@ -51,8 +51,7 @@
     "react-youtube": "^10.1.0",
     "sharp": "^0.31.3",
     "spinners-react": "^1.0.7",
-    "unfetch": "^4.2.0",
-    "zustand": "^3.7.1"
+    "unfetch": "^4.2.0"
   },
   "devDependencies": {
     "@styled/typescript-styled-plugin": "^1.0.0",
