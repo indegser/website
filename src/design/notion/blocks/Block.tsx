@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { takeRightWhile } from 'lodash-es';
+import takeRightWhile from 'lodash-es/takeRightWhile';
 
 import { BookmarkBlock } from './bookmark/BookmarkBlock';
 import { BulletedListItemBlock } from './BulletedListItemBlock';

@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import fetch from 'unfetch';
 
 interface OpenGraphType {
   id: string;
