@@ -11,16 +11,23 @@ import { isServer } from '@tanstack/react-query';
 
 import { notion } from '@src/sdks/notion';
 import { DatabaseType, ListBlockChildrenType } from '@src/types/notion';
+import { coverTask } from '@src/utils/image/coverTask';
 
-export const queryDatabase = <T>(
+export const queryDatabase = async <T>(
   args: QueryDatabaseParameters
 ): Promise<DatabaseType<T>> => {
-  return isServer
+  const result = await (isServer
     ? notion.databases.query(args)
     : fetch('/api/notion/database', {
         method: 'post',
         body: JSON.stringify(args),
-      }).then((res) => res.json());
+      }).then((res) => res.json()));
+
+  if (isServer) {
+    result.results = await Promise.all(coverTask(result.results));
+  }
+
+  return result;
 };
 
 export const retrieveDatabase = (
