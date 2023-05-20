@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
-import dayjs from 'dayjs';
 import Link from 'next/link';
-import { useMemo } from 'react';
 import Balancer from 'react-wrap-balancer';
 
 import { Relation } from './Relation';
 import { RichItemThumbnail } from './RichItemThumbnail';
 
+import { Time } from '@src/design/atoms/Time';
 import { Typography } from '@src/design/atoms/Typography';
 import { IndexConfigType } from '@src/types/indexes';
 import { PageType, PropertyType } from '@src/types/notion';
@@ -19,10 +18,6 @@ interface Props {
 
 export const RichItem = ({ page, config }: Props) => {
   const { id, last_edited_time } = page;
-
-  const formattedLastEditedTime = useMemo(() => {
-    return dayjs(last_edited_time).format('LL');
-  }, [last_edited_time]);
 
   const title = notionUtils.getTitle(page);
 
@@ -40,7 +35,9 @@ export const RichItem = ({ page, config }: Props) => {
             <Typography type="title">{title}</Typography>
           </Balancer>
           <Metadata>
-            <Typography type="tag">{formattedLastEditedTime}</Typography>
+            <Typography type="tag">
+              <Time date={last_edited_time} template="LL" />
+            </Typography>
           </Metadata>
         </Content>
       </Section>

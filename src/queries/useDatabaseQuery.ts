@@ -22,7 +22,7 @@ export const createDatabaseQueryConfig = (
       start_cursor: startCursor || undefined,
       sorts: [
         {
-          timestamp: 'created_time',
+          timestamp: 'last_edited_time',
           direction: 'descending',
         },
       ],

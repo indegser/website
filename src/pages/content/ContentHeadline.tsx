@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
-import dayjs from 'dayjs';
-import { useMemo } from 'react';
 import Balancer from 'react-wrap-balancer';
 
 import { useJournalMetadata } from './ContentPage.hooks';
 
 import { PageContent } from '@src/design/atoms/Container';
 import { SEO } from '@src/design/atoms/SEO';
+import { Time } from '@src/design/atoms/Time';
 import { mq } from '@src/design/mediaQueries';
 import { theme } from '@src/design/theme';
 
@@ -19,16 +18,14 @@ export const ContentHeadline = (props: Props) => {
     props.id
   );
 
-  const formattedLastEditedTime = useMemo(() => {
-    return dayjs(lastEditedTime).format('LLL');
-  }, [lastEditedTime]);
-
   return (
     <Section>
       <SEO title={title} description={description} image={image} />
       <PageContent>
         <Metadata>
-          <Property>{formattedLastEditedTime}</Property>
+          <Property>
+            <Time date={lastEditedTime} template="LLL" />
+          </Property>
         </Metadata>
         <Balancer>
           <Title>{title}</Title>
