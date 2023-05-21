@@ -3,12 +3,12 @@ import { theme } from '@src/design/theme';
 export const codeStyle = {
   'code[class*="language-"]': {
     margin: 0,
-    fontFamily: theme.fonts.mono,
+    fontFamily: theme.fonts.mono.computedValue,
     lineHeight: 1.5,
   },
   'pre[class*="language-"]': {
     margin: 0,
-    fontFamily: theme.fonts.mono,
+    fontFamily: theme.fonts.mono.computedValue,
     lineHeight: 1.5,
   },
   // 'pre[class*="language-"]::-moz-selection': {
@@ -50,43 +50,43 @@ export const codeStyle = {
   //   whiteSpace: "normal",
   // },
   comment: {
-    color: theme.colors.gray9,
+    color: theme.colors.gray9.computedValue,
   },
   prolog: {
-    color: theme.colors.gray5,
+    color: theme.colors.gray5.computedValue,
   },
   doctype: {
-    color: theme.colors.gray5,
+    color: theme.colors.gray5.computedValue,
   },
   cdata: {
-    color: theme.colors.gray5,
+    color: theme.colors.gray5.computedValue,
   },
   punctuation: {
-    color: theme.colors.gray12,
+    color: theme.colors.gray12.computedValue,
   },
   namespace: {
     Opacity: '.7',
   },
   property: {
-    color: theme.colors.blue10,
+    color: theme.colors.blue10.computedValue,
   },
   tag: {
-    color: theme.colors.blue10,
+    color: theme.colors.blue10.computedValue,
   },
   boolean: {
-    color: theme.colors.blue10,
+    color: theme.colors.blue10.computedValue,
   },
   number: {
-    color: theme.colors.blue10,
+    color: theme.colors.blue10.computedValue,
   },
   constant: {
-    color: theme.colors.blue10,
+    color: theme.colors.blue10.computedValue,
   },
   symbol: {
-    color: theme.colors.blue10,
+    color: theme.colors.blue10.computedValue,
   },
   deleted: {
-    color: theme.colors.blue10,
+    color: theme.colors.blue10.computedValue,
   },
   selector: {
     color: '#690',
@@ -95,7 +95,7 @@ export const codeStyle = {
     color: '#690',
   },
   string: {
-    color: theme.colors.codeString,
+    color: theme.colors.codeString.computedValue,
   },
   char: {
     color: '#690',
@@ -136,13 +136,13 @@ export const codeStyle = {
     color: '#07a',
   },
   keyword: {
-    color: theme.colors.crimson9,
+    color: theme.colors.crimson9.computedValue,
   },
   function: {
-    color: theme.colors.purple11,
+    color: theme.colors.purple11.computedValue,
   },
   'class-name': {
-    color: theme.colors.purple11,
+    color: theme.colors.purple11.computedValue,
   },
   regex: {
     color: '#e90',
