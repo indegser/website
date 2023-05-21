@@ -7,17 +7,22 @@ import {
   lime,
   crimson,
 } from '@radix-ui/colors';
+import { JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 
 // Font files can be colocated inside of `pages`
-export const font = localFont({
+const pretendardFont = localFont({
   src: '../../assets/PretendardVariable.woff2',
   style: 'normal',
   weight: '100 800',
 });
 
+const jetBrainsMonoFont = JetBrains_Mono({ subsets: ['latin'] });
+
 const config = {
   colors: {
+    body: gray.gray12,
+    bgBody: gray.gray1,
     gray400: 'gainsboro',
     gray500: 'lightgray',
     fgDefault: '#24292f',
@@ -43,8 +48,8 @@ const config = {
     codeString: green.green10,
   },
   fonts: {
-    sans: `${font.style.fontFamily}, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"`,
-    mono: `'JetBrains Mono', "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
+    sans: `${pretendardFont.style.fontFamily}, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"`,
+    mono: `${jetBrainsMonoFont.style.fontFamily}, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
   },
 };
 

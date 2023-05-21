@@ -38,7 +38,7 @@ export const CodeBlock = ({ block }: Props) => {
 };
 
 const Container = styled.div`
-  font-size: 80%;
+  font-size: 0.8em;
   tab-size: 2;
   white-space: pre;
   padding: 12px 16px 24px 16px;
@@ -53,6 +53,6 @@ const Container = styled.div`
 
 const Language = styled.div`
   color: ${theme.colors.gray10.computedValue};
-  font-size: 80%;
+  font-size: 0.8em;
   letter-spacing: 0;
 `;
