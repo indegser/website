@@ -82,7 +82,7 @@ const Text = styled.span<TextProps>`
   ${({ code }) =>
     code &&
     css`
-      font-family: ${theme.fonts.sans.computedValue};
+      font-family: ${theme.fonts.mono.computedValue};
       border-radius: 3px;
       font-size: 85%;
       padding: 0.2em 0.4em;

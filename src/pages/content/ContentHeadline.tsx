@@ -57,14 +57,15 @@ const Metadata = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 48px;
   letter-spacing: -0.025em;
   line-height: 1.15;
-  color: #000;
+  color: ${theme.colors.gray12.computedValue};
   word-break: keep-all;
 
   ${mq('sm')} {
+    font-weight: 700;
     font-size: 36px;
     letter-spacing: -0.015em;
   }

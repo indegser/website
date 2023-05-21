@@ -87,4 +87,5 @@ const TextWrapper = styled.div`
   line-height: 1.4;
   letter-spacing: 0;
   margin-left: 4px;
+  width: max-content;
 `;
