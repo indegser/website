@@ -57,7 +57,8 @@ const Article = styled.article`
   color: ${theme.colors.gray12.computedValue};
 
   ${mq('sm')} {
-    font-size: 18;
+    font-weight: 400;
+    font-size: 18px;
   }
 `;
 

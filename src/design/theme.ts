@@ -10,7 +10,11 @@ import {
 import localFont from 'next/font/local';
 
 // Font files can be colocated inside of `pages`
-const font = localFont({ src: '../../assets/PretendardVariable.woff2' });
+export const font = localFont({
+  src: '../../assets/PretendardVariable.woff2',
+  style: 'normal',
+  weight: '100 800',
+});
 
 const config = {
   colors: {
@@ -39,7 +43,7 @@ const config = {
     codeString: green.green10,
   },
   fonts: {
-    sans: `${font.style.fontFamily}, --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"`,
+    sans: `${font.style.fontFamily}, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"`,
     mono: `'JetBrains Mono', "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace`,
   },
 };
