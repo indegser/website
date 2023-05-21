@@ -10,16 +10,19 @@ export const globalStyles = css`
   }
 
   html {
-    font-size: 16px;
-    font-family: ${theme.fonts.sans.computedValue};
-    text-size-adjust: 100%;
-    background: ${theme.colors.gray1.computedValue};
+    background: ${theme.colors.bgBody.computedValue};
   }
 
   body {
     margin: 0;
     color: ${theme.colors.gray12.computedValue};
-    font-kerning: normal;
+    font-size: 16px;
+    font-family: ${theme.fonts.sans.computedValue};
+    word-wrap: break-word;
+    word-break: keep-all;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
   }
 
   a {

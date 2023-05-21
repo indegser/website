@@ -56,18 +56,16 @@ const Metadata = styled.div`
 `;
 
 const Title = styled.h1`
+  font-size: 45.29px;
+
   margin: 0;
-  font-weight: 600;
-  font-size: 48px;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  color: ${theme.colors.gray12.computedValue};
+  font-weight: 900;
+  line-height: 1.25;
+  color: ${theme.colors.body.computedValue};
   word-break: keep-all;
 
-  ${mq('sm')} {
-    font-weight: 700;
-    font-size: 36px;
-    letter-spacing: -0.015em;
+  ${mq('md')} {
+    font-size: 38.25px;
   }
 `;
 

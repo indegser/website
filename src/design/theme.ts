@@ -18,6 +18,8 @@ export const font = localFont({
 
 const config = {
   colors: {
+    body: gray.gray12,
+    bgBody: gray.gray1,
     gray400: 'gainsboro',
     gray500: 'lightgray',
     fgDefault: '#24292f',

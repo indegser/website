@@ -50,15 +50,12 @@ export const NotionContent = ({ id }: Props) => {
 };
 
 const Article = styled.article`
-  font-size: 16px;
-  line-height: 1.625;
-  letter-spacing: -0.008em;
-  font-weight: 450;
-  color: ${theme.colors.gray12.computedValue};
+  font-size: 19px;
+  line-height: 1.64;
+  color: ${theme.colors.body.computedValue};
 
   ${mq('sm')} {
-    font-weight: 400;
-    font-size: 18px;
+    font-size: 17px;
   }
 `;
 
