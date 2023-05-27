@@ -1,46 +1,18 @@
-import styled from '@emotion/styled';
-
 import { Sns } from './Sns';
 
 import { PageContainer } from '@src/design/atoms/Container';
-import { mq } from '@src/design/mediaQueries';
-import { theme } from '@src/design/theme';
 
 export const Footer = () => {
   return (
-    <FooterBox>
+    <footer className="mt-8 pb-12 pt-4">
       <PageContainer>
-        <Layout>
-          <Name>Indegser. Designer at Seoul, South Korea.</Name>
+        <div className="grid auto-cols-max items-center justify-center gap-2 sm:grid-flow-col sm:gap-5">
+          <div className="text-sm font-medium text-gray-500">
+            Indegser. Designer at Seoul, South Korea.
+          </div>
           <Sns />
-        </Layout>
+        </div>
       </PageContainer>
-    </FooterBox>
+    </footer>
   );
 };
-
-const FooterBox = styled.footer`
-  margin-top: 32px;
-  padding: 16px 0 48px 0;
-`;
-
-const Layout = styled.div`
-  display: grid;
-  grid-auto-columns: max-content;
-  gap: 0 20px;
-  align-items: center;
-  grid-template-areas: 'name sns';
-
-  ${mq('md')} {
-    gap: 12px 0;
-    justify-content: center;
-    grid-template-areas: 'sns name';
-  }
-`;
-
-const Name = styled.div`
-  font-size: 13px;
-  font-weight: 500;
-  color: ${theme.colors.gray10.computedValue};
-  grid-area: name;
-`;

@@ -1,9 +1,6 @@
-import styled from '@emotion/styled';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import { SiNotion, SiTwitter, SiGithub } from 'react-icons/si';
-
-import { theme } from '@src/design/theme';
 
 const snsList = [
   {
@@ -28,47 +25,17 @@ const snsList = [
 
 export const Sns = () => {
   return (
-    <Links>
+    <div className="grid grid-flow-col items-center justify-center gap-2">
       {snsList.map((sns, index) => (
         <Fragment key={sns.link}>
-          {index > 0 ? <MidDot /> : null}
+          {index > 0 ? (
+            <div className="h-0.5 w-0.5 rounded-full bg-gray-500" />
+          ) : null}
           <Link href={sns.link} title={sns.alt}>
-            <LinkIcon>{sns.icon}</LinkIcon>
+            <div className="p-1 text-gray-500">{sns.icon}</div>
           </Link>
         </Fragment>
       ))}
-    </Links>
+    </div>
   );
 };
-
-const Links = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  position: relative;
-  grid-area: sns;
-`;
-
-const LinkIcon = styled.div`
-  padding: 4px;
-  color: ${theme.colors.gray10.computedValue};
-  fill: currentColor;
-
-  & svg {
-    display: block;
-  }
-
-  &:hover {
-    color: ${theme.colors.gray12.computedValue};
-  }
-`;
-
-const MidDot = styled.div`
-  width: 2px;
-  height: 2px;
-  background: ${theme.colors.gray10.computedValue};
-  border-radius: 999rem;
-`;
