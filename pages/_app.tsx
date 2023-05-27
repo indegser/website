@@ -1,3 +1,5 @@
+import '@src/design/globals.css';
+
 import { Global } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
