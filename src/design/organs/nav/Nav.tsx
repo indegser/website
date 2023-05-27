@@ -1,50 +1,22 @@
-import styled from '@emotion/styled';
 import Link from 'next/link';
 
 import { Logo } from './Logo';
 
 import { PageContainer } from '@src/design/atoms/Container';
-import { theme } from '@src/design/theme';
 
 export const Nav = () => {
   return (
-    <Backdrop>
+    <div className="sticky top-0 z-10 bg-backdrop backdrop-blur-md">
       <PageContainer>
-        <Layout>
+        <nav className="flex items-center justify-between py-3">
           <Link href="/" passHref>
-            <Heading>
+            <div className="flex items-center pr-4 text-sm font-semibold">
               <Logo />
               Indegser
-            </Heading>
+            </div>
           </Link>
-        </Layout>
+        </nav>
       </PageContainer>
-    </Backdrop>
+    </div>
   );
 };
-
-const Backdrop = styled.div`
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(12px);
-  z-index: 1;
-  background-color: ${theme.colors.backdrop.computedValue};
-`;
-
-const Layout = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4px 0px 2px 0px;
-`;
-
-const Heading = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 0 16px 0 0;
-  height: 45px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  color: ${theme.colors.gray12.computedValue};
-`;

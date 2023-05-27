@@ -27,7 +27,7 @@ export const RichItem = ({ page, config }: Props) => {
     <Link href={href}>
       <section className="grid auto-rows-max gap-2">
         <RichItemThumbnail src={getNotionFileUrl(page.cover)} alt={title} />
-        <div className="grid gap-1">
+        <div className="grid gap-2">
           <Relation page={page} config={config} />
           <div className="m-0 font-semibold leading-tight">
             <Balancer>{title}</Balancer>
