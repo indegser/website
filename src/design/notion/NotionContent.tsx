@@ -1,8 +1,7 @@
 import { InView } from 'react-intersection-observer';
-import { SpinnerCircular } from 'spinners-react';
 
 import { Block } from './blocks/Block';
-import { theme } from '../theme';
+import { Spinner } from '../atoms/Spinner';
 
 import { usePageContentQuery } from '@src/queries/usePageContentQuery';
 
@@ -26,13 +25,7 @@ export const NotionContent = ({ id }: Props) => {
         );
       })}
       {isFetchingNextPage ? (
-        <div className="flex justify-center px-6">
-          <SpinnerCircular
-            size={28}
-            color={theme.colors.gray10.toString()}
-            secondaryColor={theme.colors.gray4.toString()}
-          />
-        </div>
+        <Spinner />
       ) : (
         <InView
           as="div"

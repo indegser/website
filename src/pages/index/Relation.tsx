@@ -1,6 +1,3 @@
-import styled from '@emotion/styled';
-
-import { theme } from '@src/design/theme';
 import { usePageQueries } from '@src/queries/usePageQueries';
 import { IndexConfigType } from '@src/types/indexes';
 import { PageType } from '@src/types/notion';
@@ -18,26 +15,20 @@ export const Relation = ({ page, config }: Props) => {
   if (results.length === 0) return null;
 
   return (
-    <Container>
+    <div className="flex flex-wrap gap-1">
       {results.map((result) => {
         const { data } = result;
         if (!data) return '...';
 
-        return <Chip key={data.id}>{notionUtils.getTitle(data)}</Chip>;
+        return (
+          <div
+            className="rounded bg-blue-50 px-2 py-1 text-[11px] leading-relaxed"
+            key={data.id}
+          >
+            {notionUtils.getTitle(data)}
+          </div>
+        );
       })}
-    </Container>
+    </div>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-`;
-
-const Chip = styled.div`
-  font-size: 11px;
-  background: ${theme.colors.blue3.computedValue};
-  padding: 5px 6px;
-  border-radius: 4px;
-`;

@@ -1,13 +1,10 @@
-import styled from '@emotion/styled';
 import { InView } from 'react-intersection-observer';
-import { SpinnerCircular } from 'spinners-react';
 
 import { RichItem } from './RichItem';
 
 import { PageContainer } from '@src/design/atoms/Container';
 import { SEO } from '@src/design/atoms/SEO';
-import { mq } from '@src/design/mediaQueries';
-import { theme } from '@src/design/theme';
+import { Spinner } from '@src/design/atoms/Spinner';
 import { useDatabaseQuery } from '@src/queries/useDatabaseQuery';
 import { useIndexQuery } from '@src/queries/useIndexQuery';
 import { IndexConfigType } from '@src/types/indexes';
@@ -30,23 +27,17 @@ export const IndexPage = ({ id, config }: Props) => {
   const title = notionUtils.getTitle(index);
 
   return (
-    <Container>
+    <PageContainer>
       <SEO title={title} />
-      <Layout>
+      <div className="grid grid-cols-1 gap-8 py-8 sm:grid-cols-3">
         {data?.pages
           .flatMap((page) => page.results)
           .map((journal) => (
             <RichItem key={journal.id} page={journal} config={config} />
           ))}
-      </Layout>
+      </div>
       {isFetchingNextPage ? (
-        <Spinner>
-          <SpinnerCircular
-            size={28}
-            color={theme.colors.gray10.toString()}
-            secondaryColor={theme.colors.gray4.toString()}
-          />
-        </Spinner>
+        <Spinner />
       ) : (
         <InView
           as="div"
@@ -57,27 +48,6 @@ export const IndexPage = ({ id, config }: Props) => {
           }}
         />
       )}
-    </Container>
+    </PageContainer>
   );
 };
-
-const Container = styled(PageContainer)`
-  overflow: hidden;
-  padding-top: 32px;
-`;
-
-const Layout = styled.div`
-  display: grid;
-  gap: 5vh 5vh;
-  grid-template-columns: repeat(3, 1fr);
-
-  ${mq('sm')} {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
-
-const Spinner = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 24px 0;
-`;
