@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import takeRightWhile from 'lodash-es/takeRightWhile';
 
 import { BookmarkBlock } from './bookmark/BookmarkBlock';
@@ -149,11 +148,14 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
     return null;
 
   return (
-    <Section data-block-id={block.id}>
+    <div className="mb-4" data-block-id={block.id}>
       {renderContent(block)}
       {block.children ? (
-        <ChildSection
-          style={{ padding: block.type === 'column' ? '0px !important' : '' }}
+        <PageContent
+          style={{
+            padding: block.type === 'column' ? '0px !important' : '',
+            paddingLeft: 27,
+          }}
         >
           {block.children.map((childBlock, index) => (
             <Block
@@ -164,16 +166,8 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
               blocks={block.children}
             />
           ))}
-        </ChildSection>
+        </PageContent>
       ) : null}
-    </Section>
+    </div>
   );
 };
-
-const Section = styled.div`
-  margin-bottom: 1em;
-`;
-
-const ChildSection = styled(PageContent)`
-  padding-left: 27px;
-`;
