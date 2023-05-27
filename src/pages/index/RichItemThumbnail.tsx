@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import Image from 'next/image';
 
 import { breakPoints } from '@src/design/mediaQueries';
@@ -12,7 +11,7 @@ export const RichItemThumbnail = (props: Props) => {
   const { src, alt } = props;
 
   return (
-    <Container>
+    <div className="relative aspect-video">
       <Image
         src={src || `/api/image?title=${alt}`}
         alt={alt}
@@ -21,11 +20,6 @@ export const RichItemThumbnail = (props: Props) => {
         sizes={`(max-width: ${breakPoints.sm}px) 100vw,
               33vw"`}
       />
-    </Container>
+    </div>
   );
 };
-
-const Container = styled.div`
-  position: relative;
-  aspect-ratio: 16 / 9;
-`;

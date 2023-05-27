@@ -33,6 +33,7 @@
     "@vercel/og": "^0.5.4",
     "amplitude-js": "^8.21.4",
     "dayjs": "^1.11.7",
+    "encoding": "^0.1.13",
     "framer-motion": "^8.5.2",
     "get-youtube-id": "^1.0.1",
     "lodash-es": "^4.17.21",

@@ -9,7 +9,7 @@ dependencies:
     version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.0.26)(react@18.2.0)
   '@notionhq/client':
     specifier: ^2.2.3
-    version: 2.2.3
+    version: 2.2.3(encoding@0.1.13)
   '@radix-ui/colors':
     specifier: ^0.1.8
     version: 0.1.8
@@ -21,7 +21,7 @@ dependencies:
     version: 1.0.2(react-dom@18.2.0)(react@18.2.0)
   '@supabase/supabase-js':
     specifier: ^2.4.0
-    version: 2.4.0
+    version: 2.4.0(encoding@0.1.13)
   '@tanstack/react-query':
     specifier: ^4.23.0
     version: 4.29.5(react-dom@18.2.0)(react@18.2.0)
@@ -43,6 +43,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.7
     version: 1.11.7
+  encoding:
+    specifier: ^0.1.13
+    version: 0.1.13
   framer-motion:
     specifier: ^8.5.2
     version: 8.5.5(react-dom@18.2.0)(react@18.2.0)
@@ -635,12 +638,12 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@notionhq/client@2.2.3:
+  /@notionhq/client@2.2.3(encoding@0.1.13):
     resolution: {integrity: sha512-ZqUzY0iRg/LIrwS+wzz/6osSB2nxIpmqdAtdUwzpcimc9Jlu1j85FeYdaU26Shr193CFrl2TLFeKqpk/APRQ4g==}
     engines: {node: '>=12'}
     dependencies:
       '@types/node-fetch': 2.6.2
-      node-fetch: 2.6.7
+      node-fetch: 2.6.7(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -745,26 +748,26 @@ packages:
       vscode-languageserver-types: 3.17.3
     dev: true
 
-  /@supabase/functions-js@2.0.0:
+  /@supabase/functions-js@2.0.0(encoding@0.1.13):
     resolution: {integrity: sha512-ozb7bds2yvf5k7NM2ZzUkxvsx4S4i2eRKFSJetdTADV91T65g4gCzEs9L3LUXSrghcGIkUaon03VPzOrFredqg==}
     dependencies:
-      cross-fetch: 3.1.5
+      cross-fetch: 3.1.5(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/gotrue-js@2.7.0:
+  /@supabase/gotrue-js@2.7.0(encoding@0.1.13):
     resolution: {integrity: sha512-DDa1H254a3n3GZfao/UmHTVEUl9OORSuVJ7ZwRLSdiXLyXzspX2WvqMcdYJE23IvjBe9B51i86D7jJ15/lpMQg==}
     dependencies:
-      cross-fetch: 3.1.5
+      cross-fetch: 3.1.5(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/postgrest-js@1.1.1:
+  /@supabase/postgrest-js@1.1.1(encoding@0.1.13):
     resolution: {integrity: sha512-jhdBah1JIxkZUp+5QH5JS7Uq9teGwh0Bs3FzbhnVlH619FSUFquTpHuNDxLsJmqEe8r3Wcnw19Dz0t3wEpkfug==}
     dependencies:
-      cross-fetch: 3.1.5
+      cross-fetch: 3.1.5(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -778,23 +781,23 @@ packages:
       - supports-color
     dev: false
 
-  /@supabase/storage-js@2.1.0:
+  /@supabase/storage-js@2.1.0(encoding@0.1.13):
     resolution: {integrity: sha512-bRMLWCbkkx84WDAtHAAMN7FAWuayrGZtTHj/WMUK6PsAWuonovvEa5s34a5iux61qJSn+ls3tFkyQgqxunl5ww==}
     dependencies:
-      cross-fetch: 3.1.5
+      cross-fetch: 3.1.5(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/supabase-js@2.4.0:
+  /@supabase/supabase-js@2.4.0(encoding@0.1.13):
     resolution: {integrity: sha512-fouVDoTcxM4/xEsh2iaR0wr0liwER7Pth8pvmbqqm7JVDLd2Z3+ie+k9fesg0OAd8VR1plOi80gdjxYm/ZIYMA==}
     dependencies:
-      '@supabase/functions-js': 2.0.0
-      '@supabase/gotrue-js': 2.7.0
-      '@supabase/postgrest-js': 1.1.1
+      '@supabase/functions-js': 2.0.0(encoding@0.1.13)
+      '@supabase/gotrue-js': 2.7.0(encoding@0.1.13)
+      '@supabase/postgrest-js': 1.1.1(encoding@0.1.13)
       '@supabase/realtime-js': 2.3.1
-      '@supabase/storage-js': 2.1.0
-      cross-fetch: 3.1.5
+      '@supabase/storage-js': 2.1.0(encoding@0.1.13)
+      cross-fetch: 3.1.5(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -1521,10 +1524,10 @@ packages:
       yaml: 1.10.2
     dev: false
 
-  /cross-fetch@3.1.5:
+  /cross-fetch@3.1.5(encoding@0.1.13):
     resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
     dependencies:
-      node-fetch: 2.6.7
+      node-fetch: 2.6.7(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -1843,6 +1846,12 @@ packages:
   /emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: true
+
+  /encoding@0.1.13:
+    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
+    dependencies:
+      iconv-lite: 0.6.3
+    dev: false
 
   /end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
@@ -3206,7 +3215,7 @@ packages:
     resolution: {integrity: sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==}
     dev: false
 
-  /node-fetch@2.6.7:
+  /node-fetch@2.6.7(encoding@0.1.13):
     resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
@@ -3215,6 +3224,7 @@ packages:
       encoding:
         optional: true
     dependencies:
+      encoding: 0.1.13
       whatwg-url: 5.0.0
     dev: false
 

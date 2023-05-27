@@ -1,21 +1,12 @@
-import styled from '@emotion/styled';
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  & svg {
-    display: block;
-  }
-`;
-
-const Icon = styled.div`
-  margin-right: 8px;
-`;
-
 export const Logo = () => {
   const icon = (
-    <Icon>
-      <svg height={18} fill="currentColor" viewBox="0 0 142 165">
+    <div className="mr-2">
+      <svg
+        height={18}
+        fill="currentColor"
+        viewBox="0 0 142 165"
+        style={{ display: 'block' }}
+      >
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -27,8 +18,8 @@ export const Logo = () => {
           d="M87.719 103.108a6.711 6.711 0 0 1 9.486.847l39.29 47.191c2.387 2.866 2.01 7.135-.843 9.534a6.71 6.71 0 0 1-9.486-.847l-39.29-47.19c-2.387-2.867-2.01-7.136.843-9.535zM99.44 64.408c.913.152 2.32.496 4.33 1.195 6.038 2.101 15.174 6.552 27.611 13.612 3.238 1.838 7.347.69 9.176-2.566 1.829-3.255.686-7.384-2.552-9.222-12.573-7.137-22.584-12.095-29.828-14.616-3.525-1.227-7.033-2.11-10.115-2.042-1.585.035-3.545.329-5.407 1.391a9.15 9.15 0 0 0-4.231 5.26c-1.119 3.565.85 7.366 4.397 8.49 2.397.76 4.9.103 6.618-1.502zm-1.156-.1s.009-.002.028-.003a.296.296 0 0 1-.028.002zM.641 38.86c1.583-3.383 5.594-4.836 8.96-3.246l33.416 15.787c3.366 1.59 4.813 5.622 3.23 9.005-1.582 3.383-5.593 4.837-8.96 3.247L3.872 47.866C.505 46.276-.94 42.244.641 38.86z"
         />
       </svg>
-    </Icon>
+    </div>
   );
 
-  return <Container>{icon}</Container>;
+  return <div className="flex items-center">{icon}</div>;
 };
