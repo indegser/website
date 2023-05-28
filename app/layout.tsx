@@ -6,10 +6,14 @@ import Providers from './providers';
 
 import { Footer } from '@src/design/organs/footer/Footer';
 import { Nav } from '@src/design/organs/nav/Nav';
+import { jetBrainsMonoFont, pretendardFont } from '@src/design/theme';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-KR">
+    <html
+      lang="en-KR"
+      className={`${pretendardFont.variable} ${jetBrainsMonoFont.variable}`}
+    >
       <body>
         <Providers>
           <Nav />
