@@ -6,9 +6,14 @@ import { getQueryClient } from '@src/queries/getQueryClient';
 import { createDatabaseQueryConfig } from '@src/queries/useDatabaseQuery';
 import { createIndexQueryConfig } from '@src/queries/useIndexQuery';
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const indexes = await get<{ id: string }[]>('indexes');
-  return indexes?.map((index) => ({
+
+  if (!indexes) return [];
+
+  return indexes.map((index) => ({
     id: index.id,
   }));
 }
