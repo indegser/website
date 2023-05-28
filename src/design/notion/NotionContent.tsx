@@ -14,7 +14,7 @@ export const NotionContent = ({ id }: Props) => {
   const blocks = data.pages.flatMap((page) => page.results);
 
   return (
-    <article className="text-base sm:text-lg">
+    <article className="text-lg">
       {blocks.map((block, index) => {
         if (!('type' in block)) {
           return null;

@@ -1,3 +1,5 @@
+'use client';
+
 import { ContentHeadline } from './ContentHeadline';
 import { useJournalRouter } from './ContentPage.hooks';
 

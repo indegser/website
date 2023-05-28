@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 
 import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect';
@@ -7,8 +6,6 @@ import { usePageQuery } from '@src/queries/usePageQuery';
 import { getMetaFromNotionPage } from '@src/utils/notion/meta';
 
 export const useJournalRouter = () => {
-  const router = useRouter();
-
   const scrollToBlock = useCallback(() => {
     const blockId = location.hash.substring(1);
     const node = document.querySelector(
@@ -28,10 +25,10 @@ export const useJournalRouter = () => {
   useIsomorphicLayoutEffect(() => {
     scrollToBlock();
 
-    router.events.on('hashChangeComplete', scrollToBlock);
-    return () => {
-      router.events.off('hashChangeComplete', scrollToBlock);
-    };
+    // router.events.on('hashChangeComplete', scrollToBlock);
+    // return () => {
+    //   router.events.off('hashChangeComplete', scrollToBlock);
+    // };
   }, [scrollToBlock]);
 };
 
