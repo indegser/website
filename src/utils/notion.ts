@@ -26,7 +26,7 @@ export const getNotionFileUrl = (
 };
 
 const getPlainText = (property: PropertyType<'rich_text'>) => {
-  return property.rich_text[0].plain_text;
+  return property.rich_text?.[0]?.plain_text || '';
 };
 
 const getNotionTitle = (titleProperty: Partial<PropertyType<'title'>>) => {
