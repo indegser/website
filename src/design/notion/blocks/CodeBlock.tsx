@@ -1,4 +1,5 @@
-import styled from '@emotion/styled';
+'use client';
+
 import { PrismLight as Highlighter } from 'react-syntax-highlighter';
 import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 
@@ -7,7 +8,6 @@ Highlighter.registerLanguage('typescript', tsx);
 import { codeStyle } from './CodeBlock.style';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { theme } from '@src/design/theme';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -23,36 +23,20 @@ export const CodeBlock = ({ block }: Props) => {
 
   return (
     <PageContent>
-      <Container>
-        <Language>{capitalize(language)}</Language>
+      <div
+        className="whitespace-pre rounded-sm bg-gray-50 px-4 pb-6 pt-3 font-mono text-sm"
+        style={{ tabSize: 2 }}
+      >
+        <div className="text-xs text-gray-500">{capitalize(language)}</div>
         <Highlighter
           style={codeStyle}
+          useInlineStyles={false}
           customStyle={{ overflowX: 'scroll' }}
           language={language}
         >
           {rich_text[0].plain_text}
         </Highlighter>
-      </Container>
+      </div>
     </PageContent>
   );
 };
-
-const Container = styled.div`
-  font-size: 0.8em;
-  tab-size: 2;
-  white-space: pre;
-  padding: 12px 16px 24px 16px;
-  background: ${theme.colors.gray3.computedValue};
-  border-radius: 3px;
-  & pre {
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-`;
-
-const Language = styled.div`
-  color: ${theme.colors.gray10.computedValue};
-  font-size: 0.8em;
-  letter-spacing: 0;
-`;

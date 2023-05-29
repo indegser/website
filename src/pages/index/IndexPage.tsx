@@ -7,15 +7,13 @@ import { RichItem } from './RichItem';
 import { PageContainer } from '@src/design/atoms/Container';
 import { Spinner } from '@src/design/atoms/Spinner';
 import { useDatabaseQuery } from '@src/queries/useDatabaseQuery';
-import { IndexConfigType } from '@src/types/indexes';
 import { usePageTracking } from '@src/utils/analytics/usePageTracking';
 
 interface Props {
   id: string;
-  config: IndexConfigType;
 }
 
-export const IndexPage = ({ id, config }: Props) => {
+export const IndexPage = ({ id }: Props) => {
   usePageTracking('visit_index');
 
   const { data, isFetchingNextPage, fetchNextPage } = useDatabaseQuery(id);
@@ -26,7 +24,7 @@ export const IndexPage = ({ id, config }: Props) => {
         {data?.pages
           .flatMap((page) => page.results)
           .map((journal) => (
-            <RichItem key={journal.id} page={journal} config={config} />
+            <RichItem key={journal.id} page={journal} />
           ))}
       </div>
       {isFetchingNextPage ? (

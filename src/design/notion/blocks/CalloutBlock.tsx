@@ -1,5 +1,3 @@
-import styled from '@emotion/styled';
-
 import { NotionIcon } from './NotionIcon';
 
 import { PageContent } from '@src/design/atoms/Container';
@@ -17,21 +15,14 @@ export const CalloutBlock = ({ block }: Props) => {
 
   return (
     <PageContent>
-      <Container style={style}>
+      <div className="flex rounded-s p-4 pl-3" style={style}>
         <div>
           <NotionIcon icon={icon} />
         </div>
         <div style={{ marginLeft: 8 }}>
           <RichText data={rich_text} />
         </div>
-      </Container>
+      </div>
     </PageContent>
   );
 };
-
-const Container = styled.div`
-  padding: 16px;
-  padding-left: 12px;
-  display: flex;
-  border-radius: 3px;
-`;

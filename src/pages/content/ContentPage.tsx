@@ -1,7 +1,4 @@
-'use client';
-
 import { ContentHeadline } from './ContentHeadline';
-import { useJournalRouter } from './ContentPage.hooks';
 
 import { PageContainer } from '@src/design/atoms/Container';
 import { NotionContent } from '@src/design/notion/NotionContent';
@@ -12,7 +9,6 @@ interface Props {
 
 export const ContentPage = (props: Props) => {
   const { id } = props;
-  useJournalRouter();
 
   return (
     <PageContainer>

@@ -1,3 +1,5 @@
+'use client';
+
 import { InView } from 'react-intersection-observer';
 
 import { Block } from './blocks/Block';

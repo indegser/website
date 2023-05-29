@@ -1,3 +1,5 @@
+'use client';
+
 import Balancer from 'react-wrap-balancer';
 
 import { useJournalMetadata } from './ContentPage.hooks';
