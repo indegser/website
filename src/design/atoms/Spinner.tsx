@@ -1,13 +1,7 @@
-import { SpinnerCircular } from 'spinners-react';
-
-import { theme } from '../theme';
-
-export const Spinner = () => (
-  <div className="flex justify-center px-6">
-    <SpinnerCircular
-      size={28}
-      color={theme.colors.gray10.toString()}
-      secondaryColor={theme.colors.gray4.toString()}
-    />
-  </div>
-);
+export const Spinner = () => {
+  return (
+    <div className="flex justify-center px-6 text-sm font-bold text-gray-500">
+      로딩 중
+    </div>
+  );
+};
