@@ -1,27 +1,26 @@
 'use client';
 
-import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect';
-
-const scrollToBlock = () => {
-  const blockId = location.hash.substring(1);
-  const node = document.querySelector(
-    `[data-block-id="${blockId}"]`
-  ) as HTMLElement;
-  if (!node) return;
-
-  const rect = node.getBoundingClientRect();
-
-  /**
-   * 120px 정도 더 보이도록 함
-   */
-  window.scrollTo(0, rect.top + window.scrollY - 120);
-  node.focus();
-};
+import { useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 export const ContentRouter = () => {
-  useIsomorphicLayoutEffect(() => {
-    scrollToBlock();
-  }, [scrollToBlock]);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const hash = searchParams.get('hash');
+    const node = document.querySelector(
+      `[data-block-id="${hash}"]`
+    ) as HTMLElement;
+
+    if (!node) return;
+
+    const rect = node.getBoundingClientRect();
+    window.scrollTo({
+      left: 0,
+      top: rect.top + window.scrollY - 120,
+      behavior: 'smooth',
+    });
+  }, [searchParams]);
 
   return null;
 };
