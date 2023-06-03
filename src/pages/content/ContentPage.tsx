@@ -14,6 +14,7 @@ export const ContentPage = (props: Props) => {
   return (
     <PageContainer>
       <ContentRouter />
+      {/* @ts-expect-error Async Server Component */}
       <ContentHeadline id={id} />
       <NotionContent id={id} />
     </PageContainer>
