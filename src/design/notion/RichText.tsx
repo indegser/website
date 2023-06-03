@@ -52,10 +52,14 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
                     ]
                   )}
                   style={{
-                    fontWeight: annotations.bold && 700,
-                    fontStyle: annotations.italic && 'italic',
-                    textDecorationLine: annotations.underline && 'underline',
-                    textDecoration: annotations.strikethrough && 'line-through',
+                    fontWeight: annotations.bold ? 700 : undefined,
+                    fontStyle: annotations.italic ? 'italic' : undefined,
+                    textDecorationLine: annotations.underline
+                      ? 'underline'
+                      : undefined,
+                    textDecoration: annotations.strikethrough
+                      ? 'line-through'
+                      : undefined,
                     ...convertApiColorToStyleProps(color),
                   }}
                 >

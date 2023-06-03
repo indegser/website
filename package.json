@@ -37,6 +37,7 @@
     "encoding": "^0.1.13",
     "framer-motion": "^8.5.2",
     "get-youtube-id": "^1.0.1",
+    "image-size": "^1.0.2",
     "lodash-es": "^4.17.21",
     "mime-types": "^2.1.35",
     "nanoid": "^4.0.0",

@@ -1,6 +1,4 @@
-'use client';
-
-import { useCallback, useEffect, useState } from 'react';
+import sizeOf from 'image-size';
 
 import { Caption } from './Caption';
 
@@ -11,11 +9,12 @@ interface Props {
   block: Extract<BlockType, { type: 'image' }>;
 }
 
-export const ImageBlock = ({ block }: Props) => {
-  const [metadata, setMetadata] = useState<{ width: number; height: number }>(
-    null
-  );
+const getMetadata = async (url: string) => {
+  const arrayBuffer = await fetch(url).then((res) => res.arrayBuffer());
+  return sizeOf(Buffer.from(arrayBuffer));
+};
 
+export const ImageBlock = async ({ block }: Props) => {
   let url = '';
 
   if ('file' in block.image) {
@@ -26,27 +25,10 @@ export const ImageBlock = ({ block }: Props) => {
     url = block.image.external.url;
   }
 
-  const handleImageLoad = useCallback((event: Event) => {
-    const image = event.target as HTMLImageElement;
-    setMetadata({ width: image.width, height: image.height });
-  }, []);
-
-  useEffect(() => {
-    if (!url || url.startsWith('data:image')) return;
-
-    const image = new Image();
-    image.addEventListener('load', handleImageLoad);
-
-    image.src = url;
-
-    return () => {
-      image.removeEventListener('load', handleImageLoad);
-    };
-  }, [url, handleImageLoad]);
+  const metadata = await getMetadata(url);
 
   if (!url || !metadata) return null;
 
-  const { width, height } = metadata;
   const { caption } = block.image;
 
   return (

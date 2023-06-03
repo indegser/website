@@ -38,6 +38,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
         );
       }
       case 'image': {
+        /* @ts-expect-error Async Server Component */
         return <ImageBlock block={block} />;
       }
       case 'heading_1': {
