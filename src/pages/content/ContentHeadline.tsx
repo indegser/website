@@ -8,6 +8,10 @@ interface Props {
   id: string;
 }
 
+export const preloadPage = (id: string) => {
+  void pageApi.getPage(id);
+};
+
 export const ContentHeadline = async (props: Props) => {
   const page = await pageApi.getPage(props.id);
 

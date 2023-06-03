@@ -1,43 +1,25 @@
-'use client';
-
-import { InView } from 'react-intersection-observer';
-
 import { Block } from './blocks/Block';
-import { Spinner } from '../atoms/Spinner';
 
-import { usePageContentQuery } from '@src/queries/usePageContentQuery';
+import { pageApi } from '@src/apis/content';
 
 interface Props {
   id: string;
 }
 
-export const NotionContent = ({ id }: Props) => {
-  const { data, fetchNextPage, isFetchingNextPage } = usePageContentQuery(id);
-  const blocks = data.pages.flatMap((page) => page.results);
+export const preload = (id: string) => {
+  void pageApi.getContent(id);
+};
+
+export const NotionContent = async ({ id }: Props) => {
+  const { results } = await pageApi.getContent(id);
 
   return (
     <article className="text-lg">
-      {blocks.map((block, index) => {
-        if (!('type' in block)) {
-          return null;
-        }
-
+      {results.map((block, index) => {
         return (
-          <Block key={block.id} block={block} index={index} blocks={blocks} />
+          <Block key={block.id} block={block} index={index} blocks={results} />
         );
       })}
-      {isFetchingNextPage ? (
-        <Spinner />
-      ) : (
-        <InView
-          as="div"
-          style={{ height: 1 }}
-          onChange={(inView) => {
-            if (!inView) return;
-            fetchNextPage();
-          }}
-        />
-      )}
     </article>
   );
 };
