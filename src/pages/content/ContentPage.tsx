@@ -1,7 +1,5 @@
-'use client';
-
 import { ContentHeadline } from './ContentHeadline';
-import { useJournalRouter } from './ContentPage.hooks';
+import { ContentRouter } from './ContentRouter';
 
 import { PageContainer } from '@src/design/atoms/Container';
 import { NotionContent } from '@src/design/notion/NotionContent';
@@ -12,11 +10,13 @@ interface Props {
 
 export const ContentPage = (props: Props) => {
   const { id } = props;
-  useJournalRouter();
 
   return (
     <PageContainer>
+      <ContentRouter />
+      {/* @ts-expect-error Async Server Component */}
       <ContentHeadline id={id} />
+      {/* @ts-expect-error Async Server Component */}
       <NotionContent id={id} />
     </PageContainer>
   );

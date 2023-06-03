@@ -37,10 +37,6 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: { id: string } }) {
   const queryClient = getQueryClient();
   const { id } = params;
-  const indexes = await get<{ id: string }[]>('indexes');
-
-  const config = indexes?.find((index) => index.id === id);
-  if (!config) return { notFound: true };
 
   await Promise.all([
     queryClient.fetchQuery(createIndexQueryConfig(id)),
@@ -49,7 +45,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <Hydrate state={dehydrate(queryClient)}>
-      <IndexPage id={id} config={config} />
+      <IndexPage id={id} />
     </Hydrate>
   );
 }

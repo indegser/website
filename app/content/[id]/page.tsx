@@ -1,11 +1,10 @@
-import { dehydrate, Hydrate } from '@tanstack/react-query';
 import { Metadata } from 'next';
 
+import { pageApi } from '@src/apis/content';
 import { journalApi } from '@src/apis/journal';
+import { preload } from '@src/design/notion/NotionContent';
+import { preloadPage } from '@src/pages/content/ContentHeadline';
 import { ContentPage } from '@src/pages/content/ContentPage';
-import { getQueryClient } from '@src/queries/getQueryClient';
-import { createPageContentQueryConfig } from '@src/queries/usePageContentQuery';
-import { createPageQueryConfig } from '@src/queries/usePageQuery';
 import { getNotionFileUrl, notionUtils } from '@src/utils/notion';
 
 export const revalidate = 60;
@@ -16,8 +15,8 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
-  const queryClient = getQueryClient();
-  const result = await queryClient.fetchQuery(createPageQueryConfig(id));
+
+  const result = await pageApi.getPage(id);
 
   const title = notionUtils.getTitle(result);
   const description = notionUtils.getPlainText(result.properties.Description);
@@ -48,15 +47,8 @@ export const generateStaticParams = async () => {
 };
 
 export default async function Page({ params: { id } }: Props) {
-  const queryClient = getQueryClient();
-  await Promise.all([
-    queryClient.prefetchInfiniteQuery(createPageContentQueryConfig(id)),
-    queryClient.prefetchQuery(createPageQueryConfig(id)),
-  ]);
+  preload(id);
+  preloadPage(id);
 
-  return (
-    <Hydrate state={dehydrate(queryClient)}>
-      <ContentPage id={id} />
-    </Hydrate>
-  );
+  return <ContentPage id={id} />;
 }

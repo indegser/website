@@ -6,6 +6,7 @@ module.exports = {
     colors: {
       gray: colors.gray,
       blue: colors.blue,
+      rose: colors.rose,
       backdrop: 'rgba(255, 255, 255, 0.85)',
     },
     extend: {

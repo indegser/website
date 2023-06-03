@@ -1,17 +1,9 @@
-import styled from '@emotion/styled';
-
 import { PageContent } from '@src/design/atoms/Container';
-import { theme } from '@src/design/theme';
 
 export const DividerBlock = () => {
   return (
     <PageContent>
-      <Divider />
+      <div className="h-px  border-b border-gray-400" />
     </PageContent>
   );
 };
-
-const Divider = styled.div`
-  height: 1px;
-  border-bottom: 1px solid ${theme.colors.gray5.computedValue};
-`;

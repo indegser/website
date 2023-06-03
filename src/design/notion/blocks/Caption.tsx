@@ -1,8 +1,6 @@
-import styled from '@emotion/styled';
 import { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
 
 import { RichText } from '@src/design/notion/RichText';
-import { theme } from '@src/design/theme';
 
 interface Props {
   caption: RichTextItemResponse[];
@@ -10,17 +8,8 @@ interface Props {
 
 export const Caption = ({ caption }: Props) => {
   return (
-    <Container>
+    <div className="mt-4 text-xs font-medium text-gray-500">
       <RichText data={caption} />
-    </Container>
+    </div>
   );
 };
-
-const Container = styled.div`
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: 16px;
-  font-weight: 500;
-  color: ${theme.colors.gray10.computedValue};
-  margin-top: 14px;
-`;
