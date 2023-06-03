@@ -13,6 +13,8 @@ module.exports = {
       fontFamily: {
         sans: 'var(--pretendard), -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Roboto", "Apple SD Gothic Neo", "Noto Sans KR"',
         mono: 'var(--jetbrains-mono), "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace',
+        emoji:
+          "'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols'",
       },
     },
   },

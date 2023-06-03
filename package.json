@@ -32,6 +32,7 @@
     "@vercel/edge-config": "^0.2.0",
     "@vercel/og": "^0.5.4",
     "amplitude-js": "^8.21.4",
+    "clsx": "^1.2.1",
     "dayjs": "^1.11.7",
     "encoding": "^0.1.13",
     "framer-motion": "^8.5.2",

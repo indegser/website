@@ -13,7 +13,7 @@ export const BookmarkBlock = (props: Props) => {
   const { url, caption = [] } = props;
 
   return (
-    <figure className="my-12">
+    <figure className="my-6">
       <Suspense
         fallback={
           /** @ts-expect-error Async Server Component */
