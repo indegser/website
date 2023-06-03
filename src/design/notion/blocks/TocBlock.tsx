@@ -1,12 +1,10 @@
 'use client';
 
-import styled from '@emotion/styled';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { Row } from '@src/design/atoms/Row';
 import { RichText } from '@src/design/notion/RichText';
-import { theme } from '@src/design/theme';
 import { BlockType } from '@src/types/notion';
 
 interface Props {
@@ -14,6 +12,7 @@ interface Props {
 }
 
 export const TocBlock = ({ blocks }: Props) => {
+  const pathname = usePathname();
   const headings = blocks.filter((block) => block.type.startsWith('heading'));
 
   const { result: depthList } = headings.reduce(
@@ -52,42 +51,23 @@ export const TocBlock = ({ blocks }: Props) => {
         return (
           <Link
             key={block.id}
-            passHref
+            shallow
             href={{
-              hash: block.id,
+              pathname,
+              query: { hash: block.id },
             }}
           >
-            <TocRow style={{ paddingLeft: 24 * depth }}>
-              <TextWrapper>
+            <div
+              className="flex h-8 items-center pr-2 pt-1"
+              style={{ paddingLeft: 24 * depth }}
+            >
+              <div className="ml-1 border-b text-sm">
                 <RichText data={block[block.type].rich_text} />
-              </TextWrapper>
-            </TocRow>
+              </div>
+            </div>
           </Link>
         );
       })}
     </PageContent>
   );
 };
-
-const TocRow = styled(Row)`
-  padding: 2px 8px 3px 0px;
-  display: flex;
-  align-items: center;
-`;
-
-const TextWrapper = styled.div`
-  background-image: linear-gradient(
-    to right,
-    ${theme.colors.gray7.computedValue} 0%,
-    ${theme.colors.gray7.computedValue} 100%
-  );
-  background-repeat: repeat-x;
-  background-position: 0px 100%;
-  background-size: 100% 1px;
-  color: ${theme.colors.gray11.computedValue};
-  font-size: 14px;
-  line-height: 1.4;
-  letter-spacing: 0;
-  margin-left: 4px;
-  width: max-content;
-`;

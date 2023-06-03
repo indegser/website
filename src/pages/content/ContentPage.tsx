@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import { ContentHeadline } from './ContentHeadline';
 import { ContentRouter } from './ContentRouter';
 
@@ -13,7 +15,9 @@ export const ContentPage = (props: Props) => {
 
   return (
     <PageContainer>
-      <ContentRouter />
+      <Suspense fallback={<></>}>
+        <ContentRouter />
+      </Suspense>
       {/* @ts-expect-error Async Server Component */}
       <ContentHeadline id={id} />
       {/* @ts-expect-error Async Server Component */}
