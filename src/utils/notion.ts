@@ -25,6 +25,10 @@ export const getNotionFileUrl = (
   }
 };
 
+const getPlainText = (property: PropertyType<'rich_text'>) => {
+  return property.rich_text?.[0]?.plain_text || '';
+};
+
 const getNotionTitle = (titleProperty: Partial<PropertyType<'title'>>) => {
   return titleProperty.title.map((text) => text.plain_text).join('');
 };
@@ -71,6 +75,7 @@ const getRelationOfPage = (page: PageType, config: IndexConfigType) => {
 
 export const notionUtils = {
   getTitle,
+  getPlainText,
   getTagDatabaseId,
   getRelationOfPage,
 };

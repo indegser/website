@@ -1,5 +1,3 @@
-import styled from '@emotion/styled';
-
 import { RichText } from '@src/design/notion/RichText';
 import { BlockType } from '@src/types/notion';
 
@@ -9,26 +7,12 @@ interface Props {
 
 export const QuoteBlock = ({ block }: Props) => {
   return (
-    <Container>
-      <Content>
-        <Text>
+    <div className="mt-1">
+      <div className="flex p-1">
+        <div className="border-l-2 border-b-gray-800 pl-4">
           <RichText data={block.quote.rich_text} />
-        </Text>
-      </Content>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 };
-
-const Container = styled.div`
-  margin: 4px 0;
-`;
-
-const Content = styled.div`
-  padding: 3px 2px;
-  display: flex;
-`;
-
-const Text = styled.div`
-  padding-left: 14px;
-  border-left: 3px solid currentColor;
-`;

@@ -1,11 +1,12 @@
-import styled from '@emotion/styled';
+'use client';
+
 import { VideoBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import getYouTubeID from 'get-youtube-id';
 import { useMemo } from 'react';
 import YouTube from 'react-youtube';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { mq } from '@src/design/mediaQueries';
+
 interface Props {
   video: VideoBlockObjectResponse['video'];
 }
@@ -26,27 +27,13 @@ export const VideoBlock = ({ video }: Props) => {
 
   return (
     <PageContent>
-      <Container>
+      <div className="-mx-6 my-11">
         <YouTube
           videoId={youtubeId}
-          className={'youtubeContainer'}
-          title=""
+          className="aspect-video"
           opts={{ width: '100%', height: '100%' }}
         />
-      </Container>
+      </div>
     </PageContent>
   );
 };
-
-const Container = styled.div`
-  margin: 44px 0;
-
-  ${mq('sm')} {
-    margin-left: calc(-1 * max(22px, env(safe-area-inset-left)));
-    margin-right: calc(-1 * max(22px, env(safe-area-inset-right)));
-  }
-
-  .youtubeContainer {
-    aspect-ratio: 16 / 9;
-  }
-`;

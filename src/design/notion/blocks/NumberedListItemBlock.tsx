@@ -1,3 +1,5 @@
+'use client';
+
 import styled from '@emotion/styled';
 
 import { RichText } from '@src/design/notion/RichText';

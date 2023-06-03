@@ -3,12 +3,12 @@ import { useQuery, UseQueryOptions } from '@tanstack/react-query';
 
 import { notionApi } from '@src/apis/notion';
 
-export const useIndexQuery = (id?: string) => {
+export const useIndexQuery = (id: string) => {
   return useQuery(createIndexQueryConfig(id));
 };
 
 export const createIndexQueryConfig = (
-  id?: string
+  id: string
 ): UseQueryOptions<DatabaseObjectResponse> => ({
   queryKey: ['index', id],
   queryFn: async () => {

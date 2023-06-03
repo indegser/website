@@ -11,13 +11,17 @@ import { JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 
 // Font files can be colocated inside of `pages`
-const pretendardFont = localFont({
+export const pretendardFont = localFont({
   src: '../../assets/PretendardVariable.woff2',
   style: 'normal',
   weight: '100 800',
+  variable: '--pretendard',
 });
 
-const jetBrainsMonoFont = JetBrains_Mono({ subsets: ['latin'] });
+export const jetBrainsMonoFont = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--jetbrains-mono',
+});
 
 const config = {
   colors: {

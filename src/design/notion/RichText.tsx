@@ -1,12 +1,10 @@
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import clsx from 'clsx';
 import { Fragment, ReactElement, ReactNode } from 'react';
 import { toArray } from 'react-emoji-render';
 
 import { convertApiColorToStyleProps } from './convertApiColorToStyleProps';
 import { RichTextWithLink } from './RichTextWithLink';
 
-import { theme } from '@src/design/theme';
 import { RichTextItemResponse } from '@src/types/notion';
 
 interface Props {
@@ -36,25 +34,46 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
               ReactNode | ReactElement
             >;
 
+            const Tag = annotations.code ? 'code' : 'span';
+
             return (
               <RichTextWithLink key={i} link={link}>
-                <Text
-                  as={annotations.code ? 'code' : 'span'}
+                <Tag
                   {...annotations}
-                  style={convertApiColorToStyleProps(color)}
+                  className={clsx(
+                    'inline',
+                    'whitespace-pre-line',
+                    annotations.code && [
+                      'rounded-sm',
+                      'text-xs',
+                      'px-1',
+                      'py-1',
+                      'bg-gray-100',
+                    ]
+                  )}
+                  style={{
+                    fontWeight: annotations.bold && 700,
+                    fontStyle: annotations.italic && 'italic',
+                    textDecorationLine: annotations.underline && 'underline',
+                    textDecoration: annotations.strikethrough && 'line-through',
+                    ...convertApiColorToStyleProps(color),
+                  }}
                 >
                   {children.map((child, index) => {
                     if (isReactElement(child)) {
                       return (
-                        <EmojiIcon key={index}>
+                        <span
+                          key={index}
+                          className="whitespace-nowrap font-emoji text-base leading-none"
+                        >
                           {child.props.children}
-                        </EmojiIcon>
+                        </span>
                       );
                     }
 
                     return <Fragment key={index}>{child}</Fragment>;
                   })}
-                </Text>
+                </Tag>
               </RichTextWithLink>
             );
           }
@@ -65,59 +84,3 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
     </>
   );
 };
-
-type TextProps = {
-  code?: boolean;
-  bold?: boolean;
-  italic?: boolean;
-  underline?: boolean;
-  strikethrough?: boolean;
-};
-
-const Text = styled.span<TextProps>`
-  box-decoration-break: clone;
-  display: inline;
-  white-space: pre-line;
-
-  ${({ code }) =>
-    code &&
-    css`
-      font-family: ${theme.fonts.mono.computedValue};
-      border-radius: 3px;
-      font-size: 85%;
-      padding: 0.2em 0.4em;
-      background: ${theme.colors.green4.computedValue};
-      color: ${theme.colors.green11.computedValue};
-    `}
-  ${({ bold }) =>
-    bold &&
-    css`
-      font-weight: 700;
-    `}
-
-  ${({ italic }) =>
-    italic &&
-    css`
-      font-style: italic;
-    `}
-
-  ${({ underline }) =>
-    underline &&
-    css`
-      text-decoration: underline;
-    `}
-
-  ${({ strikethrough }) =>
-    strikethrough &&
-    css`
-      text-decoration: line-through;
-    `}
-`;
-
-const EmojiIcon = styled.span`
-  line-height: 1;
-  white-space: nowrap;
-  font-size: 1em;
-  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji,
-    'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols;
-`;
