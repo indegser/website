@@ -30,8 +30,7 @@ export const VideoBlock = ({ video }: Props) => {
       <div className="-mx-6 my-11">
         <YouTube
           videoId={youtubeId}
-          className={'youtubeContainer'}
-          title=""
+          className="aspect-video"
           opts={{ width: '100%', height: '100%' }}
         />
       </div>
