@@ -39,7 +39,6 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
             return (
               <RichTextWithLink key={i} link={link}>
                 <Tag
-                  {...annotations}
                   className={clsx(
                     'inline',
                     'whitespace-pre-line',
@@ -47,7 +46,8 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
                       'rounded-sm',
                       'text-xs',
                       'px-1',
-                      'py-1',
+                      'py-0.5',
+                      'text-rose-500',
                       'bg-gray-100',
                     ]
                   )}

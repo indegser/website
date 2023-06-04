@@ -27,7 +27,7 @@ export const VideoBlock = ({ video }: Props) => {
 
   return (
     <PageContent>
-      <div className="-mx-6 my-11">
+      <div className="-mx-5">
         <YouTube
           videoId={youtubeId}
           className="aspect-video"
