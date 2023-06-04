@@ -5,6 +5,7 @@ import { journalApi } from '@src/apis/journal';
 import { preload } from '@src/design/notion/NotionContent';
 import { preloadPage } from '@src/pages/content/ContentHeadline';
 import { ContentPage } from '@src/pages/content/ContentPage';
+import { isProduction } from '@src/types/env';
 import { getNotionFileUrl, notionUtils } from '@src/utils/notion';
 
 export const revalidate = 60;
@@ -39,7 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export const generateStaticParams = async () => {
-  const { results } = await journalApi.queryJournalDatabase({ page_size: 20 });
+  const { results } = await journalApi.queryJournalDatabase({
+    page_size: isProduction ? 20 : 1,
+  });
 
   return results.map((page) => ({
     id: page.id,
