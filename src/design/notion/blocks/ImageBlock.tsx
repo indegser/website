@@ -1,17 +1,30 @@
-import sizeOf from 'image-size';
-
 import { Caption } from './Caption';
 
 import { PageContent } from '@src/design/atoms/Container';
+import { notion } from '@src/sdks/notion';
 import { BlockType } from '@src/types/notion';
+import { uploadImage } from '@src/utils/image/createImage';
 
 interface Props {
   block: Extract<BlockType, { type: 'image' }>;
 }
 
-const getMetadata = async (url: string) => {
-  const arrayBuffer = await fetch(url).then((res) => res.arrayBuffer());
-  return sizeOf(Buffer.from(arrayBuffer));
+const getMetadata = async (url: string, blockId: string) => {
+  const result = await uploadImage(url);
+  if (!result) return url;
+
+  if (url !== result.data.url) {
+    await notion.blocks.update({
+      block_id: blockId,
+      image: {
+        external: {
+          url: result.data.url,
+        },
+      },
+    });
+  }
+
+  return result.data;
 };
 
 export const ImageBlock = async ({ block }: Props) => {
@@ -25,7 +38,7 @@ export const ImageBlock = async ({ block }: Props) => {
     url = block.image.external.url;
   }
 
-  const metadata = await getMetadata(url);
+  const metadata = await getMetadata(url, block.id);
 
   if (!url || !metadata) return null;
 
@@ -33,9 +46,9 @@ export const ImageBlock = async ({ block }: Props) => {
 
   return (
     <PageContent>
-      <div className="-mx-6 my-11">
+      <div className="-mx-5">
         <div className="flex justify-center">
-          <img src={url} className="block md:rounded-md" />
+          <img src={metadata.url} className="block md:rounded-md" />
         </div>
         <Caption caption={caption} />
       </div>
