@@ -13,6 +13,7 @@ export const RichItemThumbnail = (props: Props) => {
   return (
     <div className="relative aspect-video">
       <Image
+        priority
         src={src || `/api/image?title=${alt}`}
         alt={alt}
         fill
