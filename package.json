@@ -52,7 +52,8 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-wrap-balancer": "^0.5.0",
     "react-youtube": "^10.1.0",
-    "sharp": "^0.31.3"
+    "sharp": "^0.31.3",
+    "swr": "^2.1.5"
   },
   "devDependencies": {
     "@styled/typescript-styled-plugin": "^1.0.0",
