@@ -4,6 +4,12 @@ import { notionApi } from './notion';
 
 import { isProduction } from '@src/types/env';
 
+const retrieveDatabase = cache((id: string) =>
+  notionApi.retrieveDatabase({
+    database_id: id,
+  })
+);
+
 const queryDatabase = cache(
   async <T>({ id, startCursor }: { id: string; startCursor?: string }) =>
     notionApi.queryDatabase<T>({
@@ -29,4 +35,5 @@ const queryDatabase = cache(
 
 export const databaseApi = {
   queryDatabase,
+  retrieveDatabase,
 };

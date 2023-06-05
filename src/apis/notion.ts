@@ -7,9 +7,9 @@ import {
   ListBlockChildrenResponse,
   QueryDatabaseParameters,
 } from '@notionhq/client/build/src/api-endpoints';
-import { isServer } from '@tanstack/react-query';
 
 import { notion } from '@src/sdks/notion';
+import { isServer } from '@src/types/env';
 import { DatabaseType, ListBlockChildrenType } from '@src/types/notion';
 import { coverTask } from '@src/utils/image/coverTask';
 
