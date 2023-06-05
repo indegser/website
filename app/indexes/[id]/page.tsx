@@ -1,9 +1,8 @@
 import { get } from '@vercel/edge-config';
 import { Metadata } from 'next';
 
+import { databaseApi } from '@src/apis/database';
 import { IndexPage, preloadIndex } from '@src/pages/index/IndexPage';
-import { getQueryClient } from '@src/queries/getQueryClient';
-import { createIndexQueryConfig } from '@src/queries/useIndexQuery';
 import { notionUtils } from '@src/utils/notion';
 
 export const revalidate = 60;
@@ -14,8 +13,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
-  const queryClient = getQueryClient();
-  const result = await queryClient.fetchQuery(createIndexQueryConfig(id));
+  const result = await databaseApi.retrieveDatabase(id);
 
   return {
     title: notionUtils.getTitle(result),

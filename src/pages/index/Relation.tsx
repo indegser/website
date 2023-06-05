@@ -1,4 +1,4 @@
-import { usePageQueries } from '@src/queries/usePageQueries';
+import { pageApi } from '@src/apis/content';
 import { IndexConfigType } from '@src/types/indexes';
 import { PageType } from '@src/types/notion';
 import { notionUtils } from '@src/utils/notion';
@@ -8,24 +8,21 @@ interface Props {
   config: IndexConfigType;
 }
 
-export const Relation = ({ page, config }: Props) => {
+export const Relation = async ({ page, config }: Props) => {
   const ids = notionUtils.getRelationOfPage(page, config);
-  const results = usePageQueries(ids);
+  const results = await Promise.all(ids.map((id) => pageApi.getPage(id)));
 
   if (results.length === 0) return null;
 
   return (
     <div className="flex flex-wrap gap-1">
-      {results.map((result) => {
-        const { data } = result;
-        if (!data) return '...';
-
+      {results.map((page) => {
         return (
           <div
             className="rounded bg-blue-50 px-2 py-1 text-[11px] leading-relaxed"
-            key={data.id}
+            key={page.id}
           >
-            {notionUtils.getTitle(data)}
+            {notionUtils.getTitle(page)}
           </div>
         );
       })}
