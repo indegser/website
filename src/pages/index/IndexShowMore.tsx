@@ -8,7 +8,7 @@ import { RichItem } from './RichItem';
 import { databaseApi } from '@src/apis/database';
 import { Spinner } from '@src/design/atoms/Spinner';
 import { IndexConfigType } from '@src/types/indexes';
-import { DatabaseType, JournalPageType } from '@src/types/notion';
+import { DatabaseType, ContentType } from '@src/types/notion';
 
 interface Props {
   id: string;
@@ -24,7 +24,7 @@ export const IndexShowMore = ({ id, config, startCursor }: Props) => {
       return previous.next_cursor;
     },
     (startCursor) => {
-      return databaseApi.queryDatabase<JournalPageType>({ id, startCursor });
+      return databaseApi.queryDatabase<ContentType>({ id, startCursor });
     },
     { revalidateFirstPage: false }
   );

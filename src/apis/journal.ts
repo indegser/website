@@ -3,12 +3,12 @@ import { QueryDatabaseParameters } from '@notionhq/client/build/src/api-endpoint
 import { notionApi } from './notion';
 
 import { isProduction } from '@src/types/env';
-import { JournalPageType } from '@src/types/notion';
+import { ContentType } from '@src/types/notion';
 
 const queryJournalDatabase = (
   args: Omit<QueryDatabaseParameters, 'database_id'>
 ) => {
-  return notionApi.queryDatabase<JournalPageType>({
+  return notionApi.queryDatabase<ContentType>({
     database_id: '82649fda5ba84801a464d7ef2f7552b3',
     sorts: [
       {

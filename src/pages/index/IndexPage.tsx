@@ -4,7 +4,7 @@ import { RichItem } from './RichItem';
 import { configApi } from '@src/apis/config';
 import { databaseApi } from '@src/apis/database';
 import { PageContainer } from '@src/design/atoms/Container';
-import { JournalPageType } from '@src/types/notion';
+import { ContentType } from '@src/types/notion';
 
 interface Props {
   id: string;
@@ -15,8 +15,9 @@ export const preloadIndex = (id: string) => {
 };
 
 export const IndexPage = async ({ id }: Props) => {
-  const { results, next_cursor } =
-    await databaseApi.queryDatabase<JournalPageType>({ id });
+  const { results, next_cursor } = await databaseApi.queryDatabase<ContentType>(
+    { id }
+  );
 
   const config = await configApi.getConfig(id);
 

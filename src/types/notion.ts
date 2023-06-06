@@ -27,7 +27,7 @@ export type PropertyType<T extends AllPropertyType['type']> = Extract<
   { type: T }
 >;
 
-export type JournalPageType = PageType<{
+export type ContentType = PageType<{
   _book: PropertyType<'relation'>;
   Title: PropertyType<'title'>;
   Quote: PropertyType<'formula'>;
