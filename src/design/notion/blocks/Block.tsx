@@ -149,7 +149,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
     return null;
 
   return (
-    <div className="mb-4" data-block-id={block.id}>
+    <div className="py-1" data-block-id={block.id}>
       {renderContent(block)}
       {block.children ? (
         <PageContent

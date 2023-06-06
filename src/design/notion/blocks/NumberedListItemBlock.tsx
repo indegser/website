@@ -1,7 +1,3 @@
-'use client';
-
-import styled from '@emotion/styled';
-
 import { RichText } from '@src/design/notion/RichText';
 import { BlockType } from '@src/types/notion';
 
@@ -58,36 +54,13 @@ export const NumberedListItemBlock = ({ block, depth, marker }: Props) => {
   const { numbered_list_item } = block;
 
   return (
-    <Container>
-      <Marker>{counterGenerator(depth % 2, marker)}.</Marker>
-      <Content>
-        <div>
-          <RichText data={numbered_list_item.rich_text} />
-        </div>
-      </Content>
-    </Container>
+    <div className="flex w-full items-start pl-0.5">
+      <div className="mr-0.5 flex h-6 w-6 items-center justify-center text-lg leading-6">
+        {counterGenerator(depth % 2, marker)}.
+      </div>
+      <div className="flex flex-1 flex-col">
+        <RichText data={numbered_list_item.rich_text} />
+      </div>
+    </div>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  align-items: start;
-  padding-left: 2px;
-  width: 100%;
-`;
-
-const Marker = styled.div`
-  width: 24px;
-  min-height: 25px;
-  margin-right: 2px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-`;
-
-const Content = styled.div`
-  flex: 1 1 0px;
-  min-width: 1px;
-  display: flex;
-  flex-direction: column;
-`;
