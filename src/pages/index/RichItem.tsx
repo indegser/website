@@ -6,7 +6,7 @@ import { RichItemThumbnail } from './RichItemThumbnail';
 
 import { Time } from '@src/design/atoms/Time';
 import { IndexConfigType } from '@src/types/indexes';
-import { PageType } from '@src/types/notion';
+import { PageType, PropertyType } from '@src/types/notion';
 import { getNotionFileUrl, notionUtils } from '@src/utils/notion';
 
 interface Props {
@@ -19,10 +19,9 @@ export const RichItem = ({ page, config }: Props) => {
 
   const title = notionUtils.getTitle(page);
 
-  // const href = config.urlProperty
-  //   ? (page.properties[config.urlProperty] as PropertyType<'url'>).url
-  //   : `/content/${id}`;
-  const href = `/content/${id}`;
+  const href = config.urlProperty
+    ? (page.properties[config.urlProperty] as PropertyType<'url'>).url
+    : `/content/${id}`;
 
   return (
     <Link href={href}>

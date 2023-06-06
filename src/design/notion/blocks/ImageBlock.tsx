@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { Caption } from './Caption';
 
 import { PageContent } from '@src/design/atoms/Container';
@@ -42,13 +44,24 @@ export const ImageBlock = async ({ block }: Props) => {
 
   if (!url || !metadata) return null;
 
+  const { width, height } = metadata;
   const { caption } = block.image;
 
   return (
     <PageContent>
       <div className="-mx-5">
         <div className="flex justify-center">
-          <img src={metadata.url} className="block md:rounded-md" />
+          <div
+            className="relative w-full"
+            style={{ aspectRatio: `${width} / ${height}` }}
+          >
+            <Image
+              src={metadata.url}
+              alt=""
+              fill
+              className="block object-cover md:rounded-md"
+            />
+          </div>
         </div>
         <Caption caption={caption} />
       </div>
