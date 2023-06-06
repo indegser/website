@@ -1,5 +1,6 @@
 import '@src/design/globals.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="min-h-screen w-full">{children}</main>
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

@@ -1,16 +1,6 @@
-import { theme } from '@src/design/theme';
+import { colors } from '@src/design/theme';
 
 export const codeStyle = {
-  'code[class*="language-"]': {
-    margin: 0,
-    fontFamily: theme.fonts.mono.computedValue,
-    lineHeight: 1.5,
-  },
-  'pre[class*="language-"]': {
-    margin: 0,
-    fontFamily: theme.fonts.mono.computedValue,
-    lineHeight: 1.5,
-  },
   // 'pre[class*="language-"]::-moz-selection': {
   //   textShadow: "none",
   //   background: "#b3d4fc",
@@ -50,43 +40,43 @@ export const codeStyle = {
   //   whiteSpace: "normal",
   // },
   comment: {
-    color: theme.colors.gray9.computedValue,
+    color: colors.gray[500],
   },
   prolog: {
-    color: theme.colors.gray5.computedValue,
+    color: colors.gray[300],
   },
   doctype: {
-    color: theme.colors.gray5.computedValue,
+    color: colors.gray[300],
   },
   cdata: {
-    color: theme.colors.gray5.computedValue,
+    color: colors.gray[300],
   },
   punctuation: {
-    color: theme.colors.gray12.computedValue,
+    color: colors.gray[900],
   },
   namespace: {
     Opacity: '.7',
   },
   property: {
-    color: theme.colors.blue10.computedValue,
+    color: colors.blue['800'],
   },
   tag: {
-    color: theme.colors.blue10.computedValue,
+    color: colors.blue['800'],
   },
   boolean: {
-    color: theme.colors.blue10.computedValue,
+    color: colors.blue['800'],
   },
   number: {
-    color: theme.colors.blue10.computedValue,
+    color: colors.blue['800'],
   },
   constant: {
-    color: theme.colors.blue10.computedValue,
+    color: colors.blue['800'],
   },
   symbol: {
-    color: theme.colors.blue10.computedValue,
+    color: colors.blue['800'],
   },
   deleted: {
-    color: theme.colors.blue10.computedValue,
+    color: colors.blue['800'],
   },
   selector: {
     color: '#690',
@@ -95,7 +85,7 @@ export const codeStyle = {
     color: '#690',
   },
   string: {
-    color: theme.colors.codeString.computedValue,
+    color: colors.green['900'],
   },
   char: {
     color: '#690',
@@ -136,13 +126,13 @@ export const codeStyle = {
     color: '#07a',
   },
   keyword: {
-    color: theme.colors.crimson9.computedValue,
+    color: colors.red['600'],
   },
   function: {
-    color: theme.colors.purple11.computedValue,
+    color: colors.purple['700'],
   },
   'class-name': {
-    color: theme.colors.purple11.computedValue,
+    color: colors.purple['700'],
   },
   regex: {
     color: '#e90',

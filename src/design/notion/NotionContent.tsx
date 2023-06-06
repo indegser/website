@@ -14,7 +14,7 @@ export const NotionContent = async ({ id }: Props) => {
   const { results } = await pageApi.getContent(id);
 
   return (
-    <article className="text-lg">
+    <article className="text-lg md:text-base">
       {results.map((block, index) => {
         return (
           <Block key={block.id} block={block} index={index} blocks={results} />

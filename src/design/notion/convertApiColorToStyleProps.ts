@@ -1,4 +1,5 @@
-import { theme } from '@src/design/theme';
+import { colors } from '../theme';
+
 import { AnnotationColorType } from '@src/types/notion';
 
 export const convertApiColorToStyleProps = (color: AnnotationColorType) => {
@@ -10,5 +11,5 @@ export const convertApiColorToStyleProps = (color: AnnotationColorType) => {
     : `${color}11`;
   const colorKey = isBackground ? 'background' : 'color';
 
-  return { [colorKey]: theme.colors[colorValue] };
+  return { [colorKey]: colors[colorValue] };
 };

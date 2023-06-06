@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { PrismLight as Highlighter } from 'react-syntax-highlighter';
 import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 
@@ -19,7 +20,12 @@ const capitalize = (str: string) => {
 };
 
 export const CodeBlock = ({ block }: Props) => {
+  const [isReady, setIsReady] = useState(false);
   const { language, rich_text } = block.code;
+
+  useEffect(() => {
+    setIsReady(true);
+  }, [setIsReady]);
 
   return (
     <PageContent>
@@ -27,15 +33,17 @@ export const CodeBlock = ({ block }: Props) => {
         className="whitespace-pre rounded-sm bg-gray-50 px-4 pb-6 pt-3 font-mono text-sm"
         style={{ tabSize: 2 }}
       >
-        <div className="text-xs text-gray-500">{capitalize(language)}</div>
-        <Highlighter
-          style={codeStyle}
-          useInlineStyles={false}
-          customStyle={{ overflowX: 'scroll' }}
-          language={language}
-        >
-          {rich_text[0].plain_text}
-        </Highlighter>
+        <div className="mb-2 text-xs text-gray-500">{capitalize(language)}</div>
+        {isReady && (
+          <Highlighter
+            style={codeStyle}
+            useInlineStyles
+            customStyle={{ overflowX: 'scroll', background: 'transparent' }}
+            language={language}
+          >
+            {rich_text[0].plain_text}
+          </Highlighter>
+        )}
       </div>
     </PageContent>
   );

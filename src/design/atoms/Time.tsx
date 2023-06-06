@@ -1,8 +1,9 @@
 'use client';
 
 import dayjs from 'dayjs';
-import { useIsomorphicLayoutEffect } from 'framer-motion';
 import { useMemo, useState } from 'react';
+
+import { useIsomorphicLayoutEffect } from '@src/hooks/useIsomorphicLayoutEffect';
 
 interface Props {
   date: string;
