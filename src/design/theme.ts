@@ -86,4 +86,4 @@ const createTheme = () => {
   };
 };
 
-export const { theme, cssText } = createTheme();
+export const { theme } = createTheme();
