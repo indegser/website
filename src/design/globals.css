@@ -23,22 +23,4 @@
     margin: 0;
     @apply leading-normal;
   }
-
-  .token {
-    &.comment {
-      @apply text-gray-500;
-    }
-    &.prolog, &.doctype, &.cdata {
-      @apply text-gray-400;
-    }
-    &.punctuation {
-      @apply text-gray-900;
-    }
-    &.namespace {
-      opacity: .7;
-    }
-    &.keyword {
-      @apply text-rose-900;
-    }
-  }
 }
