@@ -1,17 +1,20 @@
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
+import { Relation } from './Relation';
 import { RichItemThumbnail } from './RichItemThumbnail';
 
 import { Time } from '@src/design/atoms/Time';
+import { IndexConfigType } from '@src/types/indexes';
 import { PageType } from '@src/types/notion';
 import { getNotionFileUrl, notionUtils } from '@src/utils/notion';
 
 interface Props {
   page: PageType;
+  config: IndexConfigType;
 }
 
-export const RichItem = ({ page }: Props) => {
+export const RichItem = ({ page, config }: Props) => {
   const { id, last_edited_time } = page;
 
   const title = notionUtils.getTitle(page);
@@ -26,6 +29,7 @@ export const RichItem = ({ page }: Props) => {
       <section className="grid auto-rows-max gap-2">
         <RichItemThumbnail src={getNotionFileUrl(page.cover)} alt={title} />
         <div className="grid gap-2">
+          <Relation page={page} config={config} />
           <div className="m-0 font-semibold leading-tight">
             <Balancer>{title}</Balancer>
           </div>

@@ -7,14 +7,16 @@ import { RichItem } from './RichItem';
 
 import { databaseApi } from '@src/apis/database';
 import { Spinner } from '@src/design/atoms/Spinner';
-import { DatabaseType, JournalPageType } from '@src/types/notion';
+import { IndexConfigType } from '@src/types/indexes';
+import { DatabaseType, ContentType } from '@src/types/notion';
 
 interface Props {
   id: string;
+  config: IndexConfigType;
   startCursor: string;
 }
 
-export const IndexShowMore = ({ id, startCursor }: Props) => {
+export const IndexShowMore = ({ id, config, startCursor }: Props) => {
   const { data, size, setSize, isValidating } = useSWRInfinite(
     (pageIndex, previous: DatabaseType) => {
       if (previous && !previous.next_cursor) return null;
@@ -22,7 +24,7 @@ export const IndexShowMore = ({ id, startCursor }: Props) => {
       return previous.next_cursor;
     },
     (startCursor) => {
-      return databaseApi.queryDatabase<JournalPageType>({ id, startCursor });
+      return databaseApi.queryDatabase<ContentType>({ id, startCursor });
     },
     { revalidateFirstPage: false }
   );
@@ -30,7 +32,9 @@ export const IndexShowMore = ({ id, startCursor }: Props) => {
   return (
     <>
       {data?.map((result) =>
-        result.results.map((page) => <RichItem key={page.id} page={page} />)
+        result.results.map((page) => (
+          <RichItem key={page.id} config={config} page={page} />
+        ))
       )}
       {isValidating ? (
         <Spinner />
