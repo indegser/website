@@ -19,7 +19,7 @@ export const RichItem = ({ page, config }: Props) => {
 
   const title = notionUtils.getTitle(page);
 
-  const href = config.urlProperty
+  const href = config?.urlProperty
     ? (page.properties[config.urlProperty] as PropertyType<'url'>).url
     : `/content/${id}`;
 

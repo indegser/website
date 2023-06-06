@@ -10,6 +10,8 @@ interface Props {
 }
 
 export const Relation = ({ page, config }: Props) => {
+  if (!config) return null;
+
   const ids = notionUtils.getRelationOfPage(page, config);
 
   return (
