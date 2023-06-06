@@ -27,7 +27,7 @@ dependencies:
     specifier: ^2.4.0
     version: 2.4.0(encoding@0.1.13)
   '@vercel/analytics':
-    specifier: ^1.0.0
+    specifier: ^1.0.1
     version: 1.0.1
   '@vercel/edge-config':
     specifier: ^0.2.0
@@ -35,9 +35,6 @@ dependencies:
   '@vercel/og':
     specifier: ^0.5.4
     version: 0.5.4
-  amplitude-js:
-    specifier: ^8.21.4
-    version: 8.21.9
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
@@ -109,9 +106,6 @@ devDependencies:
   '@styled/typescript-styled-plugin':
     specifier: ^1.0.0
     version: 1.0.0
-  '@types/amplitude-js':
-    specifier: ^8.16.0
-    version: 8.16.2
   '@types/lodash-es':
     specifier: ^4.17.5
     version: 4.17.6
@@ -176,33 +170,6 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
     dev: true
-
-  /@amplitude/analytics-connector@1.4.6:
-    resolution: {integrity: sha512-6jD2pOosRD4y8DT8StUCz7yTd5ZDkdOU9/AWnlWKM5qk90Mz7sdZrdZ9H7sA/L3yOJEpQOYZgQplQdWWUzyWug==}
-    dependencies:
-      '@amplitude/ua-parser-js': 0.7.31
-    dev: false
-
-  /@amplitude/types@1.10.2:
-    resolution: {integrity: sha512-I8qenRI7uU6wKNb9LiZrAosSHVoNHziXouKY81CrqxH9xhVTEIJFXeuCV0hbtBr0Al/8ejnGjQRx+S2SvU/pPg==}
-    engines: {node: '>=10'}
-    dev: false
-
-  /@amplitude/ua-parser-js@0.7.31:
-    resolution: {integrity: sha512-+z8UGRaj13Pt5NDzOnkTBy49HE2CX64jeL0ArB86HAtilpnfkPB7oqkigN7Lf2LxscMg4QhFD7mmCfedh3rqTg==}
-    dev: false
-
-  /@amplitude/ua-parser-js@0.7.33:
-    resolution: {integrity: sha512-wKEtVR4vXuPT9cVEIJkYWnlF++Gx3BdLatPBM+SZ1ztVIvnhdGBZR/mn9x/PzyrMcRlZmyi6L56I2J3doVBnjA==}
-    dev: false
-
-  /@amplitude/utils@1.10.2:
-    resolution: {integrity: sha512-tVsHXu61jITEtRjB7NugQ5cVDd4QDzne8T3ifmZye7TiJeUfVRvqe44gDtf55A+7VqhDhyEIIXTA1iVcDGqlEw==}
-    engines: {node: '>=10'}
-    dependencies:
-      '@amplitude/types': 1.10.2
-      tslib: 2.4.1
-    dev: false
 
   /@babel/code-frame@7.21.4:
     resolution: {integrity: sha512-LYvhNKfwWSPpocw8GI7gpK2nq3HSDuEPC/uSYaALSJu9xjsalaaYFOq0Pwt5KmVqwEbZlDu81aLXwBOmD/Fv9g==}
@@ -825,10 +792,6 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
-  /@types/amplitude-js@8.16.2:
-    resolution: {integrity: sha512-a+tb/CEQOlrHRvEvAuYNOcoUy1POERANnAhfKgiTmsy0eACj3eukGP0ucA9t115QOPzVUhbnUfZqtyHp99IZyA==}
-    dev: true
-
   /@types/hast@2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
@@ -1037,17 +1000,6 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /amplitude-js@8.21.9:
-    resolution: {integrity: sha512-d0jJH00wbXu7sxKtVwkdSXtVffjqdUrxuACKlnzP7jU5qt9wriXXMgHifdH5Oq+buKmyF8wKL9S02gAykysURA==}
-    dependencies:
-      '@amplitude/analytics-connector': 1.4.6
-      '@amplitude/ua-parser-js': 0.7.33
-      '@amplitude/utils': 1.10.2
-      '@babel/runtime': 7.21.5
-      blueimp-md5: 2.19.0
-      query-string: 8.1.0
-    dev: false
-
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -1207,10 +1159,6 @@ packages:
       buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.2
-    dev: false
-
-  /blueimp-md5@2.19.0:
-    resolution: {integrity: sha512-DRQrD6gJyy8FbiE4s+bDoXS9hiW3Vbx5uCdwvcCf3zLHL+Iv7LtGHLpr+GZV8rHG8tK766FGYBwRbu8pELTt+w==}
     dev: false
 
   /boolbase@1.0.0:
@@ -1682,11 +1630,6 @@ packages:
     dependencies:
       ms: 2.1.2
     dev: true
-
-  /decode-uri-component@0.4.1:
-    resolution: {integrity: sha512-+8VxcR21HhTy8nOt6jf20w0c9CADrw1O8d+VZ/YzzCt4bJ3uBjw+D1q2osAB8RnpwwaeYBxy0HyKQxD5JBMuuQ==}
-    engines: {node: '>=14.16'}
-    dev: false
 
   /decompress-response@6.0.0:
     resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
@@ -2304,11 +2247,6 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
     dev: true
-
-  /filter-obj@5.1.0:
-    resolution: {integrity: sha512-qWeTREPoT7I0bifpPUXtxkZJ1XJzxWtfoWWkdVGqa+eCr3SHW/Ocp89o8vLvbUuQnadybJpjOKu4V+RwO6sGng==}
-    engines: {node: '>=14.16'}
-    dev: false
 
   /find-root@1.1.0:
     resolution: {integrity: sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==}
@@ -3913,15 +3851,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /query-string@8.1.0:
-    resolution: {integrity: sha512-BFQeWxJOZxZGix7y+SByG3F36dA0AbTy9o6pSmKFcFz7DAj0re9Frkty3saBn3nHo3D0oZJ/+rx3r8H8r8Jbpw==}
-    engines: {node: '>=14.16'}
-    dependencies:
-      decode-uri-component: 0.4.1
-      filter-obj: 5.1.0
-      split-on-first: 3.0.0
-    dev: false
-
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
@@ -4266,11 +4195,6 @@ packages:
 
   /space-separated-tokens@1.1.5:
     resolution: {integrity: sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==}
-    dev: false
-
-  /split-on-first@3.0.0:
-    resolution: {integrity: sha512-qxQJTx2ryR0Dw0ITYyekNQWpz6f8dGd7vffGNflQQ3Iqj9NJ6qiZ7ELpZsJ/QBhIVAiDfXdag3+Gp8RvWa62AA==}
-    engines: {node: '>=12'}
     dev: false
 
   /streamsearch@1.1.0:
