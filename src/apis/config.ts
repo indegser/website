@@ -9,6 +9,11 @@ const getConfig = cache(async (id: string): Promise<IndexConfigType> => {
   return index || null;
 });
 
+const getIndexes = cache(async () => {
+  return get<IndexConfigType[]>('indexes');
+});
+
 export const configApi = {
   getConfig,
+  getIndexes,
 };
