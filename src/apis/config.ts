@@ -1,9 +1,13 @@
-import { ORIGIN } from '@src/types/constants';
+import { get } from '@vercel/edge-config';
+import { cache } from 'react';
+
 import { IndexConfigType } from '@src/types/indexes';
 
-const getConfig = async (id: string): Promise<IndexConfigType> => {
-  return fetch(`${ORIGIN}/config?id=${id}`).then((res) => res.json());
-};
+const getConfig = cache(async (id: string): Promise<IndexConfigType> => {
+  const indexes = await get<IndexConfigType[]>('indexes');
+  const index = indexes.find((index) => index.id === id);
+  return index || null;
+});
 
 export const configApi = {
   getConfig,
