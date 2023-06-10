@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { breakPoints } from '@src/design/mediaQueries';
+import { breakPoints } from '@src/design/breakPoints';
 
 interface Props {
   alt: string;
