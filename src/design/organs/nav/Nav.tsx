@@ -16,7 +16,6 @@ export const Nav = () => {
               Indegser
             </div>
           </Link>
-          {/* @ts-expect-error Async Server Component */}
           <IndexNav />
         </nav>
       </PageContainer>
