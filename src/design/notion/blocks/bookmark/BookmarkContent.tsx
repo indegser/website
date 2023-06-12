@@ -10,7 +10,7 @@ interface OpenGraphType {
 
 interface Props {
   url: string;
-  isSkeleton: boolean;
+  isSkeleton?: boolean;
 }
 
 export const BookmarkContent = async ({ url, isSkeleton }: Props) => {

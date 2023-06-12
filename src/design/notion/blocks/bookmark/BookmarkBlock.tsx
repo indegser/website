@@ -14,13 +14,7 @@ export const BookmarkBlock = (props: Props) => {
 
   return (
     <figure className="my-6">
-      <Suspense
-        fallback={
-          /** @ts-expect-error Async Server Component */
-          <BookmarkContent url={url} isSkeleton />
-        }
-      >
-        {/* @ts-expect-error Async Server Component */}
+      <Suspense fallback={<BookmarkContent url={url} isSkeleton />}>
         <BookmarkContent url={url} />
       </Suspense>
       <Caption caption={caption} />

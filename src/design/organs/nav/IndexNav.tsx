@@ -8,7 +8,6 @@ export const IndexNav = async () => {
   return (
     <>
       {indexes.map((index) => {
-        /* @ts-expect-error Async Server Component */
         return <IndexNavItem key={index.id} id={index.id} />;
       })}
     </>
