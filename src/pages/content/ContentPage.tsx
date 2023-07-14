@@ -14,12 +14,14 @@ export const ContentPage = (props: Props) => {
   const { id } = props;
 
   return (
-    <PageContainer>
-      <Suspense fallback={<></>}>
-        <ContentRouter />
-      </Suspense>
+    <>
       <ContentHeadline id={id} />
-      <NotionContent id={id} />
-    </PageContainer>
+      <PageContainer>
+        <Suspense fallback={<></>}>
+          <ContentRouter />
+        </Suspense>
+        <NotionContent id={id} />
+      </PageContainer>
+    </>
   );
 };
