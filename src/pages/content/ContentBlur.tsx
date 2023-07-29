@@ -18,12 +18,12 @@ export const ContentBlur = () => {
     Math.max(190 + value * -0.12, 0)
   );
 
-  const blur = useTransform(springY, (value) => value * 0.32 + 60);
+  // const blur = useTransform(springY, (value) => value * 0.32 + 60);
   const backdropFilter = useMotionTemplate`saturate(${saturate}%) blur(60px)`;
 
   return (
     <motion.div
-      className="absolute inset-0"
+      className="absolute inset-0 bottom-px"
       style={{
         maskImage: MASK_IMAGE,
         WebkitMaskImage: MASK_IMAGE,

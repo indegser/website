@@ -20,7 +20,7 @@ export const ContentHeadline = async (props: Props) => {
   const title = notionUtils.getTitle(page);
 
   return (
-    <section className="relative aspect-[2/3] overflow-hidden">
+    <section className="relative mb-4 aspect-video overflow-hidden">
       <ContentCover src={cover} alt={title} />
       <div className="relative flex h-full flex-col">
         <div className="flex-auto"></div>
