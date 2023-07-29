@@ -1,14 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest, NextResponse } from 'next/server';
 import ogs from 'open-graph-scraper';
 
 import { supabase } from '@src/sdks/supabase';
-
-type Data = {
-  title: string;
-  description: string;
-  favicon: string;
-  imageUrl: string;
-};
 
 const parseUrl = (originalUrl: string, url: string) => {
   if (!url) return null;
@@ -32,13 +25,13 @@ const hasCachedVersion = async (url: string) => {
   return data;
 };
 
-const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
-  const url = req.query.url.toString();
+export async function GET(req: NextRequest) {
+  const url = req.nextUrl.searchParams.get('url');
 
   const cachedVersion = await hasCachedVersion(url);
 
   if (cachedVersion) {
-    res.json(cachedVersion);
+    NextResponse.json(cachedVersion);
     return;
   }
 
@@ -52,8 +45,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
   });
 
   if (result.error) {
-    res.status(400).end();
-    return;
+    return NextResponse.error();
   }
 
   const { ogTitle, ogDescription, ogImage, favicon } = result.result as any;
@@ -81,7 +73,5 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
     .select()
     .maybeSingle();
 
-  res.status(200).json(upsertResult.data);
-};
-
-export default handler;
+  return NextResponse.json(upsertResult.data);
+}
