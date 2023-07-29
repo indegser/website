@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import { IndexNav } from './IndexNav';
 import { Logo } from './Logo';
 
 import { PageContainer } from '@src/design/atoms/Container';
@@ -16,7 +15,6 @@ export const Nav = () => {
               Indegser
             </div>
           </Link>
-          <IndexNav />
         </nav>
       </PageContainer>
     </div>
