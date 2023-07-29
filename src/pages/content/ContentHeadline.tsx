@@ -4,7 +4,6 @@ import { ContentCover } from './ContentCover';
 import { pageApi } from '@src/apis/content';
 import { Time } from '@src/design/atoms/Time';
 import { Balancer } from '@src/design/Balancer';
-import { getNotionFileUrl, notionUtils } from '@src/utils/notion';
 
 interface Props {
   id: string;
@@ -15,9 +14,7 @@ export const preloadPage = (id: string) => {
 };
 
 export const ContentHeadline = async (props: Props) => {
-  const page = await pageApi.getPage(props.id);
-  const cover = getNotionFileUrl(page.cover);
-  const title = notionUtils.getTitle(page);
+  const { cover, title, last_edited_time } = await pageApi.getPage(props.id);
 
   return (
     <section className="relative mb-4 aspect-video overflow-hidden">
@@ -32,7 +29,7 @@ export const ContentHeadline = async (props: Props) => {
             </h1>
             <div className="grid gap-x-3 pb-3 sm:pb-2">
               <div className="text-sm text-gray-300">
-                <Time date={page.last_edited_time} template="LLL" />
+                <Time date={last_edited_time} template="LLL" />
               </div>
             </div>
           </div>

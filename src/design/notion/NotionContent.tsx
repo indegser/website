@@ -6,18 +6,14 @@ interface Props {
   id: string;
 }
 
-export const preload = (id: string) => {
-  void pageApi.getContent(id);
-};
-
 export const NotionContent = async ({ id }: Props) => {
-  const { results } = await pageApi.getContent(id);
+  const { content } = await pageApi.getPage(id);
 
   return (
     <article className="text-lg md:text-base">
-      {results.map((block, index) => {
+      {content.map((block, index) => {
         return (
-          <Block key={block.id} block={block} index={index} blocks={results} />
+          <Block key={block.id} block={block} index={index} blocks={content} />
         );
       })}
     </article>
