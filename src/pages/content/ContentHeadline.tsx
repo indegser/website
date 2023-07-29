@@ -1,8 +1,9 @@
+import { ContentBlur } from './ContentBlur';
+import { ContentCover } from './ContentCover';
+
 import { pageApi } from '@src/apis/content';
 import { PageContent } from '@src/design/atoms/Container';
-import { Time } from '@src/design/atoms/Time';
 import { Balancer } from '@src/design/Balancer';
-import { notionUtils } from '@src/utils/notion';
 
 interface Props {
   id: string;
@@ -13,20 +14,27 @@ export const preloadPage = (id: string) => {
 };
 
 export const ContentHeadline = async (props: Props) => {
-  const page = await pageApi.getPage(props.id);
+  const { cover, title, excerpt } = await pageApi.getPage(props.id);
 
   return (
-    <section className="mb-4 pb-1 pt-4 sm:mb-2 sm:pt-2">
-      <PageContent>
-        <div className="grid gap-x-3 pb-3 sm:pb-2">
-          <div className="text-sm text-gray-700">
-            <Time date={page.last_edited_time} template="LLL" />
+    <PageContent>
+      <div className="pt-8">
+        <h1 className="my-0 text-center text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight">
+          <Balancer>{title}</Balancer>
+        </h1>
+      </div>
+      <section className="relative -mx-5 my-8 aspect-video overflow-hidden">
+        <ContentCover src={cover} alt={title} />
+        <div className="relative grid h-full grid-rows-2">
+          <div></div>
+          <div className="relative">
+            <ContentBlur />
+            <div className="relative line-clamp-2 flex h-full items-end p-8 pb-4 text-xs text-gray-200/75 sm:pb-8">
+              {excerpt}
+            </div>
           </div>
         </div>
-        <h1 className="my-0 text-4xl font-extrabold leading-tight sm:text-5xl sm:leading-tight">
-          <Balancer>{notionUtils.getTitle(page)}</Balancer>
-        </h1>
-      </PageContent>
-    </section>
+      </section>
+    </PageContent>
   );
 };

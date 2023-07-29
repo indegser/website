@@ -2,11 +2,9 @@ import { Metadata } from 'next';
 
 import { pageApi } from '@src/apis/content';
 import { journalApi } from '@src/apis/journal';
-import { preload } from '@src/design/notion/NotionContent';
 import { preloadPage } from '@src/pages/content/ContentHeadline';
 import { ContentPage } from '@src/pages/content/ContentPage';
 import { isProduction } from '@src/types/env';
-import { getNotionFileUrl, notionUtils } from '@src/utils/notion';
 
 export const revalidate = 60;
 
@@ -17,21 +15,17 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
 
-  const result = await pageApi.getPage(id);
-
-  const title = notionUtils.getTitle(result);
-  const description = notionUtils.getPlainText(result.properties.Description);
-  const image = getNotionFileUrl(result.cover);
+  const { title, excerpt, cover } = await pageApi.getPage(id);
 
   return {
     title,
-    description,
+    description: excerpt,
     openGraph: {
       title,
-      description,
+      description: excerpt,
       type: 'article',
       siteName: 'Indegser',
-      images: image ? [image] : [],
+      images: cover ? [cover] : [],
     },
     twitter: {
       card: 'summary_large_image',
@@ -50,7 +44,6 @@ export const generateStaticParams = async () => {
 };
 
 export default async function Page({ params: { id } }: Props) {
-  preload(id);
   preloadPage(id);
 
   return <ContentPage id={id} />;

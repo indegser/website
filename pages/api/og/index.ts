@@ -32,7 +32,7 @@ const hasCachedVersion = async (url: string) => {
   return data;
 };
 
-const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse<any>) => {
   const url = req.query.url.toString();
 
   const cachedVersion = await hasCachedVersion(url);

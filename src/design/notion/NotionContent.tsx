@@ -1,23 +1,21 @@
 import { Block } from './blocks/Block';
 
 import { pageApi } from '@src/apis/content';
+import { BlockType } from '@src/types/notion';
 
 interface Props {
   id: string;
 }
 
-export const preload = (id: string) => {
-  void pageApi.getContent(id);
-};
-
 export const NotionContent = async ({ id }: Props) => {
-  const { results } = await pageApi.getContent(id);
+  const { content } = await pageApi.getPage(id);
+  const blocks = (Array.isArray(content) ? content : []) as BlockType[];
 
   return (
     <article className="text-lg md:text-base">
-      {results.map((block, index) => {
+      {blocks.map((block, index) => {
         return (
-          <Block key={block.id} block={block} index={index} blocks={results} />
+          <Block key={block.id} block={block} index={index} blocks={blocks} />
         );
       })}
     </article>

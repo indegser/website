@@ -1,21 +1,17 @@
 import { cache } from 'react';
 
-import { notionApi } from './notion';
+import { supabase } from '@src/sdks/supabase';
 
-import { ContentType } from '@src/types/notion';
+const getPage = cache(async (page_id: string) => {
+  const { data } = await supabase
+    .from('pages')
+    .select()
+    .eq('id', page_id)
+    .maybeSingle();
 
-const getPage = cache((page_id: string) =>
-  notionApi.retrievePage<ContentType>({ page_id })
-);
-
-const getContent = cache((block_id: string) =>
-  notionApi.retrieveBlockChildren({
-    block_id,
-    page_size: 100,
-  })
-);
+  return data;
+});
 
 export const pageApi = {
   getPage,
-  getContent,
 };

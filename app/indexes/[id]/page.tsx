@@ -34,5 +34,5 @@ export default async function Page({ params }: { params: { id: string } }) {
   const { id } = params;
 
   preloadIndex(id);
-  return <IndexPage id={id} />;
+  return <IndexPage />;
 }
