@@ -12,6 +12,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "typegen": "pnpm supabase gen types typescript --project-id rovmadruwzgusgvfihbv --schema public > src/types/supabase.types.ts; pnpm lint --fix",
     "prettier": "prettier src pages --check",
     "prettier:fix": "pnpm prettier --write",
     "test": "jest",
@@ -67,6 +68,7 @@
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
+    "supabase": "^1.82.2",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.3"
   }

@@ -4,15 +4,11 @@ import { databaseApi } from '@src/apis/database';
 import { PageContainer } from '@src/design/atoms/Container';
 import { supabase } from '@src/sdks/supabase';
 
-interface Props {
-  id: string;
-}
-
 export const preloadIndex = (id: string) => {
   void databaseApi.queryDatabase({ id });
 };
 
-export const IndexPage = async (props: Props) => {
+export const IndexPage = async () => {
   const { data } = await supabase.from('pages').select('*');
 
   return (
