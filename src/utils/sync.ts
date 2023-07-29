@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import { coverTask } from './image/coverTask';
 import { notionUtils } from './notion';
 
-import { notionApi } from '@src/apis/notion';
+import { notionApi } from '@src/apis/notion.api';
 import { notion } from '@src/sdks/notion';
 import { supabase } from '@src/sdks/supabase';
 import { PageType, PropertyType } from '@src/types/notion.types';

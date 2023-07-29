@@ -1,6 +1,6 @@
 import { Block } from './blocks/Block';
 
-import { pageApi } from '@src/apis/content';
+import { pageApi } from '@src/apis/page.api';
 import { BlockType } from '@src/types/notion.types';
 
 interface Props {

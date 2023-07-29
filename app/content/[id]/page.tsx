@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 
-import { pageApi } from '@src/apis/content';
-import { pageApi as pageApiV2 } from '@src/apis/page.api';
+import { pageApi } from '@src/apis/page.api';
 import { preloadPage } from '@src/pages/content/ContentHeadline';
 import { ContentPage } from '@src/pages/content/ContentPage';
 import { isProduction } from '@src/types/env.types';
@@ -34,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export const generateStaticParams = async () => {
-  const { data } = await pageApiV2.queryPages({
+  const { data } = await pageApi.queryPages({
     limit: isProduction ? 20 : 1,
   });
 
