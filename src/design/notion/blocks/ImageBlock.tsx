@@ -42,7 +42,7 @@ export const ImageBlock = async ({ block }: Props) => {
 
   const metadata = await getMetadata(url, block.id);
 
-  if (!url || !metadata) return null;
+  if (!url || !metadata || typeof metadata == 'string') return null;
 
   const { width, height } = metadata;
   const { caption } = block.image;

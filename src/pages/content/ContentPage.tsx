@@ -1,5 +1,3 @@
-import { Suspense } from 'react';
-
 import { ContentHeadline } from './ContentHeadline';
 import { ContentRouter } from './ContentRouter';
 
@@ -15,11 +13,9 @@ export const ContentPage = (props: Props) => {
 
   return (
     <>
-      <ContentHeadline id={id} />
+      <ContentRouter />
       <PageContainer>
-        <Suspense fallback={<></>}>
-          <ContentRouter />
-        </Suspense>
+        <ContentHeadline id={id} />
         <NotionContent id={id} />
       </PageContainer>
     </>
