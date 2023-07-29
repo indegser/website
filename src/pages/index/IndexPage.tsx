@@ -1,15 +1,14 @@
 import { RichItem } from './RichItem';
 
-import { databaseApi } from '@src/apis/database';
+import { pageApi } from '@src/apis/page.api';
 import { PageContainer } from '@src/design/atoms/Container';
-import { supabase } from '@src/sdks/supabase';
 
-export const preloadIndex = (id: string) => {
-  void databaseApi.queryDatabase({ id });
+export const preloadIndex = () => {
+  void pageApi.queryPages();
 };
 
 export const IndexPage = async () => {
-  const { data } = await supabase.from('pages').select('*');
+  const { data } = await pageApi.queryPages();
 
   return (
     <PageContainer>

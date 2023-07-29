@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 import { pageApi } from '@src/apis/content';
-import { journalApi } from '@src/apis/journal';
+import { pageApi as pageApiV2 } from '@src/apis/page.api';
 import { preloadPage } from '@src/pages/content/ContentHeadline';
 import { ContentPage } from '@src/pages/content/ContentPage';
 import { isProduction } from '@src/types/env';
@@ -34,11 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export const generateStaticParams = async () => {
-  const { results } = await journalApi.queryJournalDatabase({
-    page_size: isProduction ? 20 : 1,
+  const { data } = await pageApiV2.queryPages({
+    limit: isProduction ? 20 : 1,
   });
 
-  return results.map((page) => ({
+  return data.map((page) => ({
     id: page.id,
   }));
 };
