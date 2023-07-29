@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 
 import { coverTask } from './image/coverTask';
-import { getNotionFileUrl, notionUtils } from './notion';
+import { notionUtils } from './notion';
 
 import { notionApi } from '@src/apis/notion';
 import { notion } from '@src/sdks/notion';
@@ -15,7 +15,7 @@ const syncPages = async (pages: PageType[]) => {
       const { id } = page;
 
       const title = notionUtils.getTitle(page);
-      const cover = getNotionFileUrl(page.cover);
+      const cover = notionUtils.getNotionFileUrl(page.cover);
 
       const { results: content } = await notionApi.retrieveBlockChildren({
         block_id: id,
