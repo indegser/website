@@ -9,7 +9,7 @@ import {
 } from '@notionhq/client/build/src/api-endpoints';
 
 import { notion } from '@src/sdks/notion';
-import { isServer } from '@src/types/env';
+import { isServer } from '@src/types/env.types';
 import { DatabaseType, ListBlockChildrenType } from '@src/types/notion.types';
 import { coverTask } from '@src/utils/image/coverTask';
 

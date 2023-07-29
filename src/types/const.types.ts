@@ -1,4 +1,4 @@
-import { environment } from './env';
+import { environment } from './env.types';
 
 export const CDN_ORIGIN = process.env.NEXT_PUBLIC_SUPABASE_URL;
 

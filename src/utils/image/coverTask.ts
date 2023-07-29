@@ -2,7 +2,7 @@ import { uploadImageToSupabase } from './uploadImageToSupabase';
 import { notionUtils } from '../notion';
 
 import { notion } from '@src/sdks/notion';
-import { CDN_ORIGIN } from '@src/types/constants';
+import { CDN_ORIGIN } from '@src/types/const.types';
 import { PageType } from '@src/types/notion.types';
 
 export const coverTask = (pages: Array<PageType>) => {

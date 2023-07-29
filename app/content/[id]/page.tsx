@@ -4,7 +4,7 @@ import { pageApi } from '@src/apis/content';
 import { pageApi as pageApiV2 } from '@src/apis/page.api';
 import { preloadPage } from '@src/pages/content/ContentHeadline';
 import { ContentPage } from '@src/pages/content/ContentPage';
-import { isProduction } from '@src/types/env';
+import { isProduction } from '@src/types/env.types';
 
 export const revalidate = 60;
 
