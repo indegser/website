@@ -1,0 +1,13 @@
+name: Sync notion to supabase
+
+on:
+  schedule:
+    # Runs "at every 1 minute" (see https://crontab.guru)
+    - cron: '* * * * *'
+jobs:
+  build:
+    name: Batch
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL request
+        run: curl https://www.indegser.com/api/content
