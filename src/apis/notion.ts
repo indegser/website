@@ -10,7 +10,7 @@ import {
 
 import { notion } from '@src/sdks/notion';
 import { isServer } from '@src/types/env';
-import { DatabaseType, ListBlockChildrenType } from '@src/types/notion';
+import { DatabaseType, ListBlockChildrenType } from '@src/types/notion.types';
 import { coverTask } from '@src/utils/image/coverTask';
 
 export const queryDatabase = async <T>(

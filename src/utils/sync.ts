@@ -6,7 +6,7 @@ import { notionUtils } from './notion';
 import { notionApi } from '@src/apis/notion';
 import { notion } from '@src/sdks/notion';
 import { supabase } from '@src/sdks/supabase';
-import { PageType, PropertyType } from '@src/types/notion';
+import { PageType, PropertyType } from '@src/types/notion.types';
 
 const syncPages = async (pages: PageType[]) => {
   const results = await Promise.all(coverTask(pages));

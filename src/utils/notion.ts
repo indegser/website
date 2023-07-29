@@ -1,7 +1,6 @@
 import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 
-import { IndexConfigType } from '@src/types/indexes';
-import { CoverType, PageType, PropertyType } from '@src/types/notion';
+import { CoverType, PageType, PropertyType } from '@src/types/notion.types';
 
 const getNotionFileUrl = (coverOrFiles?: PropertyType<'files'> | CoverType) => {
   if (!coverOrFiles) return null;
@@ -50,17 +49,8 @@ const getTitle = (page: PageType | DatabaseObjectResponse) => {
     .join(' ');
 };
 
-const getRelationOfPage = (page: PageType, config: IndexConfigType) => {
-  if (!config.tagProperty) return [];
-  const property = page.properties[config.tagProperty];
-  if (!('relation' in property)) return [];
-
-  return property.relation.map(({ id }) => id);
-};
-
 export const notionUtils = {
   getTitle,
   getPlainText,
-  getRelationOfPage,
   getNotionFileUrl,
 };

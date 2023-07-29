@@ -2,7 +2,7 @@ import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import { notion } from '@src/sdks/notion';
-import { PageType } from '@src/types/notion';
+import { PageType } from '@src/types/notion.types';
 import { coverTask } from '@src/utils/image/coverTask';
 
 const handler = async (

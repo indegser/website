@@ -1,4 +1,4 @@
-import { CoverType, PropertyType } from '@src/types/notion';
+import { CoverType, PropertyType } from '@src/types/notion.types';
 
 interface Props {
   file: PropertyType<'files'>['files'][number] | CoverType;

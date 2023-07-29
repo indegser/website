@@ -3,7 +3,7 @@ import { notionUtils } from '../notion';
 
 import { notion } from '@src/sdks/notion';
 import { CDN_ORIGIN } from '@src/types/constants';
-import { PageType } from '@src/types/notion';
+import { PageType } from '@src/types/notion.types';
 
 export const coverTask = (pages: Array<PageType>) => {
   return pages.map(async (page) => {

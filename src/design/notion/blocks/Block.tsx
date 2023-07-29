@@ -15,7 +15,7 @@ import { VideoBlock } from './VideoBlock';
 import { PageContent } from '@src/design/atoms/Container';
 import { convertApiColorToStyleProps } from '@src/design/notion/convertApiColorToStyleProps';
 import { RichText } from '@src/design/notion/RichText';
-import { AnnotationColorType, BlockType } from '@src/types/notion';
+import { AnnotationColorType, BlockType } from '@src/types/notion.types';
 
 interface Props {
   index: number;
