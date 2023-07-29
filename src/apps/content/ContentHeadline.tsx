@@ -1,7 +1,7 @@
 import { ContentBlur } from './ContentBlur';
 import { ContentCover } from './ContentCover';
 
-import { pageApi } from '@src/apis/content';
+import { pageApi } from '@src/apis/page.api';
 import { PageContent } from '@src/design/atoms/Container';
 import { Balancer } from '@src/design/Balancer';
 

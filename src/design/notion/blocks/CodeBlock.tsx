@@ -9,7 +9,7 @@ Highlighter.registerLanguage('typescript', tsx);
 import { codeStyle } from './CodeBlock.style';
 
 import { PageContent } from '@src/design/atoms/Container';
-import { BlockType } from '@src/types/notion';
+import { BlockType } from '@src/types/notion.types';
 
 interface Props {
   block: Extract<BlockType, { type: 'code' }>;

@@ -1,13 +1,13 @@
 import { uploadImageToSupabase } from './uploadImageToSupabase';
-import { getNotionFileUrl } from '../notion';
+import { notionUtils } from '../notion';
 
 import { notion } from '@src/sdks/notion';
-import { CDN_ORIGIN } from '@src/types/constants';
-import { PageType } from '@src/types/notion';
+import { CDN_ORIGIN } from '@src/types/const.types';
+import { PageType } from '@src/types/notion.types';
 
 export const coverTask = (pages: Array<PageType>) => {
   return pages.map(async (page) => {
-    const coverUrl = getNotionFileUrl(page.cover);
+    const coverUrl = notionUtils.getNotionFileUrl(page.cover);
     const shouldReplace = coverUrl && !coverUrl.includes(CDN_ORIGIN);
 
     if (!shouldReplace) return page;

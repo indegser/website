@@ -1,16 +1,8 @@
-import { Metadata } from 'next';
-
-import { IndexPage, preloadIndex } from '@src/pages/index/IndexPage';
+import { IndexPage, preloadIndex } from '@src/apps/index/IndexPage';
 
 export const revalidate = 60;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Indegser',
-  };
-}
-
-export default async function Page() {
+export default function Page() {
   preloadIndex();
   return <IndexPage />;
 }

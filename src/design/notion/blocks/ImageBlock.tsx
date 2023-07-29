@@ -4,7 +4,7 @@ import { Caption } from './Caption';
 
 import { PageContent } from '@src/design/atoms/Container';
 import { notion } from '@src/sdks/notion';
-import { BlockType } from '@src/types/notion';
+import { BlockType } from '@src/types/notion.types';
 import { uploadImage } from '@src/utils/image/createImage';
 
 interface Props {

@@ -3,7 +3,7 @@ import { NotionIcon } from './NotionIcon';
 import { PageContent } from '@src/design/atoms/Container';
 import { convertApiColorToStyleProps } from '@src/design/notion/convertApiColorToStyleProps';
 import { RichText } from '@src/design/notion/RichText';
-import { BlockType } from '@src/types/notion';
+import { BlockType } from '@src/types/notion.types';
 
 interface Props {
   block: Extract<BlockType, { type: 'callout' }>;

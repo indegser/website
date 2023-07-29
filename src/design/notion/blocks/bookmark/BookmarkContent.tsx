@@ -1,4 +1,4 @@
-import { ORIGIN } from '@src/types/constants';
+import { ORIGIN } from '@src/types/const.types';
 
 interface OpenGraphType {
   id: string;

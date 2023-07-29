@@ -1,12 +1,13 @@
+import 'server-only';
+
 import dayjs from 'dayjs';
 
 import { coverTask } from './image/coverTask';
-import { getNotionFileUrl, notionUtils } from './notion';
+import { notionUtils } from './notion';
 
-import { notionApi } from '@src/apis/notion';
 import { notion } from '@src/sdks/notion';
 import { supabase } from '@src/sdks/supabase';
-import { PageType, PropertyType } from '@src/types/notion';
+import { PageType, PropertyType } from '@src/types/notion.types';
 
 const syncPages = async (pages: PageType[]) => {
   const results = await Promise.all(coverTask(pages));
@@ -15,9 +16,9 @@ const syncPages = async (pages: PageType[]) => {
       const { id } = page;
 
       const title = notionUtils.getTitle(page);
-      const cover = getNotionFileUrl(page.cover);
+      const cover = notionUtils.getNotionFileUrl(page.cover);
 
-      const { results: content } = await notionApi.retrieveBlockChildren({
+      const { results: content } = await notion.blocks.children.list({
         block_id: id,
         page_size: 100,
       });
@@ -49,8 +50,8 @@ const syncPages = async (pages: PageType[]) => {
 };
 
 const syncPage = async (id: string) => {
-  const page = await notionApi.retrievePage<PageType>({ page_id: id });
-  return syncPages([page]);
+  const page = await notion.pages.retrieve({ page_id: id });
+  return syncPages([page as PageType]);
 };
 
 const syncLatest = async () => {

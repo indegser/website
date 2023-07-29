@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { PageContent } from '@src/design/atoms/Container';
 import { RichText } from '@src/design/notion/RichText';
-import { BlockType } from '@src/types/notion';
+import { BlockType } from '@src/types/notion.types';
 
 interface Props {
   blocks: BlockType[];
