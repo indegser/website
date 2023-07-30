@@ -23,6 +23,9 @@ dependencies:
   '@vercel/og':
     specifier: ^0.5.4
     version: 0.5.4
+  client-only:
+    specifier: ^0.0.1
+    version: 0.0.1
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
@@ -97,6 +100,9 @@ devDependencies:
   '@styled/typescript-styled-plugin':
     specifier: ^1.0.0
     version: 1.0.0
+  '@types/gtag.js':
+    specifier: ^0.0.12
+    version: 0.0.12
   '@types/lodash-es':
     specifier: ^4.17.5
     version: 4.17.6
@@ -551,6 +557,10 @@ packages:
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
+    dev: true
+
+  /@types/gtag.js@0.0.12:
+    resolution: {integrity: sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==}
     dev: true
 
   /@types/hast@2.3.4:
