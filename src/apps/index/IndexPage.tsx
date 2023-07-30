@@ -13,8 +13,8 @@ export const IndexPage = async () => {
   return (
     <PageContainer>
       <div className="grid grid-cols-1 gap-8 py-8 sm:grid-cols-3">
-        {data.map((page) => (
-          <RichItem key={page.id} page={page} />
+        {data.map(({ series, ...page }) => (
+          <RichItem key={page.id} page={page} series={series} />
         ))}
       </div>
     </PageContainer>
