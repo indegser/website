@@ -30,7 +30,7 @@ export const TocBlock = ({ blocks }: Props) => {
         }
         case 'heading_3': {
           res.result.push(
-            [res.hasHeading1, res.hasHeading2].filter(Boolean).length
+            [res.hasHeading1, res.hasHeading2].filter(Boolean).length,
           );
           break;
         }
@@ -41,7 +41,7 @@ export const TocBlock = ({ blocks }: Props) => {
       hasHeading1: false,
       hasHeading2: false,
       result: [],
-    }
+    },
   );
 
   return (

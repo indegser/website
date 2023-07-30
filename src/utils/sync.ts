@@ -31,21 +31,21 @@ const syncPages = async (pages: PageType[]) => {
         title,
         cover,
         excerpt: notionUtils.getPlainText(
-          page.properties.Description as PropertyType<'rich_text'>
+          page.properties.Description as PropertyType<'rich_text'>,
         ),
         created_time: page.created_time,
         last_edited_time: page.last_edited_time,
         content,
         is_draft: isDraft,
       };
-    })
+    }),
   );
 
   return supabase
     .from('pages')
     .upsert(values)
     .select(
-      'id, title, cover, is_draft, excerpt, created_time, last_edited_time'
+      'id, title, cover, is_draft, excerpt, created_time, last_edited_time',
     );
 };
 

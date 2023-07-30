@@ -15,7 +15,7 @@ export const ContentBlur = () => {
   const { scrollY } = useScroll();
   const springY = useSpring(scrollY);
   const saturate = useTransform(springY, (value) =>
-    Math.max(190 + value * -0.01, 0)
+    Math.max(190 + value * -0.01, 0),
   );
 
   // const blur = useTransform(springY, (value) => value * 0.32 + 60);
