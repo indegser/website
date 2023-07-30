@@ -36,11 +36,12 @@ export async function GET(req: NextRequest) {
 
   const result = await ogs({
     url,
-    headers: {
-      'user-agent':
-        'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
+    fetchOptions: {
+      headers: {
+        'user-agent':
+          'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
+      },
     },
-    downloadLimit: 10000000,
   });
 
   if (result.error) {
