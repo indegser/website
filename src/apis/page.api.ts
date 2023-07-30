@@ -27,7 +27,7 @@ const queryPages = cache(async ({ limit = 100 }: QueryPagesProps = {}) => {
 
   let query = supabase
     .from('pages')
-    .select('*')
+    .select('*, episodes ( series_id )')
     .order('created_time', { ascending: false })
     .limit(limit);
 
