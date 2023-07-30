@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { SupabaseSeriesType } from '@src/types/page.types';
 
 interface Props {
@@ -9,12 +11,11 @@ export const Series = ({ series }: Props) => {
     <div className="flex flex-wrap gap-1">
       {series.map(({ id, name }) => {
         return (
-          <div
-            key={id}
-            className="rounded bg-blue-50 px-1 py-0.5 text-[11px] leading-relaxed"
-          >
-            {name}
-          </div>
+          <Link key={id} href={`/series/${id}`}>
+            <div className="rounded bg-blue-50 px-1 py-0.5 text-[11px] leading-relaxed">
+              {name}
+            </div>
+          </Link>
         );
       })}
     </div>
