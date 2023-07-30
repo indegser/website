@@ -1,4 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
+import 'server-only';
+
 import ogs from 'open-graph-scraper';
 
 import { supabase } from '@src/sdks/supabase';
@@ -25,13 +26,11 @@ const hasCachedVersion = async (url: string) => {
   return data;
 };
 
-export async function GET(req: NextRequest) {
-  const url = req.nextUrl.searchParams.get('url');
-
+export const linkPreview = async (url: string) => {
   const cachedVersion = await hasCachedVersion(url);
 
   if (cachedVersion) {
-    return NextResponse.json(cachedVersion);
+    return cachedVersion;
   }
 
   const result = await ogs({
@@ -45,7 +44,7 @@ export async function GET(req: NextRequest) {
   });
 
   if (result.error) {
-    return NextResponse.error();
+    return null;
   }
 
   const { ogTitle, ogDescription, ogImage, favicon } = result.result as any;
@@ -67,11 +66,11 @@ export async function GET(req: NextRequest) {
     image_url: imageUrl,
   };
 
-  const upsertResult = await supabase
+  const { data } = await supabase
     .from('link_previews')
     .upsert(openGraph)
     .select()
     .maybeSingle();
 
-  return NextResponse.json(upsertResult.data);
-}
+  return data;
+};
