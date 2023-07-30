@@ -31,8 +31,7 @@ export async function GET(req: NextRequest) {
   const cachedVersion = await hasCachedVersion(url);
 
   if (cachedVersion) {
-    NextResponse.json(cachedVersion);
-    return;
+    return NextResponse.json(cachedVersion);
   }
 
   const result = await ogs({
