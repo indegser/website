@@ -28,7 +28,6 @@ const hasCachedVersion = async (url: string) => {
 
 export const linkPreview = async (url: string) => {
   const cachedVersion = await hasCachedVersion(url);
-  console.log(cachedVersion, 'CACHED');
 
   if (cachedVersion) {
     return cachedVersion;
