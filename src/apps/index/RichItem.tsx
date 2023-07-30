@@ -18,12 +18,14 @@ export const RichItem = ({ page, series }: Props) => {
   const href = `/content/${id}`;
 
   return (
-    <Link href={href}>
-      <section className="grid auto-rows-max gap-2">
+    <section className="grid auto-rows-max gap-2">
+      <Link href={href}>
         <RichItemThumbnail src={cover} alt={title} />
-        <div className="grid gap-2">
-          <Series series={series} />
-          <div className="m-0 font-semibold leading-tight">
+      </Link>
+      <div className="grid gap-2">
+        <Series series={series} />
+        <Link href={href}>
+          <div className="m-0 mb-2 font-semibold leading-tight">
             <Balancer>{title}</Balancer>
           </div>
           <div className="grid grid-flow-col auto-rows-max items-center gap-x-3">
@@ -31,8 +33,8 @@ export const RichItem = ({ page, series }: Props) => {
               <Time date={last_edited_time} template="LL" />
             </div>
           </div>
-        </div>
-      </section>
-    </Link>
+        </Link>
+      </div>
+    </section>
   );
 };
