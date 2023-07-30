@@ -9,6 +9,43 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      episodes: {
+        Row: {
+          created_time: string | null;
+          id: number;
+          last_edited_time: string | null;
+          page_id: string | null;
+          series_id: string | null;
+        };
+        Insert: {
+          created_time?: string | null;
+          id?: number;
+          last_edited_time?: string | null;
+          page_id?: string | null;
+          series_id?: string | null;
+        };
+        Update: {
+          created_time?: string | null;
+          id?: number;
+          last_edited_time?: string | null;
+          page_id?: string | null;
+          series_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'episodes_page_id_fkey';
+            columns: ['page_id'];
+            referencedRelation: 'pages';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'episodes_series_id_fkey';
+            columns: ['series_id'];
+            referencedRelation: 'series';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       images: {
         Row: {
           created_at: string | null;
@@ -138,6 +175,30 @@ export interface Database {
           is_draft?: boolean | null;
           last_edited_time?: string;
           title?: string | null;
+        };
+        Relationships: [];
+      };
+      series: {
+        Row: {
+          color: string | null;
+          created_time: string | null;
+          id: string;
+          last_edited_time: string | null;
+          name: string | null;
+        };
+        Insert: {
+          color?: string | null;
+          created_time?: string | null;
+          id: string;
+          last_edited_time?: string | null;
+          name?: string | null;
+        };
+        Update: {
+          color?: string | null;
+          created_time?: string | null;
+          id?: string;
+          last_edited_time?: string | null;
+          name?: string | null;
         };
         Relationships: [];
       };

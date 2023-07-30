@@ -1,16 +1,17 @@
 import 'server-only';
 
-import dayjs from 'dayjs';
+import uniqBy from 'lodash-es/uniqBy';
 
 import { coverTask } from './image/coverTask';
 import { notionUtils } from './notion';
 
 import { notion } from '@src/sdks/notion';
 import { supabase } from '@src/sdks/supabase';
-import { PageType, PropertyType } from '@src/types/notion.types';
+import { ContentType, PageType, PropertyType } from '@src/types/notion.types';
 
-const syncPages = async (pages: PageType[]) => {
+const syncPages = async (pages: ContentType[]) => {
   const results = await Promise.all(coverTask(pages));
+
   const values = await Promise.all(
     results.map(async (page: PageType) => {
       const { id } = page;
@@ -41,21 +42,34 @@ const syncPages = async (pages: PageType[]) => {
     }),
   );
 
-  return supabase
+  const result = await supabase
     .from('pages')
     .upsert(values)
     .select(
       'id, title, cover, is_draft, excerpt, created_time, last_edited_time',
     );
+
+  await supabase.from('episodes').upsert(
+    pages.flatMap((page) => {
+      const series = page.properties.Series;
+
+      return series.multi_select.map((option) => ({
+        page_id: page.id,
+        series_id: option.id,
+      }));
+    }),
+  );
+
+  return result;
 };
 
 const syncPage = async (id: string) => {
   const page = await notion.pages.retrieve({ page_id: id });
-  return syncPages([page as PageType]);
+  return syncPages([page as ContentType]);
 };
 
 const syncLatest = async () => {
-  const { results } = await notion.databases.query({
+  const response = await notion.databases.query({
     database_id: '82649fda5ba84801a464d7ef2f7552b3',
     page_size: 100,
     sorts: [
@@ -64,15 +78,38 @@ const syncLatest = async () => {
         direction: 'descending',
       },
     ],
-    filter: {
-      timestamp: 'last_edited_time',
-      last_edited_time: {
-        on_or_after: dayjs().subtract(7, 'day').toISOString(),
-      },
-    },
   });
 
-  return syncApi.syncPages(results as PageType[]);
+  const results = response.results as ContentType[];
+  const ids = results.map((page) => page.id);
+
+  const series = uniqBy(
+    results.flatMap((result) => result.properties.Series.multi_select),
+    (select) => select.id,
+  );
+
+  /**
+   * 삭제된 페이지 정리
+   */
+  await supabase
+    .from('pages')
+    .delete()
+    .not('id', 'in', `(${ids.join(',')})`);
+
+  /**
+   * 삭제된 시리즈 정리
+   */
+  await supabase
+    .from('series')
+    .delete()
+    .not('id', 'in', `(${series.map((item) => item.id).join(',')})`);
+
+  /**
+   * 최신 시리즈 Upsert
+   */
+  await supabase.from('series').upsert(series);
+
+  return syncApi.syncPages(results);
 };
 
 export const syncApi = {

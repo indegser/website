@@ -2,15 +2,17 @@ import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
 import { RichItemThumbnail } from './RichItemThumbnail';
+import { Series } from './Series';
 
 import { Time } from '@src/design/atoms/Time';
-import { SupabasePageType } from '@src/types/page.types';
+import { SupabasePageType, SupabaseSeriesType } from '@src/types/page.types';
 
 interface Props {
   page: SupabasePageType;
+  series: SupabaseSeriesType[];
 }
 
-export const RichItem = ({ page }: Props) => {
+export const RichItem = ({ page, series }: Props) => {
   const { id, title, cover, last_edited_time } = page;
 
   const href = `/content/${id}`;
@@ -20,6 +22,7 @@ export const RichItem = ({ page }: Props) => {
       <section className="grid auto-rows-max gap-2">
         <RichItemThumbnail src={cover} alt={title} />
         <div className="grid gap-2">
+          <Series series={series} />
           <div className="m-0 font-semibold leading-tight">
             <Balancer>{title}</Balancer>
           </div>
