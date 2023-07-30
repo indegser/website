@@ -64,7 +64,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       case 'numbered_list_item': {
         const marker = takeRightWhile(
           blocks.slice(0, index),
-          (result) => result.type === 'numbered_list_item'
+          (result) => result.type === 'numbered_list_item',
         ).length;
 
         return (

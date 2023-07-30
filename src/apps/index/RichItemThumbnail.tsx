@@ -12,15 +12,19 @@ export const RichItemThumbnail = (props: Props) => {
 
   return (
     <div className="relative aspect-video">
-      <Image
-        priority
-        src={src || `/api/image?title=${alt}`}
-        alt={alt}
-        fill
-        style={{ objectFit: 'cover' }}
-        sizes={`(max-width: ${breakPoints.sm}px) 100vw,
-              33vw"`}
-      />
+      {src ? (
+        <Image
+          priority
+          src={src}
+          alt={alt}
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes={`(max-width: ${breakPoints.sm}px) 100vw,
+                33vw"`}
+        />
+      ) : (
+        <div className="h-full w-full bg-gray-100" />
+      )}
     </div>
   );
 };

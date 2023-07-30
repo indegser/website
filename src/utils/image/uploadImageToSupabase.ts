@@ -5,7 +5,7 @@ import { supabase } from '@src/sdks/supabase';
 
 export const uploadImageToSupabase = async (
   imageUrl: string,
-  folder: string
+  folder: string,
 ) => {
   const response = await fetch(imageUrl);
   const contentType = response.headers.get('Content-Type');

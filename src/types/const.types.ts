@@ -11,3 +11,5 @@ export const ORIGIN =
 
 export const GIT_COMMIT_SHA =
   process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ?? '';
+
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;

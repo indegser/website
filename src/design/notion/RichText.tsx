@@ -13,7 +13,7 @@ interface Props {
 }
 
 function isReactElement(
-  child: ReactElement | ReactNode
+  child: ReactElement | ReactNode,
 ): child is ReactElement {
   return typeof child === 'object';
 }
@@ -49,7 +49,7 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
                       'py-0.5',
                       'text-rose-500',
                       'bg-gray-100',
-                    ]
+                    ],
                   )}
                   style={{
                     fontWeight: annotations.bold ? 700 : undefined,

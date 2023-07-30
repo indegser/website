@@ -23,18 +23,20 @@ export const ContentHeadline = async (props: Props) => {
           <Balancer>{title}</Balancer>
         </h1>
       </div>
-      <section className="relative -mx-5 my-8 aspect-video overflow-hidden">
-        <ContentCover src={cover} alt={title} />
-        <div className="relative grid h-full grid-rows-2">
-          <div></div>
-          <div className="relative">
-            <ContentBlur />
-            <div className="relative line-clamp-2 flex h-full items-end p-8 pb-4 text-xs text-gray-200/75 sm:pb-8">
-              {excerpt}
+      {cover ? (
+        <section className="relative -mx-5 my-8 aspect-video overflow-hidden">
+          <ContentCover src={cover} alt={title} />
+          <div className="relative grid h-full grid-rows-2">
+            <div></div>
+            <div className="relative">
+              <ContentBlur />
+              <div className="relative line-clamp-2 flex h-full items-end p-8 pb-4 text-xs text-gray-200/75 sm:pb-8">
+                {excerpt}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
     </PageContent>
   );
 };

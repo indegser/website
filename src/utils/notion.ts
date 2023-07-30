@@ -37,7 +37,7 @@ const getTitle = (page: PageType | DatabaseObjectResponse) => {
     }
 
     const key = Object.keys(page.properties).find(
-      (key) => page.properties[key].type === 'title'
+      (key) => page.properties[key].type === 'title',
     );
 
     const prop = page.properties[key] as PropertyType<'title'>;

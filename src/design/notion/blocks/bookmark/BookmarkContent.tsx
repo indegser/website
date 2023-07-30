@@ -17,7 +17,7 @@ export const BookmarkContent = async ({ url, isSkeleton }: Props) => {
   const { title, description, image_url } = isSkeleton
     ? { title: '...', description: '...', image_url: '' }
     : await fetch(`${ORIGIN}/api/og?url=${encodeURIComponent(url)}`).then(
-        (res) => res.json() as Promise<OpenGraphType>
+        (res) => res.json() as Promise<OpenGraphType>,
       );
 
   return (

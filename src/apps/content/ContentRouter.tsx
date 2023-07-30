@@ -9,7 +9,7 @@ export const ContentRouter = () => {
   useEffect(() => {
     const hash = searchParams.get('hash');
     const node = document.querySelector(
-      `[data-block-id="${hash}"]`
+      `[data-block-id="${hash}"]`,
     ) as HTMLElement;
 
     if (!node) return;
