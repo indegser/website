@@ -1,12 +1,4 @@
-import { ORIGIN } from '@src/types/const.types';
-
-interface OpenGraphType {
-  id: string;
-  url: string;
-  title: string;
-  description: string;
-  image_url: string;
-}
+import { linkPreview } from '@src/utils/linkPreview';
 
 interface Props {
   url: string;
@@ -16,9 +8,7 @@ interface Props {
 export const BookmarkContent = async ({ url, isSkeleton }: Props) => {
   const { title, description, image_url } = isSkeleton
     ? { title: '...', description: '...', image_url: '' }
-    : await fetch(`${ORIGIN}/api/og?url=${encodeURIComponent(url)}`).then(
-        (res) => res.json() as Promise<OpenGraphType>,
-      );
+    : await linkPreview(url);
 
   return (
     <a href={url} title={title} target="_blank" rel="noreferrer">
