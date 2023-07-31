@@ -23,7 +23,6 @@ export const RichItem = ({ page, series }: Props) => {
         <RichItemThumbnail src={cover} alt={title} />
       </Link>
       <div className="grid gap-2">
-        <Series series={series} />
         <Link href={href}>
           <div className="m-0 mb-2 font-semibold leading-tight">
             <Balancer>{title}</Balancer>
@@ -34,6 +33,7 @@ export const RichItem = ({ page, series }: Props) => {
             </div>
           </div>
         </Link>
+        <Series series={series} />
       </div>
     </section>
   );

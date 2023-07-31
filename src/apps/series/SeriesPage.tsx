@@ -1,7 +1,6 @@
-import { RichItem } from '../index/RichItem';
-
 import { seriesApi } from '@src/apis/series.api';
 import { PageContainer } from '@src/design/atoms/Container';
+import { RichItem } from '@src/design/organs/rich-item/RichItem';
 
 interface Props {
   id: string;
