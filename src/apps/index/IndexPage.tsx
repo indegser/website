@@ -1,7 +1,6 @@
-import { RichItem } from './RichItem';
-
 import { pageApi } from '@src/apis/page.api';
 import { PageContainer } from '@src/design/atoms/Container';
+import { RichItem } from '@src/design/organs/rich-item/RichItem';
 
 export const preloadIndex = () => {
   void pageApi.queryPages();

@@ -12,7 +12,7 @@ export const Series = ({ series }: Props) => {
       {series.map(({ id, name }) => {
         return (
           <Link key={id} href={`/series/${id}`}>
-            <div className="rounded bg-blue-50 px-1 py-0.5 text-[11px] leading-relaxed">
+            <div className="rounded bg-blue-50 px-1 text-xs font-medium leading-relaxed text-gray-950 text-opacity-75">
               {name}
             </div>
           </Link>

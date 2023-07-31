@@ -13,7 +13,7 @@ export const BookmarkBlock = (props: Props) => {
   const { url, caption = [] } = props;
 
   return (
-    <figure className="my-6">
+    <figure>
       <Suspense fallback={<BookmarkContent url={url} isSkeleton />}>
         <BookmarkContent url={url} />
       </Suspense>
