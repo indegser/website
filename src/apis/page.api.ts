@@ -7,7 +7,7 @@ import { isProduction } from '@src/types/env.types';
 import { syncApi } from '@src/utils/sync';
 
 const getPage = cache(async (page_id: string) => {
-  syncApi.syncPage(page_id);
+  await syncApi.syncPage(page_id);
 
   const { data } = await supabase
     .from('pages')
