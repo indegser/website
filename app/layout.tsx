@@ -9,11 +9,16 @@ import Providers from './providers';
 import { Footer } from '@src/design/organs/footer/Footer';
 import { Nav } from '@src/design/organs/nav/Nav';
 import { jetBrainsMonoFont, pretendardFont } from '@src/design/theme';
+import { ORIGIN } from '@src/types/const.types';
 
 export const metadata: Metadata = {
   title: {
     template: '%s - Indegser',
     default: 'Indegser', // a default is required when creating a template
+  },
+  metadataBase: new URL(ORIGIN),
+  alternates: {
+    canonical: '/',
   },
 };
 

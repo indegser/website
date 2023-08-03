@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Indegser',
       images: [],
     },
+    alternates: {
+      canonical: `/series/${id}`,
+    },
     twitter: {
       card: 'summary_large_image',
     },
