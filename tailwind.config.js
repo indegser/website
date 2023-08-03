@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   theme: {
     colors: {
-      gray: colors.gray,
+      gray: colors.neutral,
       blue: colors.blue,
       rose: colors.rose,
       backdrop: 'rgba(255, 255, 255, 0.85)',
@@ -18,6 +18,7 @@ module.exports = {
       },
     },
   },
+  darkMode: 'media',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
   plugins: [],
 };

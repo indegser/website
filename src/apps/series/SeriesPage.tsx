@@ -13,7 +13,9 @@ export const SeriesPage = async ({ id }: Props) => {
   return (
     <PageContainer>
       <div className="pt-8">
-        <h1 className="text-4xl font-extrabold">{series.name}</h1>
+        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100">
+          {series.name}
+        </h1>
       </div>
       <div className="grid grid-cols-1 gap-8 py-8 sm:grid-cols-3">
         {data?.map(({ series, ...page }) => (

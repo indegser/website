@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang="en-KR"
       className={`${pretendardFont.variable} ${jetBrainsMonoFont.variable}`}
     >
-      <body>
+      <body className="bg-gray-50 dark:bg-gray-950">
         <Providers>
           <Nav />
           <main className="min-h-screen w-full">{children}</main>

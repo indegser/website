@@ -23,7 +23,7 @@ export const RichItemThumbnail = (props: Props) => {
                 33vw"`}
         />
       ) : (
-        <div className="h-full w-full bg-gray-100" />
+        <div className="h-full w-full bg-gray-100 dark:bg-gray-800" />
       )}
     </div>
   );
