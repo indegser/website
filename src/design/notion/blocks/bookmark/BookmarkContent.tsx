@@ -13,13 +13,15 @@ export const BookmarkContent = async ({ url, isSkeleton }: Props) => {
   return (
     <a href={url} title={title} target="_blank" rel="noreferrer">
       <div>
-        <div className="flex rounded-sm border">
+        <div className="flex rounded-sm border dark:border-gray-800">
           <div className="grid basis-2/3 gap-1 p-4">
-            <div className="text-sm text-gray-900">{title}</div>
-            <div className="line-clamp-2 text-xs text-gray-500">
+            <div className="text-sm text-gray-900 dark:text-gray-400">
+              {title}
+            </div>
+            <div className="line-clamp-2 text-xs text-gray-500 dark:text-gray-500">
               {description}
             </div>
-            <div className="line-clamp-1 text-xs text-gray-700">
+            <div className="line-clamp-1 text-xs text-gray-700 dark:text-gray-600">
               {decodeURIComponent(url)}
             </div>
           </div>

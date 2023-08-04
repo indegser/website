@@ -19,7 +19,7 @@ export const ContentHeadline = async (props: Props) => {
   return (
     <PageContent>
       <div className="pt-8">
-        <h1 className="my-0 text-4xl font-black leading-tight text-gray-900 dark:text-gray-100 dark:text-opacity-70 sm:text-6xl sm:leading-tight">
+        <h1 className="my-0 text-4xl font-black leading-tight text-gray-900 dark:text-gray-100 dark:text-opacity-70 sm:text-6xl sm:leading-none">
           <Balancer>{title}</Balancer>
         </h1>
       </div>
