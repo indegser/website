@@ -9,7 +9,7 @@ export const QuoteBlock = ({ block }: Props) => {
   return (
     <div className="mt-1">
       <div className="flex p-1">
-        <div className="border-l-2 border-b-gray-800 pl-4">
+        <div className="border-l-2 border-l-gray-400 pl-4 dark:border-l-gray-600">
           <RichText data={block.quote.rich_text} />
         </div>
       </div>

@@ -14,7 +14,7 @@ export const RichTextWithLink = ({
 
   return (
     <a
-      className="cursor-pointer text-blue-800 no-underline hover:underline"
+      className="cursor-pointer text-blue-800 no-underline hover:underline dark:text-blue-400"
       href={link.url}
     >
       {children}
