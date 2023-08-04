@@ -1,3 +1,3 @@
-import 'client-only';
+import * as sdk from '@amplitude/analytics-browser';
 
-export const analyticsApi = window.gtag;
+sdk.init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY);

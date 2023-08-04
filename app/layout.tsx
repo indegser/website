@@ -1,4 +1,4 @@
-import '@src/design/globals.css';
+import '@src/components/globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
@@ -6,9 +6,9 @@ import { ReactNode } from 'react';
 
 import Providers from './providers';
 
-import { Footer } from '@src/design/organs/footer/Footer';
-import { Nav } from '@src/design/organs/nav/Nav';
-import { jetBrainsMonoFont, pretendardFont } from '@src/design/theme';
+import { Footer } from '@src/components/organs/footer/Footer';
+import { Nav } from '@src/components/organs/nav/Nav';
+import { jetBrainsMonoFont, pretendardFont } from '@src/components/theme';
 import { ORIGIN } from '@src/types/const.types';
 
 export const metadata: Metadata = {

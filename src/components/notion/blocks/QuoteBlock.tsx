@@ -1,4 +1,4 @@
-import { RichText } from '@src/design/notion/RichText';
+import { RichText } from '@src/components/notion/RichText';
 import { BlockType } from '@src/types/notion.types';
 
 interface Props {
