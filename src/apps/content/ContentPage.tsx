@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 
 import { ContentHeadline } from './ContentHeadline';
 import { ContentRouter } from './ContentRouter';
+import { Feedback } from './feedback/Feedback';
 
 import { PageContainer } from '@src/components/atoms/Container';
 import { NotionContent } from '@src/components/notion/NotionContent';
@@ -21,6 +22,7 @@ export const ContentPage = (props: Props) => {
       <PageContainer>
         <ContentHeadline id={id} />
         <NotionContent id={id} />
+        <Feedback />
       </PageContainer>
     </>
   );
