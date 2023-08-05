@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Caption } from './Caption';
 
-import { PageContent } from '@src/design/atoms/Container';
+import { PageContent } from '@src/components/atoms/Container';
 import { notion } from '@src/sdks/notion';
 import { BlockType } from '@src/types/notion.types';
 import { uploadImage } from '@src/utils/image/createImage';

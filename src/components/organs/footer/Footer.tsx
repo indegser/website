@@ -1,6 +1,6 @@
 import { Sns } from './Sns';
 
-import { PageContainer } from '@src/design/atoms/Container';
+import { PageContainer } from '@src/components/atoms/Container';
 
 export const Footer = () => {
   return (

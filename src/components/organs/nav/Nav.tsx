@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { Logo } from './Logo';
 
-import { PageContainer } from '@src/design/atoms/Container';
+import { PageContainer } from '@src/components/atoms/Container';
 
 export const Nav = () => {
   return (

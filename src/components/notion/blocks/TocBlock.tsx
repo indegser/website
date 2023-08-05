@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { PageContent } from '@src/design/atoms/Container';
-import { RichText } from '@src/design/notion/RichText';
+import { PageContent } from '@src/components/atoms/Container';
+import { RichText } from '@src/components/notion/RichText';
 import { BlockType } from '@src/types/notion.types';
 
 interface Props {
@@ -61,7 +61,7 @@ export const TocBlock = ({ blocks }: Props) => {
               className="flex h-8 items-center pr-2 pt-1"
               style={{ paddingLeft: 24 * depth }}
             >
-              <div className="ml-1 border-b text-sm">
+              <div className="ml-1 border-b text-sm dark:border-b-gray-600">
                 <RichText data={block[block.type].rich_text} />
               </div>
             </div>

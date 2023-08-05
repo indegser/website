@@ -4,7 +4,7 @@ import Balancer from 'react-wrap-balancer';
 import { RichItemThumbnail } from './RichItemThumbnail';
 import { Series } from './Series';
 
-import { Time } from '@src/design/atoms/Time';
+import { Time } from '@src/components/atoms/Time';
 import { SupabasePageType, SupabaseSeriesType } from '@src/types/page.types';
 
 interface Props {

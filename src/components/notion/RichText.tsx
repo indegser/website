@@ -49,6 +49,8 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
                       'py-0.5',
                       'text-rose-500',
                       'bg-gray-100',
+                      'dark:bg-gray-500',
+                      'dark:text-rose-100',
                     ],
                   )}
                   style={{
