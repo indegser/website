@@ -1,5 +1,9 @@
 import 'server-only';
 
+import {
+  BlockObjectResponse,
+  PartialBlockObjectResponse,
+} from '@notionhq/client/build/src/api-endpoints';
 import uniqBy from 'lodash-es/uniqBy';
 
 import { coverTask } from './image/coverTask';
@@ -8,6 +12,22 @@ import { notionUtils } from './notion';
 import { notion } from '@src/sdks/notion';
 import { supabase } from '@src/sdks/supabase';
 import { ContentType, PageType, PropertyType } from '@src/types/notion.types';
+
+const fetchContent = async (
+  id: string,
+): Promise<(PartialBlockObjectResponse | BlockObjectResponse)[]> => {
+  const response = await notion.blocks.children.list({
+    block_id: id,
+    page_size: 20,
+  });
+
+  if (response.has_more) {
+    const results = await fetchContent(response.next_cursor);
+    return response.results.concat(results);
+  }
+
+  return response.results;
+};
 
 const syncPages = async (pages: ContentType[]) => {
   const results = await Promise.all(coverTask(pages));
@@ -19,10 +39,7 @@ const syncPages = async (pages: ContentType[]) => {
       const title = notionUtils.getTitle(page);
       const cover = notionUtils.getNotionFileUrl(page.cover);
 
-      const { results: content } = await notion.blocks.children.list({
-        block_id: id,
-        page_size: 100,
-      });
+      const content = await fetchContent(id);
 
       const status = page.properties.Status as PropertyType<'status'>;
       const isDraft = status.status.name !== 'Done';
