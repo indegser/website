@@ -18,7 +18,7 @@ const fetchContent = async (
 ): Promise<(PartialBlockObjectResponse | BlockObjectResponse)[]> => {
   const response = await notion.blocks.children.list({
     block_id: id,
-    page_size: 20,
+    page_size: 100,
   });
 
   if (response.has_more) {
