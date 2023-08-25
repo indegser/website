@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ElementRef, Fragment, useEffect, useRef } from 'react';
 import { SiTwitter, SiGithub } from 'react-icons/si';
 
-import { amplitude } from '@src/sdks/analytics';
+import { amplitude } from 'lib/amplitude';
 
 const snsList = [
   {

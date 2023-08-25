@@ -2,12 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Balancer } from 'react-wrap-balancer';
 
-import { youtubeApi } from '@src/apis/youtube.api';
 import { PageContainer } from 'components/atoms/Container';
 import { Time } from 'components/atoms/Time';
+import { getLikedVideos } from 'lib/youtube';
 
-export const YoutubePage = async () => {
-  const response = await youtubeApi.getVideos();
+export const Collections = async () => {
+  const response = await getLikedVideos();
 
   return (
     <PageContainer>

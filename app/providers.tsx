@@ -1,7 +1,7 @@
 'use client';
 
 import 'dayjs/locale/ko';
-import '@src/sdks/analytics';
+import 'lib/amplitude';
 
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
