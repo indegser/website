@@ -13,7 +13,7 @@
     "start": "next start",
     "lint": "next lint",
     "typegen": "pnpm supabase gen types typescript --project-id rovmadruwzgusgvfihbv --schema public > src/types/supabase.types.ts; pnpm lint --fix",
-    "prettier": "prettier src pages --check",
+    "prettier": "prettier src app components --check",
     "prettier:fix": "pnpm prettier --write",
     "test": "jest",
     "pretest": "tsc --project .",

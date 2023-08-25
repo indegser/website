@@ -4,7 +4,7 @@ import { gray, blue, red, green, purple, lime } from 'tailwindcss/colors';
 
 // Font files can be colocated inside of `pages`
 export const pretendardFont = localFont({
-  src: '../../assets/PretendardVariable.woff2',
+  src: '../assets/PretendardVariable.woff2',
   style: 'normal',
   weight: '100 800',
   variable: '--pretendard',

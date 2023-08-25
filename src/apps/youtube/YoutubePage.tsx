@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Balancer } from 'react-wrap-balancer';
 
 import { youtubeApi } from '@src/apis/youtube.api';
-import { PageContainer } from '@src/components/atoms/Container';
-import { Time } from '@src/components/atoms/Time';
+import { PageContainer } from 'components/atoms/Container';
+import { Time } from 'components/atoms/Time';
 
 export const YoutubePage = async () => {
   const response = await youtubeApi.getVideos();

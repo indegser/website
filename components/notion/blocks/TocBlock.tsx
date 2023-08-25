@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { PageContent } from '@src/components/atoms/Container';
-import { RichText } from '@src/components/notion/RichText';
 import { BlockType } from '@src/types/notion.types';
+import { PageContent } from 'components/atoms/Container';
+import { RichText } from 'components/notion/RichText';
 
 interface Props {
   blocks: BlockType[];

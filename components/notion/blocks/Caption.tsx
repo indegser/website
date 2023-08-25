@@ -1,6 +1,6 @@
 import { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
 
-import { RichText } from '@src/components/notion/RichText';
+import { RichText } from 'components/notion/RichText';
 
 interface Props {
   caption: RichTextItemResponse[];

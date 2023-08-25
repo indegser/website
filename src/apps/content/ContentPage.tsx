@@ -4,8 +4,8 @@ import { ContentHeadline } from './ContentHeadline';
 import { ContentRouter } from './ContentRouter';
 import { Feedback } from './feedback/Feedback';
 
-import { PageContainer } from '@src/components/atoms/Container';
-import { NotionContent } from '@src/components/notion/NotionContent';
+import { PageContainer } from 'components/atoms/Container';
+import { NotionContent } from 'components/notion/NotionContent';
 
 interface Props {
   id: string;

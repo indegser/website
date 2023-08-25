@@ -1,4 +1,4 @@
-import { colors } from '@src/components/theme';
+import { colors } from 'components/theme';
 
 export const codeStyle = {
   // 'pre[class*="language-"]::-moz-selection': {

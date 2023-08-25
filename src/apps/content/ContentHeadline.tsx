@@ -2,8 +2,8 @@ import { ContentBlur } from './ContentBlur';
 import { ContentCover } from './ContentCover';
 
 import { pageApi } from '@src/apis/page.api';
-import { PageContent } from '@src/components/atoms/Container';
-import { Balancer } from '@src/components/Balancer';
+import { PageContent } from 'components/atoms/Container';
+import { Balancer } from 'components/Balancer';
 
 interface Props {
   id: string;

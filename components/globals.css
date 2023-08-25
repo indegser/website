@@ -19,7 +19,8 @@
   }
 
   /* Code block */
-  pre, code {
+  pre,
+  code {
     margin: 0;
     @apply leading-normal;
   }

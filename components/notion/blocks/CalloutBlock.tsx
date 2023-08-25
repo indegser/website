@@ -1,8 +1,8 @@
 import { NotionIcon } from './NotionIcon';
 
-import { PageContent } from '@src/components/atoms/Container';
-import { convertApiColorToStyleProps } from '@src/components/notion/convertApiColorToStyleProps';
-import { RichText } from '@src/components/notion/RichText';
+import { PageContent } from 'components/atoms/Container';
+import { convertApiColorToStyleProps } from 'components/notion/convertApiColorToStyleProps';
+import { RichText } from 'components/notion/RichText';
 import { BlockType } from '@src/types/notion.types';
 
 interface Props {

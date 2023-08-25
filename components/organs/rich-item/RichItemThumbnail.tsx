@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { breakPoints } from '@src/components/breakPoints';
+import { breakPoints } from 'components/breakPoints';
 
 interface Props {
   alt: string;
