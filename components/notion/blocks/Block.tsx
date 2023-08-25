@@ -12,10 +12,10 @@ import { QuoteBlock } from './QuoteBlock';
 import { TocBlock } from './TocBlock';
 import { VideoBlock } from './VideoBlock';
 
+import { AnnotationColorType, BlockType } from '@src/types/notion.types';
 import { PageContent } from 'components/atoms/Container';
 import { convertApiColorToStyleProps } from 'components/notion/convertApiColorToStyleProps';
 import { RichText } from 'components/notion/RichText';
-import { AnnotationColorType, BlockType } from '@src/types/notion.types';
 
 interface Props {
   index: number;

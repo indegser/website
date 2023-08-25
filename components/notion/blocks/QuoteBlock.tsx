@@ -1,5 +1,5 @@
-import { RichText } from 'components/notion/RichText';
 import { BlockType } from '@src/types/notion.types';
+import { RichText } from 'components/notion/RichText';
 
 interface Props {
   block: Extract<BlockType, { type: 'quote' }>;
