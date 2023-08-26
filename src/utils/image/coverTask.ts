@@ -1,9 +1,9 @@
 import { uploadImageToSupabase } from './uploadImageToSupabase';
 import { notionUtils } from '../notion';
 
-import { notion } from '@src/sdks/notion';
 import { CDN_ORIGIN } from '@src/types/const.types';
 import { PageType } from '@src/types/notion.types';
+import { notion } from 'lib/notion';
 
 export const coverTask = (pages: Array<PageType>) => {
   return pages.map(async (page) => {

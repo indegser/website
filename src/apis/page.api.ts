@@ -2,9 +2,9 @@ import 'server-only';
 
 import { cache } from 'react';
 
-import { supabase } from '@src/sdks/supabase';
 import { isProduction } from '@src/types/env.types';
 import { syncApi } from '@src/utils/sync';
+import { supabase } from 'lib/supabase';
 
 const getPage = cache(async (page_id: string) => {
   await syncApi.syncPage(page_id);

@@ -2,7 +2,7 @@ import 'server-only';
 
 import ogs from 'open-graph-scraper';
 
-import { supabase } from '@src/sdks/supabase';
+import { supabase } from 'lib/supabase';
 
 const parseUrl = (originalUrl: string, url: string) => {
   if (!url) return null;

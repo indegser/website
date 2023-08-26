@@ -2,8 +2,8 @@ import sizeOf from 'image-size';
 import mime from 'mime-types';
 import { nanoid } from 'nanoid';
 
-import { supabase } from '@src/sdks/supabase';
 import { CDN_ORIGIN } from '@src/types/const.types';
+import { supabase } from 'lib/supabase';
 
 export const uploadImage = async (src: string) => {
   const shouldCreate = !src.includes(CDN_ORIGIN);

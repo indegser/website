@@ -2,7 +2,7 @@ import 'server-only';
 
 import { cache } from 'react';
 
-import { supabase } from '@src/sdks/supabase';
+import { supabase } from 'lib/supabase';
 
 const getSeries = cache(async (id: string) => {
   return supabase.from('series').select().eq('id', id).maybeSingle();

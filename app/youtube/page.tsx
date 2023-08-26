@@ -1,5 +1,5 @@
-import { YoutubePage } from '@src/apps/youtube/YoutubePage';
+import { Collections } from 'components/layout/youtube/collections';
 
 export const revalidate = 60;
 
-export default YoutubePage;
+export default Collections;
