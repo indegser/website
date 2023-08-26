@@ -4,7 +4,7 @@ import {
   QueryDatabaseResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 
-import { notion } from '@src/sdks/notion';
+import { notion } from 'lib/notion';
 
 export type PageType<T = PageObjectResponse['properties']> = Omit<
   PageObjectResponse,

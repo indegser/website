@@ -1,7 +1,7 @@
 import mime from 'mime-types';
 import { nanoid } from 'nanoid';
 
-import { supabase } from '@src/sdks/supabase';
+import { supabase } from 'lib/supabase';
 
 export const uploadImageToSupabase = async (
   imageUrl: string,

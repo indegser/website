@@ -1,4 +1,4 @@
-import { IndexPage, preloadIndex } from '@src/apps/index/IndexPage';
+import { IndexPage, preloadIndex } from 'components/layout/index/IndexPage';
 
 export const revalidate = 60;
 

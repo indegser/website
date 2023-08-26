@@ -3,7 +3,7 @@
 import dayjs from 'dayjs';
 import { useMemo, useState } from 'react';
 
-import { useIsomorphicLayoutEffect } from '@src/hooks/layout-effect';
+import { useIsomorphicLayoutEffect } from 'components/hooks/layout-effect';
 
 interface Props {
   date: string;
