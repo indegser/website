@@ -4,12 +4,13 @@ import Balancer from 'react-wrap-balancer';
 import { RichItemThumbnail } from './RichItemThumbnail';
 import { Series } from './Series';
 
-import { SupabasePageType, SupabaseSeriesType } from '@src/types/page.types';
+
 import { Time } from 'components/atoms/Time';
+import { PageType, SeriesType } from 'lib/supabase';
 
 interface Props {
-  page: SupabasePageType;
-  series: SupabaseSeriesType[];
+  page: PageType;
+  series: SeriesType[];
 }
 
 export const RichItem = ({ page, series }: Props) => {

@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 import { seriesApi } from '@src/apis/series.api';
-import { SupabaseSeriesType } from '@src/types/page.types';
 import { SeriesPage } from 'components/layout/series/SeriesPage';
+import { SeriesType } from 'lib/supabase';
 
 export const revalidate = 60;
 
 type Props = {
-  params: SupabaseSeriesType;
+  params: SeriesType;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

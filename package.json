@@ -12,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typegen": "pnpm supabase gen types typescript --project-id rovmadruwzgusgvfihbv --schema public > src/types/supabase.types.ts; pnpm lint --fix",
+    "typegen": "pnpm supabase gen types typescript --project-id rovmadruwzgusgvfihbv --schema public > lib/supabase/types.ts; pnpm lint --fix",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm lint && pnpm prettier:check"

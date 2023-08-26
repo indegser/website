@@ -1,9 +1,8 @@
+import { SeriesType } from 'lib/supabase';
 import Link from 'next/link';
 
-import { SupabaseSeriesType } from '@src/types/page.types';
-
 interface Props {
-  series: SupabaseSeriesType[];
+  series: SeriesType[];
 }
 
 export const Series = ({ series }: Props) => {
