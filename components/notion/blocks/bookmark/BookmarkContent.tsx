@@ -1,4 +1,4 @@
-import { linkPreview } from '@src/utils/linkPreview';
+import { linkPreview } from '@src/utils/link-preview';
 
 interface Props {
   url: string;
