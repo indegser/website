@@ -6,7 +6,7 @@ import {
 } from '@notionhq/client/build/src/api-endpoints';
 import uniqBy from 'lodash-es/uniqBy';
 
-import { coverTask } from './image/coverTask';
+import { coverTask } from './image/cover-task';
 import { notionUtils } from './notion';
 
 import { ContentType, PageType, PropertyType } from '@src/types/notion.types';

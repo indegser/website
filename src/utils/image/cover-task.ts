@@ -1,4 +1,4 @@
-import { uploadImageToSupabase } from './uploadImageToSupabase';
+import { uploadImageToSupabase } from './upload';
 import { notionUtils } from '../notion';
 
 import { CDN_ORIGIN } from '@src/types/const.types';
