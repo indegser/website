@@ -4,7 +4,6 @@ import Balancer from 'react-wrap-balancer';
 import { RichItemThumbnail } from './RichItemThumbnail';
 import { Series } from './Series';
 
-
 import { Time } from 'components/atoms/Time';
 import { PageType, SeriesType } from 'lib/supabase';
 
