@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { syncApi } from '@src/utils/sync';
+import { syncApi } from 'lib/utils/sync';
 
 export const dynamic = 'force-dynamic';
 

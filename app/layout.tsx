@@ -6,10 +6,10 @@ import { ReactNode } from 'react';
 
 import Providers from './providers';
 
-import { ORIGIN } from '@src/types/const.types';
 import { Footer } from 'components/organs/footer/Footer';
 import { Nav } from 'components/organs/nav/Nav';
 import { jetBrainsMonoFont, pretendardFont } from 'components/theme';
+import { ORIGIN } from 'lib/constants';
 
 export const metadata: Metadata = {
   title: {

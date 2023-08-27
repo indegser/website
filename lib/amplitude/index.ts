@@ -1,6 +1,6 @@
 import * as sdk from '@amplitude/analytics-browser';
 
-import { isProduction, isServer } from '@src/types/env.types';
+import { isProduction, isServer } from 'lib/constants';
 
 const enrichPageUrlPlugin = (): sdk.Types.EnrichmentPlugin => {
   return {

@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
 import { pageApi } from '@src/apis/page.api';
-import { isProduction } from '@src/types/env.types';
 import { preloadPage } from 'components/layout/content/ContentHeadline';
 import { ContentPage } from 'components/layout/content/ContentPage';
+import { isProduction } from 'lib/constants';
 
 export const revalidate = 60;
 
