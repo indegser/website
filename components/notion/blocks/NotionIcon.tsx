@@ -1,4 +1,4 @@
-import { BlockType } from '@src/types/notion.types';
+import { BlockType } from 'lib/supabase/notion.types';
 
 interface Props {
   icon: Extract<BlockType, { type: 'callout' }>['callout']['icon'];
