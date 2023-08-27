@@ -31,7 +31,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/types/global.d.ts",
+    "lib/global.d.ts",
     ".next/types/**/*.ts"
   ]
 }

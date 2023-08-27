@@ -12,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typegen": "pnpm supabase gen types typescript --project-id rovmadruwzgusgvfihbv --schema public > src/types/supabase.types.ts; pnpm lint --fix",
+    "typegen": "pnpm supabase gen types typescript --project-id rovmadruwzgusgvfihbv --schema public > lib/supabase/types.ts; pnpm lint --fix",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm lint && pnpm prettier:check"
@@ -66,6 +66,7 @@
     "eslint": "8.46.0",
     "eslint-config-next": "^13.4.12",
     "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "postcss": "^8.4.23",
     "prettier": "^3.0.0",

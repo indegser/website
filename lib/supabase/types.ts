@@ -12,24 +12,21 @@ export interface Database {
       episodes: {
         Row: {
           created_time: string | null;
-          id: number;
           last_edited_time: string | null;
-          page_id: string | null;
-          series_id: string | null;
+          page_id: string;
+          series_id: string;
         };
         Insert: {
           created_time?: string | null;
-          id?: number;
           last_edited_time?: string | null;
-          page_id?: string | null;
-          series_id?: string | null;
+          page_id: string;
+          series_id: string;
         };
         Update: {
           created_time?: string | null;
-          id?: number;
           last_edited_time?: string | null;
-          page_id?: string | null;
-          series_id?: string | null;
+          page_id?: string;
+          series_id?: string;
         };
         Relationships: [
           {
@@ -70,27 +67,6 @@ export interface Database {
           type?: string;
           url?: string;
           width?: number;
-        };
-        Relationships: [];
-      };
-      journal: {
-        Row: {
-          created_time: string;
-          data: Json;
-          id: string;
-          last_edited_time: string;
-        };
-        Insert: {
-          created_time?: string;
-          data: Json;
-          id: string;
-          last_edited_time?: string;
-        };
-        Update: {
-          created_time?: string;
-          data?: Json;
-          id?: string;
-          last_edited_time?: string;
         };
         Relationships: [];
       };
