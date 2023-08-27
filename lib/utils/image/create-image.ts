@@ -2,7 +2,7 @@ import sizeOf from 'image-size';
 import mime from 'mime-types';
 import { nanoid } from 'nanoid';
 
-import { CDN_ORIGIN } from '@src/types/const.types';
+import { CDN_ORIGIN } from 'lib/constants';
 import { supabase } from 'lib/supabase';
 
 export const uploadImage = async (src: string) => {

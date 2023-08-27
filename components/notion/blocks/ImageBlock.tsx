@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { Caption } from './Caption';
 
 import { BlockType } from '@src/types/notion.types';
-import { uploadImage } from '@src/utils/image/create-image';
 import { PageContent } from 'components/atoms/Container';
 import { notion } from 'lib/notion';
+import { uploadImage } from 'lib/utils/image/create-image';
 
 interface Props {
   block: Extract<BlockType, { type: 'image' }>;
