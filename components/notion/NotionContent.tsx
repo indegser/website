@@ -1,7 +1,7 @@
 import { Block } from './blocks/Block';
 
-import { pageApi } from '@src/apis/page.api';
-import { BlockType } from '@src/types/notion.types';
+import { BlockType } from 'lib/supabase/notion.types';
+import { pageApi } from 'lib/supabase/page.api';
 
 interface Props {
   id: string;

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
-import { seriesApi } from '@src/apis/series.api';
 import { SeriesPage } from 'components/layout/series/SeriesPage';
 import { SeriesType } from 'lib/supabase';
+import { seriesApi } from 'lib/supabase/series.api';
 
 export const revalidate = 60;
 

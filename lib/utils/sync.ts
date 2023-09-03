@@ -9,9 +9,9 @@ import uniqBy from 'lodash-es/uniqBy';
 import { coverTask } from './image/cover-task';
 import { notionUtils } from './notion';
 
-import { ContentType, PageType, PropertyType } from '@src/types/notion.types';
 import { notion } from 'lib/notion';
 import { supabase } from 'lib/supabase';
+import { ContentType, PageType, PropertyType } from 'lib/supabase/notion.types';
 
 const fetchContent = async (
   id: string,

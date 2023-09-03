@@ -1,6 +1,6 @@
-import { pageApi } from '@src/apis/page.api';
 import { PageContainer } from 'components/atoms/Container';
 import { RichItem } from 'components/organs/rich-item/RichItem';
+import { pageApi } from 'lib/supabase/page.api';
 
 export const preloadIndex = () => {
   void pageApi.queryPages();

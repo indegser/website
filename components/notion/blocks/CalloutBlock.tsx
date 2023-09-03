@@ -1,9 +1,9 @@
 import { NotionIcon } from './NotionIcon';
 
-import { BlockType } from '@src/types/notion.types';
 import { PageContent } from 'components/atoms/Container';
-import { convertApiColorToStyleProps } from 'components/notion/convertApiColorToStyleProps';
 import { RichText } from 'components/notion/RichText';
+import { convertApiColorToStyleProps } from 'components/notion/convertApiColorToStyleProps';
+import { BlockType } from 'lib/supabase/notion.types';
 
 interface Props {
   block: Extract<BlockType, { type: 'callout' }>;

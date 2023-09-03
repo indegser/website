@@ -1,4 +1,4 @@
-import { CoverType, PropertyType } from '@src/types/notion.types';
+import { CoverType, PropertyType } from 'lib/supabase/notion.types';
 
 interface Props {
   file: PropertyType<'files'>['files'][number] | CoverType;

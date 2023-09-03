@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
-import { pageApi } from '@src/apis/page.api';
 import { ORIGIN } from 'lib/constants';
+import { pageApi } from 'lib/supabase/page.api';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { data } = await pageApi.queryPages({ limit: 100 });

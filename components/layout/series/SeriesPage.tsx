@@ -1,6 +1,6 @@
-import { seriesApi } from '@src/apis/series.api';
 import { PageContainer } from 'components/atoms/Container';
 import { RichItem } from 'components/organs/rich-item/RichItem';
+import { seriesApi } from 'lib/supabase/series.api';
 
 interface Props {
   id: string;

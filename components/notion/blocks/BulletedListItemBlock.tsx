@@ -1,5 +1,5 @@
-import { BlockType } from '@src/types/notion.types';
 import { RichText } from 'components/notion/RichText';
+import { BlockType } from 'lib/supabase/notion.types';
 
 interface Props {
   depth: number;
