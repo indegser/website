@@ -1,10 +1,8 @@
-import config from '@/sanity.config';
 import { createClient } from 'next-sanity';
 
-const { projectId, dataset } = config;
-
 export const client = createClient({
-  dataset,
-  projectId,
+  projectId: 'em8nd69q',
+  dataset: 'production',
   useCdn: false,
+  token: process.env.SANITY_API_TOKEN,
 });
