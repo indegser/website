@@ -62,7 +62,7 @@
     "@styled/typescript-styled-plugin": "^1.0.0",
     "@types/lodash-es": "^4.17.5",
     "@types/mime-types": "^2.1.1",
-    "@types/node": "^13.1.2",
+    "@types/node": "^20.8.0",
     "@types/react": "^18.2.11",
     "@types/react-dom": "^18.2.4",
     "@types/react-syntax-highlighter": "^13.5.2",
