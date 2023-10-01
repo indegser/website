@@ -1,7 +1,9 @@
 import { defineField, defineType } from 'sanity';
 import { Bookmark } from '../components/Bookmark';
+import { seriesDocument } from './series';
 
 const schema = [
+  seriesDocument,
   defineType({
     title: 'Bookmark',
     name: 'bookmark',
