@@ -9,6 +9,31 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      databases: {
+        Row: {
+          created_at: string;
+          id: string;
+          user_id: string;
+        };
+        Insert: {
+          created_at?: string;
+          id: string;
+          user_id: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'databases_user_id_fkey';
+            columns: ['user_id'];
+            referencedRelation: 'users';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       episodes: {
         Row: {
           created_time: string | null;
@@ -180,27 +205,24 @@ export interface Database {
       };
       tokens: {
         Row: {
-          created_at: string | null;
-          database_id: string | null;
-          id: string;
+          created_at: string;
           token: string;
+          user_id: string;
         };
         Insert: {
-          created_at?: string | null;
-          database_id?: string | null;
-          id: string;
+          created_at?: string;
           token: string;
+          user_id: string;
         };
         Update: {
-          created_at?: string | null;
-          database_id?: string | null;
-          id?: string;
+          created_at?: string;
           token?: string;
+          user_id?: string;
         };
         Relationships: [
           {
-            foreignKeyName: 'tokens_id_fkey';
-            columns: ['id'];
+            foreignKeyName: 'tokens_user_id_fkey';
+            columns: ['user_id'];
             referencedRelation: 'users';
             referencedColumns: ['id'];
           },
