@@ -10,9 +10,11 @@ import { cookies } from 'next/headers';
 export default async function Page() {
   const supabase = createServerComponentClient<Database>({ cookies });
   const { data } = await supabase.from('databases').select('*');
-  const { data: sessionData } = await supabase.auth.getSession();
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
 
-  if (!sessionData.session) {
+  if (!session) {
     return <div>Should authenticate first</div>;
   }
 
@@ -24,7 +26,7 @@ export default async function Page() {
 
     const { error } = await supabase
       .from('databases')
-      .upsert({ id, user_id: sessionData.session.user.id });
+      .upsert({ id, token: session.provider_token, user_id: session.user.id });
 
     if (error) {
       console.error(error.message);

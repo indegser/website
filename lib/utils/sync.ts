@@ -6,7 +6,7 @@ import {
 } from '@notionhq/client/build/src/api-endpoints';
 import uniqBy from 'lodash-es/uniqBy';
 
-import { coverTask } from './image/cover-task';
+import { coverTask, coverTask2 } from './image/cover-task';
 import { notionUtils } from './notion';
 
 import { notion } from 'lib/notion';
@@ -15,21 +15,55 @@ import { ContentType, PageType, PropertyType } from 'lib/supabase/notion.types';
 
 const fetchContent = async (
   id: string,
+  auth?: string,
 ): Promise<(PartialBlockObjectResponse | BlockObjectResponse)[]> => {
   const response = await notion.blocks.children.list({
+    auth,
     block_id: id,
     page_size: 100,
   });
 
   if (response.has_more) {
-    const results = await fetchContent(response.next_cursor);
+    const results = await fetchContent(response.next_cursor, auth);
     return response.results.concat(results);
   }
 
   return response.results;
 };
 
-const syncPages = async (pages: ContentType[]) => {
+const convertPages = async (pages: ContentType[], auth: string) => {
+  return Promise.all(
+    pages.map(async (raw: PageType) => {
+      const page = (await coverTask2(raw, auth)) as PageType;
+      const { id } = page;
+
+      const title = notionUtils.getTitle(page);
+      const cover = notionUtils.getNotionFileUrl(page.cover);
+
+      const content = await fetchContent(id, auth);
+
+      const status = page.properties.Status as PropertyType<'status'>;
+      const isDraft = status?.status.name !== 'Done';
+
+      return {
+        id: page.id,
+        title,
+        cover,
+        excerpt: page.properties.Description
+          ? notionUtils.getPlainText(
+              page.properties.Description as PropertyType<'rich_text'>,
+            )
+          : null,
+        created_time: page.created_time,
+        last_edited_time: page.last_edited_time,
+        content,
+        is_draft: isDraft,
+      };
+    }),
+  );
+};
+
+const syncPages = async (pages: ContentType[], auth?: string) => {
   const results = await Promise.all(coverTask(pages));
 
   const values = await Promise.all(
@@ -39,7 +73,7 @@ const syncPages = async (pages: ContentType[]) => {
       const title = notionUtils.getTitle(page);
       const cover = notionUtils.getNotionFileUrl(page.cover);
 
-      const content = await fetchContent(id);
+      const content = await fetchContent(id, auth);
 
       const status = page.properties.Status as PropertyType<'status'>;
       const isDraft = status.status.name !== 'Done';
@@ -83,6 +117,22 @@ const syncPages = async (pages: ContentType[]) => {
 const syncPage = async (id: string) => {
   const page = await notion.pages.retrieve({ page_id: id });
   return syncPages([page as ContentType]);
+};
+
+const syncDatabase = async (database_id: string, auth: string) => {
+  const response = await notion.databases.query({
+    database_id,
+    auth,
+    page_size: 100,
+    sorts: [
+      {
+        timestamp: 'last_edited_time',
+        direction: 'descending',
+      },
+    ],
+  });
+
+  return convertPages(response.results as ContentType[], auth);
 };
 
 const syncLatest = async () => {
@@ -133,4 +183,5 @@ export const syncApi = {
   syncPage,
   syncPages,
   syncLatest,
+  syncDatabase,
 };
