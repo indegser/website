@@ -9,6 +9,34 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      databases: {
+        Row: {
+          created_at: string;
+          id: string;
+          token: string | null;
+          user_id: string;
+        };
+        Insert: {
+          created_at?: string;
+          id: string;
+          token?: string | null;
+          user_id: string;
+        };
+        Update: {
+          created_at?: string;
+          id?: string;
+          token?: string | null;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'databases_user_id_fkey';
+            columns: ['user_id'];
+            referencedRelation: 'users';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       episodes: {
         Row: {
           created_time: string | null;
@@ -126,6 +154,7 @@ export interface Database {
           content: Json | null;
           cover: string | null;
           created_time: string;
+          database_id: string | null;
           excerpt: string | null;
           id: string;
           is_draft: boolean | null;
@@ -136,6 +165,7 @@ export interface Database {
           content?: Json | null;
           cover?: string | null;
           created_time?: string;
+          database_id?: string | null;
           excerpt?: string | null;
           id: string;
           is_draft?: boolean | null;
@@ -146,13 +176,21 @@ export interface Database {
           content?: Json | null;
           cover?: string | null;
           created_time?: string;
+          database_id?: string | null;
           excerpt?: string | null;
           id?: string;
           is_draft?: boolean | null;
           last_edited_time?: string;
           title?: string | null;
         };
-        Relationships: [];
+        Relationships: [
+          {
+            foreignKeyName: 'pages_database_id_fkey';
+            columns: ['database_id'];
+            referencedRelation: 'databases';
+            referencedColumns: ['id'];
+          },
+        ];
       };
       series: {
         Row: {
@@ -180,27 +218,24 @@ export interface Database {
       };
       tokens: {
         Row: {
-          created_at: string | null;
-          database_id: string | null;
-          id: string;
+          created_at: string;
           token: string;
+          user_id: string;
         };
         Insert: {
-          created_at?: string | null;
-          database_id?: string | null;
-          id: string;
+          created_at?: string;
           token: string;
+          user_id: string;
         };
         Update: {
-          created_at?: string | null;
-          database_id?: string | null;
-          id?: string;
+          created_at?: string;
           token?: string;
+          user_id?: string;
         };
         Relationships: [
           {
-            foreignKeyName: 'tokens_id_fkey';
-            columns: ['id'];
+            foreignKeyName: 'tokens_user_id_fkey';
+            columns: ['user_id'];
             referencedRelation: 'users';
             referencedColumns: ['id'];
           },

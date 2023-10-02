@@ -25,7 +25,11 @@ const enrichPageUrlPlugin = (): sdk.Types.EnrichmentPlugin => {
 };
 
 if (!isServer) {
-  sdk.init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY);
+  sdk.init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY, {
+    defaultTracking: {
+      formInteractions: false,
+    },
+  });
   sdk.add(enrichPageUrlPlugin());
 }
 

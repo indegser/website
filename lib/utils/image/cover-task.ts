@@ -22,3 +22,20 @@ export const coverTask = (pages: Array<PageType>) => {
     });
   });
 };
+
+export const coverTask2 = async (page: PageType, auth?: string) => {
+  const coverUrl = notionUtils.getNotionFileUrl(page.cover);
+  const shouldReplace = coverUrl && !coverUrl.includes(CDN_ORIGIN);
+
+  if (!shouldReplace) return page;
+
+  const newCoverUrl = await uploadImageToSupabase(coverUrl, 'cover');
+
+  if (!newCoverUrl) return page;
+
+  return notion.pages.update({
+    auth,
+    page_id: page.id,
+    cover: { external: { url: newCoverUrl.publicURL } },
+  });
+};
