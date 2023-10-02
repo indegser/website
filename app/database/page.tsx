@@ -2,6 +2,7 @@ import {
   createServerActionClient,
   createServerComponentClient,
 } from '@supabase/auth-helpers-nextjs';
+import { notion } from 'lib/notion';
 
 import { Database } from 'lib/supabase/types';
 import { revalidatePath } from 'next/cache';
@@ -24,16 +25,27 @@ export default async function Page() {
     const supabase = createServerActionClient<Database>({ cookies });
     const id = String(formData.get('id'));
 
-    const { error } = await supabase
-      .from('databases')
-      .upsert({ id, token: session.provider_token, user_id: session.user.id });
+    try {
+      const notionData = await notion.databases.retrieve({
+        database_id: id,
+        auth: session.provider_token,
+      });
 
-    if (error) {
-      console.error(error.message);
-      return;
+      const { error } = await supabase.from('databases').upsert({
+        id: notionData.id,
+        token: session.provider_token,
+        user_id: session.user.id,
+      });
+
+      if (error) {
+        console.error(error.message);
+        return;
+      }
+
+      revalidatePath('/database');
+    } catch (err) {
+      console.warn(err.message);
     }
-
-    revalidatePath('/database');
   };
 
   return (

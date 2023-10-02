@@ -44,9 +44,12 @@ const convertPages = async (pages: ContentType[], auth: string) => {
 
       const status = page.properties.Status as PropertyType<'status'>;
       const isDraft = status?.status.name !== 'Done';
+      const database_id =
+        page.parent.type === 'database_id' ? page.parent.database_id : null;
 
       return {
         id: page.id,
+        database_id,
         title,
         cover,
         excerpt: page.properties.Description
@@ -77,9 +80,12 @@ const syncPages = async (pages: ContentType[], auth?: string) => {
 
       const status = page.properties.Status as PropertyType<'status'>;
       const isDraft = status.status.name !== 'Done';
+      const database_id =
+        page.parent.type === 'database_id' ? page.parent.database_id : null;
 
       return {
         id: page.id,
+        database_id,
         title,
         cover,
         excerpt: notionUtils.getPlainText(
@@ -132,7 +138,9 @@ const syncDatabase = async (database_id: string, auth: string) => {
     ],
   });
 
-  return convertPages(response.results as ContentType[], auth);
+  const pages = await convertPages(response.results as ContentType[], auth);
+
+  return supabase.from('pages').upsert(pages).select();
 };
 
 const syncLatest = async () => {

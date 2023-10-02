@@ -21,11 +21,11 @@ export default async function Page({
 }: {
   params: { user_id: string };
 }) {
-  const results = await getData(params.user_id);
+  const { data, error } = await getData(params.user_id);
 
   return (
     <div style={{ color: 'white' }}>
-      {results.map((result) => {
+      {data.map((result) => {
         return <div key={result.id}>{result.title}</div>;
       })}
     </div>

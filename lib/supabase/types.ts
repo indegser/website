@@ -13,16 +13,19 @@ export interface Database {
         Row: {
           created_at: string;
           id: string;
+          token: string | null;
           user_id: string;
         };
         Insert: {
           created_at?: string;
           id: string;
+          token?: string | null;
           user_id: string;
         };
         Update: {
           created_at?: string;
           id?: string;
+          token?: string | null;
           user_id?: string;
         };
         Relationships: [
@@ -151,6 +154,7 @@ export interface Database {
           content: Json | null;
           cover: string | null;
           created_time: string;
+          database_id: string | null;
           excerpt: string | null;
           id: string;
           is_draft: boolean | null;
@@ -161,6 +165,7 @@ export interface Database {
           content?: Json | null;
           cover?: string | null;
           created_time?: string;
+          database_id?: string | null;
           excerpt?: string | null;
           id: string;
           is_draft?: boolean | null;
@@ -171,13 +176,21 @@ export interface Database {
           content?: Json | null;
           cover?: string | null;
           created_time?: string;
+          database_id?: string | null;
           excerpt?: string | null;
           id?: string;
           is_draft?: boolean | null;
           last_edited_time?: string;
           title?: string | null;
         };
-        Relationships: [];
+        Relationships: [
+          {
+            foreignKeyName: 'pages_database_id_fkey';
+            columns: ['database_id'];
+            referencedRelation: 'databases';
+            referencedColumns: ['id'];
+          },
+        ];
       };
       series: {
         Row: {
