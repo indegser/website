@@ -1,6 +1,7 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { syncApi } from 'lib/utils/sync';
 import { cookies } from 'next/headers';
+import Link from 'next/link';
 
 const getData = async (userId: string) => {
   const supabase = createServerComponentClient({ cookies });
@@ -26,7 +27,11 @@ export default async function Page({
   return (
     <div style={{ color: 'white' }}>
       {data.map((result) => {
-        return <div key={result.id}>{result.title}</div>;
+        return (
+          <Link href={`/content/${result.id}`} key={result.id}>
+            <div>{result.title}</div>
+          </Link>
+        );
       })}
     </div>
   );

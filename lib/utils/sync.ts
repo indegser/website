@@ -120,9 +120,9 @@ const syncPages = async (pages: ContentType[], auth?: string) => {
   return result;
 };
 
-const syncPage = async (id: string) => {
-  const page = await notion.pages.retrieve({ page_id: id });
-  return syncPages([page as ContentType]);
+const syncPage = async (id: string, auth?: string) => {
+  const page = await notion.pages.retrieve({ auth, page_id: id });
+  return convertPages([page as ContentType], auth);
 };
 
 const syncDatabase = async (database_id: string, auth: string) => {
@@ -166,10 +166,10 @@ const syncLatest = async () => {
   /**
    * 삭제된 페이지 정리
    */
-  await supabase
-    .from('pages')
-    .delete()
-    .not('id', 'in', `(${ids.join(',')})`);
+  // await supabase
+  //   .from('pages')
+  //   .delete()
+  //   .not('id', 'in', `(${ids.join(',')})`);
 
   /**
    * 삭제된 시리즈 정리
