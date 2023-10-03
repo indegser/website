@@ -8,16 +8,12 @@ import { Database } from 'lib/supabase/types';
 import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 
-export default async function Page() {
+export default async function CreateDatabase() {
   const supabase = createServerComponentClient<Database>({ cookies });
-  const { data } = await supabase.from('databases').select('*');
+
   const {
     data: { session },
   } = await supabase.auth.getSession();
-
-  if (!session) {
-    return <div>Should authenticate first</div>;
-  }
 
   const addDatabase = async (formData: FormData) => {
     'use server';
@@ -42,20 +38,26 @@ export default async function Page() {
         return;
       }
 
-      revalidatePath('/database');
+      revalidatePath('/dashboard');
     } catch (err) {
-      console.warn(err.message);
+      console.warn(err);
     }
   };
 
   return (
-    <div style={{ color: 'white' }}>
+    <div className="mb-4 text-gray-100">
       <form action={addDatabase}>
-        <input type="text" name="id" style={{ color: 'black' }}></input>
+        <div className="flex gap-4">
+          <input
+            type="text"
+            name="id"
+            style={{ color: 'black', width: 300 }}
+          ></input>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </div>
       </form>
-      <pre style={{ whiteSpace: 'pre-wrap' }}>
-        {JSON.stringify(data, null, 2)}
-      </pre>
     </div>
   );
 }
