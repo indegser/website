@@ -19,7 +19,7 @@ export default async function Page() {
 
   return (
     <PageContainer>
-      <div className="pt-8">
+      <div className="space-y-4 pt-8">
         <Session userMetadata={user.user_metadata} />
         <Databases userId={user.id} />
       </div>
