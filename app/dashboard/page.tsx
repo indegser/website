@@ -3,6 +3,7 @@ import { PageContainer } from 'components/atoms/Container';
 import { cookies } from 'next/headers';
 import { Databases } from './databases';
 import { LoginForm } from './login-form';
+import { Session } from './session';
 
 export default async function Page() {
   const supabase = createServerComponentClient({ cookies });
@@ -12,13 +13,15 @@ export default async function Page() {
     return <LoginForm />;
   }
 
+  const {
+    session: { user },
+  } = data;
+
   return (
     <PageContainer>
       <div className="pt-8">
-        <Databases userId={data.session.user.id} />
-        <pre style={{ color: 'white' }}>
-          {JSON.stringify(data.session.user.user_metadata, null, 2)}
-        </pre>
+        <Session userMetadata={user.user_metadata} />
+        <Databases userId={user.id} />
       </div>
     </PageContainer>
   );

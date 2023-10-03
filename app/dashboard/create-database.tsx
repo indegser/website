@@ -1,3 +1,4 @@
+import { Input } from '@/components/ui/input';
 import {
   createServerActionClient,
   createServerComponentClient,
@@ -48,11 +49,7 @@ export default async function CreateDatabase() {
     <div className="mb-4 text-gray-100">
       <form action={addDatabase}>
         <div className="flex gap-4">
-          <input
-            type="text"
-            name="id"
-            style={{ color: 'black', width: 300 }}
-          ></input>
+          <Input type="text" name="id" />
           <div>
             <button type="submit">Submit</button>
           </div>
