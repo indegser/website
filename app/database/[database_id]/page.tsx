@@ -1,6 +1,6 @@
+import { PageContainer } from '@/components/atoms/Container';
+import { RichItem } from '@/components/organs/rich-item/RichItem';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { PageContainer } from 'components/atoms/Container';
-import { RichItem } from 'components/organs/rich-item/RichItem';
 import { syncApi } from 'lib/utils/sync';
 import { cookies } from 'next/headers';
 

@@ -16,7 +16,8 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["src/*"]
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"]
     },
     "incremental": true,
     "plugins": [
