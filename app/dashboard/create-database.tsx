@@ -1,9 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import {
-  createServerActionClient,
-  createServerComponentClient,
-} from '@supabase/auth-helpers-nextjs';
+import { createServerActionClient } from '@supabase/auth-helpers-nextjs';
 import { notion } from 'lib/notion';
 
 import { Database } from 'lib/supabase/types';
@@ -11,28 +8,34 @@ import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 
 export default async function CreateDatabase() {
-  const supabase = createServerComponentClient<Database>({ cookies });
-
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
-
   const addDatabase = async (formData: FormData) => {
     'use server';
 
     const supabase = createServerActionClient<Database>({ cookies });
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+
+    const {
+      data: { token },
+    } = await supabase
+      .from('tokens')
+      .select('token')
+      .eq('user_id', session.user.id)
+      .single();
+
     const id = String(formData.get('id'));
 
     try {
-      const notionData = await notion.databases.retrieve({
+      const database = await notion.databases.retrieve({
         database_id: id,
-        auth: session.provider_token,
+        auth: token,
       });
 
       const { error } = await supabase.from('databases').upsert({
-        id: notionData.id,
-        token: session.provider_token,
+        id: database.id,
         user_id: session.user.id,
+        raw_data: database,
       });
 
       if (error) {
@@ -47,7 +50,7 @@ export default async function CreateDatabase() {
   };
 
   return (
-    <div className="mb-4 text-gray-100">
+    <div className="mb-4 text-gray-900 dark:text-gray-100">
       <form action={addDatabase}>
         <div className="flex space-x-4">
           <Input type="text" name="id" />

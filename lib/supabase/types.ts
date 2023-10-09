@@ -12,21 +12,27 @@ export interface Database {
       databases: {
         Row: {
           created_at: string;
+          description: string | null;
           id: string;
-          token: string | null;
-          user_id: string;
+          raw_data: Json;
+          title: string | null;
+          user_id: string | null;
         };
         Insert: {
           created_at?: string;
-          id: string;
-          token?: string | null;
-          user_id: string;
+          description?: string | null;
+          id?: string;
+          raw_data: Json;
+          title?: string | null;
+          user_id?: string | null;
         };
         Update: {
           created_at?: string;
+          description?: string | null;
           id?: string;
-          token?: string | null;
-          user_id?: string;
+          raw_data?: Json;
+          title?: string | null;
+          user_id?: string | null;
         };
         Relationships: [
           {
@@ -183,14 +189,7 @@ export interface Database {
           last_edited_time?: string;
           title?: string | null;
         };
-        Relationships: [
-          {
-            foreignKeyName: 'pages_database_id_fkey';
-            columns: ['database_id'];
-            referencedRelation: 'databases';
-            referencedColumns: ['id'];
-          },
-        ];
+        Relationships: [];
       };
       series: {
         Row: {
