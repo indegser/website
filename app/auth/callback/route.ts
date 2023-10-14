@@ -1,3 +1,4 @@
+import { getURL } from '@/lib/constants';
 import { Database } from '@/lib/supabase/types';
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
@@ -28,5 +29,5 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  return NextResponse.redirect(`${request.nextUrl.origin}/dashboard`);
+  return NextResponse.redirect(`${getURL()}dashboard`);
 }
