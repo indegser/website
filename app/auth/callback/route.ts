@@ -1,6 +1,5 @@
 import { Database } from '@/lib/supabase/types';
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
-import { ORIGIN } from 'lib/constants';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -29,5 +28,5 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  return NextResponse.redirect(`${ORIGIN}/dashboard`);
+  return NextResponse.redirect(`${request.nextUrl.origin}/dashboard`);
 }
