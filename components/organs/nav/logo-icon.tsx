@@ -1,4 +1,4 @@
-export const Logo = () => {
+export const LogoIcon = () => {
   const icon = (
     <div className="mr-2">
       <svg

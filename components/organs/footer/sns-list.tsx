@@ -22,7 +22,7 @@ const snsList = [
   },
 ];
 
-export const Sns = () => {
+export const SnsList = () => {
   const ref = useRef<ElementRef<'div'>>(null);
   const inView = useInView(ref, { once: true });
 
@@ -45,14 +45,14 @@ export const Sns = () => {
       {snsList.map((sns, index) => (
         <Fragment key={sns.link}>
           {index > 0 ? (
-            <div className="h-0.5 w-0.5 rounded-full bg-gray-500" />
+            <div className="h-0.5 w-0.5 rounded-full bg-muted-foreground" />
           ) : null}
           <Link
             href={sns.link}
             title={sns.alt}
             onClick={() => handleClick(sns.key)}
           >
-            <div className="p-1 text-gray-500">{sns.icon}</div>
+            <div className="p-1 text-muted-foreground">{sns.icon}</div>
           </Link>
         </Fragment>
       ))}
