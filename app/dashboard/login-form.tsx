@@ -6,7 +6,7 @@ import { useToast } from '@/components/ui/use-toast';
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { AuthError } from '@supabase/supabase-js';
-import { getURL } from 'lib/constants';
+import { ORIGIN } from 'lib/constants';
 
 export const LoginForm = () => {
   const { toast } = useToast();
@@ -14,22 +14,15 @@ export const LoginForm = () => {
 
   const handleClick = async () => {
     try {
-      const { data, error } = await supabase.auth.signInWithOAuth({
+      const { error } = await supabase.auth.signInWithOAuth({
         provider: 'notion',
         options: {
-          redirectTo: `${getURL()}auth/callback`,
+          redirectTo: `${ORIGIN}/auth/callback`,
         },
       });
 
       if (error) {
         throw error;
-      }
-
-      if (data) {
-        toast({
-          title: 'Success',
-          description: data.url,
-        });
       }
     } catch (err) {
       if (err instanceof AuthError) {
