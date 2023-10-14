@@ -6,7 +6,7 @@ import { useToast } from '@/components/ui/use-toast';
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { AuthError } from '@supabase/supabase-js';
-import { ORIGIN } from 'lib/constants';
+import { getURL } from 'next/dist/shared/lib/utils';
 
 export const LoginForm = () => {
   const { toast } = useToast();
@@ -17,7 +17,7 @@ export const LoginForm = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'notion',
         options: {
-          redirectTo: `${ORIGIN}/auth/callback`,
+          redirectTo: `${getURL()}/auth/callback`,
         },
       });
 

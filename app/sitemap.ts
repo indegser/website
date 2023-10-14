@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-import { ORIGIN } from 'lib/constants';
+import { getURL } from 'lib/constants';
 import { pageApi } from 'lib/supabase/page.api';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (error) return [];
 
   return data.map((page) => ({
-    url: `${ORIGIN}/content/${page.id}`,
+    url: `${getURL()}/content/${page.id}`,
     lastModified: page.last_edited_time,
   }));
 }

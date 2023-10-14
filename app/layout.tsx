@@ -10,14 +10,14 @@ import { Footer } from '@/components/organs/footer';
 import { Nav } from '@/components/organs/nav';
 import { Toaster } from '@/components/ui/toaster';
 import { jetBrainsMonoFont, pretendardFont } from 'components/theme';
-import { ORIGIN } from 'lib/constants';
+import { getURL } from 'lib/constants';
 
 export const metadata: Metadata = {
   title: {
     template: '%s - Indegser',
     default: 'Indegser', // a default is required when creating a template
   },
-  metadataBase: new URL(ORIGIN),
+  metadataBase: new URL(getURL()),
   alternates: {
     canonical: '/',
   },
