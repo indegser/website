@@ -6,9 +6,9 @@ import { ReactNode } from 'react';
 
 import { Providers } from './providers';
 
+import { Footer } from '@/components/organs/footer';
+import { Nav } from '@/components/organs/nav';
 import { Toaster } from '@/components/ui/toaster';
-import { Footer } from 'components/organs/footer/Footer';
-import { Nav } from 'components/organs/nav/Nav';
 import { jetBrainsMonoFont, pretendardFont } from 'components/theme';
 import { ORIGIN } from 'lib/constants';
 
@@ -30,14 +30,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${pretendardFont.variable} ${jetBrainsMonoFont.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-gray-50 dark:bg-gray-950">
-        <Providers attribute="class" defaultTheme="system">
+      <body>
+        <Providers
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Nav />
           <main className="min-h-screen w-full">{children}</main>
           <Footer />
         </Providers>
         <Analytics />
         <Toaster />
+        <div className="dark" />
       </body>
     </html>
   );
