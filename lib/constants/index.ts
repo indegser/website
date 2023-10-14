@@ -8,7 +8,6 @@ export const isServer = typeof window == 'undefined';
 
 export const CDN_ORIGIN = process.env.NEXT_PUBLIC_SUPABASE_URL;
 
-console.log(environment, 'ENVIRONMENT');
 export const ORIGIN =
   environment === 'production'
     ? 'https://www.indegser.com'

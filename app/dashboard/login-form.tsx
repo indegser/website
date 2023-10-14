@@ -2,22 +2,45 @@
 
 import { PageContainer } from '@/components/atoms/Container';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/components/ui/use-toast';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { AuthError } from '@supabase/supabase-js';
 import { ORIGIN } from 'lib/constants';
-import { useRouter } from 'next/navigation';
 
 export const LoginForm = () => {
-  const router = useRouter();
+  const { toast } = useToast();
+
   const supabase = createClientComponentClient();
   const handleClick = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'notion',
-      options: {
-        redirectTo: `${ORIGIN}/auth/callback`,
-      },
-    });
+    console.log(ORIGIN, 'ORIGIN');
 
-    router.refresh();
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'notion',
+        options: {
+          redirectTo: `${ORIGIN}/auth/callback`,
+        },
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      if (data) {
+        toast({
+          title: 'Success',
+          description: data.url,
+        });
+      }
+    } catch (err) {
+      if (err instanceof AuthError) {
+        toast({
+          title: err.name,
+          description: err.message,
+          variant: 'destructive',
+        });
+      }
+    }
   };
 
   return (
