@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export const generateStaticParams = async () => {
   const { data } = await seriesApi.getAllSeries();
-  return data || [];
+  return [];
 };
 
 export default async function Page({ params: { id } }: Props) {
