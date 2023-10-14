@@ -9,7 +9,7 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
-    "dev:prod": "NEXT_PUBLIC_VERCEL_ENV=production next dev",
+    "dev:prod": "VERCEL_ENV=production next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

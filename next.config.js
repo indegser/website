@@ -9,6 +9,9 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  env: {
+    VERCEL_ENV: process.env.VERCEL_ENV,
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     domains: [
