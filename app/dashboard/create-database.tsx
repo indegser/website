@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { PlusIcon } from '@radix-ui/react-icons';
 import { createServerActionClient } from '@supabase/auth-helpers-nextjs';
 import { notion } from 'lib/notion';
 
@@ -52,12 +53,14 @@ export default async function CreateDatabase() {
   };
 
   return (
-    <div className="mb-4 text-gray-900 dark:text-gray-100">
+    <div className="mb-4">
       <form action={addDatabase}>
         <div className="flex space-x-4">
           <Input type="text" name="id" />
-          <div>
-            <Button type="submit">Register</Button>
+          <div className="flex-shrink-0">
+            <Button type="submit">
+              <PlusIcon className="mr-2 h-4 w-4" /> Add New...
+            </Button>
           </div>
         </div>
       </form>
