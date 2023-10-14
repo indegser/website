@@ -3,7 +3,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
-import { ORIGIN } from '@/lib/constants';
 import { Database } from '@/lib/supabase';
 import { NotionLogoIcon } from '@radix-ui/react-icons';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
@@ -24,7 +23,7 @@ export const Session = ({ userMetadata }: Props) => {
     supabase.auth.signInWithOAuth({
       provider: 'notion',
       options: {
-        redirectTo: `${ORIGIN}/auth/callback`,
+        redirectTo: `${location.origin}/auth/callback`,
       },
     });
   };
