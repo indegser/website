@@ -3,7 +3,6 @@
 import { PageContainer } from '@/components/atoms/Container';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
-import { getURL } from '@/lib/constants';
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { AuthError } from '@supabase/supabase-js';
@@ -17,7 +16,7 @@ export const LoginForm = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'notion',
         options: {
-          redirectTo: `${getURL()}/auth/callback`,
+          redirectTo: `${location.origin}/auth/callback`,
         },
       });
 
