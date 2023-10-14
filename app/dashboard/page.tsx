@@ -6,7 +6,8 @@ import { LoginForm } from './login-form';
 import { Session } from './session';
 
 export default async function Page() {
-  const supabase = createServerComponentClient({ cookies });
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ cookies: () => cookieStore });
   const { data, error } = await supabase.auth.getSession();
 
   if (error || !data.session) {
