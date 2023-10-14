@@ -8,7 +8,10 @@ interface Props {
 }
 
 export const NotionContent = async ({ id }: Props) => {
-  const { content } = await pageApi.getPage(id);
+  const { data, error } = await pageApi.getPage(id);
+  if (error) return null;
+
+  const { content } = data;
   const blocks = (Array.isArray(content) ? content : []) as BlockType[];
 
   return (

@@ -9,10 +9,10 @@ import { PageType, SeriesType } from 'lib/supabase';
 
 interface Props {
   page: PageType;
-  series: SeriesType[];
+  series?: SeriesType[];
 }
 
-export const RichItem = ({ page, series }: Props) => {
+export const RichItem = ({ page, series = [] }: Props) => {
   const { id, title, cover, last_edited_time } = page;
 
   const href = `/content/${id}`;

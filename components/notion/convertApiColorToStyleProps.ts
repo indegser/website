@@ -11,5 +11,6 @@ export const convertApiColorToStyleProps = (color: AnnotationColorType) => {
     : `${color}11`;
   const colorKey = isBackground ? 'background' : 'color';
 
+  // @ts-ignore
   return { [colorKey]: colors[colorValue] };
 };

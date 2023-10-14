@@ -12,13 +12,16 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
-  const { data: series } = await seriesApi.getSeries(id);
-  const { name: title } = series;
+  const { data, error } = await seriesApi.getSeries(id);
+
+  if (error || !data) return {};
+
+  const { name: title } = data;
 
   return {
     title,
     openGraph: {
-      title,
+      title: title || '',
       type: 'article',
       siteName: 'Indegser',
       images: [],
@@ -34,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export const generateStaticParams = async () => {
   const { data } = await seriesApi.getAllSeries();
-  return data;
+  return data || [];
 };
 
 export default async function Page({ params: { id } }: Props) {

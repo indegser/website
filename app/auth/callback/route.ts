@@ -1,3 +1,4 @@
+import { Database } from '@/lib/supabase/types';
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { ORIGIN } from 'lib/constants';
 import { cookies } from 'next/headers';
@@ -9,14 +10,24 @@ export async function GET(request: NextRequest) {
   const code = request.nextUrl.searchParams.get('code');
 
   if (code) {
-    const supabase = createRouteHandlerClient({ cookies });
+    const supabase = createRouteHandlerClient<Database>({ cookies });
 
     try {
-      await supabase.auth.exchangeCodeForSession(code);
+      const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+      if (error) {
+        throw error;
+      }
+
+      await supabase.from('tokens').upsert({
+        token: data.session.provider_token!,
+        user_id: data.user.id,
+      });
     } catch (err) {
-      console.warn(err.message);
+      if (err instanceof Error) {
+        console.warn(err.message);
+      }
     }
   }
 
-  return NextResponse.redirect(`${ORIGIN}/login`);
+  return NextResponse.redirect(`${ORIGIN}/dashboard`);
 }

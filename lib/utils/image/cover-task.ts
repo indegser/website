@@ -19,7 +19,7 @@ export const coverTask = (pages: Array<PageType>) => {
     return notion.pages.update({
       page_id: page.id,
       cover: { external: { url: newCoverUrl.publicURL } },
-    });
+    }) as Promise<PageType>;
   });
 };
 

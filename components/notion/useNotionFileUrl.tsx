@@ -7,9 +7,14 @@ interface Props {
 export const useNotionFileUrl = () => {
   return {
     getUrl: ({ file }: Props) => {
-      const url = file.type === 'file' ? file.file.url : file.external.url;
+      if (!file) return null;
 
-      return url;
+      switch (file.type) {
+        case 'file':
+          return file.file.url;
+        case 'external':
+          return file.external.url;
+      }
     },
   };
 };

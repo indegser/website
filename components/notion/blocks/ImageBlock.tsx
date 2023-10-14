@@ -13,7 +13,7 @@ interface Props {
 
 const getMetadata = async (url: string, blockId: string) => {
   const result = await uploadImage(url);
-  if (!result) return url;
+  if (!result || !result.data) return url;
 
   if (url !== result.data.url) {
     await notion.blocks.update({

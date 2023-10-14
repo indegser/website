@@ -3,7 +3,7 @@
 import { useInView } from 'framer-motion';
 import Link from 'next/link';
 import { ElementRef, Fragment, useEffect, useRef } from 'react';
-import { SiTwitter, SiGithub } from 'react-icons/si';
+import { SiGithub, SiTwitter } from 'react-icons/si';
 
 import { amplitude } from 'lib/amplitude';
 
@@ -23,7 +23,7 @@ const snsList = [
 ];
 
 export const Sns = () => {
-  const ref = useRef<ElementRef<'div'>>();
+  const ref = useRef<ElementRef<'div'>>(null);
   const inView = useInView(ref, { once: true });
 
   const handleClick = (type: string) => {

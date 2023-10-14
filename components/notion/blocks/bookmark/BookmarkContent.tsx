@@ -1,3 +1,4 @@
+import { Tables } from '@/lib/supabase';
 import { linkPreview } from 'lib/utils/link-preview';
 
 interface Props {
@@ -6,10 +7,20 @@ interface Props {
 }
 
 export const BookmarkContent = async ({ url, isSkeleton }: Props) => {
-  const { title, description, image_url } = isSkeleton
-    ? { title: '...', description: '...', image_url: '' }
-    : await linkPreview(url);
+  let base: Partial<Tables<'link_previews'>> = {
+    title: '...',
+    description: '...',
+    image_url: '',
+  };
 
+  if (!isSkeleton) {
+    const result = await linkPreview(url);
+    if (result) {
+      base = result;
+    }
+  }
+
+  const { title, description, image_url } = base;
   return (
     <a href={url} title={title} target="_blank" rel="noreferrer">
       <div>
@@ -28,7 +39,7 @@ export const BookmarkContent = async ({ url, isSkeleton }: Props) => {
           <div
             className="basis-1/3 bg-gray-100 bg-cover bg-center"
             style={{
-              backgroundImage: image_url && `url(${image_url})`,
+              backgroundImage: image_url ? `url(${image_url})` : undefined,
             }}
           />
         </div>

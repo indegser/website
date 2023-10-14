@@ -24,7 +24,7 @@ const fetchContent = async (
   });
 
   if (response.has_more) {
-    const results = await fetchContent(response.next_cursor, auth);
+    const results = await fetchContent(response.next_cursor!, auth);
     return response.results.concat(results);
   }
 
@@ -43,7 +43,7 @@ const convertPages = async (pages: ContentType[], auth: string) => {
       const content = await fetchContent(id, auth);
 
       const status = page.properties.Status as PropertyType<'status'>;
-      const isDraft = status?.status.name !== 'Done';
+      const isDraft = status?.status?.name !== 'Done';
       const database_id =
         page.parent.type === 'database_id' ? page.parent.database_id : null;
 
@@ -79,7 +79,7 @@ const syncPages = async (pages: ContentType[], auth?: string) => {
       const content = await fetchContent(id, auth);
 
       const status = page.properties.Status as PropertyType<'status'>;
-      const isDraft = status.status.name !== 'Done';
+      const isDraft = status.status?.name !== 'Done';
       const database_id =
         page.parent.type === 'database_id' ? page.parent.database_id : null;
 
@@ -122,7 +122,7 @@ const syncPages = async (pages: ContentType[], auth?: string) => {
 
 const syncPage = async (id: string, auth?: string) => {
   const page = await notion.pages.retrieve({ auth, page_id: id });
-  return convertPages([page as ContentType], auth);
+  return convertPages([page as ContentType], auth!);
 };
 
 const syncDatabase = async (database_id: string, auth: string) => {

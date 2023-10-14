@@ -8,7 +8,12 @@ export const uploadImageToSupabase = async (
   folder: string,
 ) => {
   const response = await fetch(imageUrl);
+
+  if (!response.body) return false;
+
   const contentType = response.headers.get('Content-Type');
+  if (!contentType) return false;
+
   const extension = mime.extension(contentType);
 
   if (!extension) {

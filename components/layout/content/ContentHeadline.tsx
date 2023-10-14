@@ -14,7 +14,8 @@ export const preloadPage = (id: string) => {
 };
 
 export const ContentHeadline = async (props: Props) => {
-  const { cover, title, excerpt } = await pageApi.getPage(props.id);
+  const { data } = await pageApi.getPage(props.id);
+  const { cover, title, excerpt } = data!;
 
   return (
     <PageContent>

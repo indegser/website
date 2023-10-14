@@ -40,7 +40,7 @@ export const TocBlock = ({ blocks }: Props) => {
     {
       hasHeading1: false,
       hasHeading2: false,
-      result: [],
+      result: [] as number[],
     },
   );
 
@@ -62,6 +62,7 @@ export const TocBlock = ({ blocks }: Props) => {
               style={{ paddingLeft: 24 * depth }}
             >
               <div className="ml-1 border-b text-sm dark:border-b-gray-600">
+                {/* @ts-ignore */}
                 <RichText data={block[block.type].rich_text} />
               </div>
             </div>

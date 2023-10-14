@@ -16,17 +16,19 @@ const getAllSeries = cache(() => {
 });
 
 const getSeriesEpisodes = cache(async (id: string) => {
-  const ids = await supabase
+  const { data, error } = await supabase
     .from('episodes')
     .select('id:page_id')
     .eq('series_id', id);
+
+  if (error) return;
 
   return supabase
     .from('pages')
     .select('*, series(*)')
     .in(
       'id',
-      ids.data.map((item) => item.id),
+      data.map((item) => item.id),
     );
 });
 

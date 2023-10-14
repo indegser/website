@@ -25,7 +25,10 @@ interface Props {
 }
 
 export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
-  const { color } = block[block.type] as { color: AnnotationColorType };
+  // @ts-ignore
+  const { color } = block[block.type] as {
+    color: AnnotationColorType;
+  };
   const styleProps = convertApiColorToStyleProps(color);
 
   const renderContent = (block: BlockType) => {
@@ -144,6 +147,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
   //   );
   // }
 
+  // @ts-ignore
   if (!block.has_children && block[block.type].rich_text?.length === 0)
     return null;
 
@@ -163,7 +167,7 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
               block={childBlock}
               index={index}
               depth={depth + 1}
-              blocks={block.children}
+              blocks={block.children!}
             />
           ))}
         </PageContent>
