@@ -70,7 +70,7 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
                       return (
                         <span
                           key={index}
-                          className="whitespace-nowrap font-emoji text-base leading-none"
+                          className="font-emoji whitespace-nowrap text-base leading-none"
                         >
                           {child.props.children}
                         </span>
