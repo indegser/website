@@ -22,12 +22,12 @@ export default async function Page({
 }: {
   params: { database_id: string };
 }) {
-  const { data, error } = await getData(params.database_id);
+  const { data } = await getData(params.database_id);
 
   return (
     <PageContainer>
       <div className="grid grid-cols-1 gap-8 py-8 sm:grid-cols-3">
-        {data.map((result) => {
+        {data?.map((result) => {
           return <RichItem key={result.id} page={result} />;
         })}
       </div>

@@ -16,14 +16,16 @@ export default async function CreateDatabase() {
       data: { session },
     } = await supabase.auth.getSession();
 
-    const {
-      data: { token },
-    } = await supabase
+    if (!session) return;
+
+    const { data, error } = await supabase
       .from('tokens')
       .select('token')
       .eq('user_id', session.user.id)
       .single();
 
+    if (error) return;
+    const { token } = data;
     const id = String(formData.get('id'));
 
     try {

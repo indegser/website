@@ -3,7 +3,7 @@ import mime from 'mime-types';
 import { nanoid } from 'nanoid';
 
 import { CDN_ORIGIN } from 'lib/constants';
-import { supabase } from 'lib/supabase';
+import { Tables, supabase } from 'lib/supabase';
 
 export const uploadImage = async (src: string) => {
   const shouldCreate = !src.includes(CDN_ORIGIN);
@@ -21,7 +21,7 @@ export const uploadImage = async (src: string) => {
   const path = `images/${id}.${type}`;
 
   await supabase.storage.from('image').upload(path, buffer, {
-    contentType: mime.lookup(type) || undefined,
+    contentType: mime.lookup(type!) || undefined,
   });
 
   const { data } = supabase.storage.from('image').getPublicUrl(path);
@@ -30,14 +30,13 @@ export const uploadImage = async (src: string) => {
 
   return supabase
     .from('images')
-    .insert({
+    .upsert({
       id,
       width,
       height,
       type,
       url: data.publicUrl,
-    })
+    } as Tables<'images'>)
     .select()
-    .limit(1)
     .single();
 };

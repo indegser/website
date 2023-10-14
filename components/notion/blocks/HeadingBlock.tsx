@@ -13,6 +13,7 @@ export const HeadingBlock = ({ level, heading }: Props) => {
   const map = {
     1: 'text-xl',
     2: 'text-lg',
+    3: 'text-lg',
   };
   return (
     <div className={`mb-0 font-semibold ${map[level]}`} data-level={level}>

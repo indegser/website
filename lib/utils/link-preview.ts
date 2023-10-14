@@ -49,14 +49,14 @@ export const linkPreview = async (url: string) => {
 
   const { ogTitle, ogDescription, ogImage, favicon } = result.result as any;
 
-  let imageUrl: string = null;
+  let imageUrl: string = '';
   if (Array.isArray(ogImage)) {
     imageUrl = ogImage[0].url;
   } else if (ogImage) {
     imageUrl = ogImage.url;
   }
 
-  imageUrl = parseUrl(url, imageUrl);
+  imageUrl = parseUrl(url, imageUrl) || '';
 
   const openGraph = {
     id: url,
@@ -66,11 +66,7 @@ export const linkPreview = async (url: string) => {
     image_url: imageUrl,
   };
 
-  const { data } = await supabase
-    .from('link_previews')
-    .upsert(openGraph)
-    .select()
-    .maybeSingle();
+  await supabase.from('link_previews').upsert(openGraph).select().maybeSingle();
 
-  return data;
+  return openGraph;
 };

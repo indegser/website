@@ -5,6 +5,8 @@ interface Props {
 }
 
 export const NotionIcon = ({ icon }: Props) => {
+  if (!icon) return null;
+
   switch (icon.type) {
     case 'emoji':
       return <span>{icon.emoji}</span>;

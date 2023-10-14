@@ -1,14 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import { supabase } from 'lib/supabase';
 import CreateDatabase from './create-database';
-import { DatabaseCard } from './database-card';
+
+import { DatabaseTable } from './database-table';
 
 interface Props {
   userId: string;
@@ -27,20 +20,7 @@ export const Databases = async ({ userId }: Props) => {
   return (
     <div>
       <CreateDatabase />
-      <Card>
-        <CardHeader>
-          <CardTitle>Databases</CardTitle>
-          <CardDescription>{data.length}</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {data.map((database) => (
-            <DatabaseCard
-              key={database.id}
-              database={database.raw_data as DatabaseObjectResponse}
-            />
-          ))}
-        </CardContent>
-      </Card>
+      <DatabaseTable data={data} />
     </div>
   );
 };

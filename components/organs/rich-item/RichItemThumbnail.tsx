@@ -4,7 +4,7 @@ import { breakPoints } from 'components/breakPoints';
 
 interface Props {
   alt: string;
-  src?: string;
+  src?: string | null;
 }
 
 export const RichItemThumbnail = (props: Props) => {
