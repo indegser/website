@@ -1,17 +1,17 @@
 'use client';
 
-import { PageContainer } from '@/components/atoms/Container';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import { NotionLogoIcon } from '@radix-ui/react-icons';
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { AuthError } from '@supabase/supabase-js';
 
-export const LoginForm = () => {
+export const AuthenticateWithNotion = () => {
   const { toast } = useToast();
   const supabase = createClientComponentClient();
 
-  const handleClick = async () => {
+  const authenticate = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'notion',
@@ -35,10 +35,9 @@ export const LoginForm = () => {
   };
 
   return (
-    <PageContainer>
-      <div className="h-full w-full">
-        <Button onClick={handleClick}>Login with Notion</Button>
-      </div>
-    </PageContainer>
+    <Button onClick={authenticate}>
+      <NotionLogoIcon className="mr-2 h-4 w-4" />
+      Sign In with Notion
+    </Button>
   );
 };
