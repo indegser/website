@@ -12,6 +12,7 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 import { LogOut } from './log-out';
+import { SetTheme } from './set-theme';
 
 export const Auth = async () => {
   const cookieStore = cookies();
@@ -42,6 +43,7 @@ export const Auth = async () => {
         <DropdownMenuItem asChild>
           <Link href="/dashboard">Dashboard</Link>
         </DropdownMenuItem>
+        <SetTheme />
         <DropdownMenuSeparator />
         <LogOut />
       </DropdownMenuContent>
