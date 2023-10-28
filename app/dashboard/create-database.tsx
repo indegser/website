@@ -7,6 +7,11 @@ import { notion } from 'lib/notion';
 import { Database } from 'lib/supabase/types';
 import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
+import { z } from 'zod';
+
+const schema = z.object({
+  id: z.string(),
+});
 
 export default async function CreateDatabase() {
   const addDatabase = async (formData: FormData) => {

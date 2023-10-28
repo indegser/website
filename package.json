@@ -62,7 +62,8 @@
     "sharp": "^0.31.3",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
-    "type-fest": "^4.4.0"
+    "type-fest": "^4.4.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@styled/typescript-styled-plugin": "^1.0.0",
