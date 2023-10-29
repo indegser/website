@@ -27,11 +27,12 @@ export async function createDatabase(
   if (error) return { message: error.message };
 
   const { token } = data;
-  const id = String(formData.get('id'));
+  const url = String(formData.get('url'));
+  const { pathname } = new URL(url);
 
   try {
     const database = await notion.databases.retrieve({
-      database_id: id,
+      database_id: pathname,
       auth: token,
     });
 
@@ -48,6 +49,10 @@ export async function createDatabase(
     revalidatePath('/dashboard');
   } catch (err) {
     if (isNotionClientError(err)) {
+      /**
+       * validation_error
+       * object_not_found
+       */
       return { message: err.message };
     }
   }
