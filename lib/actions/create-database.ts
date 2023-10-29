@@ -29,10 +29,11 @@ export async function createDatabase(
   const { token } = data;
   const url = String(formData.get('url'));
   const { pathname } = new URL(url);
+  const databaseId = pathname.slice(1);
 
   try {
     const database = await notion.databases.retrieve({
-      database_id: pathname,
+      database_id: databaseId,
       auth: token,
     });
 

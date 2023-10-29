@@ -29,7 +29,7 @@ export default function CreateDatabase() {
           </div>
         </div>
         <div>
-          {state ? (
+          {state?.message ? (
             <Alert variant="destructive" className="mt-4">
               <ExclamationTriangleIcon className="h-4 w-4" />
               <AlertTitle>Heads up!</AlertTitle>
