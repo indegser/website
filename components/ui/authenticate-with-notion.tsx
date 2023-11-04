@@ -2,14 +2,13 @@
 
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import { supabase } from '@/lib/supabase';
 import { NotionLogoIcon } from '@radix-ui/react-icons';
 
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { AuthError } from '@supabase/supabase-js';
 
 export const AuthenticateWithNotion = () => {
   const { toast } = useToast();
-  const supabase = createClientComponentClient();
 
   const authenticate = async () => {
     try {

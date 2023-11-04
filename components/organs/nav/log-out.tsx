@@ -1,14 +1,12 @@
 'use client';
 import { DropdownMenuItem } from '@/components/ui/dropdown-menu';
 import { useToast } from '@/components/ui/use-toast';
-import { Database } from '@/lib/supabase';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { supabase } from '@/lib/supabase';
 import { useRouter } from 'next/navigation';
 
 export const LogOut = () => {
   const router = useRouter();
   const { toast } = useToast();
-  const supabase = createClientComponentClient<Database>();
 
   const handleClick = async () => {
     const { error } = await supabase.auth.signOut();

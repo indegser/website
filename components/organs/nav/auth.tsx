@@ -8,15 +8,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { cookies } from 'next/headers';
+
+import { createSupabase } from '@/lib/supabase';
 import Link from 'next/link';
 import { LogOut } from './log-out';
 import { SetTheme } from './set-theme';
 
 export const Auth = async () => {
-  const cookieStore = cookies();
-  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  const supabase = createSupabase();
 
   const { data, error } = await supabase.auth.getSession();
 

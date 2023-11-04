@@ -1,17 +1,15 @@
 'use server';
 
 import { isNotionClientError } from '@notionhq/client';
-import { createServerActionClient } from '@supabase/auth-helpers-nextjs';
 import { revalidatePath } from 'next/cache';
-import { cookies } from 'next/headers';
 import { notion } from '../notion';
-import { Database } from '../supabase';
+import { createSupabase } from '../supabase';
 
 export async function createDatabase(
   prevState: { message?: string } | undefined,
   formData: FormData,
 ) {
-  const supabase = createServerActionClient<Database>({ cookies });
+  const supabase = createSupabase();
   const {
     data: { session },
   } = await supabase.auth.getSession();

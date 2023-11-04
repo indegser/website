@@ -9,8 +9,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useToast } from '@/components/ui/use-toast';
-import { Database, Tables } from '@/lib/supabase';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { Tables, supabase } from '@/lib/supabase';
 
 interface Props {
   data: Tables<'databases'>['raw_data'];
@@ -19,7 +18,7 @@ interface Props {
 export const DatabaseMenu = ({ data }: Props) => {
   const { toast } = useToast();
   const handleDelete = async () => {
-    const { error } = await createClientComponentClient<Database>()
+    const { error } = await supabase
       .from('databases')
       .delete()
       .eq('id', data.id);
