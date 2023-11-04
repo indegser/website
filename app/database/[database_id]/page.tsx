@@ -1,6 +1,6 @@
 import { PageContainer } from '@/components/atoms/Container';
 import { RichItem } from '@/components/organs/rich-item/RichItem';
-import { createSupabase } from '@/lib/supabase';
+import { createSupabase } from '@/lib/supabase/create-supabase';
 import { syncApi } from 'lib/utils/sync';
 import { notFound } from 'next/navigation';
 

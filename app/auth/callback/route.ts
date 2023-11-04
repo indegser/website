@@ -1,4 +1,4 @@
-import { createSupabase } from '@/lib/supabase';
+import { createSupabase } from '@/lib/supabase/create-supabase';
 
 import { NextRequest, NextResponse } from 'next/server';
 

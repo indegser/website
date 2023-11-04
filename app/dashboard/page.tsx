@@ -1,4 +1,4 @@
-import { createSupabase } from '@/lib/supabase';
+import { createSupabase } from '@/lib/supabase/create-supabase';
 import { PageContainer } from 'components/atoms/Container';
 import { redirect } from 'next/navigation';
 import { Databases } from './databases';

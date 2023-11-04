@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 
+import { CookieOptions } from '@supabase/ssr';
 import type { NextRequest } from 'next/server';
-import { createSupabase } from './lib/supabase';
+import { createSupabase } from './lib/supabase/create-supabase';
 
 export async function middleware(request: NextRequest) {
   let response = NextResponse.next({

@@ -3,7 +3,7 @@
 import { isNotionClientError } from '@notionhq/client';
 import { revalidatePath } from 'next/cache';
 import { notion } from '../notion';
-import { createSupabase } from '../supabase';
+import { createSupabase } from '../supabase/create-supabase';
 
 export async function createDatabase(
   prevState: { message?: string } | undefined,
