@@ -38,6 +38,7 @@ export interface Database {
           {
             foreignKeyName: 'databases_user_id_fkey';
             columns: ['user_id'];
+            isOneToOne: false;
             referencedRelation: 'users';
             referencedColumns: ['id'];
           },
@@ -66,12 +67,14 @@ export interface Database {
           {
             foreignKeyName: 'episodes_page_id_fkey';
             columns: ['page_id'];
+            isOneToOne: false;
             referencedRelation: 'pages';
             referencedColumns: ['id'];
           },
           {
             foreignKeyName: 'episodes_series_id_fkey';
             columns: ['series_id'];
+            isOneToOne: false;
             referencedRelation: 'series';
             referencedColumns: ['id'];
           },
@@ -160,7 +163,7 @@ export interface Database {
           content: Json | null;
           cover: string | null;
           created_time: string;
-          database_id: string | null;
+          database_id: string;
           excerpt: string | null;
           id: string;
           is_draft: boolean | null;
@@ -171,7 +174,7 @@ export interface Database {
           content?: Json | null;
           cover?: string | null;
           created_time?: string;
-          database_id?: string | null;
+          database_id: string;
           excerpt?: string | null;
           id: string;
           is_draft?: boolean | null;
@@ -182,14 +185,22 @@ export interface Database {
           content?: Json | null;
           cover?: string | null;
           created_time?: string;
-          database_id?: string | null;
+          database_id?: string;
           excerpt?: string | null;
           id?: string;
           is_draft?: boolean | null;
           last_edited_time?: string;
           title?: string;
         };
-        Relationships: [];
+        Relationships: [
+          {
+            foreignKeyName: 'pages_database_id_fkey';
+            columns: ['database_id'];
+            isOneToOne: false;
+            referencedRelation: 'databases';
+            referencedColumns: ['id'];
+          },
+        ];
       };
       series: {
         Row: {
@@ -235,6 +246,7 @@ export interface Database {
           {
             foreignKeyName: 'tokens_user_id_fkey';
             columns: ['user_id'];
+            isOneToOne: true;
             referencedRelation: 'users';
             referencedColumns: ['id'];
           },

@@ -30,3 +30,5 @@ export const getURL = () => {
   url = url.charAt(url.length - 1) === '/' ? url.slice(0, -1) : url;
   return url;
 };
+
+export const INDEGSER_DATABASE_ID = '82649fda5ba84801a464d7ef2f7552b3';
