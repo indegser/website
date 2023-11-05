@@ -1,12 +1,10 @@
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
+import { createSupabase } from '@/lib/supabase/create-supabase';
 import { PageContainer } from 'components/atoms/Container';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { Databases } from './databases';
 
 export default async function Page() {
-  const cookieStore = cookies();
-  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  const supabase = createSupabase();
   const { data, error } = await supabase.auth.getSession();
 
   if (error || !data.session) {

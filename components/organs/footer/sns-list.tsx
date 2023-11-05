@@ -3,8 +3,8 @@
 import { useInView } from 'framer-motion';
 import Link from 'next/link';
 import { ElementRef, Fragment, useEffect, useRef } from 'react';
-import { SiGithub, SiTwitter } from 'react-icons/si';
 
+import { GitHubLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 import { amplitude } from 'lib/amplitude';
 
 const snsList = [
@@ -12,13 +12,13 @@ const snsList = [
     key: 'twitter',
     link: 'https://twitter.com/indegser',
     alt: 'Twitter @indegser',
-    icon: <SiTwitter />,
+    icon: <TwitterLogoIcon />,
   },
   {
     key: 'github',
     link: 'https://github.com/indegser',
     alt: 'Github',
-    icon: <SiGithub />,
+    icon: <GitHubLogoIcon />,
   },
 ];
 

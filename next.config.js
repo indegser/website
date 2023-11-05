@@ -10,10 +10,20 @@ const nextConfig = {
     VERCEL_ENV: process.env.VERCEL_ENV,
   },
   images: {
+    minimumCacheTTL: 31536000,
     formats: ['image/avif', 'image/webp'],
-    domains: [
-      'i.ytimg.com',
-      process.env.NEXT_PUBLIC_SUPABASE_URL?.replace('https://', '') || '',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname:
+          process.env.NEXT_PUBLIC_SUPABASE_URL?.replace('https://', '') || '',
+        port: '',
+      },
     ],
   },
 };

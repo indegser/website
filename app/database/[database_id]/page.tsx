@@ -1,13 +1,11 @@
 import { PageContainer } from '@/components/atoms/Container';
 import { RichItem } from '@/components/organs/rich-item/RichItem';
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
+import { createSupabase } from '@/lib/supabase/create-supabase';
 import { syncApi } from 'lib/utils/sync';
-import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 
 const getData = async (databaseId: string) => {
-  const cookieStore = cookies();
-  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  const supabase = createSupabase();
 
   const { data } = await supabase
     .from('tokens')
