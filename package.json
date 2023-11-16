@@ -58,7 +58,7 @@
     "react-wrap-balancer": "^1.1.0",
     "react-youtube": "^10.1.0",
     "server-only": "^0.0.1",
-    "sharp": "^0.31.3",
+    "sharp": "^0.32.6",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "type-fest": "^4.4.0"
