@@ -29,13 +29,20 @@ export const coverTask2 = async (page: PageType, auth?: string) => {
 
   if (!shouldReplace) return page;
 
-  const newCoverUrl = await uploadImageToSupabase(coverUrl, 'cover');
+  try {
+    const newCoverUrl = await uploadImageToSupabase(coverUrl, 'cover');
+    if (!newCoverUrl) throw new Error(`${coverUrl} is invalid image`);
+    console.log(newCoverUrl, 'COVER URL');
 
-  if (!newCoverUrl) return page;
-
-  return notion.pages.update({
-    auth,
-    page_id: page.id,
-    cover: { external: { url: newCoverUrl.publicURL } },
-  });
+    return notion.pages.update({
+      auth,
+      page_id: page.id,
+      cover: { external: { url: newCoverUrl.publicURL } },
+    });
+  } catch (err) {
+    if (err instanceof Error) {
+      console.error(err.message);
+    }
+    return page;
+  }
 };

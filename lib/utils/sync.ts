@@ -42,6 +42,7 @@ const convertPages = async (pages: ContentType[], auth?: string) => {
       }
 
       const page = (await coverTask2(raw, auth)) as PageType;
+
       const { id } = page;
 
       const title = notionUtils.getTitle(page);
@@ -82,11 +83,14 @@ const syncPage = async (id: string) => {
   return supabase.from('pages').upsert(pages).select();
 };
 
-const syncDatabase = async (database_id: string, auth?: string) => {
+const syncDatabase = async (
+  database_id: string,
+  auth: string = process.env.NOTION_KEY,
+) => {
   const response = await notion.databases.query({
     database_id,
     auth,
-    page_size: 100,
+    page_size: 1,
     sorts: [
       {
         timestamp: 'last_edited_time',
@@ -95,6 +99,7 @@ const syncDatabase = async (database_id: string, auth?: string) => {
     ],
   });
 
+  console.log('RESULTS', response.results.length);
   const pages = await convertPages(response.results as ContentType[], auth);
 
   return supabase.from('pages').upsert(pages).select();

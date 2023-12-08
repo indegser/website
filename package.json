@@ -4,7 +4,7 @@
   "license": "None",
   "version": "0.2.0",
   "engines": {
-    "node": "^18.0.0"
+    "node": "18.2.1"
   },
   "scripts": {
     "prepare": "husky install",
@@ -37,6 +37,7 @@
     "@supabase/supabase-js": "^2.38.4",
     "@vercel/analytics": "^1.0.1",
     "@vercel/edge-config": "^0.2.1",
+    "@vercel/speed-insights": "^1.0.1",
     "class-variance-authority": "^0.7.0",
     "client-only": "^0.0.1",
     "clsx": "^1.2.1",
@@ -67,7 +68,7 @@
     "@styled/typescript-styled-plugin": "^1.0.0",
     "@types/lodash-es": "^4.17.5",
     "@types/mime-types": "^2.1.1",
-    "@types/node": "^20.8.5",
+    "@types/node": "^20.10.4",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@types/react-syntax-highlighter": "^13.5.2",

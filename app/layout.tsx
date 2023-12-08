@@ -1,6 +1,7 @@
 import 'components/globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
@@ -43,7 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </Providers>
         <Analytics />
         <Toaster />
-        <div className="dark" />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 import mime from 'mime-types';
 import { nanoid } from 'nanoid';
 
-import { supabase } from 'lib/supabase';
+import { createSupabase } from '@/lib/supabase/create-supabase';
 
 export const uploadImageToSupabase = async (
   imageUrl: string,
@@ -23,12 +23,16 @@ export const uploadImageToSupabase = async (
   const id = nanoid();
   const path = `${folder}/${id}.${extension}`;
 
+  const supabase = createSupabase();
+
+  console.log('BEFORE UPLOAD');
   await supabase.storage.from('image').upload(path, response.body, {
     contentType,
   });
+  console.log('AFTER UPLOAD');
 
   const { data } = supabase.storage.from('image').getPublicUrl(path);
-
+  console.log('DATA', data);
   if (!data) return false;
 
   return {

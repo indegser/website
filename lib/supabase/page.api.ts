@@ -18,8 +18,7 @@ const queryPages = async ({
   limit = 100,
   database_id = INDEGSER_DATABASE_ID,
 }: QueryPagesProps = {}) => {
-  console.log('called!!!!');
-  syncApi.syncDatabase(database_id);
+  await syncApi.syncDatabase(database_id);
 
   let query = supabase
     .from('pages')
