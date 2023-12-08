@@ -50,6 +50,7 @@ export const SnsList = () => {
           <Link
             href={sns.link}
             title={sns.alt}
+            target="_blank"
             onClick={() => handleClick(sns.key)}
           >
             <div className="p-1 text-muted-foreground">{sns.icon}</div>
