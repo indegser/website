@@ -4,7 +4,8 @@
   "license": "None",
   "version": "0.2.0",
   "engines": {
-    "node": "18.2.1"
+    "node": "v18.12.1",
+    "pnpm": "8.11.0"
   },
   "scripts": {
     "prepare": "husky install",
@@ -40,6 +41,7 @@
     "@vercel/speed-insights": "^1.0.1",
     "class-variance-authority": "^0.7.0",
     "client-only": "^0.0.1",
+    "cloudinary": "^1.41.0",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.7",
     "encoding": "^0.1.13",

@@ -99,7 +99,6 @@ const syncDatabase = async (
     ],
   });
 
-  console.log('RESULTS', response.results.length);
   const pages = await convertPages(response.results as ContentType[], auth);
 
   return supabase.from('pages').upsert(pages).select();

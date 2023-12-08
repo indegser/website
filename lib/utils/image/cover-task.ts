@@ -4,6 +4,7 @@ import { uploadImageToSupabase } from './upload';
 import { CDN_ORIGIN } from 'lib/constants';
 import { notion } from 'lib/notion';
 import { PageType } from 'lib/supabase/notion.types';
+import { uploadImage } from './create-image';
 
 export const coverTask = (pages: Array<PageType>) => {
   return pages.map(async (page) => {
@@ -25,24 +26,17 @@ export const coverTask = (pages: Array<PageType>) => {
 
 export const coverTask2 = async (page: PageType, auth?: string) => {
   const coverUrl = notionUtils.getNotionFileUrl(page.cover);
-  const shouldReplace = coverUrl && !coverUrl.includes(CDN_ORIGIN);
+  if (!coverUrl) return page;
 
-  if (!shouldReplace) return page;
+  const newCoverUrl = await uploadImage(coverUrl, 'covers');
 
-  try {
-    const newCoverUrl = await uploadImageToSupabase(coverUrl, 'cover');
-    if (!newCoverUrl) throw new Error(`${coverUrl} is invalid image`);
-    console.log(newCoverUrl, 'COVER URL');
-
+  if (newCoverUrl !== coverUrl) {
     return notion.pages.update({
       auth,
       page_id: page.id,
-      cover: { external: { url: newCoverUrl.publicURL } },
+      cover: { external: { url: newCoverUrl } },
     });
-  } catch (err) {
-    if (err instanceof Error) {
-      console.error(err.message);
-    }
+  } else {
     return page;
   }
 };
