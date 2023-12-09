@@ -90,7 +90,7 @@ const syncDatabase = async (
   const response = await notion.databases.query({
     database_id,
     auth,
-    page_size: 1,
+    page_size: 50,
     sorts: [
       {
         timestamp: 'last_edited_time',
