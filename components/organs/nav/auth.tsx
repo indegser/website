@@ -1,3 +1,5 @@
+'use client';
+
 import { AuthenticateWithNotion } from '@/components/ui/authenticate-with-notion';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -9,21 +11,27 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-import { createServerSupabase } from '@/lib/supabase/create-supabase';
+import { supabase } from '@/lib/supabase';
+import { Session } from '@supabase/supabase-js';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { LogOut } from './log-out';
 import { SetTheme } from './set-theme';
 
-export const Auth = async () => {
-  const supabase = createServerSupabase();
+export const Auth = () => {
+  const [session, setSession] = useState<Session | null | undefined>(undefined);
 
-  const { data, error } = await supabase.auth.getSession();
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+  }, []);
 
-  if (error || !data.session) {
+  if (typeof session == 'undefined') return null;
+
+  if (!session) {
     return <AuthenticateWithNotion />;
   }
 
-  const { picture, email, name } = data.session.user.user_metadata;
+  const { picture, email, name } = session.user.user_metadata;
 
   return (
     <DropdownMenu>
