@@ -11,7 +11,7 @@ import { notionUtils } from './notion';
 import { notion } from 'lib/notion';
 import { Tables, supabase } from 'lib/supabase';
 import { ContentType, PageType, PropertyType } from 'lib/supabase/notion.types';
-import { createSupabase } from '../supabase/create-supabase';
+import { createServerSupabase } from '../supabase/create-supabase';
 
 const fetchContent = async (
   id: string,
@@ -74,7 +74,7 @@ const convertPages = async (pages: ContentType[], auth?: string) => {
 };
 
 const syncPage = async (id: string) => {
-  const supabase = createSupabase();
+  const supabase = createServerSupabase();
 
   const { data } = await supabase.from('tokens').select().maybeSingle();
   const auth = data?.token;

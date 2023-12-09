@@ -9,13 +9,13 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-import { createSupabase } from '@/lib/supabase/create-supabase';
+import { createServerSupabase } from '@/lib/supabase/create-supabase';
 import Link from 'next/link';
 import { LogOut } from './log-out';
 import { SetTheme } from './set-theme';
 
 export const Auth = async () => {
-  const supabase = createSupabase();
+  const supabase = createServerSupabase();
 
   const { data, error } = await supabase.auth.getSession();
 

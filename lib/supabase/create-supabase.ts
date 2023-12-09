@@ -11,7 +11,7 @@ import { cookies as nextCookies } from 'next/headers';
 import { supabaseAnonKey, supabaseUrl } from '.';
 import { Database } from './types';
 
-export const createSupabase = (cookies?: CookieMethods) => {
+export const createServerSupabase = (cookies?: CookieMethods) => {
   if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
     return createClient(supabaseUrl, supabaseAnonKey!);
   }

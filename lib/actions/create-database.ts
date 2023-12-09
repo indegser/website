@@ -3,13 +3,13 @@
 import { isNotionClientError } from '@notionhq/client';
 import { revalidatePath } from 'next/cache';
 import { notion } from '../notion';
-import { createSupabase } from '../supabase/create-supabase';
+import { createServerSupabase } from '../supabase/create-supabase';
 
 export async function createDatabase(
   prevState: { message?: string } | undefined,
   formData: FormData,
 ) {
-  const supabase = createSupabase();
+  const supabase = createServerSupabase();
   const {
     data: { session },
   } = await supabase.auth.getSession();

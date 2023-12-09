@@ -1,10 +1,10 @@
-import { createSupabase } from '@/lib/supabase/create-supabase';
+import { createServerSupabase } from '@/lib/supabase/create-supabase';
 import { PageContainer } from 'components/atoms/Container';
 import { redirect } from 'next/navigation';
 import { Databases } from './databases';
 
 export default async function Page() {
-  const supabase = createSupabase();
+  const supabase = createServerSupabase();
   const { data, error } = await supabase.auth.getSession();
 
   if (error || !data.session) {
