@@ -1,4 +1,8 @@
-import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import {
+  BlockObjectResponse,
+  DatabaseObjectResponse,
+  PartialBlockObjectResponse,
+} from '@notionhq/client/build/src/api-endpoints';
 import type { MergeDeep } from 'type-fest';
 import type { Database as DatabaseGenerated } from './generated-types';
 
@@ -8,6 +12,12 @@ type X = {
       databases: {
         Row: {
           raw_data: DatabaseObjectResponse;
+        };
+      };
+      pages: {
+        Row: {
+          content: (PartialBlockObjectResponse | BlockObjectResponse)[];
+          is_draft: boolean;
         };
       };
     };

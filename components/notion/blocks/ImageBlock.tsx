@@ -13,20 +13,19 @@ interface Props {
 
 const getMetadata = async (url: string, blockId: string) => {
   const result = await uploadImage(url);
-  if (!result || !result.data) return url;
 
-  if (url !== result.data.url) {
+  if (url !== result) {
     await notion.blocks.update({
       block_id: blockId,
       image: {
         external: {
-          url: result.data.url,
+          url: result,
         },
       },
     });
   }
 
-  return result.data;
+  return result;
 };
 
 export const ImageBlock = async ({ block }: Props) => {
@@ -56,7 +55,7 @@ export const ImageBlock = async ({ block }: Props) => {
             style={{ aspectRatio: `${width} / ${height}` }}
           >
             <Image
-              src={metadata.url}
+              src={metadata}
               alt=""
               fill
               className="block object-cover md:rounded-md"

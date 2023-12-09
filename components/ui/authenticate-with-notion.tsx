@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import { amplitude } from '@/lib/amplitude';
 import { supabase } from '@/lib/supabase';
 import { NotionLogoIcon } from '@radix-ui/react-icons';
 
@@ -11,6 +12,8 @@ export const AuthenticateWithNotion = () => {
   const { toast } = useToast();
 
   const authenticate = async () => {
+    amplitude.track('auth_start');
+
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'notion',
