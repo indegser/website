@@ -3,11 +3,19 @@ import {
   CookieOptions,
   createServerClient,
 } from '@supabase/ssr';
+
+import { createClient } from '@supabase/supabase-js';
+import { PHASE_PRODUCTION_BUILD } from 'next/constants';
+
 import { cookies as nextCookies } from 'next/headers';
 import { supabaseAnonKey, supabaseUrl } from '.';
 import { Database } from './types';
 
 export const createSupabase = (cookies?: CookieMethods) => {
+  if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
+    return createClient(supabaseUrl, supabaseAnonKey!);
+  }
+
   const cookieStore = nextCookies();
 
   return createServerClient<Database>(supabaseUrl, supabaseAnonKey!, {
