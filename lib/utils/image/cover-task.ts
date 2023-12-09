@@ -4,7 +4,7 @@ import { notion } from 'lib/notion';
 import { PageType } from 'lib/supabase/notion.types';
 import { uploadImage } from './create-image';
 
-export const coverTask2 = async (page: PageType, auth?: string) => {
+export const replaceNotionCover = async (page: PageType, auth?: string) => {
   const coverUrl = notionUtils.getNotionFileUrl(page.cover);
   if (!coverUrl) return page;
 

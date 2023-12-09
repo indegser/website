@@ -11,6 +11,7 @@ const nextConfig = {
   },
   images: {
     minimumCacheTTL: 31536000,
+    loaderFile: './components/image-loader.ts',
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {

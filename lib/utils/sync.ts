@@ -5,7 +5,7 @@ import {
   PartialBlockObjectResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 
-import { coverTask2 } from './image/cover-task';
+import { replaceNotionCover } from './image/cover-task';
 import { notionUtils } from './notion';
 
 import { notion } from 'lib/notion';
@@ -41,7 +41,7 @@ const convertPages = async (pages: ContentType[], auth?: string) => {
         return;
       }
 
-      const page = (await coverTask2(raw, auth)) as PageType;
+      const page = (await replaceNotionCover(raw, auth)) as PageType;
 
       const { id } = page;
 
