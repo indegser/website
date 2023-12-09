@@ -15,7 +15,7 @@ type QueryPagesProps = {
 };
 
 const queryPages = async ({
-  limit = 100,
+  limit = 2,
   database_id = INDEGSER_DATABASE_ID,
 }: QueryPagesProps = {}) => {
   console.info('HELLO');
