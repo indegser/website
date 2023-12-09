@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { CookieOptions } from '@supabase/ssr';
 import type { NextRequest } from 'next/server';
-import { createSupabase } from './lib/supabase/create-supabase';
+import { createServerSupabase } from './lib/supabase/create-supabase';
 
 export async function middleware(request: NextRequest) {
   let response = NextResponse.next({
@@ -11,7 +11,7 @@ export async function middleware(request: NextRequest) {
     },
   });
 
-  const supabase = createSupabase({
+  const supabase = createServerSupabase({
     get(name: string) {
       return request.cookies.get(name)?.value;
     },

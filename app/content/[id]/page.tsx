@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export const generateStaticParams = async () => {
   const { data, error } = await pageApi.queryPages({
-    limit: isProduction ? 20 : 1,
+    limit: isProduction ? 10 : 1,
   });
 
   if (error) return [];
