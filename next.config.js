@@ -20,6 +20,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
         hostname:
           process.env.NEXT_PUBLIC_SUPABASE_URL?.replace('https://', '') || '',
         port: '',

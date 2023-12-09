@@ -4,9 +4,9 @@
   "editor.wordWrap": "on",
   "editor.scrollBeyondLastLine": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true,
-    "source.sortMembers": true
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
   },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
