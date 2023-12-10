@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import { isProduction } from '@/lib/constants';
 import { preloadPage } from 'components/layout/content/ContentHeadline';
 import { ContentPage } from 'components/layout/content/ContentPage';
 import { pageApi } from 'lib/supabase/page.api';
@@ -41,8 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export const generateStaticParams = async () => {
   const { data, error } = await pageApi.queryPages({
-    // limit: isProduction ? 10 : 1,
-    limit: 1,
+    limit: isProduction ? 10 : 1,
   });
 
   if (error) return [];
