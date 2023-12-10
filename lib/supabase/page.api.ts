@@ -5,7 +5,7 @@ import { supabase } from 'lib/supabase';
 import { syncApi } from '../utils/sync';
 
 const getPage = async (page_id: string) => {
-  syncApi.syncPage(page_id);
+  await syncApi.syncPage(page_id);
   return supabase.from('pages').select().eq('id', page_id).single();
 };
 
