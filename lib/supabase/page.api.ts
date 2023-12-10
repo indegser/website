@@ -22,7 +22,7 @@ const queryPages = async ({
 
   let query = supabase
     .from('pages')
-    .select('*, series(*)')
+    .select()
     .eq('database_id', database_id)
     .order('created_time', { ascending: false })
     .limit(limit);

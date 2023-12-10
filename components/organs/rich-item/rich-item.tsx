@@ -1,17 +1,16 @@
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
-import { RichItemThumbnail } from './RichItemThumbnail';
-import { Series } from './Series';
+import { Series } from './rich-item-series';
+import { RichItemThumbnail } from './rich-item-thumbnail';
 
-import { PageType, SeriesType } from 'lib/supabase';
+import { PageType } from 'lib/supabase';
 
 interface Props {
   page: PageType;
-  series?: SeriesType[];
 }
 
-export const RichItem = ({ page, series = [] }: Props) => {
+export const RichItem = ({ page }: Props) => {
   const { id, title, cover, excerpt } = page;
   const href = `/content/${id}`;
 
@@ -33,7 +32,7 @@ export const RichItem = ({ page, series = [] }: Props) => {
             </div>
           </div>
         </Link>
-        <Series series={series} />
+        <Series series={[]} />
       </div>
     </section>
   );
