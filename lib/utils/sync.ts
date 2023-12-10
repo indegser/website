@@ -11,7 +11,6 @@ import { notionUtils } from './notion';
 import { notion } from 'lib/notion';
 import { Tables, supabase } from 'lib/supabase';
 import { ContentType, PageType, PropertyType } from 'lib/supabase/notion.types';
-import { createServerSupabase } from '../supabase/create-supabase';
 
 const fetchContent = async (
   id: string,
@@ -73,11 +72,31 @@ const convertPages = async (pages: ContentType[], auth?: string) => {
   return results.filter((page): page is Tables<'pages'> => true);
 };
 
-const syncPage = async (id: string) => {
-  const supabase = createServerSupabase();
+const getAuthFromUserId = async (userId: string) => {
+  const { data, error } = await supabase
+    .from('tokens')
+    .select('token')
+    .eq('user_id', userId)
+    .single();
 
-  const { data } = await supabase.from('tokens').select().maybeSingle();
-  const auth = data?.token;
+  if (error) throw error;
+  return data.token;
+};
+
+const syncPage = async (id: string) => {
+  const { data } = await supabase
+    .from('pages')
+    .select('last_edited_time, author:databases(user_id)')
+    .eq('id', id)
+    .maybeSingle();
+
+  if (!data) return;
+  const userId = data.author?.user_id;
+
+  if (!userId) return;
+
+  const auth = await getAuthFromUserId(userId);
+
   const page = await notion.pages.retrieve({ auth, page_id: id });
   const pages = await convertPages([page as ContentType], auth!);
   return supabase.from('pages').upsert(pages).select();
