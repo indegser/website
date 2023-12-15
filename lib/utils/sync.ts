@@ -106,21 +106,46 @@ const syncDatabase = async (
   database_id: string,
   auth: string = process.env.NOTION_KEY,
 ) => {
-  const response = await notion.databases.query({
+  const { data, error } = await supabase
+    .from('databases')
+    .select()
+    .eq('id', database_id)
+    .single();
+
+  if (error) {
+    throw error;
+  }
+
+  const lastSyncedAt = data.last_synced_at;
+
+  const { results } = await notion.databases.query({
     database_id,
     auth,
-    page_size: 50,
+    page_size: 30,
     sorts: [
       {
         timestamp: 'last_edited_time',
         direction: 'descending',
       },
     ],
+    filter: lastSyncedAt
+      ? {
+          timestamp: 'last_edited_time',
+          last_edited_time: {
+            on_or_after: lastSyncedAt!,
+          },
+        }
+      : undefined,
   });
 
-  const pages = await convertPages(response.results as ContentType[], auth);
+  if (results.length === 0) return;
 
-  return supabase.from('pages').upsert(pages).select();
+  const pages = await convertPages(results as ContentType[], auth);
+  await supabase.from('pages').upsert(pages).select();
+  await supabase
+    .from('databases')
+    .update({ last_synced_at: new Date().toISOString() })
+    .eq('id', database_id);
 };
 
 export const syncApi = {
