@@ -8,8 +8,10 @@ export default function imageLoader({ src, width, quality }: ImageLoaderProps) {
   const index = fragments.findIndex((value) => /v\d+/.test(value));
   const params = [
     'f_auto',
-    'c_limit',
+    'c_fill',
     'w_' + width,
+    'ar_16:9',
+    'g_auto',
     'q_' + (quality || 'auto'),
   ];
 

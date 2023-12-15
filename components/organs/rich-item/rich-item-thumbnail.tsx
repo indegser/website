@@ -19,8 +19,7 @@ export const RichItemThumbnail = (props: Props) => {
           alt={alt}
           fill
           style={{ objectFit: 'cover' }}
-          sizes={`(max-width: ${breakPoints.sm}px) 100vw,
-                33vw"`}
+          sizes={`(max-width: ${breakPoints.sm}px) 100vw, 33vw`}
         />
       ) : (
         <div className="h-full w-full" />
