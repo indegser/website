@@ -1,9 +1,8 @@
-import { Metadata } from 'next';
-
+import { ContentPage } from '@/components/layout/content/content-page';
 import { isProduction } from '@/lib/constants';
-import { preloadPage } from 'components/layout/content/ContentHeadline';
-import { ContentPage } from 'components/layout/content/ContentPage';
 import { pageApi } from 'lib/supabase/page.api';
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export const revalidate = 60;
 
@@ -14,30 +13,34 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
 
-  const { data, error } = await pageApi.getPage(id);
-  if (error) {
+  try {
+    const { data, error } = await pageApi.getPage(id);
+    if (error) {
+      return {};
+    }
+
+    const { title, excerpt, cover } = data;
+
+    return {
+      title,
+      description: excerpt,
+      openGraph: {
+        title,
+        description: excerpt || '',
+        type: 'article',
+        siteName: 'Indegser',
+        images: cover ? [cover] : [],
+      },
+      alternates: {
+        canonical: `/content/${id}`,
+      },
+      twitter: {
+        card: 'summary_large_image',
+      },
+    };
+  } catch (err) {
     return {};
   }
-
-  const { title, excerpt, cover } = data;
-
-  return {
-    title,
-    description: excerpt,
-    openGraph: {
-      title,
-      description: excerpt || '',
-      type: 'article',
-      siteName: 'Indegser',
-      images: cover ? [cover] : [],
-    },
-    alternates: {
-      canonical: `/content/${id}`,
-    },
-    twitter: {
-      card: 'summary_large_image',
-    },
-  };
 }
 
 export const generateStaticParams = async () => {
@@ -53,7 +56,11 @@ export const generateStaticParams = async () => {
 };
 
 export default async function Page({ params: { id } }: Props) {
-  preloadPage(id);
+  try {
+    await pageApi.getPage(id);
+  } catch (err) {
+    notFound();
+  }
 
   return <ContentPage id={id} />;
 }

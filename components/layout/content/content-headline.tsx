@@ -1,17 +1,13 @@
-import { ContentBlur } from './ContentBlur';
-import { ContentCover } from './ContentCover';
+import { ContentBlur } from './content-blur';
+import { ContentCover } from './content-cover';
 
-import { Balancer } from 'components/Balancer';
 import { PageContent } from 'components/atoms/Container';
+import { Balancer } from 'components/Balancer';
 import { pageApi } from 'lib/supabase/page.api';
 
 interface Props {
   id: string;
 }
-
-export const preloadPage = (id: string) => {
-  void pageApi.getPage(id);
-};
 
 export const ContentHeadline = async (props: Props) => {
   const { data } = await pageApi.getPage(props.id);

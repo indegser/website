@@ -2,12 +2,13 @@ import 'server-only';
 
 import { INDEGSER_DATABASE_ID, isProduction } from 'lib/constants';
 import { supabase } from 'lib/supabase';
+import { cache } from 'react';
 import { syncApi } from '../utils/sync';
 
-const getPage = async (page_id: string) => {
+const getPage = cache(async (page_id: string) => {
   await syncApi.syncPage(page_id);
   return supabase.from('pages').select().eq('id', page_id).single();
-};
+});
 
 type QueryPagesProps = {
   database_id?: string;

@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 
-import { ContentHeadline } from './ContentHeadline';
-import { ContentRouter } from './ContentRouter';
+import { ContentHeadline } from './content-headline';
+import { ContentRouter } from './content-router';
 import { Feedback } from './feedback/Feedback';
 
 import { PageContainer } from 'components/atoms/Container';
