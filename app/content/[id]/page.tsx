@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
+import { ContentPage } from '@/components/layout/content/content-page';
 import { isProduction } from '@/lib/constants';
-import { preloadPage } from 'components/layout/content/ContentHeadline';
-import { ContentPage } from 'components/layout/content/ContentPage';
 import { pageApi } from 'lib/supabase/page.api';
+import { notFound } from 'next/navigation';
 
 export const revalidate = 60;
 
@@ -53,7 +53,11 @@ export const generateStaticParams = async () => {
 };
 
 export default async function Page({ params: { id } }: Props) {
-  preloadPage(id);
+  try {
+    await pageApi.getPage(id);
+  } catch (err) {
+    notFound();
+  }
 
   return <ContentPage id={id} />;
 }
