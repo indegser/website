@@ -88,7 +88,8 @@ const syncPage = async (id: string) => {
     .from('pages')
     .select('last_edited_time, author:databases(user_id)')
     .eq('id', id)
-    .maybeSingle();
+    .single()
+    .throwOnError();
 
   if (!data) return;
   const userId = data.author?.user_id;
@@ -97,9 +98,14 @@ const syncPage = async (id: string) => {
 
   const auth = await getAuthFromUserId(userId);
 
-  const page = await notion.pages.retrieve({ auth, page_id: id });
-  const pages = await convertPages([page as ContentType], auth!);
-  return supabase.from('pages').upsert(pages).select();
+  try {
+    const page = await notion.pages.retrieve({ auth, page_id: id });
+    const pages = await convertPages([page as ContentType], auth!);
+    return supabase.from('pages').upsert(pages).select();
+  } catch (err) {
+    await supabase.from('pages').delete().eq('id', id);
+    throw err;
+  }
 };
 
 const syncDatabase = async (
