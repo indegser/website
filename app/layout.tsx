@@ -7,8 +7,6 @@ import { ReactNode } from 'react';
 
 import { Providers } from './providers';
 
-import { Footer } from '@/components/organs/footer';
-import { Nav } from '@/components/organs/nav';
 import { Toaster } from '@/components/ui/toaster';
 import { jetBrainsMonoFont, pretendardFont } from 'components/theme';
 import { getURL } from 'lib/constants';
@@ -38,9 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <Nav />
           <main className="min-h-screen w-full">{children}</main>
-          <Footer />
         </Providers>
         <Analytics />
         <Toaster />

@@ -8,7 +8,7 @@ export const Launchings = () => {
       <Title>발매 예정</Title>
       <List>
         {list.map((item) => {
-          return <Launching key={item}>{item}</Launching>;
+          return <Launching key={item.toString()} />;
         })}
       </List>
     </Container>
