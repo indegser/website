@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:두 번 할인받을 수 있어요\n\n룬느의 주얼리들을 5% 쿠폰과 중복 적용되는 10% 쿠폰까지 적용 가능해요
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16322
 DTSTART:20231226T010000Z
-SUMMARY:두 번 할인받을 수 있어요
-UID:23de9de0-640c-4cc7-9415-379bf4d71450@23de.org
+SUMMARY:[29CM] 브랜드 세일 - 룬느
+UID:844c976e-44a6-46c5-ace6-0c685650c724@844c.org
 END:VEVENT
 END:VCALENDAR

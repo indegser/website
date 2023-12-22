@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:고품질의 라운지웨어\n\n예술가들의 삶에서 영감을 받은 슬리피존스의 파자마 상품들을 만나보세요.
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16073
 DTSTART:20231226T010000Z
-SUMMARY:고품질의 라운지웨어
-UID:7edcf4e4-4391-4ee1-b72f-b9a06e2f807a@7edc.org
+SUMMARY:[29CM] 브랜드 세일 - 슬리피존스
+UID:eb27ec16-8a4b-4dfc-876d-6e78994b57a5@eb27.org
 END:VEVENT
 END:VCALENDAR

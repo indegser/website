@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:기다리던 시즌오프\n\n비뮤즈맨션의 시즌오프 소식을 전해요. 지금 사랑받고 있는 상품과 함께 올해 마지막을 빛내보세요.
 DTEND:20231229T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16276
 DTSTART:20231223T010000Z
-SUMMARY:기다리던 시즌오프
-UID:098dfeae-1bd9-4f7d-bca2-071c0cd988d9@098d.org
+SUMMARY:[29CM] 브랜드 세일 - 비뮤즈 맨션
+UID:d251d1a4-aa03-494e-a490-f2580488c75d@d251.org
 END:VEVENT
 END:VCALENDAR

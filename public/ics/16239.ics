@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:가장 사랑받은 아이템\n\n일상에서 경험할 수 있는 요소를 녹여내 변하지 않는 가치를 추구하는 브랜드 로우타이드의 베스트 아이템을 소개합니다.
 DTEND:20240103T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16239
 DTSTART:20231228T010000Z
-SUMMARY:가장 사랑받은 아이템
-UID:bfc6e6f4-e2ed-4e64-9378-5f2800b1298b@bfc6.org
+SUMMARY:[29CM] 브랜드 세일 - 로우타이드
+UID:7ff136fb-74f5-425f-9a42-df02ab7c3c69@7ff1.org
 END:VEVENT
 END:VCALENDAR

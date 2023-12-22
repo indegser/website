@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:새해를 함께할 가방\n\n새로운 해를 함께할 로우로우의 가방을 제안합니다. 매일 함께 하고 싶은 데일리 가방을 경험해 보세요.
 DTEND:20240108T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16364
 DTSTART:20231226T010000Z
-SUMMARY:새해를 함께할 가방
-UID:a6c53882-2d37-4b9c-9b03-da64c8e2e840@a6c5.org
+SUMMARY:[29CM] 브랜드 세일 - 로우로우
+UID:6670fb8b-5c1d-4d64-ba16-490fd17bb933@6670.org
 END:VEVENT
 END:VCALENDAR

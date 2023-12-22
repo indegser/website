@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:조이그라이슨\n\n조이그라이슨
 DTEND:20240108T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16393
 DTSTART:20240103T010000Z
-SUMMARY:조이그라이슨
-UID:88f24ac5-d622-4b82-aaf1-eb11306e9c30@88f2.org
+SUMMARY:[29CM] 브랜드 세일 - 조이그라이슨
+UID:3524bbd1-88b2-4bb0-b8ec-1eee22fb041f@3524.org
 END:VEVENT
 END:VCALENDAR

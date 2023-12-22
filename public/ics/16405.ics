@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:내추럴하고 사랑스러운 감성\n\n편안한 일상에 사랑스러운 감성의 컬러를 담은 어랜만의 무드를 최대 50%혜택과 함께 만나보세요.
 DTEND:20231228T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16405
 DTSTART:20231224T010000Z
-SUMMARY:내추럴하고 사랑스러운 감성
-UID:1932cbc7-9100-437d-baf1-fbbf6477152e@1932.org
+SUMMARY:[29CM] 브랜드 세일 - 어랜
+UID:c4ba3def-178c-4864-9ca4-8c3a6f9dec45@c4ba.org
 END:VEVENT
 END:VCALENDAR

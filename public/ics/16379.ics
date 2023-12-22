@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:100년 전통의 글라스 웨어\n\n1910년에 설립되어 일본 호텔 및 레스토랑에서 사랑받고 있는 글라스 웨어 '기무라글라스'를 경험해 보세요.
 DTEND:20240114T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16379
 DTSTART:20231231T010000Z
-SUMMARY:100년 전통의 글라스 웨어
-UID:96047a42-66b1-4e02-8594-46c866f50df6@9604.org
+SUMMARY:[29CM] 브랜드 세일 - 기무라글라스
+UID:3db06491-b562-49a0-9e90-6f6063208906@3db0.org
 END:VEVENT
 END:VCALENDAR

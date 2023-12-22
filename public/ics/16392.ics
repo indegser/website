@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:신는 순간 포근한 겨울 신발\n\n편안함과 따듯함\, 스타일까지 함께 담은 노스페이스의 겨울 부티 부츠와 패딩 뮬을 만나보세요. 신는 순간 포근한 착용감에 외출이 즐거워져요. 행사기간 사은품 이벤트도 진행중이니 지금 바로 만나요.
 DTEND:20240116T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16392
 DTSTART:20240103T010000Z
-SUMMARY:신는 순간 포근한 겨울 신발
-UID:9f5b940a-98ab-4b10-b9d3-76e6dfe0e4dd@9f5b.org
+SUMMARY:[29CM] 브랜드 세일 - 노스페이스
+UID:ab049adc-6e42-47a1-bbe8-471d2fa9e770@ab04.org
 END:VEVENT
 END:VCALENDAR

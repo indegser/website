@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:유명 인플루언서들이 착용한\n\n유하님\, 수미님 등 인플루언서들의 르베이스먼트 스타일링을 소개합니다. 홀리데이와 어울리는 아이템부터 한파에 꼭 필요한 방한 아이템까지 다양하게 준비했어요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16345
 DTSTART:20231225T010000Z
-SUMMARY:유명 인플루언서들이 착용한
-UID:edb0b260-bdbe-4288-9e98-b4e4baf324dd@edb0.org
+SUMMARY:[29CM] 브랜드 세일 - 르베이스먼트
+UID:17839ce7-3fa5-491c-9fe7-d57024f24029@1783.org
 END:VEVENT
 END:VCALENDAR

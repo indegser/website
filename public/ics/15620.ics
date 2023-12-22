@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:감각적이고 포근한 가방\n\n편하게 손이 가는 제이마크뉴욕의 베스트 가방 단독 특가 소식을 전합니다.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15620
 DTSTART:20231225T010000Z
-SUMMARY:감각적이고 포근한 가방
-UID:b006ed00-4c61-448a-beeb-2717d9242ff0@b006.org
+SUMMARY:[29CM] 브랜드 세일 - 제이마크뉴욕
+UID:0d1b3afb-e9f4-4f28-a759-f0be708efe19@0d1b.org
 END:VEVENT
 END:VCALENDAR

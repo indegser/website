@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:일상 속 작은 포인트\n\n쉽게 접할 수 있는 물건들에 소소한 행복을 전하는 '올데이앤드'를 소개합니다.
 DTEND:20240115T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16377
 DTSTART:20240105T010000Z
-SUMMARY:일상 속 작은 포인트
-UID:69ca9c4a-1880-41c2-84cf-29ff2376b965@69ca.org
+SUMMARY:[29CM] 신규 입점 - 올데이앤드
+UID:f3233a16-95ae-4865-9ad6-66dae71d38b7@f323.org
 END:VEVENT
 END:VCALENDAR

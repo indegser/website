@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:전문가의 손길을 담은 헤어 케어\n\n살롱 전문가의 노하우를 담은 차홍의 단독 할인 소식입니다. 오직 일주일간의 최대 20% 혜택을 놓치지 마세요.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16260
 DTSTART:20240101T010000Z
-SUMMARY:전문가의 손길을 담은 헤어 케어
-UID:b88ae818-f665-4d51-99e1-7330b173613e@b88a.org
+SUMMARY:[29CM] 브랜드 세일 - 차홍
+UID:499fdd32-61f4-4be9-9f68-2e78662d2398@499f.org
 END:VEVENT
 END:VCALENDAR

@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:헬로선라이즈 윈터 세일\n\n헬로선라이즈 윈터 세일
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16136
 DTSTART:20231225T010000Z
-SUMMARY:헬로선라이즈 윈터 세일
-UID:f5cbb50d-3dc0-409e-a3c2-0bb7243c43d5@f5cb.org
+SUMMARY:[29CM] 브랜드 세일 - 헬로선라이즈
+UID:2014db45-33b3-4bd0-ba8e-8df91a37677b@2014.org
 END:VEVENT
 END:VCALENDAR

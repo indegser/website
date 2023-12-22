@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:연말 클리어런스\n\n마론에디션에서 준비한 23년도 마지막 클리어런스 세일을 29CM 단독으로 만나보세요.
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16250
 DTSTART:20231225T010000Z
-SUMMARY:연말 클리어런스
-UID:2902385d-84cd-407e-88ca-87bc2596d861@2902.org
+SUMMARY:[29CM] 브랜드 세일 - 마론에디션
+UID:fa4fe21d-ceb6-44c7-9de9-c8a1ee63ad80@fa4f.org
 END:VEVENT
 END:VCALENDAR

@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:기분좋은 72시간\n\n당신을 위한 특별한 혜택 72시간 이벤트를 시작합니다. 모든 상품을 60% 할인된 특별가로 만나보실 수 있습니다. 지금 최고의 기분을 경험하세요! 2023.12.26 ~ 2023.12.28
 DTEND:20231228T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16340
 DTSTART:20231226T010000Z
-SUMMARY:기분좋은 72시간
-UID:4677d512-8792-464c-be7a-a2ba6f6b166e@4677.org
+SUMMARY:[29CM] 브랜드 세일 - 엄브로
+UID:20f31f35-378c-43d4-9b9f-9984f0b7dfa9@20f3.org
 END:VEVENT
 END:VCALENDAR

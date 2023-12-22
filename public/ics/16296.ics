@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:시대에 구애받지 않는 스타일\n\n가죽이라는 소재에 대한 이해를 기반으로 하여 레더 가먼츠를 디자인하는 도프제이슨의 세일소식을 전해요.
 DTEND:20240109T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16296
 DTSTART:20231227T010000Z
-SUMMARY:시대에 구애받지 않는 스타일
-UID:93d655f5-a5dc-4f95-9dc9-fe91b5759dae@93d6.org
+SUMMARY:[29CM] 브랜드 세일 - 도프제이슨
+UID:441721ea-59b0-4dc8-aa62-1eacf864ce24@4417.org
 END:VEVENT
 END:VCALENDAR

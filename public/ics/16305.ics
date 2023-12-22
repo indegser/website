@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:톡톡튀는 디자인을 입은\n\n부기우기의 '이 주의 테크 브랜드' 소식을 알립니다. 사랑스럽고도 귀여운 디자인을 경험해보세요.
 DTEND:20240114T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16305
 DTSTART:20240101T010000Z
-SUMMARY:톡톡튀는 디자인을 입은
-UID:24fff49e-99e0-4abf-9b98-8e103fb98621@24ff.org
+SUMMARY:[29CM] 브랜드 세일 - 부기우기
+UID:1caaff76-cb45-47a2-88fe-678f30b49daf@1caa.org
 END:VEVENT
 END:VCALENDAR

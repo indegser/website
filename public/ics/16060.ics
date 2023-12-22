@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:전설이될 협업\n\n듀테로와 유니버셜 뮤직의 협업 컬렉션 발매. 레전더리 아티스트들인 퍼블릭에너미\, 비스티보이즈로 출발합니다. 앞으로 출시될 다양한 레전더리 아티스트와의 협업 소식도 기대해주세요.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16060
 DTSTART:20231225T100000Z
-SUMMARY:전설이될 협업
-UID:83e147aa-5fc9-4a52-95e1-9a56b3440397@83e1.org
+SUMMARY:[29CM] 신상 발매 - 듀테로
+UID:0e9a757c-363f-4b97-afe6-6aedbcb9ece2@0e9a.org
 END:VEVENT
 END:VCALENDAR

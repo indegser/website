@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:오직 29CM에서만 재입고\n\n추운 날씨에도 스타일을 포기하고 싶지 않다면\, 노스페이스 여성 눕시 숏 재킷이 답입니다. 크롭한 기장감과 동시에 가장 트렌디한 비율을 선사하여 여성들에게 완벽한 선택입니다.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16329
 DTSTART:20240101T010000Z
-SUMMARY:오직 29CM에서만 재입고
-UID:71755983-b4cc-4233-a167-74af585ff75c@7175.org
+SUMMARY:[29CM] 브랜드 세일 - 노스페이스
+UID:bf5d65e5-e737-4648-8ce2-c0a22afa2e90@bf5d.org
 END:VEVENT
 END:VCALENDAR

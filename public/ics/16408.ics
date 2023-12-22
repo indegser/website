@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:지금이 기회예요\n\n루시르주의 중복 쿠폰 혜택의 기회는 오늘로 종료돼요. 늦지않은 연말\, 다가오는 신년 준비를 루시루즈의 트렌디한 아이템과 함께해보는건 어때요?
 DTEND:20231224T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16408
 DTSTART:20231224T010000Z
-SUMMARY:지금이 기회예요
-UID:d6e75b3e-4101-45d6-9b47-8f80eeab3799@d6e7.org
+SUMMARY:[29CM] 브랜드 세일 - 루시르주
+UID:930fdb27-9458-4f4b-846b-85a257c8c56d@930f.org
 END:VEVENT
 END:VCALENDAR

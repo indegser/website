@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:부엌을  가꾸는  즐거움\n\n식사를 준비하기 위한 도구와 식탁을 차리기 위한 그릇\, 평범하지만 특별한 일상을 만들어 주는 '키친툴'을 경험해 보세요.
 DTEND:20240114T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16384
 DTSTART:20231231T010000Z
-SUMMARY:부엌을  가꾸는  즐거움
-UID:3ff650d5-7c52-44e4-8cb7-a3ad867800eb@3ff6.org
+SUMMARY:[29CM] 브랜드 세일 - 키친툴
+UID:06451b39-7f79-4397-8d44-a9781b614595@0645.org
 END:VEVENT
 END:VCALENDAR

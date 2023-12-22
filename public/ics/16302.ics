@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:자연스럽고 편안한 분위기\n\n아트이프액츠는 입체적인 실루엣\, 구조적 디테일 그리고 담담한 색감과 우수한 소재를 활용한 의복을 선보이고 있습니다.
 DTEND:20240111T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16302
 DTSTART:20231228T010000Z
-SUMMARY:자연스럽고 편안한 분위기
-UID:e9ffcb8a-f607-45bb-988a-ea50b1e046de@e9ff.org
+SUMMARY:[29CM] 브랜드 세일 - 아트 이프 액츠
+UID:bdb3097a-d60f-477f-9763-024d063ff10a@bdb3.org
 END:VEVENT
 END:VCALENDAR

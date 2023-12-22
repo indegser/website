@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:단정하고 집중이 잘 되는 홈오피스\n\n집중이 잘 되는 홈오피스를 만들고 싶다면 데스커 모션데스크를 경험해 보세요.
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15426
 DTSTART:20231225T150000Z
-SUMMARY:단정하고 집중이 잘 되는 홈오피스
-UID:92668acf-de6b-433c-97f5-3336717e2203@9266.org
+SUMMARY:[29CM] 브랜드 세일 - 데스커
+UID:f2b14cef-1d6f-482f-979a-c790a9a327ca@f2b1.org
 END:VEVENT
 END:VCALENDAR

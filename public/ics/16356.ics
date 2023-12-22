@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:다채로운 포인트\n\n트리의 오너먼트에서 영감을 받은 어거스트하모니의 홀리데이 컬렉션 2차 발매를 알려요. 단독 할인으로 만나보세요
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16356
 DTSTART:20231226T010000Z
-SUMMARY:다채로운 포인트
-UID:3d739bc9-205b-4713-bf0c-7d7cc52e9b67@3d73.org
+SUMMARY:[29CM] 신상 발매 - 어거스트하모니
+UID:999d35e3-dce8-45db-bf0a-45fe44656717@999d.org
 END:VEVENT
 END:VCALENDAR

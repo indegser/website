@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울 아우터와 함께해요\n\n가볍고 편안한 실루엣과 부드러운 촉감\, 고급스러운 색상으로 겨울 아우터에 분위기를 더해요. 단독~30%\,
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15764
 DTSTART:20231227T010000Z
-SUMMARY:겨울 아우터와 함께해요
-UID:dd747a0b-5771-46f7-9050-f96fe23aff88@dd74.org
+SUMMARY:[29CM] 브랜드 세일 - 백투베이직스
+UID:9919cba5-5d23-4106-922e-9be4a6e861f0@9919.org
 END:VEVENT
 END:VCALENDAR

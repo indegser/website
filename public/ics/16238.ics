@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:리(LEE)의 겨울 시즌오프 시작\n\n리(LEE)와 함께  2023년의 마무리와 새로운 2024년을 맞이하세요\, 29CM에서 시즌오프의 시작과 함께 선착순 200명께 리유저블 토트백을 증정합니다. ~50%
 DTEND:20240109T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16238
 DTSTART:20231227T010000Z
-SUMMARY:리(LEE)의 겨울 시즌오프 시작
-UID:2a686f21-9587-4283-8797-400fa02cd056@2a68.org
+SUMMARY:[29CM] 브랜드 세일 - 리
+UID:423dd218-0880-4a1e-a4a8-f85df5c81d3d@423d.org
 END:VEVENT
 END:VCALENDAR

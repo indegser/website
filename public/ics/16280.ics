@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:OPEN YY\n\nOPEN YY
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16280
 DTSTART:20231225T010000Z
-SUMMARY:OPEN YY
-UID:d886315c-af48-45df-95ac-95dcedfbe0ae@d886.org
+SUMMARY:[29CM] 브랜드 세일 - 오픈와이와이
+UID:a5e1b8e8-4158-4860-8ba3-384f1dbb34da@a5e1.org
 END:VEVENT
 END:VCALENDAR

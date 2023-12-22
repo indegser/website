@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:활용도 높은 시어링 플랫\n\n누스의 귀여운 시어링 플랫을 만나보세요. 오직 여기에서만 만날 수 있는 디자인이니 놓치지 마세요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16357
 DTSTART:20231225T010000Z
-SUMMARY:활용도 높은 시어링 플랫
-UID:304b7d8f-cc9b-48ea-9b3e-beafd846c00c@304b.org
+SUMMARY:[29CM] 브랜드 세일 - 누스
+UID:f9f7c517-0a64-435b-ba29-37ccd23fd5c2@f9f7.org
 END:VEVENT
 END:VCALENDAR

@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:따뜻한 퍼재킷으로 겨울나기\n\n연말 필수 아우터인 해브레스의 퍼재킷을 단독 혜택으로 만나보세요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16333
 DTSTART:20231228T010000Z
-SUMMARY:따뜻한 퍼재킷으로 겨울나기
-UID:d05368d4-9609-4916-a5b3-124bd29e785e@d053.org
+SUMMARY:[29CM] 브랜드 세일 - 해브레스
+UID:ca13c6fa-efe5-4761-903b-92a9e5982877@ca13.org
 END:VEVENT
 END:VCALENDAR

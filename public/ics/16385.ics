@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:기분 좋은 소식\n\n무심한 듯 멋스러운 블루브릭의 베스트 아이템을 72시간동안 합리적인 가격으로 만나보세요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16385
 DTSTART:20231229T010000Z
-SUMMARY:기분 좋은 소식
-UID:1c9190dd-62bd-4e6b-9de0-a2b76b14f80a@1c91.org
+SUMMARY:[29CM] 브랜드 세일 - 블루브릭
+UID:b376128b-b3e3-4605-84dd-a9082df34460@b376.org
 END:VEVENT
 END:VCALENDAR

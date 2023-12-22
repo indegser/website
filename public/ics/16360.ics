@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:지금 꼭 필요한 방한 용품\n\n미니멀하고 따뜻한 감성의 할렌의 머플러\, 장갑 등을 단독 특가로 만나보세요
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16360
 DTSTART:20231226T010000Z
-SUMMARY:지금 꼭 필요한 방한 용품
-UID:40de6b83-5ae0-45ee-a9e1-8b02ea28c851@40de.org
+SUMMARY:[29CM] 브랜드 세일 - 할렌
+UID:38748584-8324-4ab2-bf33-11aba1636b3c@3874.org
 END:VEVENT
 END:VCALENDAR

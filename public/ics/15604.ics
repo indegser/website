@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:추위에도 귀엽게\n\n댄싱그랜마×아우어솔티의 온기를 더해줄 윈터 콜라보 상품 발매소식을 전해요. 단독 ~10%
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15604
 DTSTART:20231225T010000Z
-SUMMARY:추위에도 귀엽게
-UID:0d3a3335-dfba-45b5-ad85-b40fd7b4b76f@0d3a.org
+SUMMARY:[29CM] 신상 발매 - 댄싱그랜마
+UID:73cb2e24-7250-405a-a321-2914f815fe64@73cb.org
 END:VEVENT
 END:VCALENDAR

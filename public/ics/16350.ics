@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:29CM에서만 가능한 선물 꾸러미\n\n기획전 기간 내 세인트제임스 잡화를 구매하시면 29CM 단독 선물 패키징과 함께 출고됩니다. 새해 복 많이 받으세요!
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16350
 DTSTART:20231226T010000Z
-SUMMARY:29CM에서만 가능한 선물 꾸러미
-UID:9ff10dbe-ebdb-4387-9aaf-bd35831aa9cb@9ff1.org
+SUMMARY:[29CM] 브랜드 세일 - 세인트제임스
+UID:96caa5f3-b42f-4736-916f-cd703e08cf7e@96ca.org
 END:VEVENT
 END:VCALENDAR

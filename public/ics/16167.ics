@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:다채로움이 주는 행복함\n\n위글위글의 브랜드위크 소식을 전해드려요. 신상품부터 베스트 아이템까지 단 1주 간 합리적인 가격에 만나보세요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16167
 DTSTART:20231225T010000Z
-SUMMARY:다채로움이 주는 행복함
-UID:7a5b41cf-51ef-4325-a92b-95ab8096fd22@7a5b.org
+SUMMARY:[29CM] 브랜드 세일 - 위글위글
+UID:b175aa8b-67e8-4d23-b79c-0bed215a99be@b175.org
 END:VEVENT
 END:VCALENDAR

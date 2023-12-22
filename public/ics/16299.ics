@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:수준 높은 에센셜 아이템\n\n오랫동안 옷장 속에 함께 할 카키스의 STOCK 라인을 소개합니다. 품질에 타협하지 않는 수준 높은 에센셜 아이템을 오직 29CM에서 45%의 혜택과 함께 만나보세요.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16299
 DTSTART:20231225T010000Z
-SUMMARY:수준 높은 에센셜 아이템
-UID:fd8a294a-fcf8-4687-8b92-643c3658d33a@fd8a.org
+SUMMARY:[29CM] 브랜드 세일 - 카키스
+UID:28bbc526-ae00-4050-858c-6fbf9a3b0896@28bb.org
 END:VEVENT
 END:VCALENDAR

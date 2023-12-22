@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:흔히 볼 수 없는 다양한 컬러 스타일\n\n런던 언더그라운드는 흔히 볼 수 없는 다양한 컬러군과 레이어드 스타일링. 그리고 감도 높은 디테일로 탄탄한 내용을 기반한 컬렉션을 전개합니다.
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16295
 DTSTART:20231229T010000Z
-SUMMARY:흔히 볼 수 없는 다양한 컬러 스타일
-UID:533fc984-8e17-414b-942f-1bc8ff0530a6@533f.org
+SUMMARY:[29CM] 브랜드 세일 - 런던 언더그라운드
+UID:d090639e-434c-4502-b55d-795c7e05a4e9@d090.org
 END:VEVENT
 END:VCALENDAR

@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:파이시스 시즌오프\n\n파이시스
 DTEND:20240109T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16307
 DTSTART:20240103T010000Z
-SUMMARY:파이시스 시즌오프
-UID:ff72d6db-979c-4903-950b-5e91a9360ec0@ff72.org
+SUMMARY:[29CM] 브랜드 세일 - 파이시스
+UID:f04acd76-0911-44cc-86d3-f3c19257d577@f04a.org
 END:VEVENT
 END:VCALENDAR

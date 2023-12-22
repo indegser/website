@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:기분좋은 72시간\n\n해외에서 더욱 많이 주목받고 있는 머렐을 만나보세요. 미국 유타에서 시작하지만 현재는 글로벌 하이킹 슈즈 브랜드로 성장한 머렐의 72시간 단독 할인 이벤트를 만나보세요. 12.26 ~ 12.28
 DTEND:20231228T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16355
 DTSTART:20231226T010000Z
-SUMMARY:기분좋은 72시간
-UID:222711ad-b516-4a1a-a1ec-04623691349f@2227.org
+SUMMARY:[29CM] 브랜드 세일 - 머렐
+UID:41cade3f-2b08-41cf-bfb5-8b6c758c4bdb@41ca.org
 END:VEVENT
 END:VCALENDAR

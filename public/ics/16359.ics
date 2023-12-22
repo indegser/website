@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:인플루언서 진솔님과 함께한 겨울\n\n뽀얗고 흐릿한 계절 속 리본을 좋아하는 한 소녀의 기억과 여정을 담은 셀리테일즈의 겨울 컬렉션을 인플루언서 진솔님과 함께 소개합니다.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16359
 DTSTART:20231225T010000Z
-SUMMARY:인플루언서 진솔님과 함께한 겨울
-UID:0da0111a-e450-4054-bf33-4f4c4106597b@0da0.org
+SUMMARY:[29CM] 브랜드 세일 - 셀리테일즈
+UID:fe6d2930-d380-4b54-8004-0123bf5b1533@fe6d.org
 END:VEVENT
 END:VCALENDAR

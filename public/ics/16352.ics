@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:파르티멘토 우먼\n\n파르티멘토 우먼
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16352
 DTSTART:20231227T010000Z
-SUMMARY:파르티멘토 우먼
-UID:e58859eb-d370-4226-bc70-cbdc1d9abaa8@e588.org
+SUMMARY:[29CM] 브랜드 세일 - 파르티멘토 우먼
+UID:fc5af8de-d817-4c77-8080-e9dce5c1c31b@fc5a.org
 END:VEVENT
 END:VCALENDAR

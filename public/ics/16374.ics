@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:띰\n\n띰
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16374
 DTSTART:20231226T010000Z
-SUMMARY:띰
-UID:943762fe-ed69-41fd-bf66-0d2acf5c1e52@9437.org
+SUMMARY:[29CM] 신상 발매 - 띰
+UID:1cbecb04-9c44-4f68-9e4b-256889aa1276@1cbe.org
 END:VEVENT
 END:VCALENDAR

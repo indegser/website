@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:인도어 홀리데이\n\n추운 겨울날 실내에서 즐길 트렌디한 겨울옷은 굿하비클럽에 있어요. 29CM 단독할인과 함께.
 DTEND:20231228T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16324
 DTSTART:20231226T010000Z
-SUMMARY:인도어 홀리데이
-UID:93f73820-ec4f-4811-87ac-507987890d03@93f7.org
+SUMMARY:[29CM] 브랜드 세일 - 굿하비클럽
+UID:3b19dd35-eb6f-415a-9f4c-5762439293cc@3b19.org
 END:VEVENT
 END:VCALENDAR

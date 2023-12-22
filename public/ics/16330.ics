@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:자주 손이 가는 옷\n\n베이직한 디자인으로 사랑받는 포저의 단독 시즌오프 소식을 전합니다. 최대 50% 세일
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16330
 DTSTART:20231225T010000Z
-SUMMARY:자주 손이 가는 옷
-UID:6fa3f4dd-ad0b-4e27-825d-ba00ec6fa2ed@6fa3.org
+SUMMARY:[29CM] 브랜드 세일 - 포저
+UID:312823ae-5e3e-4946-bd8a-51688d32b424@3128.org
 END:VEVENT
 END:VCALENDAR

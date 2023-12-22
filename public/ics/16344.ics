@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:SNS속 인플루언서들이 착용한\n\n이번 홀리데이에는 페미닌한 무드로 고급스러움을 더해 줄 조이그라이슨 가방으로 다양하게 스타일링 해보세요.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16344
 DTSTART:20231223T010000Z
-SUMMARY:SNS속 인플루언서들이 착용한
-UID:b4404f53-9a28-4c06-914f-4a89adde4434@b440.org
+SUMMARY:[29CM] 브랜드 세일 - 조이그라이슨
+UID:cc1b1b87-9ef1-4458-865d-bbd4ec6c08b3@cc1b.org
 END:VEVENT
 END:VCALENDAR

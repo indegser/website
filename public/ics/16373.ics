@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울에만 만날 수 있는 포근함\n\n내셔널지오그래픽의 겨울 아우터는 일상에서 가장 접하기 좋은 편안함과 포근함을 선사합니다. 내셔널지오그래픽 스태프가 직접 착용하여 전하는 겨울 무드를 29CM에서 만나보세요.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16373
 DTSTART:20231225T010000Z
-SUMMARY:겨울에만 만날 수 있는 포근함
-UID:e0dc60e7-3b3e-4d0f-9112-f431a92d233d@e0dc.org
+SUMMARY:[29CM] 브랜드 세일 - 내셔널지오그래픽
+UID:c04dc006-840b-46d1-8ed1-b08414ac9d8a@c04d.org
 END:VEVENT
 END:VCALENDAR

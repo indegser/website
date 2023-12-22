@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:트렌디한 한 벌\n\n편안하면서도 놓칠 수 없는 트렌디함을 제이마크뉴욕만의 따뜻한 컬러로 표현한 원피스 단독 특가 소식을 전합니다.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16311
 DTSTART:20231225T010000Z
-SUMMARY:트렌디한 한 벌
-UID:f74a214f-526c-4fcc-a5d2-bf8a17d255f3@f74a.org
+SUMMARY:[29CM] 브랜드 세일 - 제이마크뉴욕
+UID:85ce3781-fcf9-47b1-b7f9-be8ea6412621@85ce.org
 END:VEVENT
 END:VCALENDAR

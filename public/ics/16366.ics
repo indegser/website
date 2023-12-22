@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:기분좋은 2024의 시작\n\n2024년이 새롭게 시작해요. 컨티뉴의 2024 캘린더를 단독할인으로 만나보세요
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16366
 DTSTART:20231225T010000Z
-SUMMARY:기분좋은 2024의 시작
-UID:f9148a5b-4f14-4335-bb07-de75fec6a86b@f914.org
+SUMMARY:[29CM] 브랜드 세일 - 컨티뉴
+UID:71abbea7-ca99-4119-8e19-b940d02bc5b0@71ab.org
 END:VEVENT
 END:VCALENDAR

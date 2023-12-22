@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:시즌오프 세일 소식 전해요\n\n폴앤앨리스의 베스트 FW 상품들을 높은 할인율로 준비했어요. 올해 중 가장 큰 혜택이니 놓치지 마시길 바라요!
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16321
 DTSTART:20231227T010000Z
-SUMMARY:시즌오프 세일 소식 전해요
-UID:65462ab8-e560-401d-a080-255ca2bf3b0e@6546.org
+SUMMARY:[29CM] 브랜드 세일 - 폴앤앨리스
+UID:e197efb3-8480-49a6-af93-1008907d6a64@e197.org
 END:VEVENT
 END:VCALENDAR

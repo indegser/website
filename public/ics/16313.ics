@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:제이마크뉴욕의 포근함\n\n자유로운 클래식함을 선보이는 제이마크뉴욕의 전 상품 단독 할인 소식을 전해요.
 DTEND:20240114T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16313
 DTSTART:20240108T010000Z
-SUMMARY:제이마크뉴욕의 포근함
-UID:4a7faee1-4265-435b-ad21-d6b1235bec70@4a7f.org
+SUMMARY:[29CM] 브랜드 세일 - 제이마크뉴욕
+UID:1c7973d6-f5b5-49d8-8599-8da284710793@1c79.org
 END:VEVENT
 END:VCALENDAR

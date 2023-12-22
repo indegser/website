@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:아이헤이트먼데이의 특별한 72시간\n\n한 해 동안 감사했던 분들께 아이헤이트먼데이 양말과 함께 마음을 전해요. 작은 따스함이 모이고 모여 연말을 더욱 풍성하게 만들어 줄 거예요! ~60% 단독특가
 DTEND:20231229T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16142
 DTSTART:20231226T150000Z
-SUMMARY:아이헤이트먼데이의 특별한 72시간
-UID:59f0395a-d212-4c2b-8127-3cf788ad6410@59f0.org
+SUMMARY:[29CM] 브랜드 세일 - 아이헤이트먼데이
+UID:37c7aea7-88ed-4cee-b96c-4551edb46e5a@37c7.org
 END:VEVENT
 END:VCALENDAR

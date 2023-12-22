@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:크리스마스 특별한 이벤트\n\n아메리칸 무드의 아웃도어 브랜드 펜필드의 크리스마스 선물과 같은 72시간 이벤트를 만나보세요\, 기간 내 60% 할인 상품을 만나보세요.
 DTEND:20231227T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16242
 DTSTART:20231225T010000Z
-SUMMARY:크리스마스 특별한 이벤트
-UID:3b8e516d-b4de-4b3c-bcf8-57442a057305@3b8e.org
+SUMMARY:[29CM] 브랜드 세일 - 펜필드
+UID:a279a7d8-d331-439c-b787-62f0a96d4e11@a279.org
 END:VEVENT
 END:VCALENDAR

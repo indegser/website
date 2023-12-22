@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:중복 혜택의 기회는 오늘로 종료돼요\n\n10% 브랜드 쿠폰 + 10% 장바구니 쿠폰 사용을 통해 더욱 합리적인 가격으로 만날 수 있어요! 지금 이 기회를 놓치지 마세요.
 DTEND:20231224T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16407
 DTSTART:20231224T010000Z
-SUMMARY:중복 혜택의 기회는 오늘로 종료돼요
-UID:185968fe-addd-4087-b555-b7d7f6724ac1@1859.org
+SUMMARY:[29CM] 브랜드 세일 - 니주르
+UID:02a59839-d0d9-4fcb-9cb9-cfb322d2b926@02a5.org
 END:VEVENT
 END:VCALENDAR

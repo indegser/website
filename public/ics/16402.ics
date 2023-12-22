@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:닉앤니콜\n\n닉앤니콜
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16402
 DTSTART:20231227T010000Z
-SUMMARY:닉앤니콜
-UID:5d731d9b-5fba-45b9-b5df-5dac7792b515@5d73.org
+SUMMARY:[29CM] 브랜드 세일 - 닉앤니콜
+UID:ccb88903-ac2e-4fcb-ac8f-7f15a7e2aba3@ccb8.org
 END:VEVENT
 END:VCALENDAR

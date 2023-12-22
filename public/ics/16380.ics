@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:독자적인 기술력의 글라스\n\n독자적인 기술 개발로 내열 유리의 기능 향상을 목표로 운영 중인 '이와키'의 다양한 글라스 제품을 만나보세요.
 DTEND:20240121T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16380
 DTSTART:20240108T010000Z
-SUMMARY:독자적인 기술력의 글라스
-UID:6a4a8f36-3a3c-40cf-ba00-f6c59ccf6e35@6a4a.org
+SUMMARY:[29CM] 브랜드 세일 - 이와키
+UID:9760e8bd-4d33-44c6-b6ab-a3b05f0d58bf@9760.org
 END:VEVENT
 END:VCALENDAR

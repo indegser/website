@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:절제된 디테일\n\n어트의 자연스러운 멋이 느껴지는 가방들을 만나보세요. 단독 상품\, 단독할인 ~15%
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15311
 DTSTART:20231225T010000Z
-SUMMARY:절제된 디테일
-UID:32643248-b7c9-429b-92aa-fccf97a709d1@3264.org
+SUMMARY:[29CM] 브랜드 세일 - 어트
+UID:b093ac56-59bd-4cc7-b436-9d53804ab2f9@b093.org
 END:VEVENT
 END:VCALENDAR

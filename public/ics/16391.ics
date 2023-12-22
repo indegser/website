@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:소중한 사람을 위해\n\n24년 집들이를 앞두고 있다면 마랑 몽타구를 둘러보세요.
 DTEND:20240108T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16391
 DTSTART:20231226T010000Z
-SUMMARY:소중한 사람을 위해
-UID:a3ea89b7-5531-4336-accd-213e9e192a0c@a3ea.org
+SUMMARY:[29CM] 브랜드 세일 - 마랑 몽타구
+UID:6a40eded-be37-4f9c-8911-05a18ac7e961@6a40.org
 END:VEVENT
 END:VCALENDAR

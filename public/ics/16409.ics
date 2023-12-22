@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:어디론가 떠나고픈 겨울\n\n어디론가 떠나고 싶은 당신의 겨울에 팬암이 당신을 만나러 갑니다. 팬암의 시즌오프 상품을 만나보세요
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16409
 DTSTART:20231226T010000Z
-SUMMARY:어디론가 떠나고픈 겨울
-UID:c4f1e627-bbf1-4db0-9406-5ff9ea0181bb@c4f1.org
+SUMMARY:[29CM] 브랜드 세일 - 팬암
+UID:83a02450-9396-4044-8942-4e7150dce3fe@83a0.org
 END:VEVENT
 END:VCALENDAR

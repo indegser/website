@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:찬란한 우리를 형용하는\n\n남성들의 넘버원 스타일링 아이콘으로 주목받는 배우 이동휘와 기능적 컨템포러리를 추구하는 언어펙티드가 ‘The Radiant’를 테마로 만났습니다.
 DTEND:20240115T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16318
 DTSTART:20240102T010000Z
-SUMMARY:찬란한 우리를 형용하는
-UID:2ab9a668-3721-4d71-838c-9a08eca7741c@2ab9.org
+SUMMARY:[29CM] 브랜드 세일 - 언어펙티드
+UID:56d3083b-fae3-4fea-a1de-a7772e93d459@56d3.org
 END:VEVENT
 END:VCALENDAR

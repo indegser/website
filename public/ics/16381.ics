@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:고민시가 선택한 스타일\n\n추운 겨울을 예쁘게 지내는 스타일을 찾고있다면? 고민시의 엠엘비 컬렉션을 만나보세요
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16381
 DTSTART:20231226T010000Z
-SUMMARY:고민시가 선택한 스타일
-UID:22b5195d-02ae-4983-bf43-d8876e5c69b7@22b5.org
+SUMMARY:[29CM] 신상 발매 - 엠엘비
+UID:dbc0cd07-04bc-4483-b845-5a1fe452a5ce@dbc0.org
 END:VEVENT
 END:VCALENDAR

@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:맛있는 음식을 만들어드려요\n\n일본의 프리미엄 쿡웨어 브랜드 버미큘라를 만나보세요. 버미큘라만의 기술은 요리의 맛을 더욱 풍성하게 만들어준답니다.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16397
 DTSTART:20231225T010000Z
-SUMMARY:맛있는 음식을 만들어드려요
-UID:60bcbf41-d0ff-4767-b3a6-6bc34009734c@60bc.org
+SUMMARY:[29CM] 브랜드 세일 - 버미큘라
+UID:5f1a1336-3e69-4580-991b-d55feeabd6cc@5f1a.org
 END:VEVENT
 END:VCALENDAR

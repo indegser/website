@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울을 만나는 클래식\n\n언제나 클래식하고 깔끔한 스타일을 제안하는 라코스테의 시즌오프 상품을 만나보세요. 최대 30% 할인과 사은품도 준비했어요.
 DTEND:20240109T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16383
 DTSTART:20231227T010000Z
-SUMMARY:겨울을 만나는 클래식
-UID:962be8f3-2581-4790-930a-38bd042d30e2@962b.org
+SUMMARY:[29CM] 브랜드 세일 - 라코스테
+UID:2a411b72-842a-416d-b890-854eac9733d3@2a41.org
 END:VEVENT
 END:VCALENDAR

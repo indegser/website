@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:엔오르\n\nㅇㅇ
 DTEND:20231227T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16310
 DTSTART:20231225T010000Z
-SUMMARY:엔오르
-UID:41dd5a9b-2773-46dc-adc6-f98fd98a18cc@41dd.org
+SUMMARY:[29CM] 브랜드 세일 - 엔오르
+UID:612f58e4-f5fc-4322-a446-38527cae23d6@612f.org
 END:VEVENT
 END:VCALENDAR

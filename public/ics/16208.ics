@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:플램의 시즌오프 소식\n\n심플하면서도 기본에 충실한 플램의 시즌오프 소식입니다.  최대 단독 ~40% 혜택으로 만나보세요.
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16208
 DTSTART:20231227T010000Z
-SUMMARY:플램의 시즌오프 소식
-UID:1a50ca63-39ac-441c-bce3-9cfa67173fc6@1a50.org
+SUMMARY:[29CM] 브랜드 세일 - 플램
+UID:f1f56d56-87b2-4979-84e3-d4f154110a64@f1f5.org
 END:VEVENT
 END:VCALENDAR

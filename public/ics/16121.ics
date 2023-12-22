@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:심플함 속의 특별함\n\n과하지 않은 멋스러움을 추구하는 바이이섭의 단독할인 소식을 전해요. 다양한 이벤트까지 진행하니 서둘러 만나보세요!
 DTEND:20240104T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16121
 DTSTART:20231228T010000Z
-SUMMARY:심플함 속의 특별함
-UID:4ce3546f-b3d8-4b61-a92d-b71999fa9464@4ce3.org
+SUMMARY:[29CM] 브랜드 세일 - 바이바이섭
+UID:6e338baf-2f5e-4a8f-a0af-40f524b7ddf0@6e33.org
 END:VEVENT
 END:VCALENDAR

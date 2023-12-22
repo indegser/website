@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:내 공간을 빛낼 조명\n\n조명 디자인의 흐름을 주도하는 회사 플로스의 벨홈이 29CM에 입고 되었어요. 29CM 입고 기념 15% 할인
 DTEND:20240130T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15759
 DTSTART:20231230T010000Z
-SUMMARY:내 공간을 빛낼 조명
-UID:74432293-df8f-403d-9864-aa4758a3dded@7443.org
+SUMMARY:[29CM] 신상 발매 - 플로스
+UID:32467ffb-3150-4367-a7e1-86fcd79022f6@3246.org
 END:VEVENT
 END:VCALENDAR

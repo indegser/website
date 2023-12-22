@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:시어링 부츠로 발끝까지 따뜻하게\n\n디테일까지 신경 쓰는 수제화 브랜드 바이언스의 29CM 단독 겨울 부츠 발매 소식 전해드려요! 종아리까지 혹은 접어서\, 두 가지 스타일링을 한 번에
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16335
 DTSTART:20231225T010000Z
-SUMMARY:시어링 부츠로 발끝까지 따뜻하게
-UID:f6cb5468-03a3-4ea4-8780-22248b16344d@f6cb.org
+SUMMARY:[29CM] 신상 발매 - 바이언스
+UID:b9802d9d-9180-408e-ad22-9054fcaf143c@b980.org
 END:VEVENT
 END:VCALENDAR

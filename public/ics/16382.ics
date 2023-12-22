@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:도구 본연의 기능과 아름다움\n\n나가타현에서 1922년 부터 이어오고 있는 쿡웨어 브랜드 '아이자와 공방'을 만나보세요.
 DTEND:20240121T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16382
 DTSTART:20240108T010000Z
-SUMMARY:도구 본연의 기능과 아름다움
-UID:82895aee-fb03-467f-ace4-6f5e583b6b0f@8289.org
+SUMMARY:[29CM] 브랜드 세일 - 아이자와 공방
+UID:cf7147d4-1d7f-4ed0-a681-d38b6d40d846@cf71.org
 END:VEVENT
 END:VCALENDAR

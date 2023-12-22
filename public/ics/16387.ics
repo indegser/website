@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울에도 데님은 함께\n\n추운 겨울에도 리바이스의 데님은 클래식함으로 당신과 함께합니다. 리바이스의 시즌오프를 만나보세요
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16387
 DTSTART:20231227T010000Z
-SUMMARY:겨울에도 데님은 함께
-UID:f5893096-76cd-4724-9856-adbbb62ebc93@f589.org
+SUMMARY:[29CM] 브랜드 세일 - 리바이스
+UID:9b062e03-13ea-48eb-a995-5fde1a35c140@9b06.org
 END:VEVENT
 END:VCALENDAR

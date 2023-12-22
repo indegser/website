@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:집중해 몰입할 시간\n\n온전히 집중할 수 있도록 도와주는 소니의 INZONE H5를 소개합니다. 게이밍 전용 공간음향은 보이지 않는 적의 움직임도 파악할 수 있게 도와줄 거에요.
 DTEND:20240114T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16304
 DTSTART:20240101T010000Z
-SUMMARY:집중해 몰입할 시간
-UID:5c9c8bdf-f6e6-4ed8-8fd8-b71e5221f892@5c9c.org
+SUMMARY:[29CM] 브랜드 세일 - 소니
+UID:daa810b9-bd3e-4cbd-b527-db2f64234e79@daa8.org
 END:VEVENT
 END:VCALENDAR

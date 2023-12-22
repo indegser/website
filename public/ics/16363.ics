@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:깔끔하게 즐겨요\n\n깔끔한 데스크를 완성시켜주는 라이프썸\, 편안한 내 공간으로 새로운 라이프스타일을 즐겨요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16363
 DTSTART:20231225T010000Z
-SUMMARY:깔끔하게 즐겨요
-UID:38feee7a-a0d6-4743-94cd-3ba19764fd58@38fe.org
+SUMMARY:[29CM] 브랜드 세일 - 라이프썸
+UID:d8928572-df27-4ea8-8884-840d4c8aa554@d892.org
 END:VEVENT
 END:VCALENDAR

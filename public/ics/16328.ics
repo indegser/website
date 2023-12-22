@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:두 번 할인받을 수 있어요\n\n헤이의 주얼리들을 5% 쿠폰과 중복 적용되는 10% 쿠폰까지 함께 만나보세요
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16328
 DTSTART:20231226T010000Z
-SUMMARY:두 번 할인받을 수 있어요
-UID:10764aae-49e1-4216-95e7-bc418e339ae6@1076.org
+SUMMARY:[29CM] 브랜드 세일 - 헤이
+UID:6e07aed6-43f5-4732-be8e-722139d97d94@6e07.org
 END:VEVENT
 END:VCALENDAR

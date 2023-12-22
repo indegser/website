@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:한 해의 기록\n\n새로운 한 해를 위한 준비. 글월의 다이어리로 2024의 긴 호흡을 위한 준비를 함께 해요
 DTEND:20240108T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16368
 DTSTART:20231226T010000Z
-SUMMARY:한 해의 기록
-UID:5ee02c39-3309-41dd-b0a5-d02438decc10@5ee0.org
+SUMMARY:[29CM] 신상 발매 - 글월
+UID:2d0ef23f-9f58-4fbb-977c-31baa92b8676@2d0e.org
 END:VEVENT
 END:VCALENDAR

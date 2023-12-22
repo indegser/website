@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:홈카페에 딱인 테이블웨어\n\n홈카페를 모티브로한 쉐잎의 테이블웨어와 귀엽고 행복한 테이블을 꾸며보세요.
 DTEND:20240109T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16314
 DTSTART:20240101T150000Z
-SUMMARY:홈카페에 딱인 테이블웨어
-UID:fe6ba16b-9dad-4529-84f5-67a34ccab4fc@fe6b.org
+SUMMARY:[29CM] 브랜드 세일 - 르크루제
+UID:8e0e3424-5ea5-4cb3-b57b-3583904d0f15@8e0e.org
 END:VEVENT
 END:VCALENDAR

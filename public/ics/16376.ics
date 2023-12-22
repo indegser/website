@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울의 결을 담은\n\n겨울의 포근함이 느껴지는 플루이의 윈터 컬렉션 발매를 알려요
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16376
 DTSTART:20231226T010000Z
-SUMMARY:겨울의 결을 담은
-UID:a2da1ced-cfc0-4bb7-9f8c-8ed5414b3150@a2da.org
+SUMMARY:[29CM] 브랜드 세일 - 플루이
+UID:14038fc5-885b-46e1-b608-3c5ca67629ea@1403.org
 END:VEVENT
 END:VCALENDAR

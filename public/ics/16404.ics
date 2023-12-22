@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:작성중\n\n작성중
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16404
 DTSTART:20231227T010000Z
-SUMMARY:작성중
-UID:2c3616ef-9c83-4446-810a-56543b3d102a@2c36.org
+SUMMARY:[29CM] 브랜드 세일 - 프리플라
+UID:634b9137-b607-47a0-aef9-6a70c5e5cfd9@634b.org
 END:VEVENT
 END:VCALENDAR

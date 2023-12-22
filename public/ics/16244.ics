@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:나만의 테이블을 만들기에 좋은 그릇\n\n플레이팅을 살려주는 테이블 웨어를 만나보세요
 DTEND:20240110T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16244
 DTSTART:20231231T150000Z
-SUMMARY:나만의 테이블을 만들기에 좋은 그릇
-UID:01c2944b-7db9-4754-b186-10974e68d85a@01c2.org
+SUMMARY:[29CM] 브랜드 세일 - 빌레로이앤보흐
+UID:cd165d8a-fd3f-4dcd-943d-0d2eb1927b25@cd16.org
 END:VEVENT
 END:VCALENDAR

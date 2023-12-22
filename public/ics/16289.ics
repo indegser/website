@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울 캠핑의 시작\n\n올 겨울 보다 포근하고 따듯하게 여러분의 겨울을 감싸 줄 것입니다. 멋진 디자인과 실용성으로 무장한 브루클린웍스를 3일간 단독 특가로 만나보세요. ~50%
 DTEND:20231229T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16289
 DTSTART:20231226T010000Z
-SUMMARY:겨울 캠핑의 시작
-UID:b362eb79-6da2-4e8e-a831-3ce61df6eb09@b362.org
+SUMMARY:[29CM] 브랜드 세일 - 브루클린웍스
+UID:ce8c67ba-b748-4fc4-b943-d128d84d03fd@ce8c.org
 END:VEVENT
 END:VCALENDAR

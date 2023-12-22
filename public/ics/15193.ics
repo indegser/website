@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울 부츠 쇼핑할 시간\n\n조금 특별한 키에레이의 감성이 담긴 감도 높은 계절성 아이템 부츠 재입고 행사를 시작했어요. 단 29CM에서만 만나보세요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15193
 DTSTART:20231225T010000Z
-SUMMARY:겨울 부츠 쇼핑할 시간
-UID:006bcee3-635d-4206-ab35-bc21440edd16@006b.org
+SUMMARY:[29CM] 브랜드 세일 - 키에레이
+UID:77bc3ef8-f9de-4c76-aa86-6fa74233a502@77bc.org
 END:VEVENT
 END:VCALENDAR

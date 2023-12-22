@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:빈폴 액세서리 시즌오프\n\n빈폴만의 감성이 담긴 아이템을 시즌오프가로 만나봐요!
 DTEND:20240111T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16290
 DTSTART:20231229T070000Z
-SUMMARY:빈폴 액세서리 시즌오프
-UID:d1e3fbc2-5051-4af1-b24f-a99fdf51be1f@d1e3.org
+SUMMARY:[29CM] 브랜드 세일 - 빈폴 액세서리
+UID:e9c0e57c-e65c-4635-bc8f-1d92cee60e00@e9c0.org
 END:VEVENT
 END:VCALENDAR

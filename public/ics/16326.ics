@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:키치한 니트웨어\n\n키치한 스트릿은 스웨이드에서 마무리하세요. 화려하지만 세련된 스웨이드의 멋을 29CM 단독할인과 함께하세요.
 DTEND:20240108T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16326
 DTSTART:20231225T010000Z
-SUMMARY:키치한 니트웨어
-UID:046947d1-77e2-4750-9e87-d8287c6fc9ed@0469.org
+SUMMARY:[29CM] 브랜드 세일 - 스웨이드
+UID:5d107b2a-52bc-4fd3-b4f0-d55bafb127b9@5d10.org
 END:VEVENT
 END:VCALENDAR

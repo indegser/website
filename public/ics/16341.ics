@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:나의 홀리데이를 함께 보내 줄\n\n바쁘고 시끄러운 연말 시즌 분주한 일상에서 벗어나 조용하고 자유롭게 보내는 나의 홀리데이를 함께 할 오스트카카를 추천해요.
 DTEND:20240108T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16341
 DTSTART:20231226T010000Z
-SUMMARY:나의 홀리데이를 함께 보내 줄
-UID:8e042cb9-0f24-45ce-919d-a8fc8e7b1a4e@8e04.org
+SUMMARY:[29CM] 브랜드 세일 - 오스트카카
+UID:1181be77-1a8d-434e-b8e6-b38c4c79a90c@1181.org
 END:VEVENT
 END:VCALENDAR

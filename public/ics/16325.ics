@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:코트 위에 목도리\n\n빅 머플러는 올 해 유행 아이템이에요. 인플루언서가 코디한 머플러 착장을 활용해 겨울 코디를 완성해요.
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16325
 DTSTART:20231225T010000Z
-SUMMARY:코트 위에 목도리
-UID:46e8d6d8-052c-45f0-a747-41a0324dde2a@46e8.org
+SUMMARY:[29CM] 브랜드 세일 - 팔렛
+UID:6e546fe7-324f-4894-bf03-c9d86162fb36@6e54.org
 END:VEVENT
 END:VCALENDAR

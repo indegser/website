@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:가벼운 겨울 아우터\n\n따뜻한 색감의 가벼운 겨울 아우터는 크레이지 카 워시 크루에서 마련하세요. 29CM 단독 할인과 함께.
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16396
 DTSTART:20231226T010000Z
-SUMMARY:가벼운 겨울 아우터
-UID:f9008731-b302-4113-8a71-7d4fd92ac726@f900.org
+SUMMARY:[29CM] 브랜드 세일 - 크레이지 카 워시 크루
+UID:3f0ff727-6582-4606-b773-784b613dae4c@3f0f.org
 END:VEVENT
 END:VCALENDAR

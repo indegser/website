@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:마음을 전하기 딱 좋은 시기\n\n크리스마스라는 이유로 그동안 표현하지 못했던 마음을 표현해 보세요. 24일부터 26일까지 3일 동안 진행되는 삭스타즈의 72시간 타임특가가 절호의 기회에요!
 DTEND:20231226T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/15909
 DTSTART:20231223T150000Z
-SUMMARY:마음을 전하기 딱 좋은 시기
-UID:e7cfc42f-7649-4231-93a9-17ebe4d3923c@e7cf.org
+SUMMARY:[29CM] 브랜드 세일 - 삭스타즈
+UID:7b2eee7b-5280-4f50-b232-56f08d9253b3@7b2e.org
 END:VEVENT
 END:VCALENDAR

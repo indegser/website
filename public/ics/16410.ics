@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:겨울을 맞이하는 시즌오프\n\n스트릿한 무드와 자유로운 스타일을 찾고 있는 당신에게 마크곤잘레스의 시즌오프가 찾아왔습니다
 DTEND:20240101T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16410
 DTSTART:20231226T010000Z
-SUMMARY:겨울을 맞이하는 시즌오프
-UID:d176a9d5-d763-4c6b-a9fa-8e1474db5544@d176.org
+SUMMARY:[29CM] 브랜드 세일 - 마크곤잘레스
+UID:a929cc75-4e53-4bfc-b5c4-3179b4b13c07@a929.org
 END:VEVENT
 END:VCALENDAR

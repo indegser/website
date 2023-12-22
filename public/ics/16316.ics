@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:현세대의 감성을 입다\n\n파브레가는 현시대를 살아가고 있는 새로운 세대들의 시선과 자유로움을 기반으로\, 가치 중심적인 의복들을 전개합니다. 좋은 가치를 추구하고\, 이를 공유하고 경험하며 우리만의 문화를 만들어가길 바랍니다.
 DTEND:20240115T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16316
 DTSTART:20240105T010000Z
-SUMMARY:현세대의 감성을 입다
-UID:f8202125-5e00-4659-8648-cafd444b6885@f820.org
+SUMMARY:[29CM] 브랜드 세일 - 파브레가
+UID:a7382606-bf71-4296-abc3-69f61fd5d51f@a738.org
 END:VEVENT
 END:VCALENDAR

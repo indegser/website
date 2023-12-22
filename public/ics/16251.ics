@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:반짝임 가득한 아이템\n\n빛나는 스팽글 트위드 소재와 포근한 소재들 따뜻한 색감들로 이루어진 벰버의 연말룩을 최대 할인혜택으로 만나보세요.
 DTEND:20240104T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16251
 DTSTART:20231229T010000Z
-SUMMARY:반짝임 가득한 아이템
-UID:a2594f7a-0361-4976-9f39-05a7fdaf7790@a259.org
+SUMMARY:[29CM] 브랜드 세일 - 벰버
+UID:36cd59c4-8d6d-4c87-b84c-34f76acdbfd2@36cd.org
 END:VEVENT
 END:VCALENDAR

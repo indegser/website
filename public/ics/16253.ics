@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:새로운 한 해를 위한 테라피\n\n연말 연초는 건강 관리에 관심이 많아지는 시기죠. 머리부터 발끝까지 시원하게 풀 수 있는 괄사와 100% 천연 호호바 오일 구성으로 완벽한 바디테라피를 즐겨보세요.
 DTEND:20240107T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16253
 DTSTART:20231225T010000Z
-SUMMARY:새로운 한 해를 위한 테라피
-UID:b6492979-5f77-4e1a-a857-3dd0281d3aab@b649.org
+SUMMARY:[29CM] 브랜드 세일 - 페이스팩토리
+UID:c631e3ff-8ca9-44b2-b497-420211b7d39d@c631.org
 END:VEVENT
 END:VCALENDAR

@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:호주에서 탄생한 이뮤\n\n천연 양모와 양가죽을 활용한 신발을 만드는 프리미엄 슈즈 브랜 이뮤를 단독 혜택가로 만나보세요. 귀여운 이어머프는 숨겨진 추천 아이템이에요.
 DTEND:20240112T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16372
 DTSTART:20231227T010000Z
-SUMMARY:호주에서 탄생한 이뮤
-UID:1563af44-8fa1-41db-9c63-d0370d24920b@1563.org
+SUMMARY:[29CM] 브랜드 세일 - 이뮤
+UID:d2a994b5-3f59-4f27-b8bd-ed25bd4994a4@d2a9.org
 END:VEVENT
 END:VCALENDAR

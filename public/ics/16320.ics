@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:마지막을 장식할 브랜드 위크\n\n올 한 해 많은 사랑을 받은 삭스어필이 연말 결산 대잔치를 준비했어요. 양말부터 바라클라바\, 레그워머 등 한겨울 추위를 대비할 아이템을 단독 특가로 만나보세요!
 DTEND:20231231T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16320
 DTSTART:20231225T010000Z
-SUMMARY:마지막을 장식할 브랜드 위크
-UID:2b4a761b-98bf-49c7-ab78-937714327932@2b4a.org
+SUMMARY:[29CM] 브랜드 세일 - 삭스어필
+UID:79c70c71-325b-4efd-a0f8-9dd5bbbab492@79c7.org
 END:VEVENT
 END:VCALENDAR

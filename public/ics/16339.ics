@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:변하지않는 클래식\n\n높은 퀄리티와 클래식한 무드로 많은 사랑을 받는 리파인드 902의 베스트 상품을 29CM 단독 할인으로 만나보세요.
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16339
 DTSTART:20231226T010000Z
-SUMMARY:변하지않는 클래식
-UID:fbac6199-fc67-4a29-a702-c7d97237f481@fbac.org
+SUMMARY:[29CM] 브랜드 세일 - 리파인드902
+UID:bb7c9364-5aa0-4fcb-af33-390744d9c1b3@bb7c.org
 END:VEVENT
 END:VCALENDAR

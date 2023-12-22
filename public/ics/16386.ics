@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:락피쉬웨더웨어가 그린 겨울의 모습\n\n신년 모임을 위한 따뜻한 겨울 신발을 한곳에 모았어요. 최대 37% 할인
 DTEND:20240115T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16386
 DTSTART:20240102T010000Z
-SUMMARY:락피쉬웨더웨어가 그린 겨울의 모습
-UID:f31e1a3a-7434-4e40-af53-869a1ccad1b9@f31e.org
+SUMMARY:[29CM] 브랜드 세일 - 락피쉬웨더웨어
+UID:00b93303-29c9-4f3a-8c2c-e27cc9413c86@00b9.org
 END:VEVENT
 END:VCALENDAR

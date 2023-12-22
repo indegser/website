@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:매일 들뜨는 기분\n\n에센셜하지만 감각적인 디테일로 마감된 부이의 피스들로 매일 더 들뜨는 기분을 만끽해보세요.
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16262
 DTSTART:20231227T010000Z
-SUMMARY:매일 들뜨는 기분
-UID:65a43e5c-219e-43ea-a6b9-4273a3af215e@65a4.org
+SUMMARY:[29CM] 브랜드 세일 - 부이
+UID:7f9915a3-da97-40ec-a409-b79eff4bc012@7f99.org
 END:VEVENT
 END:VCALENDAR

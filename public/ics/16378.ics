@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:클래식한 무드\n\n하우스 오브 폰드의 홀리데이 컬렉션은  겨울의 따스함에 특별함을 더해줄거예요.
 DTEND:20240110T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16378
 DTSTART:20240104T010000Z
-SUMMARY:클래식한 무드
-UID:d81c10a4-ff6a-464b-a15e-545b0f8a962b@d81c.org
+SUMMARY:[29CM] 브랜드 세일 - 하우스 오브 폰드
+UID:dd0b686c-12a0-4163-a06f-e2946e25d3e9@dd0b.org
 END:VEVENT
 END:VCALENDAR

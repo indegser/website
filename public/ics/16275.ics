@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:72시간의 혜택\n\n고급스러운 무드로 사랑받는 리이 브랜드의 단독 할인 소식을 전합니다. 최대 40% 세일
 DTEND:20231226T010000Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16275
 DTSTART:20231223T010000Z
-SUMMARY:72시간의 혜택
-UID:0d7d7b55-35cf-4461-93bb-8ec2754c07ed@0d7d.org
+SUMMARY:[29CM] 브랜드 세일 - 리이
+UID:39c359ac-ccc4-4da0-be4c-7c89abe1825e@39c3.org
 END:VEVENT
 END:VCALENDAR

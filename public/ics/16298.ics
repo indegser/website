@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:미니멀리즘의 데일리웨어\n\n주앙옴므는 높은 퀄리티와 합리적인 가치를 추구하는 컨템포러리 브랜드입니다. 미니멀리즘과 놈코어룩을 기반으로 기능성과 디테일이 녹아있는 데일리웨어를 지향합니다.
 DTEND:20240115T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16298
 DTSTART:20240105T010000Z
-SUMMARY:미니멀리즘의 데일리웨어
-UID:7b6f6700-802d-4555-a56c-491308a0905d@7b6f.org
+SUMMARY:[29CM] 브랜드 세일 - 주앙옴므
+UID:ef0ed75f-625e-49c5-9a9a-66e5c769fd0d@ef0e.org
 END:VEVENT
 END:VCALENDAR

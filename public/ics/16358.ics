@@ -2,9 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
+DESCRIPTION:따뜻하게 포인트 더하기\n\n다채로운 컬러가 매력적인 킬리만의 장갑과 양말을 단독 특가로 만나보세요
 DTEND:20240102T145900Z
+LOCATION:https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/16358
 DTSTART:20231226T010000Z
-SUMMARY:따뜻하게 포인트 더하기
-UID:ef607df7-24a0-4969-90a4-b520e9fd4104@ef60.org
+SUMMARY:[29CM] 브랜드 세일 - 킬리만
+UID:93653865-0bff-4a36-adc1-2f643d4c38b1@9365.org
 END:VEVENT
 END:VCALENDAR
