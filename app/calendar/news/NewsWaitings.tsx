@@ -7,6 +7,7 @@ export const NewsWaitings = () => {
         <Text>기대중인 사람</Text>
       </Headline>
       <Border />
+      <div></div>
     </Container>
   );
 };
