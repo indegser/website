@@ -7,13 +7,13 @@ export const NewsWaitings = () => {
         <Text>기대중인 사람</Text>
       </Headline>
       <Border />
-      <div></div>
     </Container>
   );
 };
 
 const Container = styled.div`
   padding: 0 20px;
+  padding-top: 20px;
 `;
 
 const Headline = styled.div`

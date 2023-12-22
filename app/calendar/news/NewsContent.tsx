@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
+import Balancer from 'react-wrap-balancer';
 import { Waitings } from '../@shared/Waitings';
 import { NewsType } from '../@shared/type';
 
@@ -17,8 +18,12 @@ export const NewsContent = ({ news }: Props) => {
       <Container>
         <div>
           <Date>{formatted}</Date>
-          <Title>{news.title}</Title>
-          <Desc>{news.description}</Desc>
+          <Title>
+            <Balancer>{news.title}</Balancer>
+          </Title>
+          <Desc>
+            <Balancer>{news.description}</Balancer>
+          </Desc>
         </div>
       </Container>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -37,6 +42,7 @@ const Container = styled.div`
 
 const Title = styled.div`
   color: #000;
+  word-break: keep-all;
   text-align: center;
   font-size: 24px;
   font-style: normal;
@@ -61,6 +67,7 @@ const Desc = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 21px */
+  word-break: keep-all;
 `;
 
 const WaitingsContainer = styled.div`
