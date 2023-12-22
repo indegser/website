@@ -5,8 +5,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
-import { Providers } from './providers';
-
 import { Toaster } from '@/components/ui/toaster';
 import { jetBrainsMonoFont, pretendardFont } from 'components/theme';
 import { getURL } from 'lib/constants';
@@ -30,14 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <body>
-        <Providers
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main className="min-h-screen w-full">{children}</main>
-        </Providers>
+        <main className="min-h-screen w-full">{children}</main>
         <Analytics />
         <Toaster />
         <SpeedInsights />
