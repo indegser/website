@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import { NewsCover } from './@shared/NewsCover';
 import { NewsProduct } from './@shared/NewsProduct';
 import { Waitings } from './@shared/Waitings';
 import { NewsType } from './@shared/type';
@@ -16,7 +17,7 @@ export const Launching = ({ item }: Props) => {
     <Container>
       <Link href={`/calendar/news/${item.id}`}>
         <Cover>
-          <Image src={cover.href} />
+          <NewsCover imageUrl={cover.href} />
           <Content>
             <PromotionType>신상 발매</PromotionType>
             <BrandName>{item.frontBrandNameKor}</BrandName>
@@ -60,7 +61,9 @@ const Cover = styled.div`
   margin: 0 20px 15px 20px;
 `;
 
-const Content = styled.div``;
+const Content = styled.div`
+  position: relative;
+`;
 
 const PromotionType = styled.div`
   color: rgba(255, 255, 255, 0.8);
@@ -82,16 +85,6 @@ const BrandName = styled.div`
   font-weight: 600;
   line-height: normal;
   padding-top: 6px;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: -1;
 `;
 
 const ProductList = styled.div`

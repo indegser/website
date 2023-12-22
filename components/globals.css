@@ -33,10 +33,14 @@
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
+  }
 
-    *::-webkit-scrollbar {
-      display: none;
-    }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   }
 
   .dark {
