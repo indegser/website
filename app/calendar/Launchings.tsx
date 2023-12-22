@@ -4,7 +4,11 @@ import { NewsByDate } from './@shared/news_by_date';
 import { NewsKeyType } from './@shared/type';
 import { Launching } from './Launching';
 
-export const Launchings = () => {
+interface Props {
+  title?: string;
+}
+
+export const Launchings = ({ title = '발매 예정' }: Props) => {
   const searchParams = useSearchParams();
   const queryId = searchParams.get('id');
   const data = NewsByDate[(queryId + 'T') as NewsKeyType];
@@ -13,7 +17,7 @@ export const Launchings = () => {
 
   return (
     <Container>
-      <Title>발매 예정</Title>
+      <Title>{title}</Title>
       <List>
         {data.map((item) => {
           return <Launching key={item.id} item={item} />;

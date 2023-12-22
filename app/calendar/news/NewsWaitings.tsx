@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { faker } from '@faker-js/faker';
+import Link from 'next/link';
 
 const users = new Array(10).fill(true).map(() => {
   return {
@@ -19,24 +20,28 @@ export const NewsWaitings = () => {
         {users.map((user) => {
           return (
             <Waiting key={user.id}>
-              <Layout>
-                <Avatar src={user.avatar} />
-                <div style={{ flex: '1 1' }}>
-                  <DisplayName>{user.id}</DisplayName>
-                  <Stat>관심 이벤트 4</Stat>
-                </div>
-                <div style={{ flex: '0 0 auto' }}>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M7.5 5L12.5 10L7.5 15" stroke="#C0C0C0" />
-                  </svg>
-                </div>
-              </Layout>
+              <Link
+                href={`/calendar/user/${user.id}?avatar=${user.avatar}&id=20231225`}
+              >
+                <Layout>
+                  <Avatar src={user.avatar} />
+                  <div style={{ flex: '1 1' }}>
+                    <DisplayName>{user.id}</DisplayName>
+                    <Stat>관심 이벤트 4</Stat>
+                  </div>
+                  <div style={{ flex: '0 0 auto' }}>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M7.5 5L12.5 10L7.5 15" stroke="#C0C0C0" />
+                    </svg>
+                  </div>
+                </Layout>
+              </Link>
             </Waiting>
           );
         })}
