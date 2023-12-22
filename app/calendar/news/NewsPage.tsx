@@ -19,7 +19,7 @@ export const NewsPage = ({ params: { id } }: { params: { id: string } }) => {
       <NewsContent news={news} />
       <NewsProductList news={news} />
       <NewsWaitings />
-      <NewsSubscribe />
+      <NewsSubscribe id={news.id} />
     </Global>
   );
 };
