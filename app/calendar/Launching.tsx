@@ -52,7 +52,7 @@ const PromotionType = styled.div`
   color: rgba(255, 255, 255, 0.8);
 
   text-align: center;
-  font-family: Pretendard;
+
   font-size: 13px;
   font-style: normal;
   font-weight: 600;
@@ -62,7 +62,7 @@ const PromotionType = styled.div`
 const BrandName = styled.div`
   color: #fff;
   text-align: center;
-  font-family: Pretendard;
+
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -87,4 +87,6 @@ const ProductList = styled.div`
   gap: 10px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  scroll-padding: 0 20px;
+  padding: 0 20px;
 `;

@@ -1,15 +1,38 @@
 import styled from '@emotion/styled';
+import dayjs from 'dayjs';
+import isoWeek from 'dayjs/plugin/isoWeek';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+
+dayjs.extend(isoWeek);
+const now = dayjs();
+
+const timeline = new Array(30)
+  .fill(true)
+  .map((_, index) => index + 1)
+  .map((add) => {
+    const added = now.add(add, 'day');
+    return {
+      id: added.format('YYYYMMDD'),
+      date: added.date(),
+      month: added.month() + 1 + '월',
+    };
+  });
 
 export const Timeline = () => {
-  const timeline = [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+  const searchParams = useSearchParams();
+  const queryId = searchParams.get('id');
+
   return (
     <Container>
-      {timeline.map((date, index) => {
+      {timeline.map(({ id, date, month }) => {
         return (
-          <Chip key={date} data-active={index === 1}>
-            <Day>Today</Day>
-            <Date>{date}</Date>
-          </Chip>
+          <Link key={id} href={{ pathname: '/calendar', query: { id } }}>
+            <Chip data-active={id === queryId}>
+              <Day>{month}</Day>
+              <Date>{date}</Date>
+            </Chip>
+          </Link>
         );
       })}
     </Container>
@@ -20,8 +43,9 @@ const Container = styled.div`
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  gap: 3.33px;
+  scroll-padding: 0 13px;
   padding: 0 13px;
+  gap: 3.33px;
   padding-bottom: 10px;
   border-bottom: 1px solid #f4f4f4;
 `;
@@ -35,7 +59,6 @@ const Day = styled.div`
 `;
 
 const Date = styled.div`
-  font-family: Pretendard;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;

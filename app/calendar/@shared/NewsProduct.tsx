@@ -26,6 +26,7 @@ const Container = styled.div`
   gap: 16px;
   position: relative;
   padding: 10px 0;
+  flex: 0 0 auto;
   scroll-snap-align: start;
 
   &[data-minimal='true'] {
@@ -51,7 +52,7 @@ const BrandName = styled.div`
   white-space: nowrap;
 
   /* text-xs-bold */
-  font-family: Pretendard;
+
   font-size: 11px;
   font-style: normal;
   font-weight: 700;

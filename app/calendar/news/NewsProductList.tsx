@@ -30,7 +30,7 @@ const Headline = styled.div`
 
 const Text = styled.div`
   color: #000;
-  font-family: Pretendard;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
