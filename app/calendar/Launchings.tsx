@@ -9,6 +9,8 @@ export const Launchings = () => {
   const queryId = searchParams.get('id');
   const data = NewsByDate[(queryId + 'T') as NewsKeyType];
 
+  if (!data) return null;
+
   return (
     <Container>
       <Title>발매 예정</Title>
