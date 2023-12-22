@@ -80,7 +80,6 @@ const Title = styled.div`
     'liga' off;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: Campton;
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
@@ -95,7 +94,6 @@ const Price = styled.div`
     'liga' off;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: Campton;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
