@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { faker } from '@faker-js/faker';
-import { useMemo } from 'react';
 
 type Props = {
   type?: 'dark' | 'light';
@@ -13,7 +12,7 @@ export const Waitings = ({ type = 'light' }: Props) => {
     return { user, avatar };
   });
 
-  const count = useMemo(() => Math.ceil(Math.random() * 100000), []);
+  // const count = useMemo(() => Math.ceil(Math.random() * 100000), []);
 
   return (
     <Container>
@@ -27,7 +26,7 @@ export const Waitings = ({ type = 'light' }: Props) => {
         })}
       </List>
       <Text style={{ color: type === 'dark' ? '#000' : '#fff' }}>
-        {count.toLocaleString()}명이 기대하고 있어요.
+        {`10,234`}명이 기대하고 있어요.
       </Text>
     </Container>
   );

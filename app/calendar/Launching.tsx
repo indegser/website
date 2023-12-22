@@ -20,7 +20,9 @@ export const Launching = ({ item }: Props) => {
           <Content>
             <PromotionType>신상 발매</PromotionType>
             <BrandName>{item.frontBrandNameKor}</BrandName>
-            <Waitings />
+            <WaitingsContainer>
+              <Waitings />
+            </WaitingsContainer>
           </Content>
         </Cover>
       </Link>
@@ -80,7 +82,6 @@ const BrandName = styled.div`
   font-weight: 600;
   line-height: normal;
   padding-top: 6px;
-  padding-bottom: 12px;
 `;
 
 const Image = styled.img`
@@ -101,4 +102,10 @@ const ProductList = styled.div`
   scroll-snap-type: x mandatory;
   scroll-padding: 0 20px;
   padding: 0 20px;
+`;
+
+const WaitingsContainer = styled.div`
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.21);
 `;
