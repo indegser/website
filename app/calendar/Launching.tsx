@@ -7,16 +7,17 @@ import { NewsType } from './@shared/type';
 
 interface Props {
   item: NewsType;
+  isStandalone?: boolean;
 }
 
-export const Launching = ({ item }: Props) => {
+export const Launching = ({ item, isStandalone = false }: Props) => {
   const cover = new URL(item.coverImageUrl);
   cover.searchParams.set('width', '600');
 
   return (
     <Container>
       <Link href={`/calendar/news/${item.id}`}>
-        <Cover>
+        <Cover data-isStandalone={isStandalone}>
           <NewsCover imageUrl={cover.href} />
           <Content>
             <PromotionType>신상 발매</PromotionType>
@@ -28,18 +29,20 @@ export const Launching = ({ item }: Props) => {
         </Cover>
       </Link>
       <div>
-        <ProductList>
-          {item.products.map((product) => {
-            return (
-              <NewsProduct
-                key={product.productId}
-                isMinimal
-                product={product}
-                displayStartAt={item.displayStartAt}
-              />
-            );
-          })}
-        </ProductList>
+        {isStandalone ? null : (
+          <ProductList>
+            {item.products.map((product) => {
+              return (
+                <NewsProduct
+                  key={product.productId}
+                  isMinimal
+                  product={product}
+                  displayStartAt={item.displayStartAt}
+                />
+              );
+            })}
+          </ProductList>
+        )}
       </div>
     </Container>
   );
@@ -47,6 +50,8 @@ export const Launching = ({ item }: Props) => {
 
 const Container = styled.div`
   width: 100%;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
 `;
 
 const Cover = styled.div`
@@ -59,6 +64,11 @@ const Cover = styled.div`
   overflow: hidden;
   position: relative;
   margin: 0 20px 15px 20px;
+
+  &[data-isStandalone='true'] {
+    margin: 0;
+    width: 100%;
+  }
 `;
 
 const Content = styled.div`
