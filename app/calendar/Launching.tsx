@@ -17,7 +17,7 @@ export const Launching = ({ item, isStandalone = false }: Props) => {
   return (
     <Container>
       <Link href={`/calendar/news/${item.id}`}>
-        <Cover data-isStandalone={isStandalone}>
+        <Cover data-isstandalone={isStandalone}>
           <NewsCover imageUrl={cover.href} />
           <Content>
             <PromotionType>신상 발매</PromotionType>
@@ -65,7 +65,7 @@ const Cover = styled.div`
   position: relative;
   margin: 0 20px 15px 20px;
 
-  &[data-isStandalone='true'] {
+  &[data-isstandalone='true'] {
     margin: 0;
     width: 100%;
   }
