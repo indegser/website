@@ -1,0 +1,64 @@
+import styled from '@emotion/styled';
+
+export const Timeline = () => {
+  const timeline = [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+  return (
+    <Container>
+      {timeline.map((date, index) => {
+        return (
+          <Chip key={date} data-active={index === 1}>
+            <Day>Today</Day>
+            <Date>{date}</Date>
+          </Chip>
+        );
+      })}
+    </Container>
+  );
+};
+
+const Container = styled.div`
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 3.33px;
+  padding: 0 13px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f4f4f4;
+`;
+
+const Day = styled.div`
+  color: var(--scale-gray-400, #a0a0a0);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+const Date = styled.div`
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+`;
+
+const Chip = styled.div`
+  display: flex;
+  width: 47px;
+  padding: 10px 11px;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  scroll-snap-align: start;
+
+  &[data-active='true'] {
+    border-radius: 9px;
+    background: #000;
+
+    ${Date}, ${Day} {
+      color: white;
+    }
+  }
+`;
