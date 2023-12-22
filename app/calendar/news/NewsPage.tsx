@@ -24,4 +24,6 @@ export const NewsPage = ({ params: { id } }: { params: { id: string } }) => {
   );
 };
 
-const Global = styled.div``;
+const Global = styled.div`
+  padding-bottom: 80px;
+`;
