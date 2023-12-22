@@ -1,9 +1,14 @@
 import styled from '@emotion/styled';
+import { NewsType } from '../@shared/type';
 
-export const NewsCover = () => {
+interface Props {
+  news: NewsType;
+}
+
+export const NewsCover = ({ news }: Props) => {
   return (
     <Container>
-      <img src="https://img.29cm.co.kr/cms/202312/11eea068820e6b7683775b2a0e711839.jpg?width=2000&q=75" />
+      <img src={news.coverImageUrl} />
     </Container>
   );
 };

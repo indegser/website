@@ -1,16 +1,21 @@
 'use client';
 
 import styled from '@emotion/styled';
+import { NewsById } from '../@shared/news_by_id';
+import { NewsIdType } from '../@shared/type';
 import { NewsContent } from './NewsContent';
 import { NewsCover } from './NewsCover';
 import { NewsProductList } from './NewsProductList';
 
-export const NewsPage = () => {
+export const NewsPage = ({ params: { id } }: { params: { id: string } }) => {
+  const news = NewsById[id as NewsIdType];
+  if (!news) return null;
+
   return (
     <Global>
-      <NewsCover />
-      <NewsContent />
-      <NewsProductList />
+      <NewsCover news={news} />
+      <NewsContent news={news} />
+      <NewsProductList news={news} />
     </Global>
   );
 };

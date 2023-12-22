@@ -1,22 +1,34 @@
 import styled from '@emotion/styled';
+import dayjs from 'dayjs';
+import { NewsType } from './type';
 
 interface Props {
+  product: NewsType['products'][0];
   isMinimal?: boolean;
+  displayStartAt: string;
 }
 
-export const NewsProduct = ({ isMinimal = false }: Props) => {
+export const NewsProduct = ({
+  isMinimal = false,
+  product,
+  displayStartAt,
+}: Props) => {
+  const formatted = dayjs(displayStartAt)
+    .add(9, 'hour')
+    .format('MM/DD H시 발매');
+
+  const cover = new URL(product.imageUrl);
+  cover.searchParams.set('width', isMinimal ? '120' : '240');
+
   return (
     <Container data-minimal={isMinimal}>
-      <Cover
-        data-minimal={isMinimal}
-        src="https://img.29cm.co.kr/item/202311/11ee79945954947983bcc57fbcbfdbfd.jpg?width=600"
-      />
+      <Cover data-minimal={isMinimal} src={cover.href} />
       <Content data-minimal={isMinimal}>
-        <BrandName>유메르</BrandName>
-        <Title>엘르 트리밍 퍼 재킷 (Camel beige)</Title>
-        <Price>296200</Price>
+        <BrandName>{product.frontBrandNameKor}</BrandName>
+        <Title>{product.name}</Title>
+        <Price>{product.consumerPrice.toLocaleString()}</Price>
       </Content>
-      {isMinimal ? null : <Teaser>12/14 10시 발매</Teaser>}
+      {isMinimal ? null : <Teaser>{formatted}</Teaser>}
     </Container>
   );
 };
@@ -31,6 +43,7 @@ const Container = styled.div`
 
   &[data-minimal='true'] {
     padding: 0;
+    width: 265px;
   }
 `;
 
@@ -106,6 +119,7 @@ const Teaser = styled.div`
 const Content = styled.div`
   padding: 22px 0;
   position: relative;
+  overflow: hidden;
 
   &[data-minimal='true'] {
     padding: 5px 0;

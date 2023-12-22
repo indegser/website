@@ -1,9 +1,12 @@
 import styled from '@emotion/styled';
 import { NewsProduct } from '../@shared/NewsProduct';
+import { NewsType } from '../@shared/type';
 
-export const NewsProductList = () => {
-  const items = ['1', '2', '3'];
+interface Props {
+  news: NewsType;
+}
 
+export const NewsProductList = ({ news }: Props) => {
   return (
     <Container>
       <Headline>
@@ -11,8 +14,14 @@ export const NewsProductList = () => {
       </Headline>
       <Border />
       <div>
-        {items.map((item) => {
-          return <NewsProduct key={item} />;
+        {news.products.map((product) => {
+          return (
+            <NewsProduct
+              key={product.productId}
+              product={product}
+              displayStartAt={news.displayStartAt}
+            />
+          );
         })}
       </div>
     </Container>

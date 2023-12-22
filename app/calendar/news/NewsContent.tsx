@@ -1,17 +1,24 @@
 import styled from '@emotion/styled';
+import dayjs from 'dayjs';
 import { Waitings } from '../@shared/Waitings';
+import { NewsType } from '../@shared/type';
 
-export const NewsContent = () => {
+interface Props {
+  news: NewsType;
+}
+
+export const NewsContent = ({ news }: Props) => {
+  const formatted = dayjs(news.displayStartAt)
+    .add(9, 'hour')
+    .format('MM월 DD일 H시');
+
   return (
     <div>
       <Container>
         <div>
-          <Date>12월 14일 10시</Date>
-          <Title>유메르 2023 F/W</Title>
-          <Desc>
-            유리와 다양한 소재를 사용한 핸드메이드 주얼리 포틀의 발매를 알려요.
-            29CM에서 가장 먼저 만나볼 수 있어요
-          </Desc>
+          <Date>{formatted}</Date>
+          <Title>{news.title}</Title>
+          <Desc>{news.description}</Desc>
         </div>
       </Container>
       <div style={{ display: 'flex', justifyContent: 'center' }}>

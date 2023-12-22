@@ -1,14 +1,20 @@
 import styled from '@emotion/styled';
+import { useSearchParams } from 'next/navigation';
+import { NewsByDate } from './@shared/news_by_date';
+import { NewsKeyType } from './@shared/type';
 import { Launching } from './Launching';
 
 export const Launchings = () => {
-  const list = [1, 2, 3, 4, 5];
+  const searchParams = useSearchParams();
+  const queryId = searchParams.get('id');
+  const data = NewsByDate[(queryId + 'T') as NewsKeyType];
+
   return (
     <Container>
       <Title>발매 예정</Title>
       <List>
-        {list.map((item) => {
-          return <Launching key={item.toString()} />;
+        {data.map((item) => {
+          return <Launching key={item.id} item={item} />;
         })}
       </List>
     </Container>

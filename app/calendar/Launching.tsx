@@ -2,27 +2,39 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 import { NewsProduct } from './@shared/NewsProduct';
 import { Waitings } from './@shared/Waitings';
+import { NewsType } from './@shared/type';
 
-export const Launching = () => {
-  const id = '1';
-  const items = [1, 2, 3];
+interface Props {
+  item: NewsType;
+}
+
+export const Launching = ({ item }: Props) => {
+  const cover = new URL(item.coverImageUrl);
+  cover.searchParams.set('width', '600');
 
   return (
     <Container>
-      <Link href={`/calendar/news/${id}`}>
+      <Link href={`/calendar/news/${item.id}`}>
         <Cover>
-          <Image src="https://img.29cm.co.kr/cms/202312/11eea068820e6b7683775b2a0e711839.jpg?width=2000&q=75" />
+          <Image src={cover.href} />
           <Content>
             <PromotionType>신상 발매</PromotionType>
-            <BrandName>이스트우드</BrandName>
+            <BrandName>{item.frontBrandNameKor}</BrandName>
             <Waitings />
           </Content>
         </Cover>
       </Link>
       <div>
         <ProductList>
-          {items.map((item) => {
-            return <NewsProduct isMinimal key={item} />;
+          {item.products.map((product) => {
+            return (
+              <NewsProduct
+                key={product.productId}
+                isMinimal
+                product={product}
+                displayStartAt={item.displayStartAt}
+              />
+            );
           })}
         </ProductList>
       </div>
