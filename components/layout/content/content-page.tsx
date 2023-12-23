@@ -19,8 +19,8 @@ export const ContentPage = (props: Props) => {
       <Suspense fallback={<></>}>
         <ContentRouter />
       </Suspense>
+      <ContentHeadline id={id} />
       <PageContainer>
-        <ContentHeadline id={id} />
         <NotionContent id={id} />
         <Feedback />
       </PageContainer>

@@ -1,7 +1,6 @@
 import { ContentBlur } from './content-blur';
 import { ContentCover } from './content-cover';
 
-import { PageContent } from 'components/atoms/Container';
 import { Balancer } from 'components/Balancer';
 import { pageApi } from 'lib/supabase/page.api';
 
@@ -14,26 +13,25 @@ export const ContentHeadline = async (props: Props) => {
   const { cover, title, excerpt } = data!;
 
   return (
-    <PageContent>
-      <div className="pt-8">
-        <h1 className="my-0 text-4xl font-black leading-tight text-gray-900 dark:text-gray-100 dark:text-opacity-70 sm:text-6xl sm:leading-none">
-          <Balancer>{title}</Balancer>
-        </h1>
-      </div>
+    <div>
       {cover ? (
-        <section className="relative -mx-5 my-8 aspect-video overflow-hidden">
+        <section className="relative mb-8 aspect-[2/3] overflow-hidden md:aspect-video">
           <ContentCover src={cover} alt={title} />
-          <div className="relative grid h-full grid-rows-2">
-            <div></div>
-            <div className="relative">
+          <div className="relative flex h-full items-end">
+            <div className="relative h-1/3 w-full">
               <ContentBlur />
-              <div className="relative line-clamp-2 flex h-full items-end p-8 pb-4 text-xs text-gray-200/75 sm:pb-8">
-                {excerpt}
+              <div className="relative flex flex-col gap-4 px-5 pt-5">
+                <h1 className="my-0 break-keep text-4xl font-black italic leading-none text-gray-100 text-opacity-95">
+                  <Balancer>{title}</Balancer>
+                </h1>
+                <div className="relative line-clamp-2 flex h-full items-end text-sm text-gray-100 text-opacity-90">
+                  {excerpt}
+                </div>
               </div>
             </div>
           </div>
         </section>
       ) : null}
-    </PageContent>
+    </div>
   );
 };
