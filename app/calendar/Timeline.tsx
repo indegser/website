@@ -53,9 +53,8 @@ const Container = styled.div`
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-padding: 0 13px;
-  padding: 0 13px;
+  padding: 10px 13px;
   gap: 3.33px;
-  padding-bottom: 10px;
   border-bottom: 1px solid #f4f4f4;
 `;
 

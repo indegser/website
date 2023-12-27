@@ -9,7 +9,7 @@ interface Props {
   title?: string;
 }
 
-export const Launchings = ({ title = '이날의 소식' }: Props) => {
+export const Launchings = ({ title = '할인 예정 소식' }: Props) => {
   const searchParams = useSearchParams();
   const queryId = searchParams.get('id');
   const data = NewsByDate[(queryId + 'T') as NewsKeyType];
