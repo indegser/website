@@ -7,7 +7,7 @@ import { Timeline } from './Timeline';
 export const CalendarPage = () => {
   return (
     <Global>
-      <Headline>신상 발매 캘린더</Headline>
+      <Headline>할인 예정 캘린더</Headline>
       <Timeline />
       <Launchings />
     </Global>
