@@ -54,7 +54,7 @@ export const Launching = ({
   return (
     <Container ref={ref}>
       <Link
-        href={`app29cm://web//https://indegser-git-feat-hackathon-indegser.vercel.app/news/${item.id}`}
+        href={`app29cm://web/https://indegser-git-feat-hackathon-indegser.vercel.app/news/${item.id}`}
         onClick={handleClick}
       >
         <Cover data-isstandalone={isStandalone}>
