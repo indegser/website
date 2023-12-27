@@ -29,6 +29,8 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   position: absolute;
+  border-radius: 8px;
+  overflow: hidden;
 `;
 
 const MaskContainer = styled.div`
@@ -43,6 +45,8 @@ const Mask = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
+  border-radius: 8px;
+  overflow: hidden;
   mask-image: linear-gradient(
     to bottom,
     transparent,

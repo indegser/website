@@ -54,7 +54,7 @@ export const Launching = ({
   return (
     <Container ref={ref}>
       <Link
-        href={`app29cm://web/https://indegser-git-feat-hackathon-indegser.vercel.app/news/${item.id}`}
+        href={`app29cm://web/https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/${item.id}`}
         onClick={handleClick}
       >
         <Cover data-isstandalone={isStandalone}>
@@ -105,8 +105,6 @@ const Cover = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 8px;
-  overflow: hidden;
   position: relative;
   margin: 0 20px 15px 20px;
 

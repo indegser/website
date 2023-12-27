@@ -2,14 +2,14 @@ import styled from '@emotion/styled';
 
 type Props = {
   type?: 'dark' | 'light';
-  likeCount: number;
+  likeCount: string;
 };
 
-export const Waitings = ({ type = 'light', likeCount = 0 }: Props) => {
+export const Waitings = ({ type = 'light', likeCount = '1' }: Props) => {
   return (
     <Container>
       <Text style={{ color: type === 'dark' ? '#000' : '#fff' }}>
-        {likeCount}명이 기대하고 있어요.
+        {parseInt(likeCount).toLocaleString()}명이 기대하고 있어요.
       </Text>
     </Container>
   );
