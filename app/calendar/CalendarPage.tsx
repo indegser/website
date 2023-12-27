@@ -1,5 +1,6 @@
 'use client';
 
+import { VisitTracker } from '@/components/atoms/visit-tracker';
 import styled from '@emotion/styled';
 import { Launchings } from './Launchings';
 import { Timeline } from './Timeline';
@@ -7,6 +8,7 @@ import { Timeline } from './Timeline';
 export const CalendarPage = () => {
   return (
     <Global>
+      <VisitTracker params={[`visit_calendar_page`]} />
       <Headline>할인 예정 캘린더</Headline>
       <Timeline />
       <Launchings />

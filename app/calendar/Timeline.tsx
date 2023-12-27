@@ -1,3 +1,4 @@
+import { amplitude } from '@/lib/amplitude';
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import isoWeek from 'dayjs/plugin/isoWeek';
@@ -23,11 +24,19 @@ export const Timeline = () => {
   const searchParams = useSearchParams();
   const queryId = searchParams.get('id');
 
+  const handleClick = (id: string) => {
+    amplitude.track(`click_timeline`, { timelineId: id });
+  };
+
   return (
     <Container>
       {timeline.map(({ id, date, month }) => {
         return (
-          <Link key={id} href={{ pathname: '/calendar', query: { id } }}>
+          <Link
+            key={id}
+            href={{ pathname: '/calendar', query: { id } }}
+            onClick={() => handleClick(id)}
+          >
             <Chip data-active={id === queryId}>
               <Day>{month}</Day>
               <Date>{date}</Date>

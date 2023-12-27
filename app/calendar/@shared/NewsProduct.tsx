@@ -1,3 +1,4 @@
+import { amplitude } from '@/lib/amplitude';
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import Link from 'next/link';
@@ -7,12 +8,14 @@ interface Props {
   product: NewsType['products'][0];
   isMinimal?: boolean;
   displayStartAt: string;
+  eventId: number;
 }
 
 export const NewsProduct = ({
   isMinimal = false,
   product,
   displayStartAt,
+  eventId,
 }: Props) => {
   const formatted = dayjs(displayStartAt)
     .add(9, 'hour')
@@ -21,9 +24,17 @@ export const NewsProduct = ({
   const cover = new URL(product.imageUrl);
   cover.searchParams.set('width', isMinimal ? '120' : '240');
 
+  const handleClick = () => {
+    amplitude.track(`click_item`, {
+      eventId,
+      product,
+    });
+  };
+
   return (
     <Link
       href={`app29cm://web/https://product.29cm.co.kr/catalog/${product.productId}`}
+      onClick={handleClick}
     >
       <Container data-minimal={isMinimal}>
         <Cover data-minimal={isMinimal} src={cover.href} />

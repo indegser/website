@@ -1,5 +1,6 @@
 'use client';
 
+import { VisitTracker } from '@/components/atoms/visit-tracker';
 import styled from '@emotion/styled';
 import { NewsById } from '../@shared/news_by_id';
 import { NewsIdType } from '../@shared/type';
@@ -13,6 +14,7 @@ export const NewsPage = ({ params: { id } }: { params: { id: string } }) => {
 
   return (
     <Global>
+      <VisitTracker params={[`visit_event_page`, { eventId: id }]} />
       <NewsCover news={news} />
       <NewsContent news={news} />
       <NewsProductList news={news} />

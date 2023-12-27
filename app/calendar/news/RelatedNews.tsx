@@ -1,9 +1,4 @@
 import styled from '@emotion/styled';
-import { NewsById } from '../@shared/news_by_id';
-import { NewsIdType } from '../@shared/type';
-import { Launching } from '../Launching';
-
-const ids = ['16393', '16284', '16298'];
 
 export const RelatedNews = () => {
   return (
@@ -12,17 +7,6 @@ export const RelatedNews = () => {
         <Text>관련 이벤트</Text>
       </Headline>
       <Border />
-      <List>
-        {ids.map((id) => {
-          return (
-            <Launching
-              key={id}
-              item={NewsById[id as NewsIdType]}
-              isStandalone
-            />
-          );
-        })}
-      </List>
     </Container>
   );
 };

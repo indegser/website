@@ -1,5 +1,8 @@
+import { amplitude } from '@/lib/amplitude';
 import styled from '@emotion/styled';
+import { useInView } from 'framer-motion';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 import Balancer from 'react-wrap-balancer';
 import { NewsCover } from './@shared/NewsCover';
 import { NewsProduct } from './@shared/NewsProduct';
@@ -10,15 +13,47 @@ import { NewsType } from './@shared/type';
 interface Props {
   item: NewsType;
   isStandalone?: boolean;
+  timelineId: string;
+  position: number;
+  maxPosition: number;
 }
 
-export const Launching = ({ item, isStandalone = false }: Props) => {
+export const Launching = ({
+  item,
+  timelineId,
+  position,
+  maxPosition,
+  isStandalone = false,
+}: Props) => {
+  const ref = useRef<HTMLDivElement>(null);
   const cover = new URL(item.coverImageUrl);
   cover.searchParams.set('width', '600');
 
+  const isInView = useInView(ref, { amount: 'all' });
+
+  useEffect(() => {
+    if (isInView) {
+      amplitude.track(`view_event`, {
+        item,
+        timelineId,
+        position,
+        maxPosition,
+      });
+    }
+  }, [isInView, position, maxPosition, timelineId, item]);
+
+  const handleClick = () => {
+    amplitude.track('click_event', {
+      item,
+      timelineId,
+      position,
+      maxPosition,
+    });
+  };
+
   return (
-    <Container>
-      <Link href={`/calendar/news/${item.id}`}>
+    <Container ref={ref}>
+      <Link href={`/calendar/news/${item.id}`} onClick={handleClick}>
         <Cover data-isstandalone={isStandalone}>
           <NewsCover imageUrl={cover.href} />
           <Content>
@@ -42,6 +77,7 @@ export const Launching = ({ item, isStandalone = false }: Props) => {
                 <NewsProduct
                   key={product.productId}
                   isMinimal
+                  eventId={item.brandNewsId}
                   product={product}
                   displayStartAt={item.displayStartAt}
                 />

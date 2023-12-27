@@ -1,3 +1,4 @@
+import { VisitTracker } from '@/components/atoms/visit-tracker';
 import styled from '@emotion/styled';
 import { useSearchParams } from 'next/navigation';
 import { NewsByDate } from './@shared/news_by_date';
@@ -17,10 +18,22 @@ export const Launchings = ({ title = '이날의 소식' }: Props) => {
 
   return (
     <Container>
+      <VisitTracker
+        key={queryId}
+        params={[`view_timeline`, { timelineId: queryId }]}
+      />
       <Title>{title}</Title>
       <List>
-        {data.map((item) => {
-          return <Launching key={item.id} item={item} />;
+        {data.map((item, index) => {
+          return (
+            <Launching
+              key={item.id}
+              item={item}
+              timelineId={queryId!}
+              position={index + 1}
+              maxPosition={data.length}
+            />
+          );
         })}
       </List>
     </Container>

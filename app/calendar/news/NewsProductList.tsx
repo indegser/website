@@ -20,6 +20,7 @@ export const NewsProductList = ({ news }: Props) => {
             <NewsProduct
               key={product.productId}
               product={product}
+              eventId={news.brandNewsId}
               displayStartAt={news.displayStartAt}
             />
           );
