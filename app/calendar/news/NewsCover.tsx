@@ -8,8 +8,14 @@ interface Props {
 
 export const NewsCover = ({ news }: Props) => {
   const time = dayjs(news.displayStartAt);
+  const now = dayjs()
+    .set('h', time.hour() - 1)
+    .set('m', time.minute())
+    .set('s', time.second());
+
   const date = time.get('date') + '일';
   const month = time.get('month') + 1 + '월';
+  const diff = time.diff(now, 'day');
 
   return (
     <Container>
@@ -24,7 +30,7 @@ export const NewsCover = ({ news }: Props) => {
           <Date>{date}</Date>
         </Chip>
         <DiffBadge>
-          <BadgeText>내일</BadgeText>
+          <BadgeText>{`D-${diff}`}</BadgeText>
         </DiffBadge>
       </Mark>
     </Container>
@@ -156,4 +162,5 @@ const BadgeText = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 12px */
+  white-space: nowrap;
 `;

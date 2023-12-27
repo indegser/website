@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import Balancer from 'react-wrap-balancer';
 import { NewsCover } from './@shared/NewsCover';
 import { NewsProduct } from './@shared/NewsProduct';
 import { Waitings } from './@shared/Waitings';
@@ -21,8 +22,12 @@ export const Launching = ({ item, isStandalone = false }: Props) => {
         <Cover data-isstandalone={isStandalone}>
           <NewsCover imageUrl={cover.href} />
           <Content>
-            <PromotionType>{getPromotionType(item.category)}</PromotionType>
-            <BrandName>{item.frontBrandNameKor}</BrandName>
+            <PromotionType>{`${getPromotionType(
+              item.category,
+            )} 예정`}</PromotionType>
+            <BrandName>
+              <Balancer>{item.frontBrandNameKor}</Balancer>
+            </BrandName>
             <WaitingsContainer>
               <Waitings itemCount={item.products.length} />
             </WaitingsContainer>
@@ -96,6 +101,7 @@ const BrandName = styled.div`
   font-weight: 600;
   line-height: normal;
   padding-top: 6px;
+  word-break: keep-all;
 `;
 
 const ProductList = styled.div`

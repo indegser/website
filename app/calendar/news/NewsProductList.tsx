@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { NewsProduct } from '../@shared/NewsProduct';
+import { getPromotionType } from '../@shared/get-promotion-type';
 import { NewsType } from '../@shared/type';
 
 interface Props {
@@ -10,7 +11,7 @@ export const NewsProductList = ({ news }: Props) => {
   return (
     <Container>
       <Headline>
-        <Text>발매 예정 상품</Text>
+        <Text>{getPromotionType(news.category)} 예정 상품</Text>
       </Headline>
       <Border />
       <div>

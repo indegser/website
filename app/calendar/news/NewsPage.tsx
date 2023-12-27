@@ -6,9 +6,6 @@ import { NewsIdType } from '../@shared/type';
 import { NewsContent } from './NewsContent';
 import { NewsCover } from './NewsCover';
 import { NewsProductList } from './NewsProductList';
-import { NewsSubscribe } from './NewsSubscribe';
-import { NewsWaitings } from './NewsWaitings';
-import { RelatedNews } from './RelatedNews';
 
 export const NewsPage = ({ params: { id } }: { params: { id: string } }) => {
   const news = NewsById[id as NewsIdType];
@@ -19,9 +16,6 @@ export const NewsPage = ({ params: { id } }: { params: { id: string } }) => {
       <NewsCover news={news} />
       <NewsContent news={news} />
       <NewsProductList news={news} />
-      <NewsWaitings />
-      <RelatedNews />
-      <NewsSubscribe id={news.id} />
     </Global>
   );
 };

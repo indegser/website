@@ -1,7127 +1,4 @@
 export const NewsById = {
-  '16275': {
-    id: '16275',
-    title: '72시간의 혜택',
-    description:
-      '고급스러운 무드로 사랑받는 리이 브랜드의 단독 할인 소식을 전합니다. 최대 40% 세일',
-    category: 'BRAND_SALE',
-    cover_image_id: '197861',
-    front_brand_id: '6812',
-    brandNewsId: 16275,
-    displayStartAt: '2023-12-23T01:00:00.000000',
-    displayEndAt: '2023-12-26T01:00:00.000000',
-    frontBrandId: 6812,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e14a4f0c1be83772b34809ece8f.jpg',
-    frontBrandNameKor: '리이',
-    products: [
-      {
-        productId: 2302741,
-        name: 'HIGH NECK BELTED HERRINGBONE COAT',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 498000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/ee5deb31547b47549a672dc3434715c7_20231023165034.jpg',
-      },
-      {
-        productId: 2302733,
-        name: 'DOUBLE FACED AVIATOR JACKET',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 388000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/fd0727b20a544a02bacb006857735c3f_20231023164934.jpg',
-      },
-      {
-        productId: 2302739,
-        name: 'WOOL BLENED WIDE COLLAR COAT',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 628000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/1d6d979eed1b48dabd393bde5659a267_20231023165018.jpg',
-      },
-      {
-        productId: 2302735,
-        name: 'WIDE LAPEL OVERSIZE LONG COAT',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 548000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/711d50befe0b46bc99f3c49ec908007f_20231023165003.jpg',
-      },
-      {
-        productId: 2302744,
-        name: 'BELTED WOOL BLEND COAT SAND',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 498000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/12aa2fd87c2e4ea0b1d69595e44ce135_20231023165104.jpg',
-      },
-      {
-        productId: 2302702,
-        name: 'BOUCLE DUFFLE WOOL JACKET CREAM',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 388000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/ec8c3270c84a4fb795afdcd330741671_20231023164219.jpg',
-      },
-      {
-        productId: 2302704,
-        name: 'SOFT FAUX FUR JACKET',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 358000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/3bbc07f08ad1475b9a8060dec7f76a09_20231023164255.jpg',
-      },
-      {
-        productId: 2302729,
-        name: 'BALLOON SLEEVE BELTED ZIBELLIN COAT MIDNIGHT BLUE',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 598000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/8c7065f54a07402b8bd95f6463b0f46f_20231023164831.jpg',
-      },
-      {
-        productId: 2302731,
-        name: 'BALLOON SLEEVE BELTED ZIBELLIN COAT CAMEL',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 598000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/bb179744711049e28e1b06b308b53d48_20231023164846.jpg',
-      },
-      {
-        productId: 2302742,
-        name: 'BELTED WOOL BLEND COAT BLACK',
-        frontBrandId: 6812,
-        frontBrandNameKor: '리이',
-        consumerPrice: 498000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/23/76ef4649a1b54cf2bb8d3db9fb813801_20231023165048.jpg',
-      },
-    ],
-  },
-  '16276': {
-    id: '16276',
-    title: '기다리던 시즌오프',
-    description:
-      '비뮤즈맨션의 시즌오프 소식을 전해요. 지금 사랑받고 있는 상품과 함께 올해 마지막을 빛내보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '197864',
-    front_brand_id: '2659',
-    brandNewsId: 16276,
-    displayStartAt: '2023-12-23T01:00:00.000000',
-    displayEndAt: '2023-12-29T14:59:00.000000',
-    frontBrandId: 2659,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e160c061bf4b238132c664848fc.jpg',
-    frontBrandNameKor: '비뮤즈 맨션',
-    products: [
-      {
-        productId: 2315227,
-        name: 'Ribbed waving halfneck tee - Butter beige',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 49000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7de0f45ce92183bc1d92aab2deba.jpg',
-      },
-      {
-        productId: 2315215,
-        name: 'Boucle bell line skirt - Ivory',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 158000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b18c11131da5b39f17a8578744.jpg',
-      },
-      {
-        productId: 2315268,
-        name: 'Wide pleats skirt pants - Charcoal',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 168000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b2ed973e5ba5b34d5cdf3edd39.jpg',
-      },
-      {
-        productId: 2315192,
-        name: 'Boucle bell line skirt - Black',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 158000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b11d05307b83bc35add5fff847.jpg',
-      },
-      {
-        productId: 2315321,
-        name: 'Twinkle cable cardigan - Sky blue',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 178000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b4b8498af5a5b34f4e0560c0f9.jpg',
-      },
-      {
-        productId: 2315198,
-        name: 'Twinkle cable cardigan - Light beige',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 178000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b155b6964f8a7f7d61cabaa0d3.jpg',
-      },
-      {
-        productId: 2315246,
-        name: 'Detachable ribbon pleated dress - Black',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 238000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b23eec6d9b83bcf34ab302f6a9.jpg',
-      },
-      {
-        productId: 2315343,
-        name: 'Clasp half coat - 2colors',
-        frontBrandId: 2659,
-        frontBrandNameKor: '비뮤즈 맨션',
-        consumerPrice: 358000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b500ef42aba5b3157e50a7cfb8.jpg',
-      },
-    ],
-  },
-  '16344': {
-    id: '16344',
-    title: 'SNS속 인플루언서들이 착용한',
-    description:
-      '이번 홀리데이에는 페미닌한 무드로 고급스러움을 더해 줄 조이그라이슨 가방으로 다양하게 스타일링 해보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198447',
-    front_brand_id: '19868',
-    brandNewsId: 16344,
-    displayStartAt: '2023-12-23T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 19868,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f1e705cf75b91eba95847d819f7.jpg',
-    frontBrandNameKor: '조이그라이슨',
-    products: [
-      {
-        productId: 2328620,
-        name: '[조이그라이슨] 시에라 벌룬 숄더백 미디움 LW4SE5320_H5',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee843f7a49b1cf83bc23dfb091670c.jpg',
-      },
-      {
-        productId: 2328618,
-        name: '[조이그라이슨] 시에라 벌룬 숄더백 라지 LW4SE5330_EZ',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 238000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/13/eeb72ea539864fdda1f6c69c1af07b1a_20231113174055.jpg',
-      },
-      {
-        productId: 2329005,
-        name: '[조이그라이슨] 시에라 벌룬 백 참 LW4SX6320_H5',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 68000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/13/098766c754d54d6cb8e8674d281127fd_20231113173609.jpg',
-      },
-      {
-        productId: 2329006,
-        name: '[조이그라이슨] 시에라 벌룬 백 참 LW4SX6320_EZ',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 68000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/13/b26846a03680414e9fa024e5fab55bd8_20231113173556.jpg',
-      },
-      {
-        productId: 2328979,
-        name: '[조이그라이슨] 허드슨 푸퍼 숄더백 LW3AE7800_H5',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee843f90f4ea43a5b327eff5eb552d.jpg',
-      },
-      {
-        productId: 2324911,
-        name: '[조이그라이슨] 맨해튼 포켓 숄더백 나일론 LW4SE5740_91',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 298000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/13/8566931ab10b4e119cef977409a58ef9_20231113170958.jpg',
-      },
-      {
-        productId: 2324910,
-        name: '[조이그라이슨] 맨해튼 포켓 숄더백 LW4SD5730_10',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 378000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee843eb174e1b58a7fed2e02c86534.jpg',
-      },
-      {
-        productId: 2328626,
-        name: '[조이그라이슨] 시에라 벌룬 숄더백 미디움 LW4SE5320_EZ',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee843f719acbb9a5b3e36c17eeb807.jpg',
-      },
-      {
-        productId: 2328980,
-        name: '[조이그라이슨] 허드슨 푸퍼 숄더백 LW3AE7800_EZ',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee84400e69eb91a5b3f3e72f86b49b.jpg',
-      },
-      {
-        productId: 2361864,
-        name: '[조이그라이슨] 글램 마이크로 백 참 LW4SX6490_10',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 108000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/05/e8b9f3ea1f5c46e58e72c43763453fbb_20231205122502.jpg',
-      },
-    ],
-  },
-  '15909': {
-    id: '15909',
-    title: '마음을 전하기 딱 좋은 시기',
-    description:
-      '크리스마스라는 이유로 그동안 표현하지 못했던 마음을 표현해 보세요. 24일부터 26일까지 3일 동안 진행되는 삭스타즈의 72시간 타임특가가 절호의 기회에요!',
-    category: 'BRAND_SALE',
-    cover_image_id: '193057',
-    front_brand_id: '25800',
-    brandNewsId: 15909,
-    displayStartAt: '2023-12-23T15:00:00.000000',
-    displayEndAt: '2023-12-26T14:59:00.000000',
-    frontBrandId: 25800,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee94bd3e37fb4883774dd83094fdc6.jpg',
-    frontBrandNameKor: '삭스타즈',
-    products: [
-      {
-        productId: 2360957,
-        name: 'XMG302 헤비듀티 로우게이지 3P 기프트세트',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 42000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee974a9e06491c837729c76e82c2a6.jpg',
-      },
-      {
-        productId: 2361289,
-        name: 'XMG303 컬러 립 5P 기프트세트 ',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 28000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9a75caab29bc8377a7bdcdd969d0.jpg',
-      },
-      {
-        productId: 2360934,
-        name: 'XMG102 식스 코튼 블랜디드 삭스 1P 기프트',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 14300,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95c5c784826eb238e9ec7b34c9f7.jpg',
-      },
-      {
-        productId: 2363961,
-        name: 'XMG204 컬러 립 3P 기프트세트',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 17000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95c7abcbe1dc837799c93e46922d.jpg',
-      },
-      {
-        productId: 2360940,
-        name: 'XMG202 캐시미어 울 립 미드카프 2P 기프트세트',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 38000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95c71aa956cd91eb51a2a5e44bb2.jpg',
-      },
-      {
-        productId: 2360929,
-        name: 'XMG101 우먼 울 케이블 삭스 1P 기프트',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 16500,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95c4a08d096991ebd73eb3920224.jpg',
-      },
-      {
-        productId: 2360937,
-        name: 'XMG201 트위드 울 삭스 2P 기프트세트',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 26000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95c6f04179b8b238bb3f1d055fc0.jpg',
-      },
-      {
-        productId: 2265519,
-        name: 'STB001 남녀공용 컬러 립 크루 삭스 양말 (15 Colors)',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 5000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7b98fe292a3783bc19e70ca0d1ad.jpg',
-      },
-      {
-        productId: 2263281,
-        name: 'STB019 우먼 코튼 오버니 삭스 (5 Colors)',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 12500,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5b85d3e5e1d5a5b3b9c68f4faa16.jpg',
-      },
-      {
-        productId: 2360947,
-        name: 'XMG205 삭스타즈 패션양말 3P 기프트세트',
-        frontBrandId: 25800,
-        frontBrandNameKor: '삭스타즈',
-        consumerPrice: 26000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95c73fe53394837703e010283153.jpg',
-      },
-    ],
-  },
-  '16198': {
-    id: '16198',
-    title: '닥터마틴 베스트 상품 릴레이 특가 쿠폰전 3차',
-    description:
-      '인기 부츠부터 슈즈까지, 닥터마틴 인기 상품을 특별한 혜택으로 득템하세요!',
-    category: 'BRAND_SALE',
-    cover_image_id: '197024',
-    front_brand_id: '2118',
-    brandNewsId: 16198,
-    displayStartAt: '2023-12-24T01:00:00.000000',
-    displayEndAt: '2023-12-28T14:59:00.000000',
-    frontBrandId: 2118,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9b095b07e97791ebd1a900247c75.jpg',
-    frontBrandNameKor: '닥터마틴',
-    products: [
-      {
-        productId: 860453,
-        name: '[공식스토어] 닥터마틴 모노',
-        frontBrandId: 2118,
-        frontBrandNameKor: '닥터마틴',
-        consumerPrice: 210000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/10/22/2697b717d6a841eea62e0d9ac5ce9e8f_20201022145517.jpg',
-      },
-      {
-        productId: 859742,
-        name: '[공식스토어] 닥터마틴 1461',
-        frontBrandId: 2118,
-        frontBrandNameKor: '닥터마틴',
-        consumerPrice: 210000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/10/22/456e659aa5e84262ad30734c6e3671ad_20201022151629.jpg',
-      },
-      {
-        productId: 893068,
-        name: '[공식스토어] 닥터마틴 제이든',
-        frontBrandId: 2118,
-        frontBrandNameKor: '닥터마틴',
-        consumerPrice: 300000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/11/12/b38be2d135df4d9d87f7dc3a574e2109_20201112135431.jpg',
-      },
-      {
-        productId: 860552,
-        name: '[공식스토어] 닥터마틴 2976 모노',
-        frontBrandId: 2118,
-        frontBrandNameKor: '닥터마틴',
-        consumerPrice: 260000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/10/22/50bb57b4cb354399902a402ca5ee93f5_20201022143542.jpg',
-      },
-      {
-        productId: 860450,
-        name: '[공식스토어] 닥터마틴 폴리',
-        frontBrandId: 2118,
-        frontBrandNameKor: '닥터마틴',
-        consumerPrice: 210000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/04/21/3892cc0e88b04ba98221f62f27df899b_20220421152653.jpg',
-      },
-    ],
-  },
-  '16405': {
-    id: '16405',
-    title: '내추럴하고 사랑스러운 감성',
-    description:
-      '편안한 일상에 사랑스러운 감성의 컬러를 담은 어랜만의 무드를 최대 50%혜택과 함께 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '199074',
-    front_brand_id: '25864',
-    brandNewsId: 16405,
-    displayStartAt: '2023-12-24T01:00:00.000000',
-    displayEndAt: '2023-12-28T14:59:00.000000',
-    frontBrandId: 25864,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea070e0f83c7c8377e55432bdd91a.jpg',
-    frontBrandNameKor: '어랜',
-    products: [
-      {
-        productId: 2329253,
-        name: ' brush knitwear_ pink ',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 124000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7e7d27022e4583bc1f4ee2f2176d.jpg',
-      },
-      {
-        productId: 2347105,
-        name: '(half polar t-shirt long v)turtleneck polar t-shirt_charcoal',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 23000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89eae805c9d78a7fa1979959880c.jpg',
-      },
-      {
-        productId: 2334216,
-        name: ' wool mini skirt_beige',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 64000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee822635f4398fa5b325216d24253b.jpg',
-      },
-      {
-        productId: 2329254,
-        name: 'brush knitwear_ ivory',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 124000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7e7dde0eaf6d83bc3fdf46736ffc.jpg',
-      },
-      {
-        productId: 2334196,
-        name: ' corduroy pants_navy',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 124000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee821fe53ef7bba5b3a5bafa9800e0.jpg',
-      },
-      {
-        productId: 2329255,
-        name: 'brush knitwear_ air blue',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 124000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7e7e523359f583bc058df91621b0.jpg',
-      },
-      {
-        productId: 2245050,
-        name: '(5차_) twist turtlneck knitwear_oatmeal',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee55ae26f70ffda5b393a80dc9f72d.jpg',
-      },
-      {
-        productId: 2329252,
-        name: 'brush knitwear_wood',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 124000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7e7c76b7decba5b39d3e6ff6f933.jpg',
-      },
-      {
-        productId: 2334202,
-        name: 'corduroy pants_birck',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 124000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee822202d6469183bc15c56e9d0363.jpg',
-      },
-      {
-        productId: 2334207,
-        name: 'wool mini skirt_navy',
-        frontBrandId: 25864,
-        frontBrandNameKor: '어랜',
-        consumerPrice: 64000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8224653ddabfa5b35f30d55d469d.jpg',
-      },
-    ],
-  },
-  '16407': {
-    id: '16407',
-    title: '중복 혜택의 기회는 오늘로 종료돼요',
-    description:
-      '10% 브랜드 쿠폰 + 10% 장바구니 쿠폰 사용을 통해 더욱 합리적인 가격으로 만날 수 있어요! 지금 이 기회를 놓치지 마세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '199077',
-    front_brand_id: '18118',
-    brandNewsId: 16407,
-    displayStartAt: '2023-12-24T01:00:00.000000',
-    displayEndAt: '2023-12-24T14:59:00.000000',
-    frontBrandId: 18118,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea07138a6384cb23893ec042e96f6.jpg',
-    frontBrandNameKor: '니주르',
-    products: [
-      {
-        productId: 2244049,
-        name: '[캐시미어 블렌드] 벌룬 라운드 가디건_BLACK',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5397f0c6c75583bcf3e60cbf36ce.jpg',
-      },
-      {
-        productId: 2319477,
-        name: '라운드 니트  부클 버킷햇_2COLOR',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee791f19f5a597a5b301d699a473d0.jpg',
-      },
-      {
-        productId: 2338845,
-        name: '[29CM 단독_혜원착용] 2차리오더 리사이클 부클 크롭 벨 풀오버_2COLOR',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cf094dc5001a5b3dd68210168ba.jpg',
-      },
-      {
-        productId: 2371899,
-        name: '[5차 리오더]_ 캐시미어 블렌드 립브 바라클라바_3COLOR',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 39000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee539aea571b17a5b34722436be222.jpg',
-      },
-      {
-        productId: 2244045,
-        name: '[캐시미어 블렌드] 벌룬 라운드 가디건_BROWN',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee681621f04ec38a7f9b7d3dba318b.jpg',
-      },
-      {
-        productId: 2244026,
-        name: '[3차리오더]리사이클 부클 카라 버튼업 니트 자켓_OATMEAL',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee997c933543f0b238bfaff29642d2.jpg',
-      },
-      {
-        productId: 2243981,
-        name: '[29CM 단독_혜원착용]5차리오더_리사이클 부클 카라 버튼업 니트 자켓_COCOA',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5b6f6f8be2958a7f1ba518bfce0c.jpg',
-      },
-      {
-        productId: 2244091,
-        name: '[캐시미어 블렌드] 립브 브이넥 풀오버_LIGHT GREY',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6815f3d37f95a5b379d809246679.jpg',
-      },
-      {
-        productId: 2371404,
-        name: '캐시미어 암워머 와이드 머플러 세트_4COLOR',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 96300,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee997365458e52b2385f75d3eb5dc5.jpg',
-      },
-      {
-        productId: 2244014,
-        name: '[2차리오더] 리사이클 부클 카라 버튼업 니트 자켓_NAVY',
-        frontBrandId: 18118,
-        frontBrandNameKor: '니주르',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee53952f4186fd8a7fa13ad95795c5.jpg',
-      },
-    ],
-  },
-  '16408': {
-    id: '16408',
-    title: '지금이 기회예요',
-    description:
-      '루시르주의 중복 쿠폰 혜택의 기회는 오늘로 종료돼요. 늦지않은 연말, 다가오는 신년 준비를 루시루즈의 트렌디한 아이템과 함께해보는건 어때요?',
-    category: 'BRAND_SALE',
-    cover_image_id: '199079',
-    front_brand_id: '12721',
-    brandNewsId: 16408,
-    displayStartAt: '2023-12-24T01:00:00.000000',
-    displayEndAt: '2023-12-24T14:59:00.000000',
-    frontBrandId: 12721,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea071fda6ce8391eb9b6957544b74.jpg',
-    frontBrandNameKor: '루시르주',
-    products: [
-      {
-        productId: 2333805,
-        name: 'layered shirt off shoulder top (black)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837d8deddad7a5b3e17ca3f74d5b.jpg',
-      },
-      {
-        productId: 2333813,
-        name: 'Glitter String Turtleneck Sleeve (white)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 72000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837cf220e7bfa5b3cf23874ac4a1.jpg',
-      },
-      {
-        productId: 2333811,
-        name: 'Glitter String Turtleneck Sleeve (silver)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 72000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837d1a2dbdef8a7f97b3b701c667.jpg',
-      },
-      {
-        productId: 2333810,
-        name: 'Glitter String Turtleneck Sleeve (black)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 72000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837d629c38fd83bc6544b6e7becd.jpg',
-      },
-      {
-        productId: 2333807,
-        name: 'layered shirt off shoulder top (charcoal)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837d7871d2fba5b353ef9d4e54c1.jpg',
-      },
-      {
-        productId: 2333802,
-        name: 'Lucirzu Turtleneck Sleeve (beige)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 66000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837db6b80d958a7f475d136c52dc.jpg',
-      },
-      {
-        productId: 2333801,
-        name: 'Lucirzu Turtleneck Sleeve (ivory)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 66000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837ddea0935183bcfd428af45661.jpg',
-      },
-      {
-        productId: 2333760,
-        name: 'Raina Ribbon Mini One-Piece (black)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 169000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee838e61969ff5a5b3c90afe6e423d.jpg',
-      },
-      {
-        productId: 2333803,
-        name: 'Lucirzu Turtleneck Sleeve (sky blue)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 66000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837da10bf57da5b3efc57a6c61d6.jpg',
-      },
-      {
-        productId: 2333814,
-        name: 'Glitter String Turtleneck Sleeve (pink)',
-        frontBrandId: 12721,
-        frontBrandNameKor: '루시르주',
-        consumerPrice: 72000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee837cd91d18aba5b3ff02430b46b1.jpg',
-      },
-    ],
-  },
-  '15193': {
-    id: '15193',
-    title: '겨울 부츠 쇼핑할 시간',
-    description:
-      '조금 특별한 키에레이의 감성이 담긴 감도 높은 계절성 아이템 부츠 재입고 행사를 시작했어요. 단 29CM에서만 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '181853',
-    front_brand_id: '4112',
-    brandNewsId: 15193,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 4112,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202311/11ee84241de4634b8a7f01b788b700b7.jpg',
-    frontBrandNameKor: '키에레이',
-    products: [
-      {
-        productId: 2352120,
-        name: '[재입고]INU BOOTS [CO3F02TN]',
-        frontBrandId: 4112,
-        frontBrandNameKor: '키에레이',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8da594f15ca1a5b3335380454003.jpg',
-      },
-    ],
-  },
-  '15311': {
-    id: '15311',
-    title: '절제된 디테일',
-    description:
-      '어트의 자연스러운 멋이 느껴지는 가방들을 만나보세요. 단독 상품, 단독할인 ~15%',
-    category: 'BRAND_SALE',
-    cover_image_id: '197758',
-    front_brand_id: '9406',
-    brandNewsId: 15311,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 9406,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9d8997fdd900b2383f2ecb21fffd.jpg',
-    frontBrandNameKor: '어트',
-    products: [
-      {
-        productId: 2099618,
-        name: 'Easy Bag2 - Beige',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 148000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/98a7623e8c754026a90ca9c240604a8c_20230531104055.jpg',
-      },
-      {
-        productId: 2099626,
-        name: 'Easy Bag2 - Ivory',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 148000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/91532eda51f64babb742389a51c4f449_20230531104513.jpg',
-      },
-      {
-        productId: 2099634,
-        name: 'Easy Bag - Dark Brown',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/8c1a571ee2884c9497876ce1b3f360a8_20230531105049.jpg',
-      },
-      {
-        productId: 2099658,
-        name: 'Hobo Bag - Black',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 328000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/eecf53edfe0e4b24842e98e80c648791_20230531111527.jpg',
-      },
-      {
-        productId: 2099635,
-        name: 'Easy Bag - Ivory',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/196a3df4de164867a5fdc7bcea07bf6e_20230531105212.jpg',
-      },
-      {
-        productId: 2099629,
-        name: 'Easy Bag2 - Black',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 148000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/7eceb07178f14be79bc84042a4c616e3_20230531104618.jpg',
-      },
-      {
-        productId: 2099650,
-        name: 'Hobo Bag - White',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 328000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/63e58f7fab4f408db119e53821583c8f_20230531111250.jpg',
-      },
-      {
-        productId: 2099639,
-        name: 'Ribo Shopper Bag - Black',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 314000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/c2c52ba22ea843cb98b821c80cfe5193_20230531105729.jpg',
-      },
-      {
-        productId: 2099613,
-        name: 'Easy Bag2 - Khaki',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 148000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/a0777e22ecf44ef189a37d3b1536a6e0_20230531103947.jpg',
-      },
-      {
-        productId: 2099636,
-        name: 'Ribo Shopper Bag - White',
-        frontBrandId: 9406,
-        frontBrandNameKor: '어트',
-        consumerPrice: 314000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/f5481e704be24ac3958cb601ef99de7e_20230531105325.jpg',
-      },
-    ],
-  },
-  '15604': {
-    id: '15604',
-    title: '추위에도 귀엽게',
-    description:
-      '댄싱그랜마×아우어솔티의 온기를 더해줄 윈터 콜라보 상품 발매소식을 전해요. 단독 ~10%',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '188735',
-    front_brand_id: '16219',
-    brandNewsId: 15604,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 16219,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202311/11ee8e850411e45b83bc3b163760f28b.jpg',
-    frontBrandNameKor: '댄싱그랜마',
-    products: [
-      {
-        productId: 2350970,
-        name: 'Winter warmer : ivory',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 88000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8d017b2c2c3983bc1bb7e79adae9.jpg',
-      },
-      {
-        productId: 2350994,
-        name: 'Winter warmer : charcoal',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 88000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8d0392accadb8a7f6112fbabd2f6.jpg',
-      },
-      {
-        productId: 2352790,
-        name: 'Push : boucle brown (2 size)',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 108000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8dcc5c7ffb038a7f1b2ea107d56c.jpg',
-      },
-      {
-        productId: 2352513,
-        name: 'Hand stitch trooper hat : ivory',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8db840f96959a5b3f90302307f7a.jpg',
-      },
-      {
-        productId: 2352670,
-        name: 'Crochet brooch : soft bow (2color)',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 23000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8dc4769bc4098a7f91a2778b3d44.jpg',
-      },
-      {
-        productId: 2352597,
-        name: 'Big tassel shoulder bag : charcoal',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 168000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8dbf51d4468783bc5bdbf232644f.jpg',
-      },
-      {
-        productId: 2352638,
-        name: 'Crochet brooch Set : grandma garden',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 35000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8dc39a36681183bc13024d144d92.jpg',
-      },
-      {
-        productId: 2352623,
-        name: 'Crochet brooch Set : happy house',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 35000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8dc2f14a15398a7feb639e8f2e4e.jpg',
-      },
-      {
-        productId: 2352549,
-        name: 'Hand stitch trooper hat : charcoal',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8db93382f3218a7fddda6aa16a6c.jpg',
-      },
-      {
-        productId: 2352578,
-        name: 'Big tassel shoulder bag : ivory',
-        frontBrandId: 16219,
-        frontBrandNameKor: '댄싱그랜마',
-        consumerPrice: 168000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8dbdffc96d238a7f6ba92a53e1e6.jpg',
-      },
-    ],
-  },
-  '15620': {
-    id: '15620',
-    title: '감각적이고 포근한 가방',
-    description:
-      '편하게 손이 가는 제이마크뉴욕의 베스트 가방 단독 특가 소식을 전합니다.',
-    category: 'BRAND_SALE',
-    cover_image_id: '188929',
-    front_brand_id: '6549',
-    brandNewsId: 15620,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 6549,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202311/11ee8e9dbd9b86718a7f63cf45509e95.jpg',
-    frontBrandNameKor: '제이마크뉴욕',
-    products: [
-      {
-        productId: 2294771,
-        name: 'BELLA leather tote bag - Cream',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 258000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d99df468a8983bcb7846f8fd9de.jpg',
-      },
-      {
-        productId: 2190192,
-        name: 'BAILEY soft tote bag - Ivory',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee424e3e82b656acc5fdf6581296ba.jpg',
-      },
-      {
-        productId: 2294582,
-        name: 'BELLA leather shoulder bag - Black',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 298000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d918a78c55b83bc27af1c86c1c4.jpg',
-      },
-      {
-        productId: 2294523,
-        name: 'BAILEY backpack - Red',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 138000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d8fad8c074fa5b393271c21e4d8.jpg',
-      },
-      {
-        productId: 2294592,
-        name: 'BELLA leather shoulder bag - Brown',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 298000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d91bf42de338a7f3f58f23f0a36.jpg',
-      },
-      {
-        productId: 2294603,
-        name: 'BELLA leather shoulder bag - Cream',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 298000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d91f49b7c158a7fb1ca81388104.jpg',
-      },
-      {
-        productId: 2190197,
-        name: 'BAILEY soft tote bag - Brown',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee424e68d1186f8a69318391a4e5d6.jpg',
-      },
-      {
-        productId: 2294556,
-        name: 'BAILEY tote bag - Red',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 108000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d90962d8dff8a7ff7e3c667746d.jpg',
-      },
-      {
-        productId: 2294756,
-        name: 'BELLA leather tote bag - Brown',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 258000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d993f97f08383bcab029ecfb812.jpg',
-      },
-      {
-        productId: 2294615,
-        name: 'BELLA leather tote bag - Black',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 258000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d9299ac90bda5b317b779e69e11.jpg',
-      },
-    ],
-  },
-  '16136': {
-    id: '16136',
-    title: '헬로선라이즈 윈터 세일',
-    description: '헬로선라이즈 윈터 세일',
-    category: 'BRAND_SALE',
-    cover_image_id: '196002',
-    front_brand_id: '21740',
-    brandNewsId: 16136,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 21740,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9990c7e52f32b238bf576cc62e85.jpg',
-    frontBrandNameKor: '헬로선라이즈',
-    products: [
-      {
-        productId: 2110926,
-        name: 'Washed OG Logo 6panel Cap (Gray)',
-        frontBrandId: 21740,
-        frontBrandNameKor: '헬로선라이즈',
-        consumerPrice: 54000,
-        imageUrl:
-          'https://img.29cm.co.kr/next_product/2023/06/12/bf82ae27-a9d4-4d7e-9d48-547f19a48c84_20230612102407.jpg',
-      },
-      {
-        productId: 2160750,
-        name: 'Washed OG Logo Ball Cap (Ocean Blue)',
-        frontBrandId: 21740,
-        frontBrandNameKor: '헬로선라이즈',
-        consumerPrice: 54000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee430a6a11f6d8acc51f5245f72f3f.jpg',
-      },
-      {
-        productId: 2058487,
-        name: 'OG Logo 6panel Cap (Royal Blue)',
-        frontBrandId: 21740,
-        frontBrandNameKor: '헬로선라이즈',
-        consumerPrice: 54000,
-        imageUrl:
-          'https://img.29cm.co.kr/next_product/2023/05/30/55b5707c-b05d-4166-a2f3-470517f11457_20230530132614.jpg',
-      },
-      {
-        productId: 2160743,
-        name: 'Two Tone Washed OG Logo Cap (Navy / VTG Red)',
-        frontBrandId: 21740,
-        frontBrandNameKor: '헬로선라이즈',
-        consumerPrice: 54000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee430a79fde45cacc55d2b38280d50.jpg',
-      },
-    ],
-  },
-  '16167': {
-    id: '16167',
-    title: '다채로움이 주는 행복함',
-    description:
-      '위글위글의 브랜드위크 소식을 전해드려요. 신상품부터 베스트 아이템까지 단 1주 간 합리적인 가격에 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198818',
-    front_brand_id: '7605',
-    brandNewsId: 16167,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 7605,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fc8fbcc755391eb297cc3f5b3db.jpg',
-    frontBrandNameKor: '위글위글',
-    products: [
-      {
-        productId: 889260,
-        name: '파티초_3 SET',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 14400,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/11/09/34aeaf9849a3474c9dce1cc513d0a37e_20201109171152.jpg',
-      },
-      {
-        productId: 1824993,
-        name: '빅 파티초_3 SET',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 20700,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/16/a078d430940a4d598b89281edcb19f26_20221116100333.jpg',
-      },
-      {
-        productId: 505908,
-        name: '위글위글 해피캔들 파티초 3SET',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 14400,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2019/11/06/5469dedca9f54effaedd5d471ecb5c82_20191106174128.jpg',
-      },
-      {
-        productId: 1466596,
-        name: '글라스락 유리컵 2개 SET - Smile We Love',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 17800,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/03/21/f9fa255409ed4ba98f4d9f8c86545be1_20220321175524.png',
-      },
-      {
-        productId: 2059733,
-        name: '리유저블 파티컵 세트 - Cherry&Bear',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 14900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/23/823da64d459d4253adf3ea8ee7663456_20230523114353.jpg',
-      },
-      {
-        productId: 843320,
-        name: '쿠션 담요',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 42800,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/10/05/bce939b8d2fc4145935fc839bcbd33d3_20201005161716.jpg',
-      },
-      {
-        productId: 1614308,
-        name: '리유저블 파티컵 세트 - Smile We Love',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 14900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/06/27/80acf1e59ee34e90af7036d48f6c4830_20220627101004.jpg',
-      },
-      {
-        productId: 539030,
-        name: '핑거홀 장갑 5종',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 25800,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/23/89febc44135c4e80b63a4cf44ab0d966_20221123102503.jpg',
-      },
-      {
-        productId: 1303848,
-        name: '파티초_Smile We Love 3SET',
-        frontBrandId: 7605,
-        frontBrandNameKor: '위글위글',
-        consumerPrice: 14400,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/11/03/214616f8ba354d389caaffe0b0f19140_20211103164723.jpg',
-      },
-    ],
-  },
-  '16242': {
-    id: '16242',
-    title: '크리스마스 특별한 이벤트',
-    description:
-      '아메리칸 무드의 아웃도어 브랜드 펜필드의 크리스마스 선물과 같은 72시간 이벤트를 만나보세요, 기간 내 60% 할인 상품을 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '197570',
-    front_brand_id: '14824',
-    brandNewsId: 16242,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-27T14:59:00.000000',
-    frontBrandId: 14824,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9d66aa332e8b91eb8ff7ce150dbe.jpg',
-    frontBrandNameKor: '펜필드',
-    products: [
-      {
-        productId: 1480029,
-        name: '[시즌오프]light down hooded jacket NAVY_FN1WJ07U',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 219000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/03/28/fdfd5397ab0e4823b99464c3965b3bf4_20220328121132.jpg',
-      },
-      {
-        productId: 1834045,
-        name: '[시즌오프]NATIVE AMERICAN FLEECE VEST BROWN_FN4WV31U',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/23/4ec9add583674efd9fbb1bb5356f45b1_20221123181635.jpg',
-      },
-      {
-        productId: 1876424,
-        name: '[시즌오프]LIGHTWEIGHT QUILTED SET UP PULLOVER BLACK_FN4WD50M',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 169000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/f540c3bbb480493d961f4fdda2e557bf_20230110181217.jpg',
-      },
-      {
-        productId: 1834013,
-        name: 'HALF ZIP FLEECE PULLOVER BROWN_FN4KT46U',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/23/a91e4d6e2954455ab378667dc2c02e90_20221123180126.jpg',
-      },
-      {
-        productId: 1833982,
-        name: '[시즌오프]HALF ZIP FLEECE PULLOVER BEIGE_FN4KT45U',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/23/9b18a2a773d24e2c9744dbebba61d963_20221123175725.jpg',
-      },
-      {
-        productId: 1835580,
-        name: '[시즌오프]NATIVE AMERICAN FLEECE JACKET BROWN_FN4WJ32U',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/24/394d79d7248249a78245887c6a65cbbe_20221124163806.jpg',
-      },
-      {
-        productId: 1744375,
-        name: '[시즌오프]Flap pocket windbreak NAVY_FN3WJ06U',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/09/29/0ee68fb1e77244a39f93c3080980c36d_20220929161641.jpg',
-      },
-      {
-        productId: 1876433,
-        name: '[시즌오프]LIGHTWEIGHT QUILTED SET UP PULLOVER KHAKI_FN4WD51M',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 169000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/d879386957ea434dbfe2ada1609c323a_20230110181739.jpg',
-      },
-      {
-        productId: 1480034,
-        name: '[시즌오프]light down hooded jacket BROWN_FN1WJ06U',
-        frontBrandId: 14824,
-        frontBrandNameKor: '펜필드',
-        consumerPrice: 219000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/03/28/3e733a5af6054a4a84ed79a1867638ce_20220328121058.jpg',
-      },
-    ],
-  },
-  '16250': {
-    id: '16250',
-    title: '연말 클리어런스',
-    description:
-      '마론에디션에서 준비한 23년도 마지막 클리어런스 세일을 29CM 단독으로 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '197649',
-    front_brand_id: '16138',
-    brandNewsId: 16250,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 16138,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9d7438ae7acf91eb1d9a4a516ddf.jpg',
-    frontBrandNameKor: '마론에디션',
-    products: [
-      {
-        productId: 2319909,
-        name: '23 Winter_ Custard Check Long Coat',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 389000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee793429a1e4bba5b3351a3a416399.jpg',
-      },
-      {
-        productId: 2319921,
-        name: '23 Winter_ Khaki Melange Boucle Belted Wool Coat',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 439000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7935fbedd7fda5b3bf1f6009cd59.jpg',
-      },
-      {
-        productId: 2318338,
-        name: '23 Winter_ Ivory Suri Alpaca Wool Blazer',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 298000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee789461f1981da5b3a58524228a6c.jpg',
-      },
-      {
-        productId: 2201306,
-        name: '23 Fall_ Yellow Corduroy Bustier Blouse',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee47053b48cf8da3d83d519b38d281.jpg',
-      },
-      {
-        productId: 2201376,
-        name: '23 Fall_ Butter Half Down Jacket',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 359000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee4707f63670c18a69710432d80491.jpg',
-      },
-      {
-        productId: 2318276,
-        name: '23 Winter_ Brown Volume Sleeve Wool Coat',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 379000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee78929a2f186b8a7f21355fcb4fef.jpg',
-      },
-      {
-        productId: 2201632,
-        name: '[29CM 단독]23 Fall_ Brown Melange Half Coat',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 409000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e558902f2598a7fb5a4b2d54e91.jpg',
-      },
-      {
-        productId: 2201210,
-        name: '[인플루언서 착용]23 Fall_ Creamy Beige Boucle Wool Blazer',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 249000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee695c2425354b83bc67b99e4ccd7f.jpg',
-      },
-      {
-        productId: 2200654,
-        name: '23 Fall_ Cream Melange Boucle Belted Wool Coat',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 419000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee880ed3c55aa98a7f6bc92e3d0608.jpg',
-      },
-      {
-        productId: 2317733,
-        name: '23 Winter_ Grey Wave Coat',
-        frontBrandId: 16138,
-        frontBrandNameKor: '마론에디션',
-        consumerPrice: 379000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7882a0db440b83bc9dd8d069b17a.jpg',
-      },
-    ],
-  },
-  '16253': {
-    id: '16253',
-    title: '새로운 한 해를 위한 테라피',
-    description:
-      '연말 연초는 건강 관리에 관심이 많아지는 시기죠. 머리부터 발끝까지 시원하게 풀 수 있는 괄사와 100% 천연 호호바 오일 구성으로 완벽한 바디테라피를 즐겨보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '197694',
-    front_brand_id: '10715',
-    brandNewsId: 16253,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 10715,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9d7e8a34f39483771f011ff48fe3.PNG',
-    frontBrandNameKor: '페이스팩토리',
-    products: [
-      {
-        productId: 2134374,
-        name: '초저분자 콜라겐 탄력 리즈 크림 80ml',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 50000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202307/11ee1b9829fc187aa5ca4f0da9f98166.jpg',
-      },
-      {
-        productId: 2100443,
-        name: '[세안밴드/쇼핑백증정] 워터필링기+멜라오버 기미 크림미스트 SET',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 148900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/06/02/e1f9fe04d7c341ae9b86888b417c8b7b_20230602134815.jpg',
-      },
-      {
-        productId: 1605169,
-        name: '카밍 인그로운헤어 스프레이 80ml',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 29800,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/06/17/506ecf94ab384ce58c5f09bdac95210b_20220617110706.jpg',
-      },
-      {
-        productId: 1872367,
-        name: '세라믹 디톡괄사 마사저 베리페리 에디션+호호바오일 기프트 세트',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/06/cbb067611b92491998ef08dcef64c2bc_20230106102605.jpg',
-      },
-      {
-        productId: 1592657,
-        name: '페이스 바디 지압 디톡괄사 마사저 베리페리 에디션',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 70000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9970ec0547e591ebc38fd5519162.jpg',
-      },
-      {
-        productId: 2134398,
-        name: '5in1 홈케어 링크샷 고주파 마사지기',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 379000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9fd05eccd4eab2385df2327bfa51.jpg',
-      },
-      {
-        productId: 1698984,
-        name: '각질 피지관리 워터 제로필링기',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 38900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9973531bbea8b238e367a9b50b70.jpg',
-      },
-      {
-        productId: 2100441,
-        name: '기미케어 멜라오버 크림미스트 120ml',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 50000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/31/925cd20468c440c5990eac39f0ef7f98_20230531154157.jpg',
-      },
-      {
-        productId: 1429226,
-        name: '갈바닉+워터필링 3in1 유리알피부 제트필링기',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee997525c25550b238977ee1d2ea34.jpg',
-      },
-      {
-        productId: 1405853,
-        name: '[쇼핑백증정] LED 탄력관리 셀라이너+더마egf앰플 SET',
-        frontBrandId: 10715,
-        frontBrandNameKor: '페이스팩토리',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/06/15/e3b0543543f74a96943b2421a5be32f5_20220615144041.jpg',
-      },
-    ],
-  },
-  '16280': {
-    id: '16280',
-    title: 'OPEN YY',
-    description: 'OPEN YY',
-    category: 'BRAND_SALE',
-    cover_image_id: '197880',
-    front_brand_id: '16390',
-    brandNewsId: 16280,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 16390,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e190e4ef2a48377f36c5a362f31.jpg',
-    frontBrandNameKor: '오픈와이와이',
-    products: [
-      {
-        productId: 2246493,
-        name: 'SHAGGY JACQUARD HOODED SCARF (CREAM)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 158000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a18f6a44b218a7f6ffbfa2d7b5c.jpg',
-      },
-      {
-        productId: 2246454,
-        name: 'STAR T-SHIRT (CHARCOAL)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 92000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee725528eb4da1a5b3a9a1927fb28f.jpg',
-      },
-      {
-        productId: 2246456,
-        name: 'LAYERED EMBLEM T-SHIRT (CHARCOAL)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a1aa666d75983bcd7c80a1b8d64.jpg',
-      },
-      {
-        productId: 2246480,
-        name: 'LAYERED MAXI SKIRT (CHARCOAL)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a1912a1ab3ba5b3ab523fcf062b.jpg',
-      },
-      {
-        productId: 2246479,
-        name: 'JEAN EFFECT WIDE SWEATPANTS (BLUE)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 178000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a191749d66d8a7f81c2a8c46f11.jpg',
-      },
-      {
-        productId: 2246484,
-        name: 'CHECKER BOARD EARFLAP BEANIE (BLACK)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 69000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee72544032e2dda5b35ff16e86c1b4.jpg',
-      },
-      {
-        productId: 2246465,
-        name: 'FAIR ISLE SWEATER (BLACK)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 238000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a1a8a28c5458a7f7b9bf8e4e4f0.jpg',
-      },
-      {
-        productId: 2246473,
-        name: 'FAUX FUR REVERSIBLE JACKET (BROWN)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 489000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a1a74f9a487a5b3e302ad56ee81.jpg',
-      },
-      {
-        productId: 2246476,
-        name: 'FLANNEL FAUX FUR TRIM COAT (BROWN)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 489000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee7254762b1c4783bc8372151414b1.jpg',
-      },
-      {
-        productId: 2246469,
-        name: 'FAUX FUR ZIPPER HOOD MA1 (KHAKI)',
-        frontBrandId: 16390,
-        frontBrandNameKor: '오픈와이와이',
-        consumerPrice: 429000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee7254f93d08e1a5b3c9b2eb2e2016.jpg',
-      },
-    ],
-  },
-  '16299': {
-    id: '16299',
-    title: '수준 높은 에센셜 아이템',
-    description:
-      '오랫동안 옷장 속에 함께 할 카키스의 STOCK 라인을 소개합니다. 품질에 타협하지 않는 수준 높은 에센셜 아이템을 오직 29CM에서 45%의 혜택과 함께 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198018',
-    front_brand_id: '16064',
-    brandNewsId: 16299,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 16064,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e4516350706b238c99751f65938.jpg',
-    frontBrandNameKor: '카키스',
-    products: [
-      {
-        productId: 2065054,
-        name: 'Stock 5P Jean G2 Light Grey',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 209000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/10/d8d0f62c1f35417cb36a8904806a98da_20230510211249.jpg',
-      },
-      {
-        productId: 2065131,
-        name: 'Stock Chino Pant G2 Stone',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 164000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/10/ecdab89489944d1a8bc1ac869b839181_20230510212628.jpg',
-      },
-      {
-        productId: 2031348,
-        name: 'Stock Work Jacket Navy',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 279000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/04/18/752183e480b64bc196d3379898be6c54_20230418133151.jpg',
-      },
-      {
-        productId: 2065107,
-        name: 'Stock 5P Jean G2 Mid Blue',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 209000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/10/7e31ec4e3cfa4a19ae228f0bfb715490_20230510211442.jpg',
-      },
-      {
-        productId: 2065138,
-        name: 'Stock Chino Pant G2 Olive Drab',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 164000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/10/2246f959dfe7424b9c47fc5543f91ebf_20230510212813.jpg',
-      },
-      {
-        productId: 2204327,
-        name: 'Stock Cargo Pant G2 Olive',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 164000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee47fba712baf58a6939eda6903eb5.jpg',
-      },
-      {
-        productId: 2052122,
-        name: 'Stock 5P Jean G2 Dark Blue',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 209000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/02/844c2d43956f43fb85a9eb6b66b41467_20230502154231.jpg',
-      },
-      {
-        productId: 2031324,
-        name: 'Stock Pant G2 Stone',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 146000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/04/18/22d03cc845e6479b817e70fd5e64b8cb_20230418131232.jpg',
-      },
-      {
-        productId: 2052081,
-        name: 'Stock 5P Jean G2 Light Blue',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 209000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/02/2cc9f96dbf0c4f4bbf0eb26b5e37cd89_20230502154333.jpg',
-      },
-      {
-        productId: 2065142,
-        name: 'Stock Chino Pant G2 Black',
-        frontBrandId: 16064,
-        frontBrandNameKor: '카키스',
-        consumerPrice: 164000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/10/7ac358347d0d4016afd9516cdc1a5863_20230510213152.jpg',
-      },
-    ],
-  },
-  '16310': {
-    id: '16310',
-    title: '엔오르',
-    description: 'ㅇㅇ',
-    category: 'BRAND_SALE',
-    cover_image_id: '198148',
-    front_brand_id: '2480',
-    brandNewsId: 16310,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-27T14:59:00.000000',
-    frontBrandId: 2480,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e5548660c5c837703e353a9e2ef.jpg',
-    frontBrandNameKor: '엔오르',
-    products: [
-      {
-        productId: 2313188,
-        name: 'LEATHER COLORED FUR JACKET - BEIGE',
-        frontBrandId: 2480,
-        frontBrandNameKor: '엔오르',
-        consumerPrice: 398000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee76e8fdf3d6cba5b35339bfb64b2b.jpg',
-      },
-    ],
-  },
-  '16311': {
-    id: '16311',
-    title: '트렌디한 한 벌',
-    description:
-      '편안하면서도 놓칠 수 없는 트렌디함을 제이마크뉴욕만의 따뜻한 컬러로 표현한 원피스 단독 특가 소식을 전합니다.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198158',
-    front_brand_id: '6549',
-    brandNewsId: 16311,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 6549,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e5a80e60ef883779955831c6a75.jpg',
-    frontBrandNameKor: '제이마크뉴욕',
-    products: [
-      {
-        productId: 2294774,
-        name: 'V-neck knit long dress - Charcoal',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 158000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d9a38bf82eb8a7f1920dcacc9e0.jpg',
-      },
-      {
-        productId: 1927863,
-        name: 'Trench collarneck dress - Khaki',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 138000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/b4077c5e8d85436a9923a26af6a7a1da_20230220140851.jpg',
-      },
-      {
-        productId: 1927723,
-        name: 'Single button collarneck dress - Navy',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/c2d710e448c54901a3f9284c65ccc032_20230220134326.jpg',
-      },
-      {
-        productId: 1927592,
-        name: 'Frill round neck dress - Beige',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/74aed09c36394be09606f580f5cb0598_20230220134033.jpg',
-      },
-      {
-        productId: 2294777,
-        name: 'V-neck knit long dress - Beige',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 158000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d9a5c75f7a3a5b3d903c16360f6.jpg',
-      },
-      {
-        productId: 1927769,
-        name: 'Single button collar neck dress - Beige',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/f3944851da9d4714a40e25eb0b618fe9_20230220135149.jpg',
-      },
-      {
-        productId: 1927575,
-        name: 'Frill round neck dress - Black',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/ce6cd02bfe6348ada5bfac1f2f3dc4ab_20230220132707.jpg',
-      },
-      {
-        productId: 1927847,
-        name: 'Trench collarneck dress - Beige',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 138000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/2e543ba5abd345c7bce2f96da1f40909_20230220140524.jpg',
-      },
-      {
-        productId: 1927772,
-        name: 'Single button collar neck dress - Black',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/1cda40d11d7d4b0484f7ab3499264efb_20230220135418.jpg',
-      },
-      {
-        productId: 2294933,
-        name: 'Turtleneck mix dress - Black',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 138000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6da5cc5d1e7ba5b3774fd6b1fce1.jpg',
-      },
-    ],
-  },
-  '16320': {
-    id: '16320',
-    title: '마지막을 장식할 브랜드 위크',
-    description:
-      '올 한 해 많은 사랑을 받은 삭스어필이 연말 결산 대잔치를 준비했어요. 양말부터 바라클라바, 레그워머 등 한겨울 추위를 대비할 아이템을 단독 특가로 만나보세요!',
-    category: 'BRAND_SALE',
-    cover_image_id: '198239',
-    front_brand_id: '698',
-    brandNewsId: 16320,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 698,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9eddb1d5bda0b238b735e46e13a0.jpg',
-    frontBrandNameKor: '삭스어필',
-    products: [
-      {
-        productId: 1932629,
-        name: 'teddy bear 2pack SET',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 26000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/22/4ecb09c2c2504ed1aa74a383e2a9757c_20230222153740.jpg',
-      },
-      {
-        productId: 2311412,
-        name: 'christmas wool 2pack GIFT',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 31000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee749d68be1863a5b34526666cb139.jpg',
-      },
-      {
-        productId: 1036042,
-        name: 'RIBBON GIRL 2pack',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 26000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee418b176a5ca3a3d8832e1d79e3c4.jpg',
-      },
-      {
-        productId: 1819746,
-        name: '[선물하기]christmas pattern GIFT',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 21000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9e4016164df2b2387d5d8750c37f.jpg',
-      },
-      {
-        productId: 1790378,
-        name: 'warm afternoon 2pack SET',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 30000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6bbdd20ea49383bc9fdfa60fda00.jpg',
-      },
-      {
-        productId: 2189247,
-        name: 'preppy 2pack SET',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 26000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee4c7c9d525c43a3d867aa4fdd1aaa.jpg',
-      },
-      {
-        productId: 2285422,
-        name: 'winter creamy dream 2pack SET',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 32000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6991e414b267a5b30f7e8cdc065e.jpg',
-      },
-      {
-        productId: 1816771,
-        name: 'christmas house GIFT',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 97000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee778ddb45c1e5a5b3b3f2e3c07688.jpg',
-      },
-      {
-        productId: 1688736,
-        name: 'love dog 2pack SET',
-        frontBrandId: 698,
-        frontBrandNameKor: '삭스어필',
-        consumerPrice: 26000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee794467023939a5b3ed7c6f750eb9.jpg',
-      },
-    ],
-  },
-  '16325': {
-    id: '16325',
-    title: '코트 위에 목도리',
-    description:
-      '빅 머플러는 올 해 유행 아이템이에요. 인플루언서가 코디한 머플러 착장을 활용해 겨울 코디를 완성해요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198283',
-    front_brand_id: '15485',
-    brandNewsId: 16325,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 15485,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9eeb0400abbd91eb852ef0c317bf.jpeg',
-    frontBrandNameKor: '팔렛',
-    products: [
-      {
-        productId: 1744210,
-        name: '스토리 로고 롱 머플러 비비드 블루',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/09/30/f1bab8f3f2104ffea85c3c1fef4a98b5_20220930010324.jpg',
-      },
-      {
-        productId: 1744217,
-        name: '부클레 머플러 아이보리',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 39000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee73158aa2656583bc4b94e672d598.jpg',
-      },
-      {
-        productId: 2238445,
-        name: '네로 비니 블랙',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 49000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6c9232ecaa6b8a7f21180c4a965b.jpg',
-      },
-      {
-        productId: 2343692,
-        name: '스토리 로고 롱 머플러 블랙',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9413210f3c988377d55d2eaa69e0.jpg',
-      },
-      {
-        productId: 2253403,
-        name: '스토리 로고 롱 머플러 베이지',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5778913fe60983bc3fba44b05fe1.jpg',
-      },
-      {
-        productId: 2253484,
-        name: '스토리 로고 롱 머플러 그레이',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee577ab23be3df83bc67dda428d092.jpg',
-      },
-      {
-        productId: 2253478,
-        name: '스토리 로고 롱 머플러 핑크',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee58ff42af666983bcdf19c29a744f.jpg',
-      },
-      {
-        productId: 1744220,
-        name: '부클레 머플러 블루',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 39000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/09/30/0f438c9bb6cf4df4a3484b640277cdd2_20220930010336.jpg',
-      },
-      {
-        productId: 1744214,
-        name: '스토리 로고 롱 머플러 비비드 그린',
-        frontBrandId: 15485,
-        frontBrandNameKor: '팔렛',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/09/30/679bdc9382f74aa79affa12c2a583ea6_20220930010328.jpg',
-      },
-    ],
-  },
-  '16326': {
-    id: '16326',
-    title: '키치한 니트웨어',
-    description:
-      '키치한 스트릿은 스웨이드에서 마무리하세요. 화려하지만 세련된 스웨이드의 멋을 29CM 단독할인과 함께하세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198301',
-    front_brand_id: '26820',
-    brandNewsId: 16326,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-08T14:59:00.000000',
-    frontBrandId: 26820,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9eeb8109cc18b238fbd2ba4b655b.jpg',
-    frontBrandNameKor: '스웨이드',
-    products: [
-      {
-        productId: 2278480,
-        name: '84 STAR RACING LONG SLEEVE [BLACK]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6716dd1b9d778a7f091015f67797.jpg',
-      },
-      {
-        productId: 2278547,
-        name: 'SKULL STAR KNIT [OLIVE]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee67186b8a5d89a5b351d3375845bd.jpg',
-      },
-      {
-        productId: 2278469,
-        name: '84 STAR RACING LONG SLEEVE [GRAY]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee67162d9e148ba5b3774c52a89364.jpg',
-      },
-      {
-        productId: 2278478,
-        name: '84 STAR RACING LONG SLEEVE [RED]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9e535ede870191ebd5f8dfecac9a.jpg',
-      },
-      {
-        productId: 2278533,
-        name: 'FIRE SUADE HOODIE [BROWN]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 84000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6717febde33d8a7fb7dfec3ffbb6.jpg',
-      },
-      {
-        productId: 2278535,
-        name: 'FIRE SUADE HOODIE [PIGMENT BEIGE]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 84000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee671819a95dcfa5b3991c2714d47c.jpg',
-      },
-      {
-        productId: 2278539,
-        name: 'FIRE SUADE HOODIE [PIGMENT BLACK]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 84000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee67182ecdcffd8a7f3be69d1c4221.jpg',
-      },
-      {
-        productId: 2278548,
-        name: 'SKULL STAR KNIT [BLACK]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee67187b3aefbfa5b3bb6104615ec4.jpg',
-      },
-      {
-        productId: 2278543,
-        name: 'SKULL STAR KNIT [IVORY]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6718534460798a7fef2d7f0a27ef.jpg',
-      },
-      {
-        productId: 2278463,
-        name: 'MUSHROOM CROP KNIT CREWNECK [BLACK]',
-        frontBrandId: 26820,
-        frontBrandNameKor: '스웨이드',
-        consumerPrice: 77000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6715f378ac958a7f5fdab0fbb5f8.jpg',
-      },
-    ],
-  },
-  '16330': {
-    id: '16330',
-    title: '자주 손이 가는 옷',
-    description:
-      '베이직한 디자인으로 사랑받는 포저의 단독 시즌오프 소식을 전합니다. 최대 50% 세일',
-    category: 'BRAND_SALE',
-    cover_image_id: '198344',
-    front_brand_id: '5511',
-    brandNewsId: 16330,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 5511,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9efb7e9445228377c5b1259fe24a.jpg',
-    frontBrandNameKor: '포저',
-    products: [
-      {
-        productId: 2200478,
-        name: '스퀘어 미니 플랫백 (아이보리)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77c3e6e21c018a7f4345d300e447.jpg',
-      },
-      {
-        productId: 2295518,
-        name: '패디드 밴딩 팬츠 (크림)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 113000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b7158062ff83bc018270eb44da.jpg',
-      },
-      {
-        productId: 2295665,
-        name: '부클 울 맥시 코트 (모카베이지)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 374000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b6ececf72f8a7fa3cb3f368fab.jpg',
-      },
-      {
-        productId: 2295640,
-        name: '코듀로이 밴딩 팬츠 (월넛)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77c43779d2f383bcc30e8ffbbeb0.jpg',
-      },
-      {
-        productId: 2295659,
-        name: '울 싱글 맥시 코트 (블랙)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 365000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b6f3bd0bfda5b35b72f2d422f0.jpg',
-      },
-      {
-        productId: 2295643,
-        name: '코듀로이 밴딩 팬츠 (네이비)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b7030406f3a5b3dbedd5233c7e.jpg',
-      },
-      {
-        productId: 2295667,
-        name: '부클 울 맥시 코트 (카키브라운)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 374000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77b6e54e6f2783bcff2020ec36f1.jpg',
-      },
-      {
-        productId: 1781130,
-        name: '[29CM 단독]울 레몬 하프코트',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 307000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee748aa4dade85a5b37772aff09451.jpg',
-      },
-      {
-        productId: 1929187,
-        name: '레이어드 라운드 롱슬리브 (레드)',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 52000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee77d30e0027b7a5b36590e734aeb6.jpg',
-      },
-      {
-        productId: 1679955,
-        name: '다크네이비 트윌 데님팬츠',
-        frontBrandId: 5511,
-        frontBrandNameKor: '포저',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/23/3159b3b821fc45b992452aa45e80bf5a_20221023222135.jpg',
-      },
-    ],
-  },
-  '16335': {
-    id: '16335',
-    title: '시어링 부츠로 발끝까지 따뜻하게',
-    description:
-      '디테일까지 신경 쓰는 수제화 브랜드 바이언스의 29CM 단독 겨울 부츠 발매 소식 전해드려요! 종아리까지 혹은 접어서, 두 가지 스타일링을 한 번에',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '198382',
-    front_brand_id: '408',
-    brandNewsId: 16335,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 408,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f050d16450c8377a38c9ad7d263.jpg',
-    frontBrandNameKor: '바이언스',
-    products: [
-      {
-        productId: 1714254,
-        name: 'BMB22410 SOFIE PEBBLE ANKLEBOOTS /  3COLORS',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 283000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/09/11/b32fb268773c49da997561e8ffb5895e_20220911020615.jpg',
-      },
-      {
-        productId: 862276,
-        name: 'BKB20406 EGG MID BOOTS BLACK',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 333000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/10/18/759b1d04c957469fb2422daaef4f01a9_20201018130249.jpg',
-      },
-      {
-        productId: 862283,
-        name: 'BKB20404 MEAL ANKLEBOOTS BLACK',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 293000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/10/18/61245410e98848b29d27e97144933eba_20201018131119.jpg',
-      },
-      {
-        productId: 862293,
-        name: 'BKB20302 PEBBLE MARYJANE LOAFER BLACK',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 239000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2020/10/18/2709b7374cd643ada93de655ac905ff5_20201018133006.jpg',
-      },
-      {
-        productId: 2372454,
-        name: '[29CM단독] BNB23418 시어링 셔링 부츠 / 2COLORS',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 344000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9de04970acc083777969db5975fe.jpg',
-      },
-      {
-        productId: 2372447,
-        name: '[29CM단독] BNB23417 시어링 숏 부츠',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 318000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9e376ff7ba948377f790126bf550.jpg',
-      },
-      {
-        productId: 469006,
-        name: '[29CM 단독 컬러 추가] BJB19408 DAN ANKLEBoots / 5color',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 303000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/11/04/c156635581da47ec9df311c88c297790_20211104022406.jpg',
-      },
-      {
-        productId: 862296,
-        name: 'BKB20301 PEBBLE FLAT / 2COLORS',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 233000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/07/ed575ee21a4e403985a1c8650264ae84_20230107230909.jpg',
-      },
-      {
-        productId: 2244838,
-        name: '[29CM단독]BNP23320 PEBBLE MARYJANE PLATFORM / 2COLORS',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 273000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5c3d45211345a5b305a48aec6ff5.jpg',
-      },
-      {
-        productId: 2263761,
-        name: 'BNP23311 포티 메리제인',
-        frontBrandId: 408,
-        frontBrandNameKor: '바이언스',
-        consumerPrice: 238000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5bb6be111593a5b33185ba5b0bbb.jpg',
-      },
-    ],
-  },
-  '16345': {
-    id: '16345',
-    title: '유명 인플루언서들이 착용한',
-    description:
-      '유하님, 수미님 등 인플루언서들의 르베이스먼트 스타일링을 소개합니다. 홀리데이와 어울리는 아이템부터 한파에 꼭 필요한 방한 아이템까지 다양하게 준비했어요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '199095',
-    front_brand_id: '23421',
-    brandNewsId: 16345,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 23421,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea076afc98aaf91eb9b376054eb1f.jpg',
-    frontBrandNameKor: '르베이스먼트',
-    products: [
-      {
-        productId: 2308981,
-        name: 'Goose Puffer Jacket - Deep Green',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 438000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7d6d908b00f58a7f59a2ae10640a.jpg',
-      },
-      {
-        productId: 2356608,
-        name: 'Hand Embroidery Tree Alpaca Knit - Ivory',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95738f1fd5f48377c93e1c02502b.jpg',
-      },
-      {
-        productId: 2356612,
-        name: 'Nordic Baby Alpaca Wool Knit - Brown',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee95730d46b772b238af995aa81350.jpg',
-      },
-      {
-        productId: 2356619,
-        name: 'Holiday Herringbone Mini Dress - Grey',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9572f1619a64b238dfa9dd10224c.jpg',
-      },
-      {
-        productId: 2356618,
-        name: 'Holiday Velvet Mini Dress - Black',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 155000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9572fa73887ab2380db4c1429937.jpg',
-      },
-      {
-        productId: 2329940,
-        name: 'Glossy Spangle Skirt - 2 color',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 115000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7ea8f73317498a7f15162c41065d.jpg',
-      },
-      {
-        productId: 2356614,
-        name: 'Nordic Baby Alpaca Wool Knit - Red',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee957300966ceeb2385f6d93cc3617.jpg',
-      },
-      {
-        productId: 2356613,
-        name: 'Nordic Baby Alpaca Wool Knit - Grey',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee957308f9571a837783dbdb095dc3.jpg',
-      },
-      {
-        productId: 2320906,
-        name: 'Brush Knit Beanie - Black',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 58000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7ecaa1b60cc9a5b335e2ea32e8d1.jpg',
-      },
-      {
-        productId: 2356624,
-        name: 'Lebasement Cashmere Wool Socks - Ivory',
-        frontBrandId: 23421,
-        frontBrandNameKor: '르베이스먼트',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9572d73e047ab23893864801b7e0.jpg',
-      },
-    ],
-  },
-  '16357': {
-    id: '16357',
-    title: '활용도 높은 시어링 플랫',
-    description:
-      '누스의 귀여운 시어링 플랫을 만나보세요. 오직 여기에서만 만날 수 있는 디자인이니 놓치지 마세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198562',
-    front_brand_id: '15120',
-    brandNewsId: 16357,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 15120,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fa281cda39cb23847cc8795b3bb.JPG',
-    frontBrandNameKor: '누스',
-    products: [
-      {
-        productId: 2256858,
-        name: '스모어 소가죽 플랫폼 미니 어그부츠[n6110]_3color',
-        frontBrandId: 15120,
-        frontBrandNameKor: '누스',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee584075b2fee183bc8119257b7c92.jpg',
-      },
-    ],
-  },
-  '16359': {
-    id: '16359',
-    title: '인플루언서 진솔님과 함께한 겨울',
-    description:
-      '뽀얗고 흐릿한 계절 속 리본을 좋아하는 한 소녀의 기억과 여정을 담은 셀리테일즈의 겨울 컬렉션을 인플루언서 진솔님과 함께 소개합니다.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198582',
-    front_brand_id: '19306',
-    brandNewsId: 16359,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 19306,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fa3bab53f3f91eb9149d4a38061.JPG',
-    frontBrandNameKor: '셀리테일즈',
-    products: [
-      {
-        productId: 2339588,
-        name: 'MINI QUILTED HOBO BAG_BLUE',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 78000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/10d3f55cc7374ef89c9f500b562436e9_20231117132325.jpg',
-      },
-      {
-        productId: 2339489,
-        name: 'WOOL WHOLEGARMENT TURTLENECK_GREY',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 148000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/08e2f818ff854838a3f60ad56bc36a01_20231117120800.jpg',
-      },
-      {
-        productId: 2339506,
-        name: 'WHOLEGARMENT BUTTON CARDIGAN_GREY',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 148000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/3576800c0c604eaba9fbb619ce9b938d_20231117121650.jpg',
-      },
-      {
-        productId: 2339502,
-        name: 'SHEARING CROP JACKET_BEIGE',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/f0d946580a67450fa1a2506aab9f9d05_20231117121425.jpg',
-      },
-      {
-        productId: 2339581,
-        name: 'MINI QUILTED HOBO BAG_PINK',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 78000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/dff45fb1cb9541e1bc04b60a4b50bb8e_20231117132253.jpg',
-      },
-      {
-        productId: 2339589,
-        name: 'DOUBLE RIBBON SHOULDER BAG_SMOKE PINK',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/848c0f05231d46c789ee74e0df02f33b_20231117132424.jpg',
-      },
-      {
-        productId: 2339513,
-        name: 'SKIRT LAYERED PANTS_BLACK',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/9f7720135de74cd4bca2fa9d2bd4aaa2_20231117122040.jpg',
-      },
-      {
-        productId: 2339577,
-        name: 'MINI QUILTED HOBO BAG_SILVER',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 78000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/50da4927138f45f9aa51a0db8eb03c19_20231117132221.jpg',
-      },
-      {
-        productId: 2241346,
-        name: 'LAYERED SHA DRESS_INDIAN PINK',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee56066f858ddda5b3a30dca6030cd.jpg',
-      },
-      {
-        productId: 2339592,
-        name: 'DOUBLE RIBBON SHOULDER BAG_BLACK',
-        frontBrandId: 19306,
-        frontBrandNameKor: '셀리테일즈',
-        consumerPrice: 118000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/5f2f8322e3b048f2bc8ace4d7d8a83ad_20231117132455.jpg',
-      },
-    ],
-  },
-  '16363': {
-    id: '16363',
-    title: '깔끔하게 즐겨요',
-    description:
-      '깔끔한 데스크를 완성시켜주는 라이프썸, 편안한 내 공간으로 새로운 라이프스타일을 즐겨요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198672',
-    front_brand_id: '5197',
-    brandNewsId: 16363,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 5197,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fa7d931fa04b2381ddc743af0ae.jpg',
-    frontBrandNameKor: '라이프썸',
-    products: [
-      {
-        productId: 798622,
-        name: '라이프썸 무선충전 USB 멀티탭 2구 1.5M (LFS-HA22) 2종 택1',
-        frontBrandId: 5197,
-        frontBrandNameKor: '라이프썸',
-        consumerPrice: 45000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9fbc2acb2b76b238cbcb6ccaf4b8.jpg',
-      },
-      {
-        productId: 2292579,
-        name: '라이프썸 GaN 65W 초고속 멀티탭 USB 1.8m (LFS-HA54) 미스트 블루',
-        frontBrandId: 5197,
-        frontBrandNameKor: '라이프썸',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/18/cc9c8ed3961e4e56a4929d7b4e801401_20231018084117.jpg',
-      },
-      {
-        productId: 1643526,
-        name: '라이프썸 접이식 텀블러 475ml (LFS-KS04) 3종 택1',
-        frontBrandId: 5197,
-        frontBrandNameKor: '라이프썸',
-        consumerPrice: 25000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/09/14/753d22d0d4de47a9aaf3f1db8c1598e3_20220914144241.jpg',
-      },
-      {
-        productId: 2351692,
-        name: '라이프썸 3-Way 스테인리스 텀블러 591ml (LFS-KS05) 4종 택1',
-        frontBrandId: 5197,
-        frontBrandNameKor: '라이프썸',
-        consumerPrice: 35000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/28/635234e768a2451e902d2d984ded3976_20231128104525.jpg',
-      },
-      {
-        productId: 798623,
-        name: '라이프썸 무선충전 USB 멀티탭 2구 2.5M (LFS-HA23) 2종 택1',
-        frontBrandId: 5197,
-        frontBrandNameKor: '라이프썸',
-        consumerPrice: 49000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9fbb1d81a35791eb8370000b2d4f.jpg',
-      },
-      {
-        productId: 1343882,
-        name: '라이프썸 무선충전 USB 멀티탭 2구 1.5M/2.5M 2개세트 상품',
-        frontBrandId: 5197,
-        frontBrandNameKor: '라이프썸',
-        consumerPrice: 90000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9fbbb448457591ebe31fc238f0a3.jpg',
-      },
-    ],
-  },
-  '16366': {
-    id: '16366',
-    title: '기분좋은 2024의 시작',
-    description:
-      '2024년이 새롭게 시작해요. 컨티뉴의 2024 캘린더를 단독할인으로 만나보세요',
-    category: 'BRAND_SALE',
-    cover_image_id: '198702',
-    front_brand_id: '16235',
-    brandNewsId: 16366,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 16235,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fb781b8892683771d4304b1b896.jpg',
-    frontBrandNameKor: '컨티뉴',
-    products: [
-      {
-        productId: 2317845,
-        name: '2024 토끼 바니 베아트릭스포터 한장 천포스터  캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7886c8a4375783bc4122224df13d.jpg',
-      },
-      {
-        productId: 2317848,
-        name: '2024 숫자  한장 천포스터  캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7886e8fbc9c7a5b3f573cc5831ba.jpg',
-      },
-      {
-        productId: 2362577,
-        name: '청룡2 복을 부르는 그림 이슬비 용,캔버스 인테리어 액자',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 50000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9341dfff45ef83bc3bdd40b97f15.png',
-      },
-      {
-        productId: 2317762,
-        name: '2024 토끼 바니 베아트릭스포터  한장 캔버스 패브릭 캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7883921df65783bc0f1930f71b81.jpg',
-      },
-      {
-        productId: 2317774,
-        name: '2024 Flower 조셉 한장 캔버스 패브릭  캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee788402538c498a7f499aedea11ee.jpg',
-      },
-      {
-        productId: 2317832,
-        name: '2024 디저트 한장 천포스터  캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee788667d35d55a5b33976aa782e6b.jpg',
-      },
-      {
-        productId: 2317839,
-        name: '2024 티니 한장 천포스터  캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee788698c0fff7a5b31fc530808a52.jpg',
-      },
-      {
-        productId: 2317857,
-        name: '2024 Flower 조셉 한장 천포스터  캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee78870bd3ecc583bcedbf862ba1a8.jpg',
-      },
-      {
-        productId: 2317769,
-        name: '2024 숫자 한장 캔버스 패브릭 캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7883d3b1ae798a7fbb50e6085b3b.jpg',
-      },
-      {
-        productId: 2317842,
-        name: '2024 Garden 베이트먼 한장 천포스터 캘린더 달력',
-        frontBrandId: 16235,
-        frontBrandNameKor: '컨티뉴',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7886b29f7791a5b34989333c0a1f.jpg',
-      },
-    ],
-  },
-  '16373': {
-    id: '16373',
-    title: '겨울에만 만날 수 있는 포근함',
-    description:
-      '내셔널지오그래픽의 겨울 아우터는 일상에서 가장 접하기 좋은 편안함과 포근함을 선사합니다. 내셔널지오그래픽 스태프가 직접 착용하여 전하는 겨울 무드를 29CM에서 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198792',
-    front_brand_id: '3407',
-    brandNewsId: 16373,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 3407,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fc3faa0df5791eb171bdaf051aa.jpeg',
-    frontBrandNameKor: '내셔널지오그래픽',
-    products: [
-      {
-        productId: 2341865,
-        name: '내셔널지오그래픽 N234WDW901 여성 듀공 후드 숏다운 점퍼 CARBON BLACK',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/d8c89659732b4f1b8c6cf4de5531eb6e_20231120181746.jpg',
-      },
-      {
-        productId: 2341879,
-        name: '내셔널지오그래픽 N234UDW901 듀공 후드 숏기장 가슴포켓 덕 다운 점퍼 LICHEN KHAKI',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/faa6385f47cc4ff3b46f3f048b5151c0_20231120181452.jpg',
-      },
-      {
-        productId: 2343125,
-        name: '내셔널지오그래픽 N224UDW901 듀공 후드 숏기장 덕 다운 점퍼 MC GREY',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/05/5a13d22f3fc24525ae03c4e152a2310b_20231205160236.jpg',
-      },
-      {
-        productId: 2341866,
-        name: '내셔널지오그래픽 N234WDW901 여성 듀공 후드 숏다운 점퍼 L BEIGE',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/2ad2f471114845c499d286aea0a84ff3_20231120181732.jpg',
-      },
-      {
-        productId: 2343128,
-        name: '내셔널지오그래픽 N224UDW901 듀공 후드 숏기장 덕 다운 점퍼 DUSTY NAVY',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/05/459a7557ec554ef9853fc0c6dacd58f7_20231205160206.jpg',
-      },
-      {
-        productId: 2341867,
-        name: '내셔널지오그래픽 N234UDW902 듀공 후드 숏다운 점퍼 CINNAMON',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/adae623e92bd4fa096c5f720a588f479_20231120181720.jpg',
-      },
-      {
-        productId: 2341869,
-        name: '내셔널지오그래픽 N234UDW902 듀공 후드 숏다운 점퍼 L BEIGE',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/45b6c8ce4b8d45fd8957a264abb04c53_20231120181653.jpg',
-      },
-      {
-        productId: 2341868,
-        name: '내셔널지오그래픽 N234UDW902 듀공 후드 숏다운 점퍼 CARBON BLACK',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/1eba45a1a14a47e0964248f9c07a27bb_20231120181707.jpg',
-      },
-      {
-        productId: 2341864,
-        name: '내셔널지오그래픽 N234WDW901 여성 듀공 후드 숏다운 점퍼 LAVENDER',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/288b4ce32db74bdcb7fe964f1e8145e4_20231120181759.jpg',
-      },
-      {
-        productId: 2341880,
-        name: '내셔널지오그래픽 N234UDW901 듀공 후드 숏기장 가슴포켓 덕 다운 점퍼 CARBON BLACK',
-        frontBrandId: 3407,
-        frontBrandNameKor: '내셔널지오그래픽',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/3cbf6aa0e33240ca9deb0c5e34de25e1_20231120181439.jpg',
-      },
-    ],
-  },
-  '16395': {
-    id: '16395',
-    title: 'DUNST',
-    description: 'DUNST',
-    category: 'BRAND_SALE',
-    cover_image_id: '199016',
-    front_brand_id: '13310',
-    brandNewsId: 16395,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 13310,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea05b281f6c1b91eb89b83949234a.jpg',
-    frontBrandNameKor: '던스트',
-    products: [
-      {
-        productId: 1757448,
-        name: 'THUMBHOLE CUFF SWEATER SOFT SAGE_UDSW2D222E1',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/04/6f3898147ff64966a12a5ff951520360_20221004120342.jpg',
-      },
-      {
-        productId: 1774608,
-        name: 'UNISEX ESSENTIAL WOOL TURTLENECK SWEATER BLACK_UDSW3D124BK',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/619ccdee6d8c49039e72dfa949c47b0e_20231010145745.jpg',
-      },
-      {
-        productId: 2279040,
-        name: 'UNISEX ESSENTIAL WOOL TURTLENECK SWEATER BLACK_M_UDSW3D124BK',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/0cd7f26ae2c14b008658e150bb2f9242_20231010140131.jpg',
-      },
-      {
-        productId: 1774611,
-        name: 'UNISEX ESSENTIAL WOOL TURTLENECK SWEATER MELANGE GREY_UDSW3D124G2',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/baad468c11c54e38a06cd045d1be6cde_20231010145732.jpg',
-      },
-      {
-        productId: 2279115,
-        name: 'UNISEX ESSENTIAL WOOL TURTLENECK SWEATER MELANGE GREY_M_UDSW3D124G2',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/c352d74b795c4b70855c6fe070248ebf_20231010142255.jpg',
-      },
-      {
-        productId: 2279226,
-        name: 'HANDMADE CASHMERE SINGLE COAT CAMEL_UDCO3D233CM',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 349000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/ae75c343e4bc4f7f82b75f3a59a0ae1a_20231010144820.jpg',
-      },
-      {
-        productId: 1774617,
-        name: 'UNISEX ESSENTIAL WOOL TURTLENECK SWEATER IVORY_UDSW3D124IV',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/91969bf2d5a5400aac974d1134eab4e9_20231010145719.jpg',
-      },
-      {
-        productId: 2279043,
-        name: 'UNISEX ESSENTIAL WOOL TURTLENECK SWEATER IVORY_M_UDSW3D124IV',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/8367832b05a84e9885eb4a46eed0541b_20231010140159.jpg',
-      },
-      {
-        productId: 1757446,
-        name: 'THUMBHOLE CUFF SWEATER SOFT BLUE_UDSW2D222B1',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/04/955b2c6fc80e4d1890eb25ee0b472bd2_20221004120233.jpg',
-      },
-      {
-        productId: 1774473,
-        name: '70S SEMI FLARED COUDUROY JEANS PINK_UDPA3D230P2',
-        frontBrandId: 13310,
-        frontBrandNameKor: '던스트',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/09/26/7c6ca83537e949d1b225642e415eb0dd_20230926193322.jpg',
-      },
-    ],
-  },
-  '16397': {
-    id: '16397',
-    title: '맛있는 음식을 만들어드려요',
-    description:
-      '일본의 프리미엄 쿡웨어 브랜드 버미큘라를 만나보세요. 버미큘라만의 기술은 요리의 맛을 더욱 풍성하게 만들어준답니다.',
-    category: 'BRAND_SALE',
-    cover_image_id: '199034',
-    front_brand_id: '18610',
-    brandNewsId: 16397,
-    displayStartAt: '2023-12-25T01:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 18610,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea0650fcfedd191ebc397b27903cf.jpg',
-    frontBrandNameKor: '버미큘라',
-    products: [
-      {
-        productId: 1680379,
-        name: '[버미큘라] 자석 냄비받침 14cm~26cm (월넛)',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 80000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/08/22/e0d2fc16a2e64be0a6ddba7767d79232_20220822180719.jpg',
-      },
-      {
-        productId: 1679427,
-        name: '[버미큘라] 오븐 팟 라운드 26cm 주물 냄비 무수분조리(스페셜 컬러)',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 450000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/10/c083aa2a12ab40f594b20e6ca98d81aa_20221110135303.jpg',
-      },
-      {
-        productId: 1680454,
-        name: '[버미큘라] 팟 홀더',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 70000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/08/26/684173b297274ef099d086759f3a96f9_20220826183516.jpg',
-      },
-      {
-        productId: 1680127,
-        name: '[버미큘라] 자석 냄비받침 14cm~26cm (메이플)',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 80000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/08/22/77bbb98f6c1b42adaa4c133dde293de5_20220822165925.jpg',
-      },
-      {
-        productId: 1679410,
-        name: '[버미큘라] 오븐 팟 라운드 26cm 주물 냄비 무수분조리',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 440000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/08/22/821ec5d7b45a43f3a033d9b0eeab6a3d_20220822140206.jpg',
-      },
-      {
-        productId: 1679458,
-        name: '[버미큘라] 오븐 팟 라운드 전골 26cm 주물 냄비 무수분조리(스페셜 컬러)',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 430000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/08/22/723f823103a143a69604d2218a848a31_20220822141515.jpg',
-      },
-      {
-        productId: 1681182,
-        name: '[버미큘라] 라이스팟 주물 전기 밥솥',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 1189000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/10/7e278c225087478bbe5e7295bfa54cad_20221110140446.jpg',
-      },
-      {
-        productId: 2238972,
-        name: '[버미큘라] 주물 법랑 프라이팬 오븐 세이프 스킬렛',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee522032c5aa998a7fab724939c864.jpg',
-      },
-      {
-        productId: 1677887,
-        name: '[버미큘라] 순간증발 주물 법랑 프라이팬 20~28cm (인덕션 겸용 / 레시피북 증정)',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/08/22/54935cfad32c41d5bcb03e33d9b795b9_20220822142620.jpg',
-      },
-      {
-        productId: 1689032,
-        name: '[버미큘라] 오가닉 린넨 키친클로스',
-        frontBrandId: 18610,
-        frontBrandNameKor: '버미큘라',
-        consumerPrice: 45000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/10/7eb56afe81fb402ebc12c58997695b17_20221110140717.jpg',
-      },
-    ],
-  },
-  '16060': {
-    id: '16060',
-    title: '전설이될 협업',
-    description:
-      '듀테로와 유니버셜 뮤직의 협업 컬렉션 발매. 레전더리 아티스트들인 퍼블릭에너미, 비스티보이즈로 출발합니다. 앞으로 출시될 다양한 레전더리 아티스트와의 협업 소식도 기대해주세요.',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '195064',
-    front_brand_id: '7954',
-    brandNewsId: 16060,
-    displayStartAt: '2023-12-25T10:00:00.000000',
-    displayEndAt: '2024-01-07T14:59:00.000000',
-    frontBrandId: 7954,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee98af4a7d5306b238dfd5b6bfb685.jpg',
-    frontBrandNameKor: '듀테로',
-    products: [],
-  },
-  '15426': {
-    id: '15426',
-    title: '단정하고 집중이 잘 되는 홈오피스',
-    description:
-      '집중이 잘 되는 홈오피스를 만들고 싶다면 데스커 모션데스크를 경험해 보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '186047',
-    front_brand_id: '24858',
-    brandNewsId: 15426,
-    displayStartAt: '2023-12-25T15:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 24858,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202311/11ee89c53c5267998a7ff1e46b185272.jpg',
-    frontBrandNameKor: '데스커',
-    products: [
-      {
-        productId: 2324611,
-        name: '멀티탭+클램프 세트 DSABP0200',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 50000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/b166157cb73241cfbfa15144b3a115cb_20231106174026.jpeg',
-      },
-      {
-        productId: 2327767,
-        name: '데스커 1400x700 모션데스크 플러스 DSDCM1407',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 605000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/08/8a85997066e34a7bb68dad72af52f82d_20231108144424.jpeg',
-      },
-      {
-        productId: 2324602,
-        name: '1400x800모션데스크 프리미엄 DSDDM1408',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 854000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/d833de3abc2b4fbab9ec7015f406aa1a_20231106173826.jpeg',
-      },
-      {
-        productId: 2324607,
-        name: '데스크 암패드 DSADAA0800',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 17000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/1e6ad88b89144254a1db09760ef37c8f_20231106173943.jpeg',
-      },
-      {
-        productId: 2324608,
-        name: '데스크매트 DSABAA0804',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 26000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/78e64cc0e3954883a96c12f85531810f_20231106173955.png',
-      },
-      {
-        productId: 2324603,
-        name: '1600x800 모션데스크 프리미엄 DSDDM1608',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 887000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/2623a13491b54f7fa465f285a7f070ab_20231106173908.jpeg',
-      },
-      {
-        productId: 2324605,
-        name: '1400x700 모션데스크 프리미엄 DSDDM1407',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 846000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/01bdffbd34f44a77b6f68160014f9a57_20231106173927.jpeg',
-      },
-      {
-        productId: 2324613,
-        name: '멀티 오거나이저 DSACBA0201',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/d4f4fb70fdcc48d2bb34b152148c54ab_20231106174044.png',
-      },
-      {
-        productId: 2324614,
-        name: '툴박스 DSACBA0202',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/62bb5b1f3e0643d4a8fd228bdabe4cec_20231106174057.png',
-      },
-      {
-        productId: 2324612,
-        name: '페이퍼트레이 DSACAA0301',
-        frontBrandId: 24858,
-        frontBrandNameKor: '데스커',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/06/e64f7552d2ba4ee88a1deeb412051425_20231106174032.png',
-      },
-    ],
-  },
-  '16073': {
-    id: '16073',
-    title: '고품질의 라운지웨어',
-    description:
-      '예술가들의 삶에서 영감을 받은 슬리피존스의 파자마 상품들을 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198790',
-    front_brand_id: '26160',
-    brandNewsId: 16073,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 26160,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fc3f5f558a591eb9d839e758da2.jpg',
-    frontBrandNameKor: '슬리피존스',
-    products: [
-      {
-        productId: 2248503,
-        name: '(W) MARINA PAJAMA SET (SKI JACQUARD NAVY)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 398000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f074ef9438c837751291f3ac8a5.jpg',
-      },
-      {
-        productId: 2248505,
-        name: '(U) HENRY PAJAMA SET (NAVY FLANNEL)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f073df26fd6b2381bcd522e9ec7.jpg',
-      },
-      {
-        productId: 2248508,
-        name: '(U) HENRY PAJAMA SET (FLANNEL CABIN PLAID)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f07353a135d91eb41496be960f4.jpg',
-      },
-      {
-        productId: 2339019,
-        name: '(U) LOGO BASEBALL HAT (NAVY)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 65000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9402237416c991eb856a0e3b3414.jpg',
-      },
-      {
-        productId: 2248506,
-        name: '(U) HENRY PAJAMA SET (RIBBON STRIPES)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9965fdfda84391ebfd814f0ba0e8.jpg',
-      },
-      {
-        productId: 2248507,
-        name: '(U) HENRY PAJAMA SET (BURGUNDY BAR STRIPE)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f073e5ace98b2380b04fba6e207.jpg',
-      },
-      {
-        productId: 2248509,
-        name: '(U) HENRY PAJAMA SET (SKI JACQUARD NAVY)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 398000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee998c5030072991ebc99bf8e68c88.jpg',
-      },
-      {
-        productId: 2248504,
-        name: '(U) HENRY PAJAMA SET (END ON END BLUE)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f079dfe731d91eb433a8e9233c5.jpg',
-      },
-      {
-        productId: 2248502,
-        name: '(W) MARINA PAJAMA SET (FLANNEL CABIN PLAID)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f074f815ee191eb0dcce193cac3.jpg',
-      },
-      {
-        productId: 2248510,
-        name: '(U) HENRY PAJAMA SET (NAVY BRETON STRIPE)',
-        frontBrandId: 26160,
-        frontBrandNameKor: '슬리피존스',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f0729d7a604837761f76c3f3b93.jpg',
-      },
-    ],
-  },
-  '16289': {
-    id: '16289',
-    title: '겨울 캠핑의 시작',
-    description:
-      '올 겨울 보다 포근하고 따듯하게 여러분의 겨울을 감싸 줄 것입니다. 멋진 디자인과 실용성으로 무장한 브루클린웍스를 3일간 단독 특가로 만나보세요. ~50%',
-    category: 'BRAND_SALE',
-    cover_image_id: '197953',
-    front_brand_id: '13084',
-    brandNewsId: 16289,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2023-12-29T14:59:00.000000',
-    frontBrandId: 13084,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e39453835848377d13905a487c1.jpg',
-    frontBrandNameKor: '브루클린웍스',
-    products: [
-      {
-        productId: 1862280,
-        name: 'BW_[브루클린웍스] 전기장판 전기요 싱글',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 95000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/12/088ee8cfe774429db92192794717b3f8_20230112135102.jpg',
-      },
-      {
-        productId: 2031205,
-        name: 'BW_[브루클린웍스] 반팔 티셔츠 아웃도어 기본 티셔츠',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/04/18/ef27696475f746ea84ac3237775aab03_20230418121915.jpg',
-      },
-      {
-        productId: 1861947,
-        name: 'BW_[브루클린웍스] 미니 사코슈 크로스백',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/12/26/d7c91fe7c89148cb8014aa0fb5da1a46_20221226161044.jpg',
-      },
-      {
-        productId: 1861981,
-        name: 'BW_[브루클린웍스] 다용도 캔버스 불멍백 세트',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 56000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/12/26/8ddfdc9115d64acc84ade3062a58ceb9_20221226161707.jpg',
-      },
-      {
-        productId: 1862346,
-        name: 'BW_[브루클린웍스] 포트 LED 랜턴 브래스(Brass)+파우치',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 165000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/12/27/77846c31eb954f08817e77febd821b19_20221227094806.jpg',
-      },
-      {
-        productId: 1873240,
-        name: 'BW_Z-박스 50L 스토리지 폴딩박스 단품',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5856d23ae1d983bccd6ab8612f7b.jpg',
-      },
-      {
-        productId: 1862349,
-        name: 'BW_[브루클린웍스] 포트 LED 랜턴 니켈(Nickel) + 파우치',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 165000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/12/27/d6ab0780d89e4440abfa86d800e98b6b_20221227094817.jpg',
-      },
-      {
-        productId: 1861960,
-        name: 'BW_[브루클린웍스] 캠핑 수납박스 카고박스 30L',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 45000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/12/26/e798cd4f42734ed8999fb629461a549f_20221226161304.jpg',
-      },
-      {
-        productId: 1422180,
-        name: 'BW_[브루클린웍스] 팔각 우드 롤 테이블',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 150000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/02/23/447f27b3bfef405da0d08d74a4c7ceff_20220223085858.jpg',
-      },
-      {
-        productId: 2285926,
-        name: 'BW_[브루클린웍스] 핫팩 1BOX (10개입)',
-        frontBrandId: 13084,
-        frontBrandNameKor: '브루클린웍스',
-        consumerPrice: 10000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/13/08d122e105e9474cb7d0193215af4b01_20231013115212.jpg',
-      },
-    ],
-  },
-  '16322': {
-    id: '16322',
-    title: '두 번 할인받을 수 있어요',
-    description:
-      '룬느의 주얼리들을 5% 쿠폰과 중복 적용되는 10% 쿠폰까지 적용 가능해요',
-    category: 'BRAND_SALE',
-    cover_image_id: '198251',
-    front_brand_id: '12961',
-    brandNewsId: 16322,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 12961,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9ee28d9da37cb23825cbebf57259.jpg',
-    frontBrandNameKor: '룬느',
-    products: [
-      {
-        productId: 1962277,
-        name: '14K 6프롱 다이아몬드 1부 목걸이 (14k골드) #L06',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 270000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/09/e0b1173fd2954fabb870f9302d1f34aa_20230309172644.jpg',
-      },
-      {
-        productId: 2350378,
-        name: '14k 시그니티 스톤 목걸이 (14k골드) #E06',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8ce17155ea478a7ff7290be5c41a.jpg',
-      },
-      {
-        productId: 2185034,
-        name: '실버 925 별조각 언발 하트 귀걸이 #LSE84',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 40000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee40c19c43f8e4acc535e40f911376.jpg',
-      },
-      {
-        productId: 1962337,
-        name: '14K 각 컷팅 원터치 귀걸이 (14K골드) #E01',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 95000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/09/692c9c4e05614269b441d2cf647303b4_20230309173802.jpg',
-      },
-      {
-        productId: 1962250,
-        name: '14K 시그니티 드롭 원터치 귀걸이 (14k골드) #E05',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 54900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/09/23c8f1a22f6a496ab50854d8119bc940_20230309172050.jpg',
-      },
-      {
-        productId: 1796245,
-        name: '14k 에메랄드 바게트 큐빅 피어싱 (14K골드) #LFPI01',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 81000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/25/5cb13d7249ae476ba4bd70998179525b_20221025184521.jpg',
-      },
-      {
-        productId: 2055861,
-        name: '14k 바게트 스톤 리본 원터치 귀걸이 (14k골드) #LFE11',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 155000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/05/04/65cbf7283c6c43feb296745c1a2d2e0b_20230504202354.jpg',
-      },
-      {
-        productId: 1795687,
-        name: '14k 클래식 엣지 원터치 귀걸이(S,L)(14K골드) #LFE01',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/25/09bab5396a894f8eab1ab12e94cdc7f4_20221025162454.jpg',
-      },
-      {
-        productId: 2185019,
-        name: '실버 925 별조각 언발 하트 펜던트 목걸이 #LSN52',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202308/11ee40c15f6982e2acc5cf61c558528b.jpg',
-      },
-      {
-        productId: 1796250,
-        name: '14k 오벌 러프 플로우 텍스처 펜던트 (14K골드) #LFP03',
-        frontBrandId: 12961,
-        frontBrandNameKor: '룬느',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/25/96671c8262f94c4d8a084a561784db69_20221025185628.jpg',
-      },
-    ],
-  },
-  '16324': {
-    id: '16324',
-    title: '인도어 홀리데이',
-    description:
-      '추운 겨울날 실내에서 즐길 트렌디한 겨울옷은 굿하비클럽에 있어요. 29CM 단독할인과 함께.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198270',
-    front_brand_id: '2003',
-    brandNewsId: 16324,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2023-12-28T14:59:00.000000',
-    frontBrandId: 2003,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9eeaa95faeb883774de490b822b4.jpg',
-    frontBrandNameKor: '굿하비클럽',
-    products: [
-      {
-        productId: 2276540,
-        name: 'MINI SQUARE QUILTING BAG_BLACK',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 69000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/a84fc52878f54f4babba26afa53d8fc1_20231012185352.jpg',
-      },
-      {
-        productId: 2276551,
-        name: 'SOFT FEATHER BALACLAVA_NAVY',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 49000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/95543e58b4394a509dfdfd7eb352ded2_20231012185210.jpg',
-      },
-      {
-        productId: 2276561,
-        name: 'GLOSSY QUILTING JACKET_BLACK',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 249000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/6f0aa4f4ac0a47c4b44e2616df5f463d_20231012184935.jpg',
-      },
-      {
-        productId: 2276538,
-        name: 'PADDED BAG_SILVER',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 55000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/839e2813552d443896056abd322e6f7f_20231012185458.jpg',
-      },
-      {
-        productId: 2276541,
-        name: 'MINI SQUARE QUILTING BAG_BLUE',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 69000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/3c019506f78f42fa823a100eb90e3853_20231012185314.jpg',
-      },
-      {
-        productId: 2276558,
-        name: 'GLOSSY QUILTING JACKET_KHAKI',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 249000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/1b8339c793ab48d88f999212238e0ea7_20231012185038.jpg',
-      },
-      {
-        productId: 2276553,
-        name: 'SOFT FEATHER BALACLAVA_PURPLE',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 49000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/cc9ef17ba7ae4e02a8305f81a04cb313_20231012185129.jpg',
-      },
-      {
-        productId: 2276543,
-        name: 'SQUARE QUILTING BAG_BLACK',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 75000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/66784e4fb35c4123b9995b5c20bc665c_20231012185251.jpg',
-      },
-      {
-        productId: 2276546,
-        name: 'SQUARE QUILTING BAG_BLUE',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 75000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/327e083e00a1477ca753d1231c5d67b0_20231012185230.jpg',
-      },
-      {
-        productId: 2276539,
-        name: 'PADDED BAG_WHITE',
-        frontBrandId: 2003,
-        frontBrandNameKor: '굿하비클럽',
-        consumerPrice: 55000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/3aae9c531cfd47b78299a1a192531816_20231012185415.jpg',
-      },
-    ],
-  },
-  '16328': {
-    id: '16328',
-    title: '두 번 할인받을 수 있어요',
-    description:
-      '헤이의 주얼리들을 5% 쿠폰과 중복 적용되는 10% 쿠폰까지 함께 만나보세요',
-    category: 'BRAND_SALE',
-    cover_image_id: '198317',
-    front_brand_id: '6110',
-    brandNewsId: 16328,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 6110,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9ef1320d185a83774ffb21bbfb10.jpg',
-    frontBrandNameKor: '헤이',
-    products: [
-      {
-        productId: 2099752,
-        name: '[29단독][에스파 윈터, 형원,오마이걸 유아,우기&슈화, 빌리츠키 착용] baby star necklace',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 53000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/06/07/f5f716f03f054aa28a845a07a6eb019b_20230607144403.jpg',
-      },
-      {
-        productId: 2360892,
-        name: '[29단독][sv925]mini three pearl necklace',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 35000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9278e6d12101a5b33f6e0191e87e.jpg',
-      },
-      {
-        productId: 2099749,
-        name: '[29단독] simple ball Long necklace',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 55000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/06/07/02b40df2071045cdaf23fae38bcd2453_20230607144910.jpg',
-      },
-      {
-        productId: 2360854,
-        name: '[sv925]cynical one-touch earring',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9273e6f4a1668a7f71050d749584.jpg',
-      },
-      {
-        productId: 2360857,
-        name: '[레드벨벳 웬디 착용] plain cubic ribbon earring',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 28000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9273e6ef98308a7f3b602976aee4.jpg',
-      },
-      {
-        productId: 2360837,
-        name: '[sv925]flower ring',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee94d656599e18b238afd849a5c13d.jpg',
-      },
-      {
-        productId: 1947851,
-        name: '[문별, 남주, 채연, 채령, 마시로, 조현아 착용] cow leather heart necklace',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 32000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/02/8ca305819cfc4bda9fb3b01b99150782_20230302172216.jpg',
-      },
-      {
-        productId: 2360862,
-        name: 'spotlight heart earring',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 45000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9273e6efe6588a7fed4ca8dde3c2.jpg',
-      },
-      {
-        productId: 2360861,
-        name: '[sv925]high-class onyx heart necklace',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 74000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9273e6fda16e8a7fff578176cebf.jpg',
-      },
-      {
-        productId: 2360859,
-        name: '[레드벨벳 웬디, 빌리 츠키 착용] barbie ribbon pearl necklace',
-        frontBrandId: 6110,
-        frontBrandNameKor: '헤이',
-        consumerPrice: 44000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9273e6f7d5d88a7f6bb232a1eeea.jpg',
-      },
-    ],
-  },
-  '16339': {
-    id: '16339',
-    title: '변하지않는 클래식',
-    description:
-      '높은 퀄리티와 클래식한 무드로 많은 사랑을 받는 리파인드 902의 베스트 상품을 29CM 단독 할인으로 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198422',
-    front_brand_id: '4692',
-    brandNewsId: 16339,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 4692,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f1827858fc283775bf3f850adf4.jpg',
-    frontBrandNameKor: '리파인드902',
-    products: [
-      {
-        productId: 2316686,
-        name: 'Jacquard Flare Skirt_Black',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee785a7489edfb8a7f9dccc487081b.jpg',
-      },
-      {
-        productId: 2361794,
-        name: 'Halfneck Oversized Long coat_Herringbone',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 498000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93282186c84d8a7f695b4940870e.jpg',
-      },
-      {
-        productId: 1825066,
-        name: 'Eco Leather Button Belted Jacket_Black',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 269000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7dcf61fce5efa5b33f3d4e56661e.jpg',
-      },
-      {
-        productId: 2353625,
-        name: 'Quilting Padding Jacket with Muffler_Black',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 239000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e597842a0cd83bc0d8a94470a49.jpg',
-      },
-      {
-        productId: 2353617,
-        name: 'Quilting Padding Jacket with Muffler_Chocolate Brown',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 239000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e59074e005f83bcfdb793d13495.jpg',
-      },
-      {
-        productId: 2234455,
-        name: 'Tuck Semi-Wide Long Pants_Black',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee52a43d0c89a383bc8fd6af194bd0.jpg',
-      },
-      {
-        productId: 2316623,
-        name: 'Halfneck Oversized Long coat_Navy',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 498000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee78549af9c52983bc0be93d661779.jpg',
-      },
-      {
-        productId: 1840241,
-        name: 'Cashmere knit Balaclava_7 Color_뉴컬러 추가',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee94be9bb93ffcb23837af81a099be.jpg',
-      },
-      {
-        productId: 2316611,
-        name: 'Hairy Wool Duffle Half coat_Dark Navy',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 439000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93509e6ffc738a7f41de63666480.jpg',
-      },
-      {
-        productId: 2316607,
-        name: 'Hairy Wool Duffle Half coat_Sand Beige',
-        frontBrandId: 4692,
-        frontBrandNameKor: '리파인드902',
-        consumerPrice: 439000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee785394c7ba598a7fb1a8174ce3d8.jpg',
-      },
-    ],
-  },
-  '16340': {
-    id: '16340',
-    title: '기분좋은 72시간',
-    description:
-      '당신을 위한 특별한 혜택 72시간 이벤트를 시작합니다. 모든 상품을 60% 할인된 특별가로 만나보실 수 있습니다. 지금 최고의 기분을 경험하세요! 2023.12.26 ~ 2023.12.28',
-    category: 'BRAND_SALE',
-    cover_image_id: '198424',
-    front_brand_id: '3206',
-    brandNewsId: 16340,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2023-12-28T14:59:00.000000',
-    frontBrandId: 3206,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f1992705c8e837789cea177e1eb.jpg',
-    frontBrandNameKor: '엄브로',
-    products: [],
-  },
-  '16341': {
-    id: '16341',
-    title: '나의 홀리데이를 함께 보내 줄',
-    description:
-      '바쁘고 시끄러운 연말 시즌 분주한 일상에서 벗어나 조용하고 자유롭게 보내는 나의 홀리데이를 함께 할 오스트카카를 추천해요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198426',
-    front_brand_id: '7809',
-    brandNewsId: 16341,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-08T14:59:00.000000',
-    frontBrandId: 7809,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f1bc1cf0fcab2385bde70dace5e.jpg',
-    frontBrandNameKor: '오스트카카',
-    products: [
-      {
-        productId: 2189845,
-        name: '크누트 아콘 백팩 블랙',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 259000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7344c309f983bca5739ba4c903.jpg',
-      },
-      {
-        productId: 2189853,
-        name: '크누트 미니 퀼팅 블랙',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee923551d37b57a5b3a992d2d9c59a.jpg',
-      },
-      {
-        productId: 2190053,
-        name: '크누트 멜팅 아이보리',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 319000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/08/24/51408397f18b4dfd821c55af7c607fab_20230824151515.jpg',
-      },
-      {
-        productId: 2240203,
-        name: '카델 새들 버건디',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 239000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8f507290ecc18a7fa7e7cd312654.jpg',
-      },
-      {
-        productId: 2351631,
-        name: '크누트 드로우 숄더백 블랙',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e5585c37f07a5b3f5e45671e454.jpg',
-      },
-      {
-        productId: 2189856,
-        name: '크누트 미니 퀼팅 실버',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9235302de4d18a7fdd237ff07306.jpg',
-      },
-      {
-        productId: 2363176,
-        name: '[리퍼브] 카델 보트 블랙',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 259000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/06/9ab0b96e463c414c94299514546b0b7d_20231206104751.jpg',
-      },
-      {
-        productId: 2189859,
-        name: '크누트 미니 퀼팅 아이보리',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee92351abfe6bf83bca9ca65ef589a.jpg',
-      },
-      {
-        productId: 2278206,
-        name: '크누트 베이비 하프문 블랙',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/10/395b71e98cd248cc8672a86252520ae0_20231010105155.jpg',
-      },
-      {
-        productId: 2351630,
-        name: '크누트 드로우 숄더백 아이보리',
-        frontBrandId: 7809,
-        frontBrandNameKor: '오스트카카',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8d8d06ebb5c78a7fc130852694c8.jpg',
-      },
-    ],
-  },
-  '16350': {
-    id: '16350',
-    title: '29CM에서만 가능한 선물 꾸러미',
-    description:
-      '기획전 기간 내 세인트제임스 잡화를 구매하시면 29CM 단독 선물 패키징과 함께 출고됩니다. 새해 복 많이 받으세요!',
-    category: 'BRAND_SALE',
-    cover_image_id: '198486',
-    front_brand_id: '5724',
-    brandNewsId: 16350,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 5724,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f2ec7810f2cb23817f8702edf98.png',
-    frontBrandNameKor: '세인트제임스',
-    products: [
-      {
-        productId: 2279446,
-        name: 'Scarf Raye (051) HSJU2331409-051',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee76bac5ae40738a7f53c727a20bde.jpg',
-      },
-      {
-        productId: 2291187,
-        name: '[23FW 뉴컬러] Duguay R (0OU) HSJU2332945-0OU',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b1535d5b3cd91eb7f69ed9ce99d.jpg',
-      },
-      {
-        productId: 2291180,
-        name: '[23FW 뉴컬러] Scarf Raye (00D) HSJU2331409-00D',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b154ac1d720b238a9295496d633.jpg',
-      },
-      {
-        productId: 2291181,
-        name: '[23FW 뉴컬러] Scarf Raye (00P) HSJU2331409-00P',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b15469ce59483773bf8fb84ef4d.jpg',
-      },
-      {
-        productId: 2291185,
-        name: '[23FW 뉴컬러] Duguay R (00H) HSJU2332945-00H',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b153a183ed68377a7cf6806f85a.jpg',
-      },
-      {
-        productId: 2291184,
-        name: '[23FW 뉴컬러] Scarf Raye (0SU) HSJU2331409-0SU',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b153ea39356b2388dd2c2cbcda0.jpg',
-      },
-      {
-        productId: 2291189,
-        name: '[23FW 뉴컬러] Duguay R (11Z) HSJU2332945-11Z',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b1531d81f9ab238094361ab84f6.jpg',
-      },
-      {
-        productId: 2362621,
-        name: '[23FW 뉴컬러] Scarf Raye (0QR) HSJU2331409-0QR',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b148d6c255883776d06ab35cbc4.jpg',
-      },
-      {
-        productId: 2291182,
-        name: '[23FW 뉴컬러] Scarf Raye (0G7) HSJU2331409-0G7',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b1542af314791eb53fd7737b1d3.jpg',
-      },
-      {
-        productId: 2291186,
-        name: '[23FW 뉴컬러] Duguay R (0DA) HSJU2332945-0DA',
-        frontBrandId: 5724,
-        frontBrandNameKor: '세인트제임스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b1505f0a7948377f1f4fb3b83aa.jpg',
-      },
-    ],
-  },
-  '16353': {
-    id: '16353',
-    title: '겨울 빛의 다채로움',
-    description:
-      '유리와 다양한 소재를 사용한 핸드메이드 주얼리 포틀의 발매를 알려요. 29CM에서 가장 먼저 만나볼 수 있어요',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '198517',
-    front_brand_id: '23388',
-    brandNewsId: 16353,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 23388,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f9b5df0e6beb23887fdd3941ea2.jpg',
-    frontBrandNameKor: '포틀',
-    products: [
-      {
-        productId: 2380488,
-        name: 'Day necklace',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 120000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f14a6f350ee8377e379a4497c7f.jpg',
-      },
-      {
-        productId: 2284668,
-        name: 'Weekend necklace',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 81000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee68cf9a83ec5183bc217d5a55d25e.jpg',
-      },
-      {
-        productId: 2380463,
-        name: 'Day earring',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 68000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f131ed00bc8b238098b810c28b2.jpg',
-      },
-      {
-        productId: 2284687,
-        name: 'Hang chain necklace',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 85000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee68d11647027583bcb116b9c57dd8.jpg',
-      },
-      {
-        productId: 2284725,
-        name: 'Ugly Heart scarf necklace',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee68d31c2774bf83bcdf0bbfe04e5a.jpg',
-      },
-      {
-        productId: 2380467,
-        name: 'Day necklace',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 73000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f13ee5ecfa991eb77b4651cfef8.jpg',
-      },
-      {
-        productId: 2284682,
-        name: 'White necklace',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 87000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee68d09197e09fa5b3b7138f50aeb0.jpg',
-      },
-      {
-        productId: 2284811,
-        name: 'White bracelet',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 56000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee68d53fa58a018a7f85db9c8e630e.jpg',
-      },
-      {
-        productId: 2284416,
-        name: 'Rope earcuff',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 60000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee68cb1afde27da5b39fbe8fc11021.jpg',
-      },
-      {
-        productId: 2284524,
-        name: 'Feeling ring',
-        frontBrandId: 23388,
-        frontBrandNameKor: '포틀',
-        consumerPrice: 71000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee68cda042f18b83bcc7a85138cd63.jpg',
-      },
-    ],
-  },
-  '16355': {
-    id: '16355',
-    title: '기분좋은 72시간',
-    description:
-      '해외에서 더욱 많이 주목받고 있는 머렐을 만나보세요. 미국 유타에서 시작하지만 현재는 글로벌 하이킹 슈즈 브랜드로 성장한 머렐의 72시간 단독 할인 이벤트를 만나보세요. 12.26 ~ 12.28',
-    category: 'BRAND_SALE',
-    cover_image_id: '198530',
-    front_brand_id: '21782',
-    brandNewsId: 16355,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2023-12-28T14:59:00.000000',
-    frontBrandId: 21782,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f9ca0c7d7f991eb09bd09a508cf.jpg',
-    frontBrandNameKor: '머렐',
-    products: [
-      {
-        productId: 2267113,
-        name: '[WOMEN] 퀼팅형 하이넥 기본 경량 다운 자켓 DARK PINK',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/05/be2fc11ac63d42c4b4c1594854b75416_20231005201444.jpg',
-      },
-      {
-        productId: 2267111,
-        name: '[WOMEN] 퀼팅형 하이넥 기본 경량 다운 자켓 BLACK',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/05/2e8faa8d5e5e499cb0b0afb731b129ce_20231005201501.jpg',
-      },
-      {
-        productId: 2325925,
-        name: '[MEN] 도레이 쿠도스 경량 구스 다운 자켓 DARK MUSTARD',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 259000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/08/27ca5e68c5154556b84cdbb9beccb4d4_20231108185530.jpg',
-      },
-      {
-        productId: 2325923,
-        name: '[MEN] 도레이 쿠도스 경량 구스 다운 자켓 BLACK',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 259000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/08/5b33792f4dd8470db2f7de8d62d01209_20231108185543.jpg',
-      },
-      {
-        productId: 2267115,
-        name: '[MEN] 퀼팅형 하이넥 기본 경량 다운 자켓 NAVY',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/05/2c3440a865d2444d8de928a3dbbc72ed_20231005201406.jpg',
-      },
-      {
-        productId: 2267114,
-        name: '[MEN] 퀼팅형 하이넥 기본 경량 다운 자켓 DARK CHARCOAL',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/05/d8bd2bb7140143feb18abb56b21b0000_20231005201423.jpg',
-      },
-      {
-        productId: 2325932,
-        name: '[MEN] 도레이 쿠도스 경량 구스 다운 자켓 TURQUOISE',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 259000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/08/3c6a2ddfe829490493099a1fe8401866_20231108185515.jpg',
-      },
-      {
-        productId: 2172958,
-        name: '[MEN] WINTER MOC 3 BLACK 윈터목',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/08/18/712648051ed94580a684cb88caf4a7c1_20230818111527.jpg',
-      },
-      {
-        productId: 2339174,
-        name: '[MEN] 퀼팅형 하이넥 기본 경량 다운 자켓 BLACK',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/16/ba1fd1bd76e345cfa0a496fee16e2993_20231116185524.jpg',
-      },
-      {
-        productId: 2172946,
-        name: '[MEN] HUT MOC 2 SUEDE GUNSMOKE 헛목 2 스웨이드',
-        frontBrandId: 21782,
-        frontBrandNameKor: '머렐',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/08/18/b7e2464b5ed3439aaeff6f83f65a3ada_20230818111651.jpg',
-      },
-    ],
-  },
-  '16356': {
-    id: '16356',
-    title: '다채로운 포인트',
-    description:
-      '트리의 오너먼트에서 영감을 받은 어거스트하모니의 홀리데이 컬렉션 2차 발매를 알려요. 단독 할인으로 만나보세요',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '198543',
-    front_brand_id: '7666',
-    brandNewsId: 16356,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 7666,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f9e3ab1e4e48377b7fe127f2be8.jpg',
-    frontBrandNameKor: '어거스트하모니',
-    products: [
-      {
-        productId: 2375701,
-        name: 'Water Drop Oval chain Necklace / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 55000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9cc9df6ebd7c837725da13b56b36.jpg',
-      },
-      {
-        productId: 2375700,
-        name: '925silver Shiny Crystal Ring / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 85000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9cc921dac96591eb2ff7e6307f4c.jpg',
-      },
-      {
-        productId: 2375702,
-        name: '925silver A Open Ring / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9cca5494ab5cb238e143dc9a9d18.jpg',
-      },
-      {
-        productId: 2375707,
-        name: '925silver Harmony Sparkle Necklace / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9ccc8a5ff5b2837755d700a321db.jpg',
-      },
-      {
-        productId: 2375706,
-        name: 'Joyful Y-drop Necklace / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 55000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9ccbc41f3e1eb2383f8e87558c4e.jpg',
-      },
-      {
-        productId: 2375709,
-        name: '925silver Harmony Sparkle Twoway Necklace',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9ccdafc7a7bcb238f9fae8b6b966.jpg',
-      },
-      {
-        productId: 2375698,
-        name: 'Egg Ball Twoway Necklace / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 45000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9cc7bae2baa991eb5da7e427ac0c.jpg',
-      },
-      {
-        productId: 2375704,
-        name: 'Snowman Earring / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9ccae872ab948377c9607b29cadf.jpg',
-      },
-      {
-        productId: 2375699,
-        name: 'Big Square Crystal Necklace / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 45000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9cc824fe45e791ebffa0c74a21e9.jpg',
-      },
-      {
-        productId: 2375708,
-        name: '925silver Thick Daily Sparkle Necklace / 2color',
-        frontBrandId: 7666,
-        frontBrandNameKor: '어거스트하모니',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9ccd18758e848377175ff89cf836.jpg',
-      },
-    ],
-  },
-  '16358': {
-    id: '16358',
-    title: '따뜻하게 포인트 더하기',
-    description:
-      '다채로운 컬러가 매력적인 킬리만의 장갑과 양말을 단독 특가로 만나보세요',
-    category: 'BRAND_SALE',
-    cover_image_id: '198573',
-    front_brand_id: '30945',
-    brandNewsId: 16358,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 30945,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fa3725235e591ebef3fbc8a7534.jpg',
-    frontBrandNameKor: '킬리만',
-    products: [
-      {
-        productId: 2362931,
-        name: '[선물포장/남여공용] Killiman wool gloves - Celine Pink',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93831ff9619b83bcfbd0e6e0b411.jpg',
-      },
-      {
-        productId: 2362929,
-        name: '[선물포장/남여공용] Killiman knit socks- 3color',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93821894f1b9a5b3cbba288c494a.jpg',
-      },
-      {
-        productId: 2362935,
-        name: '[선물포장/남여공용] Killiman wool gloves - Jane Beige',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee938384121361a5b3054aed331892.jpg',
-      },
-      {
-        productId: 2362930,
-        name: '[선물포장/남여공용] Killiman wool gloves - Judy Red',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9382cb3fc67b8a7f8fc666240bd0.jpg',
-      },
-      {
-        productId: 2362933,
-        name: '[선물포장/남여공용] Killiman wool gloves - Suju Blue',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93834d351faf83bce36516367100.jpg',
-      },
-      {
-        productId: 2362936,
-        name: '[선물포장/남여공용] Killiman wool gloves - Sisi Charcol',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9383a363a763a5b367bab1b62bec.jpg',
-      },
-      {
-        productId: 2362937,
-        name: '[선물포장/남여공용] Killiman wool gloves - Remy Black',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9383c13b1e9d8a7f3fdabfdbd7dd.jpg',
-      },
-      {
-        productId: 2362932,
-        name: '[선물포장/남여공용] Killiman wool gloves - Rody Mint',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee938339a8d9ed83bc8fbac1aa90b4.jpg',
-      },
-      {
-        productId: 2362934,
-        name: '[선물포장/남여공용] Killiman wool gloves - Soo Ivory',
-        frontBrandId: 30945,
-        frontBrandNameKor: '킬리만',
-        consumerPrice: 33000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93835fae95d98a7f8b44d9bd9992.jpg',
-      },
-    ],
-  },
-  '16360': {
-    id: '16360',
-    title: '지금 꼭 필요한 방한 용품',
-    description:
-      '미니멀하고 따뜻한 감성의 할렌의 머플러, 장갑 등을 단독 특가로 만나보세요',
-    category: 'BRAND_SALE',
-    cover_image_id: '198593',
-    front_brand_id: '19873',
-    brandNewsId: 16360,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 19873,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fa448ff0754b238bbbcf0a04c1d.jpg',
-    frontBrandNameKor: '할렌',
-    products: [
-      {
-        productId: 2275213,
-        name: 'heavy hairy muffler (M026_light grey)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6675f26165878a7f3912abaed1b0.jpg',
-      },
-      {
-        productId: 2361946,
-        name: 'round cable knit warmer (G009_brown)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9327434225a78a7fd5baf571ad29.jpg',
-      },
-      {
-        productId: 2361955,
-        name: 'round cable knit warmer (G009_beige)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9327f7054785a5b3a362d16acfcc.jpg',
-      },
-      {
-        productId: 2361956,
-        name: 'round cable knit warmer (G009_grey)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93280f485f498a7f63d27adb1593.jpg',
-      },
-      {
-        productId: 2361942,
-        name: 'round cable knit warmer (G009_black)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9326b20311d783bc5d8ed8a63c00.jpg',
-      },
-      {
-        productId: 2361949,
-        name: 'round cable knit warmer (G009_ivory)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93275c91f14383bc014c8e7e1164.jpg',
-      },
-      {
-        productId: 2361958,
-        name: 'round cable knit warmer (G009_purple)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9328282286418a7f532fe1d43a3b.jpg',
-      },
-      {
-        productId: 2357581,
-        name: 'premium mild muffler (M029_light pink)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9008cd0d40e583bce9e89a4190f1.jpg',
-      },
-      {
-        productId: 2361962,
-        name: 'round cable knit warmer (G009_red)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee932841ba7efb8a7fcf44eae92e8e.jpg',
-      },
-      {
-        productId: 2275432,
-        name: 'hairy finger hole gloves (G008_beige)',
-        frontBrandId: 19873,
-        frontBrandNameKor: '할렌',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee667a92e94bf98a7f1947c64632bd.jpg',
-      },
-    ],
-  },
-  '16364': {
-    id: '16364',
-    title: '새해를 함께할 가방',
-    description:
-      '새로운 해를 함께할 로우로우의 가방을 제안합니다. 매일 함께 하고 싶은 데일리 가방을 경험해 보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198684',
-    front_brand_id: '215',
-    brandNewsId: 16364,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-08T14:59:00.000000',
-    frontBrandId: 215,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fb4b39574ee837741d8deb4e2f9.jpg',
-    frontBrandNameKor: '로우로우',
-    products: [
-      {
-        productId: 2252634,
-        name: '로우로우 스트링 윈드 롤탑 백 022 LIGHT GRAY',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6740bbc7df598a7fc9700a1576cb.jpg',
-      },
-      {
-        productId: 1411179,
-        name: '로우로우 시티워커 헬멧백 010 Khaki',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/17/0b0ea715ed884704b6e16d94f6542b60_20230317191627.jpg',
-      },
-      {
-        productId: 1707478,
-        name: '로우로우 X 테니스 보이 클럽 볼캡 GREEN',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 40000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/17/a5bff5260e1c4c2a8bd09ef3697efe77_20230317204018.jpg',
-      },
-      {
-        productId: 2161500,
-        name: '로우로우x NOICE 스트링 럭색 백팩 761 Brown',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee631a59259a3783bc4d439f98c63a.jpg',
-      },
-      {
-        productId: 2252633,
-        name: '로우로우 스트링 윈드 롤탑 백 022 BLACK',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee680bd95f631583bc2bf85a44b834.jpg',
-      },
-      {
-        productId: 2130335,
-        name: '로우로우x GROUNDPLAN R TRUNK 나노 파우치 516 ep.3 BLACK',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 69000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/07/26/b05c7fee811b4eaa8d3f67d162caa69c_20230726151146.jpg',
-      },
-      {
-        productId: 1411180,
-        name: '로우로우 시티워커 헬멧백 010 Charcoal',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/17/1d7951d60c744ef38ced6cb305714db7_20230317191602.jpg',
-      },
-      {
-        productId: 1707476,
-        name: '로우로우 X 테니스 보이 클럽 볼캡 BLACK',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 40000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/03/17/74f030a0f4eb498b8748c41d8920e3cd_20230317204042.jpg',
-      },
-      {
-        productId: 2161499,
-        name: '로우로우x NOICE 스트링 럭색 백팩 761 Khaki',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee631a3bdd1c4ba5b3f756f4a08ea2.jpg',
-      },
-      {
-        productId: 2172466,
-        name: '로우로우x NOICE 스트링 럭색 백팩 761 [2color]',
-        frontBrandId: 215,
-        frontBrandNameKor: '로우로우',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee55cada5b112183bce913bd9ba639.jpg',
-      },
-    ],
-  },
-  '16368': {
-    id: '16368',
-    title: '한 해의 기록',
-    description:
-      '새로운 한 해를 위한 준비. 글월의 다이어리로 2024의 긴 호흡을 위한 준비를 함께 해요',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '198712',
-    front_brand_id: '11775',
-    brandNewsId: 16368,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-08T14:59:00.000000',
-    frontBrandId: 11775,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fb87742818b91ebb7a6c755d4ca.jpg',
-    frontBrandNameKor: '글월',
-    products: [
-      {
-        productId: 2363365,
-        name: 'Season Card l 2024 Bright New Year Card - Grey',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 2800,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93e4a2aeb88183bccb3f826738bc.png',
-      },
-      {
-        productId: 2380530,
-        name: 'Diary l To&From Diary - Black(만년형)',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 32000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f156571f2b0b238f3fa7001bdb0.png',
-      },
-      {
-        productId: 2363407,
-        name: 'Season Card l 2024 Bright New Year Card - White',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 2800,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93e9cb6c760b83bc6dccfe873398.png',
-      },
-      {
-        productId: 2291996,
-        name: 'Calendar l 2024 Wall Calendar - Small (Black)',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93e0847bb06f8a7f2f756bbde2d5.png',
-      },
-      {
-        productId: 2380448,
-        name: 'Diary l To&From Diary - Brown(날짜형)',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 32000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f10c54af0fd91eb496587104d43.png',
-      },
-      {
-        productId: 2380504,
-        name: 'Diary l To&From Diary - Black(날짜형)',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 32000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f151fd02bed91eb69bd609a043a.png',
-      },
-      {
-        productId: 2304968,
-        name: 'Note l To&from Note 3set',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 36000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee723eb54683ada5b3ab2a7e91af6f.png',
-      },
-      {
-        productId: 2291989,
-        name: 'Calendar l 2024 Wall Calendar - Small (Red)',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 15000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93e14740d5ed83bced6bbe96bf18.png',
-      },
-      {
-        productId: 2363577,
-        name: 'Season Card l 2024 Dragon New Year Card',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 3000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93f88d9d690f91eb91654241e5a2.png',
-      },
-      {
-        productId: 2363567,
-        name: 'Season Card l 2024 Bright New Year Card - Calm Yellow',
-        frontBrandId: 11775,
-        frontBrandNameKor: '글월',
-        consumerPrice: 2800,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93f7e717b6328377ffd18c4d6596.png',
-      },
-    ],
-  },
-  '16370': {
-    id: '16370',
-    title: '코드그라피',
-    description: '코드그라피',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '198758',
-    front_brand_id: '15790',
-    brandNewsId: 16370,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 15790,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fbeb6a20d5083777feab938c2fb.jpg',
-    frontBrandNameKor: '코드그라피',
-    products: [
-      {
-        productId: 2174039,
-        name: '[SET] (맨투맨 OR 후드 선택) CGP 아치 로고 트레이닝 셋업_오트밀',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 97900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6e196c3fc44fa5b387158b9f1b51.jpg',
-      },
-      {
-        productId: 2224440,
-        name: '헤비보아 플리스 무톤 자켓_3COLOR',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6e3d0e488c57a5b3a9f44bddc11f.jpg',
-      },
-      {
-        productId: 2172444,
-        name: '[SET] (우먼) 로즈 크롭 후드 집업 셋업_민트베이지',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 127900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee99530f4af51791eb355f3f47bf6a.jpg',
-      },
-      {
-        productId: 2246425,
-        name: '(우먼) WAVE 로고 크롭 니트 패딩_브라운',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d8aec37851783bc15918f930a4b.jpg',
-      },
-      {
-        productId: 2265099,
-        name: '[DIVO] RDS 유틸리티 덕다운 푸파 숏패딩_4COLOR',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 144000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6e1d70127a338a7f074c915daf51.jpg',
-      },
-      {
-        productId: 2182326,
-        name: '[SET] (긴바지 OR 반바지 선택) 24H 트랙 브이넥 맨투맨 셋업_네이비',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 87900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee4c78a68a457cacc5dbe3fed026c3.jpg',
-      },
-      {
-        productId: 2265066,
-        name: '[DIVO] RDS 에센셜 롱패딩_블랙',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 249000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6e4894e5c28583bcb17447001d6f.jpg',
-      },
-      {
-        productId: 2166503,
-        name: '사이드 턱 스냅 조거 팬츠_3COLOR',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 69000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee4c78125634e6acc5937d3573b04d.jpg',
-      },
-      {
-        productId: 2174042,
-        name: '[SET] (맨투맨 OR 후드 선택) CGP 아치 로고 트레이닝 셋업_멜란지그레이',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 97900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6e195d1c7d7d83bc65f586c55c26.jpg',
-      },
-      {
-        productId: 2246625,
-        name: '(우먼) WAVE 로고 Hype 글로시 컬러링 크롭 푸퍼_8COLOR',
-        frontBrandId: 15790,
-        frontBrandNameKor: '코드그라피',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6bba5d2af801a5b38df366fcacbf.png',
-      },
-    ],
-  },
-  '16374': {
-    id: '16374',
-    title: '띰',
-    description: '띰',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '198794',
-    front_brand_id: '31638',
-    brandNewsId: 16374,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 31638,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fc4518597e2b23857531f0186ed.jpg',
-    frontBrandNameKor: '띰',
-    products: [],
-  },
-  '16376': {
-    id: '16376',
-    title: '겨울의 결을 담은',
-    description: '겨울의 포근함이 느껴지는 플루이의 윈터 컬렉션 발매를 알려요',
-    category: 'BRAND_SALE',
-    cover_image_id: '198817',
-    front_brand_id: '25204',
-    brandNewsId: 16376,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 25204,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fc859ad9df2837741996529fcf6.jpg',
-    frontBrandNameKor: '플루이',
-    products: [
-      {
-        productId: 2371636,
-        name: 'Grandmas quilting ring',
-        frontBrandId: 25204,
-        frontBrandNameKor: '플루이',
-        consumerPrice: 85000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9911b2b7880eb238e72983b4f9d1.jpg',
-      },
-      {
-        productId: 2371628,
-        name: 'Frozen flower ring (regular)',
-        frontBrandId: 25204,
-        frontBrandNameKor: '플루이',
-        consumerPrice: 75000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9a4d7c93e2e883770faf5099903c.jpg',
-      },
-      {
-        productId: 2371639,
-        name: 'Bokjori cross bag',
-        frontBrandId: 25204,
-        frontBrandNameKor: '플루이',
-        consumerPrice: 88000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee991317bcc7288377c593485db0a3.jpg',
-      },
-      {
-        productId: 2371626,
-        name: 'Frozen flower ring (mini)',
-        frontBrandId: 25204,
-        frontBrandNameKor: '플루이',
-        consumerPrice: 72000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee990a7fdee26eb238b139b760ce64.jpg',
-      },
-      {
-        productId: 2371638,
-        name: 'Knitting love ring',
-        frontBrandId: 25204,
-        frontBrandNameKor: '플루이',
-        consumerPrice: 66000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9a4e2510abaf91eb85dff19b534a.jpg',
-      },
-      {
-        productId: 2371633,
-        name: 'Snowflake ring',
-        frontBrandId: 25204,
-        frontBrandNameKor: '플루이',
-        consumerPrice: 96000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee990f66c21b04b2383fe305900a47.jpg',
-      },
-    ],
-  },
-  '16381': {
-    id: '16381',
-    title: '고민시가 선택한 스타일',
-    description:
-      '추운 겨울을 예쁘게 지내는 스타일을 찾고있다면? 고민시의 엠엘비 컬렉션을 만나보세요',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '198862',
-    front_brand_id: '19365',
-    brandNewsId: 16381,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 19365,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fd4546ff39eb238bf592efa2eee.jpg',
-    frontBrandNameKor: '엠엘비',
-    products: [
-      {
-        productId: 2284982,
-        name: '[고민시 착용] 바시티 후드 숏패딩 NY (Black)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 359000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9986b372da068377c13677c5fc3e.jpg',
-      },
-      {
-        productId: 2284517,
-        name: '[고민시 착용] 바운서 퍼 뮬 NY (Black)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/1568156de3f44ec7ab5a5d714589e475_20231012160416.png',
-      },
-      {
-        productId: 2286733,
-        name: '[고민시 착용] 여성 하트 크롭 패딩 NY (D.Cream)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9986302ee0c68377278be3ee6922.jpg',
-      },
-      {
-        productId: 2284518,
-        name: '[고민시 착용] 바운서 퍼 뮬 NY (D.Camel)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8386244f7fcda5b3999108fa6dae.jpg',
-      },
-      {
-        productId: 1894020,
-        name: '[고민시 착용] N-COVER 볼캡 NY (BLACK)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 36000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee959675e37cf8837773bc119c8ea5.png',
-      },
-      {
-        productId: 2229636,
-        name: '[고민시 착용] 퍼 버킷햇 NY (Black)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/09/08/8691547706a2426da1cd85a566b58e2f_20230908174159.jpg',
-      },
-      {
-        productId: 2290116,
-        name: '[고민시 착용] 클래식 모노그램 프린트 숏패딩 NY (Black)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 439000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9986226473e8b2382dba3d180c7a.jpg',
-      },
-      {
-        productId: 2290114,
-        name: '[고민시 착용] 클래식 모노그램 자가드 패딩 NY (D.Cream)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 529000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee99869cbe2bdb91eb19b89c3f82e1.jpg',
-      },
-      {
-        productId: 2256675,
-        name: '[고민시 착용] 베이직 숏패딩 NY (Grey)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee99863e216f7cb238d553b2f5fbba.jpg',
-      },
-      {
-        productId: 2256680,
-        name: '[고민시 착용] 베이직 숏패딩 NY (Black)',
-        frontBrandId: 19365,
-        frontBrandNameKor: '엠엘비',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee99863777cedab238a766076e4e54.jpg',
-      },
-    ],
-  },
-  '16391': {
-    id: '16391',
-    title: '소중한 사람을 위해',
-    description: '24년 집들이를 앞두고 있다면 마랑 몽타구를 둘러보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198973',
-    front_brand_id: '26594',
-    brandNewsId: 16391,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-08T14:59:00.000000',
-    frontBrandId: 26594,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fdfe92dcbc791ebe967a02b7a06.jpg',
-    frontBrandNameKor: '마랑 몽타구',
-    products: [
-      {
-        productId: 2269479,
-        name: 'SMALL MUGS - COEUR SUR LA MAIN (손과 마음)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b6c96603783bccb226eb7bcaa.jpg',
-      },
-      {
-        productId: 2269480,
-        name: 'SMALL MUGS - AVEC AMOUR (사랑과 함께)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b719537d3a5b3cddbcb50ab8c.jpg',
-      },
-      {
-        productId: 2269482,
-        name: 'SMALL MUGS - COURONNE AMOUR (사랑의 왕관)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b87c06b498a7fc9efa444cc4e.jpg',
-      },
-      {
-        productId: 2269484,
-        name: 'SMALL MUGS - PLACE SAINT GERMAIN DES PRES (생제르맹 데프레 광장)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b949b95c183bc194e517d9018.jpg',
-      },
-      {
-        productId: 2269481,
-        name: 'SMALL MUGS - MAIN DES MYSTERES (신비의 손)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b825dc8f183bcbb8939fbc965.jpg',
-      },
-      {
-        productId: 2269478,
-        name: 'SMALL MUGS - LAURIER COEUR (월계수의 하트)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b66ff19f583bceff6988d69c8.jpg',
-      },
-      {
-        productId: 2269476,
-        name: 'SMALL MUGS - 5 COEURS (다섯개의 마음)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b3063005fa5b33d136fb9e7d1.jpg',
-      },
-      {
-        productId: 2269475,
-        name: 'SMALL MUGS - ORANGER DU JARDIN DU LUXEMBOURG (오렌지 나무)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b2ac32e99a5b3e3ebe9987e5b.jpg',
-      },
-      {
-        productId: 2269477,
-        name: 'SMALL MUGS - COEUR COURONNE (왕관과 하트)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9335bb2c82878a7fef56c8aa743a.jpg',
-      },
-      {
-        productId: 2269483,
-        name: 'SMALL MUGS - COURONNE TOI&MOI (TOI&MOI 화관)',
-        frontBrandId: 26594,
-        frontBrandNameKor: '마랑 몽타구',
-        consumerPrice: 110000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8e7b8ee15e2d83bc396eed4fc15b.jpg',
-      },
-    ],
-  },
-  '16396': {
-    id: '16396',
-    title: '가벼운 겨울 아우터',
-    description:
-      '따뜻한 색감의 가벼운 겨울 아우터는 크레이지 카 워시 크루에서 마련하세요. 29CM 단독 할인과 함께.',
-    category: 'BRAND_SALE',
-    cover_image_id: '199030',
-    front_brand_id: '10756',
-    brandNewsId: 16396,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 10756,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea062ba1b3b188377c5139b2df54f.jpg',
-    frontBrandNameKor: '크레이지 카 워시 크루',
-    products: [
-      {
-        productId: 2321884,
-        name: 'CAR WASH CREW CORDUROY BALL CAP NAVY',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 39000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93403fee0f858a7f3f93f48c976f.jpg',
-      },
-      {
-        productId: 2322107,
-        name: 'LOGO STITCH TROOPER HAT BLACK',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee933ff3bac391a5b3c37341149f28.jpg',
-      },
-      {
-        productId: 2322018,
-        name: 'CAR WASH CREW CORDUROY BALL CAP IVORY',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 39000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee93401351c53183bcffd25e3719b7.jpg',
-      },
-      {
-        productId: 2202392,
-        name: 'CAR WASH CREW SWEATSHIRTS BUTTER YELLOW',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee4c8ac9091ef5a5b36da46ab22e77.jpg',
-      },
-      {
-        productId: 2202414,
-        name: 'CAR WASH CREW SWEATSHIRTS MELANGE WHITE',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee4c8aaa90d3cda5b3d5a65273a968.jpg',
-      },
-      {
-        productId: 2202348,
-        name: 'GREEN NUMBER PLATE SWEATSHIRTS OATMEAL',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 83000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee4d3e7d0fea2da5b3492145fac633.jpg',
-      },
-      {
-        productId: 2322120,
-        name: 'LOGO STITCH TROOPER HAT KHAKI',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee933fdbef9bbd83bc4f849936c240.jpg',
-      },
-      {
-        productId: 2332843,
-        name: 'CAR WASH CREW STITCH FLEECE JACKET',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee933eabfe025f83bc15537e04d90b.jpg',
-      },
-      {
-        productId: 2332754,
-        name: 'BIG POCKET QUILTED JACKET DARK GREEN',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee933fbf584593a5b323831bfb3d3d.jpg',
-      },
-      {
-        productId: 2332767,
-        name: 'BIG POCKET QUILTED JACKET CREAM',
-        frontBrandId: 10756,
-        frontBrandNameKor: '크레이지 카 워시 크루',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee933f8351c20f8a7fa7830620e6d6.jpg',
-      },
-    ],
-  },
-  '16409': {
-    id: '16409',
-    title: '어디론가 떠나고픈 겨울',
-    description:
-      '어디론가 떠나고 싶은 당신의 겨울에 팬암이 당신을 만나러 갑니다. 팬암의 시즌오프 상품을 만나보세요',
-    category: 'BRAND_SALE',
-    cover_image_id: '199082',
-    front_brand_id: '20211',
-    brandNewsId: 16409,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 20211,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea072ab70b4008377932ead0d81cf.jpg',
-    frontBrandNameKor: '팬암',
-    products: [
-      {
-        productId: 1875399,
-        name: 'REVIVE PACK 라이프 그래픽 백 프린트 숏슬리브티 1101 멜란지그레이',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/3ab1917486b942efafe2e9f6241c4399_20230110113011.jpg',
-      },
-      {
-        productId: 1875467,
-        name: 'REVIVE PACK 라이프 그래픽 조거팬츠 3101 버건디',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/994c40b84cfe488cbcb38ccb2ce2ea91_20230110123447.jpg',
-      },
-      {
-        productId: 1875671,
-        name: 'REVIVE PACK 라이프 그래픽 우븐팬츠 3101 버건디',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/f27b1492eee54a7e906f04356ed71eb6_20230110140636.jpg',
-      },
-      {
-        productId: 1875407,
-        name: 'REVIVE PACK 라이프 그래픽 프린트 숏슬리브티 1102 블랙',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/31188a0be5fc43e28def71cbb690fcc2_20230110115125.jpg',
-      },
-      {
-        productId: 1875428,
-        name: 'REVIVE PACK 라이프 그래픽 스몰 로고 숏슬리브티 1103 멜란지그레이',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/264b734d2a8a40318c730606ddb75da5_20230110120653.jpg',
-      },
-      {
-        productId: 1875406,
-        name: 'REVIVE PACK 라이프 그래픽 프린트 숏슬리브티 1102 네이비',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/196e5bb6640b4ca5ac3432992881086f_20230110115114.jpg',
-      },
-      {
-        productId: 1875427,
-        name: 'REVIVE PACK 라이프 그래픽 스몰 로고 숏슬리브티 1103 블랙',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/c85283762c724406af0c787242479d9d_20230110120641.jpg',
-      },
-      {
-        productId: 1875465,
-        name: 'REVIVE PACK 라이프 그래픽 조거팬츠 3101 멜란지그레이',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/1a21607570984b2384523bdf17a20186_20230110123436.jpg',
-      },
-      {
-        productId: 1875468,
-        name: 'REVIVE PACK 라이프 그래픽 조거팬츠 3101 블랙',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/fa5600d1c05d4556bc53c6f0f2d01175_20230110123502.jpg',
-      },
-      {
-        productId: 1875670,
-        name: 'REVIVE PACK 라이프 그래픽 우븐팬츠 3101 블랙',
-        frontBrandId: 20211,
-        frontBrandNameKor: '팬암',
-        consumerPrice: 179000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/01/10/2bd24d225c7041c498bcd006325feb2f_20230110140625.jpg',
-      },
-    ],
-  },
-  '16410': {
-    id: '16410',
-    title: '겨울을 맞이하는 시즌오프',
-    description:
-      '스트릿한 무드와 자유로운 스타일을 찾고 있는 당신에게 마크곤잘레스의 시즌오프가 찾아왔습니다',
-    category: 'BRAND_SALE',
-    cover_image_id: '199118',
-    front_brand_id: '26722',
-    brandNewsId: 16410,
-    displayStartAt: '2023-12-26T01:00:00.000000',
-    displayEndAt: '2024-01-01T14:59:00.000000',
-    frontBrandId: 26722,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea0780e18f3c2b238d1c97e4e83f3.jpg',
-    frontBrandNameKor: '마크곤잘레스',
-    products: [
-      {
-        productId: 2372791,
-        name: 'Angel Basic Color Ball Cap - PINK',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/8f4b6cee30fe478f8c2c59fddce3ec07_20231214130336.jpg',
-      },
-      {
-        productId: 2372932,
-        name: 'Angel Basic Color Ball Cap - BEIGE',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/b2b9417bbbbd400f88ca1e2771c18f82_20231214130017.jpg',
-      },
-      {
-        productId: 2372788,
-        name: 'Mesh Messenger Bag - IVORY',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/d84862c6e1774d158451b53e0ae76287_20231214130414.jpg',
-      },
-      {
-        productId: 2372931,
-        name: 'Angel Basic Color Ball Cap - BLACK',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/0530df02de034ed6bd92660858225150_20231214130104.jpg',
-      },
-      {
-        productId: 2372750,
-        name: 'WOMENS ANGEL OG CROPPED SWEAT ZIP-UP HOODIE - IVORY',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/5e57c0dd1a604d15966d4fa4801ed6d3_20231214130653.jpg',
-      },
-      {
-        productId: 2372787,
-        name: 'Street Backpack - BLACK',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/a4ad0e3f667649d88370464eee838f2c_20231214130500.jpg',
-      },
-      {
-        productId: 2372786,
-        name: 'Basic Backpack - BLACK',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/13cbf7960e6f4c198853f27878c33ad4_20231214114917.jpg',
-      },
-      {
-        productId: 2372784,
-        name: 'Street Backpack - GREY',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/7ed5175813604df79d26583b08eb230d_20231214130554.jpg',
-      },
-      {
-        productId: 2372798,
-        name: 'Angel Basic Color Ball Cap - BLUE',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/d54c31a9f7584481a93f80fce1513e7e_20231214130153.jpg',
-      },
-      {
-        productId: 2372795,
-        name: 'Angel Basic Color Ball Cap - GREEN',
-        frontBrandId: 26722,
-        frontBrandNameKor: '마크곤잘레스',
-        consumerPrice: 29000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/aafafa5c3fbc4ae7b98ff5d73559f007_20231214130235.jpg',
-      },
-    ],
-  },
-  '16116': {
-    id: '16116',
-    title: '아름다움을 표현하는 찰나의 순간',
-    description:
-      '매 시즌 독특한 디테일로 매력적인 무드를 자아내는 나체의 23윈터 컬렉션 단독 할인 소식을 전합니다.',
-    category: 'NEW_PRODUCT',
-    cover_image_id: '199014',
-    front_brand_id: '20092',
-    brandNewsId: 16116,
-    displayStartAt: '2023-12-26T02:00:00.000000',
-    displayEndAt: '2023-12-31T14:59:00.000000',
-    frontBrandId: 20092,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea007ea39683eb238979d2ed65a69.jpg',
-    frontBrandNameKor: '나체',
-    products: [
-      {
-        productId: 2358288,
-        name: 'PAINTED TABI GLOVES (UNISEX) FLOWERY',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 88000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6fe5f3e1b2b238498dc149a629.jpg',
-      },
-      {
-        productId: 2294991,
-        name: 'GLARE REVERSIBLE PADDING (UNISEX) BLACK',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 308000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6f414d275391eb1dfa2122071f.jpg',
-      },
-      {
-        productId: 2358289,
-        name: 'PAINTED TABI GLOVES (UNISEX) DOODLE',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 88000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6ff17d3866b2383b25f521f45c.jpg',
-      },
-      {
-        productId: 2358304,
-        name: 'JACQUARD FAUX FUR JACKET KHAKI BLACK',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 218000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d7130917b94b238c3444f84d7a1.jpg',
-      },
-      {
-        productId: 2358283,
-        name: 'SLIT TIE KNIT OATMEAL',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 182000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6f9452f85a83774dcfbea2e64e.jpg',
-      },
-      {
-        productId: 2358286,
-        name: 'SLIT TIE KNIT BLACK',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 182000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6fd94e93b0b238d1e1d0fb4056.jpg',
-      },
-      {
-        productId: 2294989,
-        name: 'GLARE REVERSIBLE PADDING (UNISEX) SILVER',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 308000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6f6b4e0610b238611a1507efa6.jpg',
-      },
-      {
-        productId: 2294990,
-        name: 'GLARE REVERSIBLE PADDING (UNISEX) CHARCOAL',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 308000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6f797538d191eb0fd9df8b4f8b.jpg',
-      },
-      {
-        productId: 2358284,
-        name: 'SLIT TIE KNIT KHAKI BROWN',
-        frontBrandId: 20092,
-        frontBrandNameKor: '나체',
-        consumerPrice: 182000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d6fa75d8a008377578efd0d5d92.jpg',
-      },
-    ],
-  },
-  '16142': {
-    id: '16142',
-    title: '아이헤이트먼데이의 특별한 72시간',
-    description:
-      '한 해 동안 감사했던 분들께 아이헤이트먼데이 양말과 함께 마음을 전해요. 작은 따스함이 모이고 모여 연말을 더욱 풍성하게 만들어 줄 거예요! ~60% 단독특가',
-    category: 'BRAND_SALE',
-    cover_image_id: '196180',
-    front_brand_id: '109',
-    brandNewsId: 16142,
-    displayStartAt: '2023-12-26T15:00:00.000000',
-    displayEndAt: '2023-12-29T14:59:00.000000',
-    frontBrandId: 109,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee999e8c56df528377bb9439efad6c.jpg',
-    frontBrandNameKor: '아이헤이트먼데이',
-    products: [
-      {
-        productId: 2344159,
-        name: '[MERRY MONDAY] 크리스마스 이즈 커밍순 삭스 3 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 36000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc37ff296ada5b3eb011fe8c77a.jpg',
-      },
-      {
-        productId: 2344202,
-        name: '[MERRY MONDAY] 다우니 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 67000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc1d624d9a58a7f037082857346.jpg',
-      },
-      {
-        productId: 2344181,
-        name: '[MERRY MONDAY] 해피 홀리데이즈 삭스 2 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc2945a16c18a7f276583b77d1f.jpg',
-      },
-      {
-        productId: 2344218,
-        name: '[MERRY MONDAY] 윈터 원더랜드 3 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 39000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc11090dd6f83bc63f1444ae8e7.jpg',
-      },
-      {
-        productId: 2344222,
-        name: '[MERRY MONDAY] 산타 포스트 삭스 1 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 13000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc0db9e2dcf8a7f4528b565a02c.jpg',
-      },
-      {
-        productId: 2344185,
-        name: '[MERRY MONDAY] 징글벨 삭스 2 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 20000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc211cc9c1b8a7f377375886827.jpg',
-      },
-      {
-        productId: 2344211,
-        name: '[MERRY MONDAY] 오 홀리 나이트 삭스 3 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 44000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc15a9317f183bc39c759259d00.jpg',
-      },
-      {
-        productId: 2344205,
-        name: '[MERRY MONDAY] 해피 크리스마스 포맨 3 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 36000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc1affbb72d8a7f6d341ba33dae.jpg',
-      },
-      {
-        productId: 2344056,
-        name: '[MERRY MONDAY] 글리터 삭스 4 SET',
-        frontBrandId: 109,
-        frontBrandNameKor: '아이헤이트먼데이',
-        consumerPrice: 32000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8cc3420970118a7f47833bf2ecf0.jpg',
-      },
-    ],
-  },
-  '15764': {
-    id: '15764',
-    title: '겨울 아우터와 함께해요',
-    description:
-      '가볍고 편안한 실루엣과 부드러운 촉감, 고급스러운 색상으로 겨울 아우터에 분위기를 더해요. 단독~30%,',
-    category: 'BRAND_SALE',
-    cover_image_id: '197756',
-    front_brand_id: '16365',
-    brandNewsId: 15764,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 16365,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9d8920f60bbab23889e906bab75d.jpg',
-    frontBrandNameKor: '백투베이직스',
-    products: [
-      {
-        productId: 2256964,
-        name: '보떼 크링클드 BEAUTE CRINKLED - 탄',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 112000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee672d9ba45043a5b3a1bace4a1e3d.jpg',
-      },
-      {
-        productId: 2274905,
-        name: '플로 버킷 Flo Bucket - 베이지',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d5f699028d383bc0bf0e839ae21.jpg',
-      },
-      {
-        productId: 2274913,
-        name: '플로 버킷 Flo Bucket - 다크 브라운',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee643a6b4cf3f7a5b3e1d602605ebc.jpg',
-      },
-      {
-        productId: 2274925,
-        name: '루브백 Lube bag - 블랙',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 112000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee67e671697663a5b35d8a6cc1cf81.jpg',
-      },
-      {
-        productId: 2256974,
-        name: '엔느 크링클드 ENNE CRINKLED  - 크림',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 108000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee643bb846a6bf83bc41ffdc55f48d.jpg',
-      },
-      {
-        productId: 2274912,
-        name: '플로 버킷 Flo Bucket - 블랙',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee643ac4378e4983bc4bd8a9c32978.jpg',
-      },
-      {
-        productId: 2274915,
-        name: '플로 버킷 Flo Bucket - 세이지 그린',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6439815d42258a7fbd50e057a7de.jpg',
-      },
-      {
-        productId: 2274919,
-        name: '클로이백 Chloe bag- 코코아',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 135000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee64378f8a2bf583bc759f5542c12c.jpg',
-      },
-      {
-        productId: 2274927,
-        name: '루브백 Lube bag - 코코아',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 112000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee795bbdb1b9cb83bcffb7c2cdbfa0.jpg',
-      },
-      {
-        productId: 2330659,
-        name: '[29CM 단독] 클로이백 Chloe bag- [Limited] 블랙',
-        frontBrandId: 16365,
-        frontBrandNameKor: '백투베이직스',
-        consumerPrice: 135000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89cf38f1f35f83bcb93357581118.jpg',
-      },
-    ],
-  },
-  '16208': {
-    id: '16208',
-    title: '플램의 시즌오프 소식',
-    description:
-      '심플하면서도 기본에 충실한 플램의 시즌오프 소식입니다.  최대 단독 ~40% 혜택으로 만나보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '197135',
-    front_brand_id: '10561',
-    brandNewsId: 16208,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 10561,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9b1727e9f09191eb6961f6251500.jpg',
-    frontBrandNameKor: '플램',
-    products: [
-      {
-        productId: 2283480,
-        name: 'Baleine Pintuck Jacket',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 226000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/8c918515c2eb4b88945e38ae2b765865_20231012122154.jpg',
-      },
-      {
-        productId: 2339405,
-        name: 'Phantom leather pants',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 134000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/17/052f5bdd906046539b4ad2f374520928_20231117104524.jpg',
-      },
-      {
-        productId: 2283465,
-        name: 'Collar Layered Long Sleeve T-shirt',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 58000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/23b0f21b2aaf4faa86b0c19e951ed944_20231012121740.jpg',
-      },
-      {
-        productId: 2283470,
-        name: 'Hive Basic Shirt',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 108000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/efd9635aa281441c9a9897613ac5d71c_20231012121849.jpg',
-      },
-      {
-        productId: 2283467,
-        name: 'Light Stripe Long Sleeve T-shirt',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 76000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/28b599cac23847cab01048b5806763c1_20231012121815.jpg',
-      },
-      {
-        productId: 2283463,
-        name: 'Momo Draped Half Sleeve T-shirt',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 65000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/617aa5dc353848838b41c9f35817c5fb_20231012121700.jpg',
-      },
-      {
-        productId: 2283477,
-        name: 'Even Tweed Jacket',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 203000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/ddbd4da8e6fc45489e2ef4ce5c99ae80_20231012122103.jpg',
-      },
-      {
-        productId: 2283473,
-        name: 'Max Line Over Jacket',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 226000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/872b8a95607148ab8dd543107ad8eb84_20231012122001.jpg',
-      },
-      {
-        productId: 2283475,
-        name: 'Stan Belted Trench Coat',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 370000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/279e04490baa45a59dc460d121789999_20231012122036.jpg',
-      },
-      {
-        productId: 2283472,
-        name: 'Our Silky Shirt',
-        frontBrandId: 10561,
-        frontBrandNameKor: '플램',
-        consumerPrice: 116000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/12/938c139891b84c74a78d1de6cb74a481_20231012121919.jpg',
-      },
-    ],
-  },
-  '16238': {
-    id: '16238',
-    title: '리(LEE)의 겨울 시즌오프 시작',
-    description:
-      '리(LEE)와 함께  2023년의 마무리와 새로운 2024년을 맞이하세요, 29CM에서 시즌오프의 시작과 함께 선착순 200명께 리유저블 토트백을 증정합니다. ~50%',
-    category: 'BRAND_SALE',
-    cover_image_id: '197536',
-    front_brand_id: '15263',
-    brandNewsId: 16238,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-09T14:59:00.000000',
-    frontBrandId: 15263,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9d61f819e8d6b238295050a30382.jpg',
-    frontBrandNameKor: '리',
-    products: [
-      {
-        productId: 2165273,
-        name: '하프 집업 니트 오트밀',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/08/17/5c548420580547afaa946d8f1fb5ba83_20230817094134.jpg',
-      },
-      {
-        productId: 2243350,
-        name: '우먼 롱 라이트 다운 코트 블랙',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 219000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/09/20/8ec13d7e12454952a537467d4836aafd_20230920162831.jpg',
-      },
-      {
-        productId: 2158347,
-        name: '우먼 크롭 숏 다운 브라운',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee72f0b140b7dfa5b39fde71730994.jpg',
-      },
-      {
-        productId: 2174060,
-        name: '하프 집업 니트 블랙',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/08/17/7c555df36f464115865aed797ea47190_20230817104925.jpg',
-      },
-      {
-        productId: 2243349,
-        name: '우먼 롱 라이트 다운 코트 베이지',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 219000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee73c13c1c3dafa5b393f8b988cf75.jpg',
-      },
-      {
-        productId: 2304296,
-        name: '다운 몬스터 파카 블랙',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 329000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7dd2ff2f7c078a7f5df661717eb2.jpg',
-      },
-      {
-        productId: 2319393,
-        name: '우먼 울 브이넥 믹스 니트 블루',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/02/a2afd5b6920e4ee89f907ccac9611f94_20231102091223.jpg',
-      },
-      {
-        productId: 2319394,
-        name: '우먼 울 브이넥 믹스 니트 브라운',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/02/60f258bc349d4e618bdad24c57fd42e2_20231102091242.jpg',
-      },
-      {
-        productId: 2174059,
-        name: '하프 집업 니트 카키',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/08/17/82d0bfcd39f84a258ebb3c69a7c61c73_20230817105007.jpg',
-      },
-      {
-        productId: 2158348,
-        name: '우먼 크롭 숏 다운 블랙',
-        frontBrandId: 15263,
-        frontBrandNameKor: '리',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/08/02/3e4977650bdd435289ab472af8d14723_20230802165412.jpg',
-      },
-    ],
-  },
-  '16262': {
-    id: '16262',
-    title: '매일 들뜨는 기분',
-    description:
-      '에센셜하지만 감각적인 디테일로 마감된 부이의 피스들로 매일 더 들뜨는 기분을 만끽해보세요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '197761',
-    front_brand_id: '28767',
-    brandNewsId: 16262,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 28767,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9d8a1e920ea6b23855c481a42b86.png',
-    frontBrandNameKor: '부이',
-    products: [
-      {
-        productId: 2371662,
-        name: 'HALF RING ER',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 40000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9923a8883d9d91eb0da1aeb051fe.jpg',
-      },
-      {
-        productId: 2371663,
-        name: 'ROUND BALL ER',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 44000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9923eb985ce883776bb0daa0052d.jpg',
-      },
-      {
-        productId: 2371669,
-        name: 'BON ONXY R',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 74000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee99319d8b401991eb4900bb2e7266.jpg',
-      },
-      {
-        productId: 2371671,
-        name: 'TWIST CHAIN BR',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 68000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9932f5b2471d91eb6757bd3278d1.jpg',
-      },
-      {
-        productId: 2371666,
-        name: 'OPENING R',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 56000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee993025e5f040b238cdcccacc307a.jpg',
-      },
-      {
-        productId: 2371665,
-        name: 'DROP BALL ER',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 74000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9924d7bf611391eb53b4366db40a.jpg',
-      },
-      {
-        productId: 2371664,
-        name: 'FRESH-WATER PEARL ER',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 35000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9924682966aa8377ab0c2a9e09b6.jpg',
-      },
-      {
-        productId: 2371670,
-        name: 'REGULAR CHAIN 3 BR',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 49000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee99324951dc528377fd25a4e970bd.jpg',
-      },
-      {
-        productId: 2371667,
-        name: 'CONNECT R',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 74000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9930b769ad4e837783381d5cda44.jpg',
-      },
-      {
-        productId: 2371668,
-        name: 'THREE-ONE R',
-        frontBrandId: 28767,
-        frontBrandNameKor: '부이',
-        consumerPrice: 78000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee99312ca1c3e4b238d3e299383d26.jpg',
-      },
-    ],
-  },
-  '16296': {
-    id: '16296',
-    title: '시대에 구애받지 않는 스타일',
-    description:
-      '가죽이라는 소재에 대한 이해를 기반으로 하여 레더 가먼츠를 디자인하는 도프제이슨의 세일소식을 전해요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '197996',
-    front_brand_id: '15447',
-    brandNewsId: 16296,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-09T14:59:00.000000',
-    frontBrandId: 15447,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9e42447ae95a8377e3d358106f2b.jpg',
-    frontBrandNameKor: '도프제이슨',
-    products: [
-      {
-        productId: 2337265,
-        name: '솔리드 스웨이드 무톤 자켓 BROWN',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee838eca84326183bc7f6de9313e67.jpg',
-      },
-      {
-        productId: 1287052,
-        name: '솔리드 무톤 자켓 (블랙화이트)',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/10/21/dfea1e51096245fc935d9f1b6e9d5da3_20211021114711.jpg',
-      },
-      {
-        productId: 1286997,
-        name: '오버핏 솔리드 무톤 자켓 (블랙)',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 210000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/11/03/587ba06d84084135b8d49149bf5fdb7a_20211103151927.jpg',
-      },
-      {
-        productId: 1287003,
-        name: '솔리드 스웨이드 무톤 자켓 (그레이)',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/10/21/27aac5c7d85c4ab8933606b146908adc_20211021113955.jpg',
-      },
-      {
-        productId: 1286905,
-        name: '솔리드 후디 무톤 자켓',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 210000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/10/21/05c97314d81845ceb844f2a904751a4d_20211021112823.jpg',
-      },
-      {
-        productId: 1287057,
-        name: '솔리드 무톤 자켓 (로우베이지)',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee88f6a5b52adfa5b3cdd359307462.jpg',
-      },
-      {
-        productId: 1287070,
-        name: '솔리드 무톤 자켓 (블랙베이지)',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/12/87169b17cbdc4d478c51e95a936d4a5f_20221012155515.jpg',
-      },
-      {
-        productId: 1287076,
-        name: '우먼스 솔리드 무톤 자켓',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/10/26/3791d883317f483d9fe8965732f4ac7d_20211026115410.jpg',
-      },
-      {
-        productId: 1286985,
-        name: '오버핏 솔리드 무톤 자켓 (블랙화이트)',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 210000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/11/03/058700bc4276401ca4be0b67006eb15c_20211103151859.jpg',
-      },
-      {
-        productId: 1287045,
-        name: '솔리드 스웨이드 무톤 자켓 (블랙)',
-        frontBrandId: 15447,
-        frontBrandNameKor: '도프제이슨',
-        consumerPrice: 199000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee88f72258362da5b34def415087f9.jpg',
-      },
-    ],
-  },
-  '16321': {
-    id: '16321',
-    title: '시즌오프 세일 소식 전해요',
-    description:
-      '폴앤앨리스의 베스트 FW 상품들을 높은 할인율로 준비했어요. 올해 중 가장 큰 혜택이니 놓치지 마시길 바라요!',
-    category: 'BRAND_SALE',
-    cover_image_id: '198247',
-    front_brand_id: '1066',
-    brandNewsId: 16321,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 1066,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9ee142ce4b568377b169a64b1395.jpg',
-    frontBrandNameKor: '폴앤앨리스',
-    products: [
-      {
-        productId: 2344183,
-        name: 'NECK SLIT TURTLENECK / 3COLORS',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 43000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89b5ccf68e1d8a7f393d195ce9a2.jpg',
-      },
-      {
-        productId: 2344177,
-        name: 'QUILTED MINI SKIRT / IVORY',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89b2227f0e278a7f452c85d0523a.jpg',
-      },
-      {
-        productId: 2344215,
-        name: 'BLACK MINI DRESS',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 138000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89da2bc8a7398a7f4f28c15b7771.jpg',
-      },
-      {
-        productId: 2344220,
-        name: 'NECK SLIT JERSEY DRESS / BLACK',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89b11375119b83bc83e7417f1b03.jpg',
-      },
-      {
-        productId: 2344204,
-        name: 'PAUL BOUCLE EMBROIDERY SWEATSHIRT / LIGHT GREY [기모]',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 78000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89b4a6adcb058a7fed73c61646b8.jpg',
-      },
-      {
-        productId: 2344201,
-        name: 'PAUL BOUCLE EMBROIDERY SWEATSHIRT / GREY [기모]',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 78000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89db2106c9f98a7f57f608238e83.jpg',
-      },
-      {
-        productId: 2302499,
-        name: 'RAGLAN WOOL COAT / 3COLORS',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 369000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/11/03/cfb4a297485a446c9cfc4d012e09c651_20211103164143.jpg',
-      },
-      {
-        productId: 2302066,
-        name: 'WOOL BLAZER COAT / BLACK',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 319000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9a5c6ca75b9d91ebb7793c85564b.jpg',
-      },
-      {
-        productId: 2344200,
-        name: 'PAUL BOUCLE EMBROIDERY SWEATSHIRT / NAVY [기모]',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 78000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89da4ce0f141a5b3e5cbfdc0487f.jpg',
-      },
-      {
-        productId: 2344224,
-        name: 'NECK SLIT JERSEY DRESS / BLUE',
-        frontBrandId: 1066,
-        frontBrandNameKor: '폴앤앨리스',
-        consumerPrice: 98000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee89b03cb81359a5b3bda790698b6c.jpg',
-      },
-    ],
-  },
-  '16352': {
-    id: '16352',
-    title: '파르티멘토 우먼',
-    description: '파르티멘토 우먼',
-    category: 'BRAND_SALE',
-    cover_image_id: '198493',
-    front_brand_id: '18965',
-    brandNewsId: 16352,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 18965,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9f31950f849ab238f94116229beb.jpg',
-    frontBrandNameKor: '파르티멘토 우먼',
-    products: [
-      {
-        productId: 2294610,
-        name: '2WAY CROP PUFFER JACKET_MULTI',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee7461f20be6d38a7fe966beb11887.jpg',
-      },
-      {
-        productId: 2294487,
-        name: 'LILY BOUCLE KNIT SWEATER_BROWN',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 89900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee746a848c3399a5b3ed56795ed286.jpg',
-      },
-      {
-        productId: 2294490,
-        name: 'LILY BOUCLE KNIT SWEATER_LIGHT GREEN',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 89900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee746992eb82a983bca1237e9708d3.jpg',
-      },
-      {
-        productId: 2294530,
-        name: 'LILY JACUQARD KNIT ZIP-UP CARDIGAN_KHAKI',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee74684d53eb298a7f2121a03d3223.jpg',
-      },
-      {
-        productId: 2294513,
-        name: 'WIDE COLLAR HAIRY KNIT CARDIGAN_DEEP YELLOW',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 127000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee7468a33d2cd7a5b3e1e5fdccb087.jpg',
-      },
-      {
-        productId: 2294611,
-        name: '2WAY CROP PUFFER JACKET_IVORY',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee7461ab9914f583bcb12a67deb0ec.jpg',
-      },
-      {
-        productId: 2294600,
-        name: '2WAY CROP PUFFER JACKET_BLACK',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee74630c8ebfc983bc35853960d16c.jpg',
-      },
-      {
-        productId: 2294472,
-        name: 'TIE-UP SHIRT_IVORY',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 69000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee746adcdadb9da5b3013251f39eed.jpg',
-      },
-      {
-        productId: 2294608,
-        name: '2WAY CROP PUFFER JACKET_NAVY',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 189000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee7462620de9c38a7fc1f16be72517.jpg',
-      },
-      {
-        productId: 2294486,
-        name: 'LILY BOUCLE KNIT SWEATER_CHARCOAL',
-        frontBrandId: 18965,
-        frontBrandNameKor: '파르티멘토 우먼',
-        consumerPrice: 89900,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee746aa969c3338a7f0b18b501e7e7.jpg',
-      },
-    ],
-  },
-  '16372': {
-    id: '16372',
-    title: '호주에서 탄생한 이뮤',
-    description:
-      '천연 양모와 양가죽을 활용한 신발을 만드는 프리미엄 슈즈 브랜 이뮤를 단독 혜택가로 만나보세요. 귀여운 이어머프는 숨겨진 추천 아이템이에요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198766',
-    front_brand_id: '11550',
-    brandNewsId: 16372,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-12T14:59:00.000000',
-    frontBrandId: 11550,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fbf1ea5dbeeb23807910a60b70c.jpg',
-    frontBrandNameKor: '이뮤',
-    products: [
-      {
-        productId: 1259227,
-        name: 'Jolie 어그 슬리퍼 Charcoal',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/4e0dbc0ac5964944b769061e8efea63c_20231107135507.jpg',
-      },
-      {
-        productId: 1303559,
-        name: 'Stinger Micro 어그 부츠 Charcoal',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 209000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/14d8cc42b5054e4da8abb2b276e4b784_20231107140416.jpg',
-      },
-      {
-        productId: 1303606,
-        name: 'Angahook 이어머프 Black',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 59900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/4192a44c03e448cd9efffe61edd88a4f_20231120144710.jpg',
-      },
-      {
-        productId: 1303600,
-        name: 'Jolie Teddy 어그 슬리퍼 Slate',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/3b881edb4a5f4d1c9888984d4e740d4e_20231107140741.jpg',
-      },
-      {
-        productId: 1259235,
-        name: 'Jolie 어그 슬리퍼 Chestnut',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/45a265a5156241248c92351bdb845c8c_20231107135940.jpg',
-      },
-      {
-        productId: 1303605,
-        name: 'Angahook 이어머프 Chestnut',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 59900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/1c77541326c7474f956856bb3b620598_20231120144641.jpg',
-      },
-      {
-        productId: 1804597,
-        name: 'Angahook 이어머프 Dark Grey',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 59900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/03f712f2013649e9bfad338ec8634346_20231120144610.jpg',
-      },
-      {
-        productId: 1259230,
-        name: 'Jolie 어그 슬리퍼 Black',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 119000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/bdc822c58a89416cab1c01ba1020ce7e_20231107140005.jpg',
-      },
-      {
-        productId: 1303603,
-        name: 'Jolie Teddy 어그 슬리퍼 Natural',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/630aeaad3c3c4bfea046a0e31a3e975e_20231107140719.jpg',
-      },
-      {
-        productId: 1303599,
-        name: 'Joy Teddy 어그 슬리퍼 Natural',
-        frontBrandId: 11550,
-        frontBrandNameKor: '이뮤',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/1f5095471a9c4e059ed497145445fbf0_20231107140804.jpg',
-      },
-    ],
-  },
-  '16383': {
-    id: '16383',
-    title: '겨울을 만나는 클래식',
-    description:
-      '언제나 클래식하고 깔끔한 스타일을 제안하는 라코스테의 시즌오프 상품을 만나보세요. 최대 30% 할인과 사은품도 준비했어요.',
-    category: 'BRAND_SALE',
-    cover_image_id: '198881',
-    front_brand_id: '5067',
-    brandNewsId: 16383,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-09T14:59:00.000000',
-    frontBrandId: 5067,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fd59c419c2ab2387dcb1445d3b4.jpg',
-    frontBrandNameKor: '라코스테',
-    products: [
-      {
-        productId: 2221245,
-        name: '남성 3 IN 1 다운 코트 BH893E-53N HDE',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 639000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/48a3940d50764594a6650440f5ecee80_20231215124719.jpg',
-      },
-      {
-        productId: 2253126,
-        name: '남성 스타디움넥 다운 블루종 BH591E-53N CB8',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 519000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/750fa7a2c8fc46a38bd77c71228624f4_20231215132109.jpg',
-      },
-      {
-        productId: 2152777,
-        name: '남성 경량 구스다운 베스트 BH982E-53N 031',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/77fe67177e3f43afabc35d6cc56a2581_20231215101734.jpg',
-      },
-      {
-        productId: 2163080,
-        name: '남성 경량 다운 블루종 BH805E-53NH 031',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 359000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/71f38b7e0f8246ac8a3c12f63f102edd_20231215110037.jpg',
-      },
-      {
-        productId: 2253054,
-        name: '남성 PQ 후드 푸퍼 BH584E-53N 031',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 599000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/e5f2767f970c4d52b0c929c1fa320a3f_20231215132046.jpg',
-      },
-      {
-        productId: 2152794,
-        name: '남성 경량 구스다운 베스트 BH982E-53N 166',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 299000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/af5bbcd2d1f243078e3efa993d2f3a6e_20231215101742.jpg',
-      },
-      {
-        productId: 2221282,
-        name: '남성 PQ 다운 베스트 BH668E-53N 031',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 389000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/e9c1c11390a44f0f9943ecff09245a5a_20231215124854.jpg',
-      },
-      {
-        productId: 2253103,
-        name: '남성 스타디움넥 다운 블루종 BH591E-53N 031',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 519000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/d6a4db3d1f7549e88e13d398c428e4ef_20231215132054.jpg',
-      },
-      {
-        productId: 2278640,
-        name: '남성 스타디움 리버시블 다운 블루종 BH856E-53N 031',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 479000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/69b6620ff0884d7ab9b4759ae98cb368_20231215135103.jpg',
-      },
-      {
-        productId: 2278636,
-        name: '남성 하이넥 파카 BH850E-53N 031',
-        frontBrandId: 5067,
-        frontBrandNameKor: '라코스테',
-        consumerPrice: 579000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/4b6ed9e48927482d946ad0ac530c8967_20231215135021.jpg',
-      },
-    ],
-  },
-  '16387': {
-    id: '16387',
-    title: '겨울에도 데님은 함께',
-    description:
-      '추운 겨울에도 리바이스의 데님은 클래식함으로 당신과 함께합니다. 리바이스의 시즌오프를 만나보세요',
-    category: 'BRAND_SALE',
-    cover_image_id: '198931',
-    front_brand_id: '1986',
-    brandNewsId: 16387,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 1986,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fd93bd04a96b238811dd8f3a645.jpg',
-    frontBrandNameKor: '리바이스',
-    products: [
-      {
-        productId: 2310684,
-        name: '502 테이퍼드 핏 웜진_29507-1358',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/27/7857957249284bd2bc3513ea50ce87fb_20231027125244.jpg',
-      },
-      {
-        productId: 2310611,
-        name: '배기 대드 웜 진_A6267-0001',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 169000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/27/87258b35120b42a2971908a65e4b2a7f_20231027120116.jpg',
-      },
-      {
-        productId: 2340751,
-        name: '웜 쵸어 자켓_A6053-0000',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 169000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/63fcb508343e4c1ea23cf3cb9a2f6c90_20231120111704.jpg',
-      },
-      {
-        productId: 2310685,
-        name: '502 테이퍼드 핏 웜진_29507-1359',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/27/1b9c333c8205415992c4793aecb1a859_20231027125338.jpg',
-      },
-      {
-        productId: 2331565,
-        name: '568 스테이루즈 진_29037-0054',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 159000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/10/cc5caaee46504988b61ca13f9e93eb56_20231110115637.jpg',
-      },
-      {
-        productId: 2340747,
-        name: '버블 울 트러커 자켓_A6055-0000',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 249000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/98e8e0f5dbb646fab9bd37dff3d336c8_20231120111327.jpg',
-      },
-      {
-        productId: 2310603,
-        name: '그래픽 살리너스 크루넥 스웨트셔츠_A5524-0019',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 79000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/27/9d85598774394c0d8c6f6ab7e88820d1_20231027115632.jpg',
-      },
-      {
-        productId: 2310609,
-        name: '배기 대드 웜 진_A6267-0000',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 169000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/27/c0f03aec57fc42299fd8c7aeef822b3a_20231027120027.jpg',
-      },
-      {
-        productId: 2310683,
-        name: '505 레귤러 핏 웜진_00505-2693',
-        frontBrandId: 1986,
-        frontBrandNameKor: '리바이스',
-        consumerPrice: 109000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/27/5aabfc7f53fe4fc4be187f184af530e7_20231027125149.jpg',
-      },
-    ],
-  },
-  '16402': {
-    id: '16402',
-    title: '닉앤니콜',
-    description: '닉앤니콜',
-    category: 'BRAND_SALE',
-    cover_image_id: '199065',
-    front_brand_id: '6442',
-    brandNewsId: 16402,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 6442,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea06ef02642a4b2384d79872f57dd.jpg',
-    frontBrandNameKor: '닉앤니콜',
-    products: [
-      {
-        productId: 2228486,
-        name: 'ANGORA PULLOVER KNIT_CREAM',
-        frontBrandId: 6442,
-        frontBrandNameKor: '닉앤니콜',
-        consumerPrice: 69000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee4e0a9bf925238a7f4b2a01fada8f.jpg',
-      },
-    ],
-  },
-  '16404': {
-    id: '16404',
-    title: '작성중',
-    description: '작성중',
-    category: 'BRAND_SALE',
-    cover_image_id: '199071',
-    front_brand_id: '12733',
-    brandNewsId: 16404,
-    displayStartAt: '2023-12-27T01:00:00.000000',
-    displayEndAt: '2024-01-02T14:59:00.000000',
-    frontBrandId: 12733,
-    coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11eea0707fd54a9991ebe76f202a661e.jpg',
-    frontBrandNameKor: '프리플라',
-    products: [
-      {
-        productId: 2246942,
-        name: 'ljh1021 biker long boots _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/09/18/8b54d6b83dbf41738dfae63c65025440_20230918160307.jpg',
-      },
-      {
-        productId: 1261198,
-        name: 'ljh1001 ankle boots _ 3colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 99000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/10/01/17ab3fc616db49adbdb27c5eea73ba5d_20211001123325.jpg',
-      },
-      {
-        productId: 2246947,
-        name: 'ljh1020 biker middle boots _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 125000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/09/18/7c2afe63e9324be7acf3a9571abbf7a3_20230918160342.jpg',
-      },
-      {
-        productId: 2326956,
-        name: 'ljh1022 Platform fur shot boots _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 125000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8db993eef0cf8a7f79f9949fc2bd.jpg',
-      },
-      {
-        productId: 2326955,
-        name: 'ljh1023 Platform fur slipper _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 125000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8db9a9e38389a5b31345acf04bc3.jpg',
-      },
-      {
-        productId: 2340852,
-        name: 'ljh7038 Platform biker middle boots _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 168000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/c5294842c25f42f0953265d28230d699_20231120122520.jpg',
-      },
-      {
-        productId: 2340847,
-        name: 'cwa4115 Padding ankle boots _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 135000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/47f016fbafc442fe8336442f7e002cde_20231120122400.jpg',
-      },
-      {
-        productId: 2340849,
-        name: 'ljh7036 Platform fur ankle boots _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/20/b46611e0c26a4d44b62de13c2dad02f3_20231120122450.jpg',
-      },
-      {
-        productId: 1206212,
-        name: 'clo8502 maryjane flat _ 3colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 138000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/03/04/8fee817a8aa44fd1b7350cc4edc853d8_20220304115259.jpg',
-      },
-      {
-        productId: 2326954,
-        name: 'ljh1024 padding middle boots _ 2colors',
-        frontBrandId: 12733,
-        frontBrandNameKor: '프리플라',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/07/5bd1755da5ed404399b0f849232953b6_20231107212920.jpg',
-      },
-    ],
-  },
   '16121': {
     id: '16121',
     title: '심플함 속의 특별함',
@@ -7157,15 +34,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/08/16/680d2fcb235c405aaab186fd97f4180d_20230816112348.jpg',
       },
       {
-        productId: 2322756,
-        name: '플러피 볼 울 니트 애쉬블루 [T34]',
-        frontBrandId: 3062,
-        frontBrandNameKor: '바이바이섭',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/14/642454c3d54b4797b737c322d24c200d_20231214093721.jpg',
-      },
-      {
         productId: 2172229,
         name: '투웨이 집업 니트 가디건 스카이블루 [T33]',
         frontBrandId: 3062,
@@ -7182,6 +50,15 @@ export const NewsById = {
         consumerPrice: 118000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/08/16/80233e26009a41e89bcc00575ec94679_20230816112258.jpg',
+      },
+      {
+        productId: 2322756,
+        name: '플러피 볼 울 니트 애쉬블루 [T34]',
+        frontBrandId: 3062,
+        frontBrandNameKor: '바이바이섭',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/14/642454c3d54b4797b737c322d24c200d_20231214093721.jpg',
       },
       {
         productId: 2172226,
@@ -7202,6 +79,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/08/16/e7d814c8c44f42ca804fde3531db1898_20230816112128.jpg',
       },
       {
+        productId: 2322749,
+        name: '플러피 볼 바라클라바 애쉬베이지 [T34]',
+        frontBrandId: 3062,
+        frontBrandNameKor: '바이바이섭',
+        consumerPrice: 58000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/03/d6151639dff04a07bcbca148ad8917c8_20231103181535.jpg',
+      },
+      {
         productId: 2322754,
         name: '플러피 볼 울 니트 애쉬베이지 [T34]',
         frontBrandId: 3062,
@@ -7218,15 +104,6 @@ export const NewsById = {
         consumerPrice: 128000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/11/03/14da051882d440dd981f3d04bf740439_20231103181901.jpg',
-      },
-      {
-        productId: 2322749,
-        name: '[12/15 예약배송] 플러피 볼 바라클라바 애쉬베이지 [T34]',
-        frontBrandId: 3062,
-        frontBrandNameKor: '바이바이섭',
-        consumerPrice: 58000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/03/d6151639dff04a07bcbca148ad8917c8_20231103181535.jpg',
       },
     ],
   },
@@ -7391,24 +268,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee842fc9d47f678a7f11a74c48bad7.jpg',
       },
       {
-        productId: 2338181,
-        name: 'Mohair Ombre Check Cardigan_ Dark Navy',
-        frontBrandId: 2911,
-        frontBrandNameKor: '아트 이프 액츠',
-        consumerPrice: 145000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee84353e4b9def83bc4df7d2f6be50.jpg',
-      },
-      {
-        productId: 2338197,
-        name: 'Mohair Ombre Check Cardigan_ Grey',
-        frontBrandId: 2911,
-        frontBrandNameKor: '아트 이프 액츠',
-        consumerPrice: 145000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee843608faf9cfa5b3e7dc9577872e.jpg',
-      },
-      {
         productId: 2292592,
         name: '70s Vintage Racing Fleece Jacket_ Dove',
         frontBrandId: 2911,
@@ -7425,6 +284,24 @@ export const NewsById = {
         consumerPrice: 365000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee842efd5ebb6da5b33b0efb65bb76.jpg',
+      },
+      {
+        productId: 2338181,
+        name: 'Mohair Ombre Check Cardigan_ Dark Navy',
+        frontBrandId: 2911,
+        frontBrandNameKor: '아트 이프 액츠',
+        consumerPrice: 145000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee84353e4b9def83bc4df7d2f6be50.jpg',
+      },
+      {
+        productId: 2338197,
+        name: 'Mohair Ombre Check Cardigan_ Grey',
+        frontBrandId: 2911,
+        frontBrandNameKor: '아트 이프 액츠',
+        consumerPrice: 145000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee843608faf9cfa5b3e7dc9577872e.jpg',
       },
       {
         productId: 2338248,
@@ -7554,6 +431,1401 @@ export const NewsById = {
       },
     ],
   },
+  '16416': {
+    id: '16416',
+    title: '시선이 머무는 오브제',
+    description:
+      '뮤지엄아카이브의 신상품 소식을 가장 먼저 알려드려요. 군더더기 없는 미니멀한 디자인의 제품들을 오브제 처럼 활용해보세요.',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '199195',
+    front_brand_id: '10272',
+    brandNewsId: 16416,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 10272,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea08df3fea9b591eb898e43d633e1.jpg',
+    frontBrandNameKor: '뮤지엄 아카이브',
+    products: [
+      {
+        productId: 2353893,
+        name: 'Lattice mirror - type01',
+        frontBrandId: 10272,
+        frontBrandNameKor: '뮤지엄 아카이브',
+        consumerPrice: 58000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e6d66e977b583bc338880c51f50.jpg',
+      },
+      {
+        productId: 2353891,
+        name: 'Lattice tray',
+        frontBrandId: 10272,
+        frontBrandNameKor: '뮤지엄 아카이브',
+        consumerPrice: 54000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e6d19adbdd7a5b329d1e0924e78.jpg',
+      },
+      {
+        productId: 2353894,
+        name: 'Lattice mirror - type02',
+        frontBrandId: 10272,
+        frontBrandNameKor: '뮤지엄 아카이브',
+        consumerPrice: 58000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e6d82732e13a5b30301d01f0297.jpg',
+      },
+      {
+        productId: 2370751,
+        name: 'Gift ribbon package',
+        frontBrandId: 10272,
+        frontBrandNameKor: '뮤지엄 아카이브',
+        consumerPrice: 4500,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98aae8d92064b238570e1b99980f.jpg',
+      },
+      {
+        productId: 2353899,
+        name: 'Ma birthday candle',
+        frontBrandId: 10272,
+        frontBrandNameKor: '뮤지엄 아카이브',
+        consumerPrice: 28000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e6de6acaebf83bcc31ebc7f58e0.jpg',
+      },
+    ],
+  },
+  '16419': {
+    id: '16419',
+    title: '효율적인 요리시간을 위해',
+    description:
+      '재료 본연의 건강한 맛을 깨우는 AMT의 단독 할인 혜택을 만나보세요. AMT 316Ti  스테인리스 냄비는 열 전도율과 보온성이 뛰어나 단시간에 냄비 전체로 열을 전달합니다.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199255',
+    front_brand_id: '14389',
+    brandNewsId: 16419,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 14389,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea097497b57eab23841bcac712110.jpg',
+    frontBrandNameKor: '에이엠티',
+    products: [
+      {
+        productId: 1205986,
+        name: 'AMT 316Ti스텐 통5중 프로 플랫팬 28cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 370000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/a863ea9ea5c04efcbcc6c88824c9072a_20220216180152.jpg',
+      },
+      {
+        productId: 2354034,
+        name: 'AMT 316Ti 통5중 프로 소테팬 22cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 310000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7800787d7d83bc0135076ba342.jpg',
+      },
+      {
+        productId: 1205062,
+        name: 'AMT 316Ti스텐 통5중 프로 곰솥 냄비 24cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 655000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/aa1da960a8754d9899a93d0988d1eb1b_20220216165911.jpg',
+      },
+      {
+        productId: 1205873,
+        name: 'AMT 316Ti스텐 통5중 프로 와이드팬 26cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 440000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/8bc2f8ea4f5e4f65accc9435cc40e51c_20220216175353.jpg',
+      },
+      {
+        productId: 2354039,
+        name: 'AMT 316Ti 통5중 프로 소테팬 26cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 380000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e78382bd3c78a7f816fee963cf3.jpg',
+      },
+      {
+        productId: 1205960,
+        name: 'AMT 316Ti스텐 통5중 프로 코니칼 웍 22cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 410000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/5e38c372f30f43439b59399ce45fcbeb_20220216175816.jpg',
+      },
+      {
+        productId: 1205980,
+        name: 'AMT 316Ti스텐 통5중 프로 편수 냄비 16cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 360000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/98f4c7a3b862413bb6e952d141c58f17_20220216180016.jpg',
+      },
+      {
+        productId: 1205655,
+        name: 'AMT 316Ti스텐 통5중 프로 양수 냄비 16cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 390000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/06035a0c540b4ba39f05ffde1e991942_20220216174014.jpg',
+      },
+      {
+        productId: 1204688,
+        name: 'AMT 316Ti스텐 통5중 샤프 곰솥 냄비 24cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 615000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/5dac80b09bb249d7a765de7be8015ca5_20220216153805.jpg',
+      },
+      {
+        productId: 1205780,
+        name: 'AMT 316Ti스텐 통5중 프로 양수 냄비 24cm',
+        frontBrandId: 14389,
+        frontBrandNameKor: '에이엠티',
+        consumerPrice: 570000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/16/edc7c1ddd6844b79b0e5237a77b43089_20220216174951.jpg',
+      },
+    ],
+  },
+  '16420': {
+    id: '16420',
+    title: '오스트리아에서 온 법랑',
+    description:
+      '우수한 기술력으로 유럽기관의 인증을 받은 460년 역사의 법랑 브랜드 리스의 브랜드 세일 소식입니다.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199257',
+    front_brand_id: '14392',
+    brandNewsId: 16420,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 14392,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea097dd71c2f191eb55babd41cd3b.jpg',
+    frontBrandNameKor: '리스',
+    products: [
+      {
+        productId: 2001530,
+        name: '리스 번트 양수냄비 16cm + 번트 밀크 소스팬 12cm 세트',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 389000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/30/7746a226f6af4be884b54fdb63246996_20230330100445.jpg',
+      },
+      {
+        productId: 1619792,
+        name: '리스 법랑 밀크 소스 팬 14cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 144000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/07/04/cbb43807b85d4827a994f50fc1fdde95_20220704114808.jpg',
+      },
+      {
+        productId: 1633999,
+        name: '리스 클래식 법랑 스트레이너 16cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 170000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/04/12/b73f11d3b7714ca3bc0bcecb42d7c149_20230412115524.jpg',
+      },
+      {
+        productId: 1198507,
+        name: '리스 번트 법랑 양수냄비 24cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 414000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2021/08/05/ad54c5f38a4148b5bafbb1f4d205f4b2_20210805131216.jpg',
+      },
+      {
+        productId: 1625520,
+        name: '리스 클래식 법랑 양수냄비 22cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 356000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/07/04/602fcad03b7f4ffcad6fdcc12ec04267_20220704143034.jpg',
+      },
+      {
+        productId: 2096853,
+        name: '리스 저그 9cm 블루',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/05/30/df43c976d400481dac8cbfbea66df76f_20230530131857.jpg',
+      },
+      {
+        productId: 1999133,
+        name: '리스 파스텔 법랑 머그컵(특대) 블루 10cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 117000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/29/4cbae12ad87a4fe9804db303c9468c07_20230329102548.jpg',
+      },
+      {
+        productId: 1625245,
+        name: '리스 법랑 밀크 소스 팬 12cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 130000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/24/bc675d690219496e83fd7bac3fdf86a5_20221024134120.jpg',
+      },
+      {
+        productId: 1879589,
+        name: '리스 파스텔 법랑 오믈렛팬 블루 20cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 176000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/01/13/0523069eb38b4cc4bf8dfb48fb887714_20230113133447.jpg',
+      },
+      {
+        productId: 1625416,
+        name: '리스 번트 법랑 양수냄비 16cm',
+        frontBrandId: 14392,
+        frontBrandNameKor: '리스',
+        consumerPrice: 259000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/18/38cc066303db4858bd943cc863f091d4_20221018092350.jpg',
+      },
+    ],
+  },
+  '16440': {
+    id: '16440',
+    title: '소장하고 싶은 로고',
+    description:
+      '코캔클의 깔끔한 윈터는 고급스러우면서 트렌디합니다. 소장할 가치가 있는 코캔클의 아이템을 29CM 단독할인으로 만나보세요.',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '199373',
+    front_brand_id: '18413',
+    brandNewsId: 16440,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-10T14:59:00.000000',
+    frontBrandId: 18413,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3879d9b313b91ebe9145ef1cb59.jpg',
+    frontBrandNameKor: '코캔클',
+    products: [
+      {
+        productId: 2375078,
+        name: ' CCL PALMTREE CAP/NAVY',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bced69dfc12b238b33c4945a2e1.jpg',
+      },
+      {
+        productId: 2375081,
+        name: ' 23 TEDDY ZIP UP/IVORY',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bcf5f45a866b238b5a2ad5907a3.jpg',
+      },
+      {
+        productId: 2375087,
+        name: ' CCL CLASSIC DOUBLE LONG COAT',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 397000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bd17d232820b2380f954f5db981.jpg',
+      },
+      {
+        productId: 2375086,
+        name: 'CCL CLASSIC SHORT COAT',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 287000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bd0fc7c961eb238c3c325f0d465.jpg',
+      },
+      {
+        productId: 2375083,
+        name: '23 TEDDY JOGGER PANTS /PALE PURPLE',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 109000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bd018f2c4a191ebff149322cdda.jpg',
+      },
+      {
+        productId: 2375084,
+        name: '23 TEDDY JOGGER PANTS /IVORY',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 109000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bd04eb1773391eb9f8b5804fff8.jpg',
+      },
+      {
+        productId: 2375085,
+        name: '23 TEDDY JOGGER PANTS /NAVY',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 109000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bd067eea61683773fac71714c01.jpg',
+      },
+      {
+        productId: 2375079,
+        name: ' CCL PALMTREE CAP/PINK',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bcefa8fcbcb91eb372be5f9689a.jpg',
+      },
+      {
+        productId: 2375080,
+        name: ' 23 TEDDY ZIP UP /PALE PURPLE',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bcf25a0e1ad91ebc30d748d67c4.jpg',
+      },
+      {
+        productId: 2375082,
+        name: ' 23 TEDDY ZIP UP/NAVY',
+        frontBrandId: 18413,
+        frontBrandNameKor: '코캔클',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9bcf7d5f7fb8b238490014a09df9.jpg',
+      },
+    ],
+  },
+  '16443': {
+    id: '16443',
+    title: '기다려왔던 시즌오프',
+    description:
+      '기다려왔던 메인부스의 시즌오프로, 올겨울 마지막 캐주얼 착장을 완성해요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199408',
+    front_brand_id: '2254',
+    brandNewsId: 16443,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-10T14:59:00.000000',
+    frontBrandId: 2254,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea388d7522b1a83775dbe5cc0f337.jpg',
+    frontBrandNameKor: '메인부스',
+    products: [
+      {
+        productId: 2278020,
+        name: '[Pat&Mat] Interview Sweatshirt(NAVY)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6954614ab7cd8a7f0b90bd6ad7f0.jpg',
+      },
+      {
+        productId: 2278017,
+        name: '[Pat&Mat] Best Duo Hood T-shirt(BLUE)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 89000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6954c4278e5b83bce7307df2715a.jpg',
+      },
+      {
+        productId: 2278024,
+        name: '[Pat&Mat] Forever Sweatshirt(BLACK)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6954319dfa0da5b3a56a1f6659ce.jpg',
+      },
+      {
+        productId: 2278022,
+        name: '[Pat&Mat] Tutorial Sweatshirt(BLACK)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee695448f97041a5b3a188be006296.jpg',
+      },
+      {
+        productId: 2278019,
+        name: '[Pat&Mat] Mat Hood T-shirt(CLOUD GRAY)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 89000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6954afa10a0f8a7f89777a4e3552.jpg',
+      },
+      {
+        productId: 2278018,
+        name: '[Pat&Mat] Pat Hood T-shirt(BLACK)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 89000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6954b9e9f18783bc5f92d3ff2661.jpg',
+      },
+      {
+        productId: 2278023,
+        name: '[Pat&Mat] Tutorial Sweatshirt(CLOUD GRAY)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee69543ab05cff83bc2fa27257c9ea.jpg',
+      },
+      {
+        productId: 2278016,
+        name: '[Pat&Mat] Best Duo Hood T-shirt(RED)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 89000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6954cdd6cdd78a7f0fc119ae55ff.jpg',
+      },
+      {
+        productId: 2278021,
+        name: '[Pat&Mat] Interview Sweatshirt(LEMON)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee695454200d3183bc4d7db953dbf6.jpg',
+      },
+      {
+        productId: 2278025,
+        name: '[Pat&Mat] QnA Sweatshirt(BLACK)',
+        frontBrandId: 2254,
+        frontBrandNameKor: '메인부스',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee695419fd16118a7f010e0ec3f325.jpg',
+      },
+    ],
+  },
+  '16464': {
+    id: '16464',
+    title: '셀럽들이 애정하는 가브리엘 리',
+    description:
+      '테일러링으로 잘 알려져있는 가브리엘 리의 특별한 혜택에 주목해주세요. 최대 ~10%혜택에 15%중복 쿠폰 사용까지 가능한 이 기회를 놓치지 마세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199576',
+    front_brand_id: '3158',
+    brandNewsId: 16464,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2023-12-31T14:59:00.000000',
+    frontBrandId: 3158,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3b5fdebc874b23899717070978a.jpg',
+    frontBrandNameKor: '가브리엘 리',
+    products: [
+      {
+        productId: 1776864,
+        name: 'OVERSIZED CASHMERE-WOOL BLEND MAXI COAT  - BLACK',
+        frontBrandId: 3158,
+        frontBrandNameKor: '가브리엘 리',
+        consumerPrice: 628000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/14/f1b1c56a399d48b19a15b1acd10a9487_20221014220957.jpg',
+      },
+      {
+        productId: 2336489,
+        name: 'OVERSIZED PREMIUM CASHMERE-WOOL BLEND MAXI COAT - CAMEL',
+        frontBrandId: 3158,
+        frontBrandNameKor: '가브리엘 리',
+        consumerPrice: 698000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee83655972df8983bc47294fc4e66c.jpg',
+      },
+      {
+        productId: 2336494,
+        name: 'OVERSIZED PREMIUM CASHMERE-WOOL BLEND MAXI COAT - CHARCOAL',
+        frontBrandId: 3158,
+        frontBrandNameKor: '가브리엘 리',
+        consumerPrice: 698000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8365c4cc1aff8a7f39eae7fb87a3.jpg',
+      },
+      {
+        productId: 870835,
+        name: 'FW20 100% WOOL FUNNEL-NECK HALF COAT - NAVY',
+        frontBrandId: 3158,
+        frontBrandNameKor: '가브리엘 리',
+        consumerPrice: 482000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2020/10/23/a93cadb627d449818ac00e2fe5cd9b84_20201023164324.jpg',
+      },
+    ],
+  },
+  '16467': {
+    id: '16467',
+    title: '우아하면서 시크한 디테일',
+    description:
+      '클래식어반무드의 감성을 지닌 플라츠클래식의 신상품 소식과 단독 할인헤택 소식을 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199595',
+    front_brand_id: '17448',
+    brandNewsId: 16467,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-04T14:59:00.000000',
+    frontBrandId: 17448,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3b79b815160837741f2cb20dd42.jpg',
+    frontBrandNameKor: '플라츠클래식',
+    products: [
+      {
+        productId: 2380808,
+        name: 'VELVET PUFF CARDIGAN (PURPLE)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 153000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea041c324a14191eb69a193ba54db.jpg',
+      },
+      {
+        productId: 2381790,
+        name: 'VELVET PUFF CARDIGAN (GREEN)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 153000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea04327526c94b2383b0bd7dcf495.jpg',
+      },
+      {
+        productId: 2380811,
+        name: 'LAB WOOL TROUSERS (CHARCOAL)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 123000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea044db55889f91ebddce5bb1abcc.jpg',
+      },
+      {
+        productId: 2380814,
+        name: 'MIA NO-CALLOR CROP MUSTANG (BROWN)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 340000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea046d9994702b23829a957add2b4.jpg',
+      },
+      {
+        productId: 2380810,
+        name: 'VELVET PUFF CARDIGAN (BLACK)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 153000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0429d5d587f91eb5b9a346bec5c.jpg',
+      },
+      {
+        productId: 2380816,
+        name: 'MIA NO-CALLOR CROP MUSTANG (CAMEL)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 340000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea047b70f7600b2387751594be06b.jpg',
+      },
+      {
+        productId: 2380809,
+        name: 'VELVET PUFF CARDIGAN (BROWN)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 153000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0422efa5fe083778b9a6f47a8aa.jpg',
+      },
+      {
+        productId: 2380812,
+        name: 'LAB WOOL TROUSERS (BROWN)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 123000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0457071fc5c83777f0601cf26fe.jpg',
+      },
+      {
+        productId: 2380813,
+        name: 'CROP MUSTANG (BROWN)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 340000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0460a5f819f91eb41ce0bb8a9c7.jpg',
+      },
+      {
+        productId: 2380815,
+        name: 'MIA NO-CALLOR CROP MUSTANG (DEEP BEIGE)',
+        frontBrandId: 17448,
+        frontBrandNameKor: '플라츠클래식',
+        consumerPrice: 340000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea047554ee4e8b2388b220ac3be51.jpg',
+      },
+    ],
+  },
+  '16474': {
+    id: '16474',
+    title: '놓칠 수 없는 에트몽의 시즌오프',
+    description:
+      '특별한 단독 혜택으로 만나보는 에트몽의 시즌오프 소식입니다. 일부 상품에 한해 중복쿠폰 사용도 가능하니 서둘러 만나보세요. 단독 ~50%',
+    category: 'BRAND_SALE',
+    cover_image_id: '199656',
+    front_brand_id: '8071',
+    brandNewsId: 16474,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 8071,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3c78797410791ebf977abc78d4e.jpg',
+    frontBrandNameKor: '에트몽',
+    products: [
+      {
+        productId: 2305434,
+        name: 'Pintuck Fur Duck Down Padding, Cream',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 310000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/dfc949d7d0a04f00904a35b23a55bfff_20231025114132.jpg',
+      },
+      {
+        productId: 2305415,
+        name: 'Curling Tweed Wool Jacket, Beige',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 258000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/ddc0eb8ec20a4dbcb8b5d836b5320977_20231025114426.jpg',
+      },
+      {
+        productId: 2305432,
+        name: 'Pintuck Fur Duck Down Padding, Black',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 310000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/b549ed75b2d549f5b1171c13e4a7ec54_20231025114222.jpg',
+      },
+      {
+        productId: 2305405,
+        name: 'Fur Lined Mustang Coat, Pink',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 278000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/6451aaa24bc14b0b8cd0e7af0af9a75e_20231025114540.jpg',
+      },
+      {
+        productId: 2305463,
+        name: 'Piping Shirring Duck Down Padding, Black',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 298000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/766130c33198417499cff2b9bfa807e3_20231025113850.jpg',
+      },
+      {
+        productId: 2305456,
+        name: 'Round Trimmed Fur Coat, Beige',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 288000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/4c69399a9ec947a193ce345f10f6fd88_20231025114017.jpg',
+      },
+      {
+        productId: 2305419,
+        name: 'Hoodie Curved Crop Coat, Charcoal Grey',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 298000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/b9aa12ae0901478a9459c5ca5a5b2d86_20231025114344.jpg',
+      },
+      {
+        productId: 2305411,
+        name: 'Knit-Collar Duck Down Padding, Black',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 275000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/5e4adaaa5b524c0989c3f5ffb74ebc08_20231025114508.jpg',
+      },
+      {
+        productId: 2305423,
+        name: 'Hoodie Curved Crop Coat, Mocha Grey',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 298000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/5edb9942ef024abf982239698d727bec_20231025114310.jpg',
+      },
+      {
+        productId: 2305459,
+        name: 'Piping Shirring Duck Down Padding, Lavender Pink',
+        frontBrandId: 8071,
+        frontBrandNameKor: '에트몽',
+        consumerPrice: 298000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/25/e836fad6b9ef4ec7a8916764ef61841f_20231025113950.jpg',
+      },
+    ],
+  },
+  '16478': {
+    id: '16478',
+    title: '일상에 스며든 아름다움',
+    description:
+      '’The beauty of everyday life’ 하베크가 언제나 중요하게 생각하는 일상에 스며든 아름다움을  담은 컬렉션입니다. 일상생활 속에서 유용하게 활용할 수 있는 꼭 필요한 아이템을 선별하여 좋은 소재와 테일러링으로 완성도를 높인 컬렉션을 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199675',
+    front_brand_id: '9799',
+    brandNewsId: 16478,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 9799,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3cf8a1629f083774f3343f591f7.jpg',
+    frontBrandNameKor: '하베크',
+    products: [
+      {
+        productId: 2263878,
+        name: 'Wool slim fit wrap top / Black',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 75000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c59f2424d5b8a7f7b5097e625aa.jpg',
+      },
+      {
+        productId: 2264920,
+        name: 'Classic straight fit jeans',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 125000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c56af8d9b358a7fbda24a1f128a.jpg',
+      },
+      {
+        productId: 2263886,
+        name: 'Tasmania wool crewneck sweater / Charcoal',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 152000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c58d726b703a5b3eba031928952.jpg',
+      },
+      {
+        productId: 2264728,
+        name: 'Wide Leg cotton trousers / Black',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 159000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c56dc9ddc818a7fd13f51b5670a.jpg',
+      },
+      {
+        productId: 2263998,
+        name: 'Long sleeve layered t shirts / Ivory',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 72000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c58c039935583bcffc990630dbf.jpg',
+      },
+      {
+        productId: 2351122,
+        name: 'Wool cashmere tailored long coat / Black',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 429000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8d0ed633ee13a5b3937ab70d0a0f.jpg',
+      },
+      {
+        productId: 2351126,
+        name: 'Wool cashmere tailored long coat / Beige',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 429000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8d0f8076a91583bc1f746da73cc1.jpg',
+      },
+      {
+        productId: 2263885,
+        name: 'Tasmania wool crewneck sweater / Butter yellow',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 152000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c58fcb0da6f8a7f7fa8a9bc028f.jpg',
+      },
+      {
+        productId: 2264153,
+        name: 'Long sleeve layered t shirts / Lilac grey',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 72000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c58a81d16c98a7f4905dfbfc652.jpg',
+      },
+      {
+        productId: 2264733,
+        name: 'Wide Leg cotton trousers / Beige',
+        frontBrandId: 9799,
+        frontBrandNameKor: '하베크',
+        consumerPrice: 159000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5c56c5c74dbb8a7f69e561b2f3b1.jpg',
+      },
+    ],
+  },
+  '16483': {
+    id: '16483',
+    title: '연말 마지막 세일',
+    description:
+      '신스덴에서 준비한 23년도 마지막 클리어런스 세일을 만나보세요. 포인트 주기 좋은 트위드 셋업 상품과 원피스로 특별한 룩이 완성될거에요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199769',
+    front_brand_id: '19462',
+    brandNewsId: 16483,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2023-12-31T14:59:00.000000',
+    frontBrandId: 19462,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea4584ede908c8377f56fe14ae538.jpg',
+    frontBrandNameKor: '신스덴',
+    products: [
+      {
+        productId: 2347437,
+        name: '체크 트위드 투피스 예약배송12월마지막주차',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 148000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/24/e99e576f9d164ed689727b1750cc50e5_20231124093620.jpg',
+      },
+      {
+        productId: 2362513,
+        name: '버건디 트위드 자켓',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 143000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/05/a8203b9d4144481a9c41a58c9b8894ca_20231205161821.jpg',
+      },
+      {
+        productId: 2362507,
+        name: '아델라 트위드 미니원피스',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/05/3d4ef9fa3fd64c3c9d146d2fb7c371b2_20231205161515.jpg',
+      },
+      {
+        productId: 2362517,
+        name: '이터널 반하이넥 탑',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 68000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/05/9196764c88c342ae8b0f492f2f4c2b3e_20231205162132.jpg',
+      },
+      {
+        productId: 2362530,
+        name: '컬러풀 트위드 투피스',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 158000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/05/5620c30a5d754a7caeca28b657987de0_20231205162827.jpg',
+      },
+      {
+        productId: 2347421,
+        name: '로이스 트위드 미니원피스 예약배송24년1월1주차',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 112000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/24/8e43eba606644c7b8ed97a552dfa75c8_20231124092518.jpg',
+      },
+      {
+        productId: 2347436,
+        name: '레베카 배색 투피스',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 184000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/24/ca9a8a567ed949389577aaa715fe9087_20231124093526.jpg',
+      },
+      {
+        productId: 2347422,
+        name: '로이스 트위드 자켓 예약배송 예약배송24년1월1주차',
+        frontBrandId: 19462,
+        frontBrandNameKor: '신스덴',
+        consumerPrice: 132000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/24/882aba7200f04a05903ea9ae8f9db8d6_20231124092610.jpg',
+      },
+    ],
+  },
+  '16485': {
+    id: '16485',
+    title: '클래식의 아름다움',
+    description:
+      '클래식 무드를 기반으로 절제된 아름다움을 선보이는 포레토의 연말 특가 소식을 알려요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199789',
+    front_brand_id: '15343',
+    brandNewsId: 16485,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 15343,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea461864b03cab2388104407d436e.png',
+    frontBrandNameKor: '포레토',
+    products: [
+      {
+        productId: 2373708,
+        name: 'Karol herringbone wool coat  (Black)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 369000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a8e1e56ea64b238c5804f5745ed.jpg',
+      },
+      {
+        productId: 2373740,
+        name: 'Jeje reversible mouton jacket (Lambskin)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 589000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a9d993b302ab2388d86bc99551c.jpg',
+      },
+      {
+        productId: 2232792,
+        name: 'Colt G-1 leather jacket(Lambskin)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 409000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee514b7e1dc01d83bc9d226c2c1be8.jpg',
+      },
+      {
+        productId: 2373711,
+        name: 'Nina boucle wool coat (Black)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 369000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9f3827451d92b238d158c55d39a9.jpg',
+      },
+      {
+        productId: 2373700,
+        name: 'Berlin winter wool jacket (Herringbone grey)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 269000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a8a481739af91eb69aaa45757b2.jpg',
+      },
+      {
+        productId: 2296835,
+        name: '[29CM 단독][9th] Phoebe alpaca half coat (Butter)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 309000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6e527af145758a7f65f65b8d0302.jpg',
+      },
+      {
+        productId: 2372458,
+        name: 'Margaret wool pleats skirt (Grey)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 98000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee99bbe08f5d30b238a3c8b8ee15d2.jpg',
+      },
+      {
+        productId: 2373710,
+        name: 'Nina boucle wool coat (Brown)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 369000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9f3818ba950483771fefdc1c12d0.jpg',
+      },
+      {
+        productId: 2373676,
+        name: 'Brooklyn corduroy rap skirt pants (Black)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 76000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a836bfc15aeb238a1cfa9c3fbd4.jpg',
+      },
+      {
+        productId: 2373702,
+        name: 'Berlin winter wool jacket (Melon)',
+        frontBrandId: 15343,
+        frontBrandNameKor: '포레토',
+        consumerPrice: 319000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a8b2240608391eb0d6a5cdb491e.jpg',
+      },
+    ],
+  },
+  '16495': {
+    id: '16495',
+    title: '기본에 충실한 아이템',
+    description:
+      '80년대 클래식한 실루엣에 고급스러운 원단으로 완벽한 테일러링에 집중한 하가히의 단독 할인 소식을 알려요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199955',
+    front_brand_id: '14675',
+    brandNewsId: 16495,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 14675,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea484af22683191eb8908a4502cb1.jpg',
+    frontBrandNameKor: '하가히',
+    products: [
+      {
+        productId: 2370741,
+        name: ' Sylvites Virgin Wool Jacket - Pearl River ',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 540000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98aa413ef06a8377e555faf3fd94.jpg',
+      },
+      {
+        productId: 2370730,
+        name: ' Sylvites High-Waist Virgin Wool Pants - Pearl River ',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 280000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98a9b49c6f968377c79fcc22003f.jpg',
+      },
+      {
+        productId: 2342881,
+        name: 'Cropped Silk Wool Tailored Jacket- Ivory',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 399000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee95b4fd23fce991eb8308c1e4e8f3.jpg',
+      },
+      {
+        productId: 2369434,
+        name: 'Cropped Silk Wool Tailored Jacket- Camel',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 399000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee97e41ced5ef6b2381300dfb36962.jpg',
+      },
+      {
+        productId: 2370744,
+        name: ' Sylvites Virgin Wool Jacket - Black',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 540000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98aa87149834837789b5f0333781.jpg',
+      },
+      {
+        productId: 1849899,
+        name: 'Pleated Silk Wool Skirts (Silk Blended)-Camel',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 420000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee95cd9c8fad3d91eb6d4c108915b2.jpg',
+      },
+      {
+        productId: 2339697,
+        name: ' Cropped Silk Wool Tailored Jacket - Black ',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 399000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee97e2cfc60ccab238f58c385abdb5.jpg',
+      },
+      {
+        productId: 2387047,
+        name: 'A- Line Padding Midi Skirt - Black',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 328000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea4873dda490591eb750420a5a303.jpg',
+      },
+      {
+        productId: 1849700,
+        name: 'Pleated Silk-Wool Skirts (Silk Blended)',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 420000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee95cde2bd126283777ff1ecc3ded9.jpg',
+      },
+      {
+        productId: 2370734,
+        name: ' Sylvites High-Waist Virgin Wool Pants - Black ',
+        frontBrandId: 14675,
+        frontBrandNameKor: '하가히',
+        consumerPrice: 280000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98a9dbd61814b2381ff320e69d4c.jpg',
+      },
+    ],
+  },
+  '16504': {
+    id: '16504',
+    title: '해마다 찾아오는 로맨틱 겨울',
+    description:
+      '반가운 레터프롬문의 윈터 시즌오프로 겨울만이 가질 수 있는 낭만을 입어보세요. 29CM 단독할인.',
+    category: 'BRAND_SALE',
+    cover_image_id: '200046',
+    front_brand_id: '8546',
+    brandNewsId: 16504,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2024-01-14T14:59:00.000000',
+    frontBrandId: 8546,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea492fc91ad8c83774bb94f2e9930.jpg',
+    frontBrandNameKor: '레터프롬문',
+    products: [
+      {
+        productId: 2340123,
+        name: '이오니언 투 버튼 울 코트 ( 아이보리 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 155000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/cefa7db6ceb44e7db67d385d21b0cd58_20231117170716.jpg',
+      },
+      {
+        productId: 2340125,
+        name: '베티 시어링 무스탕 자켓 ( 베이지 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 210000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/0e594665bbf84391a9a8dfc6d17e0941_20231117170807.jpg',
+      },
+      {
+        productId: 2341553,
+        name: '[29CM 단독] 코니 더스트 파인 울 가디건 ( 네이비 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 88000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee87731e22ccdb8a7f114f4c2f4a53.jpg',
+      },
+      {
+        productId: 2340126,
+        name: '[1월 8일 예약배송] 베티 시어링 무스탕 자켓 ( 블랙 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 210000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/36efe8aa7d544171893fa15db9653fda_20231117170820.jpg',
+      },
+      {
+        productId: 2340127,
+        name: '토글 버튼 시어링 자켓 ( 베이지 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 144000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/b8c2d4554fab4a19b04b20cd6c62cf79_20231117170833.jpg',
+      },
+      {
+        productId: 2340118,
+        name: '로터스 클래식 울 더블코트 ( 네이비 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/da4997959ef640358c2031920a4e9c52_20231117170619.jpg',
+      },
+      {
+        productId: 2340119,
+        name: '로터스 클래식 울 더블코트 ( 브라운 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/eac5b0f1099c467bb4ab52f37d906dc4_20231117170637.jpg',
+      },
+      {
+        productId: 2340121,
+        name: '이오니언 투 버튼 울 코트 ( 블랙 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 155000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/0cd3f0fa95a6448cb7423a43719d3704_20231117170703.jpg',
+      },
+      {
+        productId: 2353622,
+        name: '파리지앵 울 트렌치 코트 ( 블랙 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 160000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e592830468b83bcadfe3353de38.jpg',
+      },
+      {
+        productId: 2340128,
+        name: '토글 버튼 시어링 자켓 ( 블랙 )',
+        frontBrandId: 8546,
+        frontBrandNameKor: '레터프롬문',
+        consumerPrice: 144000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/17/099e24ad811549fdb6b3cd2f664dcb4f_20231117170850.jpg',
+      },
+    ],
+  },
+  '16505': {
+    id: '16505',
+    title: '카미노의 마지막 세일',
+    description:
+      '카미노의 올 해 마지막 윈터 시즌오프를 29CM 단독 할인으로 함께하세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '200060',
+    front_brand_id: '24348',
+    brandNewsId: 16505,
+    displayStartAt: '2023-12-28T01:00:00.000000',
+    displayEndAt: '2023-12-31T14:59:00.000000',
+    frontBrandId: 24348,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea493ac61eaaf91eb2959342fb277.jpg',
+    frontBrandNameKor: '카미노',
+    products: [
+      {
+        productId: 2377591,
+        name: '카미노 23 FW 벨트 와이드 팬츠 기모 블랙',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/b1efc638f6be4d1381f86042aa29fa67_20231219093751.jpg',
+      },
+      {
+        productId: 2377589,
+        name: '카미노 23 FW 부츠컷 벨벳 팬츠 블랙',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 117000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/c4a06105049b482da840b47f8d15ea9e_20231219093641.jpg',
+      },
+      {
+        productId: 2377593,
+        name: '카미노 23 FW 꼬임 셔링 티셔츠 화이트',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 74000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/2ee65f57029f4304b4aa156a2a6be8d3_20231219093850.jpg',
+      },
+      {
+        productId: 2377592,
+        name: '카미노 23 FW 벨트 와이드 팬츠 기모 브라운',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/da035ec8b0d24cc6941744e84378b7c5_20231219093820.jpg',
+      },
+      {
+        productId: 2377595,
+        name: '카미노 23 FW 꼬임 셔링 티셔츠 크림',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 74000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/f11b280f0a5a410bbaaa18a058069b52_20231219094010.jpg',
+      },
+      {
+        productId: 2377587,
+        name: '카미노 23 FW 부츠컷 벨벳 팬츠 차콜',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 117000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/090a18b8d63747668b5b5cf4c6956064_20231219093606.jpg',
+      },
+      {
+        productId: 2377596,
+        name: '카미노 23 FW 꼬임 셔링 티셔츠 블랙',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 74000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/01199d865a9742a89548def7197579fe_20231219094049.jpg',
+      },
+      {
+        productId: 2377590,
+        name: '카미노 23 FW 부츠컷 벨벳 팬츠 그레이',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 117000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/cddb0c81a21143b0bec00180394989b1_20231219093717.jpg',
+      },
+      {
+        productId: 2377586,
+        name: '카미노 23 FW 양기모 폴라 맨투맨 그레이',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 84900,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/e1379fae13c84c948a0f7fc04fbcf39e_20231219093534.jpg',
+      },
+      {
+        productId: 2377594,
+        name: '카미노 23 FW 꼬임 셔링 티셔츠 핑크',
+        frontBrandId: 24348,
+        frontBrandNameKor: '카미노',
+        consumerPrice: 74000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/19/3e7f1161d1624cbf996a697b2d06baa3_20231219093931.jpg',
+      },
+    ],
+  },
   '16251': {
     id: '16251',
     title: '반짝임 가득한 아이템',
@@ -7634,15 +1906,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee8a75713d3fd18a7f253efa86da00.jpg',
       },
       {
-        productId: 2347748,
-        name: 'WOOL PLEATS MINI SKIRTPANTS_GREY',
-        frontBrandId: 3559,
-        frontBrandNameKor: '벰버',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8a73883f0e8ba5b3f78483af98d7.jpg',
-      },
-      {
         productId: 2347772,
         name: 'DOUBLE BREASTED BUTTON HALF COAT_BLACK',
         frontBrandId: 3559,
@@ -7659,6 +1922,15 @@ export const NewsById = {
         consumerPrice: 108000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee8a76014cfabba5b34ff9325e4ef0.jpg',
+      },
+      {
+        productId: 2347748,
+        name: 'WOOL PLEATS MINI SKIRTPANTS_GREY',
+        frontBrandId: 3559,
+        frontBrandNameKor: '벰버',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8a73883f0e8ba5b3f78483af98d7.jpg',
       },
     ],
   },
@@ -7697,13 +1969,13 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee8ceec9a56a67a5b3335d66cd58fb.jpg',
       },
       {
-        productId: 2338806,
-        name: 'Stripe tassle muffler_Light Grey',
+        productId: 2338727,
+        name: 'Underground applique sweatshirt_Brown',
         frontBrandId: 28573,
         frontBrandNameKor: '런던 언더그라운드',
-        consumerPrice: 198000,
+        consumerPrice: 159000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8ceec196e295a5b3dd945369a844.jpg',
+          'https://img.29cm.co.kr/item/202311/11ee8ceb0b79aa99a5b335aadf596f34.jpg',
       },
       {
         productId: 2338745,
@@ -7713,15 +1985,6 @@ export const NewsById = {
         consumerPrice: 269000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee8cebd9d82be58a7faf6e9ab9f885.jpg',
-      },
-      {
-        productId: 2338727,
-        name: 'Underground applique sweatshirt_Brown',
-        frontBrandId: 28573,
-        frontBrandNameKor: '런던 언더그라운드',
-        consumerPrice: 159000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8ceb0b79aa99a5b335aadf596f34.jpg',
       },
       {
         productId: 2338746,
@@ -7740,6 +2003,15 @@ export const NewsById = {
         consumerPrice: 89000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee8cee787ff27783bc13c14aab244d.jpg',
+      },
+      {
+        productId: 2338806,
+        name: 'Stripe tassle muffler_Light Grey',
+        frontBrandId: 28573,
+        frontBrandNameKor: '런던 언더그라운드',
+        consumerPrice: 198000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8ceec196e295a5b3dd945369a844.jpg',
       },
       {
         productId: 2338725,
@@ -7832,15 +2104,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee6bf5910864b3a5b3e5729e34ecf4.jpg',
       },
       {
-        productId: 2276327,
-        name: 'Knitted half t-shirt (camel)',
-        frontBrandId: 13213,
-        frontBrandNameKor: '블루브릭',
-        consumerPrice: 42000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6bffc83171a1a5b3733fa4a99d94.jpg',
-      },
-      {
         productId: 2276361,
         name: 'Wide denim (western blue)',
         frontBrandId: 13213,
@@ -7866,6 +2129,15 @@ export const NewsById = {
         consumerPrice: 149000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee6bf39c399b33a5b3932512ae713c.jpg',
+      },
+      {
+        productId: 2276327,
+        name: 'Knitted half t-shirt (camel)',
+        frontBrandId: 13213,
+        frontBrandNameKor: '블루브릭',
+        consumerPrice: 42000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bffc83171a1a5b3733fa4a99d94.jpg',
       },
       {
         productId: 2276321,
@@ -7895,15 +2167,6 @@ export const NewsById = {
     frontBrandNameKor: '아이더',
     products: [
       {
-        productId: 2226877,
-        name: 'KARAS REBIRTH (카라스 리버스) UNI 다운 자켓_Salsa_DUW23552O6',
-        frontBrandId: 25637,
-        frontBrandNameKor: '아이더',
-        consumerPrice: 459000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee508eead094178a7fc387b9b31500.jpg',
-      },
-      {
         productId: 2295307,
         name: 'GL PUFFER (GO LIGHT 푸퍼) 여성 다운 자켓_Indian Pink_DWW23548P3',
         frontBrandId: 25637,
@@ -7922,13 +2185,13 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/10/30/1340734495ed4e99961a909a0a2fc672_20231030095959.jpg',
       },
       {
-        productId: 2226886,
-        name: 'KARAS REBIRTH (카라스 리버스) UNI 다운 자켓_Sand beige_DUW23552KD',
+        productId: 2226877,
+        name: 'KARAS REBIRTH (카라스 리버스) UNI 다운 자켓_Salsa_DUW23552O6',
         frontBrandId: 25637,
         frontBrandNameKor: '아이더',
         consumerPrice: 459000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee50905a82ad318a7fffb828f8756b.jpg',
+          'https://img.29cm.co.kr/item/202309/11ee508eead094178a7fc387b9b31500.jpg',
       },
       {
         productId: 2287057,
@@ -7940,6 +2203,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee6d605fef9a4983bcc7f71806cefb.jpg',
       },
       {
+        productId: 2226886,
+        name: 'KARAS REBIRTH (카라스 리버스) UNI 다운 자켓_Sand beige_DUW23552KD',
+        frontBrandId: 25637,
+        frontBrandNameKor: '아이더',
+        consumerPrice: 459000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee50905a82ad318a7fffb828f8756b.jpg',
+      },
+      {
         productId: 2365832,
         name: 'FLOWER (플라워) 여성 푸퍼 다운 자켓_Cream_DWW23573W6',
         frontBrandId: 25637,
@@ -7949,15 +2221,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/12/08/027319a2b74043bca3f2528683219810_20231208095813.jpg',
       },
       {
-        productId: 2280017,
-        name: 'GL PUFFER (GO LIGHT 푸퍼) UNI 다운 자켓_Sand beige_DUW23548KD',
-        frontBrandId: 25637,
-        frontBrandNameKor: '아이더',
-        consumerPrice: 379000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d6218c0b8c38a7fc16d687d0ce8.jpg',
-      },
-      {
         productId: 2340805,
         name: 'FLOWER (플라워) UNI 헤리티지 다운 파카_Dark Khaki_DUW23564K8',
         frontBrandId: 25637,
@@ -7965,6 +2228,15 @@ export const NewsById = {
         consumerPrice: 459000,
         imageUrl:
           'https://img.29cm.co.kr/item/202312/11ee901a9266212d83bca56d1dfd5fc2.jpg',
+      },
+      {
+        productId: 2280017,
+        name: 'GL PUFFER (GO LIGHT 푸퍼) UNI 다운 자켓_Sand beige_DUW23548KD',
+        frontBrandId: 25637,
+        frontBrandNameKor: '아이더',
+        consumerPrice: 379000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6d6218c0b8c38a7fc16d687d0ce8.jpg',
       },
       {
         productId: 2312288,
@@ -7983,6 +2255,969 @@ export const NewsById = {
         consumerPrice: 459000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/10/31/5d0e46755c56483fa6be91f21ee2150d_20231031101820.jpg',
+      },
+    ],
+  },
+  '16417': {
+    id: '16417',
+    title: '기다리던 시즌오프',
+    description:
+      '편안한 착용감으로 사랑받는 노티아의 시즌오프 소식을 전합니다. 최대 30%+5%',
+    category: 'BRAND_SALE',
+    cover_image_id: '199225',
+    front_brand_id: '15791',
+    brandNewsId: 16417,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2024-01-04T14:59:00.000000',
+    frontBrandId: 15791,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea091a7f8172191eb4df706f6cda6.jpg',
+    frontBrandNameKor: '노티아',
+    products: [
+      {
+        productId: 2197050,
+        name: 'CREW NECK MERINO WOOL KNITWEAR - BLUE',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 104000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea3ccdc8b5adeb23859a71b45aa79.jpg',
+      },
+      {
+        productId: 2308076,
+        name: 'BOUCLE BUTTON CARDIGAN - PINK',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 158000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea3cd8c85dbbf91eb9110dc2d1401.jpg',
+      },
+      {
+        productId: 2281250,
+        name: 'NOEL SHAWL COLLAR MUSTANG - NEW GOLD',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 356000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/11/196904e8591d45628045057071cbe1ad_20231011140340.jpg',
+      },
+      {
+        productId: 2308087,
+        name: 'RACCOON BOLERO CARDIGAN - BLACK',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 148000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/26/96cb4802ce2a438f83d9bc8f8e5622d4_20231026112754.jpg',
+      },
+      {
+        productId: 2197048,
+        name: 'WIDE FIT PLEATED PANTS - CHARCOAL',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 156000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee73b97b9f1039a5b32908c722c06b.jpg',
+      },
+      {
+        productId: 2281254,
+        name: 'SHEARING DUFFLE JACKER - CREAM',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 330000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/11/06cafe3cd20b47d7a1384b78bd133fcf_20231011140507.jpg',
+      },
+      {
+        productId: 2197052,
+        name: 'KID MOHAIR V NECK VEST - BROWN',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 126000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea3cd01bd732f91eb5731bf9a0324.jpg',
+      },
+      {
+        productId: 2281233,
+        name: 'BOUCLE COLLAR CARDIGAN - GREEN',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 178000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea3cda241abf68377a1f6df168c5a.jpg',
+      },
+      {
+        productId: 2308092,
+        name: 'WOOL SINGLE MAXI COAT - BLACK',
+        frontBrandId: 15791,
+        frontBrandNameKor: '노티아',
+        consumerPrice: 330000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee76fdc47ace3f83bccbc6f256e5d9.jpg',
+      },
+    ],
+  },
+  '16449': {
+    id: '16449',
+    title: '포근하고 멋스러운',
+    description:
+      '겨울철 온기를 더해줄 허그유어스킨의 겨울 컬렉션을 소개합니다. 포근하고 편안한 라운지 웨어를 허그유어스킨만의 시선으로 재해석하였습니다.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199453',
+    front_brand_id: '24051',
+    brandNewsId: 16449,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2024-01-04T14:59:00.000000',
+    frontBrandId: 24051,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3911a8a4ac8837749326c7d1fa8.jpg',
+    frontBrandNameKor: '허그유어스킨',
+    products: [
+      {
+        productId: 2373215,
+        name: 'Panelled mermaid long skirt (Dark gray)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 169000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bb6eec791eba7b028e53799.jpg',
+      },
+      {
+        productId: 2373228,
+        name: 'Toggle leg-warmer (Black)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 46000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bbae69191eb576d37ad5994.jpg',
+      },
+      {
+        productId: 2373225,
+        name: 'Furry hand-warmer (Black)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 42000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bbb0da791ebbd33a51f634d.jpg',
+      },
+      {
+        productId: 2373222,
+        name: 'Printed earflp beanie (Black)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 49000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bb6eecb91ebc516bca18a82.jpg',
+      },
+      {
+        productId: 2373227,
+        name: 'Toggle leg-warmer (Gray)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 46000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bbae68f91ebb3f8fb533fea.jpg',
+      },
+      {
+        productId: 2360711,
+        name: 'Puffer vest (Black)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 159000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a4bd00224b2837703feedc2195a.jpg',
+      },
+      {
+        productId: 2373221,
+        name: 'Printed earflp beanie (Gray)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 49000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bb6eed091eb4de2ff038d34.jpg',
+      },
+      {
+        productId: 2373224,
+        name: 'Furry hand-warmer (Gray)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 42000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bbae69491eb6bdf2cf85e05.jpg',
+      },
+      {
+        productId: 2373226,
+        name: 'Toggle leg-warmer (Off-White)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 46000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bbae69391eb2b1004940f3b.jpg',
+      },
+      {
+        productId: 2373223,
+        name: 'Furry hand-warmer (Off-White)',
+        frontBrandId: 24051,
+        frontBrandNameKor: '허그유어스킨',
+        consumerPrice: 42000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f2bbcbb5991eb65ceaa4c76b7.jpg',
+      },
+    ],
+  },
+  '16463': {
+    id: '16463',
+    title: '주말 한정 72H 혜택',
+    description:
+      '감각적인 스타일링이 돋보이는 해바이해킴의 특별한 72시간 소식을 전해요. ~70%할인 혜택에 브랜드 쿠폰까지 사용하여 최대 할인 혜택으로 만나보세요. 리뷰 이벤트 진행',
+    category: 'BRAND_SALE',
+    cover_image_id: '199571',
+    front_brand_id: '4650',
+    brandNewsId: 16463,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2023-12-31T14:59:00.000000',
+    frontBrandId: 4650,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3b58a2ae98791ebfda4658eee53.jpg',
+    frontBrandNameKor: '해바이해킴',
+    products: [
+      {
+        productId: 2288831,
+        name: 'OVERSIZED TAILORED WOOL COAT_GREY',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 419000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bf8f04fb1b78a7fc3d3727f13c8.jpg',
+      },
+      {
+        productId: 2289003,
+        name: 'SLIM WOOL SINGLE COAT_GREY',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 398000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bfe13a416e18a7f6baf50f8a887.jpg',
+      },
+      {
+        productId: 2288889,
+        name: 'ALPACA SURI CROPPED DUPPLE COAT_CAMEL',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 399000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bfa5aa5dfa18a7f63084d2bd945.jpg',
+      },
+      {
+        productId: 2289089,
+        name: 'DUFFLE CROPPED SHEARING JACKET_BROWN',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 398000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bff68ac032f83bc0bc305910694.jpg',
+      },
+      {
+        productId: 2288983,
+        name: 'SLIM WOOL SINGLE COAT_BLACK',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 398000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bfba2982fb783bcd701aa5ddef0.jpg',
+      },
+      {
+        productId: 2288868,
+        name: 'ALPACA SURI CROPPED DUPPLE COAT_NAVY',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 399000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bf9edceb6958a7f3d3643ef79a7.jpg',
+      },
+      {
+        productId: 2288851,
+        name: 'OVERSIZED TAILORED WOOL COAT_BEIGE',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 419000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bf9518c459783bc637aac654914.jpg',
+      },
+      {
+        productId: 2288905,
+        name: 'WOOL DUFFLE COAT_CH.GREY',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 439000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bfac174fecf83bce31712ac8d5c.jpg',
+      },
+      {
+        productId: 2289040,
+        name: 'SLIM WOOL SINGLE COAT_BEIGE',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 398000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bfe85abadf58a7f8d49d4dee6a2.jpg',
+      },
+      {
+        productId: 2289056,
+        name: 'DUFFLE CROPPED SHEARING JACKET_BLACK',
+        frontBrandId: 4650,
+        frontBrandNameKor: '해바이해킴',
+        consumerPrice: 398000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6bff033a51a183bc75de4da2ac37.jpg',
+      },
+    ],
+  },
+  '16465': {
+    id: '16465',
+    title: '워크웨어의 정석',
+    description:
+      "스트릿 무드와 클래식이 적절한 조화를 이루는 브랜드 '아너 더 기프트'를 소개해요.",
+    category: 'BRAND_SALE',
+    cover_image_id: '199579',
+    front_brand_id: '19936',
+    brandNewsId: 16465,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2024-01-06T14:59:00.000000',
+    frontBrandId: 19936,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3b628485b6eb2387d61f3236915.jpg',
+    frontBrandNameKor: '아너더기프트',
+    products: [
+      {
+        productId: 2360254,
+        name: '(U) 아너 스트라이프 팬츠 본 HONOR STRIPE PANTS BONE',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 245000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/2620b4b71910451584660113e74307c7_20231220153344.jpg',
+      },
+      {
+        productId: 2360253,
+        name: '(M) 로우 엣지 스웨트셔츠 모브 RAW EDGE PULLOVER SWEATSHIRT MAUVE',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 265000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/acbc9fdd1ec24d6dab4141144f9d82c6_20231220153320.jpg',
+      },
+      {
+        productId: 2360259,
+        name: '(M) 크리스 팬츠 블랙 HTG CREASE PANTS BLACK',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 325000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/a4d2aa3adcfb42d38c3496a469bf9be2_20231220153602.jpg',
+      },
+      {
+        productId: 2360261,
+        name: '(U) 아너 스트라이프 버튼 셔츠 본 HONOR STRIPE BUTTON UP BONE SHIRT BONE',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 345000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/884e12f2179f4fdf9207b51076daa5f4_20231220153336.jpg',
+      },
+      {
+        productId: 2360258,
+        name: '(M) 배기 스웨트팬츠 모브 HTG BAGGY SWEATS MAUVE',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 315000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/7e0595006695405f9359c7c10adfbe72_20231220153554.jpg',
+      },
+      {
+        productId: 2360255,
+        name: '(U) 크레스트 스웨트 팬츠 탄 CREST SWEATS PANTS TAN',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 305000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/28db2340cd184e5b853be479f9f1e534_20231220153352.jpg',
+      },
+      {
+        productId: 2360256,
+        name: '(U) 크레스트 스웨트 팬츠 블랙 CREST SWEATS PANTS BLACK',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 305000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/6a8cb11f779a4db7be27d7f81ea48ce3_20231220153400.jpg',
+      },
+      {
+        productId: 2360260,
+        name: '(M) 크리스 팬츠 브라운 HTG SWEATS BROWN',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 295000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/1c391bace4df40c1bbd2bbf8ffc2fa59_20231220153609.jpg',
+      },
+      {
+        productId: 2360262,
+        name: '(M) 워크 셔츠 인디고 HTG L/S WORK SHIRT INDIGO',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 375000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/929f8e64c19c4170a2fe04c786de472b_20231220153305.jpg',
+      },
+      {
+        productId: 2360257,
+        name: '(M) 배기 스웨트팬츠 그레이 HTG BAGGY SWEATS PANTS GREY',
+        frontBrandId: 19936,
+        frontBrandNameKor: '아너더기프트',
+        consumerPrice: 315000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/20/2daee9f39edb4334b8d66fe390ffa089_20231220153529.jpg',
+      },
+    ],
+  },
+  '16476': {
+    id: '16476',
+    title: '품격을 올려주는 옷걸이',
+    description:
+      '옷을 품격있게 만들어주는 메이네티의 의류를 3일동안 단독 혜택으로 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199671',
+    front_brand_id: '6432',
+    brandNewsId: 16476,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2023-12-31T14:59:00.000000',
+    frontBrandId: 6432,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3ce80a1c5e0b23811f85c423003.jpg',
+    frontBrandNameKor: '메이네티',
+    products: [
+      {
+        productId: 2108161,
+        name: '메이네티 럭셔리 벨벳 원목 상의 옷걸이 1P (2 color)',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 7000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/08/26df5083eea94249983912e781f88e25_20230608103648.jpg',
+      },
+      {
+        productId: 2108164,
+        name: '메이네티 럭셔리 원목 하의 옷걸이 1P (2 color)',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 6000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/08/cf9bd3e74f0945c29a95bdd334096e05_20230608103743.jpg',
+      },
+      {
+        productId: 1579659,
+        name: '메이네티 프리미엄 벨벳 하의 옷걸이 1P (3 color)',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 9000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/05/27/e36fee0c6e0d4aa78086144a152f902d_20220527161525.jpg',
+      },
+      {
+        productId: 1378728,
+        name: '메이네티 고급 애쉬원목 상의 옷걸이 1P',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 6000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/01/20/4e31105a2b5142789608209d831a4a6f_20220120115015.jpg',
+      },
+      {
+        productId: 1378727,
+        name: '메이네티 고급 애쉬원목 자켓 옷걸이 1P',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 10000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/01/20/94f318ddc21d4a7f9a5201d7b98817d8_20220120115044.jpg',
+      },
+      {
+        productId: 1579658,
+        name: '메이네티 프리미엄 벨벳 상의 옷걸이 1P (3 color)',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 7000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/05/27/80bdd0d414df4ac4939c51cc30c08770_20220527161503.jpg',
+      },
+      {
+        productId: 2034677,
+        name: '메이네티 사토리얼 스페셜 상의 옷걸이 SAR-J42 (7 color)',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 12000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/05/11/9366aa612ad4468f8e7d80a8e58e61cb_20230511114809.jpg',
+      },
+      {
+        productId: 2108162,
+        name: '메이네티 럭셔리 벨벳 원목 자켓 옷걸이 1P (2 color)',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 11000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/08/8c7bdc2c11434c209c369049988bdb99_20230608103721.jpg',
+      },
+      {
+        productId: 1219301,
+        name: '메이네티 프리미엄 벨벳 상하의 옷걸이 1P (3 color)',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 10000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2021/09/06/3659e765f046457cb185840326a0894a_20210906150804.jpg',
+      },
+      {
+        productId: 1378725,
+        name: '메이네티 고급 애쉬원목 하의 옷걸이 1P',
+        frontBrandId: 6432,
+        frontBrandNameKor: '메이네티',
+        consumerPrice: 8000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/01/20/6ea9bc90e1a0458ea16645c9eab8e330_20220120115114.jpg',
+      },
+    ],
+  },
+  '16486': {
+    id: '16486',
+    title: '쏘킨의 입점 소식을 전해요',
+    description:
+      '쏘킨은 페미닌하고 빈티지 클래식 스타일의 여성복 브랜드입니다. 그때 그 시절의 분위기와 공기, 어느 공간 안에서 순간의 경험, 냄새, 색감에 대한 노스탤지어를 지닌 채, 오래된 것들이 주는 아름다움과 가치를 소중히 하고 시간이 지나도 변하지 않는 클래식한 오리지널리티를 지향합니다.',
+    category: 'NEW_BRAND',
+    cover_image_id: '199791',
+    front_brand_id: '33321',
+    brandNewsId: 16486,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2024-01-04T14:59:00.000000',
+    frontBrandId: 33321,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea46270f441f68377351e560d8fe2.jpg',
+    frontBrandNameKor: '쏘킨',
+    products: [
+      {
+        productId: 2382766,
+        name: 'High Quality Supima Cotton Shirt dress',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 198000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0a2efb13c66b238a18b6773f910.jpg',
+      },
+      {
+        productId: 2383416,
+        name: 'Corduroy Flared Tailored pants - Camel brown',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 157000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea16c3e3d79b4b238bf2466d12faa.jpg',
+      },
+      {
+        productId: 2383417,
+        name: 'Ribbon Detail Hourglass Velvet Dress',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 219000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea16e6ffc160c8377ad14668624eb.jpg',
+      },
+      {
+        productId: 2383407,
+        name: 'Ribbon Detail Long Satin Slip Dress',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 169000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea1662cc3327991eb9b77dbf462b1.jpg',
+      },
+      {
+        productId: 2383412,
+        name: 'Corduroy Flared Tailored pants - Black',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 157000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea169a90c08a48377c9075708e738.jpg',
+      },
+      {
+        productId: 2382902,
+        name: 'Low waist Wool Pintuck Mini Skirt_Camel',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 155000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0ae8bfcac92b238df2a8f97631b.jpg',
+      },
+      {
+        productId: 2382903,
+        name: 'Merino Wool / Baby Alpaca Blend Round Knit Sweater_Red',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 207000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0af5414209391eb69e9349fcfa7.jpg',
+      },
+      {
+        productId: 2382780,
+        name: 'Low waist Twill Pintuck Mini Skirt_Black',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 125700,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0a6123c708991eb1584a1115670.jpg',
+      },
+      {
+        productId: 2382819,
+        name: 'Low waist Twill Pintuck Mini Skirt_Ivory',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 125700,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0ae04e4c8248377795cee4dcc04.jpg',
+      },
+      {
+        productId: 2382900,
+        name: 'Merino Wool / Baby Alpaca Blend Round Knit Sweater_Navy',
+        frontBrandId: 33321,
+        frontBrandNameKor: '쏘킨',
+        consumerPrice: 207000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea0aa794c454791ebb754aa7c098b.jpg',
+      },
+    ],
+  },
+  '16490': {
+    id: '16490',
+    title: '선물하기 좋은 패키지',
+    description:
+      '리얼컴피의 특별한 72시간 혜택을 만나보세요. 패키지 포장으로 선물하기 좋아요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199888',
+    front_brand_id: '19065',
+    brandNewsId: 16490,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2023-12-31T14:59:00.000000',
+    frontBrandId: 19065,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea476fb6a2e8483772b4d8483cc2d.jpg',
+    frontBrandNameKor: '리얼컴피',
+    products: [
+      {
+        productId: 1858038,
+        name: '[노와이어] 컴피 트라이앵글 프리컷 레이스 브라',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 26900,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/12/22/b69585bb6ff64531a03aa4f3d4d0b83f_20221222133641.jpg',
+      },
+      {
+        productId: 2344206,
+        name: '[심리스] 후크형 매일브라1.0 & 팬티 SET - 오트밀',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 35900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee88f41215a4918a7ffbdff9b1cb51.jpg',
+      },
+      {
+        productId: 1908565,
+        name: '[심리스] 패드부착형 매일브라2.0 & 팬티 SET - 로즈',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 38800,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/02/08/8ff642260a0b4822813ed4e0e8c2f164_20230208140444.jpg',
+      },
+      {
+        productId: 1889791,
+        name: '[노와이어] 서포트 프리컷 브라렛 - 인디핑크',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 29900,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/01/26/fdcd7bc5ca194dc38ffe5390588f96a0_20230126153408.jpg',
+      },
+      {
+        productId: 1908610,
+        name: '[심리스] 패드부착형 매일브라2.0 & 팬티 SET - 라이트토프',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 38800,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/02/08/f9ebac4fa1474da69e2908ad781a44cf_20230208140905.jpg',
+      },
+      {
+        productId: 1858026,
+        name: '[노와이어] 컴피 트라이앵글 프리컷 레이스 브라 & 팬티 SET - 3 Colors',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 38800,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/12/22/c735d122b73f4b01a2b26cef9e58a631_20221222120213.jpg',
+      },
+      {
+        productId: 1908613,
+        name: '[심리스] 패드부착형 매일브라2.0 & 팬티 SET - 블랙',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 38800,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/02/08/0171bee8b1c14eaaa34be929db576bd0_20230208141022.jpg',
+      },
+      {
+        productId: 2343479,
+        name: '[심리스] 후크형 매일브라1.0 & 팬티 SET - 베이지',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 35900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee88f406aaf9ab83bc3fe5e12b3b44.jpg',
+      },
+      {
+        productId: 1889788,
+        name: '[노와이어] 서포트 프리컷 브라렛 - 블랙',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 29900,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/01/26/7364533aacea4f4caea9e4718d0e02cf_20230126145215.jpg',
+      },
+      {
+        productId: 2344210,
+        name: '[심리스] 후크형 매일브라1.0 & 팬티 SET - 블랙',
+        frontBrandId: 19065,
+        frontBrandNameKor: '리얼컴피',
+        consumerPrice: 35900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee88f41c64a6c383bc1be7b3df5206.jpg',
+      },
+    ],
+  },
+  '16491': {
+    id: '16491',
+    title: '리볼드의 신년 특가',
+    description:
+      '클래식하면서도 과하지 않은 자연스러움이 느껴지는 리볼드의 신년 특가 소식을 알립니다.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199904',
+    front_brand_id: '19339',
+    brandNewsId: 16491,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2024-01-01T14:59:00.000000',
+    frontBrandId: 19339,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea4781258bc8591ebd1f3a5d7c384.jpg',
+    frontBrandNameKor: '리볼드',
+    products: [
+      {
+        productId: 2185364,
+        name: 'Flannel SK_(Navy)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 115000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee4afdcabd78cba3d8837fbad57d93.jpg',
+      },
+      {
+        productId: 2292236,
+        name: 'Reversible Mini Mustang_(Beige)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 279000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6e5377fe9d498a7f5b23031a1e3a.jpg',
+      },
+      {
+        productId: 2183887,
+        name: 'Mog SK_(Black)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 107000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee4b018ab1e9b4acc5bbb547a0b41b.jpg',
+      },
+      {
+        productId: 2292255,
+        name: 'Reversible Searing Mustang_(Black)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 318000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6e534239a99fa5b3d3c48131fa14.jpg',
+      },
+      {
+        productId: 2185383,
+        name: 'Boucle Tweed SK_(Black)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 123000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee4567de6171898a69fdeaffd684e7.jpg',
+      },
+      {
+        productId: 2185363,
+        name: 'Flannel SK_(Beige)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 115000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee45676eda6abb8a6997599dbe4574.jpg',
+      },
+      {
+        productId: 2180249,
+        name: 'Stitch Cotton PT_(Cream)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 107000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee4b023b432db38a69db52a82d9f18.jpg',
+      },
+      {
+        productId: 2180252,
+        name: 'Stitch Cotton PT_(Beige)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 107000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee4b02406606d5a3d8a9529dcd1e12.jpg',
+      },
+      {
+        productId: 2183901,
+        name: 'Mog SK_(Cream)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 107000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee457d19915f31a3d8db52e86f0f14.jpg',
+      },
+      {
+        productId: 2185390,
+        name: 'Boucle Tweed SK_(Brown)',
+        frontBrandId: 19339,
+        frontBrandNameKor: '리볼드',
+        consumerPrice: 123000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee4afd34d612fda3d8d70fd519d620.jpg',
+      },
+    ],
+  },
+  '16493': {
+    id: '16493',
+    title: '연말 선물과 같은 소식',
+    description:
+      '빅웨이브의 한해를 마무리 하는 72시간 특가 소식을 전해요. 풍요로운 연말을 29CM 단독 60%의 혜택과 함께 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199921',
+    front_brand_id: '1604',
+    brandNewsId: 16493,
+    displayStartAt: '2023-12-29T01:00:00.000000',
+    displayEndAt: '2023-12-31T14:59:00.000000',
+    frontBrandId: 1604,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea47bb97d67248377ff4105bea09f.jpg',
+    frontBrandNameKor: '빅웨이브컬렉티브',
+    products: [
+      {
+        productId: 2267734,
+        name: 'HAWAII SKI SPORT CORDUROY CAP (3 COLORS)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 45000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee697ace0d51b9a5b35fcc0ed6fdc6.jpg',
+      },
+      {
+        productId: 2266853,
+        name: 'PEACE BEGINS SMILE SWEATSHIRT (1% MELANGE)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 83000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee69882f83f5e983bcf11a6b929ad2.jpg',
+      },
+      {
+        productId: 2266864,
+        name: 'PEACE BEGINS SMILE SWEATSHIRT (MAGNET)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 85000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6987a9e85135a5b349040bebeef5.jpg',
+      },
+      {
+        productId: 2266979,
+        name: 'JOGGING BEAR-RUN NYLON CAP (2 COLORS)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 45000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee697cea4b046b8a7f53dd60e5a324.jpg',
+      },
+      {
+        productId: 2266825,
+        name: 'PEACE BEGINS SMILE HOODIE (1% MELANGE) ',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 89000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6988d4d0db3183bc1bcb352cb4a4.jpg',
+      },
+      {
+        productId: 2266983,
+        name: 'UNIVERSAL SURFENG POLAR FLEECE CAP (2 COLORS)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 45000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee697cb8843ff183bc85fad463c310.jpg',
+      },
+      {
+        productId: 2266987,
+        name: 'PENGUIN SURF CLUB EAR FLAP CAP (2 COLORS)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 55000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee697c3abfbf73a5b36758d0203449.jpg',
+      },
+      {
+        productId: 2266971,
+        name: 'MAUI ALOHA BALL CAP (3 COLORS)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 45000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee698660a2f3e383bc190ebfd939b5.jpg',
+      },
+      {
+        productId: 2266963,
+        name: 'COLLECTOR KNIT (ULTRA VIOLET) ',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 98000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee762a179c578783bc11de7ca8747b.jpg',
+      },
+      {
+        productId: 2266975,
+        name: 'SUN CITY CAP (2 COLORS)',
+        frontBrandId: 1604,
+        frontBrandNameKor: '빅웨이브컬렉티브',
+        consumerPrice: 45000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee698613040aeda5b3212029d47ad4.jpg',
       },
     ],
   },
@@ -8020,15 +3255,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/11/13/c63bb18263ec4016891254feb83e7a36_20231113160020.jpg',
       },
       {
-        productId: 2333590,
-        name: '[빈폴ACC(골프)] (BE398BA135) 여성 울폴리 이어머프 와이드핏 보넷햇 - 블랙',
-        frontBrandId: 19407,
-        frontBrandNameKor: '빈폴 액세서리',
-        consumerPrice: 129000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/13/c8dd40e1649e432db1911d2597afca00_20231113160321.jpg',
-      },
-      {
         productId: 2333587,
         name: '[빈폴ACC] (BE3XA4M63R) 빈폴헤릿 핸드폰 미니백 - 네이비',
         frontBrandId: 19407,
@@ -8036,6 +3262,15 @@ export const NewsById = {
         consumerPrice: 189000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/11/13/2a8038f70a184f2fa10e38920b2f8b07_20231113160152.jpg',
+      },
+      {
+        productId: 2333590,
+        name: '[빈폴ACC(골프)] (BE398BA135) 여성 울폴리 이어머프 와이드핏 보넷햇 - 블랙',
+        frontBrandId: 19407,
+        frontBrandNameKor: '빈폴 액세서리',
+        consumerPrice: 129000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/13/c8dd40e1649e432db1911d2597afca00_20231113160321.jpg',
       },
       {
         productId: 2333604,
@@ -8047,15 +3282,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/11/13/0e62de8d68a54614ae92bcf1ef814839_20231113160636.jpg',
       },
       {
-        productId: 2361611,
-        name: '[빈폴ACC] (BE3XD2M29D) 매일 슬링백 - 브라운',
-        frontBrandId: 19407,
-        frontBrandNameKor: '빈폴 액세서리',
-        consumerPrice: 239000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/05/9b558d61a3d04ed488676fd74a908540_20231205091819.jpg',
-      },
-      {
         productId: 2333570,
         name: '[빈폴ACC] (BE3XD3T11R) 빈폴헤릿 백팩 - 네이비',
         frontBrandId: 19407,
@@ -8063,6 +3289,15 @@ export const NewsById = {
         consumerPrice: 499000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/11/13/9bf9347052834c6c82e8694caa18f997_20231113155821.jpg',
+      },
+      {
+        productId: 2361611,
+        name: '[빈폴ACC] (BE3XD2M29D) 매일 슬링백 - 브라운',
+        frontBrandId: 19407,
+        frontBrandNameKor: '빈폴 액세서리',
+        consumerPrice: 239000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/05/9b558d61a3d04ed488676fd74a908540_20231205091819.jpg',
       },
     ],
   },
@@ -8083,15 +3318,6 @@ export const NewsById = {
     frontBrandNameKor: '플로스',
     products: [
       {
-        productId: 2264098,
-        name: 'BELLHOP (Grey)',
-        frontBrandId: 26558,
-        frontBrandNameKor: '플로스',
-        consumerPrice: 444000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee627aff1eba558a7fb38b3ab2512f.jpg',
-      },
-      {
         productId: 2264096,
         name: 'BELLHOP (Grey Blue)',
         frontBrandId: 26558,
@@ -8099,6 +3325,15 @@ export const NewsById = {
         consumerPrice: 444000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee627b0641f7d583bce1fa2c93b42c.jpg',
+      },
+      {
+        productId: 2264098,
+        name: 'BELLHOP (Grey)',
+        frontBrandId: 26558,
+        frontBrandNameKor: '플로스',
+        consumerPrice: 444000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee627aff1eba558a7fb38b3ab2512f.jpg',
       },
       {
         productId: 2264095,
@@ -8110,6 +3345,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee627b0a30e551a5b3e938a4defd4a.jpg',
       },
       {
+        productId: 2264097,
+        name: 'BELLHOP (Yellow)',
+        frontBrandId: 26558,
+        frontBrandNameKor: '플로스',
+        consumerPrice: 444000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee627b026e0c7383bcb3f651e8a1e0.jpg',
+      },
+      {
         productId: 2264099,
         name: 'BELLHOP (Cioko)',
         frontBrandId: 26558,
@@ -8117,6 +3361,15 @@ export const NewsById = {
         consumerPrice: 444000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee627afc05e1a183bce98361e1ef55.jpg',
+      },
+      {
+        productId: 2264100,
+        name: 'BELLHOP (Brick Red)',
+        frontBrandId: 26558,
+        frontBrandNameKor: '플로스',
+        consumerPrice: 444000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee627af8778ac9a5b38bebc3d8bf94.jpg',
       },
       {
         productId: 2264101,
@@ -8127,23 +3380,221 @@ export const NewsById = {
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee627af59245138a7fbfcc584fe93f.jpg',
       },
+    ],
+  },
+  '16468': {
+    id: '16468',
+    title: '놓치면 아쉬운 72시간 세일',
+    description:
+      '모던하고 고아한 분위기로 사랑 받는 페세스 브랜드의 특별한 할인 소식을 전합니다. 최대 30% 세일',
+    category: 'BRAND_SALE',
+    cover_image_id: '199604',
+    front_brand_id: '11375',
+    brandNewsId: 16468,
+    displayStartAt: '2023-12-30T01:00:00.000000',
+    displayEndAt: '2024-01-01T14:59:00.000000',
+    frontBrandId: 11375,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3ba9b6cfe4991ebefc4c1fe0083.jpg',
+    frontBrandNameKor: '페세스',
+    products: [
       {
-        productId: 2264097,
-        name: 'BELLHOP (Yellow)',
-        frontBrandId: 26558,
-        frontBrandNameKor: '플로스',
-        consumerPrice: 444000,
+        productId: 1726100,
+        name: 'Cable Wool Knit (Ivory)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 152000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee627b026e0c7383bcb3f651e8a1e0.jpg',
+          'https://img.29cm.co.kr/next-product/2022/09/20/50939068860a46118317ca2b3149ad55_20220920215849.jpg',
       },
       {
-        productId: 2264100,
-        name: 'BELLHOP (Brick Red)',
-        frontBrandId: 26558,
-        frontBrandNameKor: '플로스',
-        consumerPrice: 444000,
+        productId: 2237758,
+        name: 'Callan Knit (Black)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 148000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee627af8778ac9a5b38bebc3d8bf94.jpg',
+          'https://img.29cm.co.kr/item/202309/11ee51fa6bf70a558a7f156b7b6a3869.jpg',
+      },
+      {
+        productId: 2321197,
+        name: 'Cashmere Blended muffler (Red)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 82000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee799739cf1847a5b36188f12e3a65.jpg',
+      },
+      {
+        productId: 2321203,
+        name: 'Cashmere Blended muffler (D/gray)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 82000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee799864d00c1983bc496c3793b738.jpg',
+      },
+      {
+        productId: 2238607,
+        name: 'Full Cardigan Stitch Knit (Ivory)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 143000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee56bc5f32d0158a7fe7911d8e92c6.jpg',
+      },
+      {
+        productId: 2321193,
+        name: 'Cashmere Blended muffler (Green)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 82000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee799623cff30b8a7fc9d2e89dedf9.jpg',
+      },
+      {
+        productId: 2321174,
+        name: 'Soft Alpaca sweater (Beige Multi)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 167000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7990ce11d2ef83bc5fe9f2a9ad45.jpg',
+      },
+      {
+        productId: 2321178,
+        name: 'Soft Alpaca sweater (Khaki Multi)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 167000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7991c94e13258a7f37cd11feb99a.jpg',
+      },
+      {
+        productId: 2332407,
+        name: 'Soft Alpaca sweater (3color)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 167000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee807537fcb005a5b313211e7df303.jpg',
+      },
+      {
+        productId: 2321188,
+        name: 'Cashmere Blended muffler (Ivory)',
+        frontBrandId: 11375,
+        frontBrandNameKor: '페세스',
+        consumerPrice: 82000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee79945954947983bcc57fbcbfdbfd.jpg',
+      },
+    ],
+  },
+  '16479': {
+    id: '16479',
+    title: '자유로운 스타일을 찾아서',
+    description:
+      '추운 겨울에도 스트릿한 무드를 찾고있는 당신에게 PHYPS의 시즌오프 소식을 전합니다.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199717',
+    front_brand_id: '15179',
+    brandNewsId: 16479,
+    displayStartAt: '2023-12-30T01:00:00.000000',
+    displayEndAt: '2024-01-12T14:59:00.000000',
+    frontBrandId: 15179,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3ffae7cda9d91eb411069c5eec2.jpg',
+    frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+    products: [
+      {
+        productId: 2268122,
+        name: 'PHYPS PIPING SIGN LOGO HOODIE PADDING IVORY',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/27/ca49c755f3224fc8bdcef5139b04bb2c_20230927195538.jpg',
+      },
+      {
+        productId: 2268121,
+        name: 'PHYPS PIPING SIGN LOGO HOODIE PADDING BLACK',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/27/8c2d6b69ed29426c8fa14e4b83d7f89e_20230927195825.jpg',
+      },
+      {
+        productId: 2192168,
+        name: 'PHYPS MONDAY ROUTINE STITCH HOODIE OATMEAL / PINK',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/12/6e1872ac705e4a4e8e243c89d602b3f8_20231212224111.jpg',
+      },
+      {
+        productId: 2258028,
+        name: '[바라클라바 세트] PHYPS SQUARE QUILTING HOODIE JACKET BLUE',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5cd687620ab38a7f43be37b28d1d.jpg',
+      },
+      {
+        productId: 2192164,
+        name: 'PHYPS MONDAY ROUTINE STITCH HOODIE INDIGO BLUE',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/12/40eb6321a28f4232a6e3051ebd988945_20231212224126.jpg',
+      },
+      {
+        productId: 2243628,
+        name: 'PHYPS BRUSHED STRAWBERRY JACQUARD KNIT PINK',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 89000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee574db57fbda9a5b3e7293f6cbb3b.jpg',
+      },
+      {
+        productId: 2243620,
+        name: 'PHYPS BRUSHED STRAWBERRY JACQUARD KNIT BLACK',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 89000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/15/be1f4ab50a554b66af3b2b1772665cf8_20230915150328.jpg',
+      },
+      {
+        productId: 2258031,
+        name: '[바라클라바 세트] PHYPS SQUARE QUILTING HOODIE JACKET IVORY',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/21/27fcbfa994d243d688ec9c6b079c6f19_20230921212902.jpg',
+      },
+      {
+        productId: 1907866,
+        name: 'PHYPS STAR TAIL HOODIE NAVY',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/08/30/a40b3e81c1cc410cbf9f4ffafd6f9cd7_20230830211030.jpg',
+      },
+      {
+        productId: 2193081,
+        name: 'PHYPS MONDAY ROUTINE STITCH HOODIE BLACK / PINK',
+        frontBrandId: 15179,
+        frontBrandNameKor: '피지컬 에듀케이션 디파트먼트',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/12/84b7eca7d615466c8334038b49bb0d11_20231212221216.jpg',
       },
     ],
   },
@@ -8164,15 +3615,6 @@ export const NewsById = {
     frontBrandNameKor: '기무라글라스',
     products: [
       {
-        productId: 2302887,
-        name: '[기무라글라스] KIMURA GLASS 타테야마 10oz 와인(310ml)',
-        frontBrandId: 27482,
-        frontBrandNameKor: '기무라글라스',
-        consumerPrice: 34000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee717f0f998b098a7fd1a945ad4723.jpg',
-      },
-      {
         productId: 2302858,
         name: '[기무라글라스] KIMURA GLASS 쯔루 15oz 와인(450ml)',
         frontBrandId: 27482,
@@ -8182,6 +3624,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee717de5e0a76b83bc2b8c1b057062.jpg',
       },
       {
+        productId: 2302887,
+        name: '[기무라글라스] KIMURA GLASS 타테야마 10oz 와인(310ml)',
+        frontBrandId: 27482,
+        frontBrandNameKor: '기무라글라스',
+        consumerPrice: 34000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee717f0f998b098a7fd1a945ad4723.jpg',
+      },
+      {
         productId: 2302890,
         name: '[기무라글라스] KIMURA GLASS 타테야마 15oz 와인(480ml)',
         frontBrandId: 27482,
@@ -8189,6 +3640,15 @@ export const NewsById = {
         consumerPrice: 38000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee717f39420fb983bce58095c20a95.jpg',
+      },
+      {
+        productId: 2302513,
+        name: '[기무라글라스] KIMURA GLASS 벌브 밀크저그 (70ml/140ml)',
+        frontBrandId: 27482,
+        frontBrandNameKor: '기무라글라스',
+        consumerPrice: 10000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee71732a6fed2da5b39b8740798ab1.jpg',
       },
       {
         productId: 2302885,
@@ -8207,15 +3667,6 @@ export const NewsById = {
         consumerPrice: 40000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee717f73afa4f98a7fe76b65a72e7a.jpg',
-      },
-      {
-        productId: 2302513,
-        name: '[기무라글라스] KIMURA GLASS 벌브 밀크저그 (70ml/140ml)',
-        frontBrandId: 27482,
-        frontBrandNameKor: '기무라글라스',
-        consumerPrice: 10000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee71732a6fed2da5b39b8740798ab1.jpg',
       },
     ],
   },
@@ -8236,6 +3687,24 @@ export const NewsById = {
     frontBrandNameKor: '키친툴',
     products: [
       {
+        productId: 2376803,
+        name: '[히로타글라스] 레트로 원형접시 (2size / 2color)',
+        frontBrandId: 27252,
+        frontBrandNameKor: '키친툴',
+        consumerPrice: 14000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9d726bd4937391eb0130e014ea4f.jpg',
+      },
+      {
+        productId: 2376787,
+        name: '[히로타글라스] 레트로 원형볼 (3size / 2color)',
+        frontBrandId: 27252,
+        frontBrandNameKor: '키친툴',
+        consumerPrice: 13000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9d71dac4a6a6b238af278fee7e09.jpg',
+      },
+      {
         productId: 2376846,
         name: '[후지이법랑] 달토끼 슬림포트 (3size / 6color)',
         frontBrandId: 27252,
@@ -8254,15 +3723,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202312/11ee9d752335b2a48377fb650cfb437b.jpg',
       },
       {
-        productId: 2376787,
-        name: '[히로타글라스] 레트로 원형볼 (3size / 2color)',
-        frontBrandId: 27252,
-        frontBrandNameKor: '키친툴',
-        consumerPrice: 13000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d71dac4a6a6b238af278fee7e09.jpg',
-      },
-      {
         productId: 2376828,
         name: '[후지이법랑] 달토끼 사각밧드 (5size)',
         frontBrandId: 27252,
@@ -8270,24 +3730,6 @@ export const NewsById = {
         consumerPrice: 14000,
         imageUrl:
           'https://img.29cm.co.kr/item/202312/11ee9d734ddf8d2991eb0de78ce41e64.jpg',
-      },
-      {
-        productId: 2376803,
-        name: '[히로타글라스] 레트로 원형접시 (2size / 2color)',
-        frontBrandId: 27252,
-        frontBrandNameKor: '키친툴',
-        consumerPrice: 14000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d726bd4937391eb0130e014ea4f.jpg',
-      },
-      {
-        productId: 2376870,
-        name: '법랑 화이트 구멍 국자 (2size)',
-        frontBrandId: 27252,
-        frontBrandNameKor: '키친툴',
-        consumerPrice: 19000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d76782004b68377df9a86540b28.jpg',
       },
       {
         productId: 2376475,
@@ -8299,6 +3741,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202312/11ee9d5a7950586791eb65d4596ad8d4.jpg',
       },
       {
+        productId: 2376870,
+        name: '법랑 화이트 구멍 국자 (2size)',
+        frontBrandId: 27252,
+        frontBrandNameKor: '키친툴',
+        consumerPrice: 19000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9d76782004b68377df9a86540b28.jpg',
+      },
+      {
         productId: 2376881,
         name: '법랑 화이트 커트러리 시리즈',
         frontBrandId: 27252,
@@ -8306,6 +3757,15 @@ export const NewsById = {
         consumerPrice: 10000,
         imageUrl:
           'https://img.29cm.co.kr/item/202312/11ee9d774d30163683775969006c8e69.jpg',
+      },
+      {
+        productId: 2376393,
+        name: '[히로타글라스] 레트로 디자인 볼 (2color)',
+        frontBrandId: 27252,
+        frontBrandNameKor: '키친툴',
+        consumerPrice: 17000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9d511dfc9c34b238a14d05a515ec.jpg',
       },
       {
         productId: 2376863,
@@ -8316,14 +3776,104 @@ export const NewsById = {
         imageUrl:
           'https://img.29cm.co.kr/item/202312/11ee9d75e2b5be20b238f3eb4e50b05c.jpg',
       },
+    ],
+  },
+  '16480': {
+    id: '16480',
+    title: '보송하고 포근한 스타일',
+    description:
+      '차가운 바람을 막아주는 보송하고 포근한 스타일을 찾는다면, 예일의 베스트 상품을 만나보세요',
+    category: 'BRAND_SALE',
+    cover_image_id: '199731',
+    front_brand_id: '15178',
+    brandNewsId: 16480,
+    displayStartAt: '2023-12-31T01:00:00.000000',
+    displayEndAt: '2024-01-13T14:59:00.000000',
+    frontBrandId: 15178,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea4006e970430b238ad35d1aeb775.jpg',
+    frontBrandNameKor: '예일',
+    products: [
       {
-        productId: 2376393,
-        name: '[히로타글라스] 레트로 디자인 볼 (2color)',
-        frontBrandId: 27252,
-        frontBrandNameKor: '키친툴',
-        consumerPrice: 17000,
+        productId: 2207592,
+        name: '(23FW) WARM+ UP QUILTING JACKET LIGHT PINK',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9d511dfc9c34b238a14d05a515ec.jpg',
+          'https://img.29cm.co.kr/next-product/2023/12/12/e1aa288d389f45a2818ff6430ae8f94c_20231212204204.jpg',
+      },
+      {
+        productId: 1669468,
+        name: '(23FW) WARM+ UP QUILTING JACKET BEIGE',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/1eb868ba940b4697b3bc851d07089682_20231109202817.jpg',
+      },
+      {
+        productId: 1669470,
+        name: '(23FW) WARM+ UP QUILTING JACKET BLACK',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/971d7fbc70c74348838a53fc3601b1d1_20231109202742.jpg',
+      },
+      {
+        productId: 2207590,
+        name: '(23FW) WARM+ UP QUILTING JACKET WARM GRAY',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/12/aa737e61659a4337af3451cfcfb1735f_20231212204638.jpg',
+      },
+      {
+        productId: 2207594,
+        name: '(23FW) WARM+ UP QUILTING JACKET LIGHT YELLOW',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/27/7f6f808da81247fd9eb77aedb5d04bca_20231227153236.jpg',
+      },
+      {
+        productId: 2197218,
+        name: 'TWEED APPLIQUE 2 TONE ARCH HOODIE NAVY',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/12/1892bb50e38642d381878bd004e766e9_20231212215648.jpg',
+      },
+      {
+        productId: 2207589,
+        name: '(23FW) WARM+ UP QUILTING JACKET NAVY',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/12/442bd314df6c4ec4961ac0f94cbdcb8b_20231212204720.jpg',
+      },
+      {
+        productId: 2207596,
+        name: '(23FW) WARM+ UP QUILTING JACKET GLOSSY PURPLE',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/12/a19bb4aad749442aac9c0e137f170647_20231212204124.jpg',
+      },
+      {
+        productId: 1669469,
+        name: '(23FW) WARM+ UP QUILTING JACKET IVORY',
+        frontBrandId: 15178,
+        frontBrandNameKor: '예일',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/29/7ed0d98b88674a10a19f19821f7bf6b4_20231129150341.jpg',
       },
     ],
   },
@@ -8434,6 +3984,114 @@ export const NewsById = {
       },
     ],
   },
+  '16469': {
+    id: '16469',
+    title: '새해를 밝히는 세일',
+    description:
+      '새해를 맞이하며 블랭크공삼의 특별 쿠폰 혜택을 드려요. 일상 속 멋스러움을 선사하는 블랭크공삼의 제품들을 특별 쿠폰가로 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199615',
+    front_brand_id: '4616',
+    brandNewsId: 16469,
+    displayStartAt: '2023-12-31T15:00:00.000000',
+    displayEndAt: '2024-01-07T14:59:00.000000',
+    frontBrandId: 4616,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3bd21dc0e14837701f7fc0d8ee7.jpg',
+    frontBrandNameKor: '블랭크공삼',
+    products: [
+      {
+        productId: 2319382,
+        name: 'goose down puffer jacket (black)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 398000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee78e67505ce67a5b35b1574b81631.jpg',
+      },
+      {
+        productId: 2319381,
+        name: 'goose down puffer jacket (cream)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 398000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee78e63e92c0138a7f357e7e4e1970.jpg',
+      },
+      {
+        productId: 1308596,
+        name: 'wool shearing reversible half coat (beige)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 368000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee793bc239c06f83bc55ff1d976503.jpg',
+      },
+      {
+        productId: 1946572,
+        name: 'classic cropped jeans (classic blue)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 123000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee487669d1ed0aacc525e8eac6aacc.jpg',
+      },
+      {
+        productId: 2319379,
+        name: 'wool fair isle sweater (melange brown)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 208000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7dd57fb2bc5183bc91f3d8d81950.jpg',
+      },
+      {
+        productId: 1810711,
+        name: 'wool shearing reversible half coat (cream)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 368000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7bc4798e28a78a7fef3382c7515c.jpg',
+      },
+      {
+        productId: 1810730,
+        name: 'wool shearing single coat (brown)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 368000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee793e05667dbd83bc0fd27e64daf9.jpg',
+      },
+      {
+        productId: 2319377,
+        name: 'suede western half coat (brown)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 348000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee78e4f1423a4383bc2bd9a0fd568f.jpg',
+      },
+      {
+        productId: 2319380,
+        name: 'wool fair isle sweater (light grey)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 208000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee78e5cc04e20583bcbd18f05b9106.jpg',
+      },
+      {
+        productId: 1238168,
+        name: 'wool round t-shirt (6colors)',
+        frontBrandId: 4616,
+        frontBrandNameKor: '블랭크공삼',
+        consumerPrice: 44000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee79494ce5dc1f83bc8787655c9cb4.jpg',
+      },
+    ],
+  },
   '16260': {
     id: '16260',
     title: '전문가의 손길을 담은 헤어 케어',
@@ -8451,15 +4109,6 @@ export const NewsById = {
     frontBrandNameKor: '차홍',
     products: [
       {
-        productId: 1841216,
-        name: '스너그 카밍 헤어 앤 바디 오일 150 ml',
-        frontBrandId: 13948,
-        frontBrandNameKor: '차홍',
-        consumerPrice: 44900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/12/01/5d3a3fbec14149ae90f240b46b3b70d0_20221201104604.jpg',
-      },
-      {
         productId: 1966565,
         name: '인텐시브 케라틴 미스트 120 ml',
         frontBrandId: 13948,
@@ -8467,6 +4116,15 @@ export const NewsById = {
         consumerPrice: 39000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee7ec7eb7ddda9a5b36d364b576b25.jpg',
+      },
+      {
+        productId: 1841216,
+        name: '스너그 카밍 헤어 앤 바디 오일 150 ml',
+        frontBrandId: 13948,
+        frontBrandNameKor: '차홍',
+        consumerPrice: 44900,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/12/01/5d3a3fbec14149ae90f240b46b3b70d0_20221201104604.jpg',
       },
       {
         productId: 2354518,
@@ -8505,15 +4163,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2022/10/25/ba9668371be943e58680398a5fc62e0a_20221025135219.jpg',
       },
       {
-        productId: 1788207,
-        name: '오리진 헤어 컬러 단품 [미드나잇블루]',
-        frontBrandId: 13948,
-        frontBrandNameKor: '차홍',
-        consumerPrice: 16000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/25/38ca7ad34a7440f1b06a2076ddba9d46_20221025135052.jpg',
-      },
-      {
         productId: 1788206,
         name: '오리진 헤어 컬러 본품 [미드나잇블루]',
         frontBrandId: 13948,
@@ -8521,6 +4170,15 @@ export const NewsById = {
         consumerPrice: 29300,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2022/10/25/5f8c0aa6a01143989cd101c718f4f9e0_20221025134913.jpg',
+      },
+      {
+        productId: 1788207,
+        name: '오리진 헤어 컬러 단품 [미드나잇블루]',
+        frontBrandId: 13948,
+        frontBrandNameKor: '차홍',
+        consumerPrice: 16000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/25/38ca7ad34a7440f1b06a2076ddba9d46_20221025135052.jpg',
       },
       {
         productId: 1131291,
@@ -8595,15 +4253,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2022/10/29/792c67ebf6b14bbab404d552bb79a7fe_20221029134923.jpg',
       },
       {
-        productId: 653900,
-        name: 'LG 톤플러스 HBS-PL5 넥밴드 블루투스 이어폰',
-        frontBrandId: 13646,
-        frontBrandNameKor: 'LG전자',
-        consumerPrice: 99900,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/29/e1958131a58641b79233008ecbe08c24_20221029140522.jpg',
-      },
-      {
         productId: 1168819,
         name: '[2%청구+1%적립] LG톤프리 TONE-TFP5  무선 블루투스 이어폰 (차콜블랙)',
         frontBrandId: 13646,
@@ -8611,6 +4260,15 @@ export const NewsById = {
         consumerPrice: 169000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2022/11/07/48b943dcfc4c4d1a819160966aabd0ef_20221107112845.jpg',
+      },
+      {
+        productId: 653900,
+        name: 'LG 톤플러스 HBS-PL5 넥밴드 블루투스 이어폰',
+        frontBrandId: 13646,
+        frontBrandNameKor: 'LG전자',
+        consumerPrice: 99900,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/29/e1958131a58641b79233008ecbe08c24_20221029140522.jpg',
       },
       {
         productId: 653904,
@@ -8766,15 +4424,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2022/11/16/eb2e06c1603c4b05a5a750af0376963a_20221116134315.jpg',
       },
       {
-        productId: 1637043,
-        name: '루메나 감성 LED 캠핑랜턴 THE CLASSIC',
-        frontBrandId: 2194,
-        frontBrandNameKor: '루메나',
-        consumerPrice: 149000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/31/18669fac117047deafc2e47bb35913d3_20221031093024.jpg',
-      },
-      {
         productId: 1728993,
         name: '루메나 무선가습기 H2 X',
         frontBrandId: 2194,
@@ -8782,6 +4431,15 @@ export const NewsById = {
         consumerPrice: 38900,
         imageUrl:
           'https://img.29cm.co.kr/item/202309/11ee5b7a7ef5590b83bc47acb4659007.jpg',
+      },
+      {
+        productId: 1637043,
+        name: '루메나 감성 LED 캠핑랜턴 THE CLASSIC',
+        frontBrandId: 2194,
+        frontBrandNameKor: '루메나',
+        consumerPrice: 159000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/31/18669fac117047deafc2e47bb35913d3_20221031093024.jpg',
       },
       {
         productId: 2259133,
@@ -8797,18 +4455,9 @@ export const NewsById = {
         name: '루메나 M3 패키지 블랑 에디션',
         frontBrandId: 2194,
         frontBrandNameKor: '루메나',
-        consumerPrice: 146900,
+        consumerPrice: 139000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/09/08/28cfc069fa68499492eb221804f31495_20230908171934.jpg',
-      },
-      {
-        productId: 2286639,
-        name: '루메나 SPACE S 무드등 패키지',
-        frontBrandId: 2194,
-        frontBrandNameKor: '루메나',
-        consumerPrice: 147000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/10/13/32a5d654fdcc483481dddc59e9602d31_20231013161928.jpg',
       },
       {
         productId: 1680920,
@@ -8818,6 +4467,15 @@ export const NewsById = {
         consumerPrice: 139000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2022/08/23/38cd041f7ebf43e19585bbfd1aee4284_20220823105514.png',
+      },
+      {
+        productId: 2286639,
+        name: '루메나 SPACE S 무드등 패키지',
+        frontBrandId: 2194,
+        frontBrandNameKor: '루메나',
+        consumerPrice: 147000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/13/32a5d654fdcc483481dddc59e9602d31_20231013161928.jpg',
       },
       {
         productId: 2256967,
@@ -8836,15 +4494,6 @@ export const NewsById = {
         consumerPrice: 49000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/10/17/b8d23dc9d0b14b0ca218a6866e4f98f4_20231017152031.jpg',
-      },
-      {
-        productId: 1810309,
-        name: '루메나 대용량 가습기 MIST TOWER',
-        frontBrandId: 2194,
-        frontBrandNameKor: '루메나',
-        consumerPrice: 139000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202309/11ee5784fbc3b2c5a5b39d303c17d0e4.jpg',
       },
     ],
   },
@@ -8874,15 +4523,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2022/11/18/367f6dfe3156435f98e42b86548a4b86_20221118114919.jpg',
       },
       {
-        productId: 1631302,
-        name: '[소니] 어디서든 콘서트 사운드 블루투스 스피커 SRS-XE300',
-        frontBrandId: 10738,
-        frontBrandNameKor: '소니',
-        consumerPrice: 249000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/11/04/243257401bc04d15b17b2d767b07fb02_20221104163106.jpg',
-      },
-      {
         productId: 1284339,
         name: '[소니] 크리스탈 사운드스피커 LSPX-S3',
         frontBrandId: 10738,
@@ -8899,6 +4539,15 @@ export const NewsById = {
         consumerPrice: 225000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2022/10/26/45757bf93fdd4847be662a5fd38b0ac6_20221026171528.jpg',
+      },
+      {
+        productId: 1631302,
+        name: '[소니] 어디서든 콘서트 사운드 블루투스 스피커 SRS-XE300',
+        frontBrandId: 10738,
+        frontBrandNameKor: '소니',
+        consumerPrice: 249000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/11/04/243257401bc04d15b17b2d767b07fb02_20221104163106.jpg',
       },
       {
         productId: 1397656,
@@ -8937,15 +4586,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/04/21/e4e748894673427d9da04832d36c54d4_20230421093812.jpg',
       },
       {
-        productId: 779526,
-        name: '소니 노이즈 캔슬링 헤드폰 WH-1000XM4',
-        frontBrandId: 10738,
-        frontBrandNameKor: '소니',
-        consumerPrice: 459000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2022/10/26/3fee08bf17cc47fc85f8ea47181ef565_20221026140711.jpg',
-      },
-      {
         productId: 1631290,
         name: '[소니] 내 손 안의 콘서트 블루투스 스피커SRS-XE200',
         frontBrandId: 10738,
@@ -8953,6 +4593,15 @@ export const NewsById = {
         consumerPrice: 169000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2022/11/04/e5f02117169c4ed89b072ed00d5d8c92_20221104163344.jpg',
+      },
+      {
+        productId: 779526,
+        name: '소니 노이즈 캔슬링 헤드폰 WH-1000XM4',
+        frontBrandId: 10738,
+        frontBrandNameKor: '소니',
+        consumerPrice: 459000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/26/3fee08bf17cc47fc85f8ea47181ef565_20221026140711.jpg',
       },
     ],
   },
@@ -8982,15 +4631,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2021/11/12/f3b8fe700f97443a8bbaaed0cf0861d2_20211112112243.jpg',
       },
       {
-        productId: 1016385,
-        name: '에어팟/에어팟프로 케이스 - 옐로우(Yellow)',
-        frontBrandId: 12288,
-        frontBrandNameKor: '부기우기',
-        consumerPrice: 22000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2021/03/11/3e3e63eb98ac47f2bb8f5f75161f6729_20210311141819.jpg',
-      },
-      {
         productId: 1294420,
         name: '클리어톡 - 유령(Ghost)',
         frontBrandId: 12288,
@@ -9000,6 +4640,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2021/10/27/dacb55610bd148a29e1bda46a32c13a4_20211027113335.jpg',
       },
       {
+        productId: 1016385,
+        name: '에어팟/에어팟프로 케이스 - 옐로우(Yellow)',
+        frontBrandId: 12288,
+        frontBrandNameKor: '부기우기',
+        consumerPrice: 22000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2021/03/11/3e3e63eb98ac47f2bb8f5f75161f6729_20210311141819.jpg',
+      },
+      {
         productId: 1307922,
         name: '클리어톡 - 환각 스마일(LCD Smile)',
         frontBrandId: 12288,
@@ -9007,15 +4656,6 @@ export const NewsById = {
         consumerPrice: 11000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2021/11/05/56a93f65126d46f287a8c5d917853f6a_20211105164717.jpg',
-      },
-      {
-        productId: 2363249,
-        name: '클리어톡 - 도넛 하프 더즌(Donut Half Dozen)',
-        frontBrandId: 12288,
-        frontBrandNameKor: '부기우기',
-        consumerPrice: 11000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/06/b50fafc4b7c54ca282f3f40ad7450790_20231206111510.jpg',
       },
       {
         productId: 1016388,
@@ -9034,6 +4674,15 @@ export const NewsById = {
         consumerPrice: 22000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2021/03/11/dc0e168cbeb245eb89d6896499b1c72d_20210311141609.jpg',
+      },
+      {
+        productId: 2363249,
+        name: '클리어톡 - 도넛 하프 더즌(Donut Half Dozen)',
+        frontBrandId: 12288,
+        frontBrandNameKor: '부기우기',
+        consumerPrice: 11000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/06/b50fafc4b7c54ca282f3f40ad7450790_20231206111510.jpg',
       },
       {
         productId: 956520,
@@ -9081,15 +4730,6 @@ export const NewsById = {
     frontBrandNameKor: '노스페이스',
     products: [
       {
-        productId: 2373999,
-        name: '[노스페이스] 여성 노벨티 눕시 다운 자켓 NJ1DP85R_RBK',
-        frontBrandId: 7789,
-        frontBrandNameKor: '노스페이스',
-        consumerPrice: 368000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/15/8d8d64ba535542d98ff13c1d39f28522_20231215144855.jpg',
-      },
-      {
         productId: 2378221,
         name: '[노스페이스] 여성 눕시 숏 자켓 NJ1DQ86A_BLK',
         frontBrandId: 7789,
@@ -9097,6 +4737,15 @@ export const NewsById = {
         consumerPrice: 369000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/12/19/3eb998238e2e490cb8925ba07f1e5da4_20231219161912.jpg',
+      },
+      {
+        productId: 2373999,
+        name: '[노스페이스] 여성 노벨티 눕시 다운 자켓 NJ1DP85R_RBK',
+        frontBrandId: 7789,
+        frontBrandNameKor: '노스페이스',
+        consumerPrice: 368000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/15/8d8d64ba535542d98ff13c1d39f28522_20231215144855.jpg',
       },
       {
         productId: 2374569,
@@ -9171,6 +4820,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/11/03/579c8431a7de4d39bc0c76c39ce83c2a_20231103103506.jpeg',
       },
       {
+        productId: 2321346,
+        name: '미스터왓슨 미니 테이블 램프 6color',
+        frontBrandId: 25138,
+        frontBrandNameKor: '미스터왓슨',
+        consumerPrice: 140000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/03/35ebc73470724d6a89a1f25bbf64b267_20231103103415.jpeg',
+      },
+      {
         productId: 2376432,
         name: '미스터왓슨 미니서핑보드 테이블스탠드',
         frontBrandId: 25138,
@@ -9179,14 +4837,486 @@ export const NewsById = {
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/12/18/29ff9a86bf954f7aa5058fc8de593cd0_20231218124107.jpeg',
       },
+    ],
+  },
+  '16444': {
+    id: '16444',
+    title: '새해를 맞아 준비했어요',
+    description:
+      '로우의 단독할인 소식입니다. 단 3일만 진행되는 특별한 기회를 놓치지 마세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199423',
+    front_brand_id: '16756',
+    brandNewsId: 16444,
+    displayStartAt: '2024-01-01T01:00:00.000000',
+    displayEndAt: '2024-01-03T14:59:00.000000',
+    frontBrandId: 16756,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea389631150a483776b622bb20f18.jpg',
+    frontBrandNameKor: '로우',
+    products: [
       {
-        productId: 2321346,
-        name: '미스터왓슨 미니 테이블 램프 6color',
-        frontBrandId: 25138,
-        frontBrandNameKor: '미스터왓슨',
-        consumerPrice: 140000,
+        productId: 2331842,
+        name: 'Benett wool cardigan_ivory',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 125000,
         imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/03/35ebc73470724d6a89a1f25bbf64b267_20231103103415.jpeg',
+          'https://img.29cm.co.kr/item/202312/11ee9a4893629bc591eb536318f8244d.jpg',
+      },
+      {
+        productId: 2332000,
+        name: 'Carter flannel shirt jacket_ivory',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 165000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee87688c4207e5a5b3a10a359ecf39.jpg',
+      },
+      {
+        productId: 2331671,
+        name: 'Benett wool cardigan_charcoal grey',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 125000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b0220a4b88b238b51620cddc38.jpg',
+      },
+      {
+        productId: 2222780,
+        name: 'Amber handmade half coat_oatmeal beige',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 350000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee514fcb0989738a7f1363bf76a893.jpg',
+      },
+      {
+        productId: 1817545,
+        name: '[2nd] Hooded duffle coat (23fw ver.)_grey',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 465000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/01/17/ca8660828db64039bfd0edc6d12672f0_20230117092503.jpg',
+      },
+      {
+        productId: 2331839,
+        name: 'Benett wool cardigan_beige',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 125000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b1d42f59088377f7e5194653f0.jpg',
+      },
+      {
+        productId: 2338524,
+        name: 'Roy goose down jacket_2colors',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 425000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee890a4054a00783bccf925cd7fd43.jpg',
+      },
+      {
+        productId: 2331987,
+        name: 'Carter flannel shirt jacket_ginger',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 165000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee876afabf7b6ba5b3f1fde38db988.jpg',
+      },
+      {
+        productId: 2222779,
+        name: 'Amber handmade half coat_butter',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 350000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5821ce68e5c7a5b3b7f04a7edd6c.jpg',
+      },
+      {
+        productId: 1682252,
+        name: 'Carol wool handmade coat_black',
+        frontBrandId: 16756,
+        frontBrandNameKor: '로우',
+        consumerPrice: 295000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/08/31/9c24f2d7ded14d7a9a133f09cbd31903_20220831095054.jpg',
+      },
+    ],
+  },
+  '16452': {
+    id: '16452',
+    title: '가등록 문선',
+    description: '문선',
+    category: 'BRAND_SALE',
+    cover_image_id: '199502',
+    front_brand_id: '16059',
+    brandNewsId: 16452,
+    displayStartAt: '2024-01-01T01:00:00.000000',
+    displayEndAt: '2024-01-14T14:59:00.000000',
+    frontBrandId: 16059,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea39581969c9391eba7fa190c0048.jpg',
+    frontBrandNameKor: '문선',
+    products: [],
+  },
+  '16455': {
+    id: '16455',
+    title: '가등록 어반디타입',
+    description: '가등록',
+    category: 'BRAND_SALE',
+    cover_image_id: '199509',
+    front_brand_id: '2295',
+    brandNewsId: 16455,
+    displayStartAt: '2024-01-01T01:00:00.000000',
+    displayEndAt: '2024-01-07T14:59:00.000000',
+    frontBrandId: 2295,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3967dfd53c2b238e5c9c1292ba3.jpg',
+    frontBrandNameKor: '어반디타입',
+    products: [],
+  },
+  '16471': {
+    id: '16471',
+    title: '파리의 추억이 담긴',
+    description:
+      '파리의 아름다운 일러스트가 담긴 마랑 몽타구의 상품들을 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199630',
+    front_brand_id: '26594',
+    brandNewsId: 16471,
+    displayStartAt: '2024-01-01T01:00:00.000000',
+    displayEndAt: '2024-01-14T14:59:00.000000',
+    frontBrandId: 26594,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3bf303e8a3591eb9f859a855fb7.jpg',
+    frontBrandNameKor: '마랑 몽타구',
+    products: [
+      {
+        productId: 2269479,
+        name: 'SMALL MUGS - COEUR SUR LA MAIN (손과 마음)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b6c96603783bccb226eb7bcaa.jpg',
+      },
+      {
+        productId: 2269480,
+        name: 'SMALL MUGS - AVEC AMOUR (사랑과 함께)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b719537d3a5b3cddbcb50ab8c.jpg',
+      },
+      {
+        productId: 2269482,
+        name: 'SMALL MUGS - COURONNE AMOUR (사랑의 왕관)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b87c06b498a7fc9efa444cc4e.jpg',
+      },
+      {
+        productId: 2269484,
+        name: 'SMALL MUGS - PLACE SAINT GERMAIN DES PRES (생제르맹 데프레 광장)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b949b95c183bc194e517d9018.jpg',
+      },
+      {
+        productId: 2269481,
+        name: 'SMALL MUGS - MAIN DES MYSTERES (신비의 손)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b825dc8f183bcbb8939fbc965.jpg',
+      },
+      {
+        productId: 2269478,
+        name: 'SMALL MUGS - LAURIER COEUR (월계수의 하트)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b66ff19f583bceff6988d69c8.jpg',
+      },
+      {
+        productId: 2269476,
+        name: 'SMALL MUGS - 5 COEURS (다섯개의 마음)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b3063005fa5b33d136fb9e7d1.jpg',
+      },
+      {
+        productId: 2269475,
+        name: 'SMALL MUGS - ORANGER DU JARDIN DU LUXEMBOURG (오렌지 나무)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b2ac32e99a5b3e3ebe9987e5b.jpg',
+      },
+      {
+        productId: 2269483,
+        name: 'SMALL MUGS - COURONNE TOI&MOI (TOI&MOI 화관)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e7b8ee15e2d83bc396eed4fc15b.jpg',
+      },
+      {
+        productId: 2269477,
+        name: 'SMALL MUGS - COEUR COURONNE (왕관과 하트)',
+        frontBrandId: 26594,
+        frontBrandNameKor: '마랑 몽타구',
+        consumerPrice: 110000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9335bb2c82878a7fef56c8aa743a.jpg',
+      },
+    ],
+  },
+  '16492': {
+    id: '16492',
+    title: '특별한 만남',
+    description:
+      '크로우캐년과 제니아테일러가 만났습니다. 다채로운 테이블웨어 세트로 더욱 쉽게 감각적인 식탁을 완성해 보세요.',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '199906',
+    front_brand_id: '1113',
+    brandNewsId: 16492,
+    displayStartAt: '2024-01-01T01:00:00.000000',
+    displayEndAt: '2024-01-14T14:59:00.000000',
+    frontBrandId: 1113,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea47891dec36d91ebb758436621fa.jpg',
+    frontBrandNameKor: '크로우캐년',
+    products: [
+      {
+        productId: 2369344,
+        name: '스타터 세트  (4colors)',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 70000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9f0cbe2280d08377513dc0daa015.jpg',
+      },
+      {
+        productId: 2379418,
+        name: '[크로우캐년X제니아테일러] 시리얼 세트',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 30000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9ef6fbb7bd1c8377f1221d0b04f8.jpg',
+      },
+      {
+        productId: 1573206,
+        name: '데일리세트 (요거트보울+쇼트텀블러)',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 37000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a3f25dfb9928377d589e1ee031f.png',
+      },
+      {
+        productId: 2379412,
+        name: '[크로우캐년X제니아테일러] 플레이트 세트',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 44000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9ef5e63a990c83771de1460058a0.jpg',
+      },
+      {
+        productId: 2257132,
+        name: '비기너 세트 (SP11 머그+SP99 플랫플레이트)',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 43000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee584e12c4bafda5b399644024394d.jpg',
+      },
+      {
+        productId: 2238305,
+        name: '[선물포장] 카탈리나 C17+C93 세트',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 48000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee520b786d975b8a7fd3516998ca0c.jpg',
+      },
+      {
+        productId: 2371107,
+        name: '오발 플레이트 + 라메킨 세트',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 36000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9b0b15d5260791eb13a87f2604d5.jpg',
+      },
+      {
+        productId: 2238310,
+        name: '[선물포장] 카탈리나 C123+C93 세트',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 53000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee520bc39a6f2d8a7f89db6a32222e.jpg',
+      },
+      {
+        productId: 2371086,
+        name: 'C190 스몰 서빙 트레이+채반 세트 ( 4color)',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 45000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9b0b92b16a048377bb00a584a7cd.jpg',
+      },
+      {
+        productId: 1456675,
+        name: '시리얼보울 세트(D49 스몰스푼+D17 시리얼보울)',
+        frontBrandId: 1113,
+        frontBrandNameKor: '크로우캐년',
+        consumerPrice: 33000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9997488fd07e83771fbae848386f.jpg',
+      },
+    ],
+  },
+  '16494': {
+    id: '16494',
+    title: '청룡의 힘찬 날갯짓처럼 기분 좋은 시작',
+    description:
+      '시그니처 패턴&자수 양말, 새해 태어난 아기들을 위한 베이비 양말과 함께 특별한 선물로 의미를 더해줄 한정판 선물상자까지, 새해의 기분 좋은 시작을 삭스어필과 함께 해요!',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '200002',
+    front_brand_id: '698',
+    brandNewsId: 16494,
+    displayStartAt: '2024-01-01T01:00:00.000000',
+    displayEndAt: '2024-01-07T14:59:00.000000',
+    frontBrandId: 698,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea48cce8d56e391eb0975e21601b0.jpg',
+    frontBrandNameKor: '삭스어필',
+    products: [],
+  },
+  '16499': {
+    id: '16499',
+    title: '겨울에 더하는 포인트',
+    description:
+      '레고트의 할인 소식을 전해요. 다양한 색감으로 새로운 조화를 만들어 가는 재미를 느껴보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199987',
+    front_brand_id: '25601',
+    brandNewsId: 16499,
+    displayStartAt: '2024-01-01T01:00:00.000000',
+    displayEndAt: '2024-01-14T14:59:00.000000',
+    frontBrandId: 25601,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea48906830af683775be40c0588b4.jpg',
+    frontBrandNameKor: '레고트',
+    products: [
+      {
+        productId: 2235706,
+        name: '[29CM 단독] 레고트 루프 텀블러 400ml + 텀블러백 세트 (5 colors)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 74000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/22/43f888cfcdcd4d48aa826d130e5c914b_20230922174034.jpg',
+      },
+      {
+        productId: 2296104,
+        name: '[29CM 단독] 레고트 1인조 2P (라지 플레이트+머그 420ml)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 90000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7e23967a5ac3a5b30564f96a6bbb.jpg',
+      },
+      {
+        productId: 2294101,
+        name: '[29CM 단독] 레고트 머그 420ml 2P (4 colors)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 50000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7a0c45ae2195a5b3e5b106bc8af8.jpg',
+      },
+      {
+        productId: 2234713,
+        name: '[29CM 단독] 레고트 세라믹 텀블러 420ml (4 colors)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/22/a1d09789a93a477c8ef7787afa514b83_20230922175146.jpg',
+      },
+      {
+        productId: 2235208,
+        name: '[29CM 단독] 레고트 루프 텀블러 400ml (5 colors)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5b40ddb4eb5da5b38b887ff0d676.jpg',
+      },
+      {
+        productId: 2294098,
+        name: '[29CM 단독] 레고트 머그 270ml 2P (4 colors)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 40000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7a0c210a3f6f8a7fcd4af4d0ff85.jpg',
+      },
+      {
+        productId: 2380559,
+        name: '[29cm단독] 레고트 루프 텀블러 600ml (3 colors)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 42000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9f176c3faab283777f62c334db91.jpg',
+      },
+      {
+        productId: 2231591,
+        name: '[29CM 단독] 레고트 세라믹 텀블러 540ml (4 colors)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/22/87efef15a3f34488b1d95e2f4a7b722e_20230922175844.jpg',
+      },
+      {
+        productId: 2296105,
+        name: '[29CM 단독] 레고트 1인조 2P (파스타볼+머그 270ml)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 65000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee720ff85af33383bc151f78957aa0.jpg',
+      },
+      {
+        productId: 2296099,
+        name: '[29CM 단독] 레고트 브런치 세트 2P (스프볼+머그 270ml)',
+        frontBrandId: 25601,
+        frontBrandNameKor: '레고트',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7e23e2d1339f83bc29e2627aec62.jpg',
       },
     ],
   },
@@ -9396,15 +5526,6 @@ export const NewsById = {
     frontBrandNameKor: '락피쉬웨더웨어',
     products: [
       {
-        productId: 2297773,
-        name: 'HAYDEN PUFF PADDED BOOTS LONG - 4color',
-        frontBrandId: 6326,
-        frontBrandNameKor: '락피쉬웨더웨어',
-        consumerPrice: 152000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7ed398f4243f8a7f3b014349f770.jpg',
-      },
-      {
         productId: 2293552,
         name: 'CLOUDY SNOW BOOTS - 2color',
         frontBrandId: 6326,
@@ -9414,22 +5535,22 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee6eed2617c3a5a5b30f9c67fac67f.jpg',
       },
       {
+        productId: 2297773,
+        name: 'HAYDEN PUFF PADDED BOOTS LONG - 4color',
+        frontBrandId: 6326,
+        frontBrandNameKor: '락피쉬웨더웨어',
+        consumerPrice: 152000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7ed398f4243f8a7f3b014349f770.jpg',
+      },
+      {
         productId: 2297771,
         name: 'HAYDEN SNOW PADDED BOOTS - 4color',
         frontBrandId: 6326,
         frontBrandNameKor: '락피쉬웨더웨어',
         consumerPrice: 124000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a153fb54447a5b32f441249b121.jpg',
-      },
-      {
-        productId: 2305170,
-        name: '[X SAKI] ORIGINAL WINTER SLIPPER - 4color',
-        frontBrandId: 6326,
-        frontBrandNameKor: '락피쉬웨더웨어',
-        consumerPrice: 59000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee76edcc706ab98a7f37354df70dfb.jpg',
+          'https://img.29cm.co.kr/item/202311/11ee7a1539ee897d8a7ff9cc02d68c18.jpg',
       },
       {
         productId: 2297772,
@@ -9441,13 +5562,22 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202312/11ee9ece44e3b80cb2386b3cd2d46587.jpg',
       },
       {
+        productId: 2305170,
+        name: '[X SAKI] ORIGINAL WINTER SLIPPER - 4color',
+        frontBrandId: 6326,
+        frontBrandNameKor: '락피쉬웨더웨어',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee76edcc706ab98a7f37354df70dfb.jpg',
+      },
+      {
         productId: 2293555,
         name: 'HAYDEN FOLD DOWN WINTER BOOTS - 4color',
         frontBrandId: 6326,
         frontBrandNameKor: '락피쉬웨더웨어',
         consumerPrice: 139000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9884ba20548ab23883a46caa9439.jpg',
+          'https://img.29cm.co.kr/item/202312/11eea3ad3dafe09cb238b986a3e81a1c.jpg',
       },
       {
         productId: 2305167,
@@ -9457,6 +5587,15 @@ export const NewsById = {
         consumerPrice: 94000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee76ec99aff8f38a7f3d4367672738.jpg',
+      },
+      {
+        productId: 2293559,
+        name: 'HAYDEN DRAW STRING WINTER BOOTS - 4color',
+        frontBrandId: 6326,
+        frontBrandNameKor: '락피쉬웨더웨어',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7a151d17e07f8a7f73152ed78b65.jpg',
       },
       {
         productId: 2303925,
@@ -9476,14 +5615,669 @@ export const NewsById = {
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee82aa77957a8b8a7f4d8f0c1b25ff.jpg',
       },
+    ],
+  },
+  '16460': {
+    id: '16460',
+    title: '아모멘토 시즌오프',
+    description: '아모멘토 시즌오프',
+    category: 'BRAND_SALE',
+    cover_image_id: '199562',
+    front_brand_id: '2228',
+    brandNewsId: 16460,
+    displayStartAt: '2024-01-02T01:00:00.000000',
+    displayEndAt: '2024-02-22T14:59:00.000000',
+    frontBrandId: 2228,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3b238ad465883773b9048321e64.jpg',
+    frontBrandNameKor: '아모멘토',
+    products: [
       {
-        productId: 2293559,
-        name: 'HAYDEN DRAW STRING WINTER BOOTS - 4color',
-        frontBrandId: 6326,
-        frontBrandNameKor: '락피쉬웨더웨어',
-        consumerPrice: 139000,
+        productId: 1890391,
+        name: 'BACK CUT-OUT CARDIGAN (IVORY)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 189000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7a15192fa9cd8a7f23ef0ccb75aa.jpg',
+          'https://img.29cm.co.kr/next_product/2023/02/23/f83b0a7f-028c-4e61-85ec-1868a1e958d9_20230223135954.jpg',
+      },
+      {
+        productId: 1890471,
+        name: 'RIPSTOP SHIRRING BAG (BROWN)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 129000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/02/23/1758e85d-a23d-432f-9270-60e5bc5d0590_20230223142523.jpg',
+      },
+      {
+        productId: 1890473,
+        name: 'PADDED SQUARE SHOULDER BAG (LIGHT BEIGE)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 149000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/02/23/a5f94542-369c-487e-a73c-5de51375c554_20230223142908.jpg',
+      },
+      {
+        productId: 1890468,
+        name: 'BACK CUT-OUT PULLOVER (GREY)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 149000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/02/23/2ca4fe9c-ac84-4de6-a97a-9421ae974c80_20230223142034.jpg',
+      },
+      {
+        productId: 1890463,
+        name: 'BACK CUT-OUT CARDIGAN (BLACK)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/02/23/75ebf07e-f019-4f67-99f7-24e33e56ddf8_20230223140147.jpg',
+      },
+      {
+        productId: 2265057,
+        name: 'HAIRY FUR BLOUSON (IVORY)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 479000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee72f305f69741a5b3b7a736af294d.jpg',
+      },
+      {
+        productId: 1418478,
+        name: 'WHOLEGARMENT ROUNDED CARDIGAN-BLACK',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 259000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2022/03/04/53bd0a4e-9ded-4c5e-a65a-2b4a8dbf8f4f_20220304124208.jpg',
+      },
+      {
+        productId: 2265056,
+        name: 'HAIRY FUR BLOUSON (CHARCOAL)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 479000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee72f3143522e9a5b30fe255a8453e.jpg',
+      },
+      {
+        productId: 2265064,
+        name: 'FUR MID COAT (CHARCOAL)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 529000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee72f2947cc151a5b3a3c3f8bdad2b.jpg',
+      },
+      {
+        productId: 1890367,
+        name: 'HALF NECK ZIP-UP CARDIGAN (BEIGE)',
+        frontBrandId: 2228,
+        frontBrandNameKor: '아모멘토',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/02/23/fe095a25-4aca-4715-b4c4-ef7c255d7d03_20230223135403.jpg',
+      },
+    ],
+  },
+  '16472': {
+    id: '16472',
+    title: '특별한 감성을 지닌',
+    description:
+      '높은 퀄리티를 자랑하는 제이청의 새해맞이 시즌오프 소식 전해요. 29CM에서 단독으로 만나볼 수 있는 혜택이랍니다.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199639',
+    front_brand_id: '3542',
+    brandNewsId: 16472,
+    displayStartAt: '2024-01-02T01:00:00.000000',
+    displayEndAt: '2024-01-08T14:59:00.000000',
+    frontBrandId: 3542,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3c1ddd910d0837701a658818be9.jpg',
+    frontBrandNameKor: '제이청',
+    products: [
+      {
+        productId: 1468194,
+        name: 'Aiwon Tuck Trouser_Dark Khaki',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 199000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/03/22/54a1bd6ce7624f54aed36984a7a9922e_20220322152808.jpg',
+      },
+      {
+        productId: 1468150,
+        name: 'Aiwon Tuck Trouser_Light Beige',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 199000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/03/22/cfb357a7d0d54df0bfa03707f565425c_20220322151738.jpg',
+      },
+      {
+        productId: 1415767,
+        name: 'Filo Tuck Trouser_Cream Contour',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 219000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/18/e546e64fc38e463687efad939710bef9_20220218134013.jpg',
+      },
+      {
+        productId: 1467946,
+        name: 'Dixie Zipper Top_Light Yellow+Cream Contour',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 149000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/03/22/c380bf0bf65444fab9fbee61b2532b43_20220322141226.jpg',
+      },
+      {
+        productId: 1467960,
+        name: 'Dixie Zipper Top_Dusty Blue+Khaki Contour',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 149000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/03/22/258f5fca6ae04daba91f0ebf0871fceb_20220322141536.jpg',
+      },
+      {
+        productId: 1415921,
+        name: 'Cake Layer Skirt 22_Khaki+Khaki Contour',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/18/e5e5acaf247f411fbde0569a03181b9f_20220218141525.jpg',
+      },
+      {
+        productId: 1415770,
+        name: 'Filo Tuck Trouser_Dark Navy',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 219000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/18/856967aa38c84dc68669b0776caea302_20220218134227.jpg',
+      },
+      {
+        productId: 2035683,
+        name: 'Signature Sealing Bootscut Trouser_Black',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 229000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6729d41cc781a5b395efdfb27e8e.jpg',
+      },
+      {
+        productId: 1415913,
+        name: 'Cake Layer Skirt 22_Ivory+Cream Contour',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/02/18/35b93cb1c1d544e78a3e20b181c689f0_20220218141406.jpg',
+      },
+      {
+        productId: 2333244,
+        name: 'Libre Padded Jumper_Charcoal',
+        frontBrandId: 3542,
+        frontBrandNameKor: '제이청',
+        consumerPrice: 249000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee848443b10cdd83bc71746b23fa47.jpg',
+      },
+    ],
+  },
+  '16473': {
+    id: '16473',
+    title: '간결한 아름다움을 담은 접시',
+    description:
+      '덴마크 왕실 도자기 로얄코펜하겐을 소개합니다.  핸드페인팅 수작업으로 완성된 블루 라인으로 2024를 힘차게 시작해보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199641',
+    front_brand_id: '28471',
+    brandNewsId: 16473,
+    displayStartAt: '2024-01-02T01:00:00.000000',
+    displayEndAt: '2024-01-21T14:59:00.000000',
+    frontBrandId: 28471,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3c3496f86eab2388fab29466cef.jpg',
+    frontBrandNameKor: '로얄코펜하겐',
+    products: [
+      {
+        productId: 2329841,
+        name: '블루 라인 볼 21.5cm / 1.1L',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 90000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/f31162ee249a4714a71204370c0f1b92_20231109113053.jpg',
+      },
+      {
+        productId: 2329857,
+        name: '블루 라인 오발 아시에뜨 23cm',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 80000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/916f6963092240789df86ff65fb0b53d_20231109113435.jpg',
+      },
+      {
+        productId: 2329845,
+        name: '블루 라인 쉘로우 볼 25cm',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 70000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/47ad995840b648bea86f7e6a699a09be_20231109113147.jpg',
+      },
+      {
+        productId: 2329849,
+        name: '블루 라인 쿠페 플레이트 23cm',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 70000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/e4aaaedf0dc74e97bb00902dac2d0540_20231109113324.jpg',
+      },
+      {
+        productId: 2330035,
+        name: '블루 라인 머그 280ml 2개입',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 98000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/aae4d84131984c5f9bc2c7f47a3ec948_20231109120242.jpg',
+      },
+      {
+        productId: 2330036,
+        name: '블루 라인 터말 머그 260ml',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 80000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/dc6dcc8be22b4f6eb6cc271d14231c8b_20231109120306.jpg',
+      },
+      {
+        productId: 2330038,
+        name: '블루 라인 머그 370ml',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 90000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/fac8aa6e262945e3a69b8c87450bf91a_20231109120328.jpg',
+      },
+      {
+        productId: 2329847,
+        name: '블루 라인 쿠페 플레이트 27cm',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 80000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/14b51051c69f421d9d107435e58b80ba_20231109113246.jpg',
+      },
+      {
+        productId: 2329855,
+        name: '블루 라인 롱 오발 디쉬 37cm',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 150000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/273475318aa0417dbeb0d25a764a5e93_20231109113404.jpg',
+      },
+      {
+        productId: 2330001,
+        name: '블루 라인 쿠페 플레이트 19cm',
+        frontBrandId: 28471,
+        frontBrandNameKor: '로얄코펜하겐',
+        consumerPrice: 65000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/09/d4e713dc92d44b7382025db82dfce8a8_20231109115636.jpg',
+      },
+    ],
+  },
+  '16487': {
+    id: '16487',
+    title: '가장 완벽한 사무 공간',
+    description:
+      '질서와 정돈을 원하는 성향을 가지고 있으며, 자신에게 높은 기준을 설정하여 완벽에 가까운 결과를 얻고자 노력과 정성을 쏟는 디자이너를 위한 사무공간에 놓이는 오피스 컬렉션을 만나보세요.',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '199825',
+    front_brand_id: '16222',
+    brandNewsId: 16487,
+    displayStartAt: '2024-01-02T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 16222,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea46f8930b60ab238e1fd04c83d08.jpg',
+    frontBrandNameKor: '바이헤이데이',
+    products: [
+      {
+        productId: 2386548,
+        name: '1200X700 모션데스크 M02',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 755000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea4549989ff4eb238e1371c1a6358.jpg',
+      },
+      {
+        productId: 2386522,
+        name: '3단 책상 서랍 DW03',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 270000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea453f6d9700c83774f4eeb0c1dc2.jpg',
+      },
+      {
+        productId: 1760200,
+        name: 'LEFF H01',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 160000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/01/06/b31368d8920b48238e599f39cd588f64_20230106110240.jpg',
+      },
+      {
+        productId: 2112529,
+        name: '1400X700 컴퓨터 책상 D03',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 350000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/12/bc5824ad0c3c43e5a43783117b7cc88f_20230612163402.jpg',
+      },
+      {
+        productId: 2112509,
+        name: '1400X700 모션데스크 M03',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 805000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/12/4403dc237a8a4ad7baefdb15eddb1bc2_20230612162426.jpg',
+      },
+      {
+        productId: 2386056,
+        name: '1200X700 컴퓨터 책상 D02 BLACK&WHITE',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 305000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11eea3d6b083078e83774f4f6673f408.jpg',
+      },
+      {
+        productId: 2112554,
+        name: '2단 책상 서랍 DW01',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 210000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/12/c36696c0f29b4acb81ae28feb81c52e5_20230612164706.jpg',
+      },
+      {
+        productId: 2153216,
+        name: '1000 원형 테이블 T01',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 315000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9b270487274e8377fb1d9bf65817.jpg',
+      },
+      {
+        productId: 1872980,
+        name: '1200X600 노트북 책상 D01',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 235000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/01/06/cc3b1bf5f0c34157acbaff89de05fb1c_20230106104757.jpg',
+      },
+      {
+        productId: 1873005,
+        name: '1200X700 컴퓨터 책상 D02',
+        frontBrandId: 16222,
+        frontBrandNameKor: '바이헤이데이',
+        consumerPrice: 305000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9b271a6ec1d591ebc7860274bd5f.jpg',
+      },
+    ],
+  },
+  '16496': {
+    id: '16496',
+    title: '이딸라와 함께 새해를 맞이해요',
+    description:
+      '핀란드에 위치한 이딸라 마을에서 새해 선물이 도착했어요. 올해는 이딸라로 우리의 삶이 더욱 풍요로워질 거예요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199944',
+    front_brand_id: '22662',
+    brandNewsId: 16496,
+    displayStartAt: '2024-01-02T01:00:00.000000',
+    displayEndAt: '2024-01-07T14:59:00.000000',
+    frontBrandId: 22662,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea483a7a9860191eb31ac6c1d7c83.jpg',
+    frontBrandNameKor: '이딸라',
+    products: [
+      {
+        productId: 2109240,
+        name: '렘삐 유리잔 340ml 4개 [연간기프트] 1008683_2',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 108000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/08/a43b6bf3241a4ce492f0d1fb5188b800_20230608164336.jpg',
+      },
+      {
+        productId: 2110325,
+        name: '가스테헬미 접시 바다색 17cm_1026958',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 32000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee366cf37cbc2baa4fcb4f68a0531f.jpg',
+      },
+      {
+        productId: 2132490,
+        name: '가스테헬미 유니버설 글래스 칼루나 260ml 2개입_1070202',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 52000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/07/04/b77126f98cc641fe96da93ed2f386fd6_20230704132843.jpg',
+      },
+      {
+        productId: 2109252,
+        name: '[29CM 단독] 가스테헬미 유니버설 앤 플레이트_1051133_1007055',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 84000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/08/a14893a9e56b443ea84f9b77a323f4e6_20230608164620.jpg',
+      },
+      {
+        productId: 2286387,
+        name: '가스테헬미 플레이트 앤 유니버설 클리어_1007055_2_1051133',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 116000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/13/4e45cc2ac24f4b568a307d32b760cf79_20231013145009.jpg',
+      },
+      {
+        productId: 2103172,
+        name: '가스테헬미 유니버설 글래스 클리어 260ml 2개입_1051133',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 52000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee3291ba51be55bdfae598cf4fe309.jpg',
+      },
+      {
+        productId: 2109351,
+        name: '라미 텀블러 바다색 260ml 2개입_1026950',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 37000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/08/c5a43cfe7d284716a67a407b5c11ec3b_20230608170502.jpg',
+      },
+      {
+        productId: 2110341,
+        name: '가스테헬미 볼 모스 그린 230ml_1025685',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 29000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/09/6cfd3283bd884505a158ae3755af2a0e_20230609110441.jpg',
+      },
+      {
+        productId: 2110797,
+        name: '[29CM 단독] OTC 핸드 타월 수줍은 치타 블랙/화이트_1061275',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 48000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee3a75badaa534acc5cd6eb7ed475d.jpg',
+      },
+      {
+        productId: 2145624,
+        name: 'OTC 머그 버드 브라운 300ml_1069708',
+        frontBrandId: 22662,
+        frontBrandNameKor: '이딸라',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee3a6c906ee6d4acc54b563e3129ff.jpg',
+      },
+    ],
+  },
+  '16500': {
+    id: '16500',
+    title: '어디서나 녹아드는',
+    description:
+      '모든 공간에서 자연스럽고 선명한 오디오를 제공하는 베어브릭 스피커의 런칭 소식을 전합니다. 공간에 엣지를 주는 베어브릭의 좋아하는 사운드와 함께 만나보세요.',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '199981',
+    front_brand_id: '28569',
+    brandNewsId: 16500,
+    displayStartAt: '2024-01-02T01:00:00.000000',
+    displayEndAt: '2024-01-24T14:59:00.000000',
+    frontBrandId: 28569,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea488f0e91ac4b2384328eafdc637.png',
+    frontBrandNameKor: '베어브릭',
+    products: [],
+  },
+  '16502': {
+    id: '16502',
+    title: '기분 좋은 그래픽',
+    description:
+      '일상에 활기를 불어넣어 줄 제품을 제안하는 위글위글. 공간에 나만의 개성을 더해보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '200032',
+    front_brand_id: '7605',
+    brandNewsId: 16502,
+    displayStartAt: '2024-01-02T01:00:00.000000',
+    displayEndAt: '2024-01-14T14:59:00.000000',
+    frontBrandId: 7605,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea4903469d1e083770d553bd8df8d.jpg',
+    frontBrandNameKor: '위글위글',
+    products: [
+      {
+        productId: 2292452,
+        name: '발매트 S3 - Couch Potato',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 32800,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6cfcc38d4e4fa5b34933b94a3ab1.jpg',
+      },
+      {
+        productId: 2292456,
+        name: '홈슬리퍼 S2 - Blooming',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 28900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6cfd61f313f183bc37ea47c77bbf.jpg',
+      },
+      {
+        productId: 2251707,
+        name: '페이스 타월 세트 S2 - Dont Panic',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 33800,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee56e355e2dd4ba5b379b01d9f0306.jpg',
+      },
+      {
+        productId: 2292450,
+        name: '발매트 S3 - Blooming',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 32800,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6cfc82c2b1b983bc0596ece0ace2.jpg',
+      },
+      {
+        productId: 2058592,
+        name: '오븐장갑 & 숏 앞치마 SET - Smile Stripe',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/05/24/d936e195fa0b45de86594fe5e1edc459_20230524163009.jpg',
+      },
+      {
+        productId: 2251710,
+        name: '페이스 타월 세트 S2 - Cherry',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 33800,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee56e3f908007fa5b36360b353f0d4.jpg',
+      },
+      {
+        productId: 2292455,
+        name: '발매트 S3 - Pizza Time',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 32800,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6cfd11f10d7383bcff8a65e9ba45.jpg',
+      },
+      {
+        productId: 2292462,
+        name: '홈슬리퍼 S2 - Pizza Time',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 28900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6cfddb8cd6cd83bcc55319a75acc.jpg',
+      },
+      {
+        productId: 2251711,
+        name: '페이스 타월 세트 S2 - Happiness',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 33800,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee56e42a699a0983bca312d5349062.jpg',
+      },
+      {
+        productId: 2292461,
+        name: '홈슬리퍼 S2 - Couch Potato',
+        frontBrandId: 7605,
+        frontBrandNameKor: '위글위글',
+        consumerPrice: 28900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6cfdadcad25ba5b3a3df723c8f63.jpg',
       },
     ],
   },
@@ -9598,7 +6392,7 @@ export const NewsById = {
     id: '16392',
     title: '신는 순간 포근한 겨울 신발',
     description:
-      '편안함과 따듯함, 스타일까지 함께 담은 노스페이스의 겨울 부티 부츠와 패딩 뮬을 만나보세요. 신는 순간 포근한 착용감에 외출이 즐거워져요. 행사기간 사은품 이벤트도 진행중이니 지금 바로 만나요.',
+      '편안함과 따듯함, 스타일까지 함께 담은 노스페이스의 겨울 부티 부츠와 패딩 뮬을 만나보세요. 신는 순간 포근한 착용감에 외출이 즐거워져요. 행사 기간 선착순 구매 고객 파우치 증정 이벤트도 진행 중이니 지금 바로 만나요.',
     category: 'BRAND_SALE',
     cover_image_id: '198966',
     front_brand_id: '7789',
@@ -9638,24 +6432,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee89a38421b47f8a7f1bd631a645d2.jpg',
       },
       {
-        productId: 2241483,
-        name: '[노스페이스] 눕시 뮬 EX NS93P62S_BLK',
-        frontBrandId: 7789,
-        frontBrandNameKor: '노스페이스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/11/22/da2dbb43703d4e91a4388fcdc9ab8b17_20231122094949.jpg',
-      },
-      {
-        productId: 2242759,
-        name: '[노스페이스] 눕시 뮬 NS93P52J_RBK',
-        frontBrandId: 7789,
-        frontBrandNameKor: '노스페이스',
-        consumerPrice: 89000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/09/15/e33df65e8e444a8ab01e0dbd0157327e_20230915112111.jpg',
-      },
-      {
         productId: 2337635,
         name: '[노스페이스] 부티 숏 NS99P54K_RBK',
         frontBrandId: 7789,
@@ -9665,13 +6441,13 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/11/21/58cfe02a43cd451994637c5abcde10a5_20231121133601.jpg',
       },
       {
-        productId: 2363726,
-        name: '[노스페이스] 보레알리스 부티 NS99P53A_BLK',
+        productId: 2242759,
+        name: '[노스페이스] 눕시 뮬 NS93P52J_RBK',
         frontBrandId: 7789,
         frontBrandNameKor: '노스페이스',
-        consumerPrice: 159000,
+        consumerPrice: 89000,
         imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/12/07/2fdcb9ccd4424e7f8ef563fc7299aa43_20231207134209.jpg',
+          'https://img.29cm.co.kr/next-product/2023/09/15/e33df65e8e444a8ab01e0dbd0157327e_20230915112111.jpg',
       },
       {
         productId: 2262948,
@@ -9704,8 +6480,9 @@ export const NewsById = {
   },
   '16393': {
     id: '16393',
-    title: '조이그라이슨',
-    description: '조이그라이슨',
+    title: '많은 인플루언서의 픽',
+    description:
+      '조이그라이슨의 베스트 상품을 많은 셀럽들이 착용해주었어요. 다양한 코디로 추천해드리니 29CM에서만 단독으로 만나보세요!',
     category: 'BRAND_SALE',
     cover_image_id: '198965',
     front_brand_id: '19868',
@@ -9727,15 +6504,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/10/31/8376b5ec305d4b1bb6a04c463bae13e5_20231031143907.jpg',
       },
       {
-        productId: 2315130,
-        name: 'Eco Fur Half Jacket KF3WH4930_9A',
-        frontBrandId: 19868,
-        frontBrandNameKor: '조이그라이슨',
-        consumerPrice: 438000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9b06215743c791eb5b72adb2037d.jpg',
-      },
-      {
         productId: 2315167,
         name: 'Eco Mink Fur Coat KF3WH4950_10',
         frontBrandId: 19868,
@@ -9743,6 +6511,15 @@ export const NewsById = {
         consumerPrice: 438000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/10/31/45bdc4c5be5d40b3947b029e95c04145_20231031144331.jpg',
+      },
+      {
+        productId: 2315130,
+        name: 'Eco Fur Half Jacket KF3WH4930_9A',
+        frontBrandId: 19868,
+        frontBrandNameKor: '조이그라이슨',
+        consumerPrice: 438000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9b06215743c791eb5b72adb2037d.jpg',
       },
       {
         productId: 2315128,
@@ -9808,6 +6585,237 @@ export const NewsById = {
           'https://img.29cm.co.kr/next-product/2023/10/31/947403df8f0e48a5aaefdc7a3d0185bd_20231031144155.jpg',
       },
     ],
+  },
+  '16448': {
+    id: '16448',
+    title: '새해를 맞이하며 기분좋은 소식',
+    description:
+      '폴로 랄프 로렌의 시즌오프가 시작되었습니다, 24년 새해를 맞아 폴로의 최고 인기 아이템을 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199440',
+    front_brand_id: '6890',
+    brandNewsId: 16448,
+    displayStartAt: '2024-01-03T01:00:00.000000',
+    displayEndAt: '2024-01-16T14:59:00.000000',
+    frontBrandId: 6890,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea38dde34c33eb238f9f3a8b3c95b.jpg',
+    frontBrandNameKor: '폴로 랄프 로렌',
+    products: [
+      {
+        productId: 2314344,
+        name: '케이블 니트 코튼 비니 햇 (NATURAL-101)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee850255f25ecd83bcbb74919061ed.jpg',
+      },
+      {
+        productId: 2314345,
+        name: '케이블 니트 코튼 비니 햇 (BLUE)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 99000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee850240ad939183bcc151dc04ff5b.jpg',
+      },
+      {
+        productId: 2061773,
+        name: '브러시 플리스 보머 재킷 (GREEN)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 439000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/06/20/c78214ab-a093-4902-9db4-4b309d0dd424_20230620162435.jpg',
+      },
+      {
+        productId: 2245169,
+        name: '아이코닉 럭비 셔츠 (NAVY)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 239000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee68a5c24d6a5fa5b3a53d0ddcfb9c.jpg',
+      },
+      {
+        productId: 2245170,
+        name: '아이코닉 럭비 셔츠 (ASSORTED PRE-PACK)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 239000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee68a5b667e9e1a5b3e7f8a5de7124.jpg',
+      },
+      {
+        productId: 2314347,
+        name: '케이블 니트 코튼 스카프 (NATURAL-101)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8503385710598a7fcd08b41a0917.jpg',
+      },
+      {
+        productId: 1899803,
+        name: '플리스 캐쥬얼 팬츠 (GREEN)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 219000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/05/09/f3548e83-5195-47d5-9390-dadc8c8a8516_20230509032433.jpg',
+      },
+      {
+        productId: 2221740,
+        name: '탈란 레더 첼시 부츠 (BLACK)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 259000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee628a179edc4783bc9f7c20770e25.jpg',
+      },
+      {
+        productId: 2314350,
+        name: '케이블 니트 코튼 스카프 (BLUE)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8501a7f6e0a7a5b35181b2ae9a4b.jpg',
+      },
+      {
+        productId: 2061785,
+        name: '슬러브 저지 헨리 셔츠 (BLACK)',
+        frontBrandId: 6890,
+        frontBrandNameKor: '폴로 랄프 로렌',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/next_product/2023/06/21/a0e00bbd-45ec-4ee5-8a63-2f87c2e3e020_20230621150248.jpg',
+      },
+    ],
+  },
+  '16458': {
+    id: '16458',
+    title: '드파운드',
+    description: '드파운드',
+    category: 'BRAND_SALE',
+    cover_image_id: '199525',
+    front_brand_id: '2155',
+    brandNewsId: 16458,
+    displayStartAt: '2024-01-03T01:00:00.000000',
+    displayEndAt: '2024-01-09T14:59:00.000000',
+    frontBrandId: 2155,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3a89cc233068377750d207c67a5.jpg',
+    frontBrandNameKor: '드파운드',
+    products: [
+      {
+        productId: 2303934,
+        name: 'snow cabin wool knit - melange gray',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 165000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749d6d8abba5a5b3ddac755c8f0a.jpg',
+      },
+      {
+        productId: 2303951,
+        name: 'wool boucle puff sleeve knit - melange gray',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 138000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749cd8e572ada5b3b3b98fc4c3a0.jpg',
+      },
+      {
+        productId: 2303956,
+        name: 'heavy turtle neck knit - olive',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 178000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7860ae6f0a0fa5b32fec96e9d47c.jpg',
+      },
+      {
+        productId: 2303936,
+        name: 'gold point turtle neck knit - ivory',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 118000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749d5d76facda5b3a5a372911518.jpg',
+      },
+      {
+        productId: 2303949,
+        name: 'wool boucle puff sleeve knit - ivory',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 138000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749ce27f7c85a5b3a39611d96f49.jpg',
+      },
+      {
+        productId: 2303953,
+        name: 'heavy turtle neck knit - oatmeal',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 178000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749ccbe55acf8a7fcd91545fe79b.jpg',
+      },
+      {
+        productId: 2303939,
+        name: 'bold stripe color knit - navy',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 168000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749d338f2297a5b38f7aa25e3f39.jpg',
+      },
+      {
+        productId: 2303938,
+        name: 'bold stripe color knit - red',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 168000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749d3e1f7353a5b3bb4bc08336fa.jpg',
+      },
+      {
+        productId: 2303937,
+        name: 'gold point turtle neck knit - beige',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 118000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee77de21d0a219a5b3472386ff1af3.jpg',
+      },
+      {
+        productId: 2303942,
+        name: 'gold button wool cardigan - oatmeal',
+        frontBrandId: 2155,
+        frontBrandNameKor: '드파운드',
+        consumerPrice: 198000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee749d1d9a68a18a7fc5eef452c16d.jpg',
+      },
+    ],
+  },
+  '16497': {
+    id: '16497',
+    title: '라티젠 가등록',
+    description: '가등록',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '199960',
+    front_brand_id: '1901',
+    brandNewsId: 16497,
+    displayStartAt: '2024-01-03T01:00:00.000000',
+    displayEndAt: '2024-01-09T14:59:00.000000',
+    frontBrandId: 1901,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea4877c7b9c88b238731c96877699.jpg',
+    frontBrandNameKor: '라티젠',
+    products: [],
   },
   '16284': {
     id: '16284',
@@ -9898,15 +6906,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202312/11ee9a5df94a836d91eb2dc24d5a4658.jpg',
       },
       {
-        productId: 2373560,
-        name: '[RTW] Routine Wine',
-        frontBrandId: 32133,
-        frontBrandNameKor: '롭튜',
-        consumerPrice: 27500,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9a5a95d62f6191eb819a92b6f9e5.jpg',
-      },
-      {
         productId: 2373517,
         name: '[23 FW] Look 1',
         frontBrandId: 32133,
@@ -9915,32 +6914,535 @@ export const NewsById = {
         imageUrl:
           'https://img.29cm.co.kr/item/202312/11ee9a587d39e620b2381b52e41c803a.jpg',
       },
+      {
+        productId: 2373560,
+        name: '[RTW] Routine Wine',
+        frontBrandId: 32133,
+        frontBrandNameKor: '롭튜',
+        consumerPrice: 27500,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9a5a95d62f6191eb819a92b6f9e5.jpg',
+      },
     ],
   },
   '16378': {
     id: '16378',
-    title: '클래식한 무드',
+    title: '사랑스러운 홀리데이 컬렉션',
     description:
       '하우스 오브 폰드의 홀리데이 컬렉션은  겨울의 따스함에 특별함을 더해줄거예요.',
     category: 'BRAND_SALE',
-    cover_image_id: '198847',
+    cover_image_id: '199611',
     front_brand_id: '28571',
     brandNewsId: 16378,
     displayStartAt: '2024-01-04T01:00:00.000000',
     displayEndAt: '2024-01-10T14:59:00.000000',
     frontBrandId: 28571,
     coverImageUrl:
-      'https://img.29cm.co.kr/cms/202312/11ee9fcf418ed3b88377d7ee0d6a362a.jpg',
+      'https://img.29cm.co.kr/cms/202312/11eea3bc569aaab191eb2f767e9ecde1.jpg',
     frontBrandNameKor: '하우스 오브 폰드',
+    products: [],
+  },
+  '16442': {
+    id: '16442',
+    title: '새로운 시작을 위해',
+    description:
+      '앞으로 치고나가며, 동료들을 이끌어 더 나은 세상을 만들어 나가는 사람. 포터리는 마일러를 응원합니다. 다가올 새로운 여정을 포터리와 함께 해보세요.',
+    category: 'NEW_PRODUCT',
+    cover_image_id: '199388',
+    front_brand_id: '3453',
+    brandNewsId: 16442,
+    displayStartAt: '2024-01-04T01:00:00.000000',
+    displayEndAt: '2024-01-17T14:59:00.000000',
+    frontBrandId: 3453,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea387c5fc907191eb3d7b27698c7b.jpg',
+    frontBrandNameKor: '포터리',
     products: [
       {
-        productId: 2343783,
-        name: 'Whole Alpaca double breast coat (Charcoal) -5th 12/26순차발송',
-        frontBrandId: 28571,
-        frontBrandNameKor: '하우스 오브 폰드',
-        consumerPrice: 229000,
+        productId: 2311159,
+        name: 'Rustic Puffer Parka_Brown',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 689000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee8867c913a1db8a7f2fb127e4889d.jpg',
+          'https://img.29cm.co.kr/next-product/2023/10/27/093080ef7b794ea88cf3a63912827e9f_20231027155358.jpg',
+      },
+      {
+        productId: 2324537,
+        name: 'Wool Goose Vest_Dark Navy',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 489000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/06/83fbd3c95d004d80918d3d8092f5d1ac_20231106171815.jpg',
+      },
+      {
+        productId: 2280953,
+        name: 'Melton Wool Mac Coat_Dark Navy',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 789000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee680430f8bf5b8a7f4171808cc81f.jpg',
+      },
+      {
+        productId: 2351737,
+        name: 'Mountain Parka - Dark Navy',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 429000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8d92a6174b11a5b33518cdd6e462.jpg',
+      },
+      {
+        productId: 2324539,
+        name: 'Wool Goose Vest_Brown Check',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 489000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/06/6a61dfd94649441ba65e18ed6ed63652_20231106171828.jpg',
+      },
+      {
+        productId: 2280954,
+        name: 'Melton Wool Mac Coat_Dark Brown',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 789000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee680415dcbe2d83bc878b1f67e7e8.jpg',
+      },
+      {
+        productId: 2280956,
+        name: 'Melton Wool Mac Coat_Black',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 789000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6803f68d4d5fa5b3db8ff30e595a.jpg',
+      },
+      {
+        productId: 2320101,
+        name: 'Melton Wool Double Breasted Coat_Black',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 679000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee794af0819971a5b3f99ab4f7f2a2.jpg',
+      },
+      {
+        productId: 2351735,
+        name: 'Mountain Parka - Cedar Green',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 429000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8d92965b952583bc23373e2d815a.jpg',
+      },
+      {
+        productId: 2364848,
+        name: 'Neat Vest - Black',
+        frontBrandId: 3453,
+        frontBrandNameKor: '포터리',
+        consumerPrice: 339000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee94c4b9bb8850b2381bef144c994e.jpg',
+      },
+    ],
+  },
+  '16484': {
+    id: '16484',
+    title: '작지만 강력한 청정',
+    description:
+      '위닉스의 특별한 공기청정기를 소개합니다. 작은 크기에 모든 기능을 담았어요. 29CM에서만 만나볼 수 있는 특별한 혜택도 잊지마세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199772',
+    front_brand_id: '17124',
+    brandNewsId: 16484,
+    displayStartAt: '2024-01-04T01:00:00.000000',
+    displayEndAt: '2024-01-17T14:59:00.000000',
+    frontBrandId: 17124,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea45a30318ee591eb258b80aeb26f.jpg',
+    frontBrandNameKor: '위닉스',
+    products: [
+      {
+        productId: 1561453,
+        name: '[공식인증점] 위닉스 공기청정기 타워프라임 {APRM833-JWK} 85.8㎡ 1등급',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 387000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/25/08b36ddba30c415ca5be9b6f54417af4_20221025094518.jpg',
+      },
+      {
+        productId: 2335164,
+        name: '위닉스 신상품 공기청정기 타워프라임 플러스 ATTM115-MWK',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 599000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee873eac4e2a7d83bc0f10220fc532.jpg',
+      },
+      {
+        productId: 2324236,
+        name: '공식인증점 위닉스 공기청정기 타워엣지컴팩트 AT5M200-MWK',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 169000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7c6f38405c5783bc698636acc689.jpg',
+      },
+      {
+        productId: 1561459,
+        name: '[공식인증점] 위닉스 공기청정기 제로S {AZSE430-JWK} 3중필터',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/25/824b77b658a242da9f7a25180e794b21_20221025094451.jpg',
+      },
+      {
+        productId: 2267522,
+        name: '[공식파트너] 위닉스 타워 X 공기청정기 ATGE500-JWK ',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 289000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5cfd2fca6a7fa5b34dca72f267b1.jpg',
+      },
+      {
+        productId: 2267513,
+        name: '[공식파트너] 위닉스 마스터 공기청정기 AMSM993-IWK 99 ',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 599000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5cfcca1595078a7ff11ed8538586.jpg',
+      },
+      {
+        productId: 1561446,
+        name: '[공식인증점] 위닉스 공기청정기 제로S {AZSE430-LMK} 3중필터',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/25/3f0219a137484899a3294a8d62d0a3c3_20221025094541.jpg',
+      },
+      {
+        productId: 2029048,
+        name: '공식인증점 위닉스 공기청정기 타워엣지 실버 AT8E430-MSK',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 239000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/04/17/c4985e6b3a5b489cb1e3a39fad856c6b_20230417113825.jpg',
+      },
+      {
+        productId: 2029049,
+        name: '공식인증점 위닉스 공기청정기 타워엣지 화이트 AT8E430-MWK',
+        frontBrandId: 17124,
+        frontBrandNameKor: '위닉스',
+        consumerPrice: 239000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/04/17/9148a760c5c04e11a922eaaccb231911_20230417113746.jpg',
+      },
+    ],
+  },
+  '16488': {
+    id: '16488',
+    title: '클래식하고도 친숙한 분위기',
+    description:
+      '친숙함과 포근한 분위기를 연출하고,틸버 고유의 클래식함은 잃지 않되, 다양한 시대의 무드를 제안합니다. 틸버에서의 우연한 만남을 시작해 보세요.',
+    category: 'NEW_BRAND',
+    cover_image_id: '199848',
+    front_brand_id: '30219',
+    brandNewsId: 16488,
+    displayStartAt: '2024-01-04T01:00:00.000000',
+    displayEndAt: '2024-01-10T14:59:00.000000',
+    frontBrandId: 30219,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea47338bf9cf2b238272838ced27d.JPG',
+    frontBrandNameKor: '틸버',
+    products: [
+      {
+        productId: 2371326,
+        name: 'Tommy Corduroy Pants Black',
+        frontBrandId: 30219,
+        frontBrandNameKor: '틸버',
+        consumerPrice: 132000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98cb4d43677991eb4337431d5908.jpg',
+      },
+      {
+        productId: 2371348,
+        name: 'Toast Bag Camel',
+        frontBrandId: 30219,
+        frontBrandNameKor: '틸버',
+        consumerPrice: 372000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98ce4555586cb238a79bef96250a.jpg',
+      },
+      {
+        productId: 2371338,
+        name: 'Hood Searing Reversible Mustang Brown',
+        frontBrandId: 30219,
+        frontBrandNameKor: '틸버',
+        consumerPrice: 391000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98cc7208493283774927e52eebda.jpg',
+      },
+      {
+        productId: 2371330,
+        name: 'Fox Turtleneck Knit Ivory',
+        frontBrandId: 30219,
+        frontBrandNameKor: '틸버',
+        consumerPrice: 106000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98cbf6e4166a8377ad3724f76694.jpg',
+      },
+      {
+        productId: 2371344,
+        name: 'Toast Bag Black',
+        frontBrandId: 30219,
+        frontBrandNameKor: '틸버',
+        consumerPrice: 372000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98cd7875d66ab238b9d1242a8166.jpg',
+      },
+      {
+        productId: 2371322,
+        name: 'Fox Turtleneck Knit Brown',
+        frontBrandId: 30219,
+        frontBrandNameKor: '틸버',
+        consumerPrice: 106000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98cab9b5f72a837729619a23fc38.jpg',
+      },
+      {
+        productId: 2371365,
+        name: 'Toast Bag Red',
+        frontBrandId: 30219,
+        frontBrandNameKor: '틸버',
+        consumerPrice: 372000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98cee6d92758837715d0196318dd.jpg',
+      },
+    ],
+  },
+  '16501': {
+    id: '16501',
+    title: '놓칠 수 없는 시즌오프',
+    description:
+      '프로드셔츠의 2023FW 컬렉션 시즌오프 소식. 29CM 단독 최대 30% 혜택으로 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199998',
+    front_brand_id: '10939',
+    brandNewsId: 16501,
+    displayStartAt: '2024-01-04T01:00:00.000000',
+    displayEndAt: '2024-01-10T14:59:00.000000',
+    frontBrandId: 10939,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea48adc101e3ab2381b5996886476.jpg',
+    frontBrandNameKor: '프로드셔츠',
+    products: [
+      {
+        productId: 2283400,
+        name: '빈티지 투톤 V넥 가디건 (그레이)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 218000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee68aab8981efb8a7fa166acaefc90.jpg',
+      },
+      {
+        productId: 2283404,
+        name: '빈티지 투톤 V넥 가디건 (카키)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 218000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee68aafd94caf7a5b373885e6286eb.jpg',
+      },
+      {
+        productId: 2283407,
+        name: '빈티지 투톤 V넥 가디건 (네이비)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 218000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee68ab28378ec7a5b311f8836990aa.jpg',
+      },
+      {
+        productId: 2240807,
+        name: '[레귤러] 버튼다운 팝오버 피케 셔츠 (카키)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 138000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee52cb33a42c518a7f013894e4e61b.jpg',
+      },
+      {
+        productId: 2240827,
+        name: '[레귤러] 버튼다운 팝오버 피케 셔츠 (코발트 블루)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 138000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee52cbc356d3a583bc1137ba07eaf3.jpg',
+      },
+      {
+        productId: 1939165,
+        name: '[논 아이롱] 뱀부 레귤러 카라 셔츠',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/02/24/8a36dca5925e40848b4f8d40a18d0f5b_20230224095802.jpg',
+      },
+      {
+        productId: 1939115,
+        name: '[레귤러] 버튼다운 팝오버 피케 셔츠 (네이비)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 138000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/02/24/251d97d32e354a4caa844fd5fce612d5_20230224095013.jpg',
+      },
+      {
+        productId: 2315352,
+        name: '오가닉 데님 웨스턴 셔츠 (다크 블루)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 178000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2021/09/29/437331253fc849bab9ea2dc3c191d537_20210929121946.jpg',
+      },
+      {
+        productId: 2213632,
+        name: '[스페셜오더]_[레귤러] X-300 Supima Oxford Shirt (4color)',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 158000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee5060a2f08cdf8a7fa9965de614bd.jpg',
+      },
+      {
+        productId: 1916903,
+        name: '[컴포트] 컬러블럭 옥스포드 셔츠',
+        frontBrandId: 10939,
+        frontBrandNameKor: '프로드셔츠',
+        consumerPrice: 138000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/02/14/1035b80b3b6549fdaa3bc0e900e794ad_20230214094657.jpg',
+      },
+    ],
+  },
+  '16507': {
+    id: '16507',
+    title: '과거와 현재가 이어지는 이야기',
+    description:
+      '푹신한 소재와 리본, 그리고 사랑스러운 컬러들로 포틀랜드 소녀의 겨울을 표현한 핑크파인애플의 아이템을 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '200065',
+    front_brand_id: '9578',
+    brandNewsId: 16507,
+    displayStartAt: '2024-01-04T01:00:00.000000',
+    displayEndAt: '2024-01-10T14:59:00.000000',
+    frontBrandId: 9578,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea499ecb01bb2b2385fb5ecc37d5f.jpg',
+    frontBrandNameKor: '핑크파인애플',
+    products: [
+      {
+        productId: 2376412,
+        name: 'TIE COLLAR SWEATER_RED',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 69000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/2effb865c31e4f148b99508680ddfe86_20231218121816.jpg',
+      },
+      {
+        productId: 2376419,
+        name: 'CLOUD BOUCLE MUFFLER_BLUE',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/e5789292065f4a528904478275d3c52c_20231218122100.jpg',
+      },
+      {
+        productId: 2376413,
+        name: 'TIE COLLAR SWEATER_MINT',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 69000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/0733e2def9ba412ea60607015843fd81_20231218121852.jpg',
+      },
+      {
+        productId: 2376416,
+        name: 'CLOUD BOUCLE MUFFLER_PINK',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/2a22c515d18d44fd88d8a87cee9bb494_20231218121941.jpg',
+      },
+      {
+        productId: 2376415,
+        name: 'TIE COLLAR SWEATER_IVORY',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 69000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/29edf20f63d2410b9f8e3a71df0d2e16_20231218121910.jpg',
+      },
+      {
+        productId: 2376409,
+        name: 'PETITE TOGGLE COAT_CREAM',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 199000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/4e988b47ddf1440ebc91f6ff4f88300a_20231218121734.jpg',
+      },
+      {
+        productId: 2376418,
+        name: 'CLOUD BOUCLE MUFFLER_IVORY',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/e842600edc74418ca793584a04213d70_20231218122029.jpg',
+      },
+      {
+        productId: 2363833,
+        name: 'LITTLE BOY HALF ZIP-UP_RED',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 79000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/06/f7978f919d2341fe8cc226343659e7e6_20231206174023.jpg',
+      },
+      {
+        productId: 2376411,
+        name: 'PETITE TOGGLE COAT_BLACK',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 199000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/13936ce62120400c8bcb4c1ef7effe96_20231218121750.jpg',
+      },
+      {
+        productId: 2376417,
+        name: 'CLOUD BOUCLE MUFFLER_MINT',
+        frontBrandId: 9578,
+        frontBrandNameKor: '핑크파인애플',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/18/b6e580a6b8fb4fc2bf302bb745e0a47f_20231218122007.jpg',
       },
     ],
   },
@@ -9997,15 +7499,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202312/11ee9400f28705e6b238057b5321374d.jpg',
       },
       {
-        productId: 2361105,
-        name: 'BALMACAAN COAT (DARK NAVY)',
-        frontBrandId: 3150,
-        frontBrandNameKor: '주앙옴므',
-        consumerPrice: 289000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9285e9e5c8d98a7ffb5f77f3ad96.jpg',
-      },
-      {
         productId: 2363624,
         name: 'SHORT PUFFER JACKET (KHAKI)',
         frontBrandId: 3150,
@@ -10024,13 +7517,13 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202312/11ee940095cc2a0f91ebff559dda5918.jpg',
       },
       {
-        productId: 2361136,
-        name: 'BALMACAAN COAT (CHARCOAL)',
+        productId: 2361105,
+        name: 'BALMACAAN COAT (DARK NAVY)',
         frontBrandId: 3150,
         frontBrandNameKor: '주앙옴므',
         consumerPrice: 289000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee928752fbfbd38a7fb9a471ada144.jpg',
+          'https://img.29cm.co.kr/item/202312/11ee9285e9e5c8d98a7ffb5f77f3ad96.jpg',
       },
       {
         productId: 2363617,
@@ -10049,6 +7542,15 @@ export const NewsById = {
         consumerPrice: 119000,
         imageUrl:
           'https://img.29cm.co.kr/item/202312/11ee9400b9423a7191eb1f0310c26568.jpg',
+      },
+      {
+        productId: 2361136,
+        name: 'BALMACAAN COAT (CHARCOAL)',
+        frontBrandId: 3150,
+        frontBrandNameKor: '주앙옴므',
+        consumerPrice: 289000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee928752fbfbd38a7fb9a471ada144.jpg',
       },
     ],
   },
@@ -10069,13 +7571,13 @@ export const NewsById = {
     frontBrandNameKor: '파브레가',
     products: [
       {
-        productId: 2330503,
-        name: 'Wellington Alpaca Balmacaan Long Coat (Melange Brown)',
+        productId: 2330405,
+        name: 'Brighten Wool Out Pocket Jacket (Black)',
         frontBrandId: 16255,
         frontBrandNameKor: '파브레가',
-        consumerPrice: 286000,
+        consumerPrice: 222000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7f9c2f6a117383bc17b5882cd450.jpg',
+          'https://img.29cm.co.kr/item/202311/11ee7f9c00af2d6783bccdcc29b58987.jpg',
       },
       {
         productId: 2330500,
@@ -10087,13 +7589,13 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee7f9c283c24e5a5b3730c91a7501e.jpg',
       },
       {
-        productId: 2330405,
-        name: 'Brighten Wool Out Pocket Jacket (Black)',
+        productId: 2330503,
+        name: 'Wellington Alpaca Balmacaan Long Coat (Melange Brown)',
         frontBrandId: 16255,
         frontBrandNameKor: '파브레가',
-        consumerPrice: 222000,
+        consumerPrice: 286000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7f9c00af2d6783bccdcc29b58987.jpg',
+          'https://img.29cm.co.kr/item/202311/11ee7f9c2f6a117383bc17b5882cd450.jpg',
       },
       {
         productId: 2330400,
@@ -10123,15 +7625,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee7f9c36c7980ba5b3712685475051.jpg',
       },
       {
-        productId: 2330451,
-        name: 'Shirring MA-1 Duck Down Padding (Black)',
-        frontBrandId: 16255,
-        frontBrandNameKor: '파브레가',
-        consumerPrice: 248000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7f9c1825a5ab83bcbb1a69a0f7dc.jpg',
-      },
-      {
         productId: 2330422,
         name: 'Vintage Scratch Crop Mustang (Dark Brown)',
         frontBrandId: 16255,
@@ -10148,6 +7641,15 @@ export const NewsById = {
         consumerPrice: 266000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee7f9c116ff6478a7f814ab6a7ac1f.jpg',
+      },
+      {
+        productId: 2330451,
+        name: 'Shirring MA-1 Duck Down Padding (Black)',
+        frontBrandId: 16255,
+        frontBrandNameKor: '파브레가',
+        consumerPrice: 248000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7f9c1825a5ab83bcbb1a69a0f7dc.jpg',
       },
     ],
   },
@@ -10177,15 +7679,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202312/11ee9f06d67731e4b238cfae34ce6382.jpg',
       },
       {
-        productId: 2379677,
-        name: '[GIFT SET]  투웨이 글라스 스텐 머그_two way glass stainless mug 2P',
-        frontBrandId: 28701,
-        frontBrandNameKor: '올데이앤드',
-        consumerPrice: 44000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202312/11ee9f05315068c083776fd9ab5cffd6.jpg',
-      },
-      {
         productId: 2349744,
         name: '[GIFT SET] 위크 머그컵 WEEK MUG 2P',
         frontBrandId: 28701,
@@ -10193,6 +7686,15 @@ export const NewsById = {
         consumerPrice: 44000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee8c32259503358a7fb5cf47c96dc5.jpg',
+      },
+      {
+        productId: 2379677,
+        name: '[GIFT SET]  투웨이 글라스 스텐 머그_two way glass stainless mug 2P',
+        frontBrandId: 28701,
+        frontBrandNameKor: '올데이앤드',
+        consumerPrice: 44000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9f05315068c083776fd9ab5cffd6.jpg',
       },
       {
         productId: 2349747,
@@ -10259,6 +7761,1199 @@ export const NewsById = {
       },
     ],
   },
+  '16425': {
+    id: '16425',
+    title: '유쾌한 친구들',
+    description: "당신의 공간에 행복함을 선물해 줄 '푸펫' 친구들을 소개합니다.",
+    category: 'BRAND_SALE',
+    cover_image_id: '199294',
+    front_brand_id: '28505',
+    brandNewsId: 16425,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 28505,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea0a85661969191eb21d4af97f2b6.jpg',
+    frontBrandNameKor: '푸펫',
+    products: [
+      {
+        productId: 2325949,
+        name: 'Fur-ppet Mini Tissue Case (Color block C)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 29000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2f31ee273b83bcf5fa6982a70e.jpg',
+      },
+      {
+        productId: 2325806,
+        name: 'Fur-ppet Tissue Case (Gray)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2c2be38cb983bcdd4f5d02ed3a.jpg',
+      },
+      {
+        productId: 2325838,
+        name: 'Fur-ppet Tissue Case (White)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2cf2f43e9383bc3f8be6264f24.jpg',
+      },
+      {
+        productId: 2325770,
+        name: 'Cutie Bunny Room Shoes (Blue)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 36000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d275d15a4878a7f9953371df7aa.jpg',
+      },
+      {
+        productId: 2325772,
+        name: 'Cutie Bunny Room Shoes (Black)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 36000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d278a758c5da5b35b7202ee07e4.jpg',
+      },
+      {
+        productId: 2325934,
+        name: 'Fur-ppet Mini Tissue Case (White)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 29000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2ed443e18383bc495e491fddf8.jpg',
+      },
+      {
+        productId: 2325943,
+        name: 'Fur-ppet Mini Tissue Case (Magenta)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 29000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2efc7d9469a5b3d33d673671c6.jpg',
+      },
+      {
+        productId: 2325823,
+        name: 'Fur-ppet Tissue Case (Orange)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2c6280b865a5b3bf88d88dfb11.jpg',
+      },
+      {
+        productId: 2325829,
+        name: 'Fur-ppet Tissue Case (Color Block A)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2cc45d363d8a7f7ba3d26c8982.jpg',
+      },
+      {
+        productId: 2325798,
+        name: 'Fur-ppet Tissue Case (Sky Blue)',
+        frontBrandId: 28505,
+        frontBrandNameKor: '푸펫',
+        consumerPrice: 35000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d2be75cac0783bc37e7a32300f5.jpg',
+      },
+    ],
+  },
+  '16426': {
+    id: '16426',
+    title: '아름다운 색감이 필요한 당신에게',
+    description:
+      "우아하고 아름다운 웨이브 문양이 특색인 '알라바스타' 테이블웨어로 당신의 식탁을 장식해 보세요.",
+    category: 'BRAND_SALE',
+    cover_image_id: '199301',
+    front_brand_id: '21022',
+    brandNewsId: 16426,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 21022,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea0a90d826340b2381fbd3e4d0331.jpg',
+    frontBrandNameKor: '알라바스터',
+    products: [
+      {
+        productId: 2132877,
+        name: '알라바스터 보울 18cm 라임 2P',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 58000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/07/04/482af674c4d04a98935f6f8032077428_20230704164907.jpg',
+      },
+      {
+        productId: 2132874,
+        name: '알라바스터 보울 18cm 핑크 2P',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 58000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/07/04/32736c44c9854c499f65a2219ab501d9_20230704164858.jpg',
+      },
+      {
+        productId: 1983288,
+        name: '알라바스터 케이크스탠드 21cm 라임',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/21/beebdef95ebd4c9d8e1f5366f7549267_20230321162143.jpg',
+      },
+      {
+        productId: 1983286,
+        name: '알라바스터 보울 13cm 터쿼즈',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 24000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/21/6c3aa4e32f8d483a90a6c51d71e2d670_20230321162012.jpg',
+      },
+      {
+        productId: 1983285,
+        name: '알라바스터 보울 16cm 터쿼즈',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 26000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/21/a4261db5092c4738975708805197d4c6_20230321162000.jpg',
+      },
+      {
+        productId: 2132879,
+        name: '알라바스터 보울 18cm 화이트 2P',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 58000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/07/04/4108555436314b45a2dabf13874a1250_20230704164918.jpg',
+      },
+      {
+        productId: 2132872,
+        name: '알라바스터 보울 18cm 터쿼즈 2P',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 58000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/07/04/6e9a3c0376c141de84c68665db9a9eb2_20230704164851.jpg',
+      },
+      {
+        productId: 1983283,
+        name: '알라바스터 보울 13cm 핑크',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 24000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/21/0cf9cfd7960343f395d3d12987ca2389_20230321161934.jpg',
+      },
+      {
+        productId: 1983284,
+        name: '알라바스터 보울 18cm 터쿼즈',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 29000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/21/0090bb31cdfb434fb7f77d4b29d0d69b_20230321161943.jpg',
+      },
+      {
+        productId: 1983291,
+        name: '알라바스터 케이크스탠드 21cm 터쿼즈',
+        frontBrandId: 21022,
+        frontBrandNameKor: '알라바스터',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/21/967573dbc02940cbb8525e7b061ce58e_20230321162206.jpg',
+      },
+    ],
+  },
+  '16427': {
+    id: '16427',
+    title: '시대를 초월하는 텀블러',
+    description:
+      "1913년 미국에서 시작하여 지금까지 사랑받고 있는 텀블러의 정수 '스탠리'를 29CM에서 만나보세요.",
+    category: 'NEW_BRAND',
+    cover_image_id: '199307',
+    front_brand_id: '30351',
+    brandNewsId: 16427,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 30351,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea0a98eac083083777fec8eb920aa.jpg',
+    frontBrandNameKor: '스탠리',
+    products: [
+      {
+        productId: 2365911,
+        name: '[스탠리공식유통사] 어드벤처 캠프 쿡 세트709m',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 34000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b020f88d1391ebeb399a81dd3b.jpg',
+      },
+      {
+        productId: 2365913,
+        name: '[스탠리공식유통사] 어드벤처 워터 저그7.5L ',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 69000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b02c6a8b3791eb236f18bcc68e.jpg',
+      },
+      {
+        productId: 2365893,
+        name: '[스탠리공식유통사] 어드벤처 크록2.8L',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 106200,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b00b0d96c991ebabbca200824f.jpg',
+      },
+      {
+        productId: 2365907,
+        name: '[스탠리공식유통사] 클래식 런치 박스9.4L ',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 69000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b015b47cbd91eba51bc8cc8192.jpg',
+      },
+      {
+        productId: 2365867,
+        name: '[스탠리공식유통사] 클래식 비어 피처 1.89L',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 69900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98afe0ea151e83773b4821d967a5.jpg',
+      },
+      {
+        productId: 2365870,
+        name: '[스탠리공식유통사] 어드벤처 프라이 팬 세트 945ml',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 62000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98aff745325c83772535fd16d1af.jpg',
+      },
+      {
+        productId: 2365869,
+        name: '[스탠리공식유통사] 어드벤처 컴팩트 캠프 쿡 세트 709ml ',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 48000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98afecec6c6991ebdfc396529712.jpg',
+      },
+      {
+        productId: 2365874,
+        name: '[스탠리공식유통사] 클래식 캠프머그 354ml  ',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 33900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b001a2da5391eb2137c1f892cb.jpg',
+      },
+      {
+        productId: 2365916,
+        name: '[스탠리공식유통사] 콜드 포 데이즈 쿨러 47L ',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 330000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b0406f5c5883775b9b261db684.jpg',
+      },
+      {
+        productId: 2365918,
+        name: '[스탠리공식유통사]어드벤처 쿨러15.1L ',
+        frontBrandId: 30351,
+        frontBrandNameKor: '스탠리',
+        consumerPrice: 97900,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee98b0361313fb91ebe7b1e8d15981.jpg',
+      },
+    ],
+  },
+  '16428': {
+    id: '16428',
+    title: '익숙함에서 탄생한 특별한 키링',
+    description:
+      "익숙한 것들에서 새로움을 발견하는 것에 집중하는 '소프트섬네일'의 키링을 소개합니다.",
+    category: 'NEW_BRAND',
+    cover_image_id: '199314',
+    front_brand_id: '28900',
+    brandNewsId: 16428,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 28900,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea0aada42f6e0b2389b19071d28ad.jpg',
+    frontBrandNameKor: '소프트섬네일',
+    products: [
+      {
+        productId: 2354704,
+        name: 'Guma, Shiba Inu',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e96d47aa55583bc913697350e7f.jpg',
+      },
+      {
+        productId: 2354710,
+        name: 'Pippin, Chihuahua',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e984fdcfd718a7fd11acad6f8b1.jpg',
+      },
+      {
+        productId: 2354693,
+        name: 'Daniel 32, Dog walker',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 53000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e95bf01c6f583bcdd586ce3c841.jpg',
+      },
+      {
+        productId: 2354702,
+        name: 'Coco, Poodle',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e96b3a68fd1a5b349925631a98b.jpg',
+      },
+      {
+        productId: 2354699,
+        name: 'Kotone 26, Cat lover',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 53000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e96409725e983bc4d1a20c39273.jpg',
+      },
+      {
+        productId: 2354700,
+        name: 'Rocky, Bulldog',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e969101d94983bc1977f3c38f09.jpg',
+      },
+      {
+        productId: 2354714,
+        name: 'Mang, American Shorthair',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e98b4971f918a7fe71cd87f21b7.jpg',
+      },
+      {
+        productId: 2354718,
+        name: 'Moca, British Shorthair',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e9905a195a9a5b367d4b151e64c.jpg',
+      },
+      {
+        productId: 2354716,
+        name: 'Cheese, Domestic Shorthair',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e98dbff03dba5b30d2301d22b9a.jpg',
+      },
+      {
+        productId: 2354712,
+        name: 'Milk, Domestic Shorthair',
+        frontBrandId: 28900,
+        frontBrandNameKor: '소프트섬네일',
+        consumerPrice: 38000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8e9889dfc2c783bccbd4c1c19b08.jpg',
+      },
+    ],
+  },
+  '16429': {
+    id: '16429',
+    title: '오랫동안 기억되는 무쇠 쿡웨어',
+    description:
+      "한 번 길들이면, 오랫동안 당신과 함께하는 '800도씨'의 쿡웨어를 경험해 보세요.",
+    category: 'NEW_BRAND',
+    cover_image_id: '199323',
+    front_brand_id: '32529',
+    brandNewsId: 16429,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 32529,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea0ab802d0654b238bd5e70c62024.jpg',
+    frontBrandNameKor: '800도씨',
+    products: [
+      {
+        productId: 2378222,
+        name: '24cm 편수 전용 보관가방',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 18000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3e3ab9099d91eb69ccb69bfe87.jpg',
+      },
+      {
+        productId: 2379016,
+        name: '스텐 IGT 상판 1유닛',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 32000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9ecfc38f479d91eb75f806ce3dfa.jpg',
+      },
+      {
+        productId: 2378207,
+        name: '다용도 무쇠 가스오덕',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 30000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3c7b251c4b91eb274b8316201f.jpg',
+      },
+      {
+        productId: 2378190,
+        name: '스텐316 통 5중 라이스쿠커',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 105000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3b0bda77cc837787aa2c88b88b.jpg',
+      },
+      {
+        productId: 2378225,
+        name: '28cm 편수 전용 보관가방',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 20000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3f237459dcb238432957f0f883.jpg',
+      },
+      {
+        productId: 2379014,
+        name: '스텐 슬라이딩 IGT 바스켓',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 50000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9ecf0746bf9591eb0165706e50e3.jpg',
+      },
+      {
+        productId: 2378210,
+        name: '초경량 코팅 캠핑 그리들',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 30000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3d2c6ba62b91ebf9ccb2c42858.jpg',
+      },
+      {
+        productId: 2378219,
+        name: '소박 피크닉 텐트',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 300000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3df98f5dc191eb9b01cca8492d.jpg',
+      },
+      {
+        productId: 2378193,
+        name: '캠핑 식기 5p 세트 5color',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 22000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3b9887cdea83771b83da5f0fde.jpg',
+      },
+      {
+        productId: 2378217,
+        name: '루시올 황동 캠핑 랜턴',
+        frontBrandId: 32529,
+        frontBrandNameKor: '800도씨',
+        consumerPrice: 115000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee9e3daad1704683779b533449700f.jpg',
+      },
+    ],
+  },
+  '16453': {
+    id: '16453',
+    title: '한 해의 시작 소소하고 담백하게',
+    description: '새로운 발걸음, 포근한 겨울을 닮은 케즈와 함께하세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199482',
+    front_brand_id: '20217',
+    brandNewsId: 16453,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-18T14:59:00.000000',
+    frontBrandId: 20217,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea39527cff9e4b238a9bc0cc7baeb.jpg',
+    frontBrandNameKor: '케즈',
+    products: [
+      {
+        productId: 2168460,
+        name: 'Keds 핑거홀 라벨포인트 롱 글러브_KD3KGF6102F_LML',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/11/2fbd28019999450884ec3c8bd6509a35_20231211134728.jpg',
+      },
+      {
+        productId: 2168463,
+        name: 'Keds 핑거홀 라벨포인트 롱 글러브_KD3KGF6102F_LBU',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/09/27/f3bad37fcb8f49eab2a730793e47e2cb_20230927084707.jpg',
+      },
+      {
+        productId: 2168464,
+        name: 'Keds 핑거홀 라벨포인트 롱 글러브_KD3KGF6102F_VAA',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/12/5302b37e03de4948a8363b73ea74277c_20231012084657.jpg',
+      },
+      {
+        productId: 2168469,
+        name: 'Keds 핑거홀 라벨포인트 숏 글러브_KD3KGF6101F_DNA',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 55000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/08/11/87641735c09c40a2989e871c7b87a7ed_20230811094825.jpg',
+      },
+      {
+        productId: 2312715,
+        name: '[4color] Keds 핑거홀 라벨포인트 롱 글러브_KD3KGF6102F_BRN',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/30/4243c9b74ebe454a847d76c470aa0d76_20231030141916.jpg',
+      },
+      {
+        productId: 2168461,
+        name: 'Keds 핑거홀 라벨포인트 롱 글러브_KD3KGF6102F_BRN',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/08/11/f4a8bd70ddc24cd8931230e2b44a1168_20230811094637.jpg',
+      },
+      {
+        productId: 2168466,
+        name: 'Keds 핑거홀 라벨포인트 숏 글러브_KD3KGF6101F_LML',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 55000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/19/e128c9499ea5498d8e132fbf621fd66e_20231119191556.jpeg',
+      },
+      {
+        productId: 2168467,
+        name: 'Keds 핑거홀 라벨포인트 숏 글러브_KD3KGF6101F_BUE',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 55000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/12/11/357a3125f07b444599ef3d52dd3c8dcd_20231211134425.jpg',
+      },
+      {
+        productId: 2168470,
+        name: 'Keds 핑거홀 라벨포인트 숏 글러브_KD3KGF6101F_LBU',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 55000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/08/11/bd7f0258325d43acbf633ec52e9c9e92_20230811094838.jpg',
+      },
+      {
+        productId: 2312718,
+        name: '[4color] Keds 핑거홀 라벨포인트 숏 글러브_KD3KGF6101F_BUE',
+        frontBrandId: 20217,
+        frontBrandNameKor: '케즈',
+        consumerPrice: 55000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/30/0324a720270f42cda0a30694997e9d4d_20231030143548.jpg',
+      },
+    ],
+  },
+  '16461': {
+    id: '16461',
+    title: '베르소 시즌오프',
+    description: '베르소 시즌오프',
+    category: 'BRAND_SALE',
+    cover_image_id: '199591',
+    front_brand_id: '9673',
+    brandNewsId: 16461,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-29T14:59:00.000000',
+    frontBrandId: 9673,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3b6f273ba7391eb3547961cabbd.jpg',
+    frontBrandNameKor: '베르소',
+    products: [
+      {
+        productId: 2170822,
+        name: 'Vegan Leather Blouson (black)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 327000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48cdab36e153a3d8412931347535.jpg',
+      },
+      {
+        productId: 2170827,
+        name: 'Layered Zip-Up Hoodie (salt khaki)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 136000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48cd1ef56c158a69c334e916d76b.jpg',
+      },
+      {
+        productId: 2170818,
+        name: 'Reversible Duffle Coat (beige ivory)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 478000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48ce0798c8158a698750fe51c34c.jpg',
+      },
+      {
+        productId: 2170824,
+        name: '[29CM 단독] High neck Rounded Jacket (ivory)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 478000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48cd6410ebdda3d855160d43ee13.jpg',
+      },
+      {
+        productId: 2170829,
+        name: 'Velour Cardigan (beige)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 289000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48cce98cf01ba3d8b9f63cee78f0.jpg',
+      },
+      {
+        productId: 2170837,
+        name: '[29CM 단독] Heavy Volume Knit Sweater (sand)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 258000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48cc1dc4f7b18a6907580f82ed4a.jpg',
+      },
+      {
+        productId: 2170823,
+        name: 'Vegan Single Long Coat (black)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 436000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48cd838bb240acc51b8553ca0c34.jpg',
+      },
+      {
+        productId: 2170828,
+        name: '[29CM 단독] Layered Zip-Up Hoodie (grey charcoal)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 136000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48cd0d514712acc5cb7937651c36.jpg',
+      },
+      {
+        productId: 2170844,
+        name: 'Winter Knit Cardigan (ivory)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 360000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202309/11ee48caa64027958a69f5bd1a557b26.jpg',
+      },
+      {
+        productId: 2170831,
+        name: '[29CM 단독] Snow Layered Knit Sweater (beige)',
+        frontBrandId: 9673,
+        frontBrandNameKor: '베르소',
+        consumerPrice: 136000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7d293ebb0953a5b37b05bd4af716.jpg',
+      },
+    ],
+  },
+  '16462': {
+    id: '16462',
+    title: '반짝이는 눈 속의 원더랜드',
+    description:
+      '사랑스럽고 유니크한 감성을 담은 앵브록스의 베스트 주얼리와 겨울 소품 단독 특가 소식과 함께 5% 중복 쿠폰까지 만나보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '199568',
+    front_brand_id: '6479',
+    brandNewsId: 16462,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 6479,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3b55d79913ab238f524827902b8.jpg',
+    frontBrandNameKor: '앵브록스',
+    products: [
+      {
+        productId: 1832147,
+        name: '[29cm 단독][한보름 빌리 츠키 착용] pearl point ribbon hairpin',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 25000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/11/22/7e7dc480103d4a7184446cc0ca11c7a3_20221122204544.jpg',
+      },
+      {
+        productId: 2344279,
+        name: '[29cm 단독][silver925] soap heart necklace',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 47000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/22/3e5b166903214652a15ee788851d8bea_20231122121724.jpg',
+      },
+      {
+        productId: 2344280,
+        name: '[29cm 단독][silver925] stardew pearl earring',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 30000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee88e9c9cb10d1a5b3b9e0efea1f2c.jpg',
+      },
+      {
+        productId: 2193112,
+        name: '[단독][silver925][태연 착용] heart in star earring',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 32000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee464362f39e278a69e1db0b37ddab.jpg',
+      },
+      {
+        productId: 2096980,
+        name: '[단독] simile pearl necklace',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 32000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/06/12/c7a8858bc1eb4bbdba150948b9c9653a_20230612114021.jpg',
+      },
+      {
+        productId: 2344278,
+        name: '[29cm 단독] starlit ribbon clawclip',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 28000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/22/116ab42601cd463c9fb25585056d865f_20231122121731.jpg',
+      },
+      {
+        productId: 1942813,
+        name: '[29cm 단독][silver925][송해나 착용] cosmic heart necklace',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 39000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/09/98bb579acd56472cb21ae3eba8582db7_20230309154743.jpg',
+      },
+      {
+        productId: 1942803,
+        name: '[29cm 단독][한소희착용][silver925] airy cubic earring',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 36000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/03/09/eb4f32dcd11e4653b05c6841101971a0_20230309154646.jpg',
+      },
+      {
+        productId: 1832148,
+        name: '[29CM 단독] [태연 착용][silver 925] 2-way basic&rope earring',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 43000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/11/22/4264f3e2c0a24f718d621214d7199477_20221122204618.jpg',
+      },
+      {
+        productId: 2193173,
+        name: '[단독][silver925] two pebbles necklace',
+        frontBrandId: 6479,
+        frontBrandNameKor: '앵브록스',
+        consumerPrice: 34000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee89e12638136983bc11b8603ad7fc.jpg',
+      },
+    ],
+  },
+  '16470': {
+    id: '16470',
+    title: '오직 72시간만',
+    description:
+      '시티브리즈의 베스트 상품을 일괄 50% 할인율로 72시간 특가를 진행합니다. 단독 할인으로 만나볼 수 있는 특가이니 놓치지 마세요!',
+    category: 'BRAND_SALE',
+    cover_image_id: '199619',
+    front_brand_id: '8147',
+    brandNewsId: 16470,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-07T14:59:00.000000',
+    frontBrandId: 8147,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea3bdf9c9eb0991eb6b5644bbb986.jpg',
+    frontBrandNameKor: '시티브리즈',
+    products: [
+      {
+        productId: 2260060,
+        name: '퀼팅 오버핏 점퍼_BLACK',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/06/cccf168fb3314304be5b3cc9290b841e_20231006110040.jpg',
+      },
+      {
+        productId: 2260056,
+        name: '퀼팅 오버핏 점퍼_SKY BLUE',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 189000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/15/2e72289cef2d49379818c0c521f3fd44_20231115132206.jpg',
+      },
+      {
+        productId: 2260045,
+        name: '더플 하이넥 퍼 점퍼_IVORY',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 259000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8c6a13de464fa5b39328cca1ba5b.jpg',
+      },
+      {
+        productId: 2260049,
+        name: '더플 하이넥 퍼 점퍼_BROWN',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 259000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/15/53e4595bac4b49c9acd88d6dd301a51b_20231115104947.jpg',
+      },
+      {
+        productId: 2260064,
+        name: '퍼 카라 퀼팅 점퍼_IVORY',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 159000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/15/d164fb4b147442cb818c536a9a610fc8_20231115131921.jpg',
+      },
+      {
+        productId: 2260086,
+        name: '더블 브레스티드 울 미디 코트_MELANGE GREY',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 359000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/15/4139fdedbef94976b1d7b9652d478a20_20231115223634.jpg',
+      },
+      {
+        productId: 2260089,
+        name: '더블 브레스티드 울 미디 코트_DARK NAVY',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 359000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/10/20/896f6a35accf4aba9ab3b0e20609a34c_20231020165941.jpg',
+      },
+      {
+        productId: 2260035,
+        name: '벨티드 덕 다운 미디 점퍼_CREAM',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 359000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/20/7930cd09ee154ff6b1ba15519dbea642_20231120150452.jpg',
+      },
+      {
+        productId: 2260076,
+        name: '울 더플 숏 코트_DARK NAVY',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 329000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/15/b2be7714ffd2469990b79246987ec9f9_20231115133633.jpg',
+      },
+      {
+        productId: 2260081,
+        name: '울 더플 숏 코트_BEIGE',
+        frontBrandId: 8147,
+        frontBrandNameKor: '시티브리즈',
+        consumerPrice: 329000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/11/15/6071c46bf57f4ea3a43b8caab65c82d7_20231115133611.jpg',
+      },
+    ],
+  },
+  '16489': {
+    id: '16489',
+    title: '리조트 발매',
+    description: '논로컬',
+    category: 'BRAND_SALE',
+    cover_image_id: '199864',
+    front_brand_id: '1585',
+    brandNewsId: 16489,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-11T14:59:00.000000',
+    frontBrandId: 1585,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea47570b9af1a8377d350698f4412.jpg',
+    frontBrandNameKor: '논로컬',
+    products: [
+      {
+        productId: 1821752,
+        name: 'Scarf Tie Goldish Blouse - Cream Beige',
+        frontBrandId: 1585,
+        frontBrandNameKor: '논로컬',
+        consumerPrice: 108000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/11/14/7a213bce11ef4cbb8c4b80b1f87ef20e_20221114084122.jpg',
+      },
+    ],
+  },
+  '16503': {
+    id: '16503',
+    title: '새해맞이 세일',
+    description:
+      '오버듀플레어에서 새해를 맞이하여 준비한 세일 상품을 만나보세요. 인기 상품은 품절이 빠르니 서둘러주세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '200034',
+    front_brand_id: '4348',
+    brandNewsId: 16503,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-15T14:59:00.000000',
+    frontBrandId: 4348,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea492a3acdf4883776de54f88ff21.jpg',
+    frontBrandNameKor: '오버듀플레어',
+    products: [
+      {
+        productId: 2280173,
+        name: 'OF TURTLE T-SHIRTS_BLACK',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6735e7a14ef8a5b315ebf355a3bf.jpg',
+      },
+      {
+        productId: 2278654,
+        name: 'VINTAGE HALF MUSTANG',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 379000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee671b61ff18f7a5b35b154ffede36.jpg',
+      },
+      {
+        productId: 2181525,
+        name: 'MESH POLA TOP_WHITE',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 49000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee400258598d678a69eb93322d39c5.jpg',
+      },
+      {
+        productId: 2280175,
+        name: 'OF TURTLE T-SHIRTS_BRICK BROWN',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6735f92d579583bcebc7d54ec83e.jpg',
+      },
+      {
+        productId: 1773447,
+        name: 'curved denim pants_deep green',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/13/1c451c96e50343b3b72f7cea65323882_20221013182033.jpg',
+      },
+      {
+        productId: 2280174,
+        name: 'OF TURTLE T-SHIRTS_MELANGE GREY',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 59000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6735f05a95d6a5b385cfc0178f79.jpg',
+      },
+      {
+        productId: 2181553,
+        name: 'MESH POLA TOP_PINK',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 49000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee400322931c6cacc55363237caf3e.jpg',
+      },
+      {
+        productId: 1773440,
+        name: '[22FW]of jogger pants_grey',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 119000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee7397b6804797a5b34dafcf4ca178.jpg',
+      },
+      {
+        productId: 1773466,
+        name: 'ribbon crop knit_navy',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 139000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2022/10/13/fba17b86964946a1a179c73340cd7678_20221013182512.jpg',
+      },
+      {
+        productId: 2181504,
+        name: 'OVERDUE LETTERING MTM',
+        frontBrandId: 4348,
+        frontBrandNameKor: '오버듀플레어',
+        consumerPrice: 109000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee4001ed77a4e0acc51135522c429e.jpg',
+      },
+    ],
+  },
+  '16508': {
+    id: '16508',
+    title: '좋은 향기로 채우는 공간',
+    description:
+      '프리미엄 홈케어 브랜드 라브아의 브랜드 세일 소식을 전합니다. 새해를 맞이해 새로운 마음가짐으로 집안 곳곳 좋은 향기를 더해보세요.',
+    category: 'BRAND_SALE',
+    cover_image_id: '200077',
+    front_brand_id: '14572',
+    brandNewsId: 16508,
+    displayStartAt: '2024-01-05T01:00:00.000000',
+    displayEndAt: '2024-01-18T14:59:00.000000',
+    frontBrandId: 14572,
+    coverImageUrl:
+      'https://img.29cm.co.kr/cms/202312/11eea49c1d8ff0e0b2385317d51d4de5.jpg',
+    frontBrandNameKor: '라브아',
+    products: [
+      {
+        productId: 2202938,
+        name: '[홀리데이 선물포장] 퍼퓸 화이트머스크 핸드크림 세트 (핸드워시 300ML + 크림 50ML)',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 36000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee8f46b0a91e19a5b3e31fea18939c.jpg',
+      },
+      {
+        productId: 2159282,
+        name: '핸드크림 50ml 화이트머스크&앰버 향',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 15000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202308/11ee310157dd409ca5cae7e830e5fec7.jpg',
+      },
+      {
+        productId: 1333013,
+        name: '니치 퍼퓸 섬유 향수 2종 세트 (택2)',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 50000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee739befdce3e18a7ffde5567d37db.jpg',
+      },
+      {
+        productId: 2130863,
+        name: '섬유향수/룸스프레이: 튤립&프리지아',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 25000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202312/11ee931a8448a495a5b341b24dc02271.jpg',
+      },
+      {
+        productId: 2007227,
+        name: '[선물세트] 센티드 왁스타블렛 40g',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 20000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202307/11ee1bd76a45ec65aa4f8b3bc261dd40.jpg',
+      },
+      {
+        productId: 2158365,
+        name: '니치 퍼퓸 섬유 향수 3종 세트 (택3)',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 75000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee739b22b20081a5b3dd65249bd70c.jpg',
+      },
+      {
+        productId: 2007371,
+        name: '[선물세트] 센티드 왁스타블렛 2종',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 36000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202307/11ee1bd70080223daa4fcfc752a9297e.jpg',
+      },
+      {
+        productId: 1529497,
+        name: '핸드워시 300ml 화이트머스크&앰버 향',
+        frontBrandId: 14572,
+        frontBrandNameKor: '라브아',
+        consumerPrice: 21000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/04/04/3a7c3ef2e5674db0b3f2fede56d062ba_20230404095930.jpg',
+      },
+    ],
+  },
   '16313': {
     id: '16313',
     title: '제이마크뉴욕의 포근함',
@@ -10276,13 +8971,13 @@ export const NewsById = {
     frontBrandNameKor: '제이마크뉴욕',
     products: [
       {
-        productId: 2294939,
-        name: 'Pleats long skirt - Charcoal',
+        productId: 2294932,
+        name: 'Round collar mink fur jacket - Gray',
         frontBrandId: 6549,
         frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
+        consumerPrice: 198000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6da6919f9f9983bcc57166db8adb.jpg',
+          'https://img.29cm.co.kr/item/202310/11ee6da59a588dd78a7f9125d883e6ec.jpg',
       },
       {
         productId: 2294938,
@@ -10294,6 +8989,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee6da65f6b4c77a5b36fe92bc9dd20.jpg',
       },
       {
+        productId: 2294939,
+        name: 'Pleats long skirt - Charcoal',
+        frontBrandId: 6549,
+        frontBrandNameKor: '제이마크뉴욕',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6da6919f9f9983bcc57166db8adb.jpg',
+      },
+      {
         productId: 2294943,
         name: 'Double-burton wool cropped jacket - Gray',
         frontBrandId: 6549,
@@ -10301,15 +9005,6 @@ export const NewsById = {
         consumerPrice: 228000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee6da751f2648da5b301f4619ddc0d.jpg',
-      },
-      {
-        productId: 2294932,
-        name: 'Round collar mink fur jacket - Gray',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 198000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6da59a588dd78a7f9125d883e6ec.jpg',
       },
       {
         productId: 2294940,
@@ -10339,6 +9034,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee6da600af6ff78a7fa771bd89c232.jpg',
       },
       {
+        productId: 2294933,
+        name: 'Turtleneck mix dress - Black',
+        frontBrandId: 6549,
+        frontBrandNameKor: '제이마크뉴욕',
+        consumerPrice: 138000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6da5cc5d1e7ba5b3774fd6b1fce1.jpg',
+      },
+      {
         productId: 2294937,
         name: 'Fur duffle long vest - Beige',
         frontBrandId: 6549,
@@ -10355,15 +9059,6 @@ export const NewsById = {
         consumerPrice: 168000,
         imageUrl:
           'https://img.29cm.co.kr/item/202310/11ee6da6dd9a4ea783bc19ac78a5e02f.jpg',
-      },
-      {
-        productId: 2294933,
-        name: 'Turtleneck mix dress - Black',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 138000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6da5cc5d1e7ba5b3774fd6b1fce1.jpg',
       },
     ],
   },
@@ -10402,15 +9097,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee79efd66d5cfb83bc11711c185db6.jpg',
       },
       {
-        productId: 2321488,
-        name: '[이와키] IWAKI 팩&레인지 반찬통 - 화이트 사각 500ml',
-        frontBrandId: 27493,
-        frontBrandNameKor: '이와키',
-        consumerPrice: 16500,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee79ef79d0b6ad83bcfd2c348a839c.jpg',
-      },
-      {
         productId: 2321509,
         name: '[이와키] IWAKI 팩&레인지 반찬통 - 그린 2종 세트 (총3pcs)',
         frontBrandId: 27493,
@@ -10420,13 +9106,13 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee79f065071939a5b34f4b156f57fc.jpg',
       },
       {
-        productId: 2321499,
-        name: '[이와키] IWAKI 팩&레인지 반찬통 - 화이트 사각 1L',
+        productId: 2321488,
+        name: '[이와키] IWAKI 팩&레인지 반찬통 - 화이트 사각 500ml',
         frontBrandId: 27493,
         frontBrandNameKor: '이와키',
-        consumerPrice: 20500,
+        consumerPrice: 16500,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee79effc4181b383bc6fae1e081dc4.jpg',
+          'https://img.29cm.co.kr/item/202311/11ee79ef79d0b6ad83bcfd2c348a839c.jpg',
       },
       {
         productId: 2321491,
@@ -10436,6 +9122,15 @@ export const NewsById = {
         consumerPrice: 17000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee79efa7bcb217a5b3e3d533ca8f5c.jpg',
+      },
+      {
+        productId: 2321499,
+        name: '[이와키] IWAKI 팩&레인지 반찬통 - 화이트 사각 1L',
+        frontBrandId: 27493,
+        frontBrandNameKor: '이와키',
+        consumerPrice: 20500,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee79effc4181b383bc6fae1e081dc4.jpg',
       },
       {
         productId: 2321526,
@@ -10519,6 +9214,15 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee785310a9669f8a7f13c54fc5c564.jpg',
       },
       {
+        productId: 2316610,
+        name: '[아이자와공방] 튀김 젓가락',
+        frontBrandId: 27489,
+        frontBrandNameKor: '아이자와 공방',
+        consumerPrice: 14000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202311/11ee7853db26b6a783bc05aa8eaa9f1d.jpg',
+      },
+      {
         productId: 2316629,
         name: '[아이자와공방] 스텐 원형 다용도 보관통 (3size)',
         frontBrandId: 27489,
@@ -10528,13 +9232,13 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202311/11ee78555d515a9b83bc1da402ea5fdb.jpg',
       },
       {
-        productId: 2316610,
-        name: '[아이자와공방] 튀김 젓가락',
+        productId: 2316627,
+        name: '[아이자와공방] 스텐 커피캔 (2size)',
         frontBrandId: 27489,
         frontBrandNameKor: '아이자와 공방',
-        consumerPrice: 14000,
+        consumerPrice: 54000,
         imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee7853db26b6a783bc05aa8eaa9f1d.jpg',
+          'https://img.29cm.co.kr/item/202311/11ee785521af3d91a5b3c5256d552aaf.jpg',
       },
       {
         productId: 2316632,
@@ -10553,15 +9257,6 @@ export const NewsById = {
         consumerPrice: 20000,
         imageUrl:
           'https://img.29cm.co.kr/item/202311/11ee7853586ab21183bc5df3e9b76201.jpg',
-      },
-      {
-        productId: 2316627,
-        name: '[아이자와공방] 스텐 커피캔 (2size)',
-        frontBrandId: 27489,
-        frontBrandNameKor: '아이자와 공방',
-        consumerPrice: 54000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202311/11ee785521af3d91a5b3c5256d552aaf.jpg',
       },
       {
         productId: 2316616,
@@ -10600,15 +9295,6 @@ export const NewsById = {
     frontBrandNameKor: '제이마크뉴욕',
     products: [
       {
-        productId: 2294774,
-        name: 'V-neck knit long dress - Charcoal',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 158000,
-        imageUrl:
-          'https://img.29cm.co.kr/item/202310/11ee6d9a38bf82eb8a7f1920dcacc9e0.jpg',
-      },
-      {
         productId: 1927863,
         name: 'Trench collarneck dress - Khaki',
         frontBrandId: 6549,
@@ -10616,6 +9302,15 @@ export const NewsById = {
         consumerPrice: 138000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/02/20/b4077c5e8d85436a9923a26af6a7a1da_20230220140851.jpg',
+      },
+      {
+        productId: 2294774,
+        name: 'V-neck knit long dress - Charcoal',
+        frontBrandId: 6549,
+        frontBrandNameKor: '제이마크뉴욕',
+        consumerPrice: 158000,
+        imageUrl:
+          'https://img.29cm.co.kr/item/202310/11ee6d9a38bf82eb8a7f1920dcacc9e0.jpg',
       },
       {
         productId: 1927592,
@@ -10645,15 +9340,6 @@ export const NewsById = {
           'https://img.29cm.co.kr/item/202310/11ee6d9a5c75f7a3a5b3d903c16360f6.jpg',
       },
       {
-        productId: 1927575,
-        name: 'Frill round neck dress - Black',
-        frontBrandId: 6549,
-        frontBrandNameKor: '제이마크뉴욕',
-        consumerPrice: 128000,
-        imageUrl:
-          'https://img.29cm.co.kr/next-product/2023/02/20/ce6cd02bfe6348ada5bfac1f2f3dc4ab_20230220132707.jpg',
-      },
-      {
         productId: 1927769,
         name: 'Single button collar neck dress - Beige',
         frontBrandId: 6549,
@@ -10661,6 +9347,15 @@ export const NewsById = {
         consumerPrice: 128000,
         imageUrl:
           'https://img.29cm.co.kr/next-product/2023/02/20/f3944851da9d4714a40e25eb0b618fe9_20230220135149.jpg',
+      },
+      {
+        productId: 1927575,
+        name: 'Frill round neck dress - Black',
+        frontBrandId: 6549,
+        frontBrandNameKor: '제이마크뉴욕',
+        consumerPrice: 128000,
+        imageUrl:
+          'https://img.29cm.co.kr/next-product/2023/02/20/ce6cd02bfe6348ada5bfac1f2f3dc4ab_20230220132707.jpg',
       },
       {
         productId: 1927847,

@@ -3,10 +3,10 @@ import { NewsType } from './type';
 export const getPromotionType = (category: NewsType['category']) => {
   switch (category) {
     case 'BRAND_SALE':
-      return '할인 예정';
+      return '할인';
     case 'NEW_BRAND':
-      return '신규 입점';
+      return '입점';
     default:
-      return '신상품 발매';
+      return '발매';
   }
 };
