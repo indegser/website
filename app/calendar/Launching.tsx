@@ -1,6 +1,6 @@
 import { amplitude } from '@/lib/amplitude';
 import styled from '@emotion/styled';
-import { motion, useInView, useSpring } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import Balancer from 'react-wrap-balancer';
@@ -30,7 +30,6 @@ export const Launching = ({
   cover.searchParams.set('width', '600');
 
   const isInView = useInView(ref, { amount: 'all' });
-  const opacity = useSpring(0.3);
 
   useEffect(() => {
     if (isInView) {
@@ -40,12 +39,8 @@ export const Launching = ({
         position,
         maxPosition,
       });
-
-      opacity.set(1);
-    } else {
-      opacity.set(0.3);
     }
-  }, [isInView, position, maxPosition, timelineId, item, opacity]);
+  }, [isInView, position, maxPosition, timelineId, item]);
 
   const handleClick = () => {
     amplitude.track('click_event', {
@@ -57,7 +52,7 @@ export const Launching = ({
   };
 
   return (
-    <Container ref={ref} style={{ opacity }}>
+    <Container ref={ref}>
       <Link
         href={`app29cm://web/https://indegser-git-feat-hackathon-indegser.vercel.app/calendar/news/${item.id}`}
         onClick={handleClick}
@@ -98,7 +93,7 @@ export const Launching = ({
   );
 };
 
-const Container = styled(motion.div)`
+const Container = styled.div`
   width: 100%;
   flex: 0 0 auto;
   scroll-snap-align: start;
