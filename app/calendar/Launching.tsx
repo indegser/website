@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { NewsCover } from './@shared/NewsCover';
 import { NewsProduct } from './@shared/NewsProduct';
 import { Waitings } from './@shared/Waitings';
+import { getPromotionType } from './@shared/get-promotion-type';
 import { NewsType } from './@shared/type';
 
 interface Props {
@@ -20,10 +21,10 @@ export const Launching = ({ item, isStandalone = false }: Props) => {
         <Cover data-isstandalone={isStandalone}>
           <NewsCover imageUrl={cover.href} />
           <Content>
-            <PromotionType>신상 발매</PromotionType>
+            <PromotionType>{getPromotionType(item.category)}</PromotionType>
             <BrandName>{item.frontBrandNameKor}</BrandName>
             <WaitingsContainer>
-              <Waitings />
+              <Waitings itemCount={item.products.length} />
             </WaitingsContainer>
           </Content>
         </Cover>
@@ -31,7 +32,7 @@ export const Launching = ({ item, isStandalone = false }: Props) => {
       <div>
         {isStandalone ? null : (
           <ProductList>
-            {item.products.map((product) => {
+            {item.products.slice(0, 10).map((product) => {
               return (
                 <NewsProduct
                   key={product.productId}

@@ -1,32 +1,15 @@
 import styled from '@emotion/styled';
-import { faker } from '@faker-js/faker';
 
 type Props = {
   type?: 'dark' | 'light';
+  itemCount: number;
 };
 
-export const Waitings = ({ type = 'light' }: Props) => {
-  const users = ['1', '2', '3'].map((user) => {
-    const avatar = faker.internet.avatar();
-
-    return { user, avatar };
-  });
-
-  // const count = useMemo(() => Math.ceil(Math.random() * 100000), []);
-
+export const Waitings = ({ type = 'light', itemCount = 0 }: Props) => {
   return (
     <Container>
-      <List>
-        {users.map(({ user, avatar }) => {
-          return (
-            <Avatar key={user}>
-              <img src={avatar} />
-            </Avatar>
-          );
-        })}
-      </List>
       <Text style={{ color: type === 'dark' ? '#000' : '#fff' }}>
-        {`10,234`}명이 기대하고 있어요.
+        {itemCount}개의 상품이 기다리고 있어요.
       </Text>
     </Container>
   );
@@ -39,27 +22,7 @@ const Container = styled.div`
   gap: 6px;
 `;
 
-const List = styled.div`
-  display: flex;
-`;
-
 const Text = styled.div`
   font-size: 12px;
   line-height: 1.4;
-`;
-
-const Avatar = styled.div`
-  width: 24px;
-  height: 24px;
-  border-radius: 999rem;
-  border: 1px solid #fff;
-  margin-left: -10px;
-  background: #fff;
-  overflow: hidden;
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;

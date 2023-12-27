@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
+import Link from 'next/link';
 import { NewsType } from './type';
 
 interface Props {
@@ -21,15 +22,19 @@ export const NewsProduct = ({
   cover.searchParams.set('width', isMinimal ? '120' : '240');
 
   return (
-    <Container data-minimal={isMinimal}>
-      <Cover data-minimal={isMinimal} src={cover.href} />
-      <Content data-minimal={isMinimal}>
-        <BrandName>{product.frontBrandNameKor}</BrandName>
-        <Title>{product.name}</Title>
-        <Price>{product.consumerPrice.toLocaleString()}</Price>
-      </Content>
-      {isMinimal ? null : <Teaser>{formatted}</Teaser>}
-    </Container>
+    <Link
+      href={`app29cm://web/https://product.29cm.co.kr/catalog/${product.productId}`}
+    >
+      <Container data-minimal={isMinimal}>
+        <Cover data-minimal={isMinimal} src={cover.href} />
+        <Content data-minimal={isMinimal}>
+          <BrandName>{product.frontBrandNameKor}</BrandName>
+          <Title>{product.name}</Title>
+          <Price>{product.consumerPrice.toLocaleString()}</Price>
+        </Content>
+        {isMinimal ? null : <Teaser>{formatted}</Teaser>}
+      </Container>
+    </Link>
   );
 };
 
