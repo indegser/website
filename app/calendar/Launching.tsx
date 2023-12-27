@@ -67,7 +67,7 @@ export const Launching = ({
               <Balancer>{item.frontBrandNameKor}</Balancer>
             </BrandName>
             <WaitingsContainer>
-              <Waitings itemCount={item.products.length} />
+              <Waitings likeCount={item.frontBrandHeartCount} />
             </WaitingsContainer>
           </Content>
         </Cover>

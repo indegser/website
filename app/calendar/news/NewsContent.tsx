@@ -28,7 +28,7 @@ export const NewsContent = ({ news }: Props) => {
       </Container>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <WaitingsContainer>
-          <Waitings type="dark" itemCount={news.products.length} />
+          <Waitings type="dark" likeCount={news.frontBrandHeartCount} />
         </WaitingsContainer>
       </div>
     </div>

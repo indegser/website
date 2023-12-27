@@ -2,14 +2,14 @@ import styled from '@emotion/styled';
 
 type Props = {
   type?: 'dark' | 'light';
-  itemCount: number;
+  likeCount: number;
 };
 
-export const Waitings = ({ type = 'light', itemCount = 0 }: Props) => {
+export const Waitings = ({ type = 'light', likeCount = 0 }: Props) => {
   return (
     <Container>
       <Text style={{ color: type === 'dark' ? '#000' : '#fff' }}>
-        {itemCount}개의 상품이 기다리고 있어요.
+        {likeCount}명이 기대하고 있어요.
       </Text>
     </Container>
   );
