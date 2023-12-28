@@ -24,17 +24,23 @@ export const Launchings = ({ title = '할인 예정 소식' }: Props) => {
       />
       <Title>{title}</Title>
       <List>
-        {data.map((item, index) => {
-          return (
-            <Launching
-              key={item.id}
-              item={item}
-              timelineId={queryId!}
-              position={index + 1}
-              maxPosition={data.length}
-            />
-          );
-        })}
+        {data
+          .sort(
+            (a, b) =>
+              parseInt(b.frontBrandHeartCount) -
+              parseInt(a.frontBrandHeartCount),
+          )
+          .map((item, index) => {
+            return (
+              <Launching
+                key={item.id}
+                item={item}
+                timelineId={queryId!}
+                position={index + 1}
+                maxPosition={data.length}
+              />
+            );
+          })}
       </List>
     </Container>
   );
