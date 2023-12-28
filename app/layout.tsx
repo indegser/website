@@ -27,6 +27,22 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${pretendardFont.variable} ${jetBrainsMonoFont.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Hotjar Tracking Code for https://indegser.com -->
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2698426,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+`,
+          }}
+        ></script>
+      </head>
       <body>
         <main className="min-h-screen w-full">{children}</main>
         <Analytics />
