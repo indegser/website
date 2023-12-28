@@ -9,6 +9,7 @@ interface Props {
   isMinimal?: boolean;
   displayStartAt: string;
   eventId: number;
+  item: NewsType;
 }
 
 export const NewsProduct = ({
@@ -16,6 +17,7 @@ export const NewsProduct = ({
   product,
   displayStartAt,
   eventId,
+  item,
 }: Props) => {
   const formatted = dayjs(displayStartAt)
     .add(9, 'hour')
@@ -28,6 +30,7 @@ export const NewsProduct = ({
     amplitude.track(`click_item`, {
       eventId,
       product,
+      item,
     });
   };
 

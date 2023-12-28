@@ -21,6 +21,7 @@ export const NewsProductList = ({ news }: Props) => {
               key={product.productId}
               product={product}
               eventId={news.brandNewsId}
+              item={news}
               displayStartAt={news.displayStartAt}
             />
           );
