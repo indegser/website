@@ -82,6 +82,7 @@ export const Launching = ({
                   isMinimal
                   eventId={item.brandNewsId}
                   product={product}
+                  item={item}
                   displayStartAt={item.displayStartAt}
                 />
               );
