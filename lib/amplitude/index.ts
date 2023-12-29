@@ -29,7 +29,7 @@ async function init() {
   if (isServer) return;
 
   const { data } = await supabase.auth.getUser();
-  const userId = data.user?.email || '';
+  const userId = data.user?.email || undefined;
   sdk.init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY, userId, {
     defaultTracking: {
       formInteractions: false,
