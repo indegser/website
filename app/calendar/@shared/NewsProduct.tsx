@@ -2,6 +2,7 @@ import { amplitude } from '@/lib/amplitude';
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import Link from 'next/link';
+import { useState } from 'react';
 import { NewsType } from './type';
 
 interface Props {
@@ -19,6 +20,7 @@ export const NewsProduct = ({
   eventId,
   item,
 }: Props) => {
+  const [seed, setSeed] = useState('1');
   const formatted = dayjs(displayStartAt)
     .add(9, 'hour')
     .format('MM/DD H시 발매');
@@ -32,10 +34,14 @@ export const NewsProduct = ({
       product,
       item,
     });
+    setSeed(Math.floor(Math.random() * 100000).toString());
   };
 
   return (
-    <Link href={`app29cm://product/${product.productId}`} onClick={handleClick}>
+    <Link
+      href={`app29cm://product/${product.productId}?random=${seed}`}
+      onClick={handleClick}
+    >
       <Container data-minimal={isMinimal}>
         <Cover data-minimal={isMinimal} src={cover.href} />
         <Content data-minimal={isMinimal}>
