@@ -2,7 +2,7 @@ import { amplitude } from '@/lib/amplitude';
 import styled from '@emotion/styled';
 import { useInView } from 'framer-motion';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Balancer from 'react-wrap-balancer';
 import { NewsCover } from './@shared/NewsCover';
 import { NewsProduct } from './@shared/NewsProduct';
@@ -25,6 +25,7 @@ export const Launching = ({
   maxPosition,
   isStandalone = false,
 }: Props) => {
+  const [seed, setSeed] = useState('1');
   const ref = useRef<HTMLDivElement>(null);
   const cover = new URL(item.coverImageUrl);
   cover.searchParams.set('width', '600');
@@ -49,12 +50,13 @@ export const Launching = ({
       position,
       maxPosition,
     });
+    setSeed(Math.floor(Math.random() * 100000).toString());
   };
 
   return (
     <Container ref={ref}>
       <Link
-        href={`app29cm://web/https://content.29cm.co.kr/calendar/news/${item.id}`}
+        href={`app29cm://web/https://content.29cm.co.kr/calendar/news/${item.id}?seed=${seed}`}
         onClick={handleClick}
       >
         <Cover data-isstandalone={isStandalone}>
