@@ -35,10 +35,7 @@ export const NewsProduct = ({
   };
 
   return (
-    <Link
-      href={`app29cm://web/https://product.29cm.co.kr/catalog/${product.productId}`}
-      onClick={handleClick}
-    >
+    <Link href={`app29cm://product/${product.productId}`} onClick={handleClick}>
       <Container data-minimal={isMinimal}>
         <Cover data-minimal={isMinimal} src={cover.href} />
         <Content data-minimal={isMinimal}>
