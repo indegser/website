@@ -35,6 +35,8 @@ export const Timeline = () => {
           <Link
             key={id}
             href={{ pathname: '/calendar', query: { id } }}
+            replace
+            shallow
             onClick={() => handleClick(id)}
           >
             <Chip data-active={id === queryId}>
