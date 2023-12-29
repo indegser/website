@@ -8153,24 +8153,6 @@ export const NewsByDate = {
       ],
     },
     {
-      id: '16500',
-      title: '어디서나 녹아드는',
-      description:
-        '모든 공간에서 자연스럽고 선명한 오디오를 제공하는 베어브릭 스피커의 런칭 소식을 전합니다. 공간에 엣지를 주는 베어브릭의 좋아하는 사운드와 함께 만나보세요.',
-      category: 'NEW_PRODUCT',
-      cover_image_id: '199981',
-      front_brand_id: '28569',
-      brandNewsId: 16500,
-      displayStartAt: '2024-01-02T01:00:00.000000',
-      displayEndAt: '2024-01-24T14:59:00.000000',
-      frontBrandId: 28569,
-      coverImageUrl:
-        'https://img.29cm.co.kr/cms/202312/11eea488f0e91ac4b2384328eafdc637.png',
-      frontBrandNameKor: '베어브릭',
-      frontBrandHeartCount: '0',
-      products: [],
-    },
-    {
       id: '16502',
       title: '기분 좋은 그래픽',
       description:
@@ -9697,23 +9679,6 @@ export const NewsByDate = {
       ],
     },
     {
-      id: '16567',
-      title: '밀리언코르',
-      description: '밀리언코르',
-      category: 'BRAND_SALE',
-      cover_image_id: '200481',
-      front_brand_id: '9188',
-      brandNewsId: 16567,
-      displayStartAt: '2024-01-02T01:00:00.000000',
-      displayEndAt: '2024-01-07T14:59:00.000000',
-      frontBrandId: 9188,
-      coverImageUrl:
-        'https://img.29cm.co.kr/cms/202312/11eea5df46e8b592837743346acd655c.jpg',
-      frontBrandNameKor: '밀리언코르',
-      frontBrandHeartCount: '13309',
-      products: [],
-    },
-    {
       id: '16512',
       title: '아이의 공간에 상상 더하기',
       description:
@@ -10475,23 +10440,6 @@ export const NewsByDate = {
             'https://img.29cm.co.kr/item/202309/11ee52e93134690b83bcbfcd1f2e0ee8.jpg',
         },
       ],
-    },
-    {
-      id: '16497',
-      title: '라티젠 가등록',
-      description: '가등록',
-      category: 'NEW_PRODUCT',
-      cover_image_id: '199960',
-      front_brand_id: '1901',
-      brandNewsId: 16497,
-      displayStartAt: '2024-01-03T01:00:00.000000',
-      displayEndAt: '2024-01-09T14:59:00.000000',
-      frontBrandId: 1901,
-      coverImageUrl:
-        'https://img.29cm.co.kr/cms/202312/11eea4877c7b9c88b238731c96877699.jpg',
-      frontBrandNameKor: '라티젠',
-      frontBrandHeartCount: '32728',
-      products: [],
     },
     {
       id: '16517',
