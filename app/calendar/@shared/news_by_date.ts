@@ -6308,24 +6308,6 @@ export const NewsByDate = {
       ],
     },
     {
-      id: '16522',
-      title: '가장 필요한 빛',
-      description:
-        "세계적인 조명 브랜드 아르떼미데의 브랜드 세일 소식을 전합니다. '인간의 빛'을 브랜드 철학으로 하여, 지속적인 연구와 수준 높은 제조 기술로 완성한 품질을 경험해보세요.",
-      category: 'BRAND_SALE',
-      cover_image_id: '200235',
-      front_brand_id: '32067',
-      brandNewsId: 16522,
-      displayStartAt: '2024-01-01T01:00:00.000000',
-      displayEndAt: '2024-01-21T14:59:00.000000',
-      frontBrandId: 32067,
-      coverImageUrl:
-        'https://img.29cm.co.kr/cms/202312/11eea52c4ea898da8377135e190437a0.jpg',
-      frontBrandNameKor: '아르떼미데',
-      frontBrandHeartCount: '0',
-      products: [],
-    },
-    {
       id: '16523',
       title: '어디서나 함께, 클로브',
       description:
