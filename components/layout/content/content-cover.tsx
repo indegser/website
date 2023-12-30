@@ -91,7 +91,7 @@ export const ContentCover = ({ src, alt }: Props) => {
               />
             );
           })}
-          <img src={src} alt={alt} />
+          <img src={src} alt={alt} className="h-full w-full" />
         </MotionImage>
       </Motion>
     </div>
