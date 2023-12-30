@@ -1,5 +1,6 @@
 'use client';
 
+import { tailwindTheme } from '@/components/style-config';
 import { easeIn, motion, useScroll, useTransform } from 'framer-motion';
 
 interface Props {
@@ -7,12 +8,16 @@ interface Props {
   alt: string;
 }
 
-const createSrcSet = (orientation: 'landscape' | 'portrait', src: string) => {
-  const widths = orientation === 'landscape' ? [1679, 3180] : [800, 1600];
+const createSrcSet = (
+  orientation: 'landscape' | 'portrait',
+  src: string,
+  base: number,
+) => {
+  const widths = [base, base * 2];
 
   return widths
     .map((width, index) => {
-      const url = new URL(src);
+      const url = new URL(src.replace('.png', '.webp'));
       const fragments = url.pathname.split('/');
       const spliceIndex = fragments.findIndex((value) => /v\d+/.test(value));
       const params = [
@@ -32,6 +37,28 @@ const createSrcSet = (orientation: 'landscape' | 'portrait', src: string) => {
     .join(',');
 };
 
+const mediaSet = [
+  {
+    max: parseInt(tailwindTheme.screens.md) - 1,
+    orientation: 'portrait' as const,
+    base: 800,
+  },
+  {
+    min: parseInt(tailwindTheme.screens.md),
+    max: parseInt(tailwindTheme.screens.lg) - 1,
+    base: parseInt(tailwindTheme.screens.lg) - 1,
+  },
+  {
+    min: parseInt(tailwindTheme.screens.lg),
+    max: parseInt(tailwindTheme.screens.xl) - 1,
+    base: parseInt(tailwindTheme.screens.xl) - 1,
+  },
+  {
+    min: parseInt(tailwindTheme.screens.xl),
+    base: parseInt(tailwindTheme.screens['2xl']) - 1,
+  },
+];
+
 export const ContentCover = ({ src, alt }: Props) => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, 900], {
@@ -47,16 +74,23 @@ export const ContentCover = ({ src, alt }: Props) => {
             y,
           }}
         >
-          <source
-            media={`(orientation: landscape)`}
-            srcSet={createSrcSet('landscape', src)}
-            type="image/webp"
-          ></source>
-          <source
-            media={`(orientation: portrait)`}
-            srcSet={createSrcSet('portrait', src)}
-            type="image/webp"
-          />
+          {mediaSet.map(({ max, min, base, orientation }) => {
+            const media = [
+              max && `(max-width: ${max}px)`,
+              min && `(min-width: ${min}px)`,
+            ]
+              .filter(Boolean)
+              .join(' and ');
+
+            return (
+              <source
+                key={media}
+                media={media}
+                srcSet={createSrcSet(orientation || 'landscape', src, base)}
+                type="image/webp"
+              />
+            );
+          })}
           <img src={src} alt={alt} />
         </MotionImage>
       </Motion>
