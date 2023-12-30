@@ -21,8 +21,12 @@ export const ContentHeadline = async (props: Props) => {
             <div className="relative h-1/3 w-full">
               <ContentBlur />
               <div className="relative flex flex-col gap-4 px-5 pt-5">
-                <h1 className="my-0 break-keep text-4xl font-black italic leading-none text-gray-100 text-opacity-95">
-                  <Balancer>{title}</Balancer>
+                <h1 className="my-0 break-keep text-2xl font-black leading-none">
+                  <Balancer>
+                    <span className="bg-white px-2 py-1 text-gray-950 mix-blend-lighten">
+                      {title}
+                    </span>
+                  </Balancer>
                 </h1>
                 <div className="relative line-clamp-2 flex h-full items-end text-sm text-gray-100 text-opacity-90">
                   {excerpt}
