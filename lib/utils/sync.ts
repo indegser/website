@@ -57,6 +57,7 @@ const convertPages = async (pages: ContentType[], auth?: string) => {
         database_id,
         title,
         cover,
+        raw_data: page,
         excerpt: page.properties.Description
           ? notionUtils.getPlainText(
               page.properties.Description as PropertyType<'rich_text'>,

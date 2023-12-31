@@ -171,6 +171,7 @@ export interface Database {
           id: string;
           is_draft: boolean | null;
           last_edited_time: string;
+          raw_data: Json | null;
           title: string;
         };
         Insert: {
@@ -182,6 +183,7 @@ export interface Database {
           id: string;
           is_draft?: boolean | null;
           last_edited_time?: string;
+          raw_data?: Json | null;
           title?: string;
         };
         Update: {
@@ -193,6 +195,7 @@ export interface Database {
           id?: string;
           is_draft?: boolean | null;
           last_edited_time?: string;
+          raw_data?: Json | null;
           title?: string;
         };
         Relationships: [
