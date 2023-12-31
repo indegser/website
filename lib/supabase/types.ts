@@ -18,7 +18,7 @@ type X = {
       pages: {
         Row: {
           content: (PartialBlockObjectResponse | BlockObjectResponse)[];
-          raw_data: PageType | null;
+          raw_data: PageType;
           is_draft: boolean;
         };
       };
