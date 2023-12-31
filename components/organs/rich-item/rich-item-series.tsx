@@ -1,13 +1,15 @@
-import { SeriesType } from 'lib/supabase';
+import { PropertyType } from '@/lib/supabase/notion.types';
 
 interface Props {
-  series: SeriesType[];
+  series?: PropertyType<any> | null;
 }
 
 export const Series = ({ series }: Props) => {
+  if (series?.type !== 'multi_select') return null;
+
   return (
     <div className="flex flex-wrap gap-1">
-      {series.map(({ id, name }) => {
+      {series.multi_select.map(({ id, name }) => {
         return (
           <div
             key={id}

@@ -5,6 +5,7 @@ import {
 } from '@notionhq/client/build/src/api-endpoints';
 import type { MergeDeep } from 'type-fest';
 import type { Database as DatabaseGenerated } from './generated-types';
+import { PageType } from './notion.types';
 
 type X = {
   public: {
@@ -17,6 +18,7 @@ type X = {
       pages: {
         Row: {
           content: (PartialBlockObjectResponse | BlockObjectResponse)[];
+          raw_data: PageType | null;
           is_draft: boolean;
         };
       };

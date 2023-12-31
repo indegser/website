@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const RichItem = ({ page }: Props) => {
-  const { id, title, cover, excerpt } = page;
+  const { id, title, cover, excerpt, raw_data: raw } = page;
   const href = `/content/${id}`;
 
   return (
@@ -32,7 +32,7 @@ export const RichItem = ({ page }: Props) => {
             </div>
           </div>
         </Link>
-        <Series series={[]} />
+        <Series series={raw?.properties.Series} />
       </div>
     </section>
   );
