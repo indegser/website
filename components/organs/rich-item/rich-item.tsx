@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
-import { Series } from './rich-item-series';
 import { RichItemThumbnail } from './rich-item-thumbnail';
 
 import { PageType } from 'lib/supabase';
+import { RichItemMeta } from './rich-item-meta';
 
 interface Props {
   page: PageType;
@@ -32,7 +32,9 @@ export const RichItem = ({ page }: Props) => {
             </div>
           </div>
         </Link>
-        <Series series={raw?.properties.Series} />
+        <div className="mt-4 text-xs text-muted-foreground text-opacity-75">
+          <RichItemMeta page={page} />
+        </div>
       </div>
     </section>
   );

@@ -8,17 +8,15 @@ export const Series = ({ series }: Props) => {
   if (series?.type !== 'multi_select') return null;
 
   return (
-    <div className="flex flex-wrap gap-1">
+    <>
       {series.multi_select.map(({ id, name }) => {
         return (
-          <div
-            key={id}
-            className="rounded bg-muted px-1 text-xs font-medium leading-relaxed text-muted-foreground text-opacity-75"
-          >
+          <div key={id}>
             {name}
+            <span className="ml-1">{'·'}</span>
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
