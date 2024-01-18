@@ -6,12 +6,13 @@ import { CalendarPage } from './CalendarPage';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
+dayjs.tz.setDefault('Asia/Seoul');
 
 export const dynamic = 'force-dynamic';
 
 export default function Calendar({ searchParams }: { searchParams: any }) {
   if (!searchParams.id) {
-    const now = dayjs().tz('Asia/Seoul');
+    const now = dayjs();
     const tomorrow = now.add(1, 'day');
     const id = tomorrow.format('YYYYMMDD');
     return redirect(`/calendar?id=${id}`);
