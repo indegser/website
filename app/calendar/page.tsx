@@ -13,6 +13,7 @@ export const dynamic = 'force-dynamic';
 export default function Calendar({ searchParams }: { searchParams: any }) {
   if (!searchParams.id) {
     const now = dayjs();
+    console.log(now.format());
     const tomorrow = now.add(1, 'day');
     const id = tomorrow.format('YYYYMMDD');
     return redirect(`/calendar?id=${id}`);

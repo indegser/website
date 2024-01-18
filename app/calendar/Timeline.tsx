@@ -7,6 +7,7 @@ import { useSearchParams } from 'next/navigation';
 
 dayjs.extend(isoWeek);
 const now = dayjs();
+console.log(now.format());
 
 const timeline = new Array(10)
   .fill(true)
