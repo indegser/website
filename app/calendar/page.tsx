@@ -7,6 +7,8 @@ import { CalendarPage } from './CalendarPage';
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
+export const dynamic = 'force-dynamic';
+
 export default function Calendar({ searchParams }: { searchParams: any }) {
   if (!searchParams.id) {
     const now = dayjs().tz('Asia/Seoul');
