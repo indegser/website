@@ -2,12 +2,15 @@ import { amplitude } from '@/lib/amplitude';
 import styled from '@emotion/styled';
 import dayjs from 'dayjs';
 import isoWeek from 'dayjs/plugin/isoWeek';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 dayjs.extend(isoWeek);
-const now = dayjs();
-console.log(now.format());
+const now = dayjs().tz('Asia/Seoul');
 
 const timeline = new Array(10)
   .fill(true)

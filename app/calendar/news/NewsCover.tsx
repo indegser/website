@@ -6,9 +6,15 @@ interface Props {
   news: NewsType;
 }
 
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
 export const NewsCover = ({ news }: Props) => {
   const time = dayjs(news.displayStartAt);
   const now = dayjs()
+    .tz('Asia/Seoul')
     .set('h', time.hour() - 1)
     .set('m', time.minute())
     .set('s', time.second());
