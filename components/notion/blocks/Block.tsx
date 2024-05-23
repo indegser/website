@@ -2,7 +2,7 @@ import takeRightWhile from 'lodash-es/takeRightWhile';
 
 import { BookmarkBlock } from './bookmark/BookmarkBlock';
 import { BulletedListItemBlock } from './BulletedListItemBlock';
-import { CalloutBlock } from './CalloutBlock';
+import { CalloutBlock } from './callout-block';
 import { CodeBlock } from './CodeBlock';
 import { DividerBlock } from './DividerBlock';
 import { HeadingBlock } from './HeadingBlock';

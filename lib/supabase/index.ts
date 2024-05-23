@@ -1,5 +1,5 @@
 import { createBrowserClient } from '@supabase/ssr';
-import { Database, Tables } from './types';
+import { Database } from './types';
 
 export * from './types';
 
@@ -12,6 +12,3 @@ export const supabase = createBrowserClient<Database>(
   supabaseUrl,
   supabaseAnonKey,
 );
-
-export type PageType = Tables<'pages'>;
-export type SeriesType = Tables<'series'>;
