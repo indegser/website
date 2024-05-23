@@ -1,6 +1,6 @@
 import { colors } from '../theme';
 
-import { AnnotationColorType } from 'lib/supabase/notion.types';
+import { AnnotationColorType } from '@/lib/notion/notion.types';
 
 export const convertApiColorToStyleProps = (color: AnnotationColorType) => {
   if (!color || color === 'default') return {};

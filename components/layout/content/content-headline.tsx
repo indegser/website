@@ -2,7 +2,7 @@ import { PageContainer } from '@/components/atoms/Container';
 import { ContentBlur } from './content-blur';
 import { ContentCover } from './content-cover';
 
-import { notionApi } from '@/lib/supabase/notion.api';
+import { notionApi } from '@/lib/notion/notion.api';
 import { notionUtils } from '@/lib/utils/notion';
 import { Balancer } from 'components/Balancer';
 

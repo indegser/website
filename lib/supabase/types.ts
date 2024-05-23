@@ -4,8 +4,8 @@ import {
   PartialBlockObjectResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import type { MergeDeep } from 'type-fest';
+import { PageType } from '../notion/notion.types';
 import type { Database as DatabaseGenerated } from './generated-types';
-import { PageType } from './notion.types';
 
 type X = {
   public: {

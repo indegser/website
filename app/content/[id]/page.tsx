@@ -1,6 +1,6 @@
 import { ContentPage } from '@/components/layout/content/content-page';
 import { isProduction } from '@/lib/constants';
-import { notionApi } from '@/lib/supabase/notion.api';
+import { notionApi } from '@/lib/notion/notion.api';
 import { notionUtils } from '@/lib/utils/notion';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';

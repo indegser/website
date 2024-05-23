@@ -1,4 +1,4 @@
-import { notionApi } from '@/lib/supabase/notion.api';
+import { notionApi } from '@/lib/notion/notion.api';
 import { getURL } from 'lib/constants';
 import { MetadataRoute } from 'next';
 

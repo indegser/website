@@ -1,5 +1,5 @@
 import { RichItem } from '@/components/organs/rich-item/rich-item';
-import { notionApi } from '@/lib/supabase/notion.api';
+import { notionApi } from '@/lib/notion/notion.api';
 import { PageContainer } from 'components/atoms/Container';
 
 export const IndexPage = async () => {

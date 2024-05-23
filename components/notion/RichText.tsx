@@ -5,7 +5,7 @@ import { toArray } from 'react-emoji-render';
 import { convertApiColorToStyleProps } from './convertApiColorToStyleProps';
 import { RichTextWithLink } from './RichTextWithLink';
 
-import { RichTextItemResponse } from 'lib/supabase/notion.types';
+import { RichTextItemResponse } from '@/lib/notion';
 
 interface Props {
   shouldRenderPlainText?: boolean;

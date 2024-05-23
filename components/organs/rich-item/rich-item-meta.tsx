@@ -1,4 +1,4 @@
-import { ContentType } from '@/lib/supabase/notion.types';
+import { ContentType } from '@/lib/notion/notion.types';
 import dayjs from 'dayjs';
 import { Series } from './rich-item-series';
 

@@ -1,5 +1,5 @@
+import { RichTextItemResponse } from '@/lib/notion/notion.types';
 import { RichText } from 'components/notion/RichText';
-import { RichTextItemResponse } from 'lib/supabase/notion.types';
 
 interface Props {
   level: 1 | 2 | 3;

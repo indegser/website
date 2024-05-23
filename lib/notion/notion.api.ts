@@ -1,8 +1,8 @@
 import 'server-only';
 
 import { INDEGSER_DATABASE_ID } from 'lib/constants';
+import { notion } from 'lib/notion';
 import { cache } from 'react';
-import { notion } from '../notion';
 import {
   ContentType,
   DatabaseType,

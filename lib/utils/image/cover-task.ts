@@ -1,7 +1,7 @@
 import { notionUtils } from '../notion';
 
+import { PageType } from '@/lib/notion/notion.types';
 import { notion } from 'lib/notion';
-import { PageType } from 'lib/supabase/notion.types';
 import { uploadImage } from './create-image';
 
 export const replaceNotionCover = async (page: PageType, auth?: string) => {

@@ -1,4 +1,4 @@
-import { PropertyType } from '@/lib/supabase/notion.types';
+import { PropertyType } from '@/lib/notion/notion.types';
 
 interface Props {
   series?: PropertyType<any> | null;

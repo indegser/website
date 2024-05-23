@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 import { Caption } from './Caption';
 
+import { BlockType } from '@/lib/notion/notion.types';
 import { PageContent } from 'components/atoms/Container';
 import { notion } from 'lib/notion';
-import { BlockType } from 'lib/supabase/notion.types';
 import { uploadImage } from 'lib/utils/image/create-image';
 
 interface Props {

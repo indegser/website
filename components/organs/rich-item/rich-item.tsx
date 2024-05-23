@@ -3,7 +3,7 @@ import Balancer from 'react-wrap-balancer';
 
 import { RichItemThumbnail } from './rich-item-thumbnail';
 
-import { ContentType } from '@/lib/supabase/notion.types';
+import { ContentType } from '@/lib/notion/notion.types';
 import { notionUtils } from '@/lib/utils/notion';
 import { RichItemMeta } from './rich-item-meta';
 

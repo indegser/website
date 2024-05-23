@@ -1,6 +1,6 @@
 import { DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 
-import { CoverType, PageType, PropertyType } from 'lib/supabase/notion.types';
+import { CoverType, PageType, PropertyType } from '@/lib/notion/notion.types';
 
 const getNotionFileUrl = (coverOrFiles?: PropertyType<'files'> | CoverType) => {
   if (!coverOrFiles) return null;

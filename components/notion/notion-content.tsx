@@ -1,6 +1,6 @@
 import { Block } from './blocks/Block';
 
-import { notionApi } from '@/lib/supabase/notion.api';
+import { notionApi } from '@/lib/notion/notion.api';
 
 interface Props {
   id: string;
