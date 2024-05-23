@@ -25,8 +25,12 @@ const getNotionFileUrl = (coverOrFiles?: PropertyType<'files'> | CoverType) => {
   }
 };
 
-const getPlainText = (property: PropertyType<'rich_text'>) => {
-  return property.rich_text?.[0]?.plain_text || '';
+const getPlainText = (
+  property: PropertyType<'rich_text'> | PropertyType<'title'>,
+) => {
+  return property.type === 'title'
+    ? getNotionTitle(property)
+    : property.rich_text?.[0]?.plain_text || '';
 };
 
 const getNotionTitle = (titleProperty: Partial<PropertyType<'title'>>) => {

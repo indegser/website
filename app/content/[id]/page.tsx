@@ -1,10 +1,11 @@
 import { ContentPage } from '@/components/layout/content/content-page';
 import { isProduction } from '@/lib/constants';
-import { pageApi } from 'lib/supabase/page.api';
+import { notionApi } from '@/lib/supabase/notion.api';
+import { notionUtils } from '@/lib/utils/notion';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-export const revalidate = 60;
+export const revalidate = 3600; // 1-hour.
 
 type Props = {
   params: { id: string };
@@ -14,12 +15,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = params;
 
   try {
-    const { data, error } = await pageApi.getPage(id);
-    if (error) {
-      return {};
-    }
-
-    const { title, excerpt, cover } = data;
+    const { cover, properties } = await notionApi.retrievePage(id);
+    const title = notionUtils.getPlainText(properties.Title);
+    const excerpt = notionUtils.getPlainText(properties.Description);
+    const coverUrl = notionUtils.getNotionFileUrl(cover);
 
     return {
       title,
@@ -29,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: excerpt || '',
         type: 'article',
         siteName: 'Indegser',
-        images: cover ? [cover] : [],
+        images: coverUrl ? [coverUrl] : [],
       },
       alternates: {
         canonical: `/content/${id}`,
@@ -44,20 +43,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export const generateStaticParams = async () => {
-  const { data, error } = await pageApi.queryPages({
+  const { results } = await notionApi.queryDatabase({
     limit: isProduction ? 10 : 1,
   });
 
-  if (error) return [];
-
-  return data.map((page) => ({
+  return results.map((page) => ({
     id: page.id,
   }));
 };
 
 export default async function Page({ params: { id } }: Props) {
   try {
-    await pageApi.getPage(id);
+    await notionApi.retrievePage(id);
   } catch (err) {
     notFound();
   }

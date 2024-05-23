@@ -6,9 +6,33 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[];
 
-export interface Database {
+export type Database = {
   public: {
     Tables: {
+      content: {
+        Row: {
+          created_at: string;
+          description: string | null;
+          id: string;
+          title: string | null;
+          updated_at: string;
+        };
+        Insert: {
+          created_at?: string;
+          description?: string | null;
+          id: string;
+          title?: string | null;
+          updated_at?: string;
+        };
+        Update: {
+          created_at?: string;
+          description?: string | null;
+          id?: string;
+          title?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       databases: {
         Row: {
           created_at: string;
@@ -49,33 +73,30 @@ export interface Database {
       };
       episodes: {
         Row: {
-          created_time: string | null;
-          last_edited_time: string | null;
-          page_id: string;
-          series_id: string;
+          content_id: string;
+          created_at: string;
+          series_id: string | null;
         };
         Insert: {
-          created_time?: string | null;
-          last_edited_time?: string | null;
-          page_id: string;
-          series_id: string;
+          content_id: string;
+          created_at?: string;
+          series_id?: string | null;
         };
         Update: {
-          created_time?: string | null;
-          last_edited_time?: string | null;
-          page_id?: string;
-          series_id?: string;
+          content_id?: string;
+          created_at?: string;
+          series_id?: string | null;
         };
         Relationships: [
           {
-            foreignKeyName: 'episodes_page_id_fkey';
-            columns: ['page_id'];
-            isOneToOne: false;
-            referencedRelation: 'pages';
+            foreignKeyName: 'public_episodes_content_id_fkey';
+            columns: ['content_id'];
+            isOneToOne: true;
+            referencedRelation: 'content';
             referencedColumns: ['id'];
           },
           {
-            foreignKeyName: 'episodes_series_id_fkey';
+            foreignKeyName: 'public_episodes_series_id_fkey';
             columns: ['series_id'];
             isOneToOne: false;
             referencedRelation: 'series';
@@ -211,23 +232,20 @@ export interface Database {
       series: {
         Row: {
           color: string | null;
-          created_time: string | null;
+          created_at: string;
           id: string;
-          last_edited_time: string | null;
           name: string | null;
         };
         Insert: {
           color?: string | null;
-          created_time?: string | null;
+          created_at?: string;
           id: string;
-          last_edited_time?: string | null;
           name?: string | null;
         };
         Update: {
           color?: string | null;
-          created_time?: string | null;
+          created_at?: string;
           id?: string;
-          last_edited_time?: string | null;
           name?: string | null;
         };
         Relationships: [];
@@ -272,7 +290,7 @@ export interface Database {
       [_ in never]: never;
     };
   };
-}
+};
 
 export type Tables<
   PublicTableNameOrOptions extends

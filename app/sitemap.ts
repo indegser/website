@@ -1,13 +1,11 @@
+import { notionApi } from '@/lib/supabase/notion.api';
+import { getURL } from 'lib/constants';
 import { MetadataRoute } from 'next';
 
-import { getURL } from 'lib/constants';
-import { pageApi } from 'lib/supabase/page.api';
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { data, error } = await pageApi.queryPages({ limit: 100 });
-  if (error) return [];
+  const { results } = await notionApi.queryDatabase();
 
-  return data.map((page) => ({
+  return results.map((page) => ({
     url: `${getURL()}/content/${page.id}`,
     lastModified: page.last_edited_time,
   }));

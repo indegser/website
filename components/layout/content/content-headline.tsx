@@ -2,22 +2,25 @@ import { PageContainer } from '@/components/atoms/Container';
 import { ContentBlur } from './content-blur';
 import { ContentCover } from './content-cover';
 
+import { notionApi } from '@/lib/supabase/notion.api';
+import { notionUtils } from '@/lib/utils/notion';
 import { Balancer } from 'components/Balancer';
-import { pageApi } from 'lib/supabase/page.api';
 
 interface Props {
   id: string;
 }
 
 export const ContentHeadline = async (props: Props) => {
-  const { data } = await pageApi.getPage(props.id);
-  const { cover, title, excerpt } = data!;
+  const { cover, properties } = await notionApi.retrievePage(props.id);
+  const title = notionUtils.getPlainText(properties.Title);
+  const excerpt = notionUtils.getPlainText(properties.Description);
+  const coverUrl = notionUtils.getNotionFileUrl(cover);
 
   return (
     <div>
       {cover ? (
         <section className="relative mb-8 aspect-[2/3] overflow-hidden md:aspect-video">
-          <ContentCover src={cover} alt={title} />
+          <ContentCover src={coverUrl!} alt={title} />
           <div className="relative flex h-full items-end">
             <div className="relative h-1/3 w-full md:h-1/4">
               <ContentBlur />

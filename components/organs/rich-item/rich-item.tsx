@@ -3,21 +3,27 @@ import Balancer from 'react-wrap-balancer';
 
 import { RichItemThumbnail } from './rich-item-thumbnail';
 
-import { PageType } from 'lib/supabase';
+import { ContentType } from '@/lib/supabase/notion.types';
+import { notionUtils } from '@/lib/utils/notion';
 import { RichItemMeta } from './rich-item-meta';
 
 interface Props {
-  page: PageType;
+  page: ContentType;
 }
 
 export const RichItem = ({ page }: Props) => {
-  const { id, title, cover, excerpt, raw_data: raw } = page;
+  const { id, cover, properties } = page;
+  const title = notionUtils.getPlainText(properties.Title);
+  const excerpt = notionUtils.getPlainText(properties.Description);
   const href = `/content/${id}`;
 
   return (
     <section className="grid auto-rows-max gap-3">
       <Link href={href}>
-        <RichItemThumbnail src={cover} alt={title} />
+        <RichItemThumbnail
+          src={notionUtils.getNotionFileUrl(cover)}
+          alt={title}
+        />
       </Link>
       <div className="grid gap-2">
         <Link href={href}>

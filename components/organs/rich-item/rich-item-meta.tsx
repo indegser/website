@@ -1,18 +1,21 @@
-import { PageType } from '@/lib/supabase';
+import { ContentType } from '@/lib/supabase/notion.types';
 import dayjs from 'dayjs';
 import { Series } from './rich-item-series';
 
 interface Props {
-  page: PageType;
+  page: ContentType;
 }
 
 export const RichItemMeta = ({ page }: Props) => {
-  if (!page.raw_data) return null;
+  const {
+    created_time,
+    properties: { Series: series },
+  } = page;
 
-  const createdTime = dayjs(page.raw_data.created_time).format('MMMM D, YYYY');
+  const createdTime = dayjs(created_time).format('MMMM D, YYYY');
   return (
     <div className="flex flex-wrap gap-x-1">
-      <Series series={page.raw_data?.properties.Series} />
+      <Series series={series} />
       <div>{createdTime}</div>
     </div>
   );
