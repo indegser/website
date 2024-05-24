@@ -1,4 +1,4 @@
-import { defineType, defineArrayMember } from 'sanity';
+import { defineArrayMember, defineType } from 'sanity';
 
 /**
  * This is the schema type for block content used in the post document type
@@ -18,7 +18,7 @@ export default defineType({
   of: [
     defineArrayMember({
       title: 'Block',
-      type: 'block',
+      type: 'block' as const,
       // Styles let you define what blocks can be marked up as. The default
       // set corresponds with HTML tags, but you can set any title or value
       // you want, and decide how you want to deal with it where you want to
@@ -61,7 +61,7 @@ export default defineType({
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     defineArrayMember({
-      type: 'image',
+      type: 'image' as const,
       options: { hotspot: true },
       fields: [
         {

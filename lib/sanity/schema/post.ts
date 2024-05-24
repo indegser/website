@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -20,15 +25,9 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: { type: 'author' },
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: 'cover',
+      title: 'Cover',
+      type: 'image' as const,
       options: {
         hotspot: true,
       },
@@ -43,7 +42,7 @@ export default defineType({
     defineField({
       name: 'categories',
       title: 'Categories',
-      type: 'array',
+      type: 'array' as const,
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
@@ -61,12 +60,11 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
+      excerpt: 'excerpt',
+      media: 'cover',
     },
     prepare(selection) {
-      const { author } = selection;
-      return { ...selection, subtitle: author && `by ${author}` };
+      return { ...selection, subtitle: selection.excerpt };
     },
   },
 });
