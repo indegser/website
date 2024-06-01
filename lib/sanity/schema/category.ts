@@ -9,11 +9,11 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-    }),
+    } as const),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
-    }),
+    } as const),
   ],
 });

@@ -1,22 +1,24 @@
-import { ContentType } from '@/lib/notion/notion.types';
+import { PostFeed } from '@/lib/sanity';
 import dayjs from 'dayjs';
-import { Series } from './rich-item-series';
 
 interface Props {
-  page: ContentType;
+  post: PostFeed;
 }
 
-export const RichItemMeta = ({ page }: Props) => {
-  const {
-    created_time,
-    properties: { Series: series },
-  } = page;
+export const RichItemMeta = ({ post }: Props) => {
+  const { publishedAt, categories } = post;
 
-  const createdTime = dayjs(created_time).format('MMMM D, YYYY');
+  const date = dayjs(publishedAt).format('MMMM D, YYYY');
+
   return (
     <div className="flex flex-wrap gap-x-1">
-      <Series series={series} />
-      <div>{createdTime}</div>
+      {categories.map((category) => (
+        <div key={category._id}>
+          {category.title}
+          <span className="ml-1">{'·'}</span>
+        </div>
+      ))}
+      <div>{date}</div>
     </div>
   );
 };

@@ -83,6 +83,9 @@ importers:
       get-youtube-id:
         specifier: ^1.0.1
         version: 1.0.1
+      groq:
+        specifier: ^3.43.0
+        version: 3.43.0
       image-size:
         specifier: ^1.0.2
         version: 1.0.2
@@ -146,6 +149,9 @@ importers:
       type-fest:
         specifier: ^4.4.0
         version: 4.4.0
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@styled/typescript-styled-plugin':
         specifier: ^1.0.0
@@ -6503,8 +6509,8 @@ packages:
     resolution: {integrity: sha512-zK7YHHz4ZXpW89AHXUPbQVGKI7uvkd3hzusTdotCg1UxyaVtg0zFJSTfW/Dq5f7OBBVnq6cZIaC8Ti4hb6dtCA==}
     engines: {node: '>= 14'}
 
-  zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
 snapshots:
 
@@ -8433,7 +8439,7 @@ snapshots:
       groq-js: 1.9.0
       json5: 2.2.3
       tsconfig-paths: 4.2.0
-      zod: 3.22.4
+      zod: 3.23.8
     transitivePeerDependencies:
       - supports-color
 
@@ -12755,7 +12761,7 @@ snapshots:
       recast: 0.23.4
       ts-morph: 18.0.0
       tsconfig-paths: 4.2.0
-      zod: 3.22.4
+      zod: 3.23.8
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -13648,4 +13654,4 @@ snapshots:
       compress-commons: 6.0.2
       readable-stream: 4.5.2
 
-  zod@3.22.4: {}
+  zod@3.23.8: {}

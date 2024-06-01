@@ -11,7 +11,7 @@ export const RichItemThumbnail = (props: Props) => {
   const { src, alt } = props;
 
   return (
-    <div className="relative aspect-video bg-muted">
+    <div className="relative h-auto w-full bg-muted">
       {src ? (
         <Image
           priority

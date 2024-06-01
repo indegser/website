@@ -3,27 +3,21 @@ import Balancer from 'react-wrap-balancer';
 
 import { RichItemThumbnail } from './rich-item-thumbnail';
 
-import { ContentType } from '@/lib/notion/notion.types';
-import { notionUtils } from '@/lib/utils/notion';
+import { PostFeed, urlForImage } from '@/lib/sanity';
 import { RichItemMeta } from './rich-item-meta';
 
 interface Props {
-  page: ContentType;
+  post: PostFeed;
 }
 
-export const RichItem = ({ page }: Props) => {
-  const { id, cover, properties } = page;
-  const title = notionUtils.getPlainText(properties.Title);
-  const excerpt = notionUtils.getPlainText(properties.Description);
-  const href = `/content/${id}`;
+export const RichItem = ({ post }: Props) => {
+  const { _id, cover, title, excerpt } = post;
+  const href = `/posts/${_id}`;
 
   return (
     <section className="grid auto-rows-max gap-3">
       <Link href={href}>
-        <RichItemThumbnail
-          src={notionUtils.getNotionFileUrl(cover)}
-          alt={title}
-        />
+        <RichItemThumbnail src={urlForImage(cover)} alt={title} />
       </Link>
       <div className="grid gap-2">
         <Link href={href}>
@@ -39,7 +33,7 @@ export const RichItem = ({ page }: Props) => {
           </div>
         </Link>
         <div className="mt-4 text-xs text-muted-foreground text-opacity-75">
-          <RichItemMeta page={page} />
+          <RichItemMeta post={post} />
         </div>
       </div>
     </section>
