@@ -9,7 +9,7 @@ import starStruck from './star_struck.svg';
 import thumbsUp from './thumbs_up.svg';
 import yawning from './yawning.svg';
 
-import { PageContent } from 'components/atoms/Container';
+import { PageContent } from '@/components/atoms/container';
 import { amplitude } from 'lib/amplitude';
 
 const reactions = [

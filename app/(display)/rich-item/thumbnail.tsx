@@ -7,7 +7,7 @@ interface Props {
   src?: string | null;
 }
 
-export const RichItemThumbnail = (props: Props) => {
+export const Thumbnail = (props: Props) => {
   const { src, alt } = props;
 
   return (

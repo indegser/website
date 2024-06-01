@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 import { Caption } from './Caption';
 
+import { PageContent } from '@/components/atoms/container';
 import { BlockType } from '@/lib/notion/notion.types';
-import { PageContent } from 'components/atoms/Container';
 import { notion } from 'lib/notion';
 import { uploadImage } from 'lib/utils/image/create-image';
 

@@ -1,10 +1,12 @@
-import { RichItem } from '@/components/organs/rich-item/rich-item';
+import { RichItem } from '@/app/(display)/rich-item';
+import { PageContainer } from '@/components/atoms/container';
 import { sanityClient } from '@/lib/sanity';
 import { postFeedSchema } from '@/lib/sanity/types';
-import { PageContainer } from 'components/atoms/Container';
 import groq from 'groq';
 
-export const IndexPage = async () => {
+export const revalidate = 3600; // 1-hour.
+
+export default async function IndexPage() {
   const data = await sanityClient.fetch(groq`*[_type == 'post'] {
     _id,
     title,
@@ -25,4 +27,4 @@ export const IndexPage = async () => {
       </div>
     </PageContainer>
   );
-};
+}

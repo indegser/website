@@ -8,8 +8,8 @@ Highlighter.registerLanguage('typescript', tsx);
 
 import { codeStyle } from './CodeBlock.style';
 
+import { PageContent } from '@/components/atoms/container';
 import { BlockType } from '@/lib/notion/notion.types';
-import { PageContent } from 'components/atoms/Container';
 
 interface Props {
   block: Extract<BlockType, { type: 'code' }>;

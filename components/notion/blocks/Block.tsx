@@ -12,8 +12,8 @@ import { QuoteBlock } from './QuoteBlock';
 import { TocBlock } from './TocBlock';
 import { VideoBlock } from './VideoBlock';
 
+import { PageContent } from '@/components/atoms/container';
 import { AnnotationColorType, BlockType } from '@/lib/notion/notion.types';
-import { PageContent } from 'components/atoms/Container';
 import { convertApiColorToStyleProps } from 'components/notion/convertApiColorToStyleProps';
 import { RichText } from 'components/notion/RichText';
 

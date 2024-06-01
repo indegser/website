@@ -1,5 +1,5 @@
+import { PageContainer } from '@/components/atoms/container';
 import { createServerSupabase } from '@/lib/supabase/create-supabase';
-import { PageContainer } from 'components/atoms/Container';
 import { redirect } from 'next/navigation';
 import { Databases } from './databases';
 

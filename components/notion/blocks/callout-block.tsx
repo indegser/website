@@ -1,7 +1,7 @@
 import { NotionIcon } from './NotionIcon';
 
+import { PageContent } from '@/components/atoms/container';
 import { BlockType } from '@/lib/notion/notion.types';
-import { PageContent } from 'components/atoms/Container';
 import { RichText } from 'components/notion/RichText';
 import { convertApiColorToStyleProps } from 'components/notion/convertApiColorToStyleProps';
 

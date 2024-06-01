@@ -1,4 +1,4 @@
-import { PageContainer } from '@/components/atoms/Container';
+import { PageContainer } from '@/components/atoms/container';
 import { ContentBlur } from './content-blur';
 import { ContentCover } from './content-cover';
 

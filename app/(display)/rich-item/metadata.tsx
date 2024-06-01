@@ -5,7 +5,7 @@ interface Props {
   post: PostFeed;
 }
 
-export const RichItemMeta = ({ post }: Props) => {
+export const Metadata = ({ post }: Props) => {
   const { publishedAt, categories } = post;
 
   const date = dayjs(publishedAt).format('MMMM D, YYYY');

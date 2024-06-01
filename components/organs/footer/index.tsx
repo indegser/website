@@ -1,6 +1,6 @@
 import { SnsList } from './sns-list';
 
-import { PageContainer } from 'components/atoms/Container';
+import { PageContainer } from '@/components/atoms/container';
 
 export const Footer = () => {
   return (
