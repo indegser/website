@@ -3,7 +3,7 @@ import Balancer from 'react-wrap-balancer';
 
 import { Thumbnail } from './thumbnail';
 
-import { PostFeed, urlForImage } from '@/lib/sanity';
+import { PostFeed } from '@/lib/sanity';
 import { Metadata } from './metadata';
 
 interface Props {
@@ -17,7 +17,7 @@ export const RichItem = ({ post }: Props) => {
   return (
     <article className="grid auto-rows-max gap-3">
       <Link href={href}>
-        <Thumbnail src={urlForImage(cover)} alt={title} />
+        <Thumbnail cover={cover} alt={title} />
       </Link>
       <div className="grid gap-2">
         <Link href={href}>
