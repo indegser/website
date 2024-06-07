@@ -17,14 +17,17 @@ export const categorySchema = z.object({
   title: z.string(),
 });
 
-export const postSchema = z.object({
-  _id: z.string(),
-  title: z.string(),
-  excerpt: z.string(),
-  cover: refSchema,
-  categories: z.array(categorySchema),
-  publishedAt: z.coerce.date(),
-});
+export const postSchema = z
+  .object({
+    _id: z.string(),
+    title: z.string(),
+    excerpt: z.string(),
+    cover: refSchema,
+    body: z.array(z.any()),
+    categories: z.array(categorySchema),
+    publishedAt: z.coerce.date(),
+  })
+  .partial();
 
 export const postFeedSchema = postSchema.omit({});
 

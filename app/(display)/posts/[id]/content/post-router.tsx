@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 
-export const ContentRouter = () => {
+export const PostRouter = () => {
   const searchParams = useSearchParams();
 
   useEffect(() => {

@@ -2,25 +2,21 @@ import { PageContainer } from '@/components/atoms/container';
 import { ContentBlur } from './content-blur';
 import { ContentCover } from './content-cover';
 
-import { notionApi } from '@/lib/notion/notion.api';
-import { notionUtils } from '@/lib/utils/notion';
+import { Post, urlForImage } from '@/lib/sanity';
 import { Balancer } from 'components/Balancer';
 
 interface Props {
-  id: string;
+  post: Post;
 }
 
-export const ContentHeadline = async (props: Props) => {
-  const { cover, properties } = await notionApi.retrievePage(props.id);
-  const title = notionUtils.getPlainText(properties.Title);
-  const excerpt = notionUtils.getPlainText(properties.Description);
-  const coverUrl = notionUtils.getNotionFileUrl(cover);
+export const PostHeadline = async ({ post }: Props) => {
+  const { title, excerpt, cover } = post;
 
   return (
     <div>
       {cover ? (
         <section className="relative mb-8 aspect-[2/3] overflow-hidden md:aspect-video">
-          <ContentCover src={coverUrl!} alt={title} />
+          <ContentCover src={urlForImage(cover).url()} alt={title!} />
           <div className="relative flex h-full items-end">
             <div className="relative h-1/3 w-full md:h-1/4">
               <ContentBlur />
