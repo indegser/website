@@ -1,11 +1,4 @@
-import { BlockType } from '@/lib/notion/notion.types';
-import { RichText } from 'components/notion/RichText';
-
-interface Props {
-  marker: number;
-  depth: number;
-  block: Extract<BlockType, { type: 'numbered_list_item' }>;
-}
+import { PortableTextListItemComponent } from 'next-sanity';
 
 const alphabet = [
   'a',
@@ -38,10 +31,10 @@ const alphabet = [
 
 function counterGenerator(type: number, marker: number) {
   switch (type) {
-    case 0: {
+    case 1: {
       return marker + 1;
     }
-    case 1: {
+    case 0: {
       return alphabet[marker % alphabet.length];
     }
     default: {
@@ -50,17 +43,19 @@ function counterGenerator(type: number, marker: number) {
   }
 }
 
-export const NumberedListItemBlock = ({ block, depth, marker }: Props) => {
-  const { numbered_list_item } = block;
+export const NumberListItem: PortableTextListItemComponent = ({
+  children,
+  index,
+  value,
+}) => {
+  const { level = 0 } = value;
 
   return (
     <div className="flex w-full items-start pl-0.5">
       <div className="mr-0.5 flex h-6 w-6 items-center justify-center text-lg leading-6">
-        {counterGenerator(depth % 2, marker)}.
+        {counterGenerator(level % 2, index)}.
       </div>
-      <div className="flex flex-1 flex-col">
-        <RichText data={numbered_list_item.rich_text} />
-      </div>
+      <div className="flex flex-1 flex-col">{children}</div>
     </div>
   );
 };
