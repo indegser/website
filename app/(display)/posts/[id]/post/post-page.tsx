@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 
-import { Feedback } from './feedback/Feedback';
-import { PostRouter } from './post-router';
-
 import { PageContainer } from '@/components/atoms/container';
 import { Post } from '@/lib/sanity';
+import { PortableText } from '@portabletext/react';
+import { Feedback } from './feedback/Feedback';
 import { PostHeadline } from './post-headline';
+import { PostRouter } from './post-router';
 
 interface Props {
   post: Post;
@@ -19,7 +19,7 @@ export const PostPage = ({ post }: Props) => {
       </Suspense>
       <PostHeadline post={post} />
       <PageContainer>
-        {/* <NotionContent id={id} /> */}
+        <PortableText value={post.body} />
         <Feedback />
       </PageContainer>
     </>

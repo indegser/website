@@ -1,7 +1,9 @@
-import { Post, postSchema, sanityClient } from '@/lib/sanity';
+import { isProduction } from '@/lib/constants';
+import { Post, postSchema, sanityClient, urlForImage } from '@/lib/sanity';
 import groq from 'groq';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { PostPage } from './content/post-page';
+import { PostPage } from './post/post-page';
 
 export const revalidate = 3600; // 1-hour.
 
@@ -9,46 +11,58 @@ type Props = {
   params: { id: string };
 };
 
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const { id } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = params;
 
-//   try {
-//     const { cover, properties } = await notionApi.retrievePage(id);
-//     const title = notionUtils.getPlainText(properties.Title);
-//     const excerpt = notionUtils.getPlainText(properties.Description);
-//     const coverUrl = notionUtils.getNotionFileUrl(cover);
+  try {
+    const data =
+      await sanityClient.fetch<Post>(groq`*[_type=='post' && _id=='${id}'][0] {
+    title,
+    excerpt,
+    cover,
+  }`);
 
-//     return {
-//       title,
-//       description: excerpt,
-//       openGraph: {
-//         title,
-//         description: excerpt || '',
-//         type: 'article',
-//         siteName: 'Indegser',
-//         images: coverUrl ? [coverUrl] : [],
-//       },
-//       alternates: {
-//         canonical: `/content/${id}`,
-//       },
-//       twitter: {
-//         card: 'summary_large_image',
-//       },
-//     };
-//   } catch (err) {
-//     return {};
-//   }
-// }
+    const { title, excerpt, cover } = postSchema
+      .pick({ title: true, excerpt: true, cover: true })
+      .required()
+      .parse(data);
+    const coverUrl = urlForImage(cover).width(1200).url();
 
-// export const generateStaticParams = async () => {
-//   const { results } = await notionApi.queryDatabase({
-//     limit: isProduction ? 10 : 1,
-//   });
+    return {
+      title,
+      description: excerpt,
+      openGraph: {
+        title,
+        description: excerpt || '',
+        type: 'article',
+        siteName: 'Indegser',
+        images: coverUrl ? [coverUrl] : [],
+      },
+      alternates: {
+        canonical: `/content/${id}`,
+      },
+      twitter: {
+        card: 'summary_large_image',
+      },
+    };
+  } catch (err) {
+    return {};
+  }
+}
 
-//   return results.map((page) => ({
-//     id: page.id,
-//   }));
-// };
+export const generateStaticParams = async () => {
+  const data = await sanityClient.fetch<Post[]>(groq`
+    *[_type=='post'][0...${isProduction ? 10 : 1}] {
+      _id
+    }
+  `);
+
+  const posts = postSchema.pick({ _id: true }).required().array().parse(data);
+
+  return posts.map((post) => ({
+    id: post._id,
+  }));
+};
 
 export default async function Page({ params: { id } }: Props) {
   try {
@@ -64,7 +78,7 @@ export default async function Page({ params: { id } }: Props) {
 
     return <PostPage post={post} />;
   } catch (err) {
-    console.log(err);
+    console.warn(err);
     return notFound();
   }
 }
