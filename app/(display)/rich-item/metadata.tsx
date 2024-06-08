@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const Metadata = ({ post }: Props) => {
-  const { publishedAt, categories } = post;
+  const { publishedAt, categories = [] } = post;
 
   const date = dayjs(publishedAt).format('MMMM D, YYYY');
 

@@ -17,7 +17,7 @@ export const RichItem = ({ post }: Props) => {
   return (
     <article className="grid auto-rows-max gap-3">
       <Link href={href}>
-        <Thumbnail cover={cover} alt={title} />
+        <Thumbnail cover={cover} alt={title!} />
       </Link>
       <div className="grid gap-2">
         <Link href={href}>

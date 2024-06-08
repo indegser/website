@@ -1,13 +1,9 @@
-import takeRightWhile from 'lodash-es/takeRightWhile';
-
 import { BookmarkBlock } from './bookmark/BookmarkBlock';
-import { BulletedListItemBlock } from './BulletedListItemBlock';
 import { CalloutBlock } from './callout-block';
 import { CodeBlock } from './CodeBlock';
 import { DividerBlock } from './DividerBlock';
 import { HeadingBlock } from './HeadingBlock';
 import { ImageBlock } from './ImageBlock';
-import { NumberedListItemBlock } from './NumberedListItemBlock';
 import { QuoteBlock } from './QuoteBlock';
 import { TocBlock } from './TocBlock';
 import { VideoBlock } from './VideoBlock';
@@ -61,29 +57,6 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
         return (
           <PageContent style={styleProps}>
             <HeadingBlock level={3} heading={block.heading_3} />
-          </PageContent>
-        );
-      }
-      case 'numbered_list_item': {
-        const marker = takeRightWhile(
-          blocks.slice(0, index),
-          (result) => result.type === 'numbered_list_item',
-        ).length;
-
-        return (
-          <PageContent style={styleProps}>
-            <NumberedListItemBlock
-              depth={depth}
-              block={block}
-              marker={marker}
-            />
-          </PageContent>
-        );
-      }
-      case 'bulleted_list_item': {
-        return (
-          <PageContent style={styleProps}>
-            <BulletedListItemBlock depth={depth} block={block} />
           </PageContent>
         );
       }
