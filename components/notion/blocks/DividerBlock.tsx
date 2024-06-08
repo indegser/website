@@ -1,4 +1,4 @@
-import { PageContent } from '@/components/atoms/container';
+import { PageContent } from '@/components/atoms/page-container';
 
 export const DividerBlock = () => {
   return (

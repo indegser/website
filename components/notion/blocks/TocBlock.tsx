@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { PageContent } from '@/components/atoms/container';
+import { PageContent } from '@/components/atoms/page-container';
 import { BlockType } from '@/lib/notion/notion.types';
 import { RichText } from 'components/notion/RichText';
 

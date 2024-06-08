@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import { PageContainer } from '@/components/atoms/container';
+import { PageContainer } from '@/components/atoms/page-container';
 import { Post } from '@/lib/sanity';
 import { PortableText } from '@portabletext/react';
 import { BulletListItem } from './components/bullet-list-item';

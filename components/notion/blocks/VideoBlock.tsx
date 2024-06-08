@@ -5,7 +5,7 @@ import getYouTubeID from 'get-youtube-id';
 import { useMemo } from 'react';
 import YouTube from 'react-youtube';
 
-import { PageContent } from '@/components/atoms/container';
+import { PageContent } from '@/components/atoms/page-container';
 
 interface Props {
   video: VideoBlockObjectResponse['video'];

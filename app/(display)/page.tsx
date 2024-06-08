@@ -1,5 +1,5 @@
 import { RichItem } from '@/app/(display)/rich-item';
-import { PageContainer } from '@/components/atoms/container';
+import { PageContainer } from '@/components/atoms/page-container';
 import { sanityClient } from '@/lib/sanity';
 import { postFeedSchema } from '@/lib/sanity/types';
 import groq from 'groq';
