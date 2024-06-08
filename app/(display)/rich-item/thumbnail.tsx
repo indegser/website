@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { PostFeed, urlForImage } from '@/lib/sanity';
+import { PostFeed, getImageDimensions, urlForImage } from '@/lib/sanity';
 import { breakPoints } from 'components/breakPoints';
 
 interface Props {
@@ -12,9 +12,10 @@ interface Props {
 
 export const Thumbnail = (props: Props) => {
   const { cover, alt } = props;
+  const { width, height, aspectRatio } = getImageDimensions(cover?.asset!);
 
   return (
-    <div className="relative aspect-square h-auto w-full bg-muted">
+    <div className="relative bg-muted" style={{ aspectRatio }}>
       {cover ? (
         <Image
           src={urlForImage(cover).width(500).url()}

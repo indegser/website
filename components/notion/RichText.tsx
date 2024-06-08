@@ -3,7 +3,6 @@ import { Fragment, ReactElement, ReactNode } from 'react';
 import { toArray } from 'react-emoji-render';
 
 import { convertApiColorToStyleProps } from './convertApiColorToStyleProps';
-import { RichTextWithLink } from './RichTextWithLink';
 
 import { RichTextItemResponse } from '@/lib/notion';
 
@@ -37,50 +36,48 @@ export const RichText = ({ data, shouldRenderPlainText = false }: Props) => {
             const Tag = annotations.code ? 'code' : 'span';
 
             return (
-              <RichTextWithLink key={i} link={link}>
-                <Tag
-                  className={clsx(
-                    'inline',
-                    'whitespace-pre-line',
-                    annotations.code && [
-                      'rounded-sm',
-                      'text-xs',
-                      'px-1',
-                      'py-0.5',
-                      'text-rose-500',
-                      'bg-gray-100',
-                      'dark:bg-gray-500',
-                      'dark:text-rose-100',
-                    ],
-                  )}
-                  style={{
-                    fontWeight: annotations.bold ? 700 : undefined,
-                    fontStyle: annotations.italic ? 'italic' : undefined,
-                    textDecorationLine: annotations.underline
-                      ? 'underline'
-                      : undefined,
-                    textDecoration: annotations.strikethrough
-                      ? 'line-through'
-                      : undefined,
-                    ...convertApiColorToStyleProps(color),
-                  }}
-                >
-                  {children.map((child, index) => {
-                    if (isReactElement(child)) {
-                      return (
-                        <span
-                          key={index}
-                          className="font-emoji whitespace-nowrap text-base leading-none"
-                        >
-                          {child.props.children}
-                        </span>
-                      );
-                    }
+              <Tag
+                className={clsx(
+                  'inline',
+                  'whitespace-pre-line',
+                  annotations.code && [
+                    'rounded-sm',
+                    'text-xs',
+                    'px-1',
+                    'py-0.5',
+                    'text-rose-500',
+                    'bg-gray-100',
+                    'dark:bg-gray-500',
+                    'dark:text-rose-100',
+                  ],
+                )}
+                style={{
+                  fontWeight: annotations.bold ? 700 : undefined,
+                  fontStyle: annotations.italic ? 'italic' : undefined,
+                  textDecorationLine: annotations.underline
+                    ? 'underline'
+                    : undefined,
+                  textDecoration: annotations.strikethrough
+                    ? 'line-through'
+                    : undefined,
+                  ...convertApiColorToStyleProps(color),
+                }}
+              >
+                {children.map((child, index) => {
+                  if (isReactElement(child)) {
+                    return (
+                      <span
+                        key={index}
+                        className="font-emoji whitespace-nowrap text-base leading-none"
+                      >
+                        {child.props.children}
+                      </span>
+                    );
+                  }
 
-                    return <Fragment key={index}>{child}</Fragment>;
-                  })}
-                </Tag>
-              </RichTextWithLink>
+                  return <Fragment key={index}>{child}</Fragment>;
+                })}
+              </Tag>
             );
           }
           default:

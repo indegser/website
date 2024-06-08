@@ -24,7 +24,7 @@ export const postSchema = z
     excerpt: z.string(),
     cover: refSchema,
     body: z.array(z.any()),
-    categories: z.array(categorySchema),
+    categories: z.array(categorySchema).nullable(),
     publishedAt: z.coerce.date(),
   })
   .partial();
