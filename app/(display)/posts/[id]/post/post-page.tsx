@@ -7,6 +7,7 @@ import { BulletListItem } from './components/bullet-list-item';
 import { NumberListItem } from './components/number-list-item';
 import { PostImage } from './components/post-image';
 import { PostLink } from './components/post-link';
+import { PostLinkPreview } from './components/post-link-preview';
 import { Feedback } from './feedback/Feedback';
 import { PostHeadline } from './post-headline';
 import { PostRouter } from './post-router';
@@ -37,6 +38,7 @@ export const PostPage = ({ post }: Props) => {
               },
               types: {
                 image: PostImage,
+                linkPreview: PostLinkPreview,
               },
               block: {
                 normal: ({ children, ...props }) => {

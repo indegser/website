@@ -1,31 +1,25 @@
-import Image from 'next/image';
-
 import { Caption } from './Caption';
 
 import { PageContent } from '@/components/atoms/page-container';
 import { BlockType } from '@/lib/notion/notion.types';
-import { notion } from 'lib/notion';
-import { uploadImage } from 'lib/utils/image/create-image';
 
 interface Props {
   block: Extract<BlockType, { type: 'image' }>;
 }
 
 const getMetadata = async (url: string, blockId: string) => {
-  const result = await uploadImage(url);
-
-  if (url !== result) {
-    await notion.blocks.update({
-      block_id: blockId,
-      image: {
-        external: {
-          url: result,
-        },
-      },
-    });
-  }
-
-  return result;
+  // const result = await uploadImage(url);
+  // if (url !== result) {
+  //   await notion.blocks.update({
+  //     block_id: blockId,
+  //     image: {
+  //       external: {
+  //         url: result,
+  //       },
+  //     },
+  //   });
+  // }
+  // return result;
 };
 
 export const ImageBlock = async ({ block }: Props) => {
@@ -39,11 +33,8 @@ export const ImageBlock = async ({ block }: Props) => {
     url = block.image.external.url;
   }
 
-  const metadata = await getMetadata(url, block.id);
-
-  if (!url || !metadata || typeof metadata == 'string') return null;
-
-  const { width, height } = metadata;
+  const width = 1;
+  const height = 1;
   const { caption } = block.image;
 
   return (
@@ -53,14 +44,7 @@ export const ImageBlock = async ({ block }: Props) => {
           <div
             className="relative w-full"
             style={{ aspectRatio: `${width} / ${height}` }}
-          >
-            <Image
-              src={metadata}
-              alt=""
-              fill
-              className="block object-cover md:rounded-md"
-            />
-          </div>
+          ></div>
         </div>
         <Caption caption={caption} />
       </div>

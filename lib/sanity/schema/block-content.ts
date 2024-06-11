@@ -60,9 +60,6 @@ export default defineType({
         ],
       },
     }),
-    // You can add additional types here. Note that you can't use
-    // primitive types such as 'string' and 'number' in the same array
-    // as a block type.
     defineArrayMember({
       type: 'image' as const,
       options: { hotspot: true },
@@ -73,6 +70,9 @@ export default defineType({
           title: 'Alternative Text',
         },
       ],
+    }),
+    defineArrayMember({
+      type: 'linkPreview' as const,
     }),
   ],
 });

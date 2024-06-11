@@ -1,8 +1,7 @@
 import 'server-only';
 
 import ogs from 'open-graph-scraper';
-
-import { supabase } from 'lib/supabase';
+import { LinkPreview } from '../sanity';
 
 const parseUrl = (originalUrl: string, url: string) => {
   if (!url) return null;
@@ -16,31 +15,16 @@ const parseUrl = (originalUrl: string, url: string) => {
   return url;
 };
 
-const hasCachedVersion = async (url: string) => {
-  const { data } = await supabase
-    .from('link_previews')
-    .select()
-    .eq('id', url)
-    .maybeSingle();
-
-  return data;
-};
-
 export const linkPreview = async (url: string) => {
-  const cachedVersion = await hasCachedVersion(url);
-
-  if (cachedVersion) {
-    return cachedVersion;
-  }
-
   const result = await ogs({
     url,
     fetchOptions: {
       headers: {
         'user-agent':
-          'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
+          'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
       },
     },
+    timeout: 10000,
   });
 
   if (result.error) {
@@ -58,15 +42,12 @@ export const linkPreview = async (url: string) => {
 
   imageUrl = parseUrl(url, imageUrl) || '';
 
-  const openGraph = {
-    id: url,
-    url,
+  const openGraph: LinkPreview = {
+    link: url,
     title: ogTitle,
     description: ogDescription,
-    image_url: imageUrl,
+    imageUrl,
   };
-
-  await supabase.from('link_previews').upsert(openGraph).select().maybeSingle();
 
   return openGraph;
 };

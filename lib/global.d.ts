@@ -9,5 +9,6 @@ declare namespace NodeJS {
     NEXT_PUBLIC_AMPLITUDE_KEY: string;
     NOTION_KEY: string;
     EDGE_CONFIG: string;
+    SANITY_TOKEN: string;
   }
 }

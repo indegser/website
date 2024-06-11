@@ -8,4 +8,5 @@ export const sanityClient = createClient({
   apiVersion,
   useCdn,
   perspective: 'published',
+  token: process.env.SANITY_TOKEN,
 });

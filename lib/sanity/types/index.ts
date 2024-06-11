@@ -17,6 +17,15 @@ export const categorySchema = z.object({
   title: z.string(),
 });
 
+export const linkPreviewSchema = z
+  .object({
+    link: z.string(),
+    imageUrl: z.string(),
+    title: z.string(),
+    description: z.string(),
+  })
+  .partial();
+
 export const postSchema = z
   .object({
     _id: z.string(),
@@ -33,3 +42,4 @@ export const postFeedSchema = postSchema.omit({});
 
 export type Post = z.infer<typeof postSchema>;
 export type PostFeed = z.infer<typeof postFeedSchema>;
+export type LinkPreview = z.infer<typeof linkPreviewSchema>;
