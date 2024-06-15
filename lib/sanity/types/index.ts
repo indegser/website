@@ -1,3 +1,4 @@
+import type { Image } from 'sanity';
 import z from 'zod';
 
 export const imageSchema = z.object({
@@ -49,3 +50,4 @@ export type Post = z.infer<typeof postSchema>;
 export type PostFeed = z.infer<typeof postFeedSchema>;
 export type LinkPreview = z.infer<typeof linkPreviewSchema>;
 export type Code = z.infer<typeof codeSchema>;
+export type SanityImage = Image;
