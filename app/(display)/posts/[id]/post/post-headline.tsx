@@ -1,4 +1,4 @@
-import { PageContent } from '@/components/atoms/page-container';
+import { PageContainer, PageContent } from '@/components/atoms/page-container';
 
 import { Post } from '@/lib/sanity';
 import { Balancer } from 'components/Balancer';
@@ -11,19 +11,19 @@ export const PostHeadline = async ({ post }: Props) => {
   const { title, excerpt } = post;
 
   return (
-    <section className="py-10">
+    <PageContainer className="py-10">
       <PageContent>
-        <h1 className="my-0 break-keep py-4 text-3xl font-bold md:text-5xl">
+        <h1 className="my-0 break-keep py-4 text-4xl font-bold md:text-5xl">
           <Balancer>
             <span className="text-gray-950">{title}</span>
           </Balancer>
         </h1>
         <div>
-          <Balancer>
-            <h4 className="break-keep">{excerpt}</h4>
-          </Balancer>
+          <h4 className="break-keep">
+            <Balancer>{excerpt}</Balancer>
+          </h4>
         </div>
       </PageContent>
-    </section>
+    </PageContainer>
   );
 };

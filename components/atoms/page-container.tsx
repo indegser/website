@@ -1,9 +1,16 @@
+import { cn } from '@/lib/utils';
 import { HTMLProps } from 'react';
 
-export const PageContainer = (props: HTMLProps<HTMLDivElement>) => {
+export const PageContainer = ({
+  className,
+  ...props
+}: HTMLProps<HTMLDivElement>) => {
   return (
     <div
-      className="mx-auto box-content max-w-5xl overflow-x-hidden px-5"
+      className={cn(
+        'mx-auto box-content max-w-5xl overflow-x-hidden px-5',
+        className,
+      )}
       {...props}
     />
   );
