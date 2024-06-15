@@ -18,7 +18,7 @@ export const PostLinkPreview = async ({ value }: Props) => {
             <div className="line-clamp-1 text-sm text-gray-900 dark:text-gray-400">
               {title}
             </div>
-            <div className="line-clamp-1 text-xs text-gray-500 dark:text-gray-500 md:line-clamp-2">
+            <div className="line-clamp-1 text-xs text-gray-500 dark:text-gray-500">
               {description}
             </div>
             <div className="line-clamp-1 text-xs text-gray-700 dark:text-gray-600">

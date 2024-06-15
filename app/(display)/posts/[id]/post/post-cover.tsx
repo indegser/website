@@ -20,7 +20,7 @@ export const PostCover = ({ image, alt }: Props) => {
 
   return (
     <div className="absolute inset-0">
-      <Motion style={{ y }} className="h-full w-full">
+      <div className="h-full w-full">
         <MotionImage
           src={src}
           alt={alt}
@@ -31,10 +31,9 @@ export const PostCover = ({ image, alt }: Props) => {
             y,
           }}
         ></MotionImage>
-      </Motion>
+      </div>
     </div>
   );
 };
 
-const Motion = motion.div;
 const MotionImage = motion(Image);
