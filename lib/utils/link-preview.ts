@@ -31,7 +31,7 @@ export const linkPreview = async (url: string) => {
     return null;
   }
 
-  const { ogTitle, ogDescription, ogImage, favicon } = result.result as any;
+  const { ogTitle, ogDescription, ogImage } = result.result as any;
 
   let imageUrl: string = '';
   if (Array.isArray(ogImage)) {
