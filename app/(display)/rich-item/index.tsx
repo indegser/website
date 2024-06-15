@@ -15,11 +15,11 @@ export const RichItem = ({ post }: Props) => {
   const href = `/posts/${_id}`;
 
   return (
-    <article className="grid auto-rows-max gap-3">
-      <Link href={href}>
+    <article className="flex gap-5 md:gap-6">
+      <Link href={href} className="w-1/4 shrink-0">
         <Thumbnail cover={cover} alt={title!} />
       </Link>
-      <div className="grid gap-2">
+      <div className="flex flex-col gap-2">
         <Link href={href}>
           <div className="grid gap-1">
             <div className="font-medium leading-tight">
@@ -32,7 +32,7 @@ export const RichItem = ({ post }: Props) => {
             </div>
           </div>
         </Link>
-        <div className="mt-4 text-xs text-muted-foreground text-opacity-75">
+        <div className="text-xs text-muted-foreground text-opacity-75">
           <Metadata post={post} />
         </div>
       </div>
