@@ -12,6 +12,11 @@ export const refSchema = z.object({
   }),
 });
 
+export const codeSchema = z.object({
+  language: z.string(),
+  code: z.string(),
+});
+
 export const categorySchema = z.object({
   _id: z.string(),
   title: z.string(),
@@ -43,3 +48,4 @@ export const postFeedSchema = postSchema.omit({});
 export type Post = z.infer<typeof postSchema>;
 export type PostFeed = z.infer<typeof postFeedSchema>;
 export type LinkPreview = z.infer<typeof linkPreviewSchema>;
+export type Code = z.infer<typeof codeSchema>;

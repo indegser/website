@@ -1,44 +1,31 @@
-import { colors } from 'components/theme';
+import { colors } from '@/components/theme';
+import { Code } from '@/lib/sanity';
+import { PortableTextComponentProps } from 'next-sanity';
+import { PrismLight as Highlighter } from 'react-syntax-highlighter';
+import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
+
+Highlighter.registerLanguage('typescript', tsx);
+
+interface Props extends PortableTextComponentProps<Code> {}
+
+export const PostCode = ({ value }: Props) => {
+  const { language, code } = value;
+
+  return (
+    <div className="whitespace-pre rounded-sm bg-gray-50 px-4 pb-6 pt-3 font-mono text-sm">
+      <Highlighter
+        style={codeStyle}
+        useInlineStyles
+        customStyle={{ overflowX: 'scroll', background: 'transparent' }}
+        language={language}
+      >
+        {code}
+      </Highlighter>
+    </div>
+  );
+};
 
 export const codeStyle = {
-  // 'pre[class*="language-"]::-moz-selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // 'pre[class*="language-"] ::-moz-selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // 'code[class*="language-"]::-moz-selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // 'code[class*="language-"] ::-moz-selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // 'pre[class*="language-"]::selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // 'pre[class*="language-"] ::selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // 'code[class*="language-"]::selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // 'code[class*="language-"] ::selection': {
-  //   textShadow: "none",
-  //   background: "#b3d4fc",
-  // },
-  // ':not(pre) > code[class*="language-"]': {
-  //   background: "#f5f2f0",
-  //   padding: ".1em",
-  //   borderRadius: ".3em",
-  //   whiteSpace: "normal",
-  // },
   comment: {
     color: colors.gray[500],
   },

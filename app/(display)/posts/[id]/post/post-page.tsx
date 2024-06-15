@@ -5,6 +5,7 @@ import { Post } from '@/lib/sanity';
 import { PortableText } from '@portabletext/react';
 import { BulletListItem } from './components/bullet-list-item';
 import { NumberListItem } from './components/number-list-item';
+import { PostCode } from './components/post-code';
 import { PostImage } from './components/post-image';
 import { PostLink } from './components/post-link';
 import { PostLinkPreview } from './components/post-link-preview';
@@ -39,6 +40,7 @@ export const PostPage = ({ post }: Props) => {
               types: {
                 image: PostImage,
                 linkPreview: PostLinkPreview,
+                code: PostCode,
               },
               block: {
                 normal: ({ children, ...props }) => {

@@ -1,6 +1,4 @@
-import { BookmarkBlock } from './bookmark/BookmarkBlock';
 import { CalloutBlock } from './callout-block';
-import { CodeBlock } from './CodeBlock';
 import { DividerBlock } from './DividerBlock';
 import { HeadingBlock } from './HeadingBlock';
 import { ImageBlock } from './ImageBlock';
@@ -61,16 +59,6 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
           </PageContent>
         );
       }
-      case 'bookmark': {
-        return (
-          <PageContent style={styleProps}>
-            <BookmarkBlock
-              url={block.bookmark.url}
-              caption={block.bookmark.caption}
-            />
-          </PageContent>
-        );
-      }
       case 'quote': {
         return (
           <PageContent style={styleProps}>
@@ -84,19 +72,12 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       case 'divider': {
         return <DividerBlock />;
       }
-      case 'code': {
-        return <CodeBlock block={block} />;
-      }
       case 'table_of_contents': {
         return <TocBlock blocks={blocks} />;
       }
 
       case 'video': {
         return <VideoBlock video={block.video} />;
-      }
-
-      case 'link_preview': {
-        return <BookmarkBlock url={block.link_preview.url} />;
       }
 
       default: {
