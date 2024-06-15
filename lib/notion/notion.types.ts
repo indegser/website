@@ -50,5 +50,3 @@ export type BlockType = Extract<BlockChildrenType[number], { type: string }> & {
 
 export type RichTextType = PropertyType<'title'>['title'][number];
 export type RichTextItemResponse = Array<RichTextType>;
-export type AnnotationType = RichTextType['annotations'];
-export type AnnotationColorType = AnnotationType['color'];

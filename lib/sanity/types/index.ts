@@ -41,6 +41,7 @@ export const postSchema = z
     body: z.array(z.any()),
     categories: z.array(categorySchema).nullable(),
     publishedAt: z.coerce.date(),
+    _updatedAt: z.coerce.date(),
   })
   .partial();
 

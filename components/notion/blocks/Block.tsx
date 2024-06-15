@@ -1,6 +1,5 @@
 import { CalloutBlock } from './callout-block';
 import { DividerBlock } from './DividerBlock';
-import { HeadingBlock } from './HeadingBlock';
 import { ImageBlock } from './ImageBlock';
 
 import { QuoteBlock } from './QuoteBlock';
@@ -37,27 +36,6 @@ export const Block = ({ block, index, blocks, depth = 0 }: Props) => {
       }
       case 'image': {
         return <ImageBlock block={block} />;
-      }
-      case 'heading_1': {
-        return (
-          <PageContent style={styleProps}>
-            <HeadingBlock level={1} heading={block.heading_1} />
-          </PageContent>
-        );
-      }
-      case 'heading_2': {
-        return (
-          <PageContent style={styleProps}>
-            <HeadingBlock level={2} heading={block.heading_2} />
-          </PageContent>
-        );
-      }
-      case 'heading_3': {
-        return (
-          <PageContent style={styleProps}>
-            <HeadingBlock level={3} heading={block.heading_3} />
-          </PageContent>
-        );
       }
       case 'quote': {
         return (

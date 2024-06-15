@@ -68,9 +68,6 @@ importers:
       client-only:
         specifier: ^0.0.1
         version: 0.0.1
-      cloudinary:
-        specifier: ^1.41.0
-        version: 1.41.0
       clsx:
         specifier: ^1.2.1
         version: 1.2.1
@@ -2817,15 +2814,6 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
-  cloudinary-core@2.13.0:
-    resolution: {integrity: sha512-Nt0Q5I2FtenmJghtC4YZ3MZZbGg1wLm84SsxcuVwZ83OyJqG9CNIGp86CiI6iDv3QobaqBUpOT7vg+HqY5HxEA==}
-    peerDependencies:
-      lodash: '>=4.0'
-
-  cloudinary@1.41.0:
-    resolution: {integrity: sha512-qFf2McjvILJITePf4VF1PrY/8c2zy+/q5FVV6V3VWrP/gpIZsusPqXL4QZ6ZKXibPRukzMYqsQEhaSQgJHKKow==}
-    engines: {node: '>=0.6'}
-
   clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
@@ -2931,9 +2919,6 @@ packages:
 
   core-js-compat@3.37.1:
     resolution: {integrity: sha512-9TNiImhKvQqSUkOvk/mMRZzOANTiEVC7WaBNhHcKM7x+/5E1l5NvsysR19zuDQScE8k+kfQXWRN3AtS/eOSHpg==}
-
-  core-js@3.34.0:
-    resolution: {integrity: sha512-aDdvlDder8QmY91H88GzNi9EtQi2TjvQhpCX6B1v/dAZHU1AuLgHvRh54RiOerpEhEW46Tkf+vgAViB/CWC0ag==}
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -5287,10 +5272,6 @@ packages:
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
-
-  q@1.5.1:
-    resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
-    engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
 
   querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
@@ -9585,17 +9566,6 @@ snapshots:
 
   clone@1.0.4: {}
 
-  cloudinary-core@2.13.0(lodash@4.17.21):
-    dependencies:
-      lodash: 4.17.21
-
-  cloudinary@1.41.0:
-    dependencies:
-      cloudinary-core: 2.13.0(lodash@4.17.21)
-      core-js: 3.34.0
-      lodash: 4.17.21
-      q: 1.5.1
-
   clsx@1.2.1: {}
 
   clsx@2.0.0: {}
@@ -9703,8 +9673,6 @@ snapshots:
   core-js-compat@3.37.1:
     dependencies:
       browserslist: 4.23.0
-
-  core-js@3.34.0: {}
 
   core-util-is@1.0.3: {}
 
@@ -12216,8 +12184,6 @@ snapshots:
   punycode@2.1.1: {}
 
   punycode@2.3.1: {}
-
-  q@1.5.1: {}
 
   querystringify@2.2.0: {}
 
