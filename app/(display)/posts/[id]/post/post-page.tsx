@@ -53,6 +53,13 @@ export const PostPage = ({ post }: Props) => {
               },
               marks: {
                 link: PostLink,
+                code: ({ children }) => {
+                  return (
+                    <code className="rounded-sm bg-gray-100 px-1 py-0.5 text-xs text-rose-500 dark:bg-gray-500 dark:text-rose-100">
+                      {children}
+                    </code>
+                  );
+                },
               },
             }}
           />
