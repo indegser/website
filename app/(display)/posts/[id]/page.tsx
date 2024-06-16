@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PostPage } from './post/post-page';
 
-export const revalidate = 3600; // 1-hour.
+export const revalidate = 60; // 1-minute.
 
 type Props = {
   params: { id: string };
