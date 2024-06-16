@@ -22,7 +22,7 @@ export const RichItem = ({ post }: Props) => {
       <div className="flex flex-col gap-2">
         <Link href={href}>
           <div className="grid gap-1">
-            <div className="font-medium leading-tight">
+            <div className="break-keep font-medium leading-tight">
               <Balancer>{title}</Balancer>
             </div>
             <div className="grid grid-flow-col auto-rows-max items-center gap-x-3">
