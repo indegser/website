@@ -6,8 +6,6 @@ export const environment =
 export const isProduction = environment === 'production';
 export const isServer = typeof window == 'undefined';
 
-export const CDN_ORIGIN = process.env.NEXT_PUBLIC_SUPABASE_URL;
-
 export const SITE_URL =
   environment === 'production'
     ? 'https://www.indegser.com'

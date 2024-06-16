@@ -1,7 +1,6 @@
 import * as sdk from '@amplitude/analytics-browser';
 
 import { isProduction, isServer } from 'lib/constants';
-import { supabase } from '../supabase';
 
 const enrichPageUrlPlugin = (): sdk.Types.EnrichmentPlugin => {
   return {
@@ -28,9 +27,7 @@ const enrichPageUrlPlugin = (): sdk.Types.EnrichmentPlugin => {
 async function init() {
   if (isServer) return;
 
-  const { data } = await supabase.auth.getUser();
-  const userId = data.user?.email || '';
-  sdk.init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY, userId, {
+  sdk.init(process.env.NEXT_PUBLIC_AMPLITUDE_KEY, undefined, {
     defaultTracking: {
       formInteractions: false,
     },

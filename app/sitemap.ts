@@ -1,12 +1,16 @@
-import { notionApi } from '@/lib/notion/notion.api';
+import { postSchema, sanityClient } from '@/lib/sanity';
+import groq from 'groq';
 import { getURL } from 'lib/constants';
 import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { results } = await notionApi.queryDatabase();
+  const data = await sanityClient.fetch(
+    groq`*[_type == 'post'] { _id, _updatedAt }`,
+  );
+  const posts = postSchema.array().parse(data);
 
-  return results.map((page) => ({
-    url: `${getURL()}/content/${page.id}`,
-    lastModified: page.last_edited_time,
+  return posts.map((post) => ({
+    url: `${getURL()}/posts/${post._id}`,
+    lastModified: post._updatedAt,
   }));
 }

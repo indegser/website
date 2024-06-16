@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import { LogoIcon } from './logo-icon';
 
-import { PageContainer } from 'components/atoms/Container';
-import { Auth } from './auth';
+import { PageContainer } from '@/components/atoms/page-container';
+import { SetTheme } from './set-theme';
 
 export const Nav = () => {
   return (
@@ -16,7 +16,7 @@ export const Nav = () => {
               Indegser
             </div>
           </Link>
-          <Auth />
+          <SetTheme />
         </nav>
       </PageContainer>
     </div>

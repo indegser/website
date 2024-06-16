@@ -13,18 +13,15 @@ export const SetTheme = () => {
   const { setTheme, theme } = useTheme();
 
   return (
-    <div className="flex h-8 items-center justify-between px-2 text-sm">
-      <div>Theme</div>
-      <Select value={theme} onValueChange={setTheme}>
-        <SelectTrigger className="h-7 w-[100px] text-xs">
-          <SelectValue defaultValue={theme} />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="light">Light</SelectItem>
-          <SelectItem value="dark">Dark</SelectItem>
-          <SelectItem value="system">System</SelectItem>
-        </SelectContent>
-      </Select>
-    </div>
+    <Select value={theme} onValueChange={setTheme}>
+      <SelectTrigger className="h-7 w-auto pr-1 text-xs">
+        <SelectValue defaultValue={theme} />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="light">Light</SelectItem>
+        <SelectItem value="dark">Dark</SelectItem>
+        <SelectItem value="system">System</SelectItem>
+      </SelectContent>
+    </Select>
   );
 };

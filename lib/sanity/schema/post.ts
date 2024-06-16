@@ -9,20 +9,14 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      initialValue: 'Untitled',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'string',
-    }),
-    defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      initialValue: '',
     }),
     defineField({
       name: 'cover',
