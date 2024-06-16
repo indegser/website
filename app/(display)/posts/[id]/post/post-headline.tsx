@@ -14,9 +14,7 @@ export const PostHeadline = async ({ post }: Props) => {
     <PageContainer className="py-10">
       <PageContent>
         <h1 className="my-0 break-keep py-4 text-4xl font-bold md:text-5xl">
-          <Balancer>
-            <span className="text-gray-950">{title}</span>
-          </Balancer>
+          <Balancer>{title}</Balancer>
         </h1>
         <div>
           <h4 className="break-keep">
