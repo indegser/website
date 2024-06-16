@@ -43,6 +43,10 @@ export const PostPage = ({ post }: Props) => {
                 code: PostCode,
               },
               block: {
+                h1: (props) => <h1 className="mt-4 py-1">{props.children}</h1>,
+                h2: (props) => <h2 className="mt-4 py-1">{props.children}</h2>,
+                h3: (props) => <h3 className="mt-4 py-1">{props.children}</h3>,
+                h4: (props) => <h4 className="mt-4 py-1">{props.children}</h4>,
                 normal: ({ children, ...props }) => {
                   return (
                     <div className="mt-4 py-1" data-block-id={props.value._key}>
