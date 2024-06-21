@@ -16,11 +16,10 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const body = await fetch(url).then((res) => res.body);
+    const body = await fetch(url).then((res) => res.blob());
     if (!body) return;
 
-    const imageStream = body as unknown as NodeJS.ReadableStream;
-    const result = await sanityClient.assets.upload('image', imageStream, {
+    const result = await sanityClient.assets.upload('image', body, {
       preserveFilename: true,
     });
 
