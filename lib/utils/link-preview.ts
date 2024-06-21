@@ -1,6 +1,6 @@
 import 'server-only';
 
-import ogs from 'open-graph-scraper';
+import puppeteer from 'puppeteer';
 import { LinkPreview } from '../sanity';
 
 const parseUrl = (originalUrl: string, url: string) => {
@@ -16,37 +16,28 @@ const parseUrl = (originalUrl: string, url: string) => {
 };
 
 export const linkPreview = async (url: string) => {
-  const result = await ogs({
-    url,
-    fetchOptions: {
-      headers: {
-        'user-agent':
-          'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-      },
-    },
-    timeout: 10000,
-  });
+  // Launch the browser and open a new blank page
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
 
-  if (result.error) {
-    return null;
-  }
+  // Navigate the page to a URL.
+  await page.goto(url);
+  const title = await page.waitForSelector('title');
 
-  const { ogTitle, ogDescription, ogImage } = result.result as any;
+  // let imageUrl: string = '';
+  // if (Array.isArray(ogImage)) {
+  //   imageUrl = ogImage[0].url;
+  // } else if (ogImage) {
+  //   imageUrl = ogImage.url;
+  // }
 
-  let imageUrl: string = '';
-  if (Array.isArray(ogImage)) {
-    imageUrl = ogImage[0].url;
-  } else if (ogImage) {
-    imageUrl = ogImage.url;
-  }
-
-  imageUrl = parseUrl(url, imageUrl) || '';
+  // imageUrl = parseUrl(url, imageUrl) || '';
 
   const openGraph: LinkPreview = {
     link: url,
-    title: ogTitle,
-    description: ogDescription,
-    imageUrl,
+    title: (await title?.evaluate((e) => e.textContent)) || '',
+    description: '',
+    imageUrl: '',
   };
 
   return openGraph;
