@@ -51,8 +51,8 @@ importers:
         specifier: '3'
         version: 3.43.0(@babel/runtime@7.24.5)(@codemirror/lint@6.8.0)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1(@lezer/common@1.2.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@sparticuz/chromium':
-        specifier: '106'
-        version: 106.0.2
+        specifier: ^123.0.1
+        version: 123.0.1
       '@vercel/analytics':
         specifier: ^1.0.1
         version: 1.0.1
@@ -2194,9 +2194,9 @@ packages:
       svelte:
         optional: true
 
-  '@sparticuz/chromium@106.0.2':
-    resolution: {integrity: sha512-YDbwmfyzLi2WqVjAONPjxlCxAfLPjx4TE7KdDNOyITDGx6KAktgpZ9qab77ZRU/6mmCwSdg+QO+OGQTXOEY/RA==}
-    engines: {node: '>= 14'}
+  '@sparticuz/chromium@123.0.1':
+    resolution: {integrity: sha512-RPrA99xrddbXXZjhUH1WZkTCK3QDQ77t/0y+vULtiW1uAlWLBxorxGnNTuzBDk6eNolxOVFrXZ2aoAN+/eB5TA==}
+    engines: {node: '>= 16'}
 
   '@styled/typescript-styled-plugin@1.0.0':
     resolution: {integrity: sha512-TGAZrTPPglyzdO6mWyC1QWNN3G2zZHy2/YrPGE2aie06p1MgtyEWc3GXUa5Xkb/pH7ftinX63mbQTipzVjrTRw==}
@@ -8994,9 +8994,12 @@ snapshots:
       '@sanity/client': 6.18.2(debug@4.3.4)
       next: 14.2.4(@babel/core@7.24.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  '@sparticuz/chromium@106.0.2':
+  '@sparticuz/chromium@123.0.1':
     dependencies:
-      tar-fs: 2.1.1
+      follow-redirects: 1.15.6(debug@3.2.7)
+      tar-fs: 3.0.5
+    transitivePeerDependencies:
+      - debug
 
   '@styled/typescript-styled-plugin@1.0.0':
     dependencies:

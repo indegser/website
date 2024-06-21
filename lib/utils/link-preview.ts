@@ -19,7 +19,9 @@ const getBrowser = async () => {
   return puppeteer.launch({
     args: [...chrome.args, '--hide-scrollbars', '--disable-web-security'],
     defaultViewport: chrome.defaultViewport,
-    executablePath: await chrome.executablePath(),
+    executablePath: chrome.executablePath
+      ? await chrome.executablePath()
+      : undefined,
     headless: true,
     ignoreHTTPSErrors: true,
   });
