@@ -9,6 +9,9 @@ const nextConfig = {
   env: {
     VERCEL_ENV: process.env.VERCEL_ENV,
   },
+  experimental: {
+    serverComponentsExternalPackages: ['chrome-aws-lambda'],
+  },
   images: {
     minimumCacheTTL: 31536000,
     loaderFile: './components/image-loader.ts',

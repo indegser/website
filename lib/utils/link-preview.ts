@@ -1,26 +1,33 @@
 import 'server-only';
 
-import puppeteer from 'puppeteer';
+import type { PuppeteerNode } from 'puppeteer';
 import { LinkPreview } from '../sanity';
 
-const parseUrl = (originalUrl: string, url: string) => {
-  if (!url) return null;
-  if (url.startsWith('//')) {
-    return `https:${url}`;
-  }
-  if (url.startsWith('/')) {
-    return new URL(originalUrl).origin + url;
-  }
+let chrome: Record<string, any> = { args: [] };
+let puppeteer: PuppeteerNode;
 
-  return url;
+if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
+  // running on the Vercel platform.
+  chrome = require('chrome-aws-lambda');
+  puppeteer = require('puppeteer-core');
+} else {
+  // running locally.
+  puppeteer = require('puppeteer');
+}
+
+const getBrowser = async () => {
+  return puppeteer.launch({
+    args: [...chrome.args, '--hide-scrollbars', '--disable-web-security'],
+    defaultViewport: chrome.defaultViewport,
+    executablePath: await chrome.executablePath,
+    headless: true,
+    ignoreHTTPSErrors: true,
+  });
 };
 
 export const linkPreview = async (url: string) => {
-  // Launch the browser and open a new blank page
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await getBrowser();
   const page = await browser.newPage();
-
-  // Navigate the page to a URL.
   await page.goto(url);
   const title = await page.waitForSelector('title');
 
