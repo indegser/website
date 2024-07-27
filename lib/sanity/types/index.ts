@@ -23,6 +23,15 @@ export const categorySchema = z.object({
   title: z.string(),
 });
 
+export const threadSchema = z
+  .object({
+    _id: z.string(),
+    _createdAt: z.string(),
+    _updatedAt: z.string(),
+    content: z.array(z.any()),
+  })
+  .partial();
+
 export const linkPreviewSchema = z
   .object({
     link: z.string(),
@@ -52,3 +61,4 @@ export type PostFeed = z.infer<typeof postFeedSchema>;
 export type LinkPreview = z.infer<typeof linkPreviewSchema>;
 export type Code = z.infer<typeof codeSchema>;
 export type SanityImage = Image;
+export type Thread = z.infer<typeof threadSchema>;

@@ -5,7 +5,7 @@ import Image from 'next/image';
 interface Props
   extends PortableTextComponentProps<LinkPreview & { image: SanityImage }> {}
 
-export const PostLinkPreview = async ({ value }: Props) => {
+export const PostLinkPreview = ({ value }: Props) => {
   const { title, description, link, image } = value;
 
   const url = urlForImage(image).width(400).fit('max').auto('format').url();

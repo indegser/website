@@ -1,7 +1,6 @@
 import 'server-only';
 
-import type { PuppeteerNode } from 'puppeteer';
-import { LinkPreview } from '../sanity';
+import type { Page, PuppeteerNode } from 'puppeteer';
 
 let chrome: Record<string, any> = { args: [] };
 let puppeteer: PuppeteerNode;
@@ -31,23 +30,46 @@ export const linkPreview = async (url: string) => {
   const browser = await getBrowser();
   const page = await browser.newPage();
   await page.goto(url);
-  const title = await page.waitForSelector('title');
 
-  // let imageUrl: string = '';
-  // if (Array.isArray(ogImage)) {
-  //   imageUrl = ogImage[0].url;
-  // } else if (ogImage) {
-  //   imageUrl = ogImage.url;
-  // }
+  const {
+    ogTitle: title,
+    ogDescription: description,
+    ogImage: imageUrl,
+  } = await getMetaTags(page);
 
-  // imageUrl = parseUrl(url, imageUrl) || '';
-
-  const openGraph: LinkPreview = {
+  return {
+    title,
+    description,
+    imageUrl,
     link: url,
-    title: (await title?.evaluate((e) => e.textContent)) || '',
-    description: '',
-    imageUrl: '',
   };
+};
 
-  return openGraph;
+const getMetaTags = async (page: Page) => {
+  await page.waitForSelector('meta[property="og:title"]');
+  const elements = await page.$$('meta[property^="og:"]');
+  const res: Record<string, string> = {};
+  for (const element of elements) {
+    const property = await element.evaluate((e) => e.getAttribute('property'));
+    const content = await element.evaluate((e) => e.getAttribute('content'));
+
+    if (!property || !content) {
+      continue;
+    }
+
+    const key = property
+      .split(':')
+      .map((v, i) => {
+        if (i > 0) {
+          return v.substring(0, 1).toUpperCase() + v.substring(1);
+        } else {
+          return v;
+        }
+      })
+      .join('');
+
+    res[key] = content;
+  }
+
+  return res;
 };
