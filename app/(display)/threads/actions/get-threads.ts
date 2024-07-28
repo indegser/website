@@ -16,7 +16,11 @@ export async function getThreads(param: z.infer<typeof paramSchema>) {
   const data = await sanityClient.fetch(
     groq`
   *[_type == 'thread' && _createdAt < $lastCreatedAt] | order(_createdAt desc)[0...$pageSize] {
-    ...
+    ...,
+    category -> {
+      title,
+      avatar
+    }
   }
   `,
     { pageSize, lastCreatedAt },

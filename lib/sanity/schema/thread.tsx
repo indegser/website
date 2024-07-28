@@ -7,6 +7,11 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'category',
+      type: 'reference',
+      to: { type: 'category' },
+    } as const),
+    defineField({
       name: 'content',
       type: 'blockContent',
     } as const),

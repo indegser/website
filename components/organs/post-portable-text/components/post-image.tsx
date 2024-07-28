@@ -9,20 +9,22 @@ export const PostImage = ({ value, isInline }: Props) => {
   const { width, height } = getImageDimensions(value.asset!);
 
   return (
-    <div className="relative w-full" style={{ aspectRatio: width / height }}>
-      <Image
-        src={urlForImage(value)
-          .width(isInline ? 100 : 800)
-          .fit('max')
-          .auto('format')
-          .url()}
-        alt=""
-        fill
-        loading="lazy"
-        style={{
-          display: isInline ? 'inline-block' : 'block',
-        }}
-      />
+    <div className="mb-4 py-1">
+      <div className="relative w-full" style={{ aspectRatio: width / height }}>
+        <Image
+          src={urlForImage(value)
+            .width(isInline ? 100 : 800)
+            .fit('max')
+            .auto('format')
+            .url()}
+          alt=""
+          fill
+          loading="lazy"
+          style={{
+            display: isInline ? 'inline-block' : 'block',
+          }}
+        />
+      </div>
     </div>
   );
 };

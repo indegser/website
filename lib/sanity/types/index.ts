@@ -18,10 +18,12 @@ export const codeSchema = z.object({
   code: z.string(),
 });
 
-export const categorySchema = z.object({
-  _id: z.string(),
-  title: z.string(),
-});
+export const categorySchema = z
+  .object({
+    _id: z.string(),
+    title: z.string(),
+  })
+  .partial();
 
 export const threadSchema = z
   .object({
@@ -29,6 +31,7 @@ export const threadSchema = z
     _createdAt: z.string(),
     _updatedAt: z.string(),
     content: z.array(z.any()),
+    category: categorySchema.nullable(),
   })
   .partial();
 
@@ -62,3 +65,4 @@ export type LinkPreview = z.infer<typeof linkPreviewSchema>;
 export type Code = z.infer<typeof codeSchema>;
 export type SanityImage = Image;
 export type Thread = z.infer<typeof threadSchema>;
+export type Category = z.infer<typeof categorySchema>;

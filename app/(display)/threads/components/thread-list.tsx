@@ -21,7 +21,7 @@ export function ThreadList() {
   const isEnd = (data?.[data.length - 1].length ?? 0) < THREAD_PAGE_SIZE;
 
   return (
-    <div className="flex flex-col gap-y-6 md:gap-y-0">
+    <div className="m-auto flex max-w-xl flex-col gap-y-6 md:gap-y-0">
       {data?.map((threads, index) => (
         <Fragment key={index}>
           {threads.map((thread) => {

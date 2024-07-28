@@ -15,8 +15,8 @@ export const PostPortableText = (props: Props) => {
       {...props}
       components={{
         list: {
-          bullet: ({ children }) => <ul className="mt-4">{children}</ul>,
-          number: ({ children }) => <ol className="mt-4">{children}</ol>,
+          bullet: ({ children }) => <ul className="mb-4">{children}</ul>,
+          number: ({ children }) => <ol className="mb-4">{children}</ol>,
         },
         listItem: {
           bullet: BulletListItem,
@@ -28,13 +28,13 @@ export const PostPortableText = (props: Props) => {
           code: PostCode,
         },
         block: {
-          h1: (props) => <h1 className="mt-4 py-1">{props.children}</h1>,
-          h2: (props) => <h2 className="mt-4 py-1">{props.children}</h2>,
-          h3: (props) => <h3 className="mt-4 py-1">{props.children}</h3>,
-          h4: (props) => <h4 className="mt-4 py-1">{props.children}</h4>,
+          h1: (props) => <h1 className="mb-4 py-1">{props.children}</h1>,
+          h2: (props) => <h2 className="mb-4 py-1">{props.children}</h2>,
+          h3: (props) => <h3 className="mb-4 py-1">{props.children}</h3>,
+          h4: (props) => <h4 className="mb-4 py-1">{props.children}</h4>,
           normal: ({ children, ...props }) => {
             return (
-              <div className="mt-4 py-1" data-block-id={props.value._key}>
+              <div className="mb-4 py-1" data-block-id={props.value._key}>
                 <p>{children}</p>
               </div>
             );

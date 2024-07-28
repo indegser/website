@@ -7,13 +7,11 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
       type: 'string',
     } as const),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      name: 'avatar',
+      type: 'image',
     } as const),
   ],
 });
