@@ -4,7 +4,7 @@
   "license": "None",
   "version": "0.2.0",
   "engines": {
-    "node": "v18.17.0"
+    "node": ">=v18.17.0"
   },
   "scripts": {
     "prepare": "husky install",
@@ -79,11 +79,11 @@
     "@types/react-syntax-highlighter": "^13.5.2",
     "autoprefixer": "^10.4.14",
     "cssnano": "^6.0.1",
-    "eslint": "8.51.0",
-    "eslint-config-next": "^13.5.4",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint": "8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-unicorn": "^55.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "postcss": "^8.4.31",

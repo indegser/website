@@ -1,7 +1,7 @@
 import { PageContainer, PageContent } from '@/components/atoms/page-container';
 
+import { Balancer } from '@/components/atoms/balancer';
 import { Post } from '@/lib/sanity';
-import { Balancer } from 'components/Balancer';
 
 interface Props {
   post: Post;
