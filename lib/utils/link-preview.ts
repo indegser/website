@@ -1,53 +1,75 @@
 import 'server-only';
 
-import ogs from 'open-graph-scraper';
-import { LinkPreview } from '../sanity';
+import type { Page, PuppeteerNode } from 'puppeteer';
 
-const parseUrl = (originalUrl: string, url: string) => {
-  if (!url) return null;
-  if (url.startsWith('//')) {
-    return `https:${url}`;
-  }
-  if (url.startsWith('/')) {
-    return new URL(originalUrl).origin + url;
-  }
+let chrome: Record<string, any> = { args: [] };
+let puppeteer: PuppeteerNode;
 
-  return url;
+if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
+  // running on the Vercel platform.
+  chrome = require('@sparticuz/chromium');
+  puppeteer = require('puppeteer-core');
+} else {
+  // running locally.
+  puppeteer = require('puppeteer');
+}
+
+const getBrowser = async () => {
+  return puppeteer.launch({
+    args: [...chrome.args, '--hide-scrollbars', '--disable-web-security'],
+    defaultViewport: chrome.defaultViewport,
+    executablePath: chrome.executablePath
+      ? await chrome.executablePath()
+      : undefined,
+    headless: true,
+    ignoreHTTPSErrors: true,
+  });
 };
 
 export const linkPreview = async (url: string) => {
-  const result = await ogs({
-    url,
-    fetchOptions: {
-      headers: {
-        'user-agent':
-          'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-      },
-    },
-    timeout: 10000,
-  });
+  const browser = await getBrowser();
+  const page = await browser.newPage();
+  await page.goto(url);
 
-  if (result.error) {
-    return null;
-  }
+  const {
+    ogTitle: title,
+    ogDescription: description,
+    ogImage: imageUrl,
+  } = await getMetaTags(page);
 
-  const { ogTitle, ogDescription, ogImage } = result.result as any;
-
-  let imageUrl: string = '';
-  if (Array.isArray(ogImage)) {
-    imageUrl = ogImage[0].url;
-  } else if (ogImage) {
-    imageUrl = ogImage.url;
-  }
-
-  imageUrl = parseUrl(url, imageUrl) || '';
-
-  const openGraph: LinkPreview = {
-    link: url,
-    title: ogTitle,
-    description: ogDescription,
+  return {
+    title,
+    description,
     imageUrl,
+    link: url,
   };
+};
 
-  return openGraph;
+const getMetaTags = async (page: Page) => {
+  await page.waitForSelector('meta[property="og:title"]');
+  const elements = await page.$$('meta[property^="og:"]');
+  const res: Record<string, string> = {};
+  for (const element of elements) {
+    const property = await element.evaluate((e) => e.getAttribute('property'));
+    const content = await element.evaluate((e) => e.getAttribute('content'));
+
+    if (!property || !content) {
+      continue;
+    }
+
+    const key = property
+      .split(':')
+      .map((v, i) => {
+        if (i > 0) {
+          return v.substring(0, 1).toUpperCase() + v.substring(1);
+        } else {
+          return v;
+        }
+      })
+      .join('');
+
+    res[key] = content;
+  }
+
+  return res;
 };

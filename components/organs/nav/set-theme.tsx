@@ -8,9 +8,17 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 export const SetTheme = () => {
+  const [isReady, setIsReady] = useState(false);
   const { setTheme, theme } = useTheme();
+
+  useEffect(() => {
+    setIsReady(true);
+  }, []);
+
+  if (!isReady) return null;
 
   return (
     <Select value={theme} onValueChange={setTheme}>

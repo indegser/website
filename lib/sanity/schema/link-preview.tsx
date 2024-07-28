@@ -1,3 +1,4 @@
+import { Input } from '@/components/ui/input';
 import { SanityImageAssetDocument } from 'next-sanity';
 import { FocusEventHandler } from 'react';
 import { ObjectInputProps, defineField, defineType, set } from 'sanity';
@@ -74,7 +75,11 @@ export default defineType({
 
       return (
         <div>
-          <input type="url" placeholder="sdf" onBlur={handleBlur} />
+          <Input
+            type="url"
+            placeholder="https://google.com"
+            onBlur={handleBlur}
+          />
         </div>
       );
     },
