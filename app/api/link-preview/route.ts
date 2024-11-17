@@ -4,6 +4,9 @@ import { NextRequest, NextResponse } from 'next/server';
 
 type ResponseData = LinkPreview;
 
+export const maxDuration = 50; // This function can run for a maximum of 50 seconds
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const url = searchParams.get('url');

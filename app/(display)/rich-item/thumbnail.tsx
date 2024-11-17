@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 
+import { breakPoints } from '@/components/break-points';
 import { PostFeed, getImageDimensions, urlForImage } from '@/lib/sanity';
-import { breakPoints } from 'components/breakPoints';
 
 interface Props {
   alt: string;
@@ -12,7 +12,7 @@ interface Props {
 
 export const Thumbnail = (props: Props) => {
   const { cover, alt } = props;
-  const { width, height, aspectRatio } = getImageDimensions(cover?.asset!);
+  const { aspectRatio } = getImageDimensions(cover?.asset!);
 
   return (
     <div className="relative bg-muted" style={{ aspectRatio }}>
@@ -23,6 +23,7 @@ export const Thumbnail = (props: Props) => {
           alt={alt}
           fill
           style={{ objectFit: 'contain' }}
+          className="object-contain"
           loader={({ width, quality = 80 }) =>
             urlForImage(cover).width(width).quality(quality).url()
           }

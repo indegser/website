@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { PageContainer } from '@/components/atoms/page-container';
 import { PostPortableText } from '@/components/organs/post-portable-text';
 import { Post } from '@/lib/sanity';
-import { Feedback } from './feedback/Feedback';
+import { Feedback } from './feedback';
 import { PostHeadline } from './post-headline';
 import { PostRouter } from './post-router';
 

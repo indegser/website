@@ -8,10 +8,11 @@ import { PostPage } from './post/post-page';
 export const revalidate = 60; // 1-minute.
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const { id } = params;
 
   try {
@@ -64,7 +65,11 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export default async function Page({ params: { id } }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
+
+  const { id } = params;
+
   try {
     const data =
       await sanityClient.fetch<Post>(groq`*[_type=='post' && _id=='${id}'][0] {
