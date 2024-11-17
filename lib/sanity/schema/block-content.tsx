@@ -76,6 +76,9 @@ export default defineType({
       type: 'linkPreview' as const,
     }),
     defineArrayMember({
+      type: 'youtube' as const,
+    }),
+    defineArrayMember({
       type: 'code',
     }),
   ],
