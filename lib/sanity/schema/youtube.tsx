@@ -17,7 +17,7 @@ export const youtube = defineType({
   },
   components: {
     preview: ({ title }: PreviewProps) => {
-      if (!title) return <div>{title}</div>;
+      if (!title) return <div>Youtube 주소를 넣어주세요</div>;
       return (
         <ReactPlayer
           url={title.toString()}

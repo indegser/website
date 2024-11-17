@@ -6,6 +6,7 @@ import { PostCode } from './components/post-code';
 import { PostImage } from './components/post-image';
 import { PostLink } from './components/post-link';
 import { PostLinkPreview } from './components/post-link-preview';
+import { PostYoutube } from './components/post-youtube';
 
 interface Props extends ComponentProps<typeof PortableText> {}
 
@@ -26,6 +27,7 @@ export const PostPortableText = (props: Props) => {
           image: PostImage,
           linkPreview: PostLinkPreview,
           code: PostCode,
+          youtube: PostYoutube,
         },
         block: {
           h1: (props) => <h1 className="mb-4 py-1">{props.children}</h1>,
