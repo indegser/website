@@ -50,6 +50,9 @@ importers:
       '@sanity/image-url':
         specifier: ^1.1.0
         version: 1.1.0
+      '@sanity/ui':
+        specifier: ^2.8.23
+        version: 2.8.23(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@sanity/vision':
         specifier: ^3.64.1
         version: 3.64.1(@babel/runtime@7.24.5)(@codemirror/lint@6.8.0)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(codemirror@6.0.1(@lezer/common@1.2.1))(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
