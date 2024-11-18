@@ -5,5 +5,9 @@ import { PortableTextComponentProps } from 'next-sanity';
 interface Props extends PortableTextComponentProps<GoogleMap> {}
 
 export function PostGoogleMap(props: Props) {
-  return <ReactGoogleMap q={props.value.q} />;
+  return (
+    <div className="my-4 py-1">
+      <ReactGoogleMap q={props.value.q} />
+    </div>
+  );
 }
