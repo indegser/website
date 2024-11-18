@@ -1,13 +1,11 @@
-'use client';
-
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { codeInput } from '@sanity/code-input';
-import { apiVersion, dataset, projectId } from './lib/sanity/env';
-import { schema } from './lib/sanity/schema';
+import { apiVersion, dataset, projectId } from './env';
+import { schema } from './schema';
 
 export default defineConfig({
   basePath: '/studio',
