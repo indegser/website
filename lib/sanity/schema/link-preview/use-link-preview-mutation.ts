@@ -17,7 +17,7 @@ const uploadImage = (imageUrl?: string) => {
   );
 };
 
-const mutate = async (_, { arg }: { arg: { url: string } }) => {
+const mutate = async (_: unknown, { arg }: { arg: { url: string } }) => {
   const linkPreview = await fetchLinkPreview(arg.url);
   const imageAsset = await uploadImage(linkPreview.imageUrl);
   return {
