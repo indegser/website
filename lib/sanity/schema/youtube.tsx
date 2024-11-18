@@ -17,14 +17,20 @@ export const youtube = defineType({
   },
   components: {
     preview: ({ title }: PreviewProps) => {
-      if (!title) return <div>Youtube 주소를 넣어주세요</div>;
       return (
-        <ReactPlayer
-          url={title.toString()}
-          style={{ aspectRatio: '640 / 360' }}
-          width="100%"
-          height="100%"
-        />
+        <div>
+          {title ? (
+            <ReactPlayer
+              url={title.toString()}
+              style={{ aspectRatio: '640 / 360' }}
+              width="100%"
+              height="100%"
+            />
+          ) : null}
+          <div className="p-2 text-xs">
+            {title ? title.toString() : '장소를 입력하세요'}
+          </div>
+        </div>
       );
     },
   },

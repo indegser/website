@@ -79,6 +79,9 @@ export default defineType({
       type: 'youtube' as const,
     }),
     defineArrayMember({
+      type: 'google-map' as const,
+    }),
+    defineArrayMember({
       type: 'code',
     }),
   ],
