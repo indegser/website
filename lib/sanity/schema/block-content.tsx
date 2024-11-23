@@ -1,15 +1,7 @@
 import { defineArrayMember, defineType } from 'sanity';
-
-/**
- * This is the schema type for block content used in the post document type
- * Importing this type into the studio configuration's `schema` property
- * lets you reuse it in other document types with:
- *  {
- *    name: 'someName',
- *    title: 'Some title',
- *    type: 'blockContent'
- *  }
- */
+import { googleMap } from './google-map';
+import linkPreview from './link-preview';
+import { youtube } from './youtube';
 
 export default defineType({
   title: 'Block Content',
@@ -19,10 +11,6 @@ export default defineType({
     defineArrayMember({
       title: 'Block',
       type: 'block' as const,
-      // Styles let you define what blocks can be marked up as. The default
-      // set corresponds with HTML tags, but you can set any title or value
-      // you want, and decide how you want to deal with it where you want to
-      // use your content.
       styles: [
         { title: 'Normal', value: 'normal' },
         { title: 'H1', value: 'h1' },
@@ -35,7 +23,6 @@ export default defineType({
         { title: 'Bullet', value: 'bullet' },
         { title: 'Number', value: 'number' },
       ],
-      // Marks let you mark up inline text in the Portable Text Editor
       marks: {
         decorators: [
           { title: 'Strong', value: 'strong' },
@@ -72,13 +59,13 @@ export default defineType({
       ],
     }),
     defineArrayMember({
-      type: 'linkPreview' as const,
+      type: linkPreview.name,
     }),
     defineArrayMember({
-      type: 'youtube' as const,
+      type: youtube.name,
     }),
     defineArrayMember({
-      type: 'google-map' as const,
+      type: googleMap.name,
     }),
     defineArrayMember({
       type: 'code',
