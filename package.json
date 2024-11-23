@@ -64,7 +64,7 @@
     "react-player": "^2.16.0",
     "react-syntax-highlighter": "^15.5.0",
     "react-wrap-balancer": "^1.1.0",
-    "sanity": "^3.64.1",
+    "sanity": "^3.64.3",
     "server-only": "^0.0.1",
     "sharp": "^0.32.6",
     "styled-components": "^6.1.13",
@@ -75,6 +75,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.15.0",
     "@styled/typescript-styled-plugin": "^1.0.0",
     "@types/lodash-es": "^4.17.6",
     "@types/mime-types": "^2.1.1",
