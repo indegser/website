@@ -4,6 +4,17 @@ export default defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  groups: [
+    {
+      name: 'content',
+      title: 'Content',
+      default: true,
+    },
+    {
+      name: 'meta',
+      title: 'Meta',
+    },
+  ],
   fields: [
     defineField({
       name: 'title',
@@ -11,12 +22,14 @@ export default defineType({
       type: 'string',
       initialValue: 'Untitled',
       validation: (rule) => rule.required(),
+      group: 'meta',
     }),
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'string',
       initialValue: '',
+      group: 'meta',
     }),
     defineField({
       name: 'cover',
@@ -32,22 +45,26 @@ export default defineType({
           title: 'Alternative Text',
         },
       ],
+      group: 'meta',
     }),
     defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array' as const,
       of: [{ type: 'reference', to: { type: 'category' } }],
+      group: 'meta',
     }),
     defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+      group: 'meta',
     }),
     defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+      group: 'content',
     }),
   ],
 
