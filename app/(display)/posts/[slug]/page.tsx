@@ -40,7 +40,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         images: coverUrl ? [coverUrl] : [],
       },
       alternates: {
-        canonical: `/content/${id}`,
+        canonical: `/posts/${slug}`,
       },
       twitter: {
         card: 'summary_large_image',
