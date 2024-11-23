@@ -53,6 +53,7 @@ export const postSchema = z
     _id: z.string(),
     title: z.string(),
     excerpt: z.string(),
+    slug: z.string().nullable(),
     cover: refSchema,
     body: z.array(z.any()),
     categories: z.array(categorySchema).nullable(),

@@ -10,6 +10,7 @@ export default async function IndexPage() {
   const data =
     await sanityClient.fetch(groq`*[_type == 'post'] | order(publishedAt desc) {
     _id,
+    slug,
     title,
     excerpt,
     cover,
