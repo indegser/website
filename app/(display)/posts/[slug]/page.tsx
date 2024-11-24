@@ -8,16 +8,16 @@ import { PostPage } from './post/post-page';
 export const revalidate = 60; // 1-minute.
 
 type Props = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
-  const { id } = params;
+  const { slug } = params;
 
   try {
     const data =
-      await sanityClient.fetch<Post>(groq`*[_type=='post' && _id=='${id}'][0] {
+      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug.current=='${slug}'][0] {
     title,
     excerpt,
     cover,
@@ -40,7 +40,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         images: coverUrl ? [coverUrl] : [],
       },
       alternates: {
-        canonical: `/content/${id}`,
+        canonical: `/posts/${slug}`,
       },
       twitter: {
         card: 'summary_large_image',
@@ -54,32 +54,34 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export const generateStaticParams = async () => {
   const data = await sanityClient.fetch<Post[]>(groq`
     *[_type=='post'][0...${isProduction ? 10 : 1}] {
-      _id
+      slug
     }
   `);
 
-  const posts = postSchema.pick({ _id: true }).required().array().parse(data);
+  const posts = postSchema.pick({ slug: true }).required().array().parse(data);
 
   return posts.map((post) => ({
-    id: post._id,
+    slug: post.slug?.current,
   }));
 };
 
 export default async function Page(props: Props) {
   const params = await props.params;
 
-  const { id } = params;
+  const { slug } = params;
 
   try {
     const data =
-      await sanityClient.fetch<Post>(groq`*[_type=='post' && _id=='${id}'][0] {
+      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug.current=='${slug}'][0] {
       title,
       excerpt,
       cover,
       body,
     }`);
 
-    const post = postSchema.parse(data);
+    const post = postSchema
+      .pick({ title: true, excerpt: true, cover: true, body: true })
+      .parse(data);
 
     return <PostPage post={post} />;
   } catch (err) {

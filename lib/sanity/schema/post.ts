@@ -17,6 +17,25 @@ export default defineType({
   ],
   fields: [
     defineField({
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        slugify: async (title: string) => {
+          const { slug } = await fetch('/api/ai/slugify', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+            },
+            body: JSON.stringify({ title }),
+          }).then((res) => res.json());
+
+          return slug;
+        },
+      },
+      group: 'meta',
+    }),
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',

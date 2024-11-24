@@ -5,12 +5,12 @@ import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const data = await sanityClient.fetch(
-    groq`*[_type == 'post'] { _id, _updatedAt }`,
+    groq`*[_type == 'post'] { slug, _updatedAt }`,
   );
   const posts = postSchema.array().parse(data);
 
   return posts.map((post) => ({
-    url: `${getURL()}/posts/${post._id}`,
+    url: `${getURL()}/posts/${post.slug}`,
     lastModified: post._updatedAt,
   }));
 }
