@@ -3,6 +3,7 @@ import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 
 import { codeInput } from '@sanity/code-input';
+import { createPublishAction } from './actions';
 import { apiVersion, dataset, projectId } from './env';
 import { schema } from './schema';
 
@@ -10,8 +11,16 @@ export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
-  // Add and edit the content schema in the './sanity/schema' folder
   schema,
+  document: {
+    actions: (prev, context) => {
+      return prev.map((originalAction) =>
+        originalAction.action === 'publish' && context.schemaType == 'post'
+          ? createPublishAction(originalAction, context)
+          : originalAction,
+      );
+    },
+  },
   plugins: [
     structureTool(),
     codeInput(),
