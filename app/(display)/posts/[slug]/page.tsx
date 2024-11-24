@@ -17,7 +17,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
   try {
     const data =
-      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug=='${slug}'][0] {
+      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug.current=='${slug}'][0] {
     title,
     excerpt,
     cover,
@@ -54,14 +54,14 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export const generateStaticParams = async () => {
   const data = await sanityClient.fetch<Post[]>(groq`
     *[_type=='post'][0...${isProduction ? 10 : 1}] {
-      _id
+      slug
     }
   `);
 
-  const posts = postSchema.pick({ _id: true }).required().array().parse(data);
+  const posts = postSchema.pick({ slug: true }).required().array().parse(data);
 
   return posts.map((post) => ({
-    id: post._id,
+    slug: post.slug?.current,
   }));
 };
 
@@ -72,14 +72,16 @@ export default async function Page(props: Props) {
 
   try {
     const data =
-      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug=='${slug}'][0] {
+      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug.current=='${slug}'][0] {
       title,
       excerpt,
       cover,
       body,
     }`);
 
-    const post = postSchema.parse(data);
+    const post = postSchema
+      .pick({ title: true, excerpt: true, cover: true, body: true })
+      .parse(data);
 
     return <PostPage post={post} />;
   } catch (err) {

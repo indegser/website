@@ -12,7 +12,7 @@ interface Props {
 
 export const RichItem = ({ post }: Props) => {
   const { slug, cover, title, excerpt } = post;
-  const href = `/posts/${slug}`;
+  const href = `/posts/${slug?.current}`;
 
   return (
     <article className="flex gap-5 md:gap-6">

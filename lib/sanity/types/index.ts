@@ -48,12 +48,19 @@ export const linkPreviewSchema = z
   })
   .partial();
 
+export const slugSchema = z
+  .object({
+    _type: z.string(),
+    current: z.string(),
+  })
+  .nullable();
+
 export const postSchema = z
   .object({
     _id: z.string(),
     title: z.string(),
     excerpt: z.string(),
-    slug: z.string().nullable(),
+    slug: slugSchema,
     cover: refSchema,
     body: z.array(z.any()),
     categories: z.array(categorySchema).nullable(),
