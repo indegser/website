@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = postSchema.array().parse(data);
 
   return posts.map((post) => ({
-    url: `${getURL()}/posts/${post.slug}`,
+    url: `${getURL()}/posts/${post.slug?.current}`,
     lastModified: post._updatedAt,
   }));
 }
