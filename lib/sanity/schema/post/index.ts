@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity';
+import { postExcerpt } from './post-excerpt';
 
 export default defineType({
   name: 'post',
@@ -43,13 +44,7 @@ export default defineType({
       validation: (rule) => rule.required(),
       group: 'meta',
     }),
-    defineField({
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'string',
-      initialValue: '',
-      group: 'meta',
-    }),
+    postExcerpt,
     defineField({
       name: 'cover',
       title: 'Cover',

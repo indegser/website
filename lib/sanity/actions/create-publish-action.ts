@@ -9,7 +9,7 @@ export const createPublishAction = (
   context: DocumentActionsContext,
 ) => {
   const PostPublishAction: DocumentActionComponent = (props) => {
-    const { patch, publish } = useDocumentOperation(
+    const { patch } = useDocumentOperation(
       context.documentId!,
       context.schemaType,
     );
@@ -19,20 +19,9 @@ export const createPublishAction = (
     return {
       ...originalResult,
       onHandle: async () => {
-        const { excerpt } = await fetch('/api/ai/excerptify', {
-          method: 'POST',
-          body: JSON.stringify({ source: JSON.stringify(props.draft!.body) }),
-          headers: {
-            'content-type': 'application/json',
-          },
-        }).then((res) => res.json());
+        patch.execute([{ set: { publishedAt: new Date().toISOString() } }]);
 
-        patch.execute([
-          { set: { excerpt, publishedAt: new Date().toISOString() } },
-        ]);
-
-        publish.execute();
-        props.onComplete();
+        originalResult.onHandle?.();
       },
     };
   };
