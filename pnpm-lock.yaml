@@ -96,8 +96,8 @@ importers:
         specifier: ^2.1.35
         version: 2.1.35
       nanoid:
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^5.0.9
+        version: 5.0.9
       next:
         specifier: ^15.0.3
         version: 15.0.3(@babel/core@7.24.5)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5316,13 +5316,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nanoid@4.0.0:
-    resolution: {integrity: sha512-IgBP8piMxe/gf73RTQx7hmnhwz0aaEXYakvqZyE302IXW3HyVNhdNGC+O2MwMAVhLEnvXlvKtGbtJf6wvHihCg==}
-    engines: {node: ^14 || ^16 || >=18}
-    hasBin: true
-
-  nanoid@5.0.7:
-    resolution: {integrity: sha512-oLxFY2gd2IqnjcYyOXD8XGCftpGtZP2AbHbOkthDkvRywH5ayNtPVy9YlOPcHckXzbLTCHpkb7FB+yuxKV13pQ==}
+  nanoid@5.0.9:
+    resolution: {integrity: sha512-Aooyr6MXU6HpvvWXKoVoXwKMs/KyVakWwg7xQfv5/S/RIgJMy0Ifa45H9qqYy7pTCszrHzP21Uk4PZq2HpEM8Q==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -9898,7 +9893,7 @@ snapshots:
       hotscript: 1.0.13
       lodash: 4.17.21
       mendoza: 3.0.7
-      nanoid: 5.0.7
+      nanoid: 5.0.9
       rxjs: 7.8.1
     transitivePeerDependencies:
       - debug
@@ -13365,9 +13360,7 @@ snapshots:
 
   nanoid@3.3.7: {}
 
-  nanoid@4.0.0: {}
-
-  nanoid@5.0.7: {}
+  nanoid@5.0.9: {}
 
   napi-build-utils@1.0.2: {}
 
@@ -13985,7 +13978,7 @@ snapshots:
 
   postcss@8.4.31:
     dependencies:
-      nanoid: 3.3.6
+      nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
