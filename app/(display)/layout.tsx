@@ -12,6 +12,7 @@ import { Nav } from '@/components/organs/nav';
 import { Toaster } from '@/components/ui/toaster';
 import { jetBrainsMonoFont, pretendardFont } from 'components/theme';
 import { getURL } from 'lib/constants';
+import { Hotjar } from './hotjar';
 
 export const metadata: Metadata = {
   title: {
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
         </Providers>
         <Analytics />
+        <Hotjar />
         <Toaster />
         <SpeedInsights />
       </body>
