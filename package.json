@@ -4,7 +4,7 @@
   "license": "None",
   "version": "0.2.0",
   "engines": {
-    "node": ">=v22.0.0"
+    "node": "22.x"
   },
   "scripts": {
     "prepare": "husky install",
