@@ -1,32 +1,30 @@
-name: test
-on: pull_request
+name: Test
+on:
+  - push
+  - pull_request
+
 jobs:
-  test:
+  pnpm-test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Cancel running workflows
-        uses: styfle/cancel-workflow-action@0.11.0
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
         with:
-          access_token: ${{ github.token }}
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Set node version
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-      - name: Set pnpm version
-        uses: pnpm/action-setup@v2
-        with:
+          version: 10
           run_install: false
-          version: 8
-      - name: Cache node_modules
-        id: node-modules-cache
-        uses: actions/cache@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          path: '**/node_modules'
-          key: node-modules-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
+          node-version: 22
+          cache: 'pnpm'
+
       - name: Install dependencies
-        if: steps.node-modules-cache.outputs.cache-hit != 'true'
         run: pnpm install
-      - name: Run tests
+
+      - name: Test with jest
         run: pnpm test

@@ -50,12 +50,9 @@
     "dayjs": "^1.11.7",
     "framer-motion": "^10.16.4",
     "groq": "^3.43.0",
-    "mime-types": "^2.1.35",
-    "nanoid": "^4.0.0",
     "next": "^15.1.6",
     "next-sanity": "^9.8.15",
     "next-themes": "^0.2.1",
-    "open-graph-scraper": "^6.2.2",
     "openai": "^4.61.0",
     "puppeteer-core": "^22.12.0",
     "react": "^18.3.1",
@@ -64,9 +61,8 @@
     "react-player": "^2.16.0",
     "react-syntax-highlighter": "^15.5.0",
     "react-wrap-balancer": "^1.1.0",
-    "sanity": "^3.64.3",
+    "sanity": "^3.74.1",
     "server-only": "^0.0.1",
-    "sharp": "^0.32.6",
     "styled-components": "^6.1.13",
     "swr": "^2.2.5",
     "tailwind-merge": "^1.14.0",
@@ -79,8 +75,6 @@
     "@eslint/js": "^9.15.0",
     "@styled/typescript-styled-plugin": "^1.0.0",
     "@types/jest": "^29.5.14",
-    "@types/lodash-es": "^4.17.6",
-    "@types/mime-types": "^2.1.1",
     "@types/node": "^20.10.4",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.2.14",
@@ -104,6 +98,14 @@
     "shadcn-ui": "^0.4.0",
     "tailwindcss": "^3.3.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "puppeteer"
+    ],
+    "onlyBuiltDependencies": [
+      "puppeteer"
+    ]
   }
 }
