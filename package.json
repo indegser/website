@@ -16,7 +16,11 @@
     "lint-staged": "lint-staged",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "test": "jest"
+    "test": "jest",
+    "sanity:dev": "sanity dev",
+    "sanity:start": "sanity start",
+    "sanity:build": "sanity build",
+    "sanity:deploy": "sanity deploy"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
