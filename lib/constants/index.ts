@@ -6,19 +6,16 @@ export const environment =
 export const isProduction = environment === 'production';
 export const isServer = typeof window == 'undefined';
 
-export const GIT_COMMIT_SHA =
-  process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ?? '';
-
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
+export const isAppEnvProduction = () => {
+  return process.env.VERCEL_ENV === 'production';
+};
 
 export const getURL = () => {
-  if (isProduction) {
+  if (isAppEnvProduction()) {
     return 'https://www.indegser.com';
   }
 
-  return (
-    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` || 'http://localhost:3000'
-  );
+  return process.env.NEXT_PUBLIC_VERCEL_URL
+    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+    : 'http://localhost:3000';
 };
-
-export const INDEGSER_DATABASE_ID = '82649fda5ba84801a464d7ef2f7552b3';
