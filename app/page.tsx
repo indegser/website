@@ -1,4 +1,4 @@
-import { RichItem } from '@/app/(display)/rich-item';
+import { RichItem } from '@/app/rich-item';
 import { PageContainer } from '@/components/atoms/page-container';
 import { sanityClient } from '@/lib/sanity';
 import { postFeedSchema } from '@/lib/sanity/types';
