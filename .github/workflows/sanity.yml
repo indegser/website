@@ -2,7 +2,7 @@ name: Sanity Deploy
 on:
   push:
     branches:
-      - 'feat/split-sanity'
+      - 'main'
 
 jobs:
   sanity-deploy:
