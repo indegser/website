@@ -3,12 +3,11 @@ import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 
 import { codeInput } from '@sanity/code-input';
-import { createPublishAction } from './actions';
-import { apiVersion, dataset, projectId } from './env';
-import { schema } from './schema';
+import { createPublishAction } from './lib/sanity/actions';
+import { apiVersion, dataset, projectId } from './lib/sanity/env';
+import { schema } from './lib/sanity/schema';
 
 export default defineConfig({
-  basePath: '/studio',
   projectId,
   dataset,
   schema,
