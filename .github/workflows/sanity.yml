@@ -1,9 +1,11 @@
-name: Test
+name: Sanity Deploy
 on:
-  - pull_request
+  push:
+    branches:
+      - 'feat/split-sanity'
 
 jobs:
-  pnpm-test:
+  sanity-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,5 +27,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Test with jest
-        run: pnpm test
+      - name: Deploy sanity studio
+        env:
+          SANITY_STUDIO_DATASET: ${{ secrets.SANITY_STUDIO_DATASET }}
+          SANITY_STUDIO_PROJECT_ID: ${{ secrets.SANITY_STUDIO_PROJECT_ID }}
+        run: pnpm sanity:deploy
