@@ -29,6 +29,7 @@ jobs:
 
       - name: Deploy sanity studio
         env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
           SANITY_STUDIO_DATASET: ${{ secrets.SANITY_STUDIO_DATASET }}
           SANITY_STUDIO_PROJECT_ID: ${{ secrets.SANITY_STUDIO_PROJECT_ID }}
         run: pnpm sanity:deploy
