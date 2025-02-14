@@ -1,33 +1,9 @@
 import 'server-only';
 
-import type { Page, PuppeteerNode } from 'puppeteer';
-
-let chrome: Record<string, any> = { args: [] };
-let puppeteer: PuppeteerNode;
-
-if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
-  // running on the Vercel platform.
-  chrome = require('@sparticuz/chromium');
-  puppeteer = require('puppeteer-core');
-} else {
-  // running locally.
-  puppeteer = require('puppeteer');
-}
-
-const getBrowser = async () => {
-  return puppeteer.launch({
-    args: [...chrome.args, '--hide-scrollbars', '--disable-web-security'],
-    defaultViewport: chrome.defaultViewport,
-    executablePath: chrome.executablePath
-      ? await chrome.executablePath()
-      : undefined,
-    headless: true,
-    ignoreHTTPSErrors: true,
-  });
-};
+import puppeteer, { Page } from 'puppeteer-core';
 
 export const linkPreview = async (url: string) => {
-  const browser = await getBrowser();
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(url);
 
