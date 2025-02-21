@@ -15,8 +15,13 @@ async function fetchYouTube(videoId: string) {
   const json = await data.json();
   return {
     title: json.items[0].snippet.title,
-    description: json.items[0].snippet.description,
-    imageUrl: json.items[0].snippet.thumbnails.default.url,
+    description:
+      json.items[0].snippet.description.replace(/\n/g, ' ').length > 140
+        ? json.items[0].snippet.description
+            .replace(/\n/g, ' ')
+            .substring(0, 137) + '...'
+        : json.items[0].snippet.description.replace(/\n/g, ' '),
+    imageUrl: json.items[0].snippet.thumbnails.maxres.url,
     link: `https://www.youtube.com/watch?v=${videoId}`,
   };
 }
