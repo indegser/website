@@ -1,5 +1,5 @@
 import { LinkPreview } from '@/lib/sanity';
-import { linkPreview } from '@/lib/utils/link-preview';
+import * as cheerio from 'cheerio';
 import { NextRequest, NextResponse } from 'next/server';
 
 type ResponseData = LinkPreview;
@@ -18,14 +18,24 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  const data = await linkPreview(url);
+  try {
+    const response = await fetch(url);
+    const html = await response.text();
 
-  if (!data) {
+    const $ = cheerio.load(html);
+
+    const data: ResponseData = {
+      title: $('meta[property="og:title"]').attr('content'),
+      description: $('meta[property="og:description"]').attr('content'),
+      imageUrl: $('meta[property="og:image"]').attr('content'),
+      link: url,
+    };
+
+    return NextResponse.json<ResponseData>(data);
+  } catch (err) {
     return NextResponse.json(
       { error: 'Failed to fetch open graph' },
       { status: 404 },
     );
-  } else {
-    return NextResponse.json<ResponseData>(data);
   }
 }
