@@ -4,6 +4,8 @@ import { NextRequest, NextResponse } from 'next/server';
 
 type ResponseData = LinkPreview;
 
+export const config = { runtime: 'nodejs' };
+
 export const maxDuration = 50; // This function can run for a maximum of 50 seconds
 export const dynamic = 'force-dynamic';
 
@@ -19,13 +21,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-        'Accept-Language': 'en-US,en;q=0.9',
-        Referer: 'https://www.google.com/',
-      },
-    });
+    const response = await fetch(url, {});
 
     const html = await response.text();
 
