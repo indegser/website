@@ -1,10 +1,11 @@
 import type { SWRMutationConfiguration } from 'swr/mutation';
 import useSWRMutation from 'swr/mutation';
+import { PRODUCTION_URL } from '../../../constants';
 import { linkPreviewSchema } from '../../types';
 
 const fetchLinkPreview = async (url: string) => {
   const json = await fetch(
-    `/api/link-preview?url=${encodeURIComponent(url)}`,
+    `${PRODUCTION_URL}/api/link-preview?url=${encodeURIComponent(url)}`,
   ).then((res) => res.json());
 
   return linkPreviewSchema.parse(json);
@@ -12,9 +13,9 @@ const fetchLinkPreview = async (url: string) => {
 
 const uploadImage = (imageUrl?: string) => {
   if (!imageUrl) return;
-  return fetch(`/api/image-upload?url=${encodeURIComponent(imageUrl)}`).then(
-    (res) => res.json(),
-  );
+  return fetch(
+    `${PRODUCTION_URL}/api/image-upload?url=${encodeURIComponent(imageUrl)}`,
+  ).then((res) => res.json());
 };
 
 const mutate = async (_: unknown, { arg }: { arg: { url: string } }) => {

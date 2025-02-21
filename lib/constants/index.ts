@@ -10,9 +10,11 @@ export const isAppEnvProduction = () => {
   return process.env.VERCEL_ENV === 'production';
 };
 
+export const PRODUCTION_URL = 'https://www.indegser.com';
+
 export const getURL = () => {
   if (isAppEnvProduction()) {
-    return 'https://www.indegser.com';
+    return PRODUCTION_URL;
   }
 
   return process.env.NEXT_PUBLIC_VERCEL_URL
