@@ -1,13 +1,25 @@
 import { LinkPreview } from '@/lib/sanity';
 import * as cheerio from 'cheerio';
+import getYouTubeID from 'get-youtube-id';
 import { NextRequest, NextResponse } from 'next/server';
 
 type ResponseData = LinkPreview;
 
-export const config = { runtime: 'nodejs' };
-
-export const maxDuration = 50; // This function can run for a maximum of 50 seconds
 export const dynamic = 'force-dynamic';
+
+async function fetchYouTube(videoId: string) {
+  const data = await fetch(
+    `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${process.env.YOUTUBE_API_KEY}&part=snippet`,
+  );
+
+  const json = await data.json();
+  return {
+    title: json.items[0].snippet.title,
+    description: json.items[0].snippet.description,
+    imageUrl: json.items[0].snippet.thumbnails.default.url,
+    link: `https://www.youtube.com/watch?v=${videoId}`,
+  };
+}
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -20,11 +32,16 @@ export async function GET(req: NextRequest) {
     );
   }
 
+  const videoId = getYouTubeID(url);
+
   try {
-    const response = await fetch(url, {});
+    if (videoId) {
+      const data = await fetchYouTube(videoId);
+      return NextResponse.json<ResponseData>(data);
+    }
 
+    const response = await fetch(url);
     const html = await response.text();
-
     const $ = cheerio.load(html);
 
     const data: ResponseData = {
