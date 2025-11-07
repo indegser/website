@@ -47,7 +47,7 @@
     "@vercel/analytics": "^1.0.1",
     "@vercel/edge-config": "^0.2.1",
     "@vercel/speed-insights": "^1.0.1",
-    "ai": "^3.3.39",
+    "ai": "^5.0.52",
     "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "client-only": "^0.0.1",
