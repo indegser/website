@@ -13,6 +13,21 @@ async function fetchYouTube(videoId: string) {
   );
 
   const json = await data.json();
+  const thumbnails = json.items[0].snippet.thumbnails;
+  let imageUrl = '';
+
+  if (thumbnails.maxres) {
+    imageUrl = thumbnails.maxres.url;
+  } else if (thumbnails.standard) {
+    imageUrl = thumbnails.standard.url;
+  } else if (thumbnails.high) {
+    imageUrl = thumbnails.high.url;
+  } else if (thumbnails.medium) {
+    imageUrl = thumbnails.medium.url;
+  } else if (thumbnails.default) {
+    imageUrl = thumbnails.default.url;
+  }
+
   return {
     title: json.items[0].snippet.title,
     description:
@@ -21,7 +36,7 @@ async function fetchYouTube(videoId: string) {
             .replace(/\n/g, ' ')
             .substring(0, 137) + '...'
         : json.items[0].snippet.description.replace(/\n/g, ' '),
-    imageUrl: json.items[0].snippet.thumbnails.maxres.url,
+    imageUrl,
     link: `https://www.youtube.com/watch?v=${videoId}`,
   };
 }
@@ -58,6 +73,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json<ResponseData>(data);
   } catch (err) {
+    console.warn(err);
     return NextResponse.json(
       { error: 'Failed to fetch open graph' },
       { status: 404 },

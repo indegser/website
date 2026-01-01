@@ -12,7 +12,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
@@ -32,6 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     "lib/global.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ]
 }

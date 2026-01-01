@@ -7,7 +7,7 @@ const corsOptions = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const origin = request.headers.get('origin') ?? '';
 
   const isAllowedOrigin = true;
