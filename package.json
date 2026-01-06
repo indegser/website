@@ -26,7 +26,7 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^0.0.60",
+    "@ai-sdk/openai": "^3.0.2",
     "@amplitude/analytics-browser": "^2.33.1",
     "@portabletext/react": "^6.0.2",
     "@radix-ui/colors": "^3.0.0",
@@ -39,14 +39,14 @@
     "@radix-ui/react-toast": "^1.2.5",
     "@sanity/asset-utils": "^2.1.0",
     "@sanity/code-input": "^4.1.4",
-    "@sanity/icons": "^3.4.0",
+    "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.1.0",
-    "@sanity/ui": "^2.8.23",
+    "@sanity/ui": "^3.1.11",
     "@sanity/vision": "^3.64.1",
     "@vercel/analytics": "^1.0.1",
     "@vercel/edge-config": "^0.2.1",
     "@vercel/speed-insights": "^1.0.1",
-    "ai": "^3.3.39",
+    "ai": "^6.0.6",
     "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "client-only": "^0.0.1",
@@ -72,7 +72,7 @@
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "type-fest": "^4.4.0",
-    "zod": "^3.23.8"
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
