@@ -37,7 +37,7 @@ export default defineType({
           const patch = set({
             ...value,
             ...data.linkPreview,
-            image: data.imageAsset
+            image: data.imageAsset?._id
               ? {
                   _type: 'image',
                   asset: {
