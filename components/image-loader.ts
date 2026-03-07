@@ -1,6 +1,12 @@
 import { ImageLoaderProps } from 'next/image';
 
 export default function imageLoader({ src, width, quality }: ImageLoaderProps) {
+  const isAbsoluteUrl = /^https?:\/\//.test(src);
+
+  if (!isAbsoluteUrl) {
+    return src;
+  }
+
   if (!src.includes('res.cloudinary.com')) {
     const url = new URL(src);
     url.searchParams.set('w', String(width));

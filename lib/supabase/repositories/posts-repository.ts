@@ -10,6 +10,12 @@ type PostRecord = Record<string, unknown>;
 const supabasePostsTable = process.env.SUPABASE_POSTS_TABLE || 'posts';
 const categoriesRelationSelect =
   'postCategories:post_categories(category:categories(_id,title,avatar))';
+const normalizeDeprecatedUpdatedAtColumn = (selectColumns: string) => {
+  return selectColumns.replaceAll(
+    '_updatedAt:_updated_at',
+    'updatedAt:updated_at',
+  );
+};
 
 const isRecord = (value: unknown): value is Record<string, unknown> => {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -55,7 +61,9 @@ export const postsRepository = {
     columns: string[],
   ): Promise<PostRecord | null> {
     const client = createSupabaseServerClient();
-    const selectColumns = `${toSelectColumns(columns)}, ${categoriesRelationSelect}`;
+    const selectColumns = normalizeDeprecatedUpdatedAtColumn(
+      `${toSelectColumns(columns)}, ${categoriesRelationSelect}`,
+    );
 
     const textSlugQuery = await client
       .from(supabasePostsTable)
@@ -122,7 +130,7 @@ export const postsRepository = {
     const client = createSupabaseServerClient();
     const { data, error } = await client
       .from(supabasePostsTable)
-      .select(toSelectColumns(['slug', '_updated_at']));
+      .select(toSelectColumns(['slug', 'updated_at']));
 
     if (error) {
       throw error;
