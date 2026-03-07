@@ -20,7 +20,6 @@ create table if not exists public.posts (
   excerpt text not null default '',
   cover jsonb,
   body jsonb not null default '[]'::jsonb,
-  categories jsonb not null default '[]'::jsonb,
   published_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   created_at timestamptz not null default now(),
@@ -54,6 +53,55 @@ using (true);
 drop policy if exists posts_service_role_write on public.posts;
 create policy posts_service_role_write
 on public.posts
+for all
+to service_role
+using (true)
+with check (true);
+
+create table if not exists public.categories (
+  _id text primary key,
+  title text not null,
+  avatar jsonb,
+  updated_at timestamptz not null default now(),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.post_categories (
+  post_id text not null references public.posts(_id) on delete cascade,
+  category_id text not null references public.categories(_id) on delete cascade,
+  created_at timestamptz not null default now(),
+  primary key (post_id, category_id)
+);
+
+create index if not exists post_categories_category_id_idx
+  on public.post_categories (category_id);
+
+alter table public.categories enable row level security;
+alter table public.post_categories enable row level security;
+
+drop policy if exists categories_public_read on public.categories;
+create policy categories_public_read
+on public.categories
+for select
+using (true);
+
+drop policy if exists categories_service_role_write on public.categories;
+create policy categories_service_role_write
+on public.categories
+for all
+to service_role
+using (true)
+with check (true);
+
+drop policy if exists post_categories_public_read on public.post_categories;
+create policy post_categories_public_read
+on public.post_categories
+for select
+using (true);
+
+drop policy if exists post_categories_service_role_write on public.post_categories;
+create policy post_categories_service_role_write
+on public.post_categories
 for all
 to service_role
 using (true)

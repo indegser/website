@@ -6,7 +6,7 @@ import {
   postSchema,
   sanityClient,
 } from '@/lib/sanity';
-import { createSupabaseServerClient } from '@/lib/supabase';
+import { postsRepository } from '@/lib/supabase/repositories/posts-repository';
 import groq from 'groq';
 
 type DataSource = 'sanity' | 'supabase';
@@ -15,8 +15,6 @@ type PostRecord = Record<string, unknown>;
 
 const dataSource = ((process.env.DATA_SOURCE || 'sanity').toLowerCase() ||
   'sanity') as DataSource;
-
-const supabasePostsTable = process.env.SUPABASE_POSTS_TABLE || 'posts';
 
 const toSlugObject = (slug: unknown) => {
   if (typeof slug === 'string') {
@@ -58,51 +56,22 @@ const normalizePostRecord = (record: PostRecord) => {
 
 const fetchSupabaseRowsBySlug = async (
   slug: string,
-  columns: string,
+  columns: string[],
 ): Promise<PostRecord | null> => {
-  const client = createSupabaseServerClient();
-
-  const textSlugQuery = await client
-    .from(supabasePostsTable)
-    .select(columns)
-    .eq('slug', slug)
-    .limit(1)
-    .maybeSingle();
-
-  if (!textSlugQuery.error && textSlugQuery.data) {
-    return textSlugQuery.data as PostRecord;
-  }
-
-  const jsonSlugQuery = await client
-    .from(supabasePostsTable)
-    .select(columns)
-    .filter('slug->>current', 'eq', slug)
-    .limit(1)
-    .maybeSingle();
-
-  if (jsonSlugQuery.error) {
-    throw jsonSlugQuery.error;
-  }
-
-  return (jsonSlugQuery.data as PostRecord | null) ?? null;
+  return postsRepository.findBySlug(slug, columns);
 };
 
 const fetchPostsFromSupabase = async (): Promise<PostFeed[]> => {
-  const client = createSupabaseServerClient();
-  const { data, error } = await client
-    .from(supabasePostsTable)
-    .select(
-      '_id, slug, title, excerpt, cover, publishedAt, published_at, categories',
-    )
-    .order('published_at', { ascending: false });
-
-  if (error) {
-    throw error;
-  }
-
-  const rows = (data || []).map((row) =>
-    normalizePostRecord(row as PostRecord),
-  );
+  const rows = (
+    await postsRepository.list([
+      '_id',
+      'slug',
+      'title',
+      'excerpt',
+      'cover',
+      'published_at',
+    ])
+  ).map((row) => normalizePostRecord(row));
 
   return postFeedSchema.array().parse(rows);
 };
@@ -110,10 +79,16 @@ const fetchPostsFromSupabase = async (): Promise<PostFeed[]> => {
 const fetchPostBySlugFromSupabase = async (
   slug: string,
 ): Promise<Post | null> => {
-  const row = await fetchSupabaseRowsBySlug(
-    slug,
-    '_id, slug, title, excerpt, cover, body, categories, publishedAt, published_at, _updatedAt, updated_at',
-  );
+  const row = await fetchSupabaseRowsBySlug(slug, [
+    '_id',
+    'slug',
+    'title',
+    'excerpt',
+    'cover',
+    'body',
+    'published_at',
+    '_updated_at',
+  ]);
 
   if (!row) {
     return null;
@@ -123,18 +98,7 @@ const fetchPostBySlugFromSupabase = async (
 };
 
 const fetchPostSlugsFromSupabase = async (limit: number) => {
-  const client = createSupabaseServerClient();
-  const { data, error } = await client
-    .from(supabasePostsTable)
-    .select('slug')
-    .order('published_at', { ascending: false })
-    .limit(limit);
-
-  if (error) {
-    throw error;
-  }
-
-  return (data || [])
+  return (await postsRepository.listSlugs(limit))
     .map((row) => toSlugObject((row as PostRecord).slug))
     .filter((slugValue): slugValue is { current: string } => {
       return Boolean(
@@ -147,16 +111,7 @@ const fetchPostSlugsFromSupabase = async (limit: number) => {
 };
 
 const fetchSitemapPostsFromSupabase = async () => {
-  const client = createSupabaseServerClient();
-  const { data, error } = await client
-    .from(supabasePostsTable)
-    .select('slug, _updatedAt, updated_at');
-
-  if (error) {
-    throw error;
-  }
-
-  return (data || [])
+  return (await postsRepository.listSitemapFields())
     .map((row) => {
       const normalized = normalizePostRecord(row as PostRecord);
       const parsed = postSchema
