@@ -1,7 +1,16 @@
 import { ImageLoaderProps } from 'next/image';
 
 export default function imageLoader({ src, width, quality }: ImageLoaderProps) {
-  if (!src.includes('res.cloudinary.com')) return src;
+  if (!src.includes('res.cloudinary.com')) {
+    const url = new URL(src);
+    url.searchParams.set('w', String(width));
+
+    if (quality) {
+      url.searchParams.set('q', String(quality));
+    }
+
+    return url.href;
+  }
 
   const url = new URL(src);
   const fragments = url.pathname.split('/');

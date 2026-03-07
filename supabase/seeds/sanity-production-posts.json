@@ -317,7 +317,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-a7f3653e86fbb12433ee19801320f176022734c0-458x743-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/a7f3653e86fbb12433ee19801320f176022734c0-458x743.png"
       }
     },
     "excerpt": "아마존은 초기부터 경쟁이 치열한 온라인 서점 시장에서 독창적인 전략으로 성장해왔다. 베조스는 고객 맞춤형 서비스와 제3자 판매자와의 협력을 통해 다양한 제품을 제공하며, 코스트코의 가격 전략을 참고해 '매일 최저가'를 목표로 삼았다. 이러한 전략은 아마존의 성장을 가속화하는 선순환 구조를 형성했다.",
@@ -594,7 +595,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-c21e6173b0bec20d7337485aface29af0c6de207-458x678-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/c21e6173b0bec20d7337485aface29af0c6de207-458x678.png"
       }
     },
     "excerpt": "일론 머스크는 화성 식민지 개척을 통해 인류의 다행성 종 진화를 꿈꾸며, 스페이스X를 설립하여 로켓 제조의 혁신을 추구한다. 그는 기존의 비효율적인 원가가산 방식 대신 민간기업이 리스크를 감수하고 성과에 따라 보상받는 방식을 제안하며, 우주 탐사에 대한 새로운 접근을 시도한다.",
@@ -937,7 +939,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-fcb0800340caf7d08d175873fdbbaa4560e98578-458x678-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/fcb0800340caf7d08d175873fdbbaa4560e98578-458x678.png"
       }
     },
     "excerpt": "중국의 해외 직구 플랫폼들이 저가 정책과 효율적인 운영 시스템으로 글로벌 시장을 빠르게 장악하고 있다. 테무와 쉬인 같은 플랫폼은 초저가 전략과 빅데이터를 활용한 빠른 생산 체계를 통해 소비자들의 구매 욕구를 자극하며, 알리바바의 1688닷컴은 AI 기반의 공급망으로 초저가 제품을 제공해 시장을 확대하고 있다.",
@@ -1182,7 +1185,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-c03dd27cc0629fe7c6295b0c7af21fd98eeffaac-264x400-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/c03dd27cc0629fe7c6295b0c7af21fd98eeffaac-264x400.png"
       }
     },
     "excerpt": "인터넷의 급성장에 주목한 베조스는 온라인 서점 아마존을 창업했다. 아마존은 고객 중심의 주문 과정과 개인화된 추천 시스템을 도입해 차별화된 서비스를 제공하며, 마켓플레이스를 통해 다양한 상품을 판매할 수 있는 플랫폼으로 발전했다.",
@@ -1315,7 +1319,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-048fc6a190fa0bd659327ad46eae192eafa2be98-458x710-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/048fc6a190fa0bd659327ad46eae192eafa2be98-458x710.png"
       }
     },
     "excerpt": "1999년 아마존에 합류한 제프 윌크는 월마트의 '상시 최저가' 전략을 주목했고, 제프 베이조스는 이를 아마존에 적용하여 가격 경쟁력을 강화했다. 아마존은 가격 모니터링 시스템과 '가격 확인' 앱을 통해 온라인과 오프라인 가격을 추적하며, 물류창고 확장으로 배송 속도를 높여 월마트의 즉시성 우위를 줄였다.",
@@ -1468,7 +1473,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-dece362b4b6414d1d78a4def70cdad4bda84e387-458x687-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/dece362b4b6414d1d78a4def70cdad4bda84e387-458x687.png"
       }
     },
     "excerpt": "결과 중심의 팀 관리는 자율성과 책임감을 부여하며, 불확실성을 전달한다. 비즈니스 결과는 비즈니스의 진행 상황을, 제품 결과는 제품의 발전을 평가한다. 제품 리더는 제품 트리오에게 결과가 아닌 산출물을 요구할 때 더 많은 비즈니스 컨텍스트를 공유해야 하며, 안정적인 제품 트리오는 학습 비용을 줄인다.",
@@ -1578,7 +1584,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-993626f1924eba8e1ab92b901a963d4a2a3b6ff0-848x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/993626f1924eba8e1ab92b901a963d4a2a3b6ff0-848x1200.png"
       }
     },
     "excerpt": "혁신은 프로젝트 단위의 기술적 투자에서 벗어나 제품팀이 지속적으로 제품을 관리하고 운영하는 프로덕트 모델을 지향한다. 기능개발팀 모델에서는 기능의 성공 여부에 대한 책임이 불분명하지만, 제품팀은 고객과 사업의 요구를 모두 만족시키는 해결책을 찾아야 한다. 이는 고객에게 충분한 가치를 제공하고 기업의 다양한 측면에서 실현 가능해야 한다.",
@@ -2196,7 +2203,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-b5ef44c736df093c79ff48570f7da4ca407863a1-458x673-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/b5ef44c736df093c79ff48570f7da4ca407863a1-458x673.png"
       }
     },
     "excerpt": "성공한 사람들은 창의성과 독창성을 중요시하며, 실패를 두려워하지 않고 다양한 분야에서 뛰어난 능력을 발휘한다. 그들은 한계 속에서 창의성을 발휘하고, 바쁨을 선택이 아닌 필수로 여기지 않으며, 진정한 혁신은 다수의 합의에서 벗어난 곳에서 탄생한다고 믿는다.",
@@ -2466,7 +2474,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-060a2c777875583c1c9bceb47f2a03c15a70458c-458x675-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/060a2c777875583c1c9bceb47f2a03c15a70458c-458x675.png"
       }
     },
     "excerpt": "위기 속에서 문제 해결의 열쇠는 문제에 가장 가까운 사람에게 있다. 알파 기업은 규칙과 통제를, 베타 기업은 책임과 권한을 중시한다. 전문화는 정체성을 주지만, 전체를 보지 못하게 한다.",
@@ -2730,7 +2739,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-665d35c8d265af917a222405d7464001495136d3-800x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/665d35c8d265af917a222405d7464001495136d3-800x1200.png"
       }
     },
     "excerpt": "유사생산성의 덫에 빠진 현대 지식 노동자들, 눈에 보이는 활동으로 생산성을 측정하며 바쁘게만 보이는 일상 속에서 진정한 성과를 찾기 위한 여정을 시작한다.",
@@ -2792,7 +2802,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-8b336fb47ef346bf0dcc9c475d72a572d28ae84f-3750x6000-jpg",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/8b336fb47ef346bf0dcc9c475d72a572d28ae84f-3750x6000.jpg"
         },
         "caption": "울워스 빌딩. https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%EA%BC%AD%EB%8C%80%EA%B8%B0%EC%97%90-%EC%8B%9C%EA%B3%84%EA%B0%80-%EC%9E%88%EB%8A%94-%ED%81%B0-%EA%B1%B4%EB%AC%BC-COJgA1vFVTk?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
       },
@@ -2857,7 +2868,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-65b8be67d3e3d04e2df941ee0c367d6c49bb0297-4723x3128-jpg",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/65b8be67d3e3d04e2df941ee0c367d6c49bb0297-4723x3128.jpg"
         },
         "caption": "https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%EC%95%BC%EA%B0%84%EC%97%90-%EA%B3%A0%EC%B8%B5-%EA%B1%B4%EB%AC%BC-fB_qJwduGYw?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
       },
@@ -3030,7 +3042,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-b1a8b99a7f69e38228aa8df6aaf636d73f406265-458x615-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/b1a8b99a7f69e38228aa8df6aaf636d73f406265-458x615.png"
       }
     },
     "excerpt": "엘리베이터 발명으로 뉴욕 초고층 빌딩 시대가 열리고, 신고전주의와 아르데코 양식의 마천루가 도시를 수놓았다. 랜드마크 보존법과 센트럴 파크, 하이 라인 공원은 뉴욕의 건축과 자연을 조화롭게 연결하며, 타임스 스퀘어는 문화의 중심지로 변모했다.",
@@ -3078,7 +3091,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-dcf76f6dfa63ee6724f4c2090d1b40457b812888-768x1024-jpg",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/dcf76f6dfa63ee6724f4c2090d1b40457b812888-768x1024.jpg"
         }
       },
       {
@@ -3086,7 +3100,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-9b160184a5b5cd95476771c51710ca2ce15cf692-1024x768-jpg",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/9b160184a5b5cd95476771c51710ca2ce15cf692-1024x768.jpg"
         }
       },
       {
@@ -3160,7 +3175,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-32c144dba10ab5a952c2fa92696aa798dc539d4a-1536x2048-jpg",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/32c144dba10ab5a952c2fa92696aa798dc539d4a-1536x2048.jpg"
         }
       },
       {
@@ -3168,7 +3184,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-1f20a09dfad6dd601e0dbfbf81fa9dff781c6102-2048x1536-jpg",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/1f20a09dfad6dd601e0dbfbf81fa9dff781c6102-2048x1536.jpg"
         }
       },
       {
@@ -3232,7 +3249,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-c45738b2d58dc24beed90b128f18040eb0d3a79a-768x1024-jpg",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/c45738b2d58dc24beed90b128f18040eb0d3a79a-768x1024.jpg"
         }
       },
       {
@@ -3240,7 +3258,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-412e97a093a8c1e5e7bd9de15752c11e063f35a8-3024x1701-png",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/412e97a093a8c1e5e7bd9de15752c11e063f35a8-3024x1701.png"
         }
       }
     ],
@@ -3254,7 +3273,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-7127a75254219f52cbef11098df0d66e11937126-768x1024-jpg",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/7127a75254219f52cbef11098df0d66e11937126-768x1024.jpg"
       }
     },
     "excerpt": "2024년 11월 11일부터 22일까지, 엄마와 단둘이 뉴욕 여행.",
@@ -3522,7 +3542,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-61353354009c0d5df6ef534da9b416e6cf546c6c-500x741-jpg",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/61353354009c0d5df6ef534da9b416e6cf546c6c-500x741.jpg"
       }
     },
     "excerpt": "우리는 컴퓨팅의 미래를 볼 수 있는 위치에 자리 잡아야 합니다",
@@ -3922,7 +3943,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-8a428c20ec308199481958635378d9b293d2d172-500x724-jpg",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/8a428c20ec308199481958635378d9b293d2d172-500x724.jpg"
       }
     },
     "excerpt": "컨셉은 비즈니스와 관련된 모든 사람에게 명확한 '판단 기준'을 부여한다.",
@@ -4232,7 +4254,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-4d8d87e78926779d31b8c2e9c7ac4241b8d4b4a7-809x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/4d8d87e78926779d31b8c2e9c7ac4241b8d4b4a7-809x1200.png"
       }
     },
     "excerpt": "핵심 경험과 작업 흐름을 주 단위로 이터레이션 할 수 있으면 어떤 일이 벌어질까? 이것이 소프트웨어적 사고방식이 작동하는 모습이다.",
@@ -4590,7 +4613,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-3bdcaf052bb8f1acac041b18eed66762e9e374af-890x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/3bdcaf052bb8f1acac041b18eed66762e9e374af-890x1200.png"
       }
     },
     "excerpt": "효과적인 소프트웨어 개발의 한 가지 원칙은 피드백 루프를 최대한 촘촘하게 하는 것이다. 왜 요구사항을 작은 단위로 정의하고 전달할까? 요구사항을 정의하는 과정에서 실행 가능하고 동작하는 소프트웨어로 피드백 루프를 강화하기 위해서다.",
@@ -4972,7 +4996,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-33c6f6672de84b75e94a1e330bcf1847ad5fa3c4-2000x3299-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/33c6f6672de84b75e94a1e330bcf1847ad5fa3c4-2000x3299.png"
       }
     },
     "excerpt": "다르거나 낯선것을 두려워 함은 삶을 겁내는 것이다. 삶을 겁내는 것은 진실을 겁내는 것이다.",
@@ -5484,7 +5509,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-a73f535962379b0ef5bef0f638fb08273ae41623-458x747-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/a73f535962379b0ef5bef0f638fb08273ae41623-458x747.png"
       }
     },
     "excerpt": "결코 죽지 않을 것처럼 사는 것 그리고는 결코 살아 본 적이 없는 듯 무의미하게 죽는 것",
@@ -5972,7 +5998,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-c4a17ee611f20b909e0ad9173368fe7b073564a9-458x678-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/c4a17ee611f20b909e0ad9173368fe7b073564a9-458x678.png"
       }
     },
     "excerpt": "전략적 변곡점은 새로운 성장의 기회가 될 수 있지만, 반대로 최후를 알리는 전조일 수 있다.",
@@ -6544,7 +6571,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-bfcd1482eb355d05f715e0c6dbda542df39335a7-458x679-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/bfcd1482eb355d05f715e0c6dbda542df39335a7-458x679.png"
       }
     },
     "excerpt": "차를 운전할 때는 95퍼센트의 시간을 직진하는 데 쓰지만 도착 지점은 나머지 시간 동안의 회전으로 결정된다.",
@@ -7095,7 +7123,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-56a8e971019f1a43dcb6fdf6906e619226e6847c-2000x3000-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/56a8e971019f1a43dcb6fdf6906e619226e6847c-2000x3000.png"
       }
     },
     "excerpt": "2012년 페이스북은 인스타그램을 인수했다. 인스타그램 개발자들은 Jordan Walke가 FaxJs의 다음 프로토타입으로 제작한 ReactJs를 사용하고 싶어했다. 인스타그램 덕분에 React는 오픈 소스, 모든 개발자가 사용할 수 있는 라이브러리로 탄생할 수 있게 되었다.",
@@ -7317,7 +7346,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-c8150b099fb069c84f828e1ae6df5cc9f188b701-957x1400-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/c8150b099fb069c84f828e1ae6df5cc9f188b701-957x1400.png"
       }
     },
     "excerpt": "그리고 끝으로, 이제까지 세계 여러 나라의 길 위에서 스쳐 지나며 레이스 중에 추월하거나 추월당해 왔던 모든 마라톤 주자들에게 이 책을 바치고 싶다. 만약 그 주자 여러분이 없었다면, 나도 아마 이렇게 계속 달리지는 못했을 것이다.",
@@ -7609,7 +7639,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-d3b9447f75e3ac33b81d0d1f389a235c3d91224d-827x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/d3b9447f75e3ac33b81d0d1f389a235c3d91224d-827x1200.png"
       }
     },
     "excerpt": "자신의 ‘일시적인 삶’을 비현실적인 것으로 간주하는 것이 삶의 의지를 잃게 하는 중요한 요인이 된다. 그 앞에 닥치는 모든 일들이 무의미한 것으로 여겨진다.",
@@ -7971,7 +8002,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-8c39e4e2a4fce206d6ef2bbc321e25ce965e0a61-868x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/8c39e4e2a4fce206d6ef2bbc321e25ce965e0a61-868x1200.png"
       }
     },
     "excerpt": "건축물은 자연의 겉모습을 모방해서는 안 된다. 대신 그 본질을 모방해야 한다. 새와 새인형과 비행기가 있다고 하자. 하늘을 나는 새와 모양은 다르지만 하늘을 나는 비행기가 새인형 보다는 더 새와 비슷하고 새로부터 배운 것이 있는 것이다.",
@@ -8303,7 +8335,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-02c434a6b44a1e1e0eb6cfe04ada9205eb0914a0-951x1400-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/02c434a6b44a1e1e0eb6cfe04ada9205eb0914a0-951x1400.png"
       }
     },
     "excerpt": "모든 유형의 업무에 대해서 자동화는 레버리지를 향상시키는 한 가지 방법이다. 기계의 도움을 받으면 사람은 더 많은 결과물을 산출할 수 있으니까 말이다. 하지만 생산업무와 행정업무 모두의 생산성을 높일 수 있는 방법이 하나 더 있다. 그것은 바로 ‘업무 단순화’다.",
@@ -8825,7 +8858,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-9ea47dffdabc2d89323fb66daa0629b76bd0d19b-1720x1161-png",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/9ea47dffdabc2d89323fb66daa0629b76bd0d19b-1720x1161.png"
         }
       },
       {
@@ -9029,7 +9063,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-4bb06b8f55fff4d8461ee48f59870c0a4e1eb7cf-600x400-png",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/4bb06b8f55fff4d8461ee48f59870c0a4e1eb7cf-600x400.png"
         }
       },
       {
@@ -9107,7 +9142,8 @@
         "_type": "image",
         "asset": {
           "_ref": "image-0f86aeef7795954073753119b2811008771321de-474x640-png",
-          "_type": "reference"
+          "_type": "reference",
+          "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/0f86aeef7795954073753119b2811008771321de-474x640.png"
         }
       },
       {
@@ -9219,7 +9255,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-e895e3d3ea09580899cc87a1b21a90742b1eb004-802x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/e895e3d3ea09580899cc87a1b21a90742b1eb004-802x1200.png"
       }
     },
     "excerpt": "애플의 창업자 스티브 잡스가 2005년 스탠퍼드대학교 졸업식에서 말한 \"Stay hungry, stay foolish!\"는 <홀 어스 카탈로그>에 실린 문구였습니다. 잡스 외에도 스티브 워즈니악, 구글의 에릭 슈미트, 래리 페이지, 세르게이 브린, 위키피디아의 웨일스 모두 <홀 어스 카탈로그>의 애독자였습니다.",
@@ -9455,7 +9492,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-610e2470bca031b83a704657cf2b97ea7dc95e7c-805x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/610e2470bca031b83a704657cf2b97ea7dc95e7c-805x1200.png"
       }
     },
     "excerpt": "위대한 대통령은 자기가 펼치던 정책들을 획득해야 하는 점수가 아니라 진행해야 할 일종의 실험으로 바라보았다. 그들은 직업 정치인이었지만 자기에게 닥친 문제들을 과학자 같은 태도와 접근법으로 풀곤 했다.",
@@ -9719,7 +9757,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-030faf8baf1b1da3eb42e3433ca38787abb3e7a7-500x737-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/030faf8baf1b1da3eb42e3433ca38787abb3e7a7-500x737.png"
       }
     },
     "excerpt": "내가 생각하는 여성운동은 여성이 '공적 영역'에 진출하는 것을 넘어, 남성이 '사적 영역'으로 들어오는 것이다.",
@@ -10699,7 +10738,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-2e965b89acfd540cbed43eb77ede7d496fa64648-847x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/2e965b89acfd540cbed43eb77ede7d496fa64648-847x1200.png"
       }
     },
     "excerpt": "우주와 삶의 의미, 자신의 정체성에 관한 진실을 알고 싶은가. 가장 좋은 출발점은 먼저 고통을 관찰하고 그것이 무엇인지 탐구하는 것이다. 답은 결코 이야기가 아니다.",
@@ -11319,7 +11359,8 @@
       "_type": "image",
       "asset": {
         "_ref": "image-610963cd4bebae6a65125f2b27a1067010f959a2-850x1200-png",
-        "_type": "reference"
+        "_type": "reference",
+        "url": "http://127.0.0.1:54321/storage/v1/object/public/post-images/sanity/610963cd4bebae6a65125f2b27a1067010f959a2-850x1200.png"
       }
     },
     "excerpt": "농업혁명 이후 수천 년에 이르는 인간의 역사를 이해하려는 시도는 단 하나의 질문으로 귀결된다. 인류는 어떻게 자신들을 대규모 협력망으로 엮었는가?",

@@ -2,10 +2,6 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  eslint: {
-    // Disabling on production builds because we're running checks on PRs via GitHub Actions.
-    ignoreDuringBuilds: true,
-  },
   /**
    * Env 이름을 Sanity와 Next 동일하게 쓰기 위해
    * Vercel secret에서 스튜디오 변수를 관리하고 이를
@@ -22,6 +18,26 @@ const nextConfig = {
     loaderFile: './components/image-loader.ts',
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+      },
+      {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+        port: '54321',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '54321',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co',
+        port: '',
+      },
       {
         protocol: 'https',
         hostname: 'i.ytimg.com',

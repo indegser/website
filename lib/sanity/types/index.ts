@@ -10,6 +10,7 @@ export const refSchema = z.object({
   asset: z.object({
     _ref: z.string(),
     _type: z.string(),
+    url: z.string().optional(),
   }),
 });
 

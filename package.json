@@ -17,6 +17,7 @@
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "jest",
+    "supabase:migrate-sanity-images": "node --env-file=.env.local scripts/migrate-sanity-images-to-supabase.mjs",
     "sanity:dev": "sanity dev",
     "sanity:start": "sanity start",
     "sanity:build": "sanity build",
