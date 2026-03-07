@@ -1,16 +1,12 @@
-import { postSchema, sanityClient } from '@/lib/sanity';
-import groq from 'groq';
+import { getSitemapPosts } from '@/lib/posts';
 import { getURL } from 'lib/constants';
 import { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const data = await sanityClient.fetch(
-    groq`*[_type == 'post'] { slug, _updatedAt }`,
-  );
-  const posts = postSchema.array().parse(data);
+  const posts = await getSitemapPosts();
 
   return posts.map((post) => ({
-    url: `${getURL()}/posts/${post.slug?.current}`,
-    lastModified: post._updatedAt,
+    url: `${getURL()}/posts/${post.slug}`,
+    lastModified: post.updatedAt,
   }));
 }

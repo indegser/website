@@ -1,24 +1,11 @@
 import { RichItem } from '@/app/rich-item';
 import { PageContainer } from '@/components/atoms/page-container';
-import { sanityClient } from '@/lib/sanity';
-import { postFeedSchema } from '@/lib/sanity/types';
-import groq from 'groq';
+import { getPostFeed } from '@/lib/posts';
 
 export const revalidate = 60; // 1-minute.
 
 export default async function IndexPage() {
-  const data =
-    await sanityClient.fetch(groq`*[_type == 'post'] | order(publishedAt desc) {
-    _id,
-    slug,
-    title,
-    excerpt,
-    cover,
-    publishedAt,
-    categories[]->
-  }`);
-
-  const posts = postFeedSchema.array().parse(data);
+  const posts = await getPostFeed();
 
   return (
     <PageContainer>

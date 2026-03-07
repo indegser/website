@@ -1,6 +1,5 @@
-import { isProduction } from '@/lib/constants';
-import { Post, postSchema, sanityClient, urlForImage } from '@/lib/sanity';
-import groq from 'groq';
+import { getPostBySlug, getPostSlugs } from '@/lib/posts';
+import { postSchema, urlForImage } from '@/lib/sanity';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PostPage } from './post/post-page';
@@ -16,12 +15,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const { slug } = params;
 
   try {
-    const data =
-      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug.current=='${slug}'][0] {
-    title,
-    excerpt,
-    cover,
-  }`);
+    const data = await getPostBySlug(slug);
 
     const { title, excerpt, cover } = postSchema
       .pick({ title: true, excerpt: true, cover: true })
@@ -52,17 +46,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export const generateStaticParams = async () => {
-  const data = await sanityClient.fetch<Post[]>(groq`
-    *[_type=='post'][0...${isProduction ? 10 : 1}] {
-      slug
-    }
-  `);
-
-  const posts = postSchema.pick({ slug: true }).required().array().parse(data);
-
-  return posts.map((post) => ({
-    slug: post.slug?.current,
-  }));
+  return getPostSlugs();
 };
 
 export default async function Page(props: Props) {
@@ -71,13 +55,7 @@ export default async function Page(props: Props) {
   const { slug } = params;
 
   try {
-    const data =
-      await sanityClient.fetch<Post>(groq`*[_type=='post' && slug.current=='${slug}'][0] {
-      title,
-      excerpt,
-      cover,
-      body,
-    }`);
+    const data = await getPostBySlug(slug);
 
     const post = postSchema
       .pick({ title: true, excerpt: true, cover: true, body: true })
