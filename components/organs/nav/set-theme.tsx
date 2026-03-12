@@ -8,15 +8,17 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
+
+const emptySubscribe = () => () => {};
 
 export const SetTheme = () => {
-  const [isReady, setIsReady] = useState(false);
+  const isReady = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
   const { setTheme, theme } = useTheme();
-
-  useEffect(() => {
-    setIsReady(true);
-  }, []);
 
   if (!isReady) return null;
 
