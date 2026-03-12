@@ -1,4 +1,4 @@
-import createImageUrlBuilder from '@sanity/image-url';
+import { createImageUrlBuilder } from '@sanity/image-url';
 import type { Image } from 'sanity';
 
 export { getImageDimensions } from '@sanity/asset-utils';

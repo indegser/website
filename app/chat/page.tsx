@@ -1,7 +1,7 @@
 'use client';
 
 import { bookSchema } from '@/app/api/ai/book/schema';
-import { experimental_useObject as useObject } from 'ai/react';
+import { experimental_useObject as useObject } from '@ai-sdk/react';
 
 export default function Page() {
   const { object, submit } = useObject({
