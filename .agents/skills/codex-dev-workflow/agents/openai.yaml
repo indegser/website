@@ -1,0 +1,3 @@
+display_name: Codex Dev Workflow
+short_description: Plan, build, validate, iterate
+default_prompt: Use this workflow to read the codebase, design a plan, implement with the right skills, validate the result, iterate on failures, and propose knowledge entries for approval before recording them.
