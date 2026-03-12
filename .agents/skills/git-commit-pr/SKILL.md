@@ -13,6 +13,7 @@ Use this skill when the user wants local changes turned into a commit and a pull
 - Run the smallest validation that safely covers the change.
 - Push the current branch to `origin`.
 - Create a pull request with a focused title and body.
+- Switch back to `main` after the pull request is created or the compare URL is prepared.
 - Report commit, validation, PR link, and any remaining local changes.
 
 ## Workflow
@@ -103,6 +104,16 @@ EOF
 
 If `gh` is unavailable or PR creation is blocked, derive the compare URL from the git remote and return that URL with a ready-to-paste PR body.
 
+8. Return to `main`.
+
+After the branch is pushed and the pull request URL or compare URL is ready, switch back to `main`.
+
+```bash
+git checkout main
+```
+
+If returning to `main` is blocked by local changes, report the blocker clearly instead of forcing the checkout.
+
 ## Guardrails
 
 - Never stage unrelated files just because they are modified.
@@ -119,4 +130,5 @@ Report results in this order:
 2. Commit hash and commit message
 3. Validation commands run and whether they passed
 4. Pull request URL, or compare URL fallback if PR creation was blocked
-5. Remaining uncommitted or unstaged files
+5. Final checked out branch
+6. Remaining uncommitted or unstaged files
