@@ -1,0 +1,3 @@
+display_name: Git Commit PR
+short_description: Commit scoped changes and open a PR
+default_prompt: Use this skill to stage only the requested files, generate a conventional commit, run the smallest safe validation, push the current branch, and create a pull request with gh or a compare URL fallback.
