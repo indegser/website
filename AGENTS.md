@@ -54,6 +54,8 @@ For larger UI changes, add a `dogfood` pass after the focused `agent-browser` re
 ## Operating Rules
 
 - Reusable operating rules must be explicitly codified rather than kept as conversational guidance.
+- At the start of every new conversation, check the current git branch. If the branch is `main`, verify whether it is behind `origin/main` and update it before proceeding when safe to do so.
+- When removing or replacing a tool, framework, script, or test runner, expand the verification scope beyond source files to include package scripts, lockfiles, CI workflows under `.github/workflows`, and user-facing documentation that references the removed item.
 - Before codifying a new rule in `AGENTS.md` or any skill, first propose the exact wording to the user and wait for approval.
 - When proposing a change to instructions, workflows, or reusable rules, include a brief self-critique focused on:
   - execution strength, meaning whether the rule will reliably change agent behavior in practice,
