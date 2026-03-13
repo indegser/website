@@ -32,14 +32,22 @@ export const PostPortableText = (props: Props) => {
           'google-map': PostGoogleMap,
         },
         block: {
-          h1: (props) => <h1 className="mb-4 py-1">{props.children}</h1>,
-          h2: (props) => <h2 className="mb-4 py-1">{props.children}</h2>,
-          h3: (props) => <h3 className="mb-4 py-1">{props.children}</h3>,
-          h4: (props) => <h4 className="mb-4 py-1">{props.children}</h4>,
+          h1: (props) => (
+            <h1 className="text-heading-40 mb-4 py-1">{props.children}</h1>
+          ),
+          h2: (props) => (
+            <h2 className="text-heading-32 mb-4 py-1">{props.children}</h2>
+          ),
+          h3: (props) => (
+            <h3 className="text-heading-24 mb-4 py-1">{props.children}</h3>
+          ),
+          h4: (props) => (
+            <h4 className="text-heading-20 mb-4 py-1">{props.children}</h4>
+          ),
           normal: ({ children, ...props }) => {
             return (
               <div className="mb-4 py-1" data-block-id={props.value._key}>
-                <p>{children}</p>
+                <p className="text-copy-16">{children}</p>
               </div>
             );
           },
@@ -48,7 +56,7 @@ export const PostPortableText = (props: Props) => {
           link: PostLink,
           code: ({ children }) => {
             return (
-              <code className="rounded-sm bg-gray-100 px-1 py-0.5 text-xs text-rose-500 dark:bg-gray-500 dark:text-rose-100">
+              <code className="text-copy-13-mono rounded-sm bg-gray-100 px-1 py-0.5 text-rose-500 dark:bg-gray-500 dark:text-rose-100">
                 {children}
               </code>
             );

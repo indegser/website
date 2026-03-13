@@ -11,7 +11,7 @@ export const Nav = () => {
       <PageContainer>
         <nav className="flex h-[50px] w-full items-center justify-between">
           <Link href="/" passHref>
-            <div className="flex items-center text-sm font-semibold text-foreground !text-opacity-90">
+            <div className="text-heading-14 flex items-center text-foreground !text-opacity-90">
               <LogoIcon />
               Indegser
             </div>
