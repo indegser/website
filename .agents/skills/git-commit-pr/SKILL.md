@@ -11,7 +11,8 @@ Use this skill when the user wants local changes turned into a commit and a pull
 
 - Commit only the requested change set.
 - Run the smallest validation that safely covers the change.
-- Push the current branch to `origin`.
+- Default to creating a new branch from `main` unless the user explicitly asked to continue an existing branch or pull request.
+- Push the chosen branch to `origin`.
 - Create a pull request with a focused title and body.
 - Switch back to `main` after the pull request is created or the compare URL is prepared.
 - Report commit, validation, PR link, and any remaining local changes.
@@ -25,6 +26,26 @@ git status --short
 git branch --show-current
 git diff --staged
 git diff
+```
+
+Classify the request explicitly as one of:
+
+- `continue-existing-branch`
+- `new-branch-from-main`
+
+Never reuse the current branch by default.
+Use `continue-existing-branch` only when the user explicitly asks to continue the existing branch or PR.
+Otherwise default to `new-branch-from-main`.
+
+Before any `git add`, `git commit`, or `git push`, state the branch decision and commit scope in one short line.
+After any interrupted turn or context shift, redo this branch classification from scratch.
+
+If the request is `new-branch-from-main`, switch to `main`, fast-forward it, and create a fresh branch before staging:
+
+```bash
+git switch main
+git pull --ff-only origin main
+git switch -c <new-branch-name>
 ```
 
 2. Stage only the files that belong to the requested work.
