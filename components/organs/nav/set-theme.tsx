@@ -24,7 +24,7 @@ export const SetTheme = () => {
 
   return (
     <Select value={theme} onValueChange={setTheme}>
-      <SelectTrigger className="h-7 w-auto pr-1 text-xs">
+      <SelectTrigger className="text-button-12 h-7 w-auto pr-1">
         <SelectValue defaultValue={theme} />
       </SelectTrigger>
       <SelectContent>

@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="mt-8 pb-12 pt-4">
       <PageContainer>
         <div className="grid auto-cols-max items-center justify-center gap-2 sm:grid-flow-col sm:gap-5">
-          <div className="text-sm font-medium text-muted-foreground">
+          <div className="text-label-14 text-muted-foreground">
             Indegser. Designer at Seoul, South Korea.
           </div>
           <SnsList />
