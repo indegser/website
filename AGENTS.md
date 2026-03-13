@@ -51,6 +51,14 @@ For larger UI changes, add a `dogfood` pass after the focused `agent-browser` re
   - the implementation plan,
   - any acceptance criteria discovered in code or tests.
 
+## Operating Rules
+
+- Reusable operating rules must be explicitly codified rather than kept as conversational guidance.
+- Before codifying a new rule in `AGENTS.md` or any skill, first propose the exact wording to the user and wait for approval.
+- When proposing a change to instructions, workflows, or reusable rules, include a brief self-critique focused on:
+  - execution strength, meaning whether the rule will reliably change agent behavior in practice,
+  - duplication risk, meaning whether the rule belongs here or is already covered elsewhere.
+
 ## Knowledge Capture Rule
 
 - Knowledge is stored under `docs/knowledge/`.
