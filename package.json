@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.2",
-    "@ai-sdk/react": "^3.0.118",
     "@amplitude/analytics-browser": "^2.33.1",
     "@portabletext/react": "^6.0.3",
     "@radix-ui/react-avatar": "^1.1.2",
