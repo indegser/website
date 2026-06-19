@@ -1,72 +1,63 @@
-# Repository Workflow
+# AGENTS.md
 
-Use the `codex-dev-workflow` skill for any non-trivial feature, bug fix, refactor, or review request in this repository.
+This repository is the Indegser website and Sanity-backed publishing surface.
+Keep this file short. Put repeatable workflows in `.agents/skills`, not here.
 
-## Default Execution Order
+## Commands
 
-1. Restate the requirement in concrete terms.
-2. Read the relevant code paths before proposing changes.
-3. Produce a short design and implementation plan.
-4. Choose and use the minimum relevant skill set for implementation.
-5. Validate the result with static checks, behavioral checks, and requirement-to-plan comparison.
-6. If validation fails or the result misses the plan, iterate through implement -> validate until it passes.
-7. Before recording any reusable learning, propose the exact knowledge entry to the user and wait for approval.
+- `pnpm run dev`: start the Next.js app.
+- `pnpm run build`: build and type-check the app through Next.js.
+- `pnpm run lint`: lint `app`, `components`, and `lib`.
+- `pnpm run prettier:check`: check formatting.
+- `pnpm run sanity:dev`: start Sanity Studio locally.
+- `pnpm run sanity:deploy`: deploy Sanity Studio.
 
-## Skill Selection
+## How To Work
 
-- Use `shadcn` for shadcn/ui components, registry items, and component composition.
-- Use `vercel-react-best-practices` for React or Next.js architecture, performance, rendering, and data-flow decisions.
-- Use `web-design-guidelines` for UI quality, accessibility, and UX validation.
-- Use `agent-browser` for any task that changes visible UI so the agent reviews the rendered result in-browser, not only the code.
-- Use `dogfood` for broader exploratory QA on large UI changes, multi-step flows, or pre-release visual and interaction testing.
-- Use the minimum set of skills needed for the request, in a clear order.
+- Read the relevant files before changing code.
+- Prefer existing patterns over new abstractions.
+- Make the smallest change that solves the request.
+- Preserve user work. Do not revert changes you did not make unless explicitly asked.
+- Use `rg` for searching.
+- Use `apply_patch` for manual edits.
+- Validate with the smallest reliable command set for the change.
+- If a command fails because of sandboxing or network access, retry with a scoped approval request.
 
-## Design Change Loop
+## Architecture
 
-When a task changes the UI, do not treat implementation as complete after code changes alone.
+- Treat Sanity as the source of truth for publishable content.
+- Treat this site as a generic post renderer, not a collection of app-specific renderers.
+- Prefer `post` documents with Portable Text body blocks over new page-specific document types.
+- Add custom Sanity block types only when the generic renderer cannot express the content cleanly.
+- Keep rendering logic in `components/organs/post-portable-text`.
+- Keep Sanity schemas in `lib/sanity/schema`.
+- Keep runtime Sanity/Zod contracts in `lib/sanity/types`.
 
-Run this loop:
+## Skills And Agents
 
-1. Implement the UI change.
-2. Open the changed surface in a browser with `agent-browser`.
-3. Review it from a professional UI/UX perspective:
-   - visual hierarchy,
-   - spacing and alignment,
-   - typography and readability,
-   - responsiveness,
-   - accessibility cues,
-   - interaction clarity,
-   - consistency with surrounding product patterns.
-4. Fix the issues found.
-5. Re-open and re-review until the rendered result is acceptable.
+- Repo-scoped skills live in `.agents/skills`.
+- Use skills for repeatable project workflows, domain writing rules, content schemas, and helper scripts.
+- Keep `SKILL.md` concise. Put longer domain material in `references/`.
+- Put deterministic validation or upload helpers in a skill's `scripts/` directory.
+- Project-scoped custom subagents live in `.codex/agents`.
+- Use custom subagents only for separate roles such as independent review, investigation, or publish readiness checks.
+- Do not create a plugin unless the workflow needs to be distributed outside this repository or bundled with app/MCP integrations.
 
-For larger UI changes, add a `dogfood` pass after the focused `agent-browser` review.
+## Content Pipeline
 
-## Validation Standard
+- Content-generation skills should produce validated `post.body` blocks.
+- Generated content should become a Sanity draft or reviewable document by default.
+- Do not auto-publish generated content unless the user explicitly asks.
+- For specialized content like reading notes or harmony patterns, model the difference with `contentKind`, metadata, and typed body blocks rather than separate renderers.
 
-- Run the smallest set of commands that can prove the change safely.
-- Prefer repository scripts such as `pnpm lint`, `pnpm test`, and targeted checks over ad hoc validation.
-- In the final verification step, explicitly compare the result against:
-  - the user's requirement,
-  - the implementation plan,
-  - any acceptance criteria discovered in code or tests.
+## UI Changes
 
-## Operating Rules
+- If a task changes visible UI, run the app when feasible and inspect the rendered result in a browser.
+- Check hierarchy, spacing, typography, responsiveness, accessibility cues, and interaction clarity.
+- Fix visual or interaction issues found during review before finishing.
 
-- Reusable operating rules must be explicitly codified rather than kept as conversational guidance.
-- At the start of every new conversation, check the current git branch. If the branch is `main`, verify whether it is behind `origin/main` and update it before proceeding when safe to do so.
-- When removing or replacing a tool, framework, script, or test runner, expand the verification scope beyond source files to include package scripts, lockfiles, CI workflows under `.github/workflows`, and user-facing documentation that references the removed item.
-- Before codifying a new rule in `AGENTS.md` or any skill, first propose the exact wording to the user and wait for approval.
-- When proposing a change to instructions, workflows, or reusable rules, include a brief self-critique focused on:
-  - execution strength, meaning whether the rule will reliably change agent behavior in practice,
-  - duplication risk, meaning whether the rule belongs here or is already covered elsewhere.
+## Durable Knowledge
 
-## Knowledge Capture Rule
-
-- Knowledge is stored under `docs/knowledge/`.
-- Do not write or update knowledge automatically.
-- First propose:
-  - the title,
-  - why it is reusable,
-  - the exact content to record.
-- Record it only after the user explicitly approves.
+- Do not record reusable knowledge automatically.
+- Before adding durable rules to `AGENTS.md` or a skill, propose the exact wording and get approval.
+- Keep one-off task guidance in the conversation, not in this file.

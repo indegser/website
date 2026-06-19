@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Reading Question Writer'
+  short_description: 'Turn questions into post drafts'
+  default_prompt: 'Use $reading-question-writer to turn this reading question into a Sanity post draft.'

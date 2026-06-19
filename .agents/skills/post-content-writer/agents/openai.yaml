@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Post Content Writer'
+  short_description: 'Write Sanity post body blocks'
+  default_prompt: 'Use $post-content-writer to draft a Sanity post body from this material.'

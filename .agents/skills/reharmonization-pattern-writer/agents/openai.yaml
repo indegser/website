@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Reharmonization Pattern Writer'
+  short_description: 'Write harmony pattern post drafts'
+  default_prompt: 'Use $reharmonization-pattern-writer to draft this harmony pattern as a Sanity post.'
