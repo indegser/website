@@ -10,6 +10,12 @@ Generated content should be written as a draft or reviewable document unless the
 - Preserve `sourceMeta.sourceId` when updating generated content.
 - Do not overwrite a manually edited post without surfacing the diff.
 
+## Dataset Routing
+
+- `reading-question` and `harmony-pattern` drafts must always be created or updated in the Sanity `production` dataset.
+- Do not upload those content kinds to the `development` dataset, even when running from `.env.local`.
+- Use `scripts/upload-post-draft.mjs`; it routes those content kinds to `production` and reports the target dataset in dry-run and write output.
+
 ## Upsert Identity
 
 Prefer this identity order:

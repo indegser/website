@@ -32,6 +32,7 @@ Use this skill as the shared contract for publishable content in this repository
 - Keep human prose and machine-readable custom blocks separate.
 - Prefer stable IDs and slugs over title-derived references.
 - Preserve source context in `sourceMeta` so generated content remains auditable.
+- Always write `reading-question` and `harmony-pattern` drafts to the Sanity `production` dataset.
 - If the current Sanity schema cannot store the proposed block, stop and propose the schema addition before uploading.
 
 ## Output

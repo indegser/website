@@ -23,6 +23,7 @@ Use this skill to turn a question and its answer into a clear post draft. This s
 6. Write body content as normal Portable Text sections.
 7. Use callout blocks sparingly for the original question or main takeaway.
 8. Save as draft/reviewable content by default.
+9. When uploading, use `$post-content-writer`'s upload helper so `reading-question` drafts are written to the Sanity `production` dataset.
 
 ## Quality Bar
 

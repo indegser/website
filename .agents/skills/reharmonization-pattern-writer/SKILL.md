@@ -21,6 +21,7 @@ This skill depends on `$post-content-writer`; harmony patterns are posts with ty
 8. If it is new, produce a `post` draft with `contentKind: "harmony-pattern"`.
 9. Use `progressionCompare` or `progressionExample` blocks for primary chord examples.
 10. Save as draft/reviewable content by default.
+11. When uploading, use `$post-content-writer`'s upload helper so `harmony-pattern` drafts are written to the Sanity `production` dataset.
 
 ## Output Principles
 

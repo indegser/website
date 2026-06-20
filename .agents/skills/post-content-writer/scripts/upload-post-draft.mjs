@@ -3,11 +3,12 @@
 import { readFile } from 'node:fs/promises';
 import { createClient } from 'next-sanity';
 
-const requiredFields = [
-  'SANITY_STUDIO_PROJECT_ID',
-  'SANITY_STUDIO_DATASET',
-  'SANITY_TOKEN',
-];
+const requiredFields = ['SANITY_STUDIO_PROJECT_ID', 'SANITY_TOKEN'];
+
+const productionDatasetContentKinds = new Set([
+  'reading-question',
+  'harmony-pattern',
+]);
 
 function usage() {
   console.error(
@@ -49,6 +50,14 @@ function draftIdFor(draft) {
   return `drafts.post.${draft.slug.current}`;
 }
 
+function datasetForDraft(draft) {
+  if (productionDatasetContentKinds.has(draft.contentKind)) {
+    return 'production';
+  }
+
+  return process.env.SANITY_STUDIO_DATASET;
+}
+
 const args = process.argv.slice(2);
 const file = args.find((arg) => !arg.startsWith('-'));
 const shouldWrite = args.includes('--write');
@@ -67,12 +76,14 @@ const payload = {
   _id: documentId,
   _type: 'post',
 };
+const dataset = datasetForDraft(payload);
 
 if (!shouldWrite) {
   console.log(
     JSON.stringify(
       {
         mode: 'dry-run',
+        dataset,
         documentId,
         title: payload.title,
         slug: payload.slug?.current,
@@ -89,10 +100,11 @@ if (!shouldWrite) {
 for (const name of requiredFields) {
   assert(process.env[name], `Missing ${name}.`);
 }
+assert(dataset, 'Missing SANITY_STUDIO_DATASET.');
 
 const client = createClient({
   projectId: process.env.SANITY_STUDIO_PROJECT_ID,
-  dataset: process.env.SANITY_STUDIO_DATASET,
+  dataset,
   apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-05-23',
   token: process.env.SANITY_TOKEN,
   useCdn: false,
@@ -107,6 +119,7 @@ try {
     JSON.stringify(
       {
         mode: 'write',
+        dataset,
         documentId,
         error: {
           code: error?.code,
@@ -124,6 +137,7 @@ console.log(
   JSON.stringify(
     {
       mode: 'write',
+      dataset,
       documentId: result._id,
       updatedAt: result._updatedAt,
     },
