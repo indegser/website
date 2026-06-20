@@ -1,14 +1,15 @@
 # Typography System
 
-Source: https://vercel.com/geist/typography
+Source: https://www.apple.com/kr/newsroom/
 
-This document transcribes the Geist Typography system structure and usage guidance for this project.
+This document captures this project's Apple Newsroom-inspired typography system.
 
 Constraint for this repository:
 
-- Do not adopt Geist font families.
+- Do not adopt Apple font families.
 - Keep the current project font-family setup as-is.
-- Only adopt the typography scale, naming, hierarchy, and usage rules documented below.
+- Keep the existing public class names so component usage remains stable.
+- Adopt Apple Newsroom's reading rhythm, hierarchy, and Korean article density.
 
 ## Usage
 
@@ -21,7 +22,7 @@ Each class pre-sets a combination of:
 - `letter-spacing`
 - `font-weight`
 
-To use the `Subtle` and `Strong` modifiers, nest a `<strong>` element inside the typography class.
+To use the `Strong` modifier, nest a `<strong>` element inside the typography class.
 
 ```tsx
 <p className="text-copy-16">
@@ -33,18 +34,18 @@ To use the `Subtle` and `Strong` modifiers, nest a `<strong>` element inside the
 
 Used to introduce pages or sections.
 
-| Token                  | Class name        | Usage                                                      |
-| ---------------------- | ----------------- | ---------------------------------------------------------- |
-| Heading 72             | `text-heading-72` | Marketing heroes.                                          |
-| Heading 64             | `text-heading-64` | —                                                          |
-| Heading 56             | `text-heading-56` | —                                                          |
-| Heading 48             | `text-heading-48` | —                                                          |
-| Heading 40             | `text-heading-40` | —                                                          |
-| Heading 32 with Subtle | `text-heading-32` | Marketing subheadings, paragraphs, and dashboard headings. |
-| Heading 24 with Subtle | `text-heading-24` | —                                                          |
-| Heading 20 with Subtle | `text-heading-20` | —                                                          |
-| Heading 16 with Subtle | `text-heading-16` | —                                                          |
-| Heading 14             | `text-heading-14` | —                                                          |
+| Token      | Class name        | Usage                                                 |
+| ---------- | ----------------- | ----------------------------------------------------- |
+| Heading 72 | `text-heading-72` | Marketing heroes.                                     |
+| Heading 64 | `text-heading-64` | —                                                     |
+| Heading 56 | `text-heading-56` | —                                                     |
+| Heading 48 | `text-heading-48` | Article headlines and large page titles.              |
+| Heading 40 | `text-heading-40` | Mobile article headlines and medium page titles.      |
+| Heading 32 | `text-heading-32` | Newsroom index section heads and major body sections. |
+| Heading 24 | `text-heading-24` | Article body section headings.                        |
+| Heading 20 | `text-heading-20` | Compact section headings.                             |
+| Heading 16 | `text-heading-16` | Small titles in lists and dense cards.                |
+| Heading 14 | `text-heading-14` | Small labels that need heading emphasis.              |
 
 ## Buttons
 
@@ -92,12 +93,12 @@ Designed for multiple lines of text, having a higher line height than Label.
 | Copy 13             | `text-copy-13`      | For secondary text and views where space is a premium.            |
 | Copy 13 Mono        | `text-copy-13-mono` | Used for inline code mentions.                                    |
 
-## Original Numeric Spec
+## Numeric Spec
 
 Source of the values in this section:
 
-- Extracted from the official CSS asset loaded by `https://vercel.com/geist/typography`
-- Checked on March 13, 2026
+- Checked against the official Apple Newsroom KR index and article pages.
+- Checked on June 20, 2026.
 - `font-family` is intentionally omitted here for repository use
 
 Interpretation rules:
@@ -110,16 +111,16 @@ Interpretation rules:
 
 | Class             | Font size | Line height | Letter spacing | Weight | Strong weight |
 | ----------------- | --------- | ----------- | -------------- | ------ | ------------- |
-| `text-heading-72` | `72px`    | `72px`      | `-4.32px`      | `600`  | `not set`     |
-| `text-heading-64` | `64px`    | `64px`      | `-3.84px`      | `600`  | `not set`     |
-| `text-heading-56` | `56px`    | `56px`      | `-3.36px`      | `600`  | `not set`     |
-| `text-heading-48` | `48px`    | `56px`      | `-2.88px`      | `600`  | `not set`     |
-| `text-heading-40` | `40px`    | `48px`      | `-2.4px`       | `600`  | `not set`     |
-| `text-heading-32` | `32px`    | `40px`      | `-1.28px`      | `600`  | `500`         |
-| `text-heading-24` | `24px`    | `32px`      | `-0.96px`      | `600`  | `500`         |
-| `text-heading-20` | `20px`    | `26px`      | `-0.4px`       | `600`  | `500`         |
-| `text-heading-16` | `16px`    | `24px`      | `-0.32px`      | `600`  | `500`         |
-| `text-heading-14` | `14px`    | `20px`      | `-0.28px`      | `600`  | `not set`     |
+| `text-heading-72` | `72px`    | `78px`      | `0px`          | `700`  | `not set`     |
+| `text-heading-64` | `64px`    | `70px`      | `0px`          | `700`  | `not set`     |
+| `text-heading-56` | `56px`    | `62px`      | `0px`          | `700`  | `not set`     |
+| `text-heading-48` | `48px`    | `57px`      | `0px`          | `700`  | `not set`     |
+| `text-heading-40` | `40px`    | `48px`      | `0px`          | `700`  | `not set`     |
+| `text-heading-32` | `32px`    | `39px`      | `0.128px`      | `700`  | `500`         |
+| `text-heading-24` | `24px`    | `31px`      | `0.216px`      | `700`  | `500`         |
+| `text-heading-20` | `20px`    | `27px`      | `0px`          | `700`  | `500`         |
+| `text-heading-16` | `16px`    | `22px`      | `0px`          | `700`  | `500`         |
+| `text-heading-14` | `14px`    | `20px`      | `0px`          | `700`  | `not set`     |
 
 ### Buttons
 
@@ -147,20 +148,20 @@ Interpretation rules:
 
 | Class               | Font size | Line height | Letter spacing | Weight | Strong weight |
 | ------------------- | --------- | ----------- | -------------- | ------ | ------------- |
-| `text-copy-24`      | `24px`    | `36px`      | `not set`      | `400`  | `500`         |
-| `text-copy-20`      | `20px`    | `36px`      | `not set`      | `400`  | `500`         |
-| `text-copy-18`      | `18px`    | `28px`      | `not set`      | `400`  | `500`         |
-| `text-copy-16`      | `16px`    | `24px`      | `not set`      | `400`  | `500`         |
-| `text-copy-14`      | `14px`    | `20px`      | `not set`      | `400`  | `500`         |
-| `text-copy-13`      | `13px`    | `18px`      | `not set`      | `400`  | `500`         |
-| `text-copy-13-mono` | `13px`    | `18px`      | `not set`      | `400`  | `not set`     |
+| `text-copy-24`      | `24px`    | `31px`      | `0.216px`      | `500`  | `500`         |
+| `text-copy-20`      | `20px`    | `30px`      | `0.2px`        | `400`  | `500`         |
+| `text-copy-18`      | `19px`    | `29px`      | `0.228px`      | `400`  | `500`         |
+| `text-copy-16`      | `17px`    | `27px`      | `0px`          | `400`  | `500`         |
+| `text-copy-14`      | `14px`    | `22px`      | `0px`          | `400`  | `500`         |
+| `text-copy-13`      | `13px`    | `18px`      | `0px`          | `400`  | `500`         |
+| `text-copy-13-mono` | `13px`    | `18px`      | `0px`          | `400`  | `not set`     |
 
 ## Adoption Notes
 
 - Preserve the token names exactly as documented above.
 - Preserve category boundaries: `Headings`, `Buttons`, `Label`, and `Copy`.
-- Preserve modifier intent: `Subtle`, `Strong`, `Mono`, `Tabular`, and `Caps`.
-- Exclude `font-family` from the imported system definition.
+- Preserve modifier intent: `Strong`, `Mono`, `Tabular`, and `Caps`.
+- Exclude `font-family` from the sampled system definition.
 
 ## Repository Mapping
 
@@ -318,6 +319,17 @@ Once token utilities exist, semantic elements can be mapped like this:
 This is a repository-level mapping draft, not part of the original Geist documentation.
 
 These semantic assignments should be validated against actual content density and Korean copy length before finalizing.
+
+## Post Article Mapping
+
+Post pages follow the Apple Newsroom article rhythm more closely than the global element defaults:
+
+- Content column: `653px` max width.
+- Article headline: `text-heading-40`, upgraded to `text-heading-48` from the `md` breakpoint.
+- Article excerpt: `text-copy-24`.
+- Portable Text body paragraph: `text-copy-18`.
+- Portable Text section heading: `text-heading-24`.
+- Body paragraph spacing: `29px`.
 
 ## Korean Content Notes
 

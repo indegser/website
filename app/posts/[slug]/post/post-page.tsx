@@ -19,7 +19,7 @@ export const PostPage = ({ post }: Props) => {
       </Suspense>
       <PostHeadline post={post} />
       <PageContainer>
-        <article className="text-copy-16 mx-auto max-w-2xl text-gray-800 dark:text-gray-100 dark:text-opacity-70">
+        <article className="text-copy-18 mx-auto max-w-[653px] text-[#1d1d1f] dark:text-gray-100/80">
           <PostPortableText value={post.body ?? []} />
         </article>
         <Feedback />

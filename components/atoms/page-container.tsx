@@ -17,5 +17,7 @@ export const PageContainer = ({
 };
 
 export const PageContent = (props: HTMLProps<HTMLDivElement>) => {
-  return <div className="mx-auto max-w-2xl" {...props} />;
+  return (
+    <div {...props} className={cn('mx-auto max-w-2xl', props.className)} />
+  );
 };

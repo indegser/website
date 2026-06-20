@@ -24,8 +24,8 @@ export const PostPortableText = (props: Props) => {
       {...props}
       components={{
         list: {
-          bullet: ({ children }) => <ul className="mb-4">{children}</ul>,
-          number: ({ children }) => <ol className="mb-4">{children}</ol>,
+          bullet: ({ children }) => <ul className="mb-[29px]">{children}</ul>,
+          number: ({ children }) => <ol className="mb-[29px]">{children}</ol>,
         },
         listItem: {
           bullet: BulletListItem,
@@ -45,21 +45,32 @@ export const PostPortableText = (props: Props) => {
         },
         block: {
           h1: (props) => (
-            <h1 className="text-heading-40 mb-4 py-1">{props.children}</h1>
+            <h1 className="text-heading-32 mb-4 mt-[52px] py-0 first:mt-0">
+              {props.children}
+            </h1>
           ),
           h2: (props) => (
-            <h2 className="text-heading-32 mb-4 py-1">{props.children}</h2>
+            <h2 className="text-heading-24 mb-4 mt-[52px] py-0 first:mt-0">
+              {props.children}
+            </h2>
           ),
           h3: (props) => (
-            <h3 className="text-heading-24 mb-4 py-1">{props.children}</h3>
+            <h3 className="text-heading-20 mb-4 mt-[44px] py-0 first:mt-0">
+              {props.children}
+            </h3>
           ),
           h4: (props) => (
-            <h4 className="text-heading-20 mb-4 py-1">{props.children}</h4>
+            <h4 className="text-heading-16 mb-3 mt-9 py-0 first:mt-0">
+              {props.children}
+            </h4>
           ),
           normal: ({ children, ...props }) => {
             return (
-              <div className="mb-4 py-1" data-block-id={props.value._key}>
-                <p className="text-copy-16">{children}</p>
+              <div
+                className="mb-[29px] py-0 last:mb-0"
+                data-block-id={props.value._key}
+              >
+                <p className="text-copy-18">{children}</p>
               </div>
             );
           },

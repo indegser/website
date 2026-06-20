@@ -11,13 +11,13 @@ export const PostHeadline = async ({ post }: Props) => {
   const { title, excerpt } = post;
 
   return (
-    <PageContainer className="py-10">
-      <PageContent>
-        <h1 className="text-heading-40 md:text-heading-48 my-0 break-keep py-4">
+    <PageContainer className="pb-11 pt-[52px]">
+      <PageContent className="mx-auto max-w-[653px] text-[#1d1d1f] dark:text-gray-100">
+        <h1 className="text-heading-40 md:text-heading-48 my-0 break-keep py-0">
           <Balancer>{title}</Balancer>
         </h1>
-        <div>
-          <h4 className="text-copy-18 break-keep">
+        <div className="mt-5">
+          <h4 className="text-copy-24 break-keep">
             <Balancer>{excerpt}</Balancer>
           </h4>
         </div>
