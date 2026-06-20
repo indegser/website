@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Vercel Deployment Check'
+  short_description: 'Verify Vercel deploys after Git changes'
+  default_prompt: 'Use $vercel-deployment-check to verify the latest GitHub push or main merge deployed correctly on Vercel.'
