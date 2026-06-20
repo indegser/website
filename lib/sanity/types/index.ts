@@ -55,13 +55,101 @@ export const slugSchema = z
   })
   .nullable();
 
+export const sourceMetaSchema = z
+  .object({
+    originSkill: z.string(),
+    sourceProject: z.string(),
+    sourceId: z.string(),
+    sourceUrl: z.string(),
+    schemaVersion: z.number(),
+    generatedAt: z.string(),
+    primaryKeyCenter: z.string(),
+    sourceTags: z.array(z.string()),
+    sourceNotes: z.array(z.string()),
+    glossaryTermIds: z.array(z.string()),
+    duplicateKeys: z.array(z.string()),
+    relatedSourceIds: z.array(z.string()),
+  })
+  .partial();
+
+export type GridUnit = 'quarter' | 'eighth' | 'sixteenth';
+
+export type Meter = {
+  beatsPerBar: number;
+  beatUnit: number;
+};
+
+export type ChordEvent = {
+  chord: string;
+  start: number;
+  duration: number;
+  role?: string;
+  annotation?: string;
+};
+
+export type ProgressionBar = {
+  index: number;
+  events: ChordEvent[];
+};
+
+export type Progression = {
+  bars: ProgressionBar[];
+};
+
+export type ProgressionCompare = {
+  _type: 'progressionCompare';
+  _key?: string;
+  id: string;
+  meter: Meter;
+  gridUnit: GridUnit;
+  before: Progression;
+  after: Progression;
+};
+
+export type VoiceMotion = {
+  _type: 'voiceMotion';
+  _key?: string;
+  title: string;
+  motions: Array<{
+    label: string;
+    path: string[];
+    explanation: string;
+  }>;
+};
+
+export type UsageNotes = {
+  _type: 'usageNotes';
+  _key?: string;
+  items: string[];
+};
+
+export type RelatedTerms = {
+  _type: 'relatedTerms';
+  _key?: string;
+  termIds: string[];
+};
+
+export type Callout = {
+  _type: 'callout';
+  _key?: string;
+  tone: 'note' | 'question' | 'warning' | 'takeaway';
+  title?: string;
+  body: Array<{
+    _type: string;
+    _key?: string;
+    [key: string]: unknown;
+  }>;
+};
+
 export const postSchema = z
   .object({
     _id: z.string(),
     title: z.string(),
     excerpt: z.string(),
+    contentKind: z.string(),
+    sourceMeta: sourceMetaSchema,
     slug: slugSchema,
-    cover: refSchema,
+    cover: refSchema.nullable(),
     body: z.array(z.any()),
     categories: z.array(categorySchema).nullable(),
     publishedAt: z.coerce.date(),

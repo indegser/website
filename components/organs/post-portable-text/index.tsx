@@ -2,6 +2,13 @@ import { PortableText } from 'next-sanity';
 import { ComponentProps } from 'react';
 import { BulletListItem } from './components/bullet-list-item';
 import { NumberListItem } from './components/number-list-item';
+import {
+  PostProgressionCompare,
+  PostRelatedTerms,
+  PostUsageNotes,
+  PostVoiceMotion,
+} from './components/post-harmony-blocks';
+import { PostCallout } from './components/post-callout';
 import { PostCode } from './components/post-code';
 import { PostGoogleMap } from './components/post-google-map';
 import { PostImage } from './components/post-image';
@@ -30,6 +37,11 @@ export const PostPortableText = (props: Props) => {
           code: PostCode,
           youtube: PostYoutube,
           'google-map': PostGoogleMap,
+          progressionCompare: PostProgressionCompare,
+          voiceMotion: PostVoiceMotion,
+          usageNotes: PostUsageNotes,
+          relatedTerms: PostRelatedTerms,
+          callout: PostCallout,
         },
         block: {
           h1: (props) => (

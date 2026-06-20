@@ -48,6 +48,16 @@ function validateDraft(draft) {
     if (block._type === 'block' && !Array.isArray(block.children)) {
       fail(`body[${index}] Portable Text block must have children.`);
     }
+
+    if (block._type === 'callout') {
+      if (!['note', 'question', 'warning', 'takeaway'].includes(block.tone)) {
+        fail(`body[${index}] callout has unsupported tone "${block.tone}".`);
+      }
+
+      if (!Array.isArray(block.body) || block.body.length === 0) {
+        fail(`body[${index}] callout body must be a non-empty array.`);
+      }
+    }
   }
 }
 

@@ -1,5 +1,7 @@
 import { defineArrayMember, defineType } from 'sanity';
+import { callout } from './callout';
 import { googleMap } from './google-map';
+import { harmonyBlockMembers } from './harmony-blocks';
 import linkPreview from './link-preview';
 import { youtube } from './youtube';
 
@@ -70,5 +72,7 @@ export default defineType({
     defineArrayMember({
       type: 'code',
     }),
+    callout,
+    ...harmonyBlockMembers,
   ],
 });

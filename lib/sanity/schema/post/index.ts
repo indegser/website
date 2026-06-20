@@ -46,6 +46,92 @@ export default defineType({
     }),
     postExcerpt,
     defineField({
+      name: 'contentKind',
+      title: 'Content Kind',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Essay', value: 'essay' },
+          { title: 'Reading Question', value: 'reading-question' },
+          { title: 'Harmony Pattern', value: 'harmony-pattern' },
+        ],
+      },
+      group: 'meta',
+    }),
+    defineField({
+      name: 'sourceMeta',
+      title: 'Source Metadata',
+      type: 'object' as const,
+      group: 'meta',
+      fields: [
+        defineField({
+          name: 'originSkill',
+          title: 'Origin Skill',
+          type: 'string',
+        }),
+        defineField({
+          name: 'sourceProject',
+          title: 'Source Project',
+          type: 'string',
+        }),
+        defineField({
+          name: 'sourceId',
+          title: 'Source ID',
+          type: 'string',
+        }),
+        defineField({
+          name: 'sourceUrl',
+          title: 'Source URL',
+          type: 'url',
+        }),
+        defineField({
+          name: 'schemaVersion',
+          title: 'Schema Version',
+          type: 'number',
+        }),
+        defineField({
+          name: 'generatedAt',
+          title: 'Generated At',
+          type: 'datetime',
+        }),
+        defineField({
+          name: 'primaryKeyCenter',
+          title: 'Primary Key Center',
+          type: 'string',
+        }),
+        defineField({
+          name: 'sourceTags',
+          title: 'Source Tags',
+          type: 'array' as const,
+          of: [{ type: 'string' }],
+        }),
+        defineField({
+          name: 'sourceNotes',
+          title: 'Source Notes',
+          type: 'array' as const,
+          of: [{ type: 'string' }],
+        }),
+        defineField({
+          name: 'glossaryTermIds',
+          title: 'Glossary Term IDs',
+          type: 'array' as const,
+          of: [{ type: 'string' }],
+        }),
+        defineField({
+          name: 'duplicateKeys',
+          title: 'Duplicate Keys',
+          type: 'array' as const,
+          of: [{ type: 'string' }],
+        }),
+        defineField({
+          name: 'relatedSourceIds',
+          title: 'Related Source IDs',
+          type: 'array' as const,
+          of: [{ type: 'string' }],
+        }),
+      ],
+    }),
+    defineField({
       name: 'cover',
       title: 'Cover',
       type: 'image' as const,

@@ -98,7 +98,27 @@ const client = createClient({
   useCdn: false,
 });
 
-const result = await client.createOrReplace(payload);
+let result;
+
+try {
+  result = await client.createOrReplace(payload);
+} catch (error) {
+  console.error(
+    JSON.stringify(
+      {
+        mode: 'write',
+        documentId,
+        error: {
+          code: error?.code,
+          message: error?.message || 'Sanity write failed.',
+        },
+      },
+      null,
+      2,
+    ),
+  );
+  process.exit(1);
+}
 
 console.log(
   JSON.stringify(
