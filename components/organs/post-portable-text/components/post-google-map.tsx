@@ -6,7 +6,7 @@ interface Props extends PortableTextComponentProps<GoogleMap> {}
 
 export function PostGoogleMap(props: Props) {
   return (
-    <div className="my-4 py-1">
+    <div className="my-8 md:my-11">
       <ReactGoogleMap q={props.value.q} />
     </div>
   );

@@ -12,7 +12,7 @@ export const PostCode = ({ value }: Props) => {
   const { language, code } = value;
 
   return (
-    <div className="text-copy-13-mono whitespace-pre rounded-sm bg-gray-50 px-4 pb-6 pt-3">
+    <div className="text-copy-13-mono my-8 whitespace-pre rounded-sm bg-gray-50 px-4 pb-6 pt-3 md:my-11">
       <Highlighter
         style={codeStyle}
         useInlineStyles

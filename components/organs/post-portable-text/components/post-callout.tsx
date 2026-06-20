@@ -25,7 +25,7 @@ export function PostCallout({ value }: PostCalloutProps) {
 
   return (
     <aside
-      className={`my-6 rounded-md border p-4 ${toneClassNames[tone]}`}
+      className={`my-8 rounded-md border p-4 md:my-11 ${toneClassNames[tone]}`}
       data-block-id={value._key}
     >
       <div className="text-heading-14 mb-3">

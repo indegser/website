@@ -5,7 +5,7 @@ interface Props extends PortableTextTypeComponentProps<{ url: string }> {}
 
 export function PostYoutube({ value }: Props) {
   return (
-    <div className="my-4 py-1">
+    <div className="my-8 md:my-11">
       <ReactPlayer
         url={value.url}
         style={{ aspectRatio: '640 / 360' }}

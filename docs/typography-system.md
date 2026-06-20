@@ -325,11 +325,17 @@ These semantic assignments should be validated against actual content density an
 Post pages follow the Apple Newsroom article rhythm more closely than the global element defaults:
 
 - Content column: `653px` max width.
+- Mobile post gutters: `24px`; desktop gutters stay at the shared page container default.
+- Article top spacing: `80px` mobile, `96px` desktop.
 - Article headline: `text-heading-40`, upgraded to `text-heading-48` from the `md` breakpoint.
+- Article headline to excerpt spacing: `16px` mobile, `20px` desktop.
 - Article excerpt: `text-copy-24`.
+- Article excerpt to body spacing: `32px` mobile, `44px` desktop.
 - Portable Text body paragraph: `text-copy-18`.
 - Portable Text section heading: `text-heading-24`.
-- Body paragraph spacing: `29px`.
+- Body paragraph spacing: about `26px` mobile, `29px` desktop.
+- Body section heading spacing: `44px` before on mobile, `52px` before on desktop, with `16px` after.
+- Media and framed body blocks use `32px` vertical spacing on mobile and `44px` on desktop.
 
 ## Korean Content Notes
 
