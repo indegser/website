@@ -1,0 +1,352 @@
+{
+  "_type": "post",
+  "title": "USDC가 그냥 달러 보유와 다른 점",
+  "slug": {
+    "_type": "slug",
+    "current": "stablecoin-usdc"
+  },
+  "excerpt": "USDC는 달러보다 가치가 높은 자산이 아니라, 달러 가치를 블록체인에서 전송하고 스마트컨트랙트에 연결하기 위한 토큰이다.",
+  "contentKind": "reading-question",
+  "sourceMeta": {
+    "originSkill": "reading-question-writer",
+    "sourceProject": "question",
+    "sourceId": "question-reading-notes-2026-05-31-stablecoin-usdc",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-20T00:00:00.000Z",
+    "sourceTags": [
+      "#economics",
+      "#crypto",
+      "#stablecoin",
+      "#definition",
+      "#concept",
+      "#reading-note"
+    ],
+    "sourceNotes": [
+      "Migrated from /Users/indegser/Github/question/reading-notes/2026-05-31_stablecoin-usdc.md",
+      "Original source: Unknown",
+      "Original note date: 2026-05-31"
+    ]
+  },
+  "body": [
+    {
+      "_key": "e7d4273ee0ae",
+      "_type": "callout",
+      "tone": "question",
+      "title": "원래 질문",
+      "body": [
+        {
+          "_key": "4b32351ab6a2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8314aa4744aa",
+              "_type": "span",
+              "marks": [],
+              "text": "법정 화폐와 일대일 교환을 보장하는 USDC 코인 같은 스테이블코인은 장점이 뭐야? 그냥 달러를 소유하는거랑 똑같은거잖아"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "_key": "17ec7deef5af",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "47df36fa8c19",
+          "_type": "span",
+          "marks": [],
+          "text": "USDC 같은 스테이블코인은 가격 면에서는 달러와 거의 같은 역할을 하려 하지만, 본질적인 차이는 달러 가치가 블록체인 위의 토큰 형태로 존재한다는 점이다. 그래서 단순히 \"달러를 들고 있는 것\"이 아니라, 달러 가치를 빠르게 전송하고 스마트컨트랙트에서 사용할 수 있게 만든 자산으로 이해할 수 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9f3a4b50e32d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f4c46b31e386",
+          "_type": "span",
+          "marks": [],
+          "text": "왜 헷갈렸는가"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "aae2c5575fa2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "98c9509786f0",
+          "_type": "span",
+          "marks": [],
+          "text": "가격만 보면 USDC와 달러는 거의 같은 역할을 하므로 차이가 없어 보인다. 하지만 차이는 가치 수준이 아니라 돈이 움직이는 인프라에 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "67b6abc7bdb5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "937ecd1b8f07",
+          "_type": "span",
+          "marks": [],
+          "text": "설명"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "47b63bca5930",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9b7ace346c7d",
+          "_type": "span",
+          "marks": [],
+          "text": "달러는 은행 시스템 안에서 움직이는 돈이고, USDC는 달러 가치를 추적하는 블록체인 토큰이다. 따라서 USDC의 장점은 달러보다 가치가 높다는 데 있지 않고, 달러 가치를 인터넷 네이티브 자산처럼 이동시키고 조합할 수 있다는 데 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c3d23a564402",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b451dd36147",
+          "_type": "span",
+          "marks": [],
+          "text": "USDC 같은 스테이블코인은 전 세계 지갑 간 전송, 거래소 안에서의 현금성 대기 자금, DeFi 담보와 대출, 자동 정산, 앱 내 결제 등에 쓰일 수 있다. 특히 스마트컨트랙트에서 바로 사용할 수 있다는 점이 은행 계좌의 달러와 크게 다르다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9caca6b4163c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a48d56901420",
+          "_type": "span",
+          "marks": [],
+          "text": "다만 스테이블코인은 발행사의 준비금 관리, 규제, 블록체인 수수료와 장애, 지갑 키 분실, 일시적인 가격 이탈 같은 위험을 가진다. 은행 안에서만 쓸 돈이라면 일반 달러가 더 단순할 수 있고, 블록체인 생태계 안에서 쓸 돈이라면 USDC 같은 스테이블코인이 더 유용할 수 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "90797913eb8b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6e3d497d6e2",
+          "_type": "span",
+          "marks": [],
+          "text": "핵심 용어"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7dfcce20a986",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ff9e629dbb84",
+          "_type": "span",
+          "marks": [],
+          "text": "Stablecoin: 특정 자산의 가치에 고정되도록 설계된 암호화폐"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "98c3c16037f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4dee5d1c66d",
+          "_type": "span",
+          "marks": [],
+          "text": "USDC: Circle이 발행하는 미국 달러 연동 스테이블코인"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "e95c63a4dffc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b15e6705e48e",
+          "_type": "span",
+          "marks": [],
+          "text": "Fiat-backed stablecoin: 법정화폐나 단기 국채 같은 준비자산으로 뒷받침되는 스테이블코인"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "e2425d1d000d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "71f80659863f",
+          "_type": "span",
+          "marks": [],
+          "text": "Smart contract: 조건에 따라 자동 실행되는 블록체인상의 프로그램"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "62bfc6a5bead",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "633e28ea5a7c",
+          "_type": "span",
+          "marks": [],
+          "text": "DeFi: 은행이나 중개기관 없이 블록체인 위에서 작동하는 금융 서비스"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "8086e195217d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aabffe14c1a6",
+          "_type": "span",
+          "marks": [],
+          "text": "Peg: 어떤 자산의 가격을 특정 기준 가격에 맞추려는 구조"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "7a13ca736bd0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4067fc1a4f44",
+          "_type": "span",
+          "marks": [],
+          "text": "명확해진 점"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "26140658bb20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fcf72cb119ac",
+          "_type": "span",
+          "marks": [],
+          "text": "USDC는 \"달러보다 나은 가치 저장 수단\"이라기보다 \"달러 가치를 블록체인에서 쓸 수 있게 만든 토큰\"에 가깝다. 핵심 장점은 빠른 전송, 글로벌 접근성, 거래소 내 현금 역할, 스마트컨트랙트와의 결합 가능성이다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "61e9d6142b67",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9253ee0615b6",
+          "_type": "span",
+          "marks": [],
+          "text": "남은 질문"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "5afce4e83d82",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "484983bf19fb",
+          "_type": "span",
+          "marks": [],
+          "text": "USDC와 비슷한 다른 스테이블코인에는 무엇이 있는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "f11cdffd02b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8e57b1230819",
+          "_type": "span",
+          "marks": [],
+          "text": "스테이블코인은 국가별 통화에 맞춰서도 발행되는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "70be0c781e22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bca36e8df8ae",
+          "_type": "span",
+          "marks": [],
+          "text": "달러 연동 스테이블코인과 유로, 엔화, 싱가포르달러 연동 스테이블코인은 어떤 차이가 있는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    }
+  ]
+}

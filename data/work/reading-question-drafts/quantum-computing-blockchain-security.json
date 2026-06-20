@@ -1,0 +1,452 @@
+{
+  "_type": "post",
+  "title": "양자컴퓨팅이 블록체인 보안에 주는 실제 위협",
+  "slug": {
+    "_type": "slug",
+    "current": "quantum-computing-blockchain-security"
+  },
+  "excerpt": "양자컴퓨터가 블록체인을 즉시 무너뜨리는 것은 아니지만, 충분히 강력해지면 공개키 서명 체계를 교체해야 하는 장기 위험이 된다.",
+  "contentKind": "reading-question",
+  "sourceMeta": {
+    "originSkill": "reading-question-writer",
+    "sourceProject": "question",
+    "sourceId": "question-reading-notes-2026-05-31-quantum-computing-blockchain-security",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-20T00:00:00.000Z",
+    "sourceTags": [
+      "#blockchain",
+      "#cryptography",
+      "#quantum-computing",
+      "#post-quantum",
+      "#security",
+      "#reading-note"
+    ],
+    "sourceNotes": [
+      "Migrated from /Users/indegser/Github/question/reading-notes/2026-05-31_quantum-computing-blockchain-security.md",
+      "Original source: Unknown",
+      "Original note date: 2026-05-31"
+    ]
+  },
+  "body": [
+    {
+      "_key": "511b66864f8e",
+      "_type": "callout",
+      "tone": "question",
+      "title": "원래 질문",
+      "body": [
+        {
+          "_key": "97642a3bd46c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "c2b2e494f9a5",
+              "_type": "span",
+              "marks": [],
+              "text": "양자컴퓨터가 요새 뜨던데 이거 나오면 암호화폐 또는 블록체인은 어떻게 될까? 암호화가 다 뚫리잖아"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "_key": "c1656efa5669",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0cc779e0006a",
+          "_type": "span",
+          "marks": [],
+          "text": "양자컴퓨터가 등장하면 블록체인이 즉시 모두 무너지는 것은 아니지만, 현재 블록체인이 많이 쓰는 공개키 서명 체계는 장기적으로 위험해질 수 있다. 특히 Bitcoin의 ECDSA/Schnorr, Ethereum의 ECDSA/BLS 같은 서명 방식은 충분히 강한 양자컴퓨터가 나오면 공개키에서 개인키를 역산당할 수 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b77363184dd0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6c0e4077c001",
+          "_type": "span",
+          "marks": [],
+          "text": "반면 SHA-256 같은 해시 함수는 양자컴퓨터로도 완전히 무력화되는 것이 아니라 보안 강도가 낮아지는 쪽에 가깝다. 따라서 핵심 위험은 \"블록체인 전체 기록이 깨진다\"보다는 \"공개키가 노출된 지갑의 서명이 위조될 수 있다\"에 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b87464d2c793",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4f736716c2e0",
+          "_type": "span",
+          "marks": [],
+          "text": "주요 체인들은 이미 post-quantum cryptography로의 전환을 준비하고 있다. Bitcoin은 BIP-360, BIP-361 같은 초안 단계의 제안이 있고, Ethereum은 account abstraction과 leanXMSS/leanVM 등을 포함한 로드맵을 진행 중이다. Solana는 Falcon 기반 경로를 연구하고, Algorand는 Falcon 서명 기반 양자내성 거래를 메인넷에서 실행한 사례가 있다. XRP Ledger와 Polkadot도 각각 로드맵을 공개했다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ddca145969e4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9481df495c99",
+          "_type": "span",
+          "marks": [],
+          "text": "왜 헷갈렸는가"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b03130c5e2a2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6ff60677a424",
+          "_type": "span",
+          "marks": [],
+          "text": "블록체인은 여러 암호 기술을 함께 쓰기 때문에 “암호가 뚫린다”는 말이 해시, 서명, 지갑, 합의를 모두 같은 위험으로 보이게 만든다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a67560b53a2f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e718f911c740",
+          "_type": "span",
+          "marks": [],
+          "text": "설명"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cb16373579e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0511f0bd2d5",
+          "_type": "span",
+          "marks": [],
+          "text": "양자컴퓨터의 위협은 블록체인의 모든 암호 요소에 똑같이 작용하지 않는다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ef32a0eb10db",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "87d2f3c61bbf",
+          "_type": "span",
+          "marks": [],
+          "text": "해시 함수는 무작위 번호를 맞히는 문제에 가깝다. 양자 알고리즘은 이 탐색을 빠르게 만들 수 있지만, SHA-256 같은 해시는 여전히 상당한 보안 여유가 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dcf947052d42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fb1c9aa89340",
+          "_type": "span",
+          "marks": [],
+          "text": "전자서명은 다르다. 사용자가 거래에 서명하면 공개키가 체인에 드러날 수 있고, 충분히 강한 양자컴퓨터는 쇼어 알고리즘을 통해 공개키에서 개인키를 계산할 가능성이 있다. 그래서 한 번도 송금하지 않은 주소와 이미 송금해서 공개키가 노출된 주소의 위험도는 다르다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a2a6305855cc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4260cfdafc64",
+          "_type": "span",
+          "marks": [],
+          "text": "양자컴퓨터가 블록체인을 Visa급 처리속도로 직접 끌어올릴 가능성은 낮다. 블록체인의 속도 병목은 단순 계산 능력보다 네트워크 합의, 데이터 전파, 저장공간, 검증 비용, 탈중앙성 유지에 더 크게 걸려 있기 때문이다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9a49c0e96322",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4f005b647f44",
+          "_type": "span",
+          "marks": [],
+          "text": "하지만 양자컴퓨터의 등장은 블록체인 생태계를 더 안전하고 성숙하게 만들 수 있다. 양자 위협에 대응하면서 양자내성 서명, 키 회전, 계정 추상화, 복구 지갑, 다중서명, ZK와 해시 기반 증명 같은 기술이 발전할 수 있기 때문이다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "eb1066bc5f3b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cdfaee16504c",
+          "_type": "span",
+          "marks": [],
+          "text": "핵심 용어"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "2182c658b13d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "22ec77f2c20c",
+          "_type": "span",
+          "marks": [],
+          "text": "Quantum computer: 특정 수학 문제를 고전 컴퓨터보다 훨씬 빠르게 풀 수 있는 계산 장치."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "d0d9904f1521",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5fd59119c9ca",
+          "_type": "span",
+          "marks": [],
+          "text": "Shor's algorithm: RSA나 ECC 계열 공개키 암호를 위협하는 양자 알고리즘."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "93d6767fbdad",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f55728088df3",
+          "_type": "span",
+          "marks": [],
+          "text": "Hash function: 데이터를 고정 길이 값으로 바꾸는 함수. 블록체인에서는 블록 연결과 주소 생성 등에 쓰인다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "ec169bcae822",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "abeec9eb8bf4",
+          "_type": "span",
+          "marks": [],
+          "text": "Digital signature: 개인키로 거래를 승인하고 공개키로 검증하는 암호 기술."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "e2bf125707b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "12bcffbef3d8",
+          "_type": "span",
+          "marks": [],
+          "text": "Post-quantum cryptography: 양자컴퓨터 공격에도 안전하다고 여겨지는 암호 기술."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "ebdfa8665a4d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5cefba754c62",
+          "_type": "span",
+          "marks": [],
+          "text": "Account abstraction: 계정의 서명 검증 방식을 더 유연하게 바꿀 수 있게 하는 설계."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "01a6dc526ca1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b8f0792dbdd4",
+          "_type": "span",
+          "marks": [],
+          "text": "Falcon, ML-DSA, SLH-DSA: 양자내성 서명 후보 또는 표준 계열."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "53f0c49ee6f0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0255e1faa3ca",
+          "_type": "span",
+          "marks": [],
+          "text": "명확해진 점"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ea77803f3778",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4455fb2485d5",
+          "_type": "span",
+          "marks": [],
+          "text": "양자컴퓨터가 나오면 블록체인이 자동으로 끝나는 것이 아니라, 현재 서명 체계가 장기적으로 교체되어야 한다는 점이 분명해졌다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "86c194237e1d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "da0fc611945b",
+          "_type": "span",
+          "marks": [],
+          "text": "위험의 중심은 해시보다 전자서명이며, 특히 공개키가 이미 노출된 지갑이 더 취약하다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1912bb73090a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "006024112799",
+          "_type": "span",
+          "marks": [],
+          "text": "양자컴퓨터 자체가 블록체인의 TPS를 바로 높여주는 것은 아니지만, 그 위협 때문에 블록체인이 더 안전한 암호 구조와 지갑 구조로 발전할 수 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a33ba1a4b2bf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "48aa39754e11",
+          "_type": "span",
+          "marks": [],
+          "text": "남은 질문"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "d48348ce38f2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6d81b5add4ae",
+          "_type": "span",
+          "marks": [],
+          "text": "각 주요 체인이 실제로 언제 post-quantum 서명을 메인넷 기본 기능으로 도입할까?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "612d3f4bd9a5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ddcfc809abaf",
+          "_type": "span",
+          "marks": [],
+          "text": "기존에 공개키가 노출된 오래된 지갑과 분실 지갑은 어떻게 처리될까?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "912ecdfe231a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c3e00ae8f0ac",
+          "_type": "span",
+          "marks": [],
+          "text": "양자내성 서명의 큰 크기와 검증 비용을 블록체인에서 어떻게 효율적으로 감당할까?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    }
+  ]
+}

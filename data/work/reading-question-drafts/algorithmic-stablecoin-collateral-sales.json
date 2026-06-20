@@ -1,0 +1,381 @@
+{
+  "_type": "post",
+  "title": "담보 매각이 스테이블코인의 지급능력을 지탱하는 방식",
+  "slug": {
+    "_type": "slug",
+    "current": "algorithmic-stablecoin-collateral-sales"
+  },
+  "excerpt": "담보 매각은 지급능력을 새로 만들어내는 일이 아니라, 이미 보유한 담보를 즉시 상환 가능한 현금성 자산으로 바꾸는 과정이다.",
+  "contentKind": "reading-question",
+  "sourceMeta": {
+    "originSkill": "reading-question-writer",
+    "sourceProject": "question",
+    "sourceId": "question-reading-notes-2026-05-31-algorithmic-stablecoin-collateral",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-20T00:00:00.000Z",
+    "sourceTags": [
+      "#economics",
+      "#crypto",
+      "#stablecoin",
+      "#algorithmic-stablecoin",
+      "#collateral",
+      "#concept",
+      "#reading-note"
+    ],
+    "sourceNotes": [
+      "Migrated from /Users/indegser/Github/question/reading-notes/2026-05-31_algorithmic-stablecoin-collateral.md",
+      "Original source: Unknown",
+      "Original note date: 2026-05-31"
+    ]
+  },
+  "body": [
+    {
+      "_key": "78ee3ea33266",
+      "_type": "callout",
+      "tone": "question",
+      "title": "원래 질문",
+      "body": [
+        {
+          "_key": "ff8f80897663",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "69c3c6d586b0",
+              "_type": "span",
+              "marks": [],
+              "text": "알고리즈믹 스테이블 코인은 지급능력을 유지하기 위해 담보물을 자동으로 판대. < 이거 매커니즘을 잘 이해 못했어"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "875e7075fa9c",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "8dbe7ed1fc1d",
+              "_type": "span",
+              "marks": [],
+              "text": "숫자 예시에서 일부 담보를 파는게 어떻게 갚을 능력이 있다는거야?"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "_key": "0cd33e4d769d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fd29833c6d00",
+          "_type": "span",
+          "marks": [],
+          "text": "알고리즘 스테이블코인 또는 담보와 알고리즘이 결합된 스테이블코인은 목표 가격을 유지하기 위해 자동 규칙으로 공급량, 담보, 상환 가능 자산을 조절한다. 담보를 판다는 것은 지급능력을 새로 만들어내는 행위라기보다, 이미 있는 담보 가치를 당장 상환에 쓸 수 있는 현금성 자산으로 바꾸는 행위에 가깝다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "05a2e6a43aaf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8ca49fb66c2e",
+          "_type": "span",
+          "marks": [],
+          "text": "왜 헷갈렸는가"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f82172ba51be",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "32bf1dd7fdc9",
+          "_type": "span",
+          "marks": [],
+          "text": "“담보를 판다”는 표현은 자산을 줄이는 행동처럼 들리기 때문에, 왜 이것이 상환 능력에 도움이 되는지 헷갈리기 쉽다. 핵심은 총자산보다 유동성이다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a85fcc041d5c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "96661f637a08",
+          "_type": "span",
+          "marks": [],
+          "text": "설명"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b45b9b132f28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4cbd69fc78bc",
+          "_type": "span",
+          "marks": [],
+          "text": "스테이블코인은 보통 1코인이 1달러 같은 기준 가격을 유지하도록 설계된다. 이를 위해 시스템은 자신이 발행한 코인을 나중에 상환할 수 있을 만큼 충분한 자산을 갖고 있어야 한다. 이 능력을 지급능력이라고 볼 수 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ea3361808aa6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "764762e65775",
+          "_type": "span",
+          "marks": [],
+          "text": "담보가 ETH 같은 변동성 자산이라면 장부상으로는 충분한 가치가 있어도, 사람들이 즉시 상환을 요구할 때 바로 지급하기 어렵다. 그래서 시스템은 담보 일부를 팔아 달러, USDC 같은 현금성 자산을 확보한다. 이는 자산 총액을 늘리는 것이 아니라, 자산의 형태를 \"가격이 흔들리는 담보\"에서 \"상환에 바로 쓸 수 있는 자산\"으로 바꾸는 것이다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "def03ba050c6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "972ab8703788",
+          "_type": "span",
+          "marks": [],
+          "text": "예를 들어 시스템이 100달러어치 스테이블코인을 발행했고, ETH 담보를 120달러어치 갖고 있다면 순자산 기준으로는 갚을 능력이 있다. 하지만 상환 요청이 들어오면 ETH를 그대로 줄 수 없거나 가격 변동 위험이 크므로, 일부 ETH를 팔아 현금 50달러를 만든다. 그러면 총자산 가치는 대략 그대로지만, 그중 일부가 즉시 상환 가능한 형태가 된다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fe562cdf4599",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "36edfcb77873",
+          "_type": "span",
+          "marks": [],
+          "text": "중요한 구분은 두 가지다. 첫째, 순자산 기준 지급능력은 가진 자산 총액이 부채보다 큰지를 보는 것이다. 둘째, 유동성 기준 지급능력은 사람들이 지금 상환을 요구할 때 실제로 줄 수 있는 현금성 자산이 있는지를 보는 것이다. 담보 매각은 특히 두 번째 문제, 즉 유동성 확보와 가격 하락 위험 방어에 관련된다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0e10ae43ccee",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1fa9179ed49d",
+          "_type": "span",
+          "marks": [],
+          "text": "핵심 용어"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "73866b31e6cd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "77bdafadc51f",
+          "_type": "span",
+          "marks": [],
+          "text": "Algorithmic stablecoin: 목표 가격을 유지하기 위해 자동 규칙으로 공급량이나 담보 운용을 조절하는 스테이블코인"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "589431bf355d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ac053615fa8d",
+          "_type": "span",
+          "marks": [],
+          "text": "Collateral: 발행된 코인의 가치를 뒷받침하기 위해 보유하는 담보 자산"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "d35ba03b16b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d1a489453e03",
+          "_type": "span",
+          "marks": [],
+          "text": "Solvency: 총자산이 총부채를 감당할 수 있는 상태"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "f640307077c0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d3d69e93338f",
+          "_type": "span",
+          "marks": [],
+          "text": "Liquidity: 자산을 빠르게 현금성 자산으로 바꾸거나 즉시 지급할 수 있는 능력"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "42337ba81013",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1fe90127038b",
+          "_type": "span",
+          "marks": [],
+          "text": "Redemption: 사용자가 스테이블코인을 기준 자산으로 상환받는 과정"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "ae9bd1dc7f8b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "21aff0fe0bdd",
+          "_type": "span",
+          "marks": [],
+          "text": "Peg: 코인 가격을 1달러 같은 목표 가격에 맞추려는 구조"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "527ea76ad180",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "67cb318f39d6",
+          "_type": "span",
+          "marks": [],
+          "text": "명확해진 점"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f37bb170b97e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b05b35515980",
+          "_type": "span",
+          "marks": [],
+          "text": "담보를 자동으로 판다고 해서 시스템의 부채 상환 능력이 마법처럼 생기는 것은 아니다. 이미 갖고 있던 담보 가치를 상환 가능한 돈으로 바꾸고, 담보 가격이 더 떨어지기 전에 위험을 줄이는 것이다. 따라서 담보 매각은 \"자산 총액 증가\"가 아니라 \"상환 가능한 형태로 전환\"에 가깝다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1665a0963017",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8d52945bd9d7",
+          "_type": "span",
+          "marks": [],
+          "text": "남은 질문"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f700d5dc2ec3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2b1a6aa471c",
+          "_type": "span",
+          "marks": [],
+          "text": "담보형 스테이블코인과 순수 알고리즘 스테이블코인은 실제로 어떻게 다른가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "cf04fd27989f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "59e74861cac9",
+          "_type": "span",
+          "marks": [],
+          "text": "담보 가격이 너무 빨리 떨어지면 자동 매각은 어디까지 효과가 있는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "d01c78ccbf98",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8858de1546b6",
+          "_type": "span",
+          "marks": [],
+          "text": "과거에 스테이블코인 페그가 무너진 사례에는 어떤 메커니즘 실패가 있었는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    }
+  ]
+}

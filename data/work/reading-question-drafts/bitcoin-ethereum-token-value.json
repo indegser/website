@@ -1,0 +1,413 @@
+{
+  "_type": "post",
+  "title": "비트코인과 이더리움 토큰 가격이 커지는 이유",
+  "slug": {
+    "_type": "slug",
+    "current": "bitcoin-ethereum-token-value"
+  },
+  "excerpt": "비트코인과 이더리움은 외부 담보에 대한 청구권이 아니므로, 가격은 담보 가치보다 네트워크 신뢰, 사용 수요, 희소성, 보유 수요가 함께 만든다.",
+  "contentKind": "reading-question",
+  "sourceMeta": {
+    "originSkill": "reading-question-writer",
+    "sourceProject": "question",
+    "sourceId": "question-reading-notes-2026-05-31-bitcoin-ethereum-token-value",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-20T00:00:00.000Z",
+    "sourceTags": [
+      "#economics",
+      "#crypto",
+      "#bitcoin",
+      "#ethereum",
+      "#tokenomics",
+      "#concept",
+      "#reading-note"
+    ],
+    "sourceNotes": [
+      "Migrated from /Users/indegser/Github/question/reading-notes/2026-05-31_bitcoin-ethereum-token-value.md",
+      "Original source: Unknown",
+      "Original note date: 2026-05-31"
+    ]
+  },
+  "body": [
+    {
+      "_key": "7e2d21adc4d3",
+      "_type": "callout",
+      "tone": "question",
+      "title": "원래 질문",
+      "body": [
+        {
+          "_key": "5000589b1ab8",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "151063f4519e",
+              "_type": "span",
+              "marks": [],
+              "text": "토큰 기반의 지속 가능한 금융 모델? 토큰 가격은 결국 담보물의 가치에 의해 결정되는거 아니야?"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_key": "564841b863c2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "75dd0a6408a6",
+              "_type": "span",
+              "marks": [],
+              "text": "이더리움이나 비트코인의 토큰 금액의 성장을 이관점으로 설명해봐. 서비스 사용처가 늘어나면서 토큰 가격이 증가했어?"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "_key": "a37a81109953",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d9dccb95fde6",
+          "_type": "span",
+          "marks": [],
+          "text": "담보 기반 토큰은 담보물의 가치가 가격의 중요한 기준점이 된다. 하지만 비트코인과 이더리움은 금, 달러, 국채 같은 외부 담보에 대한 청구권이 아니다. 따라서 이들의 가격은 담보 가치가 아니라 네트워크에 대한 신뢰, 사용 수요, 보유 수요, 희소성, 유동성, 투기적 기대, 거시경제 환경 등이 함께 만든 결과로 이해해야 한다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0fee1637863a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "653051852137",
+          "_type": "span",
+          "marks": [],
+          "text": "왜 헷갈렸는가"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ac6d6295af4f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7e54095c8c21",
+          "_type": "span",
+          "marks": [],
+          "text": "담보형 토큰을 기준으로 보면 모든 토큰 가격이 준비자산 가치에서 나와야 할 것처럼 보인다. 하지만 비트코인과 이더리움은 토큰 보유자가 외부 자산을 청구하는 구조가 아니다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1668a6f2b97a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7271fda81c0e",
+          "_type": "span",
+          "marks": [],
+          "text": "설명"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "6be7ec9ff294",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2a06bc733ebf",
+          "_type": "span",
+          "marks": [],
+          "text": "담보 기반 토큰은 토큰을 보유한 사람이 실제 자산이나 현금흐름을 청구할 수 있을 때 가치 기준이 비교적 명확하다. 예를 들어 1토큰이 1달러 예치금에 대한 청구권이라면, 토큰 가격은 그 담보와 상환 가능성에 강하게 묶인다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cdef0de00712",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "37b01d51fcab",
+          "_type": "span",
+          "marks": [],
+          "text": "비트코인은 이런 의미의 담보가 없다. 1 BTC를 들고 있다고 해서 금, 달러, 회사 지분, 현금흐름을 청구할 수 있는 것은 아니다. 비트코인의 가치는 주로 희소성, 검열 저항성, 자기 보관 가능성, 장기적 가치 저장 수단이라는 사회적 믿음에서 나온다. 그래서 비트코인의 가격 상승은 \"서비스 사용처가 많아져서\"라기보다, 제한된 공급을 가진 디지털 자산을 보유하려는 수요와 제도권 접근성이 커진 결과로 보는 편이 더 정확하다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c3422a060108",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bd84eec3885b",
+          "_type": "span",
+          "marks": [],
+          "text": "이더리움은 비트코인보다 서비스 사용처 증가로 설명하기 쉽다. ETH는 이더리움 네트워크에서 거래 수수료를 내는 자산이고, DeFi, NFT, 스테이블코인 전송, DAO, 토큰 발행, 레이어2 정산 등 다양한 활동에 필요하다. 네트워크에서 할 수 있는 일이 늘어나면 ETH는 수수료 자산, 담보 자산, 정산 자산으로 더 많이 요구될 수 있다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "934f0ff61dae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2220c18d69f4",
+          "_type": "span",
+          "marks": [],
+          "text": "다만 서비스 사용처 증가가 자동으로 가격 상승을 보장하지는 않는다. 사용자가 많아도 토큰을 오래 보유할 필요가 없으면 가격 압력이 약할 수 있고, 앱의 성공이 반드시 기본 토큰의 가치로 귀속되지 않을 수도 있다. 실제 가격은 사용 수요뿐 아니라 담보 수요, 투기 수요, 공급 구조, 소각 메커니즘, 금리, 규제, 전체 시장 유동성까지 함께 반영한다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d851e47a0802",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "587631f46bce",
+          "_type": "span",
+          "marks": [],
+          "text": "핵심 용어"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "2a630fa7ef07",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "16e03734fc02",
+          "_type": "span",
+          "marks": [],
+          "text": "Collateral-backed token: 외부 자산이나 준비금으로 뒷받침되는 토큰"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "dc14a027caa4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "224991cb89bf",
+          "_type": "span",
+          "marks": [],
+          "text": "Bitcoin: 외부 담보 없이 희소성, 네트워크 신뢰, 가치 저장 수요를 중심으로 가격이 형성되는 암호자산"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "53b4fa9a5308",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b61764d6f7d8",
+          "_type": "span",
+          "marks": [],
+          "text": "Ethereum: 스마트컨트랙트 네트워크이며 ETH는 수수료, 담보, 정산 자산으로 쓰임"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "e3642ae4d454",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f9126c8ea13f",
+          "_type": "span",
+          "marks": [],
+          "text": "Utility demand: 네트워크나 서비스를 실제로 사용하기 위해 생기는 토큰 수요"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "bc65a3c7dce9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e31c84957d4a",
+          "_type": "span",
+          "marks": [],
+          "text": "Store of value: 시간이 지나도 가치를 보존할 수 있다고 여겨지는 자산의 성격"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "786adad05e4a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a735448dde8d",
+          "_type": "span",
+          "marks": [],
+          "text": "Token value accrual: 네트워크나 앱에서 생긴 가치가 특정 토큰 가격이나 수요로 귀속되는 과정"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "ef1ab6010851",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4e5290435fc1",
+          "_type": "span",
+          "marks": [],
+          "text": "Fee burn: 네트워크 수수료 일부를 소각해 공급 증가 압력을 줄이는 구조"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "5b9ef56d7971",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0ac61cea8d80",
+          "_type": "span",
+          "marks": [],
+          "text": "명확해진 점"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "c5456e4ef02c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "25bc3ba6a21d",
+          "_type": "span",
+          "marks": [],
+          "text": "담보 기반 토큰은 담보물이 핵심 가치 기준이지만, 비트코인과 이더리움은 담보물에 대한 청구권이 아니다. 비트코인은 사용처보다 희소성과 가치 저장 수요가 중심이고, 이더리움은 네트워크 사용처 증가가 ETH 수요를 설명하는 데 더 직접적으로 연결된다. 하지만 두 경우 모두 가격은 실제 사용 수요만으로 결정되지 않고, 신뢰와 기대, 거시 유동성, 제도권 접근성까지 함께 반영된다."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f9588ae7459e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "875b03a9bced",
+          "_type": "span",
+          "marks": [],
+          "text": "남은 질문"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "92eafb994c30",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1a47cd58c604",
+          "_type": "span",
+          "marks": [],
+          "text": "이더리움 네트워크의 성공이 항상 ETH 가격으로 귀속되는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "9bd69f45b2f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "513bb62da8ba",
+          "_type": "span",
+          "marks": [],
+          "text": "토큰의 실제 사용 수요와 투기 수요를 어떻게 구분할 수 있는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "ab3d050e7699",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6272d9a78cdc",
+          "_type": "span",
+          "marks": [],
+          "text": "비트코인의 가치 저장 수단 서사는 어떤 조건에서 약해질 수 있는가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    },
+    {
+      "_key": "c14a9c5dcb74",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5b797a32099",
+          "_type": "span",
+          "marks": [],
+          "text": "담보 없는 토큰이 지속 가능한 금융 모델이 되려면 어떤 현금흐름이나 권리 구조가 필요한가?"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1
+    }
+  ]
+}
