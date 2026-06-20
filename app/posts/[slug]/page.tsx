@@ -35,7 +35,9 @@ function getPostMetadata({
   isDraft: boolean;
 }): Metadata {
   const { title, excerpt, cover } = post;
-  const coverUrl = cover ? urlForImage(cover).width(1200).url() : undefined;
+  const coverUrl = cover?.asset
+    ? urlForImage(cover).width(1200).url()
+    : undefined;
 
   return {
     title,

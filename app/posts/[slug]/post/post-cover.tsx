@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Image as SanityImage } from 'sanity';
 
 interface Props {
-  image: SanityImage;
+  image?: SanityImage | null;
   alt: string;
 }
 
@@ -15,6 +15,10 @@ export const PostCover = ({ image, alt }: Props) => {
   const y = useTransform(scrollY, [0, 1000], [0, 900], {
     ease: easeIn,
   });
+
+  if (!image?.asset) {
+    return null;
+  }
 
   const src = urlForImage(image).auto('format').url();
 
