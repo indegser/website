@@ -25,6 +25,20 @@ Follow this workflow for any repository task that is large enough to need more t
 9. If anything is missing or failing, return to implementation and repeat until it passes.
 10. After completion, propose reusable knowledge entries and wait for user approval before writing them.
 
+## Worktree-First Implementation Standard
+
+For code changes, always work from a dedicated git worktree and task branch by default.
+
+- Create or use a task-specific git worktree before editing code.
+- Start independent branches from `origin/main` unless the user explicitly asks for a stacked or dependent branch.
+- Keep the main checkout as the coordination and inspection workspace, not the implementation workspace.
+- Assign clear file ownership before editing so concurrent sessions do not modify the same file set.
+- Use GitHub pull requests, CI, and merge order as the integration layer.
+- Do not create a separate local integration session by default.
+- If two tasks need the same shared file, combine them into one session or make one PR explicitly depend on the other.
+
+During the design step, state the branch name, worktree path, task scope, expected file ownership, and whether the PR is independent or stacked.
+
 ## Skill Selection
 
 - Use `shadcn` when the task involves `components.json`, shadcn/ui components, registry items, or composing design-system UI.
