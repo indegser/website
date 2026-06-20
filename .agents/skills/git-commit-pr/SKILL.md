@@ -11,11 +11,30 @@ Use this skill when the user wants local changes turned into a commit and a pull
 
 - Commit only the requested change set.
 - Run the smallest validation that safely covers the change.
-- Default to creating a new branch from `main` unless the user explicitly asked to continue an existing branch or pull request.
+- Default to creating a new branch from `main` unless the user explicitly asked to continue an existing branch or pull request, or Worktree Mode applies.
 - Push the chosen branch to `origin`.
 - Create a pull request with a focused title and body.
-- Switch back to `main` after the pull request is created or the compare URL is prepared.
+- Switch back to `main` after the pull request is created or the compare URL is prepared, unless Worktree Mode applies.
 - Report commit, validation, PR link, and any remaining local changes.
+
+## Worktree Mode
+
+If the current checkout is a linked git worktree and the current branch is not `main` or `master`, default to `continue-existing-branch`.
+
+Detect linked worktrees by comparing:
+
+```bash
+git rev-parse --path-format=absolute --git-dir
+git rev-parse --path-format=absolute --git-common-dir
+```
+
+In Worktree Mode:
+
+- Do not switch to `main` before staging or committing.
+- Do not create another branch unless the user explicitly asks.
+- Do not switch back to `main` after creating the PR.
+- Leave the worktree on its task branch.
+- Report the worktree path and branch in the final output.
 
 ## Workflow
 
@@ -34,7 +53,7 @@ Classify the request explicitly as one of:
 - `new-branch-from-main`
 
 Never reuse the current branch by default.
-Use `continue-existing-branch` only when the user explicitly asks to continue the existing branch or PR.
+Use `continue-existing-branch` only when the user explicitly asks to continue the existing branch or PR, or when Worktree Mode applies.
 Otherwise default to `new-branch-from-main`.
 
 Before any `git add`, `git commit`, or `git push`, state the branch decision and commit scope in one short line.
@@ -127,7 +146,9 @@ If `gh` is unavailable or PR creation is blocked, derive the compare URL from th
 
 8. Return to `main`.
 
-After the branch is pushed and the pull request URL or compare URL is ready, switch back to `main`.
+Skip this step in Worktree Mode.
+
+Otherwise, after the branch is pushed and the pull request URL or compare URL is ready, switch back to `main`.
 
 ```bash
 git checkout main
@@ -151,5 +172,5 @@ Report results in this order:
 2. Commit hash and commit message
 3. Validation commands run and whether they passed
 4. Pull request URL, or compare URL fallback if PR creation was blocked
-5. Final checked out branch
+5. Final checked out branch, plus worktree path when Worktree Mode applies
 6. Remaining uncommitted or unstaged files
