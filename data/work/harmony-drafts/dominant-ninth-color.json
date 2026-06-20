@@ -1,0 +1,240 @@
+{
+  "_type": "post",
+  "title": "기본 도미넌트에 9음을 얹어 긴장을 부드럽게 넓히기",
+  "slug": {
+    "_type": "slug",
+    "current": "dominant-ninth-color"
+  },
+  "excerpt": "V7의 방향성은 유지하면서 9음을 더해, 긴장을 더 넓고 따뜻한 색으로 만든다.",
+  "contentKind": "harmony-pattern",
+  "sourceMeta": {
+    "originSkill": "reharmonization-pattern-writer",
+    "sourceProject": "onefiveeight",
+    "sourceId": "dominant-ninth-color",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-19T18:30:44.035Z",
+    "primaryKeyCenter": "Eb",
+    "sourceTags": ["도미넌트 확장", "9음", "부드러운 긴장"],
+    "sourceNotes": [
+      "Eb 조에서 Bb7 대신 Bb9을 쓰는 경우의 소리 차이에서 일반화했다."
+    ],
+    "glossaryTermIds": ["voice-leading"],
+    "duplicateKeys": ["Bb7-Bb9", "dominant-ninth", "add-9-to-dominant"],
+    "relatedSourceIds": ["sus-dominant-door"]
+  },
+  "body": [
+    {
+      "_key": "b-1-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-1-paragraph-span-1",
+          "_type": "span",
+          "text": "V7은 토닉으로 가려는 힘이 분명하다. 여기에 9음을 얹으면 같은 도미넌트 기능을 유지하면서도 소리가 더 넓고 부드러워진다."
+        }
+      ]
+    },
+    {
+      "_key": "b-2-progressioncompare-main-example",
+      "_type": "progressionCompare",
+      "id": "main-example",
+      "meter": {
+        "beatsPerBar": 4,
+        "beatUnit": 4
+      },
+      "gridUnit": "eighth",
+      "before": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-1-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-2-event-1",
+                "chord": "Bb7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-3-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-4-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-1-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-1",
+                "chord": "Bb9",
+                "start": 0,
+                "duration": 8,
+                "annotation": "V7에 9음을 더한다."
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_key": "b-3-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-3-heading-span-1",
+          "_type": "span",
+          "text": "무엇이 바뀌는가"
+        }
+      ]
+    },
+    {
+      "_key": "b-4-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-4-paragraph-span-1",
+          "_type": "span",
+          "text": "Bb7의 구성음은 Bb, D, F, Ab이다. Bb9은 여기에 C를 더한다. 기능은 여전히 Eb로 향하는 도미넌트지만, C가 들어오면서 긴장이 더 넓어진다."
+        }
+      ]
+    },
+    {
+      "_key": "b-5-voicemotion",
+      "_type": "voiceMotion",
+      "title": "핵심 성부 진행",
+      "motions": [
+        {
+          "_key": "b-5-voicemotion-motion-1",
+          "label": "추가음",
+          "path": ["C"],
+          "explanation": "Bb 기준 9음 C가 더해져 도미넌트의 긴장이 더 풍성하게 들린다."
+        },
+        {
+          "_key": "b-5-voicemotion-motion-2",
+          "label": "해결",
+          "path": ["Ab", "G"],
+          "explanation": "Bb7의 7음 Ab는 Eb의 3음 G로 내려가며 기본 도미넌트 해결을 유지한다."
+        }
+      ]
+    },
+    {
+      "_key": "b-6-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-6-heading-span-1",
+          "_type": "span",
+          "text": "어떤 느낌인가"
+        }
+      ]
+    },
+    {
+      "_key": "b-7-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-7-paragraph-span-1",
+          "_type": "span",
+          "text": "Bb7이 직접적이고 기능적인 긴장이라면, Bb9은 조금 더 넓고 세련된 긴장이다. 날카로움보다 풍성함이 먼저 들린다."
+        }
+      ]
+    },
+    {
+      "_key": "b-8-usagenotes",
+      "_type": "usageNotes",
+      "items": [
+        "기본 V7이 너무 직선적으로 들릴 때 쓴다.",
+        "재즈, 소울, 발라드 계열의 넓은 도미넌트 색을 원할 때 좋다.",
+        "멜로디나 상성부에 9음이 있으면 특히 자연스럽다."
+      ]
+    },
+    {
+      "_key": "b-9-relatedterms",
+      "_type": "relatedTerms",
+      "termIds": ["voice-leading"]
+    }
+  ]
+}

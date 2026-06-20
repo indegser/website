@@ -1,0 +1,258 @@
+{
+  "_type": "post",
+  "title": "토닉으로 돌아가기 전에 마이너 iv6를 지나가기",
+  "slug": {
+    "_type": "slug",
+    "current": "minor-iv-six-to-tonic"
+  },
+  "excerpt": "토닉으로 바로 풀지 않고 마이너 iv6를 지나가게 해, 밝은 장조 안에 잠깐 깊은 그림자를 만든다.",
+  "contentKind": "harmony-pattern",
+  "sourceMeta": {
+    "originSkill": "reharmonization-pattern-writer",
+    "sourceProject": "onefiveeight",
+    "sourceId": "minor-iv-six-to-tonic",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-19T18:30:44.035Z",
+    "primaryKeyCenter": "Eb",
+    "sourceTags": ["차용화음", "마이너 iv", "반음 하행"],
+    "sourceNotes": [
+      "Eb 조의 Abm6 -> Eb/G와 C 조의 Fm6 -> C/E를 같은 쓰임으로 묶었다."
+    ],
+    "glossaryTermIds": ["borrowed-chord", "voice-leading", "chromatic-bass"],
+    "duplicateKeys": [
+      "ivm6-I6",
+      "Abm6-Eb/G",
+      "Fm6-C/E",
+      "minor-iv-six",
+      "chromatic-bass-to-tonic"
+    ],
+    "relatedSourceIds": ["approach-f-before-fm", "chromatic-bass-slash-chords"]
+  },
+  "body": [
+    {
+      "_key": "b-1-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-1-paragraph-span-1",
+          "_type": "span",
+          "text": "장조에서 토닉으로 돌아갈 때 그냥 IV나 V를 거치면 안정적이지만 평범하게 들릴 수 있다. IV를 마이너로 바꾼 iv6를 지나가면, 토닉 직전에 가장 진한 그늘이 생긴다."
+        }
+      ]
+    },
+    {
+      "_key": "b-2-progressioncompare-main-example",
+      "_type": "progressionCompare",
+      "id": "main-example",
+      "meter": {
+        "beatsPerBar": 4,
+        "beatUnit": 4
+      },
+      "gridUnit": "eighth",
+      "before": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-1-event-1",
+                "chord": "F/A",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-2-event-1",
+                "chord": "Ab",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-3-event-1",
+                "chord": "Eb/G",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-4-event-1",
+                "chord": "Fm7",
+                "start": 0,
+                "duration": 4
+              },
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-4-event-2",
+                "chord": "Bb7",
+                "start": 4,
+                "duration": 4
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-1-event-1",
+                "chord": "F/A",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-1",
+                "chord": "Abm6",
+                "start": 0,
+                "duration": 8,
+                "annotation": "IV를 마이너로 빌린다."
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-1",
+                "chord": "Eb/G",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-1",
+                "chord": "Fm7",
+                "start": 0,
+                "duration": 4
+              },
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-2",
+                "chord": "Bb7",
+                "start": 4,
+                "duration": 4
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_key": "b-3-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-3-heading-span-1",
+          "_type": "span",
+          "text": "무엇이 바뀌는가"
+        }
+      ]
+    },
+    {
+      "_key": "b-4-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-4-paragraph-span-1",
+          "_type": "span",
+          "text": "원래는 Ab를 지나 Eb/G로 갈 수 있다. 바꾼 진행에서는 Ab를 Abm6로 바꿔, 장조의 IV 자리에 마이너 iv6 색을 넣는다."
+        }
+      ]
+    },
+    {
+      "_key": "b-5-voicemotion",
+      "_type": "voiceMotion",
+      "title": "핵심 성부 진행",
+      "motions": [
+        {
+          "_key": "b-5-voicemotion-motion-1",
+          "label": "베이스",
+          "path": ["A", "Ab", "G"],
+          "explanation": "F/A에서 Abm6, Eb/G로 이어지면 베이스가 반음씩 내려가며 토닉으로 부드럽게 접힌다."
+        },
+        {
+          "_key": "b-5-voicemotion-motion-2",
+          "label": "차용음",
+          "path": ["C", "Cb", "Bb"],
+          "explanation": "Abm6의 Cb는 장조 안에서 빌려온 어두운 음으로, 토닉 쪽으로 풀릴 때 강한 정서를 만든다."
+        }
+      ]
+    },
+    {
+      "_key": "b-6-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-6-heading-span-1",
+          "_type": "span",
+          "text": "어떤 느낌인가"
+        }
+      ]
+    },
+    {
+      "_key": "b-7-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-7-paragraph-span-1",
+          "_type": "span",
+          "text": "토닉으로 돌아가는데도 바로 편해지지 않고, 한 번 더 마음이 가라앉는 느낌이 난다. 장조의 따뜻함 안에 단조의 그림자가 잠깐 들어오는 소리다."
+        }
+      ]
+    },
+    {
+      "_key": "b-8-usagenotes",
+      "_type": "usageNotes",
+      "items": [
+        "토닉 복귀 직전에 감정을 더 깊게 만들고 싶을 때 쓴다.",
+        "발라드 코러스 후반이나 반복 직전의 돌아오는 자리에 잘 맞는다.",
+        "C 조에서는 Fm6 -> C/E로 같은 원리를 쓸 수 있다."
+      ]
+    },
+    {
+      "_key": "b-9-relatedterms",
+      "_type": "relatedTerms",
+      "termIds": ["borrowed-chord", "voice-leading", "chromatic-bass"]
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "_type": "post",
+  "title": "ii를 잠깐 중심처럼 세우기",
+  "slug": {
+    "_type": "slug",
+    "current": "tonicize-minor-two"
+  },
+  "excerpt": "장조의 ii로 바로 가지 않고 그 ii의 단조 문법을 잠깐 빌려와, 지나가는 코드였던 ii를 작은 도착점처럼 만든다.",
+  "contentKind": "harmony-pattern",
+  "sourceMeta": {
+    "originSkill": "reharmonization-pattern-writer",
+    "sourceProject": "onefiveeight",
+    "sourceId": "tonicize-minor-two",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-19T18:30:44.035Z",
+    "primaryKeyCenter": "Eb",
+    "sourceTags": ["토닉화", "세컨더리 도미넌트", "프리도미넌트"],
+    "sourceNotes": [
+      "Eb 조에서 Bbm7 -> C7 -> Fm7이 F minor 기준 iv -> V -> i로 들린다는 대화에서 일반화했다."
+    ],
+    "glossaryTermIds": ["tonicization", "secondary-dominant", "predominant"],
+    "duplicateKeys": [
+      "Bbm7-C7-Fm7",
+      "iv-V-i-of-ii",
+      "tonicize-ii",
+      "minor-two-area"
+    ],
+    "relatedSourceIds": ["approach-f-before-fm", "chromatic-bass-slash-chords"]
+  },
+  "body": [
+    {
+      "_key": "b-1-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-1-paragraph-span-1",
+          "_type": "span",
+          "text": "Eb 조에서 Fm7은 ii라서 보통은 Bb7로 가기 위한 준비처럼 들린다. 그런데 Fm7 앞에 Bbm7과 C7을 두면, Fm7이 잠깐 F minor의 i처럼 들리면서 더 분명한 도착감을 갖는다."
+        }
+      ]
+    },
+    {
+      "_key": "b-2-progressioncompare-main-example",
+      "_type": "progressionCompare",
+      "id": "main-example",
+      "meter": {
+        "beatsPerBar": 4,
+        "beatUnit": 4
+      },
+      "gridUnit": "eighth",
+      "before": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-1-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-2-event-1",
+                "chord": "Fm7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-3-event-1",
+                "chord": "Bb7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-4-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-1-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-1",
+                "chord": "Bbm7",
+                "start": 0,
+                "duration": 4,
+                "annotation": "Fm 기준 ivm7"
+              },
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-2",
+                "chord": "C7",
+                "start": 4,
+                "duration": 4,
+                "annotation": "Fm 기준 V7"
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-1",
+                "chord": "Fm7",
+                "start": 0,
+                "duration": 4,
+                "annotation": "잠깐의 도착점"
+              },
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-2",
+                "chord": "Bb7",
+                "start": 4,
+                "duration": 4
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_key": "b-3-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-3-heading-span-1",
+          "_type": "span",
+          "text": "무엇이 바뀌는가"
+        }
+      ]
+    },
+    {
+      "_key": "b-4-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-4-paragraph-span-1",
+          "_type": "span",
+          "text": "원래 진행에서는 Eb 다음에 Fm7이 바로 나오고, Fm7은 다시 Bb7로 이어진다. 바꾼 진행에서는 Fm7 앞에 Bbm7과 C7을 둬서 Fm7을 잠깐 F minor의 중심처럼 세운다."
+        }
+      ]
+    },
+    {
+      "_key": "b-5-voicemotion",
+      "_type": "voiceMotion",
+      "title": "핵심 성부 진행",
+      "motions": [
+        {
+          "_key": "b-5-voicemotion-motion-1",
+          "label": "도미넌트 해결",
+          "path": ["E", "F"],
+          "explanation": "C7의 3음 E가 Fm7의 루트 F로 반음 올라가며 Fm7 도착감을 강하게 만든다."
+        },
+        {
+          "_key": "b-5-voicemotion-motion-2",
+          "label": "베이스",
+          "path": ["Bb", "C", "F"],
+          "explanation": "Bbm7에서 C7을 거쳐 Fm7로 가며, Fm 영역 안에서 iv -> V -> i의 방향성이 생긴다."
+        }
+      ]
+    },
+    {
+      "_key": "b-6-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-6-heading-span-1",
+          "_type": "span",
+          "text": "어떤 느낌인가"
+        }
+      ]
+    },
+    {
+      "_key": "b-7-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-7-paragraph-span-1",
+          "_type": "span",
+          "text": "Fm7이 단순히 다음 도미넌트로 가는 통로가 아니라, 잠깐 머물 수 있는 작은 방처럼 들린다. 장조 안에서 잠시 단조 쪽으로 젖는 느낌이 생긴다."
+        }
+      ]
+    },
+    {
+      "_key": "b-8-usagenotes",
+      "_type": "usageNotes",
+      "items": [
+        "ii를 더 감정적인 도착점으로 만들고 싶을 때 쓴다.",
+        "코러스 진입 전이나 한 구절의 중간 도착감을 만들 때 좋다.",
+        "Bbm7 대신 Gm7b5를 쓰면 더 전형적인 F minor iiø -> V -> i 색이 강해진다."
+      ]
+    },
+    {
+      "_key": "b-9-relatedterms",
+      "_type": "relatedTerms",
+      "termIds": ["tonicization", "secondary-dominant", "predominant"]
+    }
+  ]
+}

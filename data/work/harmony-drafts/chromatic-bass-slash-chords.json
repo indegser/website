@@ -1,0 +1,263 @@
+{
+  "_type": "post",
+  "title": "분수코드로 베이스를 반음씩 내리기",
+  "slug": {
+    "_type": "slug",
+    "current": "chromatic-bass-slash-chords"
+  },
+  "excerpt": "코드 기능보다 베이스 선율을 먼저 설계해, 여러 화음이 한 줄의 반음 하행으로 자연스럽게 이어지게 만든다.",
+  "contentKind": "harmony-pattern",
+  "sourceMeta": {
+    "originSkill": "reharmonization-pattern-writer",
+    "sourceProject": "onefiveeight",
+    "sourceId": "chromatic-bass-slash-chords",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-19T18:30:44.035Z",
+    "primaryKeyCenter": "Eb",
+    "sourceTags": ["분수코드", "반음계적 베이스", "성부 진행"],
+    "sourceNotes": [
+      "기억의 습작 코러스의 Eb -> Bb/D -> Bbm/Db -> C7, Fm -> Eaug -> Ab/Eb 분석에서 일반화했다."
+    ],
+    "glossaryTermIds": [
+      "slash-chord",
+      "voice-leading",
+      "chromatic-bass",
+      "common-tone"
+    ],
+    "duplicateKeys": [
+      "Eb-D-Db-C",
+      "F-E-Eb",
+      "slash-chord-bass-line",
+      "chromatic-bass"
+    ],
+    "relatedSourceIds": ["approach-f-before-fm", "tonicize-minor-two"]
+  },
+  "body": [
+    {
+      "_key": "b-1-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-1-paragraph-span-1",
+          "_type": "span",
+          "text": "분수코드는 단순히 전위 표기가 아니라 베이스 선율을 작곡하는 도구가 될 수 있다. 베이스가 반음씩 내려가면, 겉으로는 복잡한 코드 변화도 하나의 선처럼 들린다."
+        }
+      ]
+    },
+    {
+      "_key": "b-2-progressioncompare-main-example",
+      "_type": "progressionCompare",
+      "id": "main-example",
+      "meter": {
+        "beatsPerBar": 4,
+        "beatUnit": 4
+      },
+      "gridUnit": "eighth",
+      "before": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-1-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-2-event-1",
+                "chord": "Bb7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-3-event-1",
+                "chord": "C7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-4-event-1",
+                "chord": "Fm7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-1-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-1",
+                "chord": "Bb/D",
+                "start": 0,
+                "duration": 8,
+                "annotation": "D 베이스로 한 칸 내려간다."
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-1",
+                "chord": "Bbm/Db",
+                "start": 0,
+                "duration": 4,
+                "annotation": "D가 Db로 내려간다."
+              },
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-2",
+                "chord": "C7",
+                "start": 4,
+                "duration": 4,
+                "annotation": "Fm로 향하는 도미넌트"
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-1",
+                "chord": "Fm7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_key": "b-3-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-3-heading-span-1",
+          "_type": "span",
+          "text": "무엇이 바뀌는가"
+        }
+      ]
+    },
+    {
+      "_key": "b-4-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-4-paragraph-span-1",
+          "_type": "span",
+          "text": "원래 진행에서는 코드의 기능 변화가 먼저 들린다. 바꾼 진행에서는 Eb에서 Fm7로 가는 길을 Eb, D, Db, C라는 베이스 하행으로 설계한다."
+        }
+      ]
+    },
+    {
+      "_key": "b-5-voicemotion",
+      "_type": "voiceMotion",
+      "title": "핵심 성부 진행",
+      "motions": [
+        {
+          "_key": "b-5-voicemotion-motion-1",
+          "label": "베이스",
+          "path": ["Eb", "D", "Db", "C", "F"],
+          "explanation": "베이스가 반음으로 내려가다가 C7을 통해 Fm7에 도착한다."
+        },
+        {
+          "_key": "b-5-voicemotion-motion-2",
+          "label": "코드 성격",
+          "path": ["Bb/D", "Bbm/Db"],
+          "explanation": "D가 Db로 내려가면서 같은 Bb 계열 코드가 장조 느낌에서 마이너 느낌으로 접힌다."
+        }
+      ]
+    },
+    {
+      "_key": "b-6-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-6-heading-span-1",
+          "_type": "span",
+          "text": "어떤 느낌인가"
+        }
+      ]
+    },
+    {
+      "_key": "b-7-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-7-paragraph-span-1",
+          "_type": "span",
+          "text": "복잡한 화성이라기보다 베이스가 한 줄로 미끄러지는 느낌이다. 그래서 코드가 많아져도 과하게 튀지 않고, 감정선이 아래로 가라앉는 방향이 선명해진다."
+        }
+      ]
+    },
+    {
+      "_key": "b-8-usagenotes",
+      "_type": "usageNotes",
+      "items": [
+        "코드 기능보다 베이스 라인의 흐름을 먼저 들려주고 싶을 때 쓴다.",
+        "분수코드가 많아질수록 상성부는 가능한 한 공통음을 유지하면 더 자연스럽다.",
+        "Fm -> Eaug -> Ab/Eb처럼 공통음은 유지하고 베이스만 F -> E -> Eb로 내리는 변형도 같은 계열이다."
+      ]
+    },
+    {
+      "_key": "b-9-relatedterms",
+      "_type": "relatedTerms",
+      "termIds": [
+        "slash-chord",
+        "voice-leading",
+        "chromatic-bass",
+        "common-tone"
+      ]
+    }
+  ]
+}

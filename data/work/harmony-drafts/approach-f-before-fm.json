@@ -1,0 +1,281 @@
+{
+  "_type": "post",
+  "title": "Fm로 바로 가지 않고 F를 먼저 스치기",
+  "slug": {
+    "_type": "slug",
+    "current": "approach-f-before-fm"
+  },
+  "excerpt": "Fm로 가야 할 자리에서 F/A를 먼저 지나가게 해 밝게 열렸다가 바로 어두워지는 꺾임을 만든다.",
+  "contentKind": "harmony-pattern",
+  "sourceMeta": {
+    "originSkill": "reharmonization-pattern-writer",
+    "sourceProject": "onefiveeight",
+    "sourceId": "approach-f-before-fm",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-19T18:30:44.035Z",
+    "primaryKeyCenter": "Eb",
+    "sourceTags": ["장화음에서 단화음으로 꺾임", "반음 하행", "분수코드"],
+    "sourceNotes": [
+      "기억의 습작 코러스 분석 대화에서 나온 F/A -> Fm7 쓰임을 일반화했다."
+    ],
+    "glossaryTermIds": ["slash-chord", "borrowed-chord", "voice-leading"],
+    "duplicateKeys": [
+      "F/A-Fm7",
+      "A-Ab",
+      "same-root-major-to-minor",
+      "approach-ii",
+      "major-minor-mixture-on-target-root"
+    ],
+    "relatedSourceIds": ["tonicize-minor-two", "minor-iv-six-to-tonic"]
+  },
+  "body": [
+    {
+      "_key": "b-1-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-1-paragraph-span-1",
+          "_type": "span",
+          "text": "Eb 조에서 Fm7은 자연스럽게 나오는 ii 코드다. 그런데 Fm7로 바로 들어가지 않고 F/A를 먼저 두면, 같은 F 루트 위에서 A가 Ab로 내려가며 밝게 열린 소리가 바로 어두워진다."
+        }
+      ]
+    },
+    {
+      "_key": "b-2-progressioncompare-main-example",
+      "_type": "progressionCompare",
+      "id": "main-example",
+      "meter": {
+        "beatsPerBar": 4,
+        "beatUnit": 4
+      },
+      "gridUnit": "eighth",
+      "before": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-1-event-1",
+                "chord": "Gm7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-2-event-1",
+                "chord": "Fm7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-3-event-1",
+                "chord": "Bb9",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-4-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-1-event-1",
+                "chord": "Gm/Bb",
+                "start": 0,
+                "duration": 8,
+                "annotation": "베이스 하행을 준비한다."
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-1",
+                "chord": "F/A",
+                "start": 0,
+                "duration": 4,
+                "annotation": "Fm로 가기 전에 F를 먼저 스친다."
+              },
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-2",
+                "chord": "Fm7",
+                "start": 4,
+                "duration": 4,
+                "annotation": "A가 Ab로 꺾인다."
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-1",
+                "chord": "Bb9",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-1",
+                "chord": "Eb",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_key": "b-3-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-3-heading-span-1",
+          "_type": "span",
+          "text": "무엇이 바뀌는가"
+        }
+      ]
+    },
+    {
+      "_key": "b-4-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-4-paragraph-span-1",
+          "_type": "span",
+          "text": "원래 진행에서는 Gm7 다음에 Fm7이 바로 나온다. 바꾼 진행에서는 Gm/Bb로 베이스를 Bb에 올려 둔 뒤, F/A를 거쳐 Fm7로 들어간다. 핵심은 Fm7 자체를 바꾸는 것이 아니라, Fm7 앞에 F/A를 잠깐 끼워 넣어 A에서 Ab로 내려가는 순간을 만드는 것이다."
+        }
+      ]
+    },
+    {
+      "_key": "b-5-voicemotion",
+      "_type": "voiceMotion",
+      "title": "핵심 성부 진행",
+      "motions": [
+        {
+          "_key": "b-5-voicemotion-motion-1",
+          "label": "내성",
+          "path": ["A", "Ab"],
+          "explanation": "F/A의 장3도 A가 Fm7의 단3도 Ab로 내려가며, 밝은 성격이 바로 어두워진다."
+        },
+        {
+          "_key": "b-5-voicemotion-motion-2",
+          "label": "베이스",
+          "path": ["Bb", "A", "Ab"],
+          "explanation": "Gm/Bb에서 F/A, Fm7로 이어지면 베이스가 반음씩 내려가서 진행이 매끈하게 들린다."
+        }
+      ]
+    },
+    {
+      "_key": "b-6-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-6-heading-span-1",
+          "_type": "span",
+          "text": "어떤 느낌인가"
+        }
+      ]
+    },
+    {
+      "_key": "b-7-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-7-paragraph-span-1",
+          "_type": "span",
+          "text": "F/A는 Fm7보다 한순간 더 밝다. 그래서 Fm7이 그냥 지나가는 ii가 아니라, 밝게 열렸다가 먹먹하게 접히는 자리로 들린다. 발라드나 소울 계열에서 코러스가 깊어지는 순간에 잘 어울린다."
+        }
+      ]
+    },
+    {
+      "_key": "b-8-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-8-heading-span-1",
+          "_type": "span",
+          "text": "왜 자연스럽게 들리는가"
+        }
+      ]
+    },
+    {
+      "_key": "b-9-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-9-paragraph-span-1",
+          "_type": "span",
+          "text": "F/A와 Fm7은 루트 F와 5음 C를 공유한다. 바뀌는 음은 A에서 Ab로 내려가는 한 음이 중심이다. 공통음은 유지되고 핵심 음만 반음 내려가기 때문에, 색은 분명히 바뀌지만 연결은 부드럽다."
+        }
+      ]
+    },
+    {
+      "_key": "b-10-usagenotes",
+      "_type": "usageNotes",
+      "items": [
+        "ii로 가는 자리를 더 감정적으로 만들고 싶을 때 쓴다.",
+        "밝게 열린 소리가 바로 어두워지는 꺾임을 만들고 싶을 때 쓴다.",
+        "베이스를 Bb -> A -> Ab처럼 반음 하행으로 설계할 수 있을 때 특히 잘 맞는다.",
+        "너무 자주 쓰면 같은 감정이 반복되므로, 코러스나 중요한 전환부에 아껴 쓰는 편이 좋다."
+      ]
+    },
+    {
+      "_key": "b-11-relatedterms",
+      "_type": "relatedTerms",
+      "termIds": ["slash-chord", "borrowed-chord", "voice-leading"]
+    }
+  ]
+}

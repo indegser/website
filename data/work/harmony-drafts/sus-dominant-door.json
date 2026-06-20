@@ -1,0 +1,252 @@
+{
+  "_type": "post",
+  "title": "서스 도미넌트로 새 조성의 문 열기",
+  "slug": {
+    "_type": "slug",
+    "current": "sus-dominant-door"
+  },
+  "excerpt": "새 조성의 도미넌트를 쓰되 3음을 바로 드러내지 않아, 전조나 섹션 전환을 부드럽게 열어 준다.",
+  "contentKind": "harmony-pattern",
+  "sourceMeta": {
+    "originSkill": "reharmonization-pattern-writer",
+    "sourceProject": "onefiveeight",
+    "sourceId": "sus-dominant-door",
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-19T18:30:44.035Z",
+    "primaryKeyCenter": "Eb",
+    "sourceTags": ["서스 도미넌트", "전조", "섹션 전환"],
+    "sourceNotes": [
+      "C 조성 구간에서 Bb9sus4를 통해 EbM7로 열리는 진행과 Eb9sus4를 통해 AbM7로 가는 움직임에서 일반화했다."
+    ],
+    "glossaryTermIds": ["tonicization", "voice-leading"],
+    "duplicateKeys": [
+      "9sus4-to-tonic",
+      "dominant-sus-modulation",
+      "Bb9sus4-EbM7",
+      "Eb9sus4-AbM7"
+    ],
+    "relatedSourceIds": ["dominant-ninth-color"]
+  },
+  "body": [
+    {
+      "_key": "b-1-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-1-paragraph-span-1",
+          "_type": "span",
+          "text": "새 조성으로 들어갈 때 도미넌트를 너무 직접적으로 쓰면 종지감이 딱딱해질 수 있다. 9sus4 도미넌트는 방향성은 유지하지만 3음을 늦춰서 문이 부드럽게 열리는 느낌을 만든다."
+        }
+      ]
+    },
+    {
+      "_key": "b-2-progressioncompare-main-example",
+      "_type": "progressionCompare",
+      "id": "main-example",
+      "meter": {
+        "beatsPerBar": 4,
+        "beatUnit": 4
+      },
+      "gridUnit": "eighth",
+      "before": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-1-event-1",
+                "chord": "CM7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-2-event-1",
+                "chord": "Bb7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-3-event-1",
+                "chord": "EbM7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-before-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-before-bar-4-event-1",
+                "chord": "AbM7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "bars": [
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-1",
+            "index": 1,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-1-event-1",
+                "chord": "CM7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-2",
+            "index": 2,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-2-event-1",
+                "chord": "Bb9sus4",
+                "start": 0,
+                "duration": 8,
+                "annotation": "Eb로 들어가는 부드러운 도미넌트"
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-3",
+            "index": 3,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-3-event-1",
+                "chord": "EbM7",
+                "start": 0,
+                "duration": 8
+              }
+            ]
+          },
+          {
+            "_key": "b-2-progressioncompare-main-example-after-bar-4",
+            "index": 4,
+            "events": [
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-1",
+                "chord": "Db",
+                "start": 0,
+                "duration": 4
+              },
+              {
+                "_key": "b-2-progressioncompare-main-example-after-bar-4-event-2",
+                "chord": "Eb9sus4",
+                "start": 4,
+                "duration": 4,
+                "annotation": "다음 Ab 영역을 연다."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "_key": "b-3-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-3-heading-span-1",
+          "_type": "span",
+          "text": "무엇이 바뀌는가"
+        }
+      ]
+    },
+    {
+      "_key": "b-4-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-4-paragraph-span-1",
+          "_type": "span",
+          "text": "도미넌트의 힘은 그대로 쓰지만, sus4와 9음을 통해 3음의 날카로운 성격을 흐린다. 그래서 새 조성으로 가는 방향은 분명하지만, 해결이 덜 딱딱하게 들린다."
+        }
+      ]
+    },
+    {
+      "_key": "b-5-voicemotion",
+      "_type": "voiceMotion",
+      "title": "핵심 성부 진행",
+      "motions": [
+        {
+          "_key": "b-5-voicemotion-motion-1",
+          "label": "서스",
+          "path": ["sus4", "3음"],
+          "explanation": "도미넌트의 3음을 바로 드러내지 않고 늦추면, 강한 종지감보다 기대감이 먼저 생긴다."
+        },
+        {
+          "_key": "b-5-voicemotion-motion-2",
+          "label": "베이스",
+          "path": ["Bb", "Eb"],
+          "explanation": "베이스는 도미넌트에서 새 토닉으로 분명히 움직여 조성 전환의 방향을 잡는다."
+        }
+      ]
+    },
+    {
+      "_key": "b-6-heading",
+      "_type": "block",
+      "style": "h2",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-6-heading-span-1",
+          "_type": "span",
+          "text": "어떤 느낌인가"
+        }
+      ]
+    },
+    {
+      "_key": "b-7-paragraph",
+      "_type": "block",
+      "style": "normal",
+      "markDefs": [],
+      "children": [
+        {
+          "_key": "b-7-paragraph-span-1",
+          "_type": "span",
+          "text": "문이 확 닫히고 열리는 전조가 아니라, 다음 공간으로 자연스럽게 걸어 들어가는 느낌이다. 발라드에서 섹션이 커질 때 특히 잘 어울린다."
+        }
+      ]
+    },
+    {
+      "_key": "b-8-usagenotes",
+      "_type": "usageNotes",
+      "items": [
+        "새 조성이나 새 섹션으로 들어갈 때 강한 종지보다 부드러운 진입이 필요하면 쓴다.",
+        "도미넌트의 긴장은 필요하지만 3음의 날카로움은 줄이고 싶을 때 좋다.",
+        "9음이 들어가면 색이 더 넓어지고, 편곡이 재즈나 소울 쪽으로 가까워진다."
+      ]
+    },
+    {
+      "_key": "b-9-relatedterms",
+      "_type": "relatedTerms",
+      "termIds": ["tonicization", "voice-leading"]
+    }
+  ]
+}
